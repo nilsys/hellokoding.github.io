@@ -31,7 +31,7 @@
     <meta property="og:description" content="This post walks you through the process of creating a simple Registration and Login example with Spring Web MVC, Spring Data JPA, XML Configuration, Maven, JSP and MySQL. Prerequisites JDK 1.8 or later Maven 3 or later MySQL 5....">
     <meta property="og:url" content="http://hellokoding.com/registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/">
     <meta property="article:published_time" content="2016-02-21T13:54:49.212Z">
-    <meta property="article:modified_time" content="2016-02-21T14:16:34.866Z">
+    <meta property="article:modified_time" content="2016-02-22T01:15:48.458Z">
     <meta property="article:tag" content="mvc">
     
     <meta name="twitter:card" content="summary">
@@ -55,7 +55,7 @@
     "headline": "Registration and Login Example with Spring Web MVC, Spring Data JPA, XML Configuration, Maven, JSP and MySQL",
     "url": "http://hellokoding.com/registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/",
     "datePublished": "2016-02-21T13:54:49.212Z",
-    "dateModified": "2016-02-21T14:16:34.866Z",
+    "dateModified": "2016-02-22T01:15:48.458Z",
     "keywords": "mvc",
     "description": "This post walks you through the process of creating a simple Registration and Login example with Spring Web MVC, Spring Data JPA, XML Configuration, Maven, JSP and MySQL. Prerequisites JDK 1.8 or later Maven 3 or later MySQL 5...."
 }
@@ -161,9 +161,9 @@
 
 <p><code>@ManyToMany</code> defines a many-to-many relationship between 2 entities. <code>@JoinColumn</code> indicates the entity is the owner of the relationship: the corresponding table has a column with a foreign key to the referenced table. <code>mappedBy</code> indicates the entity is the inverse of the relationship.</p>
 
-<h3 id="springdatajparepository">Spring Data JPA Repository</h3>
+<h3 id="springdatajparepositories">Spring Data JPA Repositories</h3>
 
-<p>Spring Data JPA contains some built-in <code>Repository</code> implemented some common functions to work with database: <code>findOne</code>, <code>findAll</code>, <code>save</code>,...All we need for this example is extend it.</p>
+<p>Spring Data JPA contains some built-in <code>Repository</code> implemented some common functions to work with database: <code>findOne</code>, <code>findAll</code>, <code>save</code>,...</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-xml-maven-jsp-mysql/blob/master/src/main/java/com/hellokoding/account/repository/UserRepository.java">
 </code></pre>
