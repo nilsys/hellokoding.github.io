@@ -1,2 +1,3 @@
-# Blog
+Source code of [Hello Koding](https://hellokoding.com)
+
 Powered by [Ghost](http://ghost.org) and [Buster](https://github.com/axitkhurana/buster/).
