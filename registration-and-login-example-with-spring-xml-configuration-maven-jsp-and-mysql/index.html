@@ -34,7 +34,7 @@
     <meta property="og:description" content="This post walks you through the process of creating a simple Registration and Login example with Spring MVC 4, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL. If you are new to Spring MVC or Spring Data...">
     <meta property="og:url" content="http://hellokoding.com/registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/">
     <meta property="article:published_time" content="2016-02-21T13:54:49.212Z">
-    <meta property="article:modified_time" content="2016-06-14T09:17:44.424Z">
+    <meta property="article:modified_time" content="2016-06-14T09:38:25.531Z">
     <meta property="article:tag" content="Auth">
     <meta property="article:tag" content="Java">
     <meta property="article:tag" content="Spring MVC">
@@ -62,7 +62,7 @@
     "headline": "Registration and Login Example with Spring MVC 4, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL",
     "url": "http://hellokoding.com/registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/",
     "datePublished": "2016-02-21T13:54:49.212Z",
-    "dateModified": "2016-06-14T09:17:44.424Z",
+    "dateModified": "2016-06-14T09:38:25.531Z",
     "keywords": "Auth, Java, Spring MVC, MVC, JPA",
     "description": "This post walks you through the process of creating a simple Registration and Login example with Spring MVC 4, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL. If you are new to Spring MVC or Spring Data..."
 }
@@ -251,12 +251,16 @@ If you are new to Spring MVC or Spring Data JPA, it would be best to work your w
 <pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-xml-maven-jsp-mysql/blob/master/src/main/java/com/hellokoding/account/service/UserServiceImpl.java">
 </code></pre>
 
-<h3 id="validators">Validators</h3>
+<h3 id="springvalidator">Spring Validator</h3>
+
+<p>To provide input-data validation for <code>/registration</code> controller with Spring Validator, we implement <code>org.springframework.validation.Validator</code>. Error codes, e.g. <code>Size.userForm.username</code>, are defined by <a href="https://github.com/hellokoding/registration-login-spring-xml-maven-jsp-mysql/blob/master/src/main/resources/validation.properties">validation.properties</a>  </p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-xml-maven-jsp-mysql/blob/master/src/main/java/com/hellokoding/account/validator/UserValidator.java">
 </code></pre>
 
 <h3 id="controllers">Controllers</h3>
+
+<p><code>/login</code> POST controller is provided by Spring Security</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-xml-maven-jsp-mysql/blob/master/src/main/java/com/hellokoding/account/web/UserController.java">
 </code></pre>
