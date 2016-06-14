@@ -34,7 +34,7 @@
     <meta property="og:description" content="This post walks you through the process of creating a simple Registration and Login example with Spring MVC 4, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL. If you are new to Spring MVC or Spring Data...">
     <meta property="og:url" content="http://hellokoding.com/registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/">
     <meta property="article:published_time" content="2016-02-21T13:54:49.212Z">
-    <meta property="article:modified_time" content="2016-06-14T07:59:01.805Z">
+    <meta property="article:modified_time" content="2016-06-14T09:17:44.424Z">
     <meta property="article:tag" content="Auth">
     <meta property="article:tag" content="Java">
     <meta property="article:tag" content="Spring MVC">
@@ -62,7 +62,7 @@
     "headline": "Registration and Login Example with Spring MVC 4, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL",
     "url": "http://hellokoding.com/registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/",
     "datePublished": "2016-02-21T13:54:49.212Z",
-    "dateModified": "2016-06-14T07:59:01.805Z",
+    "dateModified": "2016-06-14T09:17:44.424Z",
     "keywords": "Auth, Java, Spring MVC, MVC, JPA",
     "description": "This post walks you through the process of creating a simple Registration and Login example with Spring MVC 4, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL. If you are new to Spring MVC or Spring Data..."
 }
@@ -228,15 +228,27 @@ If you are new to Spring MVC or Spring Data JPA, it would be best to work your w
 <pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-xml-maven-jsp-mysql/blob/master/src/main/java/com/hellokoding/account/repository/RoleRepository.java">
 </code></pre>
 
-<h3 id="services">Services</h3>
+<h3 id="springsecurityservice">Spring Security Service</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-xml-maven-jsp-mysql/blob/master/src/main/java/com/hellokoding/account/service/UserServiceImpl.java">
-</code></pre>
+<p>To implement login/authentication with Spring Security, we need to implement <code>org.springframework.security.core.userdetails.UserDetailsService</code> interface</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-xml-maven-jsp-mysql/blob/master/src/main/java/com/hellokoding/account/service/UserDetailsServiceImpl.java">
 </code></pre>
 
+<p>Authorization is implemented via XML file configuration <a href="https://github.com/hellokoding/registration-login-spring-xml-maven-jsp-mysql/blob/master/src/main/webapp/WEB-INF/appconfig-security.xml">appconfig-security.xml</a></p>
+
+<h3 id="securityservice">Security Service</h3>
+
+<p>We create <code>SecurityService</code> to provide current loggedin user and auto login user after resgistering an account.  </p>
+
 <pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-xml-maven-jsp-mysql/blob/master/src/main/java/com/hellokoding/account/service/SecurityServiceImpl.java">
+</code></pre>
+
+<h3 id="userservice">User Service</h3>
+
+<p>Provide service for registering account  </p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-xml-maven-jsp-mysql/blob/master/src/main/java/com/hellokoding/account/service/UserServiceImpl.java">
 </code></pre>
 
 <h3 id="validators">Validators</h3>
@@ -255,6 +267,23 @@ If you are new to Spring MVC or Spring Data JPA, it would be best to work your w
 </code></pre>
 
 <pre><code class="language-markup embedfile-https://github.com/hellokoding/registration-login-spring-xml-maven-jsp-mysql/blob/master/src/main/resources/validation.properties">
+</code></pre>
+
+<h3 id="xmlconfiguration">XML Configuration</h3>
+
+<h5 id="springmvcconfig">Spring MVC Config</h5>
+
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/registration-login-spring-xml-maven-jsp-mysql/blob/master/src/main/webapp/WEB-INF/appconfig-mvc.xml">
+</code></pre>
+
+<h5 id="springdatajpaconfig">Spring Data JPA Config</h5>
+
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/registration-login-spring-xml-maven-jsp-mysql/blob/master/src/main/webapp/WEB-INF/appconfig-data.xml">
+</code></pre>
+
+<h5 id="springsecurityconfig">Spring Security Config</h5>
+
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/registration-login-spring-xml-maven-jsp-mysql/blob/master/src/main/webapp/WEB-INF/appconfig-security.xml">
 </code></pre>
 
 <h3 id="run">Run</h3>
