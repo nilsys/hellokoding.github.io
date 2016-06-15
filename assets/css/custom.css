@@ -16,9 +16,19 @@ pre {
 }
 
 .social-buttons {
-  /*float: right*/
+  float: right;
+}
+
+.social-buttons i{
+  font-size: 16px;
+  color: #c0c0c0
 }
 
 .sidebar-item p {
   white-space: pre;
+}
+
+.fb-like span {
+  vertical-align: middle!important;
+  margin-top: -11px;
 }
