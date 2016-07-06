@@ -33,7 +33,7 @@
     <meta property="og:description" content="This post walks you through the process of creating a Hello World example with Spring Boot, FreeMarker. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with JSP Hello Spring MVC...">
     <meta property="og:url" content="http://hellokoding.com/spring-boot-hello-world-example-with-freemarker/">
     <meta property="article:published_time" content="2016-06-29T07:50:38.039Z">
-    <meta property="article:modified_time" content="2016-07-04T06:39:47.634Z">
+    <meta property="article:modified_time" content="2016-07-06T04:31:12.872Z">
     <meta property="article:tag" content="Hello">
     <meta property="article:tag" content="Java">
     <meta property="article:tag" content="Spring Boot">
@@ -60,7 +60,7 @@
     "headline": "Spring Boot Hello World Example with FreeMarker",
     "url": "http://hellokoding.com/spring-boot-hello-world-example-with-freemarker/",
     "datePublished": "2016-06-29T07:50:38.039Z",
-    "dateModified": "2016-07-04T06:39:47.634Z",
+    "dateModified": "2016-07-06T04:31:12.872Z",
     "keywords": "Hello, Java, Spring Boot, FreeMarker",
     "description": "This post walks you through the process of creating a Hello World example with Spring Boot, FreeMarker. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with JSP Hello Spring MVC..."
 }
@@ -175,18 +175,18 @@ Hello Spring MVC Series:
 <h3 id="projectstructure">Project structure</h3>
 
 <pre><code>├── src
-│   └── main
-│       ├── java
-│       │   └── com
-│       │       └── hellokoding
-│       │           └── springboot
-│       │               ├── HelloController.java
-│       │               └── WebApplication.java
-│       └── resources
-│           └── application.properties
-│       └── webapp
-│           ├── hello.html
-│           └── index.html
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding
+│       │           └── springboot
+│       │               ├── HelloController.java
+│       │               └── WebApplication.java
+│       ├── resources
+│       │   └── application.properties
+│       └── webapp
+│           ├── hello.ftl
+│           └── index.html
 └── pom.xml
 </code></pre>
 
@@ -208,7 +208,7 @@ Hello Spring MVC Series:
 
 <h3 id="viewtemplate">View Template</h3>
 
-<pre><code class="language-html embedfile-https://github.com/hellokoding/springboot-freemarker/blob/master/src/main/webapp/hello.html">
+<pre><code class="language-html embedfile-https://github.com/hellokoding/springboot-freemarker/blob/master/src/main/webapp/hello.ftl">
 </code></pre>
 
 <pre><code class="language-html embedfile-https://github.com/hellokoding/springboot-freemarker/blob/master/src/main/webapp/index.html">
