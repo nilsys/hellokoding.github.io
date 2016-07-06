@@ -8,7 +8,7 @@
     <!-- Enable responsiveness on mobile devices-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-    <title>Spring MVC 4 Hello World Example with XML Configuration, Maven and JSP</title>
+    <title>Spring Boot Hello World Example with Thymeleaf</title>
     <meta name="description" content="">
 
     <!-- CSS -->
@@ -24,26 +24,25 @@
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:2368/assets/apple-touch-icon-precomposed.png?v=60782786af">
     <link rel="shortcut icon" href="../assets/favicon.ico">
 
-    <link rel="canonical" href="http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/">
+    <link rel="canonical" href="http://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/">
     <meta name="referrer" content="origin">
     
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Spring MVC 4 Hello World Example with XML Configuration, Maven and JSP">
-    <meta property="og:description" content="This post walks you through the process of creating a Hello World example web site with Spring MVC 4. Hello Spring MVC Series: - Spring MVC 4 Hello World Example with XML Configuration, Maven and JSP - Spring MVC 4...">
-    <meta property="og:url" content="http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/">
-    <meta property="article:published_time" content="2015-10-12T00:13:28.564Z">
-    <meta property="article:modified_time" content="2016-07-06T07:32:42.919Z">
+    <meta property="og:title" content="Spring Boot Hello World Example with Thymeleaf">
+    <meta property="og:description" content="This post walks you through the process of creating a Hello World example with Spring Boot, Thymeleaf. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot...">
+    <meta property="og:url" content="http://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/">
+    <meta property="article:published_time" content="2016-07-06T07:30:44.593Z">
+    <meta property="article:modified_time" content="2016-07-06T07:38:36.150Z">
     <meta property="article:tag" content="Hello">
     <meta property="article:tag" content="Java">
-    <meta property="article:tag" content="Spring MVC">
-    <meta property="article:tag" content="MVC">
-    <meta property="article:tag" content="JSP">
+    <meta property="article:tag" content="Spring Boot">
+    <meta property="article:tag" content="Thymeleaf">
     
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Spring MVC 4 Hello World Example with XML Configuration, Maven and JSP">
-    <meta name="twitter:description" content="This post walks you through the process of creating a Hello World example web site with Spring MVC 4. Hello Spring MVC Series: - Spring MVC 4 Hello World Example with XML Configuration, Maven and JSP - Spring MVC 4...">
-    <meta name="twitter:url" content="http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/">
+    <meta name="twitter:title" content="Spring Boot Hello World Example with Thymeleaf">
+    <meta name="twitter:description" content="This post walks you through the process of creating a Hello World example with Spring Boot, Thymeleaf. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot...">
+    <meta name="twitter:url" content="http://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/">
     
     <script type="application/ld+json">
 {
@@ -58,12 +57,12 @@
         "sameAs": null,
         "description": null
     },
-    "headline": "Spring MVC 4 Hello World Example with XML Configuration, Maven and JSP",
-    "url": "http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/",
-    "datePublished": "2015-10-12T00:13:28.564Z",
-    "dateModified": "2016-07-06T07:32:42.919Z",
-    "keywords": "Hello, Java, Spring MVC, MVC, JSP",
-    "description": "This post walks you through the process of creating a Hello World example web site with Spring MVC 4. Hello Spring MVC Series: - Spring MVC 4 Hello World Example with XML Configuration, Maven and JSP - Spring MVC 4..."
+    "headline": "Spring Boot Hello World Example with Thymeleaf",
+    "url": "http://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/",
+    "datePublished": "2016-07-06T07:30:44.593Z",
+    "dateModified": "2016-07-06T07:38:36.150Z",
+    "keywords": "Hello, Java, Spring Boot, Thymeleaf",
+    "description": "This post walks you through the process of creating a Hello World example with Spring Boot, Thymeleaf. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot..."
 }
     </script>
 
@@ -71,7 +70,7 @@
     <link rel="alternate" type="application/rss+xml" title="Hello Koding" href="http://hellokoding.com/rss/">
   </head>
 
-  <body class="post-template tag-hello tag-java tag-spring-mvc tag-mvc tag-jsp">
+  <body class="post-template tag-hello tag-java tag-spring-boot tag-thymeleaf">
 
     <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
  styles, `#sidebar-checkbox` for behavior. -->
@@ -117,7 +116,7 @@ Made by <a href="https://twitter.com/giaunv">@giaunv</a></p>
 
       <div class="container content">
         
-<article class="post tag-hello tag-java tag-spring-mvc tag-mvc tag-jsp">
+<article class="post tag-hello tag-java tag-spring-boot tag-thymeleaf">
 
   <header class="post-header">
       <div class="post-tags">
@@ -128,114 +127,93 @@ Made by <a href="https://twitter.com/giaunv">@giaunv</a></p>
 	  <a href="../tag/java/" title="Java" class="tag-5">Java</a>
         </span>
       	<span class="tags">
-	  <a href="../tag/spring-mvc/" title="Spring MVC" class="tag-7">Spring MVC</a>
+	  <a href="../tag/spring-boot/" title="Spring Boot" class="tag-8">Spring Boot</a>
         </span>
       	<span class="tags">
-	  <a href="../tag/mvc/" title="MVC" class="tag-11">MVC</a>
-        </span>
-      	<span class="tags">
-	  <a href="../tag/jsp/" title="JSP" class="tag-13">JSP</a>
+	  <a href="../tag/thymeleaf/" title="Thymeleaf" class="tag-16">Thymeleaf</a>
         </span>
       </div>
-      <h1 class="post-title">Spring MVC 4 Hello World Example with XML Configuration, Maven and JSP</h1>
+      <h1 class="post-title">Spring Boot Hello World Example with Thymeleaf</h1>
       <section class="post-meta">
-          <time class="post-date" datetime="2015-10-12">Oct 12, 2015</time>. By <a href="../author/giau/">Giau Ngo</a> <a href="https://twitter.com/giaunv">@giaunv</a>
+          <time class="post-date" datetime="2016-07-06">Jul 06, 2016</time>. By <a href="../author/giau/">Giau Ngo</a> <a href="https://twitter.com/giaunv">@giaunv</a>
       </section>
   </header>
 
   <section class="post-content">
-      <p>This post walks you through the process of creating a Hello World example web site with Spring MVC 4.</p>
+      <p>This post walks you through the process of creating a Hello World example with Spring Boot, Thymeleaf.</p>
 
 <p><big></big></p>
 
 <p></p><pre>
-Hello Spring MVC Series:
-- <a href="https://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/">Spring MVC 4 Hello World Example with XML Configuration, Maven and JSP</a>
-- <a href="https://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-thymeleaf/">Spring MVC 4 Hello World Example with XML Configuration, Maven, and Thymeleaf</a>
+Hello Spring Boot Series:
+- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-freemarker/">Spring Boot Hello World Example with FreeMarker</a>
+- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/">Spring Boot Hello World Example with Thymeleaf</a>
+- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-jsp/">Spring Boot Hello World Example with JSP</a>
 </pre>
 
 <h3 id="whatyoullneed">What you'll need</h3>
 
 <ul>
-<li>JDK 1.8 or later</li>
+<li>JDK 1.7 or later</li>
 <li>Maven 3 or later</li>
 </ul>
 
 <h3 id="stack">Stack</h3>
 
 <ul>
-<li>Spring MVC 4</li>
-<li>JSP View Template</li>
+<li>Spring Boot</li>
+<li>Java</li>
 </ul>
 
 <h3 id="projectstructure">Project structure</h3>
 
 <pre><code>├── src
-│   └── main
-│       ├── java
-│       │   └── com
-│       │       └── hellokoding
-│       │           └── hello
-│       │               └── web
-│       │                   └── HelloController.java
-│       ├── resources
-│       │   ├── application.properties
-│       │   └── logback.xml
-│       └── webapp
-│           ├── resources
-│           │   ├── css
-│           │   │   └── bootstrap.min.css
-│           │   ├── images
-│           │   └── js
-│           │       └── bootstrap.min.js
-│           └── WEB-INF
-│               ├── views
-│               │   └── hello.jsp
-|               ├── appconfig-mvc.xml
-│               ├── appconfig-root.xml 
-│               └── web.xml
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding
+│       │           └── springboot
+│       │               ├── HelloController.java
+│       │               └── WebApplication.java
+│       └── resources
+│           ├── templates
+│           │   └── hello.html
+│           └── application.properties
 └── pom.xml
 </code></pre>
 
 <h3 id="projectdependencies">Project dependencies</h3>
 
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/pom.xml">
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/springboot-thymeleaf/blob/master/pom.xml">
 </code></pre>
 
 <h3 id="hellocontroller">Hello Controller</h3>
 
 <p>HTTP requests are handled by a controller. The <code>HelloController</code> handle the GET requests for <code>/hello</code> by retuning the name of a <code>View</code>, "hello". A <code>View</code> is responsible for rendering the HTML content:</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/java/com/hellokoding/hello/web/HelloController.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-thymeleaf/blob/master/src/main/java/com/hellokoding/springboot/HelloController.java">
 </code></pre>
 
 <p>The <code>@RequestMapping</code> annotation ensures that HTTP requests to <code>/hello</code> are mapped to the <code>hello()</code> method.</p>
 
 <p><code>@RequestParam</code> binds the value of the query string parameter <code>name</code> into the <code>name</code> parameter of the <code>hello()</code> method. This query string parameter is not <code>required</code>;if it is absent in the request, the <code>defaultValue</code> of <code>World</code> is used. The value of the <code>name</code> parameter is added to a <code>Model</code> object, ultimately making it accessible to the view template.</p>
 
-<h3 id="jspjstlviewtemplate">JSP/JSTL View Template</h3>
+<h3 id="viewtemplate">View Template</h3>
 
-<p>JSP performs server side rendering of the HTML. It parses the <code>hello.jsp</code> template below and evaluate the EL (Expression Language) to render the value of ${name} parameter that was set in the controller.</p>
-
-<pre><code class="language-html embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/webapp/WEB-INF/views/hello.jsp">
+<pre><code class="language-html embedfile-https://github.com/hellokoding/springboot-thymeleaf/blob/master/src/main/resources/templates/hello.html">
 </code></pre>
 
-<h3 id="xmlconfiguration">XML Configuration</h3>
+<h3 id="applicationconfiguration">Application Configuration</h3>
 
-<p>An application usually has several XML configuration files, but there should only be ONE bootstrap file (<code>appconfig-root.xml</code>). This bootstrap file should use the <code>&lt;import resource="" /&gt;</code> to include other config files.</p>
-
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/webapp/WEB-INF/appconfig-root.xml">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-thymeleaf/blob/master/src/main/java/com/hellokoding/springboot/WebApplication.java">
 </code></pre>
 
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/webapp/WEB-INF/appconfig-mvc.xml">
-</code></pre>
-
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/webapp/WEB-INF/web.xml">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-thymeleaf/blob/master/src/main/resources/application.properties">
 </code></pre>
 
 <h3 id="run">Run</h3>
 
-<p>You can run the application using <code>mvn jetty:run</code>. <br>
+<p>You can run the application using <code>mvn spring-boot:run</code>. <br>
 Visit to <a href="http://localhost:8080/hello">http://localhost:8080/hello</a> you will see  </p>
 
 <pre><code>Hello World!  
@@ -248,19 +226,18 @@ Visit to <a href="http://localhost:8080/hello">http://localhost:8080/hello</a> y
 
 <h3 id="sourcecode">Source code</h3>
 
-<p><code>git@github.com:hellokoding/hello-springmvc-xml-maven-jsp.git</code>
-<a href="https://github.com/hellokoding/hello-springmvc-xml-maven-jsp">https://github.com/hellokoding/hello-springmvc-xml-maven-jsp</a></p>
+<p><code>git@github.com:hellokoding/springboot-thymeleaf.git</code>
+<a href="https://github.com/hellokoding/springboot-thymeleaf">https://github.com/hellokoding/springboot-thymeleaf</a></p>
 
 <p><big></big></p>
 
 <p></p><pre>
-You may also like the Hello Spring Boot Series:
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-freemarker/">Spring Boot Hello World Example with FreeMarker</a>
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/">Spring Boot Hello World Example with Thymeleaf</a>
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-jsp/">Spring Boot Hello World Example with JSP</a>
+You may also like the Hello Spring MVC Series:
+- <a href="https://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/">Spring MVC 4 Hello World Example with XML Configuration, Maven and JSP</a>
+- <a href="https://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-thymeleaf/">Spring MVC 4 Hello World Example with XML Configuration, Maven, and Thymeleaf</a>
 </pre>
       <div>
-        <div class="fb-like" data-href="/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+        <div class="fb-like" data-href="/spring-boot-hello-world-example-with-thymeleaf/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="hellokoding"></a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
@@ -281,8 +258,8 @@ You may also like the Hello Spring Boot Series:
     <div id="disqus_thread"></div>
     <script>
       var disqus_config = function () {
-        this.page.url = 'http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = '2'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '18'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
 
       (function() { // DON'T EDIT BELOW THIS LINE
