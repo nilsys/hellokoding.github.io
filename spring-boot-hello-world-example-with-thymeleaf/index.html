@@ -33,7 +33,7 @@
     <meta property="og:description" content="This post walks you through the process of creating a Hello World example with Spring Boot, Thymeleaf. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot...">
     <meta property="og:url" content="http://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/">
     <meta property="article:published_time" content="2016-07-06T07:30:44.593Z">
-    <meta property="article:modified_time" content="2016-07-06T07:38:36.150Z">
+    <meta property="article:modified_time" content="2016-07-07T04:52:30.562Z">
     <meta property="article:tag" content="Hello">
     <meta property="article:tag" content="Java">
     <meta property="article:tag" content="Spring Boot">
@@ -60,7 +60,7 @@
     "headline": "Spring Boot Hello World Example with Thymeleaf",
     "url": "http://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/",
     "datePublished": "2016-07-06T07:30:44.593Z",
-    "dateModified": "2016-07-06T07:38:36.150Z",
+    "dateModified": "2016-07-07T04:52:30.562Z",
     "keywords": "Hello, Java, Spring Boot, Thymeleaf",
     "description": "This post walks you through the process of creating a Hello World example with Spring Boot, Thymeleaf. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot..."
 }
@@ -189,14 +189,16 @@ Hello Spring Boot Series:
 
 <h3 id="hellocontroller">Hello Controller</h3>
 
-<p>HTTP requests are handled by a controller. The <code>HelloController</code> handle the GET requests for <code>/hello</code> by retuning the name of a <code>View</code>, "hello". A <code>View</code> is responsible for rendering the HTML content:</p>
+<p><code>Controller</code> maps HTTP Requests with <code>View</code>.</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-thymeleaf/blob/master/src/main/java/com/hellokoding/springboot/HelloController.java">
 </code></pre>
 
-<p>The <code>@RequestMapping</code> annotation ensures that HTTP requests to <code>/hello</code> are mapped to the <code>hello()</code> method.</p>
+<p><code>@RequestMapping</code> maps <code>/hello</code> request to <code>hello()</code> method.</p>
 
-<p><code>@RequestParam</code> binds the value of the query string parameter <code>name</code> into the <code>name</code> parameter of the <code>hello()</code> method. This query string parameter is not <code>required</code>;if it is absent in the request, the <code>defaultValue</code> of <code>World</code> is used. The value of the <code>name</code> parameter is added to a <code>Model</code> object, ultimately making it accessible to the view template.</p>
+<p><code>name</code> is a query string parameter of <code>/hello</code> request.</p>
+
+<p><code>Model</code> object passes value to <code>hello</code> view (<code>hello.html</code>).</p>
 
 <h3 id="viewtemplate">View Template</h3>
 
@@ -236,6 +238,10 @@ You may also like the Hello Spring MVC Series:
 - <a href="https://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/">Spring MVC 4 Hello World Example with XML Configuration, Maven and JSP</a>
 - <a href="https://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-thymeleaf/">Spring MVC 4 Hello World Example with XML Configuration, Maven, and Thymeleaf</a>
 </pre>
+
+<h3 id="credits">Credits</h3>
+
+<p><a href="https://spring.io/guides/gs/serving-web-content/">Serving Web Content with Spring MVC</a></p>
       <div>
         <div class="fb-like" data-href="/spring-boot-hello-world-example-with-thymeleaf/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="hellokoding"></a>
