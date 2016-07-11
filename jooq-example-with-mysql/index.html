@@ -8,7 +8,7 @@
     <!-- Enable responsiveness on mobile devices-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-    <title>Spring Boot Hello World Example with JSP</title>
+    <title>jOOQ Example with MySQL</title>
     <meta name="description" content="">
 
     <!-- CSS -->
@@ -24,25 +24,25 @@
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:2368/assets/apple-touch-icon-precomposed.png?v=8992501595">
     <link rel="shortcut icon" href="../assets/favicon.ico">
 
-    <link rel="canonical" href="http://hellokoding.com/spring-boot-hello-world-example-with-jsp/">
+    <link rel="canonical" href="http://hellokoding.com/jooq-example-with-mysql/">
     <meta name="referrer" content="origin">
     
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Spring Boot Hello World Example with JSP">
-    <meta property="og:description" content="This post walks you through the process of creating a Hello World example with Spring Boot, JSP. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot...">
-    <meta property="og:url" content="http://hellokoding.com/spring-boot-hello-world-example-with-jsp/">
-    <meta property="article:published_time" content="2016-07-04T04:53:41.015Z">
-    <meta property="article:modified_time" content="2016-07-07T05:09:19.412Z">
+    <meta property="og:title" content="jOOQ Example with MySQL">
+    <meta property="og:description" content="This post walks you through the process of creating a jOOQ example with MySQL. What you'll need JDK 1.7+ Maven 3+ MySQL 5.6+ Stack Java jOOQ Project structure ├── src │   └── main │       └── java │           └── com │               └── hellokoding │                   └── jooq │                       ├── model │                       │   ├── tables │                       │   │   ├── records │                       │   │   │   └── AuthorRecord....">
+    <meta property="og:url" content="http://hellokoding.com/jooq-example-with-mysql/">
+    <meta property="article:published_time" content="2016-07-11T03:54:07.837Z">
+    <meta property="article:modified_time" content="2016-07-11T04:28:14.444Z">
     <meta property="article:tag" content="Hello">
     <meta property="article:tag" content="Java">
-    <meta property="article:tag" content="Spring Boot">
-    <meta property="article:tag" content="JSP">
+    <meta property="article:tag" content="jOOQ">
+    <meta property="article:tag" content="MySQL">
     
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Spring Boot Hello World Example with JSP">
-    <meta name="twitter:description" content="This post walks you through the process of creating a Hello World example with Spring Boot, JSP. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot...">
-    <meta name="twitter:url" content="http://hellokoding.com/spring-boot-hello-world-example-with-jsp/">
+    <meta name="twitter:title" content="jOOQ Example with MySQL">
+    <meta name="twitter:description" content="This post walks you through the process of creating a jOOQ example with MySQL. What you'll need JDK 1.7+ Maven 3+ MySQL 5.6+ Stack Java jOOQ Project structure ├── src │   └── main │       └── java │           └── com │               └── hellokoding │                   └── jooq │                       ├── model │                       │   ├── tables │                       │   │   ├── records │                       │   │   │   └── AuthorRecord....">
+    <meta name="twitter:url" content="http://hellokoding.com/jooq-example-with-mysql/">
     
     <script type="application/ld+json">
 {
@@ -57,12 +57,12 @@
         "sameAs": null,
         "description": null
     },
-    "headline": "Spring Boot Hello World Example with JSP",
-    "url": "http://hellokoding.com/spring-boot-hello-world-example-with-jsp/",
-    "datePublished": "2016-07-04T04:53:41.015Z",
-    "dateModified": "2016-07-07T05:09:19.412Z",
-    "keywords": "Hello, Java, Spring Boot, JSP",
-    "description": "This post walks you through the process of creating a Hello World example with Spring Boot, JSP. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot..."
+    "headline": "jOOQ Example with MySQL",
+    "url": "http://hellokoding.com/jooq-example-with-mysql/",
+    "datePublished": "2016-07-11T03:54:07.837Z",
+    "dateModified": "2016-07-11T04:28:14.444Z",
+    "keywords": "Hello, Java, jOOQ, MySQL",
+    "description": "This post walks you through the process of creating a jOOQ example with MySQL. What you&#x27;ll need JDK 1.7+ Maven 3+ MySQL 5.6+ Stack Java jOOQ Project structure ├── src │   └── main │       └── java │           └── com │               └── hellokoding │                   └── jooq │                       ├── model │                       │   ├── tables │                       │   │   ├── records │                       │   │   │   └── AuthorRecord...."
 }
     </script>
 
@@ -70,7 +70,7 @@
     <link rel="alternate" type="application/rss+xml" title="Hello Koding" href="http://hellokoding.com/rss/">
   </head>
 
-  <body class="post-template tag-hello tag-java tag-spring-boot tag-jsp">
+  <body class="post-template tag-hello tag-java tag-jooq tag-mysql">
 
     <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
  styles, `#sidebar-checkbox` for behavior. -->
@@ -116,7 +116,7 @@ Made by <a href="https://twitter.com/giaunv">@giaunv</a></p>
 
       <div class="container content">
         
-<article class="post tag-hello tag-java tag-spring-boot tag-jsp">
+<article class="post tag-hello tag-java tag-jooq tag-mysql">
 
   <header class="post-header">
       <div class="post-tags">
@@ -127,124 +127,93 @@ Made by <a href="https://twitter.com/giaunv">@giaunv</a></p>
 	  <a href="../tag/java/" title="Java" class="tag-5">Java</a>
         </span>
       	<span class="tags">
-	  <a href="../tag/spring-boot/" title="Spring Boot" class="tag-8">Spring Boot</a>
+	  <a href="../tag/jooq/" title="jOOQ" class="tag-17">jOOQ</a>
         </span>
       	<span class="tags">
-	  <a href="../tag/jsp/" title="JSP" class="tag-13">JSP</a>
+	  <a href="../tag/mysql/" title="MySQL" class="tag-18">MySQL</a>
         </span>
       </div>
-      <h1 class="post-title">Spring Boot Hello World Example with JSP</h1>
+      <h1 class="post-title">jOOQ Example with MySQL</h1>
       <section class="post-meta">
-          <time class="post-date" datetime="2016-07-04">Jul 04, 2016</time>. By <a href="../author/giau/">Giau Ngo</a> <a href="https://twitter.com/giaunv">@giaunv</a>
+          <time class="post-date" datetime="2016-07-11">Jul 11, 2016</time>. By <a href="../author/giau/">Giau Ngo</a> <a href="https://twitter.com/giaunv">@giaunv</a>
       </section>
   </header>
 
   <section class="post-content">
-      <p>This post walks you through the process of creating a Hello World example with Spring Boot, JSP.</p>
-
-<p><big></big></p>
-
-<p></p><pre>
-Hello Spring Boot Series:
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-freemarker/">Spring Boot Hello World Example with FreeMarker</a>
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/">Spring Boot Hello World Example with Thymeleaf</a>
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-jsp/">Spring Boot Hello World Example with JSP</a>
-</pre>
+      <p>This post walks you through the process of creating a jOOQ example with MySQL.</p>
 
 <h3 id="whatyoullneed">What you'll need</h3>
 
 <ul>
-<li>JDK 1.7 or later</li>
-<li>Maven 3 or later</li>
+<li>JDK 1.7+</li>
+<li>Maven 3+</li>
+<li>MySQL 5.6+</li>
 </ul>
 
 <h3 id="stack">Stack</h3>
 
 <ul>
-<li>Spring Boot</li>
 <li>Java</li>
+<li>jOOQ</li>
 </ul>
 
 <h3 id="projectstructure">Project structure</h3>
 
 <pre><code>├── src
-│   └── main
-│       ├── java
-│       │   └── com
-│       │       └── hellokoding
-│       │           └── springboot
-│       │               ├── HelloController.java
-│       │               └── WebApplication.java
-│       └── resources
-│           └── application.properties
-│       └── webapp
-│           ├── hello.jsp
-│           └── index.html
+│   └── main
+│       └── java
+│           └── com
+│               └── hellokoding
+│                   └── jooq
+│                       ├── model
+│                       │   ├── tables
+│                       │   │   ├── records
+│                       │   │   │   └── AuthorRecord.java
+│                       │   │   └── Author.java
+│                       │   ├── DefaultCatalog.java
+│                       │   ├── Keys.java
+│                       │   ├── Library.java
+│                       │   └── Tables.java
+│                       └── Application.java
+├── create_db.sql
 └── pom.xml
 </code></pre>
 
+<p>Files and sub-directories in <code>com/hellokoding/jooq/model</code>directory will be auto generated by jOOQ. We only play with <code>pom.xml</code>, <code>create_db.sql</code> and <code>com/hellokoding/jooq/Application.java</code></p>
+
 <h3 id="projectdependencies">Project dependencies</h3>
 
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/springboot-jsp/blob/master/pom.xml">
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/jooq-mysql/blob/master/pom.xml">
 </code></pre>
 
-<h3 id="hellocontroller">Hello Controller</h3>
+<p><code>jooq-codegen-maven</code> plugin's used for generate domain and DAO objects in <code>com/hellokoding/jooq/model</code></p>
 
-<p><code>Controller</code> maps HTTP Requests with <code>View</code>.</p>
+<h3 id="createdatabase">Create database</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-jsp/blob/master/src/main/java/com/hellokoding/springboot/HelloController.java">
-</code></pre>
+<p>Run below script to create a sample MySQL database</p>
 
-<p><code>@RequestMapping</code> maps <code>/hello</code> request to <code>hello()</code> method.</p>
-
-<p><code>name</code> is a query string parameter of <code>/hello</code> request.</p>
-
-<p><code>Model</code> object passes value to <code>hello</code> view (<code>hello.jsp</code>).</p>
-
-<h3 id="viewtemplate">View Template</h3>
-
-<pre><code class="language-html embedfile-https://github.com/hellokoding/springboot-jsp/blob/master/src/main/webapp/hello.jsp">
-</code></pre>
-
-<h3 id="applicationconfiguration">Application Configuration</h3>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-jsp/blob/master/src/main/java/com/hellokoding/springboot/WebApplication.java">
-</code></pre>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-jsp/blob/master/src/main/resources/application.properties">
+<pre><code class="language-sql embedfile-https://github.com/hellokoding/jooq-mysql/blob/master/create_db.sql">
 </code></pre>
 
 <h3 id="run">Run</h3>
 
-<p>You can run the application using <code>mvn spring-boot:run</code>. <br>
-Visit to <a href="http://localhost:8080/hello">http://localhost:8080/hello</a> you will see  </p>
-
-<pre><code>Hello World!  
+<pre><code class="language-java embedfile-https://github.com/hellokoding/jooq-mysql/blob/master/src/main/java/com/hellokoding/jooq/Application.java">
 </code></pre>
 
-<p>Provide the <code>name</code> query string parameter with <a href="http://localhost:8080/hello?name=Koding">http://localhost:8080/hello?name=Koding</a>  </p>
+<p><code>System.property()</code>'s bound to <code>systemProperty</code> of <code>exec-maven-plugin</code> configuration in <code>pom.xml</code></p>
 
-<pre><code>Hello Koding!  
-</code></pre>
+<p>Run with this command <code>mvn clean compile exec:java -Dexec.mainClass=com.hellokoding.jooq.Application -Dexec.cleanupDaemonThreads=false</code></p>
 
 <h3 id="sourcecode">Source code</h3>
 
-<p><code>git@github.com:hellokoding/springboot-jsp.git</code>
-<a href="https://github.com/hellokoding/springboot-jsp">https://github.com/hellokoding/springboot-jsp</a></p>
-
-<p><big></big></p>
-
-<p></p><pre>
-You may also like the Hello Spring MVC Series:
-- <a href="https://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/">Spring MVC 4 Hello World Example with XML Configuration, Maven and JSP</a>
-- <a href="https://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-thymeleaf/">Spring MVC 4 Hello World Example with XML Configuration, Maven, and Thymeleaf</a>
-</pre>
+<p><code>git@github.com:hellokoding/jooq-mysql.git</code>
+<a href="https://github.com/hellokoding/jooq-mysql">https://github.com/hellokoding/jooq-mysql</a></p>
 
 <h3 id="credits">Credits</h3>
 
-<p><a href="https://spring.io/guides/gs/serving-web-content/">Serving Web Content with Spring MVC</a></p>
+<p><a href="http://www.jooq.org/doc/3.8/manual-single-page/">The jOOQ User Manual</a></p>
       <div>
-        <div class="fb-like" data-href="/spring-boot-hello-world-example-with-jsp/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+        <div class="fb-like" data-href="/jooq-example-with-mysql/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="hellokoding"></a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
@@ -265,8 +234,8 @@ You may also like the Hello Spring MVC Series:
     <div id="disqus_thread"></div>
     <script>
       var disqus_config = function () {
-        this.page.url = 'http://hellokoding.com/spring-boot-hello-world-example-with-jsp/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = '11'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://hellokoding.com/jooq-example-with-mysql/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '19'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
 
       (function() { // DON'T EDIT BELOW THIS LINE
