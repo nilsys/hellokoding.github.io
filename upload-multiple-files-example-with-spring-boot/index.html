@@ -1,0 +1,325 @@
+
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <title>Uploading Multiple Files Example with Spring Boot</title>
+    <meta name="description" content="">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/poole.css?v=7961552bef">
+    <link rel="stylesheet" href="../assets/css/syntax.css?v=7961552bef">
+    <link rel="stylesheet" href="../assets/css/lanyon.css?v=7961552bef">
+    <link rel="stylesheet" href="../assets/css/custom.css?v=7961552bef">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=7961552bef">
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css?v=7961552bef">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:2368/assets/apple-touch-icon-precomposed.png?v=7961552bef">
+    <link rel="shortcut icon" href="../assets/favicon.ico">
+
+    <link rel="canonical" href="http://hellokoding.com/upload-multiple-files-example-with-spring-boot/">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="Hello Koding">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Uploading Multiple Files Example with Spring Boot">
+    <meta property="og:description" content="This post walks you through the process of creating the Uploading Multiple Files Example with Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot...">
+    <meta property="og:url" content="http://hellokoding.com/upload-multiple-files-example-with-spring-boot/">
+    <meta property="article:published_time" content="2016-07-12T09:14:27.106Z">
+    <meta property="article:modified_time" content="2016-07-12T10:48:46.779Z">
+    <meta property="article:tag" content="Upload">
+    <meta property="article:tag" content="Spring Boot">
+    <meta property="article:tag" content="FreeMarker">
+    <meta property="article:tag" content="Java">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Uploading Multiple Files Example with Spring Boot">
+    <meta name="twitter:description" content="This post walks you through the process of creating the Uploading Multiple Files Example with Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot...">
+    <meta name="twitter:url" content="http://hellokoding.com/upload-multiple-files-example-with-spring-boot/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Hello Koding",
+    "author": {
+        "@type": "Person",
+        "name": "Giau Ngo",
+        "image": "http://hellokoding.com/content/images/2015/11/vinhkim_2.png",
+        "url": "http://hellokoding.com/author/giau",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "Uploading Multiple Files Example with Spring Boot",
+    "url": "http://hellokoding.com/upload-multiple-files-example-with-spring-boot/",
+    "datePublished": "2016-07-12T09:14:27.106Z",
+    "dateModified": "2016-07-12T10:48:46.779Z",
+    "keywords": "Upload, Spring Boot, FreeMarker, Java",
+    "description": "This post walks you through the process of creating the Uploading Multiple Files Example with Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="Hello Koding" href="http://hellokoding.com/rss/">
+  </head>
+
+  <body class="post-template tag-upload tag-spring-boot tag-freemarker tag-java">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+ styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Coding examples
+Made by <a href="https://twitter.com/giaunv">@giaunv</a></p>
+  </div>
+
+  <nav class="sidebar-nav">
+      <a class="sidebar-nav-item sidebar-nav-hello " href="http://hellokoding.com/tag/hello">Hello</a>
+      <a class="sidebar-nav-item sidebar-nav-jpa " href="http://hellokoding.com/tag/jpa">JPA</a>
+      <a class="sidebar-nav-item sidebar-nav-auth " href="http://hellokoding.com/tag/auth">Auth</a>
+      <a class="sidebar-nav-item sidebar-nav-mvc " href="http://hellokoding.com/tag/mvc">MVC</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>© 2016. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="http://hellokoding.com" title="Home">Hello Koding</a>
+            <small>Coding examples</small>
+            <span class="social-buttons">
+	      <a href="https://github.com/giaunv"><i class="fa fa-github" aria-hidden="true"></i></a>
+              <a href="https://facebook.com/hellokoding"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="https://twitter.com/hellokoding"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href="https://plus.google.com/116072791264489083808"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            </span>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        
+<article class="post tag-upload tag-spring-boot tag-freemarker tag-java">
+
+  <header class="post-header">
+      <div class="post-tags">
+      	<span class="tags">
+	  <a href="../tag/upload/" title="Upload" class="tag-28">Upload</a>
+        </span>
+      	<span class="tags">
+	  <a href="../tag/spring-boot/" title="Spring Boot" class="tag-8">Spring Boot</a>
+        </span>
+      	<span class="tags">
+	  <a href="../tag/freemarker/" title="FreeMarker" class="tag-12">FreeMarker</a>
+        </span>
+      	<span class="tags">
+	  <a href="../tag/java/" title="Java" class="tag-5">Java</a>
+        </span>
+      </div>
+      <h1 class="post-title">Uploading Multiple Files Example with Spring Boot</h1>
+      <section class="post-meta">
+          <time class="post-date" datetime="2016-07-12">Jul 12, 2016</time>. By <a href="../author/giau/">Giau Ngo</a> <a href="https://twitter.com/giaunv">@giaunv</a>
+      </section>
+  </header>
+
+  <section class="post-content">
+      <p>This post walks you through the process of creating the Uploading Multiple Files Example with Spring Boot.</p>
+
+<p><big></big></p>
+
+<p></p><pre>
+Hello Spring Boot Series:
+- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-freemarker/">Spring Boot Hello World Example with FreeMarker</a>
+- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/">Spring Boot Hello World Example with Thymeleaf</a>
+- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-jsp/">Spring Boot Hello World Example with JSP</a>
+</pre>
+
+<h3 id="whatyoullbuild">What you'll build</h3>
+
+<p><img src="../content/images/2016/07/uploadfiles-springboot-1.png" alt=""></p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 1.7 or later</li>
+<li>Maven 3 or later</li>
+</ul>
+
+<h3 id="stack">Stack</h3>
+
+<ul>
+<li>Java</li>
+<li>Spring Boot</li>
+<li>Freemarker</li>
+</ul>
+
+<h3 id="projectstructure">Project structure</h3>
+
+<pre><code>├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding
+│       │           └── uploadingfiles
+│       │               ├── Application.java
+│       │               └── UploadingController.java
+│       ├── resources
+│       │   └── application.properties
+│       └── webapp
+│           └── uploading.ftl
+└── pom.xml
+</code></pre>
+
+<h3 id="projectdependencies">Project dependencies</h3>
+
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/uploadingfiles-springboot/blob/master/pom.xml">
+</code></pre>
+
+<h3 id="uploadingcontroller">Uploading Controller</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/uploadingfiles-springboot/blob/master/src/main/java/com/hellokoding/uploadingfiles/UploadingController.java">
+</code></pre>
+
+<h3 id="viewtemplate">View Template</h3>
+
+<pre><code class="language-html embedfile-https://github.com/hellokoding/uploadingfiles-springboot/blob/master/src/main/webapp/uploading.ftl">
+</code></pre>
+
+<pre><code>&lt;form name="uploadingForm" enctype="multipart/form-data" action="/" method="POST"&gt;  
+</code></pre>
+
+<p><code>action="/"</code> and <code>method="POST"</code> map with <code>uploadingPost()</code> of <code>UploadingController</code>, <code>enctype="multipart/form-data"</code> works with <code>MultipartFile</code>.</p>
+
+<h3 id="applicationconfiguration">Application Configuration</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/uploadingfiles-springboot/blob/master/src/main/resources/application.properties">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/uploadingfiles-springboot/blob/master/src/main/java/com/hellokoding/uploadingfiles/Application.java">
+</code></pre>
+
+<p><code>new File(UploadingController.uploadingdir).mkdirs();</code> makes a directory for uploading files if not exists.</p>
+
+<h3 id="run">Run</h3>
+
+<pre><code>mvn spring-boot:run
+</code></pre>
+
+<h3 id="sourcecode">Source code</h3>
+
+<p><code>git@github.com:hellokoding/uploadingfiles-springboot.git</code>
+<a href="https://github.com/hellokoding/uploadingfiles-springboot">https://github.com/hellokoding/uploadingfiles-springboot</a></p>
+
+<h3 id="credits">Credits</h3>
+
+<p><a href="https://developer.mozilla.org/en/docs/Using_files_from_web_applications">Using files from web applications</a></p>
+
+<p><a href="https://spring.io/guides/gs/uploading-files/">Getting Started Uploading Files</a></p>
+      <div>
+        <div class="fb-like" data-href="/upload-multiple-files-example-with-spring-boot/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="hellokoding"></a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
+      </div>
+  </section>
+
+  <footer class="post-footer">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'http://hellokoding.com/upload-multiple-files-example-with-spring-boot/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '21'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+
+      s.src = '//hellokoding.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </footer>
+
+</article>
+
+      </div>
+
+      <div class="container social-buttons-footer">	
+
+	<span>
+	      <a href="https://github.com/giaunv"><i class="fa fa-github" aria-hidden="true"></i></a>
+              <a href="https://facebook.com/hellokoding"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="https://twitter.com/hellokoding"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href="https://plus.google.com/116072791264489083808"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            </span>
+      
+    </div>
+
+      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+      <script>
+        (function(document) {
+          var toggle = document.querySelector('.sidebar-toggle');
+          var sidebar = document.querySelector('#sidebar');
+          var checkbox = document.querySelector('#sidebar-checkbox');
+          var trigger = 'ontouchstart' in document ? 'touchstart' : 'click';
+
+          document.addEventListener(trigger, function(e) {
+            var target = e.target;
+
+            if(!checkbox.checked ||
+               sidebar.contains(target) ||
+               (target === checkbox || target === toggle)) return;
+
+            checkbox.checked = false;
+          }, false);
+        })(document);
+      </script>
+
+    <script src="../assets/js/prism.js?v=7961552bef"></script>
+    <script src="../assets/js/jquery.min.js?v=7961552bef"></script>
+    <script src="../assets/js/github-files.js?v=7961552bef"></script>
+
+    
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-69010825-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </div></body>
