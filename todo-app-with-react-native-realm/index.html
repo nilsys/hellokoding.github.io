@@ -1,0 +1,382 @@
+
+  <head>
+    <link href="http://gmpg.org/xfn/11" rel="profile">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <title>Todo App with React Native, Realm</title>
+    <meta name="description" content="">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/poole.css?v=7961552bef">
+    <link rel="stylesheet" href="../assets/css/syntax.css?v=7961552bef">
+    <link rel="stylesheet" href="../assets/css/lanyon.css?v=7961552bef">
+    <link rel="stylesheet" href="../assets/css/custom.css?v=7961552bef">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+    <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=7961552bef">
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css?v=7961552bef">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:2368/assets/apple-touch-icon-precomposed.png?v=7961552bef">
+    <link rel="shortcut icon" href="../assets/favicon.ico">
+
+    <link rel="canonical" href="http://hellokoding.com/todo-app-with-react-native-realm/">
+    <meta name="referrer" content="origin">
+    
+    <meta property="og:site_name" content="Hello Koding">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Todo App with React Native, Realm">
+    <meta property="og:description" content="This post walks you through the process of creating a Todo App for iOS and Android devices with React Native, Realm.  If you're new to React Native or Realm, it'd be best to walk your way through: Getting Started React...">
+    <meta property="og:url" content="http://hellokoding.com/todo-app-with-react-native-realm/">
+    <meta property="article:published_time" content="2016-07-13T04:12:51.877Z">
+    <meta property="article:modified_time" content="2016-07-13T04:36:25.034Z">
+    <meta property="article:tag" content="Todo">
+    <meta property="article:tag" content="React Native">
+    <meta property="article:tag" content="Realm">
+    <meta property="article:tag" content="iOS">
+    <meta property="article:tag" content="Android">
+    <meta property="article:tag" content="Apps">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Todo App with React Native, Realm">
+    <meta name="twitter:description" content="This post walks you through the process of creating a Todo App for iOS and Android devices with React Native, Realm.  If you're new to React Native or Realm, it'd be best to walk your way through: Getting Started React...">
+    <meta name="twitter:url" content="http://hellokoding.com/todo-app-with-react-native-realm/">
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Hello Koding",
+    "author": {
+        "@type": "Person",
+        "name": "Giau Ngo",
+        "image": "http://hellokoding.com/content/images/2015/11/vinhkim_2.png",
+        "url": "http://hellokoding.com/author/giau",
+        "sameAs": null,
+        "description": null
+    },
+    "headline": "Todo App with React Native, Realm",
+    "url": "http://hellokoding.com/todo-app-with-react-native-realm/",
+    "datePublished": "2016-07-13T04:12:51.877Z",
+    "dateModified": "2016-07-13T04:36:25.034Z",
+    "keywords": "Todo, React Native, Realm, iOS, Android, Apps",
+    "description": "This post walks you through the process of creating a Todo App for iOS and Android devices with React Native, Realm.  If you&#x27;re new to React Native or Realm, it&#x27;d be best to walk your way through: Getting Started React..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.7">
+    <link rel="alternate" type="application/rss+xml" title="Hello Koding" href="http://hellokoding.com/rss/">
+  </head>
+
+  <body class="post-template tag-todo tag-react-native tag-realm tag-ios tag-android tag-apps-tag">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+ styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>Coding examples
+Made by <a href="https://twitter.com/giaunv">@giaunv</a></p>
+  </div>
+
+  <nav class="sidebar-nav">
+      <a class="sidebar-nav-item sidebar-nav-hello " href="http://hellokoding.com/tag/hello">Hello</a>
+      <a class="sidebar-nav-item sidebar-nav-jpa " href="http://hellokoding.com/tag/jpa">JPA</a>
+      <a class="sidebar-nav-item sidebar-nav-auth " href="http://hellokoding.com/tag/auth">Auth</a>
+      <a class="sidebar-nav-item sidebar-nav-mvc " href="http://hellokoding.com/tag/mvc">MVC</a>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>© 2016. All rights reserved.</p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="http://hellokoding.com" title="Home">Hello Koding</a>
+            <small>Coding examples</small>
+            <span class="social-buttons">
+	      <a href="https://github.com/giaunv"><i class="fa fa-github" aria-hidden="true"></i></a>
+              <a href="https://facebook.com/hellokoding"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="https://twitter.com/hellokoding"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href="https://plus.google.com/116072791264489083808"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            </span>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        
+<article class="post tag-todo tag-react-native tag-realm tag-ios tag-android tag-apps-tag">
+
+  <header class="post-header">
+      <div class="post-tags">
+      	<span class="tags">
+	  <a href="../tag/todo/" title="Todo" class="tag-24">Todo</a>
+        </span>
+      	<span class="tags">
+	  <a href="../tag/react-native/" title="React Native" class="tag-20">React Native</a>
+        </span>
+      	<span class="tags">
+	  <a href="../tag/realm/" title="Realm" class="tag-29">Realm</a>
+        </span>
+      	<span class="tags">
+	  <a href="../tag/ios/" title="iOS" class="tag-25">iOS</a>
+        </span>
+      	<span class="tags">
+	  <a href="../tag/android/" title="Android" class="tag-26">Android</a>
+        </span>
+      	<span class="tags">
+	  <a href="../tag/apps-tag/" title="Apps" class="tag-27">Apps</a>
+        </span>
+      </div>
+      <h1 class="post-title">Todo App with React Native, Realm</h1>
+      <section class="post-meta">
+          <time class="post-date" datetime="2016-07-13">Jul 13, 2016</time>. By <a href="../author/giau/">Giau Ngo</a> <a href="https://twitter.com/giaunv">@giaunv</a>
+      </section>
+  </header>
+
+  <section class="post-content">
+      <p>This post walks you through the process of creating a Todo App for iOS and Android devices with React Native, Realm. <br>
+<big></big></p>
+
+<p></p><pre>
+If you're new to React Native or Realm, it'd be best to walk your way through:
+<a href="https://facebook.github.io/react-native/docs/getting-started.html">Getting Started React Native</a>
+<a href="https://realm.io/docs/react-native/latest/">Getting Started Realm React Native</a>
+</pre>
+
+<h2 id="whatyoullbuild">What you'll build</h2>
+
+<p><img src="../content/images/2016/07/hellokoding-todoapp-reactnative.gif" alt=""></p>
+
+<h2 id="whatyoullneed">What you'll need</h2>
+
+<ul>
+<li>MacOS, Xcode</li>
+<li>NodeJS</li>
+<li>NPM</li>
+<li>React Native 0.28+</li>
+</ul>
+
+<h2 id="stack">Stack</h2>
+
+<ul>
+<li>ES6</li>
+<li>React Native</li>
+</ul>
+
+<h2 id="projectstructure">Project structure</h2>
+
+<pre><code>├── android
+├── ios
+├── src
+│   ├── CheckBox.js
+│   ├── ListViewItem.js
+│   ├── ListView.js
+│   ├── OmniBox.js
+│   ├── TodoModel.js
+│   ├── TodoService.js
+│   └── Utils.js
+├── index.android.js
+├── index.ios.js
+└── package.json
+</code></pre>
+
+<h2 id="projectdependencies">Project dependencies</h2>
+
+<pre><code class="language-json embedfile-https://github.com/hellokoding/todoapp-reactnative-realm/blob/realm/package.json">
+</code></pre>
+
+<h2 id="letsstart">Let's start</h2>
+
+<h3 id="initproject">Init project</h3>
+
+<pre><code class="language-bash">react-native init TodoApp  
+cd TodoApp
+</code></pre>
+
+<h3 id="utils">Utils</h3>
+
+<p>We build some common functions  </p>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative-realm/blob/realm/src/Utils.js">
+</code></pre>
+
+<p><code>Realm React Native</code> has not support auto-id yet. So we create <code>guid</code> to generate a unique id for data model (<code>TodoModel</code>).</p>
+
+<h3 id="todomodel">Todo Model</h3>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative-realm/blob/realm/src/TodoModel.js">
+</code></pre>
+
+<h3 id="todoservice">Todo Service</h3>
+
+<p>We wrap some built-in Realm functions</p>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative-realm/blob/realm/src/TodoService.js">
+</code></pre>
+
+<h3 id="makeacheckbox">Make a CheckBox</h3>
+
+<p>React Native does not have CheckBox, so we make one.</p>
+
+<p>Install <a href="https://github.com/oblador/react-native-vector-icons">react-native-vector-icons</a></p>
+
+<pre><code class="language-bash">npm install react-native-vector-icons --save  
+react-native link
+</code></pre>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative-realm/blob/realm/src/CheckBox.js">
+</code></pre>
+
+<p><code>onPress={this.props.onCheckBoxPressed}</code>: when checkbox's clicked, the <code>onCheckBoxPressed</code> function of parent component 'd be called.</p>
+
+<h3 id="omnibox">OmniBox</h3>
+
+<p>It's a <code>TextInput</code>, can search on typing or add a new Todo (if not existed) on pressing <code>Return/Enter</code>.</p>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative-realm/blob/realm/src/OmniBox.js">
+</code></pre>
+
+<p><code>onChange={this.onChange}</code>: handles Search.</p>
+
+<p><code>onKeyPress={this.onKeyPress}</code>: handles Add  new a todo.</p>
+
+<p><code>this.props.updateDataList(dataList);</code>: the <code>updateDataList</code> function of parent component'd be called.</p>
+
+<h3 id="listviewitem">ListViewItem</h3>
+
+<p>We'll build a ListViewItem to show <code>TodoModel</code>  </p>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative-realm/blob/realm/src/ListViewItem.js">
+</code></pre>
+
+<h3 id="listview">ListView</h3>
+
+<p>Show Todo list</p>
+
+<p>Install <a href="https://github.com/deanmcpherson/react-native-sortable-listview">react-native-sortable-listview</a></p>
+
+<pre><code class="language-bash">npm install react-native-sortable-listview --save
+</code></pre>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative-realm/blob/realm/src/ListView.js">
+</code></pre>
+
+<h3 id="finalpiece">Final piece</h3>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative-realm/blob/realm/index.ios.js">
+</code></pre>
+
+<h3 id="run">Run</h3>
+
+<pre><code class="language-bash">react-native run-ios
+</code></pre>
+
+<h2 id="sourcecode">Source code</h2>
+
+<p><code>git@github.com:hellokoding/todoapp-reactnative-realm.git</code>
+<a href="https://github.com/hellokoding/todoapp-reactnative-realm">https://github.com/hellokoding/todoapp-reactnative-realm</a></p>
+      <div>
+        <div class="fb-like" data-href="/todo-app-with-react-native-realm/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="hellokoding"></a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="300"></div>
+      </div>
+  </section>
+
+  <footer class="post-footer">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    <div id="disqus_thread"></div>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'http://hellokoding.com/todo-app-with-react-native-realm/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '22'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+
+      s.src = '//hellokoding.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  </footer>
+
+</article>
+
+      </div>
+
+      <div class="container social-buttons-footer">	
+
+	<span>
+	      <a href="https://github.com/giaunv"><i class="fa fa-github" aria-hidden="true"></i></a>
+              <a href="https://facebook.com/hellokoding"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a href="https://twitter.com/hellokoding"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a href="https://plus.google.com/116072791264489083808"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            </span>
+      
+    </div>
+
+      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+      <script>
+        (function(document) {
+          var toggle = document.querySelector('.sidebar-toggle');
+          var sidebar = document.querySelector('#sidebar');
+          var checkbox = document.querySelector('#sidebar-checkbox');
+          var trigger = 'ontouchstart' in document ? 'touchstart' : 'click';
+
+          document.addEventListener(trigger, function(e) {
+            var target = e.target;
+
+            if(!checkbox.checked ||
+               sidebar.contains(target) ||
+               (target === checkbox || target === toggle)) return;
+
+            checkbox.checked = false;
+          }, false);
+        })(document);
+      </script>
+
+    <script src="../assets/js/prism.js?v=7961552bef"></script>
+    <script src="../assets/js/jquery.min.js?v=7961552bef"></script>
+    <script src="../assets/js/github-files.js?v=7961552bef"></script>
+
+    
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-69010825-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </div></body>
