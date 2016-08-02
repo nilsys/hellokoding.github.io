@@ -8,7 +8,7 @@
     <!-- Enable responsiveness on mobile devices-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-    <title>Hello Single Sign On (SSO) with JSON Web Token (JWT), Spring Boot</title>
+    <title>Hello Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot</title>
     <meta name="description" content="">
 
     <!-- CSS -->
@@ -29,14 +29,15 @@
     
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Hello Single Sign On (SSO) with JSON Web Token (JWT), Spring Boot">
+    <meta property="og:title" content="Hello Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot">
     <meta property="og:description" content="This post walks you through the process of creating the Single Sign On (SSO) Example with JSON Web Token (JWT), Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example...">
     <meta property="og:url" content="http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2016/08/hello-sso-jwt-1.gif">
     <meta property="article:published_time" content="2016-08-01T14:28:32.845Z">
-    <meta property="article:modified_time" content="2016-08-01T14:58:30.703Z">
+    <meta property="article:modified_time" content="2016-08-02T00:58:42.734Z">
     <meta property="article:tag" content="SSO">
     <meta property="article:tag" content="JWT">
+    <meta property="article:tag" content="Cookie">
     <meta property="article:tag" content="Auth">
     <meta property="article:tag" content="Security">
     <meta property="article:tag" content="Java">
@@ -44,7 +45,7 @@
     <meta property="article:tag" content="FreeMarker">
     
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hello Single Sign On (SSO) with JSON Web Token (JWT), Spring Boot">
+    <meta name="twitter:title" content="Hello Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot">
     <meta name="twitter:description" content="This post walks you through the process of creating the Single Sign On (SSO) Example with JSON Web Token (JWT), Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example...">
     <meta name="twitter:url" content="http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">
     <meta name="twitter:image:src" content="http://hellokoding.com/content/images/2016/08/hello-sso-jwt-1.gif">
@@ -62,12 +63,12 @@
         "sameAs": null,
         "description": null
     },
-    "headline": "Hello Single Sign On (SSO) with JSON Web Token (JWT), Spring Boot",
+    "headline": "Hello Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot",
     "url": "http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/",
     "datePublished": "2016-08-01T14:28:32.845Z",
-    "dateModified": "2016-08-01T14:58:30.703Z",
+    "dateModified": "2016-08-02T00:58:42.734Z",
     "image": "http://hellokoding.com/content/images/2016/08/hello-sso-jwt-1.gif",
-    "keywords": "SSO, JWT, Auth, Security, Java, Spring Boot, FreeMarker",
+    "keywords": "SSO, JWT, Cookie, Auth, Security, Java, Spring Boot, FreeMarker",
     "description": "This post walks you through the process of creating the Single Sign On (SSO) Example with JSON Web Token (JWT), Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example..."
 }
     </script>
@@ -76,7 +77,7 @@
     <link rel="alternate" type="application/rss+xml" title="Hello Koding" href="http://hellokoding.com/rss/">
   </head>
 
-  <body class="post-template tag-sso tag-jwt tag-auth tag-security tag-java tag-spring-boot tag-freemarker">
+  <body class="post-template tag-sso tag-jwt tag-cookie tag-auth tag-security tag-java tag-spring-boot tag-freemarker">
 
     <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
  styles, `#sidebar-checkbox` for behavior. -->
@@ -122,7 +123,7 @@ Made by <a href="https://twitter.com/giaunv">@giaunv</a></p>
 
       <div class="container content">
         
-<article class="post tag-sso tag-jwt tag-auth tag-security tag-java tag-spring-boot tag-freemarker">
+<article class="post tag-sso tag-jwt tag-cookie tag-auth tag-security tag-java tag-spring-boot tag-freemarker">
 
   <header class="post-header">
       <div class="post-tags">
@@ -131,6 +132,9 @@ Made by <a href="https://twitter.com/giaunv">@giaunv</a></p>
         </span>
       	<span class="tags">
 	  <a href="../tag/jwt/" title="JWT" class="tag-32">JWT</a>
+        </span>
+      	<span class="tags">
+	  <a href="../tag/cookie/" title="Cookie" class="tag-34">Cookie</a>
         </span>
       	<span class="tags">
 	  <a href="../tag/auth/" title="Auth" class="tag-9">Auth</a>
@@ -148,14 +152,14 @@ Made by <a href="https://twitter.com/giaunv">@giaunv</a></p>
 	  <a href="../tag/freemarker/" title="FreeMarker" class="tag-12">FreeMarker</a>
         </span>
       </div>
-      <h1 class="post-title">Hello Single Sign On (SSO) with JSON Web Token (JWT), Spring Boot</h1>
+      <h1 class="post-title">Hello Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot</h1>
       <section class="post-meta">
           <time class="post-date" datetime="2016-08-01">Aug 01, 2016</time>. By <a href="../author/giau/">Giau Ngo</a> <a href="https://twitter.com/giaunv">@giaunv</a>
       </section>
   </header>
 
   <section class="post-content">
-      <p>This post walks you through the process of creating the Single Sign On (SSO) Example with JSON Web Token (JWT), Spring Boot.</p>
+      <p>This post walks you through the process of creating the <a href="https://en.wikipedia.org/wiki/Single_sign-on">Single Sign On (SSO)</a> Example with <a href="https://jwt.io/">JSON Web Token (JWT)</a>, Spring Boot.</p>
 
 <p><big></big></p>
 
@@ -172,7 +176,7 @@ Hello Spring Boot Series:
 
 <ul>
 <li><p>1 Authentication Service: will be deployed at <code>localhost:8080</code>.</p></li>
-<li><p>2 Resource Services (to simplify, we using the same code base): will be deployed at <code>localhost:8180</code> and <code>localhost:8280</code>.</p></li>
+<li><p>2 Resource Services (to simplify, we use the same code base): will be deployed at <code>localhost:8180</code> and <code>localhost:8280</code>.</p></li>
 </ul>
 
 <p><img src="../content/images/2016/08/hello-sso-jwt.gif" alt=""></p>
@@ -180,19 +184,21 @@ Hello Spring Boot Series:
 <h3 id="whatyoullneed">What you'll need</h3>
 
 <ul>
-<li>JDK 1.7 or later</li>
-<li>Maven 3 or later</li>
+<li>JDK 1.7+</li>
+<li>Maven 3+</li>
 </ul>
 
 <h3 id="stack">Stack</h3>
 
 <ul>
 <li>Java</li>
+<li>Single Sign On</li>
+<li>JSON Web Token</li>
 <li>Spring Boot</li>
 <li>Freemarker</li>
 </ul>
 
-<h1 id="buildauthenticationservice">Build Authentication Service</h1>
+<h1 id="authenticationservice">Authentication Service</h1>
 
 <h3 id="projectstructure">Project structure</h3>
 
@@ -221,10 +227,24 @@ Hello Spring Boot Series:
 
 <h3 id="cookieutil">CookieUtil</h3>
 
+<p>JWT Token'll be saved and extracted from browser cookies.</p>
+
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/java/com/hellokoding/sso/auth/CookieUtil.java">
 </code></pre>
 
+<p><code>cookie.setSecure(secure)</code>: secure=true =&gt; work on HTTPS only.</p>
+
+<p><code>cookie.setHttpOnly(true)</code>: invisible to JavaScript.</p>
+
+<p><code>cookie.setMaxAge(maxAge)</code>: maxAge=0: expire cookie now, maxAge&lt;0: expire cookiie on browser exit.</p>
+
+<p><code>cookie.setDomain(domain)</code>: visible to <code>domain</code> only.</p>
+
+<p><code>cookie.setPath("/")</code>: visible to all paths.</p>
+
 <h3 id="jwtutil">JwtUtil</h3>
+
+<p>We use <a href="https://github.com/jwtk/jjwt">JJWT</a> to generate/parse JWT Token.</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/java/com/hellokoding/sso/auth/JwtUtil.java">
 </code></pre>
@@ -233,6 +253,8 @@ Hello Spring Boot Series:
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/java/com/hellokoding/sso/auth/LoginController.java">
 </code></pre>
+
+<p>To simplify, we use a HashMap (<code>credentials</code>) as user database.</p>
 
 <h3 id="viewtemplate">View Template</h3>
 
@@ -252,7 +274,7 @@ Hello Spring Boot Series:
 <pre><code>mvn clean spring-boot:run
 </code></pre>
 
-<h1 id="buildresourceservice">Build Resource Service</h1>
+<h1 id="resourceservice">Resource Service</h1>
 
 <h3 id="projectstructure">Project structure</h3>
 
@@ -280,12 +302,9 @@ Hello Spring Boot Series:
 <pre><code class="language-xml embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/pom.xml">
 </code></pre>
 
-<h3 id="jwtutil">JwtUtil</h3>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/src/main/java/com/hellokoding/sso/resource/JwtUtil.java">
-</code></pre>
-
 <h3 id="jwtfilter">JwtFilter</h3>
+
+<p>JwtFilter enforces SSO. If JWT Token's not existed (unauthenticated), redirects to Authentication Service. If JWT Token's existed (authenticated), extracts user identity and forwards the request.</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/src/main/java/com/hellokoding/sso/resource/JwtFilter.java">
 </code></pre>
@@ -310,8 +329,12 @@ Hello Spring Boot Series:
 
 <h3 id="run">Run</h3>
 
+<p>Resource Service 1</p>
+
 <pre><code>mvn clean spring-boot:run -Dserver.port=8180
 </code></pre>
+
+<p>Resource Service 2</p>
 
 <pre><code>mvn clean spring-boot:run -Dserver.port=8280
 </code></pre>
