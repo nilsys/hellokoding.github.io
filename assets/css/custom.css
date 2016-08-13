@@ -61,3 +61,7 @@ pre {
 .social-buttons-footer a {
     margin-right: 10px
 }
+
+.social-buttons-footer div {
+    margin-bottom: 10px;
+}
