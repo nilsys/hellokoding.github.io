@@ -78,7 +78,8 @@ section.author {
     text-transform: none;
 }
 section.share p.info.prompt {
-    top: -5px;
+    top: -1px;
+    right: 6px;
     position: relative;
 }
 
@@ -86,12 +87,14 @@ section.share p.info {
     display: inline-block;
 }
 section.share p.info {
-    font-size: 16px;
+    font-size: 22px;
     line-height: 20px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     /*font-family: "Open Sans Condensed", "Open Sans", "Helvetica Neue", Helvetica, Arial, "Nimbus L", sans-serif;*/
 }
 section.share i {
-    font-size: 30px;
-    color: #505050
+    font-size: 24px;
+    color: #505050;
+    width: 1em;
+    text-align: center;
 }
