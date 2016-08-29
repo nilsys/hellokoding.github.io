@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 48em) {
   .masthead-title {
-    text-align: center;
+    /*text-align: center;*/
   }
   .masthead-title small {
     display: none;
@@ -372,6 +372,7 @@ a.sidebar-nav-item:focus {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
+  margin-bottom: 3rem;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   color: #ccc;
   text-align: center;

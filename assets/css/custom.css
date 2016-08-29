@@ -48,24 +48,6 @@ pre {
   margin-top: -11px;
 }
 
-.social-buttons-footer {
-    text-align: center;
-    margin-bottom: 4em
-}
-
-.social-buttons-footer i {
-    font-size: 18px;
-    color: #505050    
-}
-
-.social-buttons-footer a {
-    margin-right: 10px
-}
-
-.social-buttons-footer div:not(#fb-root) {
-    margin-bottom: 6px;
-}
-
 section.share {
     margin-top: 1em;
    /* border-top: 1px solid #ecf0f1;*/
@@ -97,4 +79,14 @@ section.share i {
     color: #505050;
     width: 1em;
     text-align: center;
+}
+div.footer {
+    background: #202020;
+    font-family: "PT Sans", Helvetica, Arial, sans-serif;
+    font-size: .75rem;
+    color: rgba(255,255,255,.6);
+    padding: 30px;
+}
+div.footer a{
+    color: #fff;
 }
