@@ -85,8 +85,13 @@ div.footer {
     font-family: "PT Sans", Helvetica, Arial, sans-serif;
     font-size: .75rem;
     color: rgba(255,255,255,.6);
-    padding: 30px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 div.footer a{
     color: #fff;
+}
+p.block {
+    background-color: #f9f9f9;
+    padding: 1rem
 }
