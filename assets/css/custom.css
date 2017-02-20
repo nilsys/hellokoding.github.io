@@ -9,3 +9,12 @@
 .gsc-search-button{
 	display:none
 }
+
+.post__tags a{
+	background-color:#ecf0f1!important;
+	color:#222!important;
+}
+
+.post__tags a:before{
+	/*content: ''!important;*/
+}
