@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot</title>
+  <title>Scalable Authentication, Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot, FreeMarker</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,14 +19,16 @@
     
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Hello Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot">
+    <meta property="og:title" content="Scalable Authentication, Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot, FreeMarker">
     <meta property="og:description" content="This post walks you through the process of creating the Single Sign On (SSO) Example with JSON Web Token (JWT), Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World Example with JSP">
     <meta property="og:url" content="http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2016/08/hello-sso-jwt-1.gif">
     <meta property="article:published_time" content="2016-08-01T14:28:32.000Z">
-    <meta property="article:modified_time" content="2017-02-17T21:08:23.000Z">
-    <meta property="article:tag" content="Auth">
+    <meta property="article:modified_time" content="2017-03-14T13:47:05.000Z">
+    <meta property="article:tag" content="Arch">
+    <meta property="article:tag" content="Scale">
     <meta property="article:tag" content="Security">
+    <meta property="article:tag" content="Auth">
     <meta property="article:tag" content="SSO">
     <meta property="article:tag" content="JWT">
     <meta property="article:tag" content="Cookie">
@@ -36,14 +38,14 @@
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Hello Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot">
+    <meta name="twitter:title" content="Scalable Authentication, Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot, FreeMarker">
     <meta name="twitter:description" content="This post walks you through the process of creating the Single Sign On (SSO) Example with JSON Web Token (JWT), Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World Example with JSP">
     <meta name="twitter:url" content="http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2016/08/hello-sso-jwt-1.gif">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Auth, Security, SSO, JWT, Cookie, Java, Spring Boot, FreeMarker">
+    <meta name="twitter:data2" content="Arch, Scale, Security, Auth, SSO, JWT, Cookie, Java, Spring Boot, FreeMarker">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -67,12 +69,12 @@
         ],
         "description": "Java. JavaScript"
     },
-    "headline": "Hello Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot",
+    "headline": "Scalable Authentication, Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot, FreeMarker",
     "url": "http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/",
     "datePublished": "2016-08-01T14:28:32.000Z",
-    "dateModified": "2017-02-17T21:08:23.000Z",
+    "dateModified": "2017-03-14T13:47:05.000Z",
     "image": "http://hellokoding.com/content/images/2016/08/hello-sso-jwt-1.gif",
-    "keywords": "Auth, Security, SSO, JWT, Cookie, Java, Spring Boot, FreeMarker",
+    "keywords": "Arch, Scale, Security, Auth, SSO, JWT, Cookie, Java, Spring Boot, FreeMarker",
     "description": "This post walks you through the process of creating the Single Sign On (SSO) Example with JSON Web Token (JWT), Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World Example with JSP"
 }
     </script>
@@ -87,7 +89,7 @@ ghost.init({
     <meta name="generator" content="Ghost 0.9">
     <link rel="alternate" type="application/rss+xml" title="Hello Koding" href="http://hellokoding.com/rss/">
 </head>
-<body class="post-template tag-auth tag-security tag-sso tag-jwt tag-cookie tag-java tag-spring-boot tag-freemarker">
+<body class="post-template tag-arch tag-scale tag-security tag-auth tag-sso tag-jwt tag-cookie tag-java tag-spring-boot tag-freemarker">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -104,17 +106,17 @@ ghost.init({
       <div class="column large-6">
         <nav class="navigation">
           <ul class="list-bare text-center">
-              <li class="nav-hello ">
-    <a href="http://hellokoding.com/tag/hello">Hello</a>
+              <li class="nav-security ">
+    <a href="http://hellokoding.com/tag/security/">Security</a>
   </li>
-  <li class="nav-jpa ">
-    <a href="http://hellokoding.com/tag/jpa">JPA</a>
+  <li class="nav-persistence ">
+    <a href="http://hellokoding.com/tag/persistence/">Persistence</a>
   </li>
-  <li class="nav-auth ">
-    <a href="http://hellokoding.com/tag/auth">Auth</a>
+  <li class="nav-rest ">
+    <a href="http://hellokoding.com/tag/rest/">REST</a>
   </li>
-  <li class="nav-mvc ">
-    <a href="http://hellokoding.com/tag/mvc">MVC</a>
+  <li class="nav-apps ">
+    <a href="http://hellokoding.com/tag/apps/">Apps</a>
   </li>
 
             <!--<li><a class="subscribe-button icon-feed" href="http://hellokoding.com/rss/">RSS</a></li>-->
@@ -196,10 +198,10 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-8 column">
-        <article class="post tag-auth tag-security tag-sso tag-jwt tag-cookie tag-java tag-spring-boot tag-freemarker">
+        <article class="post tag-arch tag-scale tag-security tag-auth tag-sso tag-jwt tag-cookie tag-java tag-spring-boot tag-freemarker">
 
           <header class="post__header">
-            <h2 class="post__title">Hello Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot</h2>
+            <h2 class="post__title">Scalable Authentication, Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot, FreeMarker</h2>
             <time class="post__date" datetime="2016-08-01">01 August 2016</time>
           </header>
 
@@ -389,7 +391,7 @@ Hello Spring Boot Series:
 <p><code>git@github.com:hellokoding/hello-sso-jwt.git</code> <br>
 <a href="https://github.com/hellokoding/hello-sso-jwt">https://github.com/hellokoding/hello-sso-jwt</a></p>
             <div class="post__tags">
-              <a href="../tag/auth/">Auth</a><a href="../tag/security/">Security</a><a href="../tag/sso/">SSO</a><a href="../tag/jwt/">JWT</a><a href="../tag/cookie/">Cookie</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/freemarker/">FreeMarker</a>
+              <a href="../tag/arch/">Arch</a><a href="../tag/scale/">Scale</a><a href="../tag/security/">Security</a><a href="../tag/auth/">Auth</a><a href="../tag/sso/">SSO</a><a href="../tag/jwt/">JWT</a><a href="../tag/cookie/">Cookie</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/freemarker/">FreeMarker</a>
             </div>
           </div>
 
@@ -430,7 +432,7 @@ Hello Spring Boot Series:
 </div>
           <ul class="share-list">
   <li>
-    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Hello%20Single%20Sign%20On%20(SSO)%20Example%20with%20JSON%20Web%20Token%20(JWT)%2C%20Cookie%2C%20Spring%20Boot&amp;url=http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Scalable%20Authentication%2C%20Single%20Sign%20On%20(SSO)%20Example%20with%20JSON%20Web%20Token%20(JWT)%2C%20Cookie%2C%20Spring%20Boot%2C%20FreeMarker&amp;url=http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <div data-icon="ei-sc-twitter" data-size="s" class="share-list__icon share-list__icon--twitter"></div>
     </a>
   </li>
@@ -450,7 +452,7 @@ Hello Spring Boot Series:
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
        <a href="../hackernewsapp-with-reactnative/" class="block" title="Hacker News App with React Native">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/ReactNative-1.png) ">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/03/ReactNative-1.png) ">
       </div>
     </a>
 
@@ -466,7 +468,7 @@ Hello Spring Boot Series:
         <a title="Hacker News App with React Native" href="../hackernewsapp-with-reactnative/">Hacker News App with React Native</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/hackernews/">HackerNews</a><a href="../tag/react-native/">React Native</a><a href="../tag/ios/">iOS</a><a href="../tag/android/">Android</a><a href="../tag/apps-tag/">Apps</a>
+              <a href="../tag/apps-tag/">Apps</a><a href="../tag/hackernews/">HackerNews</a><a href="../tag/react-native/">React Native</a><a href="../tag/ios/">iOS</a><a href="../tag/android/">Android</a>
             </div>
 
    </div>
@@ -474,6 +476,32 @@ Hello Spring Boot Series:
   </div>
 </article>
 
+    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
+  <div class="post-card ">
+       <a href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/" class="block" title="Scalable Authentication, Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/03/hello-sso-jwt.gif) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2017-03-14">14 March 2017</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="Scalable Authentication, Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker" href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/">Scalable Authentication, Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/arch/">Arch</a><a href="../tag/scale/">Scale</a><a href="../tag/security/">Security</a><a href="../tag/auth/">Auth</a><a href="../tag/sso/">SSO</a><a href="../tag/jwt/">JWT</a><a href="../tag/cookie/">Cookie</a><a href="../tag/redis/">Redis</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/freemarker/">FreeMarker</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
 
   </div>
 </div>          <section class="disqus">
@@ -505,10 +533,10 @@ Hello Spring Boot Series:
   <aside class="widget">
   <h3 class="widget__title">Recent Stories</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Hello Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot" href="index.html"><div style="background-image: url(../content/images/2016/08/hello-sso-jwt-1.gif)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Hello Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot" href="index.html">Hello Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot</a></h2></div>
-<div class="post-card"><a title="Hacker News App with React Native" href="../hackernewsapp-with-reactnative/"><div style="background-image: url(../content/images/2017/02/ReactNative-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Hacker News App with React Native" href="../hackernewsapp-with-reactnative/">Hacker News App with React Native</a></h2></div>
+<div class="post-card"><a title="Scalable Authentication, Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker" href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/"><div style="background-image: url(../content/images/2017/03/hello-sso-jwt.gif)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Scalable Authentication, Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker" href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/">Scalable Authentication, Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker</a></h2></div>
+<div class="post-card"><a title="Scalable Authentication, Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot, FreeMarker" href="index.html"><div style="background-image: url(../content/images/2016/08/hello-sso-jwt-1.gif)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Scalable Authentication, Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot, FreeMarker" href="index.html">Scalable Authentication, Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot, FreeMarker</a></h2></div>
+<div class="post-card"><a title="Hacker News App with React Native" href="../hackernewsapp-with-reactnative/"><div style="background-image: url(../content/images/2017/03/ReactNative-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Hacker News App with React Native" href="../hackernewsapp-with-reactnative/">Hacker News App with React Native</a></h2></div>
 <div class="post-card"><a title="Todo App with React Native, Realm" href="../todo-app-with-react-native-realm/"><div style="background-image: url(../content/images/2017/02/hellokoding-todoapp-reactnative--2-.gif)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Todo App with React Native, Realm" href="../todo-app-with-react-native-realm/">Todo App with React Native, Realm</a></h2></div>
-<div class="post-card"><a title="Uploading Multiple Files Example with Spring Boot" href="../uploading-multiple-files-example-with-spring-boot/"><div style="background-image: url(../content/images/2017/02/uploadfiles-springboot-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Uploading Multiple Files Example with Spring Boot" href="../uploading-multiple-files-example-with-spring-boot/">Uploading Multiple Files Example with Spring Boot</a></h2></div>
   </div>
 </aside>
 
@@ -567,6 +595,32 @@ Hello Spring Boot Series:
           </div>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
+       <a href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/" class="block" title="Scalable Authentication, Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/03/hello-sso-jwt.gif) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2017-03-14">14 March 2017</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="Scalable Authentication, Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker" href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/">Scalable Authentication, Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker</a>
+      </h2>
+<div class="post__tags">
+              
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
        <a href="../registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/" class="block" title="Registration and Login Example with Spring Security, Spring Data JPA, Spring Boot">
       <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/register-1.PNG) ">
       </div>
@@ -617,32 +671,6 @@ Hello Spring Boot Series:
 
   </div>
 </article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../spring-boot-hello-world-example-with-freemarker/" class="block" title="Spring Boot Hello World Example with FreeMarker">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/hello--1--4.gif) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2016-06-29">29 June 2016</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Spring Boot Hello World Example with FreeMarker" href="../spring-boot-hello-world-example-with-freemarker/">Spring Boot Hello World Example with FreeMarker</a>
-      </h2>
-<div class="post__tags">
-              
-            </div>
-
-   </div>
-
-  </div>
-</article>
       </div>
     </div>
   </div>
@@ -662,17 +690,17 @@ Hello Spring Boot Series:
           <div class="site-footer__section column medium-3 large-3 ">
             <nav>
               <ul class="list-bare site-footer__nav">
-                  <li class="nav-hello ">
-    <a href="http://hellokoding.com/tag/hello">Hello</a>
+                  <li class="nav-security ">
+    <a href="http://hellokoding.com/tag/security/">Security</a>
   </li>
-  <li class="nav-jpa ">
-    <a href="http://hellokoding.com/tag/jpa">JPA</a>
+  <li class="nav-persistence ">
+    <a href="http://hellokoding.com/tag/persistence/">Persistence</a>
   </li>
-  <li class="nav-auth ">
-    <a href="http://hellokoding.com/tag/auth">Auth</a>
+  <li class="nav-rest ">
+    <a href="http://hellokoding.com/tag/rest/">REST</a>
   </li>
-  <li class="nav-mvc ">
-    <a href="http://hellokoding.com/tag/mvc">MVC</a>
+  <li class="nav-apps ">
+    <a href="http://hellokoding.com/tag/apps/">Apps</a>
   </li>
 
                 <!--<li><a class="subscribe-button icon-feed" href="http://hellokoding.com/rss/">RSS</a></li>-->
