@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scalable Authentication, Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker</title>
+  <title>Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot and Redis</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,12 +19,12 @@
     
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Scalable Authentication, Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker">
-    <meta property="og:description" content="This post walks you through the process of creating the Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker. Spring Boot Hello World Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring">
+    <meta property="og:title" content="Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot and Redis">
+    <meta property="og:description" content="This post walks you through the process of creating the Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot, Redis. Spring Boot Hello World Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World">
     <meta property="og:url" content="http://hellokoding.com/scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2017/03/hello-sso-jwt.gif">
     <meta property="article:published_time" content="2017-03-14T15:51:10.000Z">
-    <meta property="article:modified_time" content="2017-03-14T16:17:43.000Z">
+    <meta property="article:modified_time" content="2017-06-30T20:23:22.000Z">
     <meta property="article:tag" content="Arch">
     <meta property="article:tag" content="Scale">
     <meta property="article:tag" content="Security">
@@ -39,8 +39,8 @@
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Scalable Authentication, Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker">
-    <meta name="twitter:description" content="This post walks you through the process of creating the Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker. Spring Boot Hello World Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring">
+    <meta name="twitter:title" content="Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot and Redis">
+    <meta name="twitter:description" content="This post walks you through the process of creating the Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot, Redis. Spring Boot Hello World Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World">
     <meta name="twitter:url" content="http://hellokoding.com/scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2017/03/hello-sso-jwt.gif">
     <meta name="twitter:label1" content="Written by">
@@ -70,13 +70,13 @@
         ],
         "description": "Java. JavaScript"
     },
-    "headline": "Scalable Authentication, Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker",
+    "headline": "Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot and Redis",
     "url": "http://hellokoding.com/scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/",
     "datePublished": "2017-03-14T15:51:10.000Z",
-    "dateModified": "2017-03-14T16:17:43.000Z",
+    "dateModified": "2017-06-30T20:23:22.000Z",
     "image": "http://hellokoding.com/content/images/2017/03/hello-sso-jwt.gif",
     "keywords": "Arch, Scale, Security, Auth, SSO, JWT, Cookie, Redis, Java, Spring Boot, FreeMarker",
-    "description": "This post walks you through the process of creating the Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker. Spring Boot Hello World Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring"
+    "description": "This post walks you through the process of creating the Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot, Redis. Spring Boot Hello World Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World"
 }
     </script>
 
@@ -205,12 +205,12 @@ ghost.init({
         <article class="post tag-arch tag-scale tag-security tag-auth tag-sso tag-jwt tag-cookie tag-redis tag-java tag-spring-boot tag-freemarker">
 
           <header class="post__header">
-            <h2 class="post__title">Scalable Authentication, Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker</h2>
+            <h2 class="post__title">Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot and Redis</h2>
             <time class="post__date" datetime="2017-03-14">14 March 2017</time>
           </header>
 
           <div class="post-content">
-            <p>This post walks you through the process of creating the <a href="https://en.wikipedia.org/wiki/Single_sign-on">Single Sign On/Out (SSO)</a> Example with <a href="https://jwt.io/">JSON Web Token (JWT)</a>, Cookie, Redis, Java, Spring Boot, FreeMarker.</p>
+            <p>This post walks you through the process of creating the Single Sign Out, Scalable Authentication Example with <a href="https://jwt.io/">JSON Web Token (JWT)</a>, Spring Boot, Redis.</p>
 
 <p><big></big></p>
 
@@ -441,7 +441,7 @@ Spring Boot Hello World Series:
 </div>
           <ul class="share-list">
   <li>
-    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Scalable%20Authentication%2C%20Single%20Sign%20On%2FOut%20(SSO)%20Example%20with%20JSON%20Web%20Token%20(JWT)%2C%20Cookie%2C%20Redis%2C%20Java%2C%20Spring%20Boot%2C%20FreeMarker&amp;url=http://hellokoding.com/scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Single%20Sign%20Out%2C%20Scalable%20Authentication%20Example%20with%20JSON%20Web%20Token%20(JWT)%2C%20Spring%20Boot%20and%20Redis&amp;url=http://hellokoding.com/scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <div data-icon="ei-sc-twitter" data-size="s" class="share-list__icon share-list__icon--twitter"></div>
     </a>
   </li>
@@ -460,7 +460,7 @@ Spring Boot Hello World Series:
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/" class="block" title="Scalable Authentication, Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot, FreeMarker">
+       <a href="../hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/" class="block" title="Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot">
       <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2016/08/hello-sso-jwt-1.gif) ">
       </div>
     </a>
@@ -474,7 +474,7 @@ Spring Boot Hello World Series:
       </div>
 
       <h2 class="post-card__title">
-        <a title="Scalable Authentication, Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot, FreeMarker" href="../hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">Scalable Authentication, Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot, FreeMarker</a>
+        <a title="Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot" href="../hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot</a>
       </h2>
 <div class="post__tags">
               <a href="../tag/arch/">Arch</a><a href="../tag/scale/">Scale</a><a href="../tag/security/">Security</a><a href="../tag/auth/">Auth</a><a href="../tag/sso/">SSO</a><a href="../tag/jwt/">JWT</a><a href="../tag/cookie/">Cookie</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/freemarker/">FreeMarker</a>
@@ -542,10 +542,10 @@ Spring Boot Hello World Series:
   <aside class="widget">
   <h3 class="widget__title">Recent Stories</h3>
   <div class="widget__body recent-posts1">
+<div class="post-card"><a title="Spring Boot Tutorial Series" href="../spring-boot-tutorial-series/"><div style="background-image: url(../content/images/2017/06/SpringBoot.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot Tutorial Series" href="../spring-boot-tutorial-series/">Spring Boot Tutorial Series</a></h2></div>
 <div class="post-card"><a title="RESTful API Example with Spring Boot, Spring Data REST and MySQL" href="../restful-api-example-with-spring-boot-spring-data-rest-and-mysql/"><div style="background-image: url(../content/images/2017/06/RESTfulAPI.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful API Example with Spring Boot, Spring Data REST and MySQL" href="../restful-api-example-with-spring-boot-spring-data-rest-and-mysql/">RESTful API Example with Spring Boot, Spring Data REST and MySQL</a></h2></div>
-<div class="post-card"><a title="Scalable Authentication, Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker" href="index.html"><div style="background-image: url(../content/images/2017/03/hello-sso-jwt.gif)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Scalable Authentication, Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker" href="index.html">Scalable Authentication, Single Sign On/Out (SSO) Example with JSON Web Token (JWT), Cookie, Redis, Java, Spring Boot, FreeMarker</a></h2></div>
-<div class="post-card"><a title="Scalable Authentication, Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot, FreeMarker" href="../hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/"><div style="background-image: url(../content/images/2016/08/hello-sso-jwt-1.gif)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Scalable Authentication, Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot, FreeMarker" href="../hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">Scalable Authentication, Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot, FreeMarker</a></h2></div>
-<div class="post-card"><a title="Hacker News App with React Native" href="../hackernewsapp-with-reactnative/"><div style="background-image: url(../content/images/2017/03/ReactNative-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Hacker News App with React Native" href="../hackernewsapp-with-reactnative/">Hacker News App with React Native</a></h2></div>
+<div class="post-card"><a title="Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot and Redis" href="index.html"><div style="background-image: url(../content/images/2017/03/hello-sso-jwt.gif)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot and Redis" href="index.html">Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot and Redis</a></h2></div>
+<div class="post-card"><a title="Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot" href="../hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/"><div style="background-image: url(../content/images/2016/08/hello-sso-jwt-1.gif)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot" href="../hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot</a></h2></div>
   </div>
 </aside>
 
@@ -604,7 +604,7 @@ Spring Boot Hello World Series:
           </div>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/" class="block" title="Scalable Authentication, Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot, FreeMarker">
+       <a href="../hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/" class="block" title="Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot">
       <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2016/08/hello-sso-jwt-1.gif) ">
       </div>
     </a>
@@ -618,7 +618,7 @@ Spring Boot Hello World Series:
       </div>
 
       <h2 class="post-card__title">
-        <a title="Scalable Authentication, Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot, FreeMarker" href="../hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">Scalable Authentication, Single Sign On (SSO) Example with JSON Web Token (JWT), Cookie, Spring Boot, FreeMarker</a>
+        <a title="Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot" href="../hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot</a>
       </h2>
 <div class="post__tags">
               
@@ -630,7 +630,7 @@ Spring Boot Hello World Series:
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/" class="block" title="Registration and Login Example with Spring Security, Spring Data JPA, Spring Boot">
+       <a href="../registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/" class="block" title="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL">
       <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/register-1.PNG) ">
       </div>
     </a>
@@ -644,7 +644,7 @@ Spring Boot Hello World Series:
       </div>
 
       <h2 class="post-card__title">
-        <a title="Registration and Login Example with Spring Security, Spring Data JPA, Spring Boot" href="../registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/">Registration and Login Example with Spring Security, Spring Data JPA, Spring Boot</a>
+        <a title="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL" href="../registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/">Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL</a>
       </h2>
 <div class="post__tags">
               
