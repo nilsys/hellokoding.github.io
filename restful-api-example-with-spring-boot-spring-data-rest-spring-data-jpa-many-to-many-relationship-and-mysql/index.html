@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL</title>
+  <title>RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA Many To Many Relationship and MySQL</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,35 +14,36 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=0ffab9ff18">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=0ffab9ff18">
    
-  <link rel="canonical" href="http://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/">
+  <link rel="canonical" href="http://hellokoding.com/restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL">
-    <meta property="og:description" content="This post walks you through the process of creating a simple Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA and HSQL. If you are new to Spring Boot or Spring Data JPA, it would be best to work your way through below before starting this example:">
-    <meta property="og:url" content="http://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2017/02/register-1.PNG">
-    <meta property="article:published_time" content="2016-07-05T07:27:29.000Z">
-    <meta property="article:modified_time" content="2017-06-30T20:37:52.000Z">
-    <meta property="article:tag" content="Security">
-    <meta property="article:tag" content="Auth">
-    <meta property="article:tag" content="Java">
+    <meta property="og:title" content="RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA Many To Many Relationship and MySQL">
+    <meta property="og:description" content="This post walks you through the process of creating a RESTful API Example with Spring Data REST, Spring Data JPA Many To Many Relationship and MySQL. What you'll need JDK 1.7+ Maven 3+ MySQL Server 5.6+ Stack Spring Boot Spring Data REST Spring Data JPA MySQL Project structure">
+    <meta property="og:url" content="http://hellokoding.com/restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2017/07/RESTfulAPI-1.png">
+    <meta property="article:published_time" content="2017-07-13T23:54:08.000Z">
+    <meta property="article:modified_time" content="2017-07-13T23:54:08.000Z">
+    <meta property="article:tag" content="Arch">
+    <meta property="article:tag" content="RESTful">
     <meta property="article:tag" content="Spring Boot">
-    <meta property="article:tag" content="JPA">
-    <meta property="article:tag" content="HSQL">
-    <meta property="article:tag" content="JSP">
+    <meta property="article:tag" content="Spring Data REST">
+    <meta property="article:tag" content="Spring Data JPA">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="MySQL">
+    <meta property="article:tag" content="cURL">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL">
-    <meta name="twitter:description" content="This post walks you through the process of creating a simple Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA and HSQL. If you are new to Spring Boot or Spring Data JPA, it would be best to work your way through below before starting this example:">
-    <meta name="twitter:url" content="http://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2017/02/register-1.PNG">
+    <meta name="twitter:title" content="RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA Many To Many Relationship and MySQL">
+    <meta name="twitter:description" content="This post walks you through the process of creating a RESTful API Example with Spring Data REST, Spring Data JPA Many To Many Relationship and MySQL. What you'll need JDK 1.7+ Maven 3+ MySQL Server 5.6+ Stack Spring Boot Spring Data REST Spring Data JPA MySQL Project structure">
+    <meta name="twitter:url" content="http://hellokoding.com/restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2017/07/RESTfulAPI-1.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Security, Auth, Java, Spring Boot, JPA, HSQL, JSP">
+    <meta name="twitter:data2" content="Arch, RESTful, Spring Boot, Spring Data REST, Spring Data JPA, Java, MySQL, cURL">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -66,13 +67,13 @@
         ],
         "description": "Java. JavaScript"
     },
-    "headline": "Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL",
-    "url": "http://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/",
-    "datePublished": "2016-07-05T07:27:29.000Z",
-    "dateModified": "2017-06-30T20:37:52.000Z",
-    "image": "http://hellokoding.com/content/images/2017/02/register-1.PNG",
-    "keywords": "Security, Auth, Java, Spring Boot, JPA, HSQL, JSP",
-    "description": "This post walks you through the process of creating a simple Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA and HSQL. If you are new to Spring Boot or Spring Data JPA, it would be best to work your way through below before starting this example:"
+    "headline": "RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA Many To Many Relationship and MySQL",
+    "url": "http://hellokoding.com/restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/",
+    "datePublished": "2017-07-13T23:54:08.000Z",
+    "dateModified": "2017-07-13T23:54:08.000Z",
+    "image": "http://hellokoding.com/content/images/2017/07/RESTfulAPI-1.png",
+    "keywords": "Arch, RESTful, Spring Boot, Spring Data REST, Spring Data JPA, Java, MySQL, cURL",
+    "description": "This post walks you through the process of creating a RESTful API Example with Spring Data REST, Spring Data JPA Many To Many Relationship and MySQL. What you&#x27;ll need JDK 1.7+ Maven 3+ MySQL Server 5.6+ Stack Spring Boot Spring Data REST Spring Data JPA MySQL Project structure"
 }
     </script>
 
@@ -86,7 +87,7 @@ ghost.init({
     <meta name="generator" content="Ghost 0.9">
     <link rel="alternate" type="application/rss+xml" title="Hello Koding" href="http://hellokoding.com/rss/">
 </head>
-<body class="post-template tag-security tag-auth tag-java tag-spring-boot tag-jpa tag-hsql tag-jsp">
+<body class="post-template tag-arch tag-restful tag-spring-boot tag-spring-data-rest tag-spring-data-jpa tag-java tag-mysql tag-curl">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -198,56 +199,31 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-8 column">
-        <article class="post tag-security tag-auth tag-java tag-spring-boot tag-jpa tag-hsql tag-jsp">
+        <article class="post tag-arch tag-restful tag-spring-boot tag-spring-data-rest tag-spring-data-jpa tag-java tag-mysql tag-curl">
 
           <header class="post__header">
-            <h2 class="post__title">Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL</h2>
-            <time class="post__date" datetime="2016-07-05">05 July 2016</time>
+            <h2 class="post__title">RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA Many To Many Relationship and MySQL</h2>
+            <time class="post__date" datetime="2017-07-13">13 July 2017</time>
           </header>
 
           <div class="post-content">
-            <p>This post walks you through the process of creating a simple Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA and HSQL.</p>
-
-<p><big></big></p>
-
-<p></p><pre>
-If you are new to Spring Boot or Spring Data JPA, it would be best to work your way through below before starting this example:
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-jsp/">Spring Boot Hello World Example with JSP</a> 
-- <a href="https://hellokoding.com/jpa-many-to-many-relationship-mapping-example-with-spring-boot-hsql/">JPA Many-To-Many Relationship Mapping Example with Spring Boot, HSQL</a>
-</pre>
-
-<h3 id="whatyoullbuild">What you'll build</h3>
-
-<h5 id="login">Log in</h5>
-
-<p><img src="../content/images/2016/06/login2.PNG" alt=""></p>
-
-<h5 id="logout">Log out</h5>
-
-<p><img src="../content/images/2016/06/logout.PNG" alt=""></p>
-
-<h5 id="registeraccount">Register account</h5>
-
-<p><img src="../content/images/2016/06/register2.PNG" alt=""></p>
-
-<h5 id="welcome">Welcome</h5>
-
-<p><img src="../content/images/2016/06/welcome.PNG" alt=""></p>
+            <p>This post walks you through the process of creating a RESTful API Example with Spring Data REST, Spring Data JPA Many To Many Relationship and MySQL.</p>
 
 <h3 id="whatyoullneed">What you'll need</h3>
 
 <ul>
-<li>JDK 1.7 or later</li>
-<li>Maven 3 or later</li>
+<li>JDK 1.7+</li>
+<li>Maven 3+</li>
+<li>MySQL Server 5.6+</li>
 </ul>
 
 <h3 id="stack">Stack</h3>
 
 <ul>
-<li>Spring Security</li>
 <li>Spring Boot</li>
+<li>Spring Data REST</li>
 <li>Spring Data JPA</li>
-<li>JSP</li>
+<li>MySQL</li>
 </ul>
 
 <h3 id="projectstructure">Project structure</h3>
@@ -257,144 +233,82 @@ If you are new to Spring Boot or Spring Data JPA, it would be best to work your 
 │       ├── java
 │       │   └── com
 │       │       └── hellokoding
-│       │           └── auth
+│       │           └── restfulapi
+│       │               ├── Application.java
 │       │               ├── model
-│       │               │   ├── Role.java
-│       │               │   └── User.java
-│       │               ├── repository
-│       │               │   ├── RoleRepository.java
-│       │               │   └── UserRepository.java
-│       │               ├── service
-│       │               │   ├── SecurityServiceImpl.java
-│       │               │   ├── SecurityService.java
-│       │               │   ├── UserDetailsServiceImpl.java
-│       │               │   ├── UserServiceImpl.java
-│       │               │   └── UserService.java
-│       │               ├── validator
-│       │               │   └── UserValidator.java
-│       │               ├── web
-│       │               │   └── UserController.java
-│       │               ├── WebApplication.java
-│       │               └── WebSecurityConfig.java
-│       ├── resources
-│       │   ├── application.properties
-│       │   └── validation.properties
-│       └── webapp
-│           ├── resources
-│           │   ├── css
-│           │   │   ├── bootstrap.min.css
-│           │   │   └── common.css
-│           │   └── js
-│           │       └── bootstrap.min.js
-│           ├── login.jsp
-│           ├── registration.jsp
-│           └── welcome.jsp
+│       │               │   ├── Author.java
+│       │               │   └── Book.java
+│       │               └── repository
+│       │                   ├── AuthorRepository.java
+│       │                   └── BookRepository.java
+│       └── resources
+│           └── application.properties
 └── pom.xml
 </code></pre>
 
 <h3 id="projectdependencies">Project dependencies</h3>
 
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/pom.xml">
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/restfulapi-springdatarest-manytomany-mysql/blob/master/pom.xml">
 </code></pre>
 
-<h3 id="definejpaentities">Define JPA Entities</h3>
+<h3 id="createdatabase">Create database</h3>
 
-<p>JPA Entity is defined with <code>@Entity</code> annotation, represent a table in your database.</p>
+<p>Create a new empty MySQL database named <code>restful_api</code>. Tables will be auto created by Hibernate when the application started</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/model/User.java">
+<h3 id="createdomainobjects">Create domain objects</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springdatarest-manytomany-mysql/blob/master/src/main/java/com/hellokoding/restfulapi/model/Book.java">
 </code></pre>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/model/Role.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springdatarest-manytomany-mysql/blob/master/src/main/java/com/hellokoding/restfulapi/model/Author.java">
 </code></pre>
 
-<p><code>@Table</code> maps the entity with the table. If no <code>@Table</code> is defined, the default value is used: the class name of the entity.</p>
+<h3 id="springdatarepository">Spring Data Repository</h3>
 
-<p><code>@Id</code> declares the identifier property of the entity.</p>
+<p>Spring Data JPA and Spring Data Rest will auto create some helper methods and RESTful APIs. For this example, we only need to extend JpaRepository</p>
 
-<p><code>@ManyToMany</code> defines a many-to-many relationship between 2 entities. <code>@JoinColumn</code> indicates the entity is the owner of the relationship: the corresponding table has a column with a foreign key to the referenced table. <code>mappedBy</code> indicates the entity is the inverse of the relationship.</p>
-
-<h3 id="springdatajparepositories">Spring Data JPA Repositories</h3>
-
-<p>Spring Data JPA contains some built-in <code>Repository</code> implemented some common functions to work with database: <code>findOne</code>, <code>findAll</code>, <code>save</code>,...</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/repository/UserRepository.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springdatarest-manytomany-mysql/blob/master/src/main/java/com/hellokoding/restfulapi/repository/BookRepository.java">
 </code></pre>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/repository/RoleRepository.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springdatarest-manytomany-mysql/blob/master/src/main/java/com/hellokoding/restfulapi/repository/AuthorRepository.java">
 </code></pre>
 
-<h3 id="springsecuritysuserdetailsservice">Spring Security's UserDetailsService</h3>
+<h3 id="applicationproperties">Application Properties</h3>
 
-<p>To implement login/authentication with Spring Security, we need to implement <code>org.springframework.security.core.userdetails.UserDetailsService</code> interface</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/service/UserDetailsServiceImpl.java">
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/restfulapi-springdatarest-manytomany-mysql/blob/master/src/main/resources/application.properties">
 </code></pre>
 
-<h3 id="securityservice">Security Service</h3>
+<h3 id="runtheapplication">Run the application</h3>
 
-<p>We create <code>SecurityService</code> to provide current loggedin user and auto login user after resgistering an account.  </p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/service/SecurityServiceImpl.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springdatarest-manytomany-mysql/blob/master/src/main/java/com/hellokoding/restfulapi/Application.java">
 </code></pre>
 
-<h3 id="userservice">User Service</h3>
+<p>Type <code>mvn clean spring-boot:run</code> on terminal at the project root directory to run</p>
 
-<p>Provide service for registering account  </p>
+<h3 id="testtheapplication">Test the application</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/service/UserServiceImpl.java">
+<p>Create a new book  </p>
+
+<pre><code>curl -i -X POST -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding\", \"description\": \"Simple coding examples and tutorials\"}" http://localhost:8080/books  
 </code></pre>
 
-<h3 id="springvalidator">Spring Validator</h3>
+<p>Create a new author  </p>
 
-<p>To provide input-data validation for <code>/registration</code> controller with Spring Validator, we implement <code>org.springframework.validation.Validator</code>. Error codes, e.g. <code>Size.userForm.username</code>, are defined by <a href="https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/resources/validation.properties">validation.properties</a>  </p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/validator/UserValidator.java">
+<pre><code>curl -i -X POST -H "Content-Type:application/json" -d "{\"name\":\"Author 1\"}" http://localhost:8080/authors  
 </code></pre>
 
-<h3 id="controllers">Controllers</h3>
+<p>Assign the author to the book  </p>
 
-<p><code>/login</code> POST controller is provided by Spring Security</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/web/UserController.java">
+<pre><code>curl -i -X PUT -H "Content-Type:text/uri-list" -d "http://localhost:8080/authors/1" http://localhost:8080/books/1/authors  
 </code></pre>
-
-<h3 id="properties">Properties</h3>
-
-<pre><code class="language-markup embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/resources/application.properties">
-</code></pre>
-
-<pre><code class="language-markup embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/resources/validation.properties">
-</code></pre>
-
-<h3 id="websecurityconfiguration">Web Security Configuration</h3>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/WebSecurityConfig.java">
-</code></pre>
-
-<h3 id="applicationconfiguration">Application Configuration</h3>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/WebApplication.java">
-</code></pre>
-
-<h3 id="run">Run</h3>
-
-<p>You can run the application using <code>mvn clean spring-boot:run</code> and visit to <code>http://localhost:8080</code></p>
 
 <h3 id="sourcecode">Source code</h3>
 
-<p><code>git@github.com:hellokoding/registration-login-spring-hsql.git</code></p>
+<p><code>git@github.com:hellokoding/restfulapi-springdatarest-manytomany-mysql.git</code></p>
 
-<p><a href="https://github.com/hellokoding/registration-login-spring-hsql">https://github.com/hellokoding/registration-login-spring-hsql</a></p>
-
-<p><big></big></p>
-
-<p></p><pre>
-Registration and Login Example Brothers:
-- <a href="https://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/">Registration and Login Example with Spring Security, Spring Data JPA, Spring Boot</a> 
-- <a href="https://hellokoding.com/registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/">Registration and Login Example with Spring MVC 4, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL</a>
-</pre>
+<p><a href="https://github.com/hellokoding/restfulapi-springdatarest-manytomany-mysql">https://github.com/hellokoding/restfulapi-springdatarest-manytomany-mysql</a></p>
             <div class="post__tags">
-              <a href="../tag/security/">Security</a><a href="../tag/auth/">Auth</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/jpa/">JPA</a><a href="../tag/hsql/">HSQL</a><a href="../tag/jsp/">JSP</a>
+              <a href="../tag/arch/">Arch</a><a href="../tag/restful/">RESTful</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/spring-data-rest/">Spring Data REST</a><a href="../tag/spring-data-jpa/">Spring Data JPA</a><a href="../tag/java/">Java</a><a href="../tag/mysql/">MySQL</a><a href="../tag/curl/">cURL</a>
             </div>
           </div>
 
@@ -435,17 +349,17 @@ Registration and Login Example Brothers:
 </div>
           <ul class="share-list">
   <li>
-    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Registration%20and%20Login%20Example%20with%20Spring%20Boot%2C%20Spring%20Security%2C%20Spring%20Data%20JPA%2C%20and%20HSQL&amp;url=http://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=RESTful%20API%20Example%20with%20Spring%20Boot%2C%20Spring%20Data%20REST%2C%20Spring%20Data%20JPA%20Many%20To%20Many%20Relationship%20and%20MySQL&amp;url=http://hellokoding.com/restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <div data-icon="ei-sc-twitter" data-size="s" class="share-list__icon share-list__icon--twitter"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="s" class="share-list__icon share-list__icon--facebook"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
+    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
     <div data-icon="ei-sc-google-plus" data-size="s" class="share-list__icon share-list__icon--google"></div>
     </a>
   </li>
@@ -454,8 +368,8 @@ Registration and Login Example Brothers:
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-hsql/" class="block" title="JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/many-to-many-extracolumns.png) ">
+       <a href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA One To Many Relationship and MySQL">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/07/RESTfulAPI.png) ">
       </div>
     </a>
 
@@ -464,14 +378,14 @@ Registration and Login Example Brothers:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2016-07-04">04 July 2016</time>
+        <time class="post-card__meta__date" datetime="2017-07-09">09 July 2017</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL" href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-hsql/">JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL</a>
+        <a title="RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA One To Many Relationship and MySQL" href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/">RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA One To Many Relationship and MySQL</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/hsql/">HSQL</a>
+              <a href="../tag/arch/">Arch</a><a href="../tag/restful/">RESTful</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/spring-data-rest/">Spring Data REST</a><a href="../tag/spring-data-jpa/">Spring Data JPA</a><a href="../tag/java/">Java</a><a href="../tag/mysql/">MySQL</a><a href="../tag/curl/">cURL</a>
             </div>
 
    </div>
@@ -479,32 +393,6 @@ Registration and Login Example Brothers:
   </div>
 </article>
 
-    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
-  <div class="post-card ">
-       <a href="../spring-boot-hello-world-example-with-thymeleaf/" class="block" title="Spring Boot Hello World Example with Thymeleaf">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/hello--1--1.gif) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2016-07-06">06 July 2016</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Spring Boot Hello World Example with Thymeleaf" href="../spring-boot-hello-world-example-with-thymeleaf/">Spring Boot Hello World Example with Thymeleaf</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/hello/">Hello</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/thymeleaf/">Thymeleaf</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
 
   </div>
 </div>          <section class="disqus">
@@ -512,8 +400,8 @@ Registration and Login Example Brothers:
   <div id="disqus_thread"></div>
 <script>
       var disqus_config = function () {
-        this.page.url = 'http://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = '17'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://hellokoding.com/restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '29'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
 
       (function() { // DON'T EDIT BELOW THIS LINE
@@ -536,7 +424,7 @@ Registration and Login Example Brothers:
   <aside class="widget">
   <h3 class="widget__title">Recent Stories</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA Many To Many Relationship and MySQL" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/"><div style="background-image: url(../content/images/2017/07/RESTfulAPI-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA Many To Many Relationship and MySQL" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/">RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA Many To Many Relationship and MySQL</a></h2></div>
+<div class="post-card"><a title="RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA Many To Many Relationship and MySQL" href="index.html"><div style="background-image: url(../content/images/2017/07/RESTfulAPI-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA Many To Many Relationship and MySQL" href="index.html">RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA Many To Many Relationship and MySQL</a></h2></div>
 <div class="post-card"><a title="RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA One To Many Relationship and MySQL" href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/"><div style="background-image: url(../content/images/2017/07/RESTfulAPI.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA One To Many Relationship and MySQL" href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/">RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA One To Many Relationship and MySQL</a></h2></div>
 <div class="post-card"><a title="Spring Boot Tutorial Series" href="../spring-boot-tutorial-series/"><div style="background-image: url(../content/images/2017/06/SpringBoot.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot Tutorial Series" href="../spring-boot-tutorial-series/">Spring Boot Tutorial Series</a></h2></div>
 <div class="post-card"><a title="RESTful API Example with Spring Boot, Spring Data REST and MySQL" href="../restful-api-example-with-spring-boot-spring-data-rest-and-mysql/"><div style="background-image: url(../content/images/2017/06/RESTfulAPI.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful API Example with Spring Boot, Spring Data REST and MySQL" href="../restful-api-example-with-spring-boot-spring-data-rest-and-mysql/">RESTful API Example with Spring Boot, Spring Data REST and MySQL</a></h2></div>
@@ -598,6 +486,58 @@ Registration and Login Example Brothers:
           </div>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
+       <a href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA One To Many Relationship and MySQL">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/07/RESTfulAPI.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2017-07-09">09 July 2017</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA One To Many Relationship and MySQL" href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/">RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA One To Many Relationship and MySQL</a>
+      </h2>
+<div class="post__tags">
+              
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../restful-api-example-with-spring-boot-spring-data-rest-and-mysql/" class="block" title="RESTful API Example with Spring Boot, Spring Data REST and MySQL">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/06/RESTfulAPI.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2017-06-24">24 June 2017</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="RESTful API Example with Spring Boot, Spring Data REST and MySQL" href="../restful-api-example-with-spring-boot-spring-data-rest-and-mysql/">RESTful API Example with Spring Boot, Spring Data REST and MySQL</a>
+      </h2>
+<div class="post__tags">
+              
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
        <a href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/" class="block" title="Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot and Redis">
       <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/03/hello-sso-jwt.gif) ">
       </div>
@@ -613,58 +553,6 @@ Registration and Login Example Brothers:
 
       <h2 class="post-card__title">
         <a title="Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot and Redis" href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/">Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot and Redis</a>
-      </h2>
-<div class="post__tags">
-              
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/" class="block" title="Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2016/08/hello-sso-jwt-1.gif) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2016-08-01">01 August 2016</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot" href="../hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot</a>
-      </h2>
-<div class="post__tags">
-              
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-hsql/" class="block" title="JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/many-to-many-extracolumns.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2016-07-04">04 July 2016</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL" href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-hsql/">JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL</a>
       </h2>
 <div class="post__tags">
               
