@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot</title>
+  <title>RESTful APIs Example with Spring Boot, Integration Test with MockMVC, UI Integration with VueJS</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,38 +14,32 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=e7f8c17688">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=e7f8c17688">
    
-  <link rel="canonical" href="http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">
+  <link rel="canonical" href="http://hellokoding.com/restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot">
-    <meta property="og:description" content="This post walks you through the process of creating the Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World">
-    <meta property="og:url" content="http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2016/08/hello-sso-jwt-1.gif">
-    <meta property="article:published_time" content="2016-08-01T14:28:32.000Z">
-    <meta property="article:modified_time" content="2017-06-30T20:23:45.000Z">
-    <meta property="article:tag" content="Arch">
-    <meta property="article:tag" content="Scale">
-    <meta property="article:tag" content="Security">
-    <meta property="article:tag" content="Auth">
-    <meta property="article:tag" content="SSO">
-    <meta property="article:tag" content="JWT">
-    <meta property="article:tag" content="Cookie">
-    <meta property="article:tag" content="Java">
+    <meta property="og:title" content="RESTful APIs Example with Spring Boot, Integration Test with MockMVC, UI Integration with VueJS">
+    <meta property="og:description" content="This post walks you through the process of creating a RESTful API Example with Spring Boot,  Integration Test with MockMVC, UI Integration with VueJS What you'll need JDK 1.8+ Maven 3+ Stack Spring Boot MockMVC VueJS Project structure ├── src │   ├── main │   │   ├── java │   │   │   └── com │   │   │       └── hellokoding │   │   │           └── restfulapi │   │   │               ├── api │   │   │               │   └── StockAPI.java │   │   │               ├── model │   │   │               │   └── Stock.">
+    <meta property="og:url" content="http://hellokoding.com/restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2018/03/RESTfulAPI.png">
+    <meta property="article:published_time" content="2018-03-24T04:07:49.000Z">
+    <meta property="article:modified_time" content="2018-03-24T04:11:57.000Z">
+    <meta property="article:tag" content="RESTful">
     <meta property="article:tag" content="Spring Boot">
-    <meta property="article:tag" content="FreeMarker">
+    <meta property="article:tag" content="VueJS">
+    <meta property="article:tag" content="Integration Test">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot">
-    <meta name="twitter:description" content="This post walks you through the process of creating the Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World">
-    <meta name="twitter:url" content="http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2016/08/hello-sso-jwt-1.gif">
+    <meta name="twitter:title" content="RESTful APIs Example with Spring Boot, Integration Test with MockMVC, UI Integration with VueJS">
+    <meta name="twitter:description" content="This post walks you through the process of creating a RESTful API Example with Spring Boot,  Integration Test with MockMVC, UI Integration with VueJS What you'll need JDK 1.8+ Maven 3+ Stack Spring Boot MockMVC VueJS Project structure ├── src │   ├── main │   │   ├── java │   │   │   └── com │   │   │       └── hellokoding │   │   │           └── restfulapi │   │   │               ├── api │   │   │               │   └── StockAPI.java │   │   │               ├── model │   │   │               │   └── Stock.">
+    <meta name="twitter:url" content="http://hellokoding.com/restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2018/03/RESTfulAPI.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Arch, Scale, Security, Auth, SSO, JWT, Cookie, Java, Spring Boot, FreeMarker">
+    <meta name="twitter:data2" content="RESTful, Spring Boot, VueJS, Integration Test">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -69,13 +63,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. He is interested in making simple code examples and tutorials. Follow him on GitHub/Twitter or drop a message hellokoding [at] gmail [dot] com"
     },
-    "headline": "Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot",
-    "url": "http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/",
-    "datePublished": "2016-08-01T14:28:32.000Z",
-    "dateModified": "2017-06-30T20:23:45.000Z",
-    "image": "http://hellokoding.com/content/images/2016/08/hello-sso-jwt-1.gif",
-    "keywords": "Arch, Scale, Security, Auth, SSO, JWT, Cookie, Java, Spring Boot, FreeMarker",
-    "description": "This post walks you through the process of creating the Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World"
+    "headline": "RESTful APIs Example with Spring Boot, Integration Test with MockMVC, UI Integration with VueJS",
+    "url": "http://hellokoding.com/restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/",
+    "datePublished": "2018-03-24T04:07:49.000Z",
+    "dateModified": "2018-03-24T04:11:57.000Z",
+    "image": "http://hellokoding.com/content/images/2018/03/RESTfulAPI.png",
+    "keywords": "RESTful, Spring Boot, VueJS, Integration Test",
+    "description": "This post walks you through the process of creating a RESTful API Example with Spring Boot,  Integration Test with MockMVC, UI Integration with VueJS What you&#x27;ll need JDK 1.8+ Maven 3+ Stack Spring Boot MockMVC VueJS Project structure ├── src │   ├── main │   │   ├── java │   │   │   └── com │   │   │       └── hellokoding │   │   │           └── restfulapi │   │   │               ├── api │   │   │               │   └── StockAPI.java │   │   │               ├── model │   │   │               │   └── Stock."
 }
     </script>
 
@@ -89,7 +83,7 @@ ghost.init({
     <meta name="generator" content="Ghost 0.9">
     <link rel="alternate" type="application/rss+xml" title="Hello Koding" href="http://hellokoding.com/rss/">
 </head>
-<body class="post-template tag-arch tag-scale tag-security tag-auth tag-sso tag-jwt tag-cookie tag-java tag-spring-boot tag-freemarker">
+<body class="post-template tag-restful tag-spring-boot tag-vuejs tag-integration-test">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -200,201 +194,152 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-8 column">
-        <article class="post tag-arch tag-scale tag-security tag-auth tag-sso tag-jwt tag-cookie tag-java tag-spring-boot tag-freemarker">
+        <article class="post tag-restful tag-spring-boot tag-vuejs tag-integration-test">
 
           <header class="post__header">
-            <h2 class="post__title">Single Sign On (SSO), Scalable Authentication Example with JSON Web Token (JWT) and Spring Boot</h2>
-            <time class="post__date" datetime="2017-06-30">Last updated @ 30 June 2017</time><br>
-            <time class="post__date" datetime="2016-08-01">First published @ 01 August 2016</time>
+            <h2 class="post__title">RESTful APIs Example with Spring Boot, Integration Test with MockMVC, UI Integration with VueJS</h2>
+            <time class="post__date" datetime="2018-03-24">Last updated @ 24 March 2018</time><br>
+            <time class="post__date" datetime="2018-03-24">First published @ 24 March 2018</time>
           </header>
 
           <div class="post-content">
-            <p>This post walks you through the process of creating the <a href="https://en.wikipedia.org/wiki/Single_sign-on">Single Sign On (SSO)</a>, Scalable Authentication Example with <a href="https://jwt.io/">JSON Web Token (JWT)</a> and Spring Boot.</p>
-
-<p><big></big></p>
-
-<p></p><pre>
-Hello Spring Boot Series:
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-freemarker/">Spring Boot Hello World Example with FreeMarker</a>
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/">Spring Boot Hello World Example with Thymeleaf</a>
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-jsp/">Spring Boot Hello World Example with JSP</a>
-</pre>
-
-<h3 id="whatyoullbuild">What you'll build</h3>
-
-<p>You'll build 3 separated services:</p>
-
-<ul>
-<li><p>1 Authentication Service: will be deployed at <code>localhost:8080</code>.</p></li>
-<li><p>2 Resource Services (to simplify, we use the same code base): will be deployed at <code>localhost:8180</code> and <code>localhost:8280</code>.</p></li>
-</ul>
-
-<p><img src="../content/images/2016/08/hello-sso-jwt.gif" alt=""></p>
+            <p>This post walks you through the process of creating a RESTful API Example with Spring Boot,  Integration Test with MockMVC, UI Integration with VueJS</p>
 
 <h3 id="whatyoullneed">What you'll need</h3>
 
 <ul>
-<li>JDK 1.7+</li>
+<li>JDK 1.8+</li>
 <li>Maven 3+</li>
 </ul>
 
 <h3 id="stack">Stack</h3>
 
 <ul>
-<li>Java</li>
-<li>Single Sign On</li>
-<li>JSON Web Token</li>
 <li>Spring Boot</li>
-<li>Freemarker</li>
+<li>MockMVC</li>
+<li>VueJS</li>
 </ul>
-
-<h1 id="authenticationservice">Authentication Service</h1>
 
 <h3 id="projectstructure">Project structure</h3>
 
 <pre><code>├── src
-│   └── main
-│       ├── java
-│       │   └── com
-│       │       └── hellokoding
-│       │           └── sso
-│       │               └── auth
-│       │                   ├── CookieUtil.java
-│       │                   ├── JwtUtil.java
-│       │                   ├── LoginController.java
-│       │                   └── WebApplication.java
-│       ├── resources
-│       │   └── application.properties
-│       └── webapp
-│           └── login.ftl
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── hellokoding
+│   │   │           └── restfulapi
+│   │   │               ├── api
+│   │   │               │   └── StockAPI.java
+│   │   │               ├── model
+│   │   │               │   └── Stock.java
+│   │   │               ├── service
+│   │   │               │   └── StockService.java
+│   │   │               ├── web
+│   │   │               │   └── StockController.java
+│   │   │               ├── Application.java
+│   │   │               └── StockData.java
+│   │   └── resources
+│   │       ├── static
+│   │       │   ├── stocklist.css
+│   │       │   └── stocklist.js
+│   │       ├── templates
+│   │       │   └── stocklist.html
+│   │       └── application.properties
+│   └── test
+│       └── java
+│           └── com
+│               └── hellokoding
+│                   └── restfulapi
+│                       └── StockAPITest.java
 └── pom.xml
 </code></pre>
 
 <h3 id="projectdependencies">Project dependencies</h3>
 
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/pom.xml">
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs/blob/master/pom.xml">
 </code></pre>
 
-<h3 id="cookieutil">CookieUtil</h3>
+<h3 id="domainobjects">Domain objects</h3>
 
-<p>JWT Token'll be saved and extracted from browser cookies.</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/java/com/hellokoding/sso/auth/CookieUtil.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs/blob/master/src/main/java/com/hellokoding/restfulapi/model/Stock.java">
 </code></pre>
 
-<p><code>cookie.setSecure(secure)</code>: secure=true =&gt; work on HTTPS only.</p>
+<h3 id="data">Data</h3>
 
-<p><code>cookie.setHttpOnly(true)</code>: invisible to JavaScript.</p>
-
-<p><code>cookie.setMaxAge(maxAge)</code>: maxAge=0: expire cookie now, maxAge&lt;0: expire cookiie on browser exit.</p>
-
-<p><code>cookie.setDomain(domain)</code>: visible to <code>domain</code> only.</p>
-
-<p><code>cookie.setPath("/")</code>: visible to all paths.</p>
-
-<h3 id="jwtutil">JwtUtil</h3>
-
-<p>We use <a href="https://github.com/jwtk/jjwt">JJWT</a> to generate/parse JWT Token.</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/java/com/hellokoding/sso/auth/JwtUtil.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs/blob/master/src/main/java/com/hellokoding/restfulapi/StockData.java">
 </code></pre>
 
-<h3 id="logincontroller">LoginController</h3>
+<h3 id="service">Service</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/java/com/hellokoding/sso/auth/LoginController.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs/blob/master/src/main/java/com/hellokoding/restfulapi/service/StockService.java">
 </code></pre>
 
-<p>To simplify, we use a HashMap (<code>credentials</code>) as user database.</p>
+<h3 id="restfulapis">RESTful APIs</h3>
 
-<h3 id="viewtemplate">View Template</h3>
-
-<pre><code class="language-html embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/webapp/login.ftl">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs/blob/master/src/main/java/com/hellokoding/restfulapi/api/StockAPI.java">
 </code></pre>
 
-<h3 id="applicationconfiguration">Application Configuration</h3>
+<h3 id="webcontroller">Web Controller</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/resources/application.properties">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs/blob/master/src/main/java/com/hellokoding/restfulapi/web/StockController.java">
 </code></pre>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/java/com/hellokoding/sso/auth/WebApplication.java">
+<h3 id="uiintegrationwithvuejs">UI Integration with VueJS</h3>
+
+<pre><code class="language-html embedfile-https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs/blob/master/src/main/resources/templates/stocklist.html">
 </code></pre>
 
-<h3 id="run">Run</h3>
-
-<pre><code>mvn clean spring-boot:run
+<pre><code class="language-javascript embedfile-https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs/blob/master/src/main/resources/static/stocklist.js">
 </code></pre>
 
-<h1 id="resourceservice">Resource Service</h1>
+<h3 id="integrationtestwithmockmvc">Integration Test with MockMVC</h3>
 
-<h3 id="projectstructure">Project structure</h3>
-
-<pre><code>── src
-│   └── main
-│       ├── java
-│       │   └── com
-│       │       └── hellokoding
-│       │           └── sso
-│       │               └── resource
-│       │                   ├── CookieUtil.java
-│       │                   ├── JwtFilter.java
-│       │                   ├── JwtUtil.java
-│       │                   ├── ResourceController.java
-│       │                   └── WebApplication.java
-│       ├── resources
-│       │   └── application.properties
-│       └── webapp
-│           └── protected-resource.ftl
-└── pom.xml
+<pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs/blob/master/src/test/java/com/hellokoding/restfulapi/StockAPITest.java">
 </code></pre>
 
-<h3 id="projectdependencies">Project dependencies</h3>
+<h3 id="runtheapplication">Run the application</h3>
 
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/pom.xml">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs/blob/master/src/main/java/com/hellokoding/restfulapi/Application.java">
 </code></pre>
 
-<h3 id="jwtfilter">JwtFilter</h3>
+<ul>
+<li>Type <code>mvn clean spring-boot:run</code> on terminal at the project root directory to run</li>
+<li>Access to <code>http://localhost:8080</code></li>
+</ul>
 
-<p>JwtFilter enforces SSO. If JWT Token's not existed (unauthenticated), redirects to Authentication Service. If JWT Token's existed (authenticated), extracts user identity and forwards the request.</p>
+<h3 id="testtheapplication">Test the application</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/src/main/java/com/hellokoding/sso/resource/JwtFilter.java">
+<p>Get all stocks  </p>
+
+<pre><code>curl http://localhost:8080/api/v1/stocks
 </code></pre>
 
-<h3 id="resourcecontroller">ResourceController</h3>
+<p>Get stock id 1  </p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/src/main/java/com/hellokoding/sso/resource/ResourceController.java">
+<pre><code>curl http://localhost:8080/api/v1/stocks/1
 </code></pre>
 
-<h3 id="viewtemplate">View Template</h3>
+<p>Update price of stock 1  </p>
 
-<pre><code class="language-html embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/src/main/webapp/protected-resource.ftl">
+<pre><code>curl -X PUT -d 'currentPrice=123' http://localhost:8080/api/v1/stocks/1
 </code></pre>
 
-<h3 id="applicationconfiguration">Application Configuration</h3>
+<p>Create a new stock  </p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/src/main/resources/application.properties">
-</code></pre>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/src/main/java/com/hellokoding/sso/resource/WebApplication.java">
-</code></pre>
-
-<h3 id="run">Run</h3>
-
-<p>Resource Service 1</p>
-
-<pre><code>mvn clean spring-boot:run -Dserver.port=8180
-</code></pre>
-
-<p>Resource Service 2</p>
-
-<pre><code>mvn clean spring-boot:run -Dserver.port=8280
+<pre><code>curl -H "Content-Type: application/json" -X POST -d '{"name":"S11","currentPrice":"11"}' http://localhost:8080/api/v1/stocks
 </code></pre>
 
 <h3 id="sourcecode">Source code</h3>
 
-<p><code>git@github.com:hellokoding/hello-sso-jwt.git</code> <br>
-<a href="https://github.com/hellokoding/hello-sso-jwt">https://github.com/hellokoding/hello-sso-jwt</a></p>
+<p><code>git@github.com:hellokoding/restfulapi-springboot-mockmvc-vuejs.git</code></p>
+
+<p><a href="https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs">https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs</a></p>
+
+<h3 id="links">Links</h3>
+
+<p><a href="https://vuejs.org/v2/examples/grid-component.html">VueJS Grid Component Example</a></p>
             <div class="post__tags">
-              <a href="../tag/arch/">Arch</a><a href="../tag/scale/">Scale</a><a href="../tag/security/">Security</a><a href="../tag/auth/">Auth</a><a href="../tag/sso/">SSO</a><a href="../tag/jwt/">JWT</a><a href="../tag/cookie/">Cookie</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/freemarker/">FreeMarker</a>
+              <a href="../tag/restful/">RESTful</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/vuejs/">VueJS</a><a href="../tag/integration-test/">Integration Test</a>
             </div>
           </div>
 
@@ -435,17 +380,17 @@ Hello Spring Boot Series:
 </div>
           <ul class="share-list">
   <li>
-    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Single%20Sign%20On%20(SSO)%2C%20Scalable%20Authentication%20Example%20with%20JSON%20Web%20Token%20(JWT)%20and%20Spring%20Boot&amp;url=http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=RESTful%20APIs%20Example%20with%20Spring%20Boot%2C%20Integration%20Test%20with%20MockMVC%2C%20UI%20Integration%20with%20VueJS&amp;url=http://hellokoding.com/restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <div data-icon="ei-sc-twitter" data-size="s" class="share-list__icon share-list__icon--twitter"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="s" class="share-list__icon share-list__icon--facebook"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
+    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
     <div data-icon="ei-sc-google-plus" data-size="s" class="share-list__icon share-list__icon--google"></div>
     </a>
   </li>
@@ -454,8 +399,8 @@ Hello Spring Boot Series:
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../hackernewsapp-with-reactnative/" class="block" title="Hacker News App with React Native">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/03/ReactNative-1.png) ">
+       <a href="../email-verification-example-with-spring-boot-mysql-docker-compose/" class="block" title="Email Verification Example with Spring Boot, MySQL, Docker Compose, Amazon SES">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2018/01/email-verification-form-4.png) ">
       </div>
     </a>
 
@@ -464,14 +409,14 @@ Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2016-07-27">27 July 2016</time>
+        <time class="post-card__meta__date" datetime="2018-01-10">10 January 2018</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Hacker News App with React Native" href="../hackernewsapp-with-reactnative/">Hacker News App with React Native</a>
+        <a title="Email Verification Example with Spring Boot, MySQL, Docker Compose, Amazon SES" href="../email-verification-example-with-spring-boot-mysql-docker-compose/">Email Verification Example with Spring Boot, MySQL, Docker Compose, Amazon SES</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/apps-tag/">Apps</a><a href="../tag/hackernews/">HackerNews</a><a href="../tag/react-native/">React Native</a><a href="../tag/ios/">iOS</a><a href="../tag/android/">Android</a>
+              <a href="../tag/account-management/">Account Management</a><a href="../tag/email/">Email</a><a href="../tag/aws-ses/">AWS SES</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/java/">Java</a><a href="../tag/mysql/">MySQL</a><a href="../tag/docker/">Docker</a><a href="../tag/nginx/">NGINX</a><a href="../tag/properties-file/">Properties file</a>
             </div>
 
    </div>
@@ -479,32 +424,6 @@ Hello Spring Boot Series:
   </div>
 </article>
 
-    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
-  <div class="post-card ">
-       <a href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/" class="block" title="Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot and Redis">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/03/hello-sso-jwt.gif) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2017-03-14">14 March 2017</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot and Redis" href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/">Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot and Redis</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/arch/">Arch</a><a href="../tag/scale/">Scale</a><a href="../tag/security/">Security</a><a href="../tag/auth/">Auth</a><a href="../tag/sso/">SSO</a><a href="../tag/jwt/">JWT</a><a href="../tag/cookie/">Cookie</a><a href="../tag/redis/">Redis</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/freemarker/">FreeMarker</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
 
   </div>
 </div>          <section class="disqus">
@@ -512,8 +431,8 @@ Hello Spring Boot Series:
   <div id="disqus_thread"></div>
 <script>
       var disqus_config = function () {
-        this.page.url = 'http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = '24'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://hellokoding.com/restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '44'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
 
       (function() { // DON'T EDIT BELOW THIS LINE
@@ -536,7 +455,7 @@ Hello Spring Boot Series:
   <aside class="widget">
   <h3 class="widget__title">Recent Stories</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="RESTful APIs Example with Spring Boot, Integration Test with MockMVC, UI Integration with VueJS" href="../restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/"><div style="background-image: url(../content/images/2018/03/RESTfulAPI.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful APIs Example with Spring Boot, Integration Test with MockMVC, UI Integration with VueJS" href="../restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/">RESTful APIs Example with Spring Boot, Integration Test with MockMVC, UI Integration with VueJS</a></h2></div>
+<div class="post-card"><a title="RESTful APIs Example with Spring Boot, Integration Test with MockMVC, UI Integration with VueJS" href="index.html"><div style="background-image: url(../content/images/2018/03/RESTfulAPI.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful APIs Example with Spring Boot, Integration Test with MockMVC, UI Integration with VueJS" href="index.html">RESTful APIs Example with Spring Boot, Integration Test with MockMVC, UI Integration with VueJS</a></h2></div>
 <div class="post-card"><a title="Email Verification Example with Spring Boot, MySQL, Docker Compose, Amazon SES" href="../email-verification-example-with-spring-boot-mysql-docker-compose/"><div style="background-image: url(../content/images/2018/01/email-verification-form-4.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Email Verification Example with Spring Boot, MySQL, Docker Compose, Amazon SES" href="../email-verification-example-with-spring-boot-mysql-docker-compose/">Email Verification Example with Spring Boot, MySQL, Docker Compose, Amazon SES</a></h2></div>
 <div class="post-card"><a title="Docker Compose with Spring Boot, MySQL, NGINX" href="../docker-compose-with-spring-boot-mysql-nginx/"><div style="background-image: url(../content/images/2018/01/Docker.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Docker Compose with Spring Boot, MySQL, NGINX" href="../docker-compose-with-spring-boot-mysql-nginx/">Docker Compose with Spring Boot, MySQL, NGINX</a></h2></div>
 <div class="post-card"><a title="Docker Compose with Spring Boot, MongoDB, NGINX" href="../docker-compose-with-spring-boot-mongodb-nginx/"><div style="background-image: url(../content/images/2017/12/Docker-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Docker Compose with Spring Boot, MongoDB, NGINX" href="../docker-compose-with-spring-boot-mongodb-nginx/">Docker Compose with Spring Boot, MongoDB, NGINX</a></h2></div>
@@ -603,8 +522,8 @@ Hello Spring Boot Series:
           </div>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/" class="block" title="Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot and Redis">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/03/hello-sso-jwt.gif) ">
+       <a href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-extra-columns-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA Many To Many Extra Columns Relationship and MySQL">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/08/RESTfulAPI.png) ">
       </div>
     </a>
 
@@ -613,11 +532,11 @@ Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2017-03-14">14 March 2017</time>
+        <time class="post-card__meta__date" datetime="2017-08-13">13 August 2017</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot and Redis" href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/">Single Sign Out, Scalable Authentication Example with JSON Web Token (JWT), Spring Boot and Redis</a>
+        <a title="RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA Many To Many Extra Columns Relationship and MySQL" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-extra-columns-relationship-and-mysql/">RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA Many To Many Extra Columns Relationship and MySQL</a>
       </h2>
 <div class="post__tags">
               
@@ -629,8 +548,8 @@ Hello Spring Boot Series:
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/" class="block" title="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/register-1.PNG) ">
+       <a href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA Many To Many Relationship and MySQL">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/07/RESTfulAPI-1.png) ">
       </div>
     </a>
 
@@ -639,11 +558,11 @@ Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2016-07-05">05 July 2016</time>
+        <time class="post-card__meta__date" datetime="2017-07-13">13 July 2017</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL" href="../registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/">Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL</a>
+        <a title="RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA Many To Many Relationship and MySQL" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/">RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA Many To Many Relationship and MySQL</a>
       </h2>
 <div class="post__tags">
               
@@ -655,8 +574,8 @@ Hello Spring Boot Series:
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../contact-form-example-with-java-spring-boot-freemarker-and-amazon-ses/" class="block" title="Contact Form Example with Java, Spring Boot, FreeMarker and Amazon SES">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/12/contact-form-java-springboot-freemarker-ses-1.png) ">
+       <a href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA One To Many Relationship and MySQL">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/07/RESTfulAPI.png) ">
       </div>
     </a>
 
@@ -665,11 +584,11 @@ Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2017-12-23">23 December 2017</time>
+        <time class="post-card__meta__date" datetime="2017-07-09">09 July 2017</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Contact Form Example with Java, Spring Boot, FreeMarker and Amazon SES" href="../contact-form-example-with-java-spring-boot-freemarker-and-amazon-ses/">Contact Form Example with Java, Spring Boot, FreeMarker and Amazon SES</a>
+        <a title="RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA One To Many Relationship and MySQL" href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/">RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA One To Many Relationship and MySQL</a>
       </h2>
 <div class="post__tags">
               
