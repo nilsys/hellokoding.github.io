@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kafka Connect Sinks Data to Postgres Example with AVRO, Schema Registry and Python</title>
+  <title>Streaming Data from Kafka to Postgres with Kafka Connect, AVRO, Schema Registry and Python</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,12 +19,12 @@
     
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Kafka Connect Sinks Data to Postgres Example with AVRO, Schema Registry and Python">
-    <meta property="og:description" content="This post walks you through the process of creating a Kafka Connect Sinks Data to Postgres Example with AVRO, Schema Registry and Python. What you'll need Confluent OSS Confluent CLI Python and pipenv Docker Compose Stack Python 3 Pipenv Flake8 Docker Compose Postgres Kafka Kafka Connect AVRO Confluent Schema Registry">
+    <meta property="og:title" content="Streaming Data from Kafka to Postgres with Kafka Connect, AVRO, Schema Registry and Python">
+    <meta property="og:description" content="This post walks you through the process of Streaming Data from Kafka to Postgres with Kafka Connect AVRO, Schema Registry and Python. What you'll need Confluent OSS Confluent CLI Python and pipenv Docker Compose Stack Python 3 Pipenv Flake8 Docker Compose Postgres Kafka Kafka Connect AVRO Confluent Schema Registry Project">
     <meta property="og:url" content="http://hellokoding.com/kafka-connect-sinks-data-to-postgres-example-with-avro-schema-registry-and-python/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2018/06/kafka-1.png">
     <meta property="article:published_time" content="2018-06-10T11:46:14.000Z">
-    <meta property="article:modified_time" content="2018-06-10T11:56:12.000Z">
+    <meta property="article:modified_time" content="2018-06-10T12:05:07.000Z">
     <meta property="article:tag" content="Docker">
     <meta property="article:tag" content="Kafka">
     <meta property="article:tag" content="AVRO">
@@ -34,8 +34,8 @@
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kafka Connect Sinks Data to Postgres Example with AVRO, Schema Registry and Python">
-    <meta name="twitter:description" content="This post walks you through the process of creating a Kafka Connect Sinks Data to Postgres Example with AVRO, Schema Registry and Python. What you'll need Confluent OSS Confluent CLI Python and pipenv Docker Compose Stack Python 3 Pipenv Flake8 Docker Compose Postgres Kafka Kafka Connect AVRO Confluent Schema Registry">
+    <meta name="twitter:title" content="Streaming Data from Kafka to Postgres with Kafka Connect, AVRO, Schema Registry and Python">
+    <meta name="twitter:description" content="This post walks you through the process of Streaming Data from Kafka to Postgres with Kafka Connect AVRO, Schema Registry and Python. What you'll need Confluent OSS Confluent CLI Python and pipenv Docker Compose Stack Python 3 Pipenv Flake8 Docker Compose Postgres Kafka Kafka Connect AVRO Confluent Schema Registry Project">
     <meta name="twitter:url" content="http://hellokoding.com/kafka-connect-sinks-data-to-postgres-example-with-avro-schema-registry-and-python/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2018/06/kafka-1.png">
     <meta name="twitter:label1" content="Written by">
@@ -65,13 +65,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. He is interested in making simple code examples and tutorials. Follow him on GitHub/Twitter or drop a message hellokoding [at] gmail [dot] com"
     },
-    "headline": "Kafka Connect Sinks Data to Postgres Example with AVRO, Schema Registry and Python",
+    "headline": "Streaming Data from Kafka to Postgres with Kafka Connect, AVRO, Schema Registry and Python",
     "url": "http://hellokoding.com/kafka-connect-sinks-data-to-postgres-example-with-avro-schema-registry-and-python/",
     "datePublished": "2018-06-10T11:46:14.000Z",
-    "dateModified": "2018-06-10T11:56:12.000Z",
+    "dateModified": "2018-06-10T12:05:07.000Z",
     "image": "http://hellokoding.com/content/images/2018/06/kafka-1.png",
     "keywords": "Docker, Kafka, AVRO, SchemaRegistry, Python, Postgres",
-    "description": "This post walks you through the process of creating a Kafka Connect Sinks Data to Postgres Example with AVRO, Schema Registry and Python. What you&#x27;ll need Confluent OSS Confluent CLI Python and pipenv Docker Compose Stack Python 3 Pipenv Flake8 Docker Compose Postgres Kafka Kafka Connect AVRO Confluent Schema Registry"
+    "description": "This post walks you through the process of Streaming Data from Kafka to Postgres with Kafka Connect AVRO, Schema Registry and Python. What you&#x27;ll need Confluent OSS Confluent CLI Python and pipenv Docker Compose Stack Python 3 Pipenv Flake8 Docker Compose Postgres Kafka Kafka Connect AVRO Confluent Schema Registry Project"
 }
     </script>
 
@@ -199,13 +199,13 @@ ghost.init({
         <article class="post tag-docker tag-kafka tag-avro tag-schemaregistry tag-python tag-postgres">
 
           <header class="post__header">
-            <h2 class="post__title">Kafka Connect Sinks Data to Postgres Example with AVRO, Schema Registry and Python</h2>
+            <h2 class="post__title">Streaming Data from Kafka to Postgres with Kafka Connect, AVRO, Schema Registry and Python</h2>
             <time class="post__date" datetime="2018-06-10">Last updated @ 10 June 2018</time><br>
             <time class="post__date" datetime="2018-06-10">First published @ 10 June 2018</time>
           </header>
 
           <div class="post-content">
-            <p>This post walks you through the process of creating a Kafka Connect Sinks Data to Postgres Example with AVRO, Schema Registry and Python.</p>
+            <p>This post walks you through the process of Streaming Data from Kafka to Postgres with Kafka Connect AVRO, Schema Registry and Python.</p>
 
 <h3 id="whatyoullneed">What you'll need</h3>
 
@@ -350,7 +350,7 @@ pipenv shell
 </div>
           <ul class="share-list">
   <li>
-    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Kafka%20Connect%20Sinks%20Data%20to%20Postgres%20Example%20with%20AVRO%2C%20Schema%20Registry%20and%20Python&amp;url=http://hellokoding.com/kafka-connect-sinks-data-to-postgres-example-with-avro-schema-registry-and-python/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Streaming%20Data%20from%20Kafka%20to%20Postgres%20with%20Kafka%20Connect%2C%20AVRO%2C%20Schema%20Registry%20and%20Python&amp;url=http://hellokoding.com/kafka-connect-sinks-data-to-postgres-example-with-avro-schema-registry-and-python/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <div data-icon="ei-sc-twitter" data-size="s" class="share-list__icon share-list__icon--twitter"></div>
     </a>
   </li>
@@ -425,7 +425,7 @@ pipenv shell
   <aside class="widget">
   <h3 class="widget__title">Recent Stories</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Kafka Connect Sinks Data to Postgres Example with AVRO, Schema Registry and Python" href="index.html"><div style="background-image: url(../content/images/2018/06/kafka-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Kafka Connect Sinks Data to Postgres Example with AVRO, Schema Registry and Python" href="index.html">Kafka Connect Sinks Data to Postgres Example with AVRO, Schema Registry and Python</a></h2></div>
+<div class="post-card"><a title="Streaming Data from Kafka to Postgres with Kafka Connect, AVRO, Schema Registry and Python" href="index.html"><div style="background-image: url(../content/images/2018/06/kafka-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Streaming Data from Kafka to Postgres with Kafka Connect, AVRO, Schema Registry and Python" href="index.html">Streaming Data from Kafka to Postgres with Kafka Connect, AVRO, Schema Registry and Python</a></h2></div>
 <div class="post-card"><a title="RESTful APIs Example with Spring Boot, Integration Test with MockMVC, UI Integration with VueJS" href="../restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/"><div style="background-image: url(../content/images/2018/03/RESTfulAPI.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful APIs Example with Spring Boot, Integration Test with MockMVC, UI Integration with VueJS" href="../restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/">RESTful APIs Example with Spring Boot, Integration Test with MockMVC, UI Integration with VueJS</a></h2></div>
 <div class="post-card"><a title="Email Verification Example with Spring Boot, MySQL, Docker Compose, Amazon SES" href="../email-verification-example-with-spring-boot-mysql-docker-compose/"><div style="background-image: url(../content/images/2018/01/email-verification-form-4.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Email Verification Example with Spring Boot, MySQL, Docker Compose, Amazon SES" href="../email-verification-example-with-spring-boot-mysql-docker-compose/">Email Verification Example with Spring Boot, MySQL, Docker Compose, Amazon SES</a></h2></div>
 <div class="post-card"><a title="Docker Compose with Spring Boot, MySQL, NGINX" href="../docker-compose-with-spring-boot-mysql-nginx/"><div style="background-image: url(../content/images/2018/01/Docker.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Docker Compose with Spring Boot, MySQL, NGINX" href="../docker-compose-with-spring-boot-mysql-nginx/">Docker Compose with Spring Boot, MySQL, NGINX</a></h2></div>
