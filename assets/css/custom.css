@@ -18,3 +18,9 @@
 .post__tags a:before{
 	/*content: ''!important;*/
 }
+
+.widget__body .post__tags {
+  margin-bottom: 0!important;
+  margin-top: 13px!important;
+}
+
