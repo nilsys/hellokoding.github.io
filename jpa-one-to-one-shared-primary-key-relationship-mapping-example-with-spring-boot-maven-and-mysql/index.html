@@ -22,9 +22,9 @@
     <meta property="og:title" content="JPA/Hibernate One-To-One Shared Primary Key Entity Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL">
     <meta property="og:description" content="This post walks you through the steps of mapping a one-to-one shared primary key entity relationship with Spring Boot, Spring Data JPA and MySQL. JPA Series with Spring Boot and MySQL: - JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Maven and MySQL - JPA One-To-One Shared Primary">
     <meta property="og:url" content="http://hellokoding.com/jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-maven-and-mysql/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2017/02/one-to-one-1.png">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/onetoone-sharedprimarykey.png">
     <meta property="article:published_time" content="2015-10-17T14:46:55.000Z">
-    <meta property="article:modified_time" content="2019-01-15T05:11:20.000Z">
+    <meta property="article:modified_time" content="2019-01-15T14:47:24.000Z">
     <meta property="article:tag" content="Persistence">
     <meta property="article:tag" content="JPA">
     <meta property="article:tag" content="Hibernate">
@@ -38,7 +38,7 @@
     <meta name="twitter:title" content="JPA/Hibernate One-To-One Shared Primary Key Entity Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL">
     <meta name="twitter:description" content="This post walks you through the steps of mapping a one-to-one shared primary key entity relationship with Spring Boot, Spring Data JPA and MySQL. JPA Series with Spring Boot and MySQL: - JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Maven and MySQL - JPA One-To-One Shared Primary">
     <meta name="twitter:url" content="http://hellokoding.com/jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-maven-and-mysql/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2017/02/one-to-one-1.png">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/01/onetoone-sharedprimarykey.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
@@ -69,8 +69,8 @@
     "headline": "JPA/Hibernate One-To-One Shared Primary Key Entity Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL",
     "url": "http://hellokoding.com/jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-maven-and-mysql/",
     "datePublished": "2015-10-17T14:46:55.000Z",
-    "dateModified": "2019-01-15T05:11:20.000Z",
-    "image": "http://hellokoding.com/content/images/2017/02/one-to-one-1.png",
+    "dateModified": "2019-01-15T14:47:24.000Z",
+    "image": "http://hellokoding.com/content/images/2019/01/onetoone-sharedprimarykey.png",
     "keywords": "Persistence, JPA, Hibernate, Java, Spring Boot, Lombok, MySQL",
     "description": "This post walks you through the steps of mapping a one-to-one shared primary key entity relationship with Spring Boot, Spring Data JPA and MySQL. JPA Series with Spring Boot and MySQL: - JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Maven and MySQL - JPA One-To-One Shared Primary"
 }
@@ -275,6 +275,8 @@ JPA Series with Spring Boot and MySQL:
 
 <p><code>@OneToOne</code> defines a one-to-one relationship with another entity. <code>@JoinColumn</code> indicates the entity is the owner of the relationship: the corresponding table has a column with a foreign key to the referenced table. <code>mappedBy</code> indicates the entity is the inverse of the relationship.</p>
 
+<p><code>@MapsId</code> maps <code>book_id</code> of <code>book_detail</code> to <code>id</code> of <code>book</code></p>
+
 <h3 id="springdatajparepository">Spring Data JPA Repository</h3>
 
 <p>Spring Data JPA contains some built-in <code>Repository</code> implemented some common functions to work with database: <code>findOne</code>, <code>findAll</code>, <code>save</code>,...All we need for this example is extend it.</p>
@@ -327,14 +329,6 @@ JPA Series with Spring Boot and MySQL:
 <h3 id="sourcecode">Source code</h3>
 
 <p><a href="https://github.com/hellokoding/springboot-tutorials/tree/master/jpa-hibernate-mysql-one-to-one-shared-primary-key">https://github.com/hellokoding/springboot-tutorials/tree/master/jpa-hibernate-mysql-one-to-one-shared-primary-key</a></p>
-
-<p><big></big></p>
-
-<p></p><pre>
-JPA One-To-One Shared Primary Key Examples:
-- <a href="https://hellokoding.com/jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-hsql/">JPA One-To-One Shared Primary Key Relationship Mapping Example with Spring Boot, HSQL</a>
-- <a href="https://hellokoding.com/jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA One-To-One Shared Primary Key Relationship Mapping Example with Spring Boot, Maven and MySQL</a>
-</pre>
             <div class="post__tags">
               <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/lombok/">Lombok</a><a href="../tag/mysql/">MySQL</a>
             </div>
@@ -480,7 +474,7 @@ JPA One-To-One Shared Primary Key Examples:
   <div class="widget__body recent-posts1">
 <div class="post-card"><a title="JPA/Hibernate Composite Primary Key Entity Mapping Example with MySQL" href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/"><div style="background-image: url(../content/images/2019/01/Screenshot-2019-01-07-at-10-13-44-PM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="JPA/Hibernate Composite Primary Key Entity Mapping Example with MySQL" href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/">JPA/Hibernate Composite Primary Key Entity Mapping Example with MySQL</a></h2>
 <div class="post__tags">
-              <a href="../tag/jpa/">JPA</a><a href="../tag/mysql/">MySQL</a><a href="../tag/docker/">Docker</a><a href="../tag/java/">Java</a><a href="../tag/lombok/">Lombok</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/persistence/">Persistence</a>
+              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/lombok/">Lombok</a><a href="../tag/docker/">Docker</a><a href="../tag/mysql/">MySQL</a>
             </div></div>
 <div class="post-card"><a title="JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/"><div style="background-image: url(../content/images/2017/02/many-to-many-extracolumns-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</a></h2>
 <div class="post__tags">
@@ -504,17 +498,17 @@ JPA One-To-One Shared Primary Key Examples:
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="JPA/Hibernate One-To-One Shared Primary Key Entity Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="index.html"><div style="background-image: url(../content/images/2017/02/one-to-one-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="JPA/Hibernate One-To-One Shared Primary Key Entity Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="index.html">JPA/Hibernate One-To-One Shared Primary Key Entity Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</a></h2>
+<div class="post-card"><a title="JPA/Hibernate One-To-One Shared Primary Key Entity Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="index.html"><div style="background-image: url(../content/images/2019/01/onetoone-sharedprimarykey.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="JPA/Hibernate One-To-One Shared Primary Key Entity Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="index.html">JPA/Hibernate One-To-One Shared Primary Key Entity Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</a></h2>
 <div class="post__tags">
               <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/lombok/">Lombok</a><a href="../tag/mysql/">MySQL</a>
+            </div></div>
+<div class="post-card"><a title="JPA/Hibernate Composite Primary Key Entity Mapping Example with MySQL" href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/"><div style="background-image: url(../content/images/2019/01/Screenshot-2019-01-07-at-10-13-44-PM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="JPA/Hibernate Composite Primary Key Entity Mapping Example with MySQL" href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/">JPA/Hibernate Composite Primary Key Entity Mapping Example with MySQL</a></h2>
+<div class="post__tags">
+              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/lombok/">Lombok</a><a href="../tag/docker/">Docker</a><a href="../tag/mysql/">MySQL</a>
             </div></div>
 <div class="post-card"><a title="Java Application Health Check with Prometheus, Grafana, MySQL and Docker Compose" href="../java-application-health-check-with-prometheus-grafana-mysql-and-docker-compose/"><div style="background-image: url(../content/images/2019/01/Screenshot-2019-01-09-at-11-24-39-PM.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Java Application Health Check with Prometheus, Grafana, MySQL and Docker Compose" href="../java-application-health-check-with-prometheus-grafana-mysql-and-docker-compose/">Java Application Health Check with Prometheus, Grafana, MySQL and Docker Compose</a></h2>
 <div class="post__tags">
               <a href="../tag/java/">Java</a><a href="../tag/mysql/">MySQL</a><a href="../tag/docker/">Docker</a><a href="../tag/health-check/">Health Check</a><a href="../tag/prometheus/">Prometheus</a><a href="../tag/grafana/">Grafana</a>
-            </div></div>
-<div class="post-card"><a title="RESTful APIs Example with Spring Boot, Integration Test with MockMVC, UI Integration with VueJS" href="../restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/"><div style="background-image: url(../content/images/2018/03/RESTfulAPI.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful APIs Example with Spring Boot, Integration Test with MockMVC, UI Integration with VueJS" href="../restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/">RESTful APIs Example with Spring Boot, Integration Test with MockMVC, UI Integration with VueJS</a></h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/vuejs/">VueJS</a><a href="../tag/integration-test/">Integration Test</a>
             </div></div>
   </div>
 </aside>
@@ -589,14 +583,14 @@ JPA One-To-One Shared Primary Key Examples:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-09">09 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-01-15">15 January 2019</time>
       </div>
 
       <h2 class="post-card__title">
         <a title="JPA/Hibernate Composite Primary Key Entity Mapping Example with MySQL" href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/">JPA/Hibernate Composite Primary Key Entity Mapping Example with MySQL</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/jpa/">JPA</a><a href="../tag/mysql/">MySQL</a><a href="../tag/docker/">Docker</a><a href="../tag/java/">Java</a><a href="../tag/lombok/">Lombok</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/persistence/">Persistence</a>
+              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/lombok/">Lombok</a><a href="../tag/docker/">Docker</a><a href="../tag/mysql/">MySQL</a>
             </div>
 
    </div>
