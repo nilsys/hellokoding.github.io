@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-maven-and-mysql/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/onetoone-sharedprimarykey.png">
     <meta property="article:published_time" content="2015-10-17T14:46:55.000Z">
-    <meta property="article:modified_time" content="2019-01-16T02:11:48.000Z">
+    <meta property="article:modified_time" content="2019-01-16T13:52:23.000Z">
     <meta property="article:tag" content="Persistence">
     <meta property="article:tag" content="JPA">
     <meta property="article:tag" content="Hibernate">
@@ -32,6 +32,7 @@
     <meta property="article:tag" content="Spring Boot">
     <meta property="article:tag" content="Lombok">
     <meta property="article:tag" content="MySQL">
+    <meta property="article:tag" content="Docker">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
@@ -42,7 +43,7 @@
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Persistence, JPA, Hibernate, Java, Spring Boot, Lombok, MySQL">
+    <meta name="twitter:data2" content="Persistence, JPA, Hibernate, Java, Spring Boot, Lombok, MySQL, Docker">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -69,9 +70,9 @@
     "headline": "JPA/Hibernate One-To-One Shared Primary Key Entity Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL",
     "url": "http://hellokoding.com/jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-maven-and-mysql/",
     "datePublished": "2015-10-17T14:46:55.000Z",
-    "dateModified": "2019-01-16T02:11:48.000Z",
+    "dateModified": "2019-01-16T13:52:23.000Z",
     "image": "http://hellokoding.com/content/images/2019/01/onetoone-sharedprimarykey.png",
-    "keywords": "Persistence, JPA, Hibernate, Java, Spring Boot, Lombok, MySQL",
+    "keywords": "Persistence, JPA, Hibernate, Java, Spring Boot, Lombok, MySQL, Docker",
     "description": "This post walks you through the steps of mapping a one-to-one shared primary key entity relationship with Spring Boot, Spring Data JPA and MySQL. JPA Series with Spring Boot and MySQL: - JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Maven and MySQL - JPA One-To-One Shared Primary"
 }
     </script>
@@ -86,7 +87,7 @@ ghost.init({
     <meta name="generator" content="Ghost 0.9">
     <link rel="alternate" type="application/rss+xml" title="Hello Koding" href="http://hellokoding.com/rss/">
 </head>
-<body class="post-template tag-persistence tag-jpa tag-hibernate tag-java tag-spring-boot tag-lombok tag-mysql">
+<body class="post-template tag-persistence tag-jpa tag-hibernate tag-java tag-spring-boot tag-lombok tag-mysql tag-docker">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -203,7 +204,7 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-8 column">
-        <article class="post tag-persistence tag-jpa tag-hibernate tag-java tag-spring-boot tag-lombok tag-mysql">
+        <article class="post tag-persistence tag-jpa tag-hibernate tag-java tag-spring-boot tag-lombok tag-mysql tag-docker">
 
           <header class="post__header">
             <h2 class="post__title">JPA/Hibernate One-To-One Shared Primary Key Entity Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</h2>
@@ -212,7 +213,7 @@ ghost.init({
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/lombok/">Lombok</a><a href="../tag/mysql/">MySQL</a>
+              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/lombok/">Lombok</a><a href="../tag/mysql/">MySQL</a><a href="../tag/docker/">Docker</a>
             </div>
             <p>This post walks you through the steps of mapping a one-to-one shared primary key entity relationship with Spring Boot, Spring Data JPA and MySQL.</p>
 
@@ -310,7 +311,7 @@ JPA Series with Spring Boot and MySQL:
 
 <p>Start your application and infrastructure via Docker Compose. Make sure your local Docker is running and your bash console is at the <a href="https://github.com/hellokoding/springboot-examples">springboot-examples</a> project root directory. JPA/Hibernate will construct MySQL database schema, insert data into <code>book</code> and <code>book_detail</code> tables.</p>
 
-<pre><code>docker-compose -f docker-compose-jpa.yaml up one-to-one-shared-primary-key
+<pre><code>docker-compose -f docker-compose-jpa.yaml up --build one-to-one-shared-primary-key
 </code></pre>
 
 <p>Let's check the data on MySQL database. Access to MySQL Server docker container by issuing below bash command and key in <code>hellokoding</code> on <code>Enter password:</code></p>
@@ -330,7 +331,7 @@ JPA Series with Spring Boot and MySQL:
 
 <p><a href="https://github.com/hellokoding/springboot-examples/tree/master/jpa-hibernate-mysql/one-to-one-shared-primary-key">https://github.com/hellokoding/springboot-examples/tree/master/jpa-hibernate-mysql/one-to-one-shared-primary-key</a></p>
             <div class="post__tags">
-              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/lombok/">Lombok</a><a href="../tag/mysql/">MySQL</a>
+              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/lombok/">Lombok</a><a href="../tag/mysql/">MySQL</a><a href="../tag/docker/">Docker</a>
             </div>
           </div>
 
@@ -390,7 +391,7 @@ JPA Series with Spring Boot and MySQL:
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL">
+       <a href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA/Hibernate One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL">
       <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/onetoone-sharedprimarykey-1.png) ">
       </div>
     </a>
@@ -400,14 +401,14 @@ JPA Series with Spring Boot and MySQL:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2017-06-30">30 June 2017</time>
+        <time class="post-card__meta__date" datetime="2019-01-16">16 January 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/">JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</a>
+        <a title="JPA/Hibernate One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/mysql/">MySQL</a>
+              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/lombok/">Lombok</a><a href="../tag/mysql/">MySQL</a><a href="../tag/docker/">Docker</a>
             </div>
 
    </div>
@@ -476,6 +477,10 @@ JPA Series with Spring Boot and MySQL:
 <div class="post__tags">
               <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/lombok/">Lombok</a><a href="../tag/docker/">Docker</a><a href="../tag/mysql/">MySQL</a>
             </div></div>
+<div class="post-card"><a title="JPA/Hibernate One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/"><div style="background-image: url(../content/images/2017/02/onetoone-sharedprimarykey-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="JPA/Hibernate One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</a></h2>
+<div class="post__tags">
+              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/lombok/">Lombok</a><a href="../tag/mysql/">MySQL</a><a href="../tag/docker/">Docker</a>
+            </div></div>
 <div class="post-card"><a title="JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/"><div style="background-image: url(../content/images/2017/02/many-to-many-extracolumns-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</a></h2>
 <div class="post__tags">
               <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/mysql/">MySQL</a>
@@ -488,27 +493,23 @@ JPA Series with Spring Boot and MySQL:
 <div class="post__tags">
               <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/mysql/">MySQL</a>
             </div></div>
-<div class="post-card"><a title="JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/"><div style="background-image: url(../content/images/2017/02/onetoone-sharedprimarykey-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/">JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</a></h2>
-<div class="post__tags">
-              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/mysql/">MySQL</a>
-            </div></div>
   </div>
 </aside>
 
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="JPA/Hibernate Composite Primary Key Entity Mapping Example with MySQL" href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/"><div style="background-image: url(../content/images/2019/01/Screenshot-2019-01-07-at-10-13-44-PM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="JPA/Hibernate Composite Primary Key Entity Mapping Example with MySQL" href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/">JPA/Hibernate Composite Primary Key Entity Mapping Example with MySQL</a></h2>
+<div class="post-card"><a title="JPA/Hibernate One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/"><div style="background-image: url(../content/images/2017/02/onetoone-sharedprimarykey-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="JPA/Hibernate One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</a></h2>
 <div class="post__tags">
-              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/lombok/">Lombok</a><a href="../tag/docker/">Docker</a><a href="../tag/mysql/">MySQL</a>
+              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/lombok/">Lombok</a><a href="../tag/mysql/">MySQL</a><a href="../tag/docker/">Docker</a>
             </div></div>
 <div class="post-card"><a title="JPA/Hibernate One-To-One Shared Primary Key Entity Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="index.html"><div style="background-image: url(../content/images/2019/01/onetoone-sharedprimarykey.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="JPA/Hibernate One-To-One Shared Primary Key Entity Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="index.html">JPA/Hibernate One-To-One Shared Primary Key Entity Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</a></h2>
 <div class="post__tags">
-              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/lombok/">Lombok</a><a href="../tag/mysql/">MySQL</a>
+              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/lombok/">Lombok</a><a href="../tag/mysql/">MySQL</a><a href="../tag/docker/">Docker</a>
             </div></div>
-<div class="post-card"><a title="Java Application Health Check with Prometheus, Grafana, MySQL and Docker Compose" href="../java-application-health-check-with-prometheus-grafana-mysql-and-docker-compose/"><div style="background-image: url(../content/images/2019/01/Screenshot-2019-01-09-at-11-24-39-PM.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Java Application Health Check with Prometheus, Grafana, MySQL and Docker Compose" href="../java-application-health-check-with-prometheus-grafana-mysql-and-docker-compose/">Java Application Health Check with Prometheus, Grafana, MySQL and Docker Compose</a></h2>
+<div class="post-card"><a title="JPA/Hibernate Composite Primary Key Entity Mapping Example with MySQL" href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/"><div style="background-image: url(../content/images/2019/01/Screenshot-2019-01-07-at-10-13-44-PM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="JPA/Hibernate Composite Primary Key Entity Mapping Example with MySQL" href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/">JPA/Hibernate Composite Primary Key Entity Mapping Example with MySQL</a></h2>
 <div class="post__tags">
-              <a href="../tag/java/">Java</a><a href="../tag/mysql/">MySQL</a><a href="../tag/docker/">Docker</a><a href="../tag/health-check/">Health Check</a><a href="../tag/prometheus/">Prometheus</a><a href="../tag/grafana/">Grafana</a>
+              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/lombok/">Lombok</a><a href="../tag/docker/">Docker</a><a href="../tag/mysql/">MySQL</a>
             </div></div>
   </div>
 </aside>
@@ -599,6 +600,32 @@ JPA Series with Spring Boot and MySQL:
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
+       <a href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA/Hibernate One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/onetoone-sharedprimarykey-1.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-01-16">16 January 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="JPA/Hibernate One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/lombok/">Lombok</a><a href="../tag/mysql/">MySQL</a><a href="../tag/docker/">Docker</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
        <a href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL">
       <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/many-to-many-extracolumns-1.png) ">
       </div>
@@ -677,8 +704,8 @@ JPA Series with Spring Boot and MySQL:
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/onetoone-sharedprimarykey-1.png) ">
+       <a href="../email-verification-example-with-spring-boot-mysql-docker-compose/" class="block" title="Email Verification Example with Spring Boot, MySQL, Docker Compose, Amazon SES">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2018/01/email-verification-form-4.png) ">
       </div>
     </a>
 
@@ -687,14 +714,40 @@ JPA Series with Spring Boot and MySQL:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2017-06-30">30 June 2017</time>
+        <time class="post-card__meta__date" datetime="2018-01-11">11 January 2018</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL" href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/">JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</a>
+        <a title="Email Verification Example with Spring Boot, MySQL, Docker Compose, Amazon SES" href="../email-verification-example-with-spring-boot-mysql-docker-compose/">Email Verification Example with Spring Boot, MySQL, Docker Compose, Amazon SES</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/persistence/">Persistence</a><a href="../tag/jpa/">JPA</a><a href="../tag/java/">Java</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/mysql/">MySQL</a>
+              <a href="../tag/account-management/">Account Management</a><a href="../tag/email/">Email</a><a href="../tag/aws-ses/">AWS SES</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/java/">Java</a><a href="../tag/mysql/">MySQL</a><a href="../tag/docker/">Docker</a><a href="../tag/nginx/">NGINX</a><a href="../tag/properties-file/">Properties file</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../docker-compose-with-spring-boot-mysql-nginx/" class="block" title="Docker Compose with Spring Boot, MySQL, NGINX">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2018/01/Docker.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2018-01-09">09 January 2018</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="Docker Compose with Spring Boot, MySQL, NGINX" href="../docker-compose-with-spring-boot-mysql-nginx/">Docker Compose with Spring Boot, MySQL, NGINX</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/docker/">Docker</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/mysql/">MySQL</a><a href="../tag/nginx/">NGINX</a><a href="../tag/java/">Java</a>
             </div>
 
    </div>
@@ -833,8 +886,8 @@ JPA Series with Spring Boot and MySQL:
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../email-verification-example-with-spring-boot-mysql-docker-compose/" class="block" title="Email Verification Example with Spring Boot, MySQL, Docker Compose, Amazon SES">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2018/01/email-verification-form-4.png) ">
+       <a href="../java-application-health-check-with-prometheus-grafana-mysql-and-docker-compose/" class="block" title="Java Application Health Check with Prometheus, Grafana, MySQL and Docker Compose">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/Screenshot-2019-01-09-at-11-24-39-PM.png) ">
       </div>
     </a>
 
@@ -843,14 +896,14 @@ JPA Series with Spring Boot and MySQL:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2018-01-11">11 January 2018</time>
+        <time class="post-card__meta__date" datetime="2019-01-10">10 January 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Email Verification Example with Spring Boot, MySQL, Docker Compose, Amazon SES" href="../email-verification-example-with-spring-boot-mysql-docker-compose/">Email Verification Example with Spring Boot, MySQL, Docker Compose, Amazon SES</a>
+        <a title="Java Application Health Check with Prometheus, Grafana, MySQL and Docker Compose" href="../java-application-health-check-with-prometheus-grafana-mysql-and-docker-compose/">Java Application Health Check with Prometheus, Grafana, MySQL and Docker Compose</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/account-management/">Account Management</a><a href="../tag/email/">Email</a><a href="../tag/aws-ses/">AWS SES</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/java/">Java</a><a href="../tag/mysql/">MySQL</a><a href="../tag/docker/">Docker</a><a href="../tag/nginx/">NGINX</a><a href="../tag/properties-file/">Properties file</a>
+              <a href="../tag/java/">Java</a><a href="../tag/mysql/">MySQL</a><a href="../tag/docker/">Docker</a><a href="../tag/health-check/">Health Check</a><a href="../tag/prometheus/">Prometheus</a><a href="../tag/grafana/">Grafana</a>
             </div>
 
    </div>
@@ -859,8 +912,8 @@ JPA Series with Spring Boot and MySQL:
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../docker-compose-with-spring-boot-mysql-nginx/" class="block" title="Docker Compose with Spring Boot, MySQL, NGINX">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2018/01/Docker.png) ">
+       <a href="../docker-compose-with-spring-boot-mongodb-nginx/" class="block" title="Docker Compose with Spring Boot, MongoDB, NGINX">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/12/Docker-1.png) ">
       </div>
     </a>
 
@@ -869,14 +922,40 @@ JPA Series with Spring Boot and MySQL:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2018-01-09">09 January 2018</time>
+        <time class="post-card__meta__date" datetime="2017-12-30">30 December 2017</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Docker Compose with Spring Boot, MySQL, NGINX" href="../docker-compose-with-spring-boot-mysql-nginx/">Docker Compose with Spring Boot, MySQL, NGINX</a>
+        <a title="Docker Compose with Spring Boot, MongoDB, NGINX" href="../docker-compose-with-spring-boot-mongodb-nginx/">Docker Compose with Spring Boot, MongoDB, NGINX</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/docker/">Docker</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/mysql/">MySQL</a><a href="../tag/nginx/">NGINX</a><a href="../tag/java/">Java</a>
+              <a href="../tag/docker/">Docker</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/nginx/">NGINX</a><a href="../tag/java/">Java</a><a href="../tag/mongodb/">MongoDB</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../docker-compose-with-spring-boot-nginx/" class="block" title="Docker Compose with Spring Boot, NGINX">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/12/Docker.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2017-12-29">29 December 2017</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="Docker Compose with Spring Boot, NGINX" href="../docker-compose-with-spring-boot-nginx/">Docker Compose with Spring Boot, NGINX</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/java/">Java</a><a href="../tag/docker/">Docker</a><a href="../tag/nginx/">NGINX</a>
             </div>
 
    </div>
@@ -1059,84 +1138,6 @@ JPA Series with Spring Boot and MySQL:
       </h2>
 <div class="post__tags">
               <a href="../tag/auth/">Auth</a><a href="../tag/security/">Security</a><a href="../tag/java/">Java</a><a href="../tag/spring-mvc/">Spring MVC</a><a href="../tag/mvc/">MVC</a><a href="../tag/jpa/">JPA</a><a href="../tag/mysql/">MySQL</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../java-application-health-check-with-prometheus-grafana-mysql-and-docker-compose/" class="block" title="Java Application Health Check with Prometheus, Grafana, MySQL and Docker Compose">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/Screenshot-2019-01-09-at-11-24-39-PM.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-10">10 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Java Application Health Check with Prometheus, Grafana, MySQL and Docker Compose" href="../java-application-health-check-with-prometheus-grafana-mysql-and-docker-compose/">Java Application Health Check with Prometheus, Grafana, MySQL and Docker Compose</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/java/">Java</a><a href="../tag/mysql/">MySQL</a><a href="../tag/docker/">Docker</a><a href="../tag/health-check/">Health Check</a><a href="../tag/prometheus/">Prometheus</a><a href="../tag/grafana/">Grafana</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../docker-compose-with-spring-boot-mongodb-nginx/" class="block" title="Docker Compose with Spring Boot, MongoDB, NGINX">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/12/Docker-1.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2017-12-30">30 December 2017</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Docker Compose with Spring Boot, MongoDB, NGINX" href="../docker-compose-with-spring-boot-mongodb-nginx/">Docker Compose with Spring Boot, MongoDB, NGINX</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/docker/">Docker</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/nginx/">NGINX</a><a href="../tag/java/">Java</a><a href="../tag/mongodb/">MongoDB</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../docker-compose-with-spring-boot-nginx/" class="block" title="Docker Compose with Spring Boot, NGINX">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/12/Docker.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2017-12-29">29 December 2017</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Docker Compose with Spring Boot, NGINX" href="../docker-compose-with-spring-boot-nginx/">Docker Compose with Spring Boot, NGINX</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/java/">Java</a><a href="../tag/docker/">Docker</a><a href="../tag/nginx/">NGINX</a>
             </div>
 
    </div>
