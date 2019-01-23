@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/RESTfulAPI.png">
     <meta property="article:published_time" content="2019-01-22T07:56:00.000Z">
-    <meta property="article:modified_time" content="2019-01-22T12:58:08.000Z">
+    <meta property="article:modified_time" content="2019-01-23T06:29:44.000Z">
     <meta property="article:tag" content="RESTful">
     <meta property="article:tag" content="JPA">
     <meta property="article:tag" content="Hibernate">
@@ -72,7 +72,7 @@
     "headline": "Handling Circular Reference of  JPA/Hibernate Entity Bidirectional Relationships with Jackson &#x60;JsonIgnoreProperties&#x60;",
     "url": "http://hellokoding.com/handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/",
     "datePublished": "2019-01-22T07:56:00.000Z",
-    "dateModified": "2019-01-22T12:58:08.000Z",
+    "dateModified": "2019-01-23T06:29:44.000Z",
     "image": "http://hellokoding.com/content/images/2019/01/RESTfulAPI.png",
     "keywords": "RESTful, JPA, Hibernate, Jackson, Lombok, Spring Boot, Java, MySQL, cURL, Docker",
     "description": "This post walks you through the steps of creating an example on handling circular reference of JPA/Hibernate entity bidirectional relationships and RESTful APIs with Jackson JsonIgnoreProperties, Spring Data REST, MySQL and Docker. What you&#x27;ll need Docker CE 18+ Project structure Project dependencies Define JPA Entities Bidirectional Relationships with Jackson"
@@ -210,7 +210,7 @@ ghost.init({
 
           <header class="post__header">
             <h2 class="post__title">Handling Circular Reference of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`</h2>
-            <time class="post__date" datetime="2019-01-22">Last modified @ 22 January 2019</time>
+            <time class="post__date" datetime="2019-01-23">Last modified @ 23 January 2019</time>
           </header>
 
           <div class="post-content">
@@ -308,11 +308,11 @@ ghost.init({
 <pre><code>curl -i -X POST -H "Content-Type:application/json" -d "{\"name\":\"Author 1\"}" http://localhost:8080/authors
 </code></pre>
 
-<p><img src="../content/images/2019/01/Screenshot-2019-01-22-at-8-51-13-PM.png" alt=""></p>
+<p><img src="../content/images/2019/01/Screenshot-2019-01-23-at-2-24-32-PM.png" alt=""></p>
 
 <p>Assign the author to the book</p>
 
-<pre><code>curl -i -X PUT -H "Content-Type:text/uri-list" -d "http://localhost:8080/authors/2" http://localhost:8080/books/1/authors
+<pre><code>curl -i -X PUT -H "Content-Type:text/uri-list" -d "http://localhost:8080/authors/1" http://localhost:8080/books/1/authors
 </code></pre>
 
 <p>Find all books</p>
@@ -325,14 +325,14 @@ ghost.init({
 <pre><code>curl http://localhost:8080/books/1/authors
 </code></pre>
 
-<p><img src="../content/images/2019/01/Screenshot-2019-01-22-at-8-51-39-PM.png" alt=""></p>
+<p><img src="../content/images/2019/01/Screenshot-2019-01-23-at-2-26-55-PM.png" alt=""></p>
 
-<p>Find books of author id 2</p>
+<p>Find books of author id 1</p>
 
-<pre><code>curl http://localhost:8080/authors/2/books
+<pre><code>curl http://localhost:8080/authors/1/books
 </code></pre>
 
-<p><img src="../content/images/2019/01/Screenshot-2019-01-22-at-8-52-08-PM.png" alt=""></p>
+<p><img src="../content/images/2019/01/Screenshot-2019-01-23-at-2-26-01-PM.png" alt=""></p>
 
 <p>And that's it! Thanks for joining and have a happy coding. You can find the full source code as below</p>
 
@@ -508,13 +508,13 @@ ghost.init({
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Build a full stack TodoMVC web app and REST API service with Spring Boot, JPA/Hibernate, MySQL, FreeMarker, VueJS and Docker" href="../build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/"><div style="background-image: url(../content/images/2019/01/Screenshot-2019-01-23-at-12-50-59-AM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Build a full stack TodoMVC web app and REST API service with Spring Boot, JPA/Hibernate, MySQL, FreeMarker, VueJS and Docker" href="../build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/">Build a full stack TodoMVC web app and REST API service with Spring Boot, JPA/Hibernate, MySQL, FreeMarker, VueJS and Docker</a></h2>
-<div class="post__tags">
-              <a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/todo/">Todo</a><a href="../tag/restful/">RESTful</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/lombok/">Lombok</a><a href="../tag/java/">Java</a><a href="../tag/mysql/">MySQL</a><a href="../tag/docker/">Docker</a><a href="../tag/freemarker/">FreeMarker</a><a href="../tag/vuejs/">VueJS</a>
-            </div></div>
 <div class="post-card"><a title="Handling Circular Reference of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`" href="index.html"><div style="background-image: url(../content/images/2019/01/RESTfulAPI.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Handling Circular Reference of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`" href="index.html">Handling Circular Reference of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`</a></h2>
 <div class="post__tags">
               <a href="../tag/restful/">RESTful</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/jackson/">Jackson</a><a href="../tag/lombok/">Lombok</a><a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/java/">Java</a><a href="../tag/mysql/">MySQL</a><a href="../tag/curl/">cURL</a><a href="../tag/docker/">Docker</a>
+            </div></div>
+<div class="post-card"><a title="Build a full stack TodoMVC web app and REST API service with Spring Boot, JPA/Hibernate, MySQL, FreeMarker, VueJS and Docker" href="../build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/"><div style="background-image: url(../content/images/2019/01/Screenshot-2019-01-23-at-12-50-59-AM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Build a full stack TodoMVC web app and REST API service with Spring Boot, JPA/Hibernate, MySQL, FreeMarker, VueJS and Docker" href="../build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/">Build a full stack TodoMVC web app and REST API service with Spring Boot, JPA/Hibernate, MySQL, FreeMarker, VueJS and Docker</a></h2>
+<div class="post__tags">
+              <a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/todo/">Todo</a><a href="../tag/restful/">RESTful</a><a href="../tag/jpa/">JPA</a><a href="../tag/hibernate/">Hibernate</a><a href="../tag/lombok/">Lombok</a><a href="../tag/java/">Java</a><a href="../tag/mysql/">MySQL</a><a href="../tag/docker/">Docker</a><a href="../tag/freemarker/">FreeMarker</a><a href="../tag/vuejs/">VueJS</a>
             </div></div>
 <div class="post-card"><a title="RESTful API Example with Spring Boot, Spring Data REST, JPA/Hibernate, MySQL and Docker" href="../restful-api-example-with-spring-boot-spring-data-rest-and-mysql/"><div style="background-image: url(../content/images/2017/06/RESTfulAPI.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful API Example with Spring Boot, Spring Data REST, JPA/Hibernate, MySQL and Docker" href="../restful-api-example-with-spring-boot-spring-data-rest-and-mysql/">RESTful API Example with Spring Boot, Spring Data REST, JPA/Hibernate, MySQL and Docker</a></h2>
 <div class="post__tags">
