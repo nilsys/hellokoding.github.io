@@ -20,11 +20,11 @@
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Build a full stack TodoMVC web app and REST API service with Spring Boot, JPA/Hibernate, MySQL, FreeMarker, VueJS and Docker">
-    <meta property="og:description" content="This post will walk you through the steps of building a full stack TodoMVC web app and REST API service with Spring Boot, JPA/Hibernate, MySQL, FreeMarker, VueJS and Docker. What you'll build What you'll need Docker CE 18+ Project structure Project dependencies Define JPA Entity Define Repository Define Service">
+    <meta property="og:description" content="This post will walk you through the steps of building a full stack TodoMVC web app and REST API service with Spring Boot, JPA/Hibernate, MySQL, FreeMarker, VueJS and Docker. What you'll build What you'll need Docker CE 18+ Project structure Project dependencies Define JPA Entity, Repository and Service Define">
     <meta property="og:url" content="http://hellokoding.com/build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-23-at-12-50-59-AM-1.png">
     <meta property="article:published_time" content="2019-01-22T17:06:44.000Z">
-    <meta property="article:modified_time" content="2019-01-22T17:19:10.000Z">
+    <meta property="article:modified_time" content="2019-01-23T03:13:39.000Z">
     <meta property="article:tag" content="Spring Boot">
     <meta property="article:tag" content="Todo">
     <meta property="article:tag" content="RESTful">
@@ -40,7 +40,7 @@
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Build a full stack TodoMVC web app and REST API service with Spring Boot, JPA/Hibernate, MySQL, FreeMarker, VueJS and Docker">
-    <meta name="twitter:description" content="This post will walk you through the steps of building a full stack TodoMVC web app and REST API service with Spring Boot, JPA/Hibernate, MySQL, FreeMarker, VueJS and Docker. What you'll build What you'll need Docker CE 18+ Project structure Project dependencies Define JPA Entity Define Repository Define Service">
+    <meta name="twitter:description" content="This post will walk you through the steps of building a full stack TodoMVC web app and REST API service with Spring Boot, JPA/Hibernate, MySQL, FreeMarker, VueJS and Docker. What you'll build What you'll need Docker CE 18+ Project structure Project dependencies Define JPA Entity, Repository and Service Define">
     <meta name="twitter:url" content="http://hellokoding.com/build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-23-at-12-50-59-AM-1.png">
     <meta name="twitter:label1" content="Written by">
@@ -73,10 +73,10 @@
     "headline": "Build a full stack TodoMVC web app and REST API service with Spring Boot, JPA/Hibernate, MySQL, FreeMarker, VueJS and Docker",
     "url": "http://hellokoding.com/build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/",
     "datePublished": "2019-01-22T17:06:44.000Z",
-    "dateModified": "2019-01-22T17:19:10.000Z",
+    "dateModified": "2019-01-23T03:13:39.000Z",
     "image": "http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-23-at-12-50-59-AM-1.png",
     "keywords": "Spring Boot, Todo, RESTful, JPA, Hibernate, Lombok, Java, MySQL, Docker, FreeMarker, VueJS",
-    "description": "This post will walk you through the steps of building a full stack TodoMVC web app and REST API service with Spring Boot, JPA/Hibernate, MySQL, FreeMarker, VueJS and Docker. What you&#x27;ll build What you&#x27;ll need Docker CE 18+ Project structure Project dependencies Define JPA Entity Define Repository Define Service"
+    "description": "This post will walk you through the steps of building a full stack TodoMVC web app and REST API service with Spring Boot, JPA/Hibernate, MySQL, FreeMarker, VueJS and Docker. What you&#x27;ll build What you&#x27;ll need Docker CE 18+ Project structure Project dependencies Define JPA Entity, Repository and Service Define"
 }
     </script>
 
@@ -211,7 +211,7 @@ ghost.init({
 
           <header class="post__header">
             <h2 class="post__title">Build a full stack TodoMVC web app and REST API service with Spring Boot, JPA/Hibernate, MySQL, FreeMarker, VueJS and Docker</h2>
-            <time class="post__date" datetime="2019-01-22">Last modified @ 22 January 2019</time>
+            <time class="post__date" datetime="2019-01-23">Last modified @ 23 January 2019</time>
           </header>
 
           <div class="post-content">
@@ -239,27 +239,21 @@ ghost.init({
 <pre><code class="language-xml embedfile-https://github.com/hellokoding/springboot-examples/blob/master/fullstack/todomvc-mysql-vuejs/pom.xml">
 </code></pre>
 
-<h3 id="definejpaentity">Define JPA Entity</h3>
+<h3 id="definejpaentityrepositoryandservice">Define JPA Entity, Repository and Service</h3>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/fullstack/todomvc-mysql-vuejs/src/main/java/com/hellokoding/springboot/fullstack/todo/Todo.java">
 </code></pre>
 
-<h3 id="definerepository">Define Repository</h3>
-
 <pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/fullstack/todomvc-mysql-vuejs/src/main/java/com/hellokoding/springboot/fullstack/todo/TodoRepository.java">
 </code></pre>
-
-<h3 id="defineservice">Define Service</h3>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/fullstack/todomvc-mysql-vuejs/src/main/java/com/hellokoding/springboot/fullstack/todo/TodoService.java">
 </code></pre>
 
-<h3 id="definerestapi">Define REST API</h3>
+<h3 id="definerestapiandcontroller">Define REST API and Controller</h3>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/fullstack/todomvc-mysql-vuejs/src/main/java/com/hellokoding/springboot/fullstack/todo/TodoAPI.java">
 </code></pre>
-
-<h3 id="definecontroller">Define Controller</h3>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/fullstack/todomvc-mysql-vuejs/src/main/java/com/hellokoding/springboot/fullstack/todo/TodoController.java">
 </code></pre>
