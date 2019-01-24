@@ -21,7 +21,7 @@ $(document).ready(function() {
   // Search
   // ======
 
-  var search_field = $('.search-form__field'),
+  var search_field = $('[name=search]'),
       search_results = $('.search-results'),
       toggle_search = $('.toggle-search-button'),
       search_result_template = "\
@@ -29,6 +29,8 @@ $(document).ready(function() {
           <a class='search-results__item__title' href='{{link}}'>{{title}}</a>\
           <span class='post__date'>{{pubDate}}</span>\
         </div>";
+
+  $('[name=search]').attr("autofocus", "true")
 
   toggle_search.click(function(e) {
     e.preventDefault();
@@ -38,12 +40,13 @@ $(document).ready(function() {
     $('.off-canvas-container').removeClass('is-active');
 
     setTimeout(function() {
-      search_field.focus();
+      $('[name=search]').focus();
     }, 500);
   });
 
-  $('.search-form-container, .close-search-button').on('click keyup', function(event) {
-    if (event.target == this || event.target.className == 'close-search-button' || event.keyCode == 27) {
+  $('.search-form-container').attr('tabindex', '0');
+  $('.search-form-container, .close-search-button').on('click keydown', function(event) {
+    if (event.target.className.indexOf('close-search-button') > -1 || event.keyCode == 27) {
       $('.search-form-container').removeClass('is-active');
     }
   });

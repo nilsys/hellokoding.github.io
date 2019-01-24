@@ -2,6 +2,11 @@
 	height: 40px!important
 }
 
+.gsc-input {
+	height: 30px!important;
+	font-family: Born,Georgia,serif!important
+}
+
 .gsc-result .gs-title {
 	height: 1.4em!important
 }
