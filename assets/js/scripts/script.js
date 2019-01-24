@@ -51,16 +51,16 @@ $(document).ready(function() {
     }
   });
 
-  search_field.ghostHunter({
-    results: search_results,
-    onKeyUp         : true,
-    info_template   : "<h4 class='heading'>Number of posts found: {{amount}}</h4>",
-    result_template : search_result_template,
-    zeroResultsInfo : false,
-    before: function() {
-      search_results.fadeIn();
-    }
-  });
+  // search_field.ghostHunter({
+  //   results: search_results,
+  //   onKeyUp         : true,
+  //   info_template   : "<h4 class='heading'>Number of posts found: {{amount}}</h4>",
+  //   result_template : search_result_template,
+  //   zeroResultsInfo : false,
+  //   before: function() {
+  //     search_results.fadeIn();
+  //   }
+  // });
 
   // ===============
   // Homepage Layout
@@ -74,54 +74,54 @@ $(document).ready(function() {
   // Latest posts
   // ============
 
-  function latestPosts() {
-    $.get('/rss/', function (data) {
-      var $xml = $(data);
-      var recent = '';
-      $xml.find('item').slice(0, 4).each(function () {
-        var $this = $(this),
-        item = {
-          title: $this.find('title').text(),
-          link: $this.find('link').text(),
-          image: $this.find('media\\:content, content').attr('url'),
-          description: $this.find('description').text(),
-          pubDate: $this.find('pubDate').text(),
-          category: $this.find('category').text()
-        };
-        recent += '<div class="post-card">';
-        recent += '<a title="' + item.title + '" href="' + item.link + '">';
-        recent += '<div style="background-image: url(' + item.image + ')" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div>';
-        recent += '</a>';
-        recent += '<h2 class="post-card__title post-card__title--small">';
-        recent += '<a title="' + item.title + '" href="' + item.link + '">' + item.title + '</a>';
-        recent += '</h2>';
-        recent += '</div>';
-      });
-      $('.recent-posts').html(recent);
-    });
-  }
+  // function latestPosts() {
+  //   $.get('/rss/', function (data) {
+  //     var $xml = $(data);
+  //     var recent = '';
+  //     $xml.find('item').slice(0, 4).each(function () {
+  //       var $this = $(this),
+  //       item = {
+  //         title: $this.find('title').text(),
+  //         link: $this.find('link').text(),
+  //         image: $this.find('media\\:content, content').attr('url'),
+  //         description: $this.find('description').text(),
+  //         pubDate: $this.find('pubDate').text(),
+  //         category: $this.find('category').text()
+  //       };
+  //       recent += '<div class="post-card">';
+  //       recent += '<a title="' + item.title + '" href="' + item.link + '">';
+  //       recent += '<div style="background-image: url(' + item.image + ')" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div>';
+  //       recent += '</a>';
+  //       recent += '<h2 class="post-card__title post-card__title--small">';
+  //       recent += '<a title="' + item.title + '" href="' + item.link + '">' + item.title + '</a>';
+  //       recent += '</h2>';
+  //       recent += '</div>';
+  //     });
+  //     $('.recent-posts').html(recent);
+  //   });
+  // }
 
-  latestPosts();
+  //latestPosts();
 
   // ==============
   // Twitter widget
   // ==============
 
-  var twitterWidget = true;         // Set to false to hide the Twitter widget
-  var twitterWidgetID = '832606090760114177'; // ID of your Twitter widget
+  // var twitterWidget = true;         // Set to false to hide the Twitter widget
+  // var twitterWidgetID = '832606090760114177'; // ID of your Twitter widget
 
-  if (twitterWidget && $('#twitter-widget').length) {
-    var twitterConfig = {
-      'id': twitterWidgetID,
-      'domId': 'twitter-widget',
-      'maxTweets': 2,
-      'enableLinks': true,
-      'showUser': false,
-      'showInteraction': false
-    };
-    twitterFetcher.fetch(twitterConfig);
-  } else {
-    $('.widget--twitter-wrap').remove();
-  }
+  // if (twitterWidget && $('#twitter-widget').length) {
+  //   var twitterConfig = {
+  //     'id': twitterWidgetID,
+  //     'domId': 'twitter-widget',
+  //     'maxTweets': 2,
+  //     'enableLinks': true,
+  //     'showUser': false,
+  //     'showInteraction': false
+  //   };
+  //   twitterFetcher.fetch(twitterConfig);
+  // } else {
+  //   $('.widget--twitter-wrap').remove();
+  // }
 
 });
