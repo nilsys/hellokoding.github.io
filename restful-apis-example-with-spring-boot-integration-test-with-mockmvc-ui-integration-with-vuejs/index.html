@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RESTful API Example with Spring Boot, Unit Test with MockMVC and UI Integration with VueJS</title>
+  <title>RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,19 +19,19 @@
     
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="RESTful API Example with Spring Boot, Unit Test with MockMVC and UI Integration with VueJS">
-    <meta property="og:description" content="This tutorial will walk you through the steps of creating a RESTful API Example with Spring Boot, Unit Test with MockMVC and UI Integration with VueJS For the sake of simplicity, this tutorial is using a HashMap for the data source This tutorial contains some designed exercises for your practices">
+    <meta property="og:title" content="RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS">
+    <meta property="og:description" content="This tutorial will walk you through the steps of creating a RESTful API Example with Spring Boot, Unit Test with MockMVC and UI Integration with VueJS This tutorial contains some designed exercises for your practices If you are looking for a full CRUD integration of RESTful APIs and web app">
     <meta property="og:url" content="http://hellokoding.com/restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2018/03/RESTfulAPI.png">
     <meta property="article:published_time" content="2018-03-24T04:07:49.000Z">
-    <meta property="article:modified_time" content="2019-01-27T06:47:42.000Z">
+    <meta property="article:modified_time" content="2019-01-27T13:53:05.000Z">
     <meta property="article:tag" content="RESTful API">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="RESTful API Example with Spring Boot, Unit Test with MockMVC and UI Integration with VueJS">
-    <meta name="twitter:description" content="This tutorial will walk you through the steps of creating a RESTful API Example with Spring Boot, Unit Test with MockMVC and UI Integration with VueJS For the sake of simplicity, this tutorial is using a HashMap for the data source This tutorial contains some designed exercises for your practices">
+    <meta name="twitter:title" content="RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS">
+    <meta name="twitter:description" content="This tutorial will walk you through the steps of creating a RESTful API Example with Spring Boot, Unit Test with MockMVC and UI Integration with VueJS This tutorial contains some designed exercises for your practices If you are looking for a full CRUD integration of RESTful APIs and web app">
     <meta name="twitter:url" content="http://hellokoding.com/restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2018/03/RESTfulAPI.png">
     <meta name="twitter:label1" content="Written by">
@@ -61,13 +61,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. He is interested in making simple code examples and tutorials. Follow him on GitHub/Twitter or drop a message hellokoding [at] gmail [dot] com"
     },
-    "headline": "RESTful API Example with Spring Boot, Unit Test with MockMVC and UI Integration with VueJS",
+    "headline": "RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS",
     "url": "http://hellokoding.com/restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/",
     "datePublished": "2018-03-24T04:07:49.000Z",
-    "dateModified": "2019-01-27T06:47:42.000Z",
+    "dateModified": "2019-01-27T13:53:05.000Z",
     "image": "http://hellokoding.com/content/images/2018/03/RESTfulAPI.png",
     "keywords": "RESTful API, Spring Boot",
-    "description": "This tutorial will walk you through the steps of creating a RESTful API Example with Spring Boot, Unit Test with MockMVC and UI Integration with VueJS For the sake of simplicity, this tutorial is using a HashMap for the data source This tutorial contains some designed exercises for your practices"
+    "description": "This tutorial will walk you through the steps of creating a RESTful API Example with Spring Boot, Unit Test with MockMVC and UI Integration with VueJS This tutorial contains some designed exercises for your practices If you are looking for a full CRUD integration of RESTful APIs and web app"
 }
     </script>
 
@@ -199,7 +199,7 @@ ghost.init({
         <article class="post tag-restful tag-spring-boot">
 
           <header class="post__header">
-            <h2 class="post__title">RESTful API Example with Spring Boot, Unit Test with MockMVC and UI Integration with VueJS</h2>
+            <h2 class="post__title">RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS</h2>
             <time class="post__date" datetime="2019-01-27">Last modified @ 27 January 2019</time>
           </header>
 
@@ -209,11 +209,15 @@ ghost.init({
             </div>
             <p>This tutorial will walk you through the steps of creating a RESTful API Example with Spring Boot, Unit Test with MockMVC and UI Integration with VueJS</p>
 
-<pre><code>For the sake of simplicity, this tutorial is using a HashMap for the data source
-</code></pre>
-
 <pre><code>This tutorial contains some designed exercises for your practices
 </code></pre>
+
+<p><big></big></p>
+
+<p></p><pre>
+If you are looking for a full CRUD integration of RESTful APIs and web app using VueJS, try below tutorial:
+- <a href="https://hellokoding.com/full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/">Full Stack CRUD Web App and RESTful API Services Example with Spring Boot, MySQL and VueJS</a>
+</pre>
 
 <h3 id="whatyoullneed">What you'll need</h3>
 
@@ -232,66 +236,32 @@ ghost.init({
 
 <h3 id="projectstructure">Project structure</h3>
 
-<pre><code>├── src
-│   ├── main
-│   │   ├── java
-│   │   │   └── com
-│   │   │       └── hellokoding
-│   │   │           └── restfulapi
-│   │   │               ├── api
-│   │   │               │   └── StockAPI.java
-│   │   │               ├── model
-│   │   │               │   └── Stock.java
-│   │   │               ├── service
-│   │   │               │   └── StockService.java
-│   │   │               ├── web
-│   │   │               │   └── StockController.java
-│   │   │               ├── Application.java
-│   │   │               └── StockData.java
-│   │   └── resources
-│   │       ├── static
-│   │       │   ├── stocklist.css
-│   │       │   └── stocklist.js
-│   │       ├── templates
-│   │       │   └── stocklist.html
-│   │       └── application.properties
-│   └── test
-│       └── java
-│           └── com
-│               └── hellokoding
-│                   └── restfulapi
-│                       └── StockAPITest.java
-└── pom.xml
-</code></pre>
+<p><img src="../content/images/2019/01/Screenshot-2019-01-27-at-6-26-10-PM.png" alt=""></p>
 
 <h3 id="projectdependencies">Project dependencies</h3>
 
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs/blob/master/pom.xml">
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/springboot-examples/blob/master/restful-api/springboot-mockmvc-hsql/pom.xml">
 </code></pre>
 
-<h3 id="domainobjects">Domain objects</h3>
+<h3 id="definejpaentityandrepository">Define JPA Entity and Repository</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs/blob/master/src/main/java/com/hellokoding/restfulapi/model/Stock.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/restful-api/springboot-mockmvc-hsql/src/main/java/com/hellokoding/springboot/restful/Stock.java">
 </code></pre>
 
-<h3 id="data">Data</h3>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs/blob/master/src/main/java/com/hellokoding/restfulapi/StockData.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/restful-api/springboot-mockmvc-hsql/src/main/java/com/hellokoding/springboot/restful/StockRepository.java">
 </code></pre>
 
 <p><strong>Exercise for you</strong></p>
 
-<pre><code>Replace this Data Source implementation with your favour such as MySQL or Postgres
+<pre><code>Replace HSQL database with your favour such as MySQL or Postgres
 </code></pre>
 
-<h3 id="service">Service</h3>
+<h3 id="defineservicerestfulapiandcontroller">Define Service, RESTful API and Controller</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs/blob/master/src/main/java/com/hellokoding/restfulapi/service/StockService.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/restful-api/springboot-mockmvc-hsql/src/main/java/com/hellokoding/springboot/restful/StockService.java">
 </code></pre>
 
-<h3 id="restfulapi">RESTful API</h3>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs/blob/master/src/main/java/com/hellokoding/restfulapi/api/StockAPI.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/restful-api/springboot-mockmvc-hsql/src/main/java/com/hellokoding/springboot/restful/StockAPI.java">
 </code></pre>
 
 <p><strong>Exercise for you</strong></p>
@@ -299,9 +269,7 @@ ghost.init({
 <pre><code>Implement your Delete Stock API
 </code></pre>
 
-<h3 id="webcontroller">Web Controller</h3>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs/blob/master/src/main/java/com/hellokoding/restfulapi/web/StockController.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/restful-api/springboot-mockmvc-hsql/src/main/java/com/hellokoding/springboot/restful/StockController.java">
 </code></pre>
 
 <h3 id="showalistofstocksonwebuiwithvuejs">Show a list of stocks on Web UI with VueJS</h3>
@@ -317,11 +285,6 @@ ghost.init({
 <pre><code>Integrate other REST APIs such as Create, Update, Delete into your Web UI with VueJS
 </code></pre>
 
-<h3 id="unittestrestapiwithmockmvc">Unit Test REST API with MockMVC</h3>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs/blob/master/src/test/java/com/hellokoding/restfulapi/StockAPITest.java">
-</code></pre>
-
 <h3 id="runtheapplication">Run the application</h3>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs/blob/master/src/main/java/com/hellokoding/restfulapi/Application.java">
@@ -332,7 +295,21 @@ ghost.init({
 <li>Access to <code>http://localhost:8080</code></li>
 </ul>
 
-<h3 id="testtheapplication">Test the application</h3>
+<h3 id="timefortesting">Time for testing</h3>
+
+<p><strong>Unit Test REST API with MockMVC</strong></p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/restful-api/springboot-mockmvc-hsql/src/test/java/com/hellokoding/springboot/restful/StockAPITest.java">
+</code></pre>
+
+<p>Type <code>mvn test</code> on your terminal at this example root directory to run the unit test</p>
+
+<p><strong>Integration test with cURL</strong></p>
+
+<p>Create a new stock  </p>
+
+<pre><code>curl -H "Content-Type: application/json" -X POST -d '{"name":"Stock 1","price":"1"}' http://localhost:8080/api/v1/stocks
+</code></pre>
 
 <p>Get all stocks  </p>
 
@@ -346,13 +323,18 @@ ghost.init({
 
 <p>Update price of stock 1  </p>
 
-<pre><code>curl -X PUT -d 'currentPrice=123' http://localhost:8080/api/v1/stocks/1
+<pre><code>curl -i -X PATCH -H "Content-Type:application/json" -d "{\"name\" : \"Stock 1 Updated\"}" http://localhost:8080/api/v1/stocks/1
 </code></pre>
 
-<p>Create a new stock  </p>
+<p>Access to <code>localhost:8080</code> to see the updated data on UI <br>
+<img src="../content/images/2019/01/Screenshot-2019-01-27-at-9-51-38-PM.png" alt=""></p>
 
-<pre><code>curl -H "Content-Type: application/json" -X POST -d '{"name":"S11","currentPrice":"11"}' http://localhost:8080/api/v1/stocks
-</code></pre>
+<p><big></big></p>
+
+<p></p><pre>
+If you are looking for a full CRUD integration of RESTful APIs and web app using VueJS, try below tutorial:
+- <a href="https://hellokoding.com/full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/">Full Stack CRUD Web App and RESTful API Services Example with Spring Boot, MySQL and VueJS</a>
+</pre>
 
 <p>And that's it folks! Thanks for joining and have a happy coding. Please find the full source code of this example as below</p>
 
@@ -362,7 +344,7 @@ ghost.init({
 
 <p><a href="https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs">https://github.com/hellokoding/restfulapi-springboot-mockmvc-vuejs</a></p>
 
-<h3 id="links">Links</h3>
+<h3 id="references">References</h3>
 
 <p><a href="https://vuejs.org/v2/examples/grid-component.html">VueJS Grid Component Example</a></p>
             <div class="post__tags">
@@ -407,7 +389,7 @@ ghost.init({
 </div>
           <ul class="share-list">
   <li>
-    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=RESTful%20API%20Example%20with%20Spring%20Boot%2C%20Unit%20Test%20with%20MockMVC%20and%20UI%20Integration%20with%20VueJS&amp;url=http://hellokoding.com/restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=RESTful%20API%20Example%20with%20Spring%20Boot%2C%20Unit%20Test%20with%20MockMVC%20and%20Simple%20UI%20Integration%20with%20VueJS&amp;url=http://hellokoding.com/restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <div data-icon="ei-sc-twitter" data-size="s" class="share-list__icon share-list__icon--twitter"></div>
     </a>
   </li>
@@ -534,13 +516,13 @@ ghost.init({
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
+<div class="post-card"><a title="RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS" href="index.html"><div style="background-image: url(../content/images/2018/03/RESTfulAPI.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS" href="index.html">RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS</a></h2>
+<div class="post__tags">
+              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div></div>
 <div class="post-card"><a title="Spring Boot Tutorial and Example Series" href="../spring-boot-tutorial-series/"><div style="background-image: url(../content/images/2019/01/spring-boot-series.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot Tutorial and Example Series" href="../spring-boot-tutorial-series/">Spring Boot Tutorial and Example Series</a></h2>
 <div class="post__tags">
               <a href="../tag/series/">Series</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div></div>
-<div class="post-card"><a title="RESTful API Example with Spring Boot, Unit Test with MockMVC and UI Integration with VueJS" href="index.html"><div style="background-image: url(../content/images/2018/03/RESTfulAPI.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful API Example with Spring Boot, Unit Test with MockMVC and UI Integration with VueJS" href="index.html">RESTful API Example with Spring Boot, Unit Test with MockMVC and UI Integration with VueJS</a></h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div></div>
 <div class="post-card"><a title="JPA/Hibernate Composite Primary Key Example" href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/"><div style="background-image: url(../content/images/2019/01/jpa-composite-key.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="JPA/Hibernate Composite Primary Key Example" href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/">JPA/Hibernate Composite Primary Key Example</a></h2>
 <div class="post__tags">
