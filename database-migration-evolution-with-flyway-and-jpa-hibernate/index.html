@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uploading Multiple Files Example with Spring Boot</title>
+  <title>Database Migration/Evolution Example with Flyway and JPA/Hibernate</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,30 +14,30 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=1c738249ee">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=1c738249ee">
    
-  <link rel="canonical" href="http://hellokoding.com/uploading-multiple-files-example-with-spring-boot/">
+  <link rel="canonical" href="http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Uploading Multiple Files Example with Spring Boot">
-    <meta property="og:description" content="This tutorial will walk you through the steps of creating an Uploading Multiple Files Example with Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World Example with JSP What you'll build What">
-    <meta property="og:url" content="http://hellokoding.com/uploading-multiple-files-example-with-spring-boot/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2017/02/uploadfiles-springboot-1.png">
-    <meta property="article:published_time" content="2016-07-12T09:14:27.000Z">
-    <meta property="article:modified_time" content="2019-01-25T01:39:19.000Z">
-    <meta property="article:tag" content="Upload">
+    <meta property="og:title" content="Database Migration/Evolution Example with Flyway and JPA/Hibernate">
+    <meta property="og:description" content="In this tutorial, we will learn using Flyway to version control database migration/evolution. Let's start building an example with Spring Boot, JPA/Hibernate, MySQL, and Docker. What you will need Docker CE 18+ Project structure Project dependencies Define JPA Entity and Repository Prepare SQL script for database migration Application">
+    <meta property="og:url" content="http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/database-migration.png">
+    <meta property="article:published_time" content="2019-01-28T09:21:12.000Z">
+    <meta property="article:modified_time" content="2019-01-28T11:42:18.000Z">
+    <meta property="article:tag" content="JPA/Hibernate">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Uploading Multiple Files Example with Spring Boot">
-    <meta name="twitter:description" content="This tutorial will walk you through the steps of creating an Uploading Multiple Files Example with Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World Example with JSP What you'll build What">
-    <meta name="twitter:url" content="http://hellokoding.com/uploading-multiple-files-example-with-spring-boot/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2017/02/uploadfiles-springboot-1.png">
+    <meta name="twitter:title" content="Database Migration/Evolution Example with Flyway and JPA/Hibernate">
+    <meta name="twitter:description" content="In this tutorial, we will learn using Flyway to version control database migration/evolution. Let's start building an example with Spring Boot, JPA/Hibernate, MySQL, and Docker. What you will need Docker CE 18+ Project structure Project dependencies Define JPA Entity and Repository Prepare SQL script for database migration Application">
+    <meta name="twitter:url" content="http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/01/database-migration.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Upload, Spring Boot">
+    <meta name="twitter:data2" content="JPA/Hibernate, Spring Boot">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -61,13 +61,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. He is interested in making simple code examples and tutorials. Follow him on GitHub/Twitter or drop a message hellokoding [at] gmail [dot] com"
     },
-    "headline": "Uploading Multiple Files Example with Spring Boot",
-    "url": "http://hellokoding.com/uploading-multiple-files-example-with-spring-boot/",
-    "datePublished": "2016-07-12T09:14:27.000Z",
-    "dateModified": "2019-01-25T01:39:19.000Z",
-    "image": "http://hellokoding.com/content/images/2017/02/uploadfiles-springboot-1.png",
-    "keywords": "Upload, Spring Boot",
-    "description": "This tutorial will walk you through the steps of creating an Uploading Multiple Files Example with Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World Example with JSP What you&#x27;ll build What"
+    "headline": "Database Migration/Evolution Example with Flyway and JPA/Hibernate",
+    "url": "http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/",
+    "datePublished": "2019-01-28T09:21:12.000Z",
+    "dateModified": "2019-01-28T11:42:18.000Z",
+    "image": "http://hellokoding.com/content/images/2019/01/database-migration.png",
+    "keywords": "JPA/Hibernate, Spring Boot",
+    "description": "In this tutorial, we will learn using Flyway to version control database migration/evolution. Let&#x27;s start building an example with Spring Boot, JPA/Hibernate, MySQL, and Docker. What you will need Docker CE 18+ Project structure Project dependencies Define JPA Entity and Repository Prepare SQL script for database migration Application"
 }
     </script>
 
@@ -81,7 +81,7 @@ ghost.init({
     <meta name="generator" content="Ghost 0.9">
     <link rel="alternate" type="application/rss+xml" title="Hello Koding" href="http://hellokoding.com/rss/">
 </head>
-<body class="post-template tag-upload tag-spring-boot">
+<body class="post-template tag-jpa tag-spring-boot">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -196,110 +196,98 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-8 column">
-        <article class="post tag-upload tag-spring-boot">
+        <article class="post tag-jpa tag-spring-boot">
 
           <header class="post__header">
-            <h2 class="post__title">Uploading Multiple Files Example with Spring Boot</h2>
-            <time class="post__date" datetime="2019-01-25">Last modified @ 25 January 2019</time>
+            <h2 class="post__title">Database Migration/Evolution Example with Flyway and JPA/Hibernate</h2>
+            <time class="post__date" datetime="2019-01-28">Last modified @ 28 January 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/upload/">Upload</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
-            <p>This tutorial will walk you through the steps of creating an Uploading Multiple Files Example with Spring Boot.</p>
+            <p>In this tutorial, we will learn using Flyway to version control database migration/evolution. Let's start building an example with Spring Boot, JPA/Hibernate, MySQL, and Docker.</p>
 
-<p><big></big></p>
-
-<p></p><pre>
-Hello Spring Boot Series:
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-freemarker/">Spring Boot Hello World Example with FreeMarker</a>
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/">Spring Boot Hello World Example with Thymeleaf</a>
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-jsp/">Spring Boot Hello World Example with JSP</a>
-</pre>
-
-<h3 id="whatyoullbuild">What you'll build</h3>
-
-<p><img src="../content/images/2016/07/uploadfiles-springboot-1.png" alt=""></p>
-
-<h3 id="whatyoullneed">What you'll need</h3>
+<h3 id="whatyouwillneed">What you will need</h3>
 
 <ul>
-<li>JDK 1.7 or later</li>
-<li>Maven 3 or later</li>
-</ul>
-
-<h3 id="stack">Stack</h3>
-
-<ul>
-<li>Java</li>
-<li>Spring Boot</li>
-<li>Freemarker</li>
+<li>Docker CE 18+</li>
 </ul>
 
 <h3 id="projectstructure">Project structure</h3>
 
-<pre><code>├── src
-│   └── main
-│       ├── java
-│       │   └── com
-│       │       └── hellokoding
-│       │           └── uploadingfiles
-│       │               ├── Application.java
-│       │               └── UploadingController.java
-│       ├── resources
-│       │   └── application.properties
-│       └── webapp
-│           └── uploading.ftl
-└── pom.xml
-</code></pre>
+<p><img src="../content/images/2019/01/Screenshot-2019-01-28-at-5-15-30-PM.png" alt=""></p>
 
 <h3 id="projectdependencies">Project dependencies</h3>
 
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/uploadingfiles-springboot/blob/master/pom.xml">
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/springboot-examples/blob/master/jpa-hibernate-mysql/db-migration-flyway/pom.xml">
 </code></pre>
 
-<h3 id="uploadingcontroller">Uploading Controller</h3>
+<h3 id="definejpaentityandrepository">Define JPA Entity and Repository</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/uploadingfiles-springboot/blob/master/src/main/java/com/hellokoding/uploadingfiles/UploadingController.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/jpa-hibernate-mysql/db-migration-flyway/src/main/java/com/hellokoding/springboot/jpa/book/Book.java">
 </code></pre>
 
-<h3 id="viewtemplate">View Template</h3>
+<h3 id="preparesqlscriptfordatabasemigration">Prepare SQL script for database migration</h3>
 
-<pre><code class="language-html embedfile-https://github.com/hellokoding/uploadingfiles-springboot/blob/master/src/main/webapp/uploading.ftl">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/jpa-hibernate-mysql/db-migration-flyway/src/main/resources/db/migration/V1.0__init.sql">
 </code></pre>
 
-<pre><code>&lt;form name="uploadingForm" enctype="multipart/form-data" action="/" method="POST"&gt;  
+<pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/jpa-hibernate-mysql/db-migration-flyway/src/main/resources/db/migration/V1.1__insert_data.sql">
 </code></pre>
 
-<p><code>action="/"</code> and <code>method="POST"</code> map with <code>uploadingPost()</code> of <code>UploadingController</code>, <code>enctype="multipart/form-data"</code> works with <code>MultipartFile</code>.</p>
+<h3 id="applicationproperties">Application Properties</h3>
 
-<h3 id="applicationconfiguration">Application Configuration</h3>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/uploadingfiles-springboot/blob/master/src/main/resources/application.properties">
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/springboot-examples/blob/master/jpa-hibernate-mysql/db-migration-flyway/src/main/resources/application.properties">
 </code></pre>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/uploadingfiles-springboot/blob/master/src/main/java/com/hellokoding/uploadingfiles/Application.java">
+<h3 id="runtheapplication">Run the application</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/jpa-hibernate-mysql/db-migration-flyway/src/main/java/com/hellokoding/springboot/jpa/Application.java">
 </code></pre>
 
-<p><code>new File(UploadingController.uploadingdir).mkdirs();</code> makes a directory for uploading files if not exists.</p>
+<p>Prepare Dockerfile for Java/Spring Boot application</p>
 
-<h3 id="run">Run</h3>
-
-<pre><code>mvn spring-boot:run
+<pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/jpa-hibernate-mysql/db-migration-flyway/Dockerfile">
 </code></pre>
+
+<p>Start the application and infrastructure via Docker Compose. Make sure the local Docker engine is running and terminal console is at the <a href="https://github.com/hellokoding/springboot-examples">springboot-examples</a> project root directory</p>
+
+<pre><code>docker-compose -f docker-compose-jpa.yaml up --renew-anon-volumes db-migration-flyway
+</code></pre>
+
+<p>Access to MySQL Server docker container by issuing below bash command  and key in <code>hellokoding</code> on <code>Enter password:</code></p>
+
+<pre><code>docker exec -it hk-mysql mysql -p
+</code></pre>
+
+<p>Check the created schema and data by Flyway based on the prepared SQL scripts</p>
+
+<p><img src="../content/images/2019/01/Screenshot-2019-01-28-at-5-26-43-PM.png" alt=""></p>
+
+<p><img src="../content/images/2019/01/Screenshot-2019-01-28-at-5-26-57-PM.png" alt=""></p>
+
+<p>Flyway also produced an additional table <code>flyway_schema_history</code> to manage schema version history <br>
+<img src="../content/images/2019/01/Screenshot-2019-01-28-at-6-15-53-PM.png" alt="">
+<img src="../content/images/2019/01/Screenshot-2019-01-28-at-6-16-30-PM.png" alt=""></p>
+
+<h3 id="keystotakeaway">Keys to take away</h3>
+
+<ul>
+<li>Using Flyway to version control database migration/evolution with SQL scripts.</li>
+<li>Hibernate DDL Auto should be disable when using with Flyway or on production environment, on <a href="index.html#applicationproperties">application.properties</a>, <code>spring.jpa.hibernate.ddl-auto</code> value should be <code>validate</code> or <code>none</code> (default).</li>
+<li>By default, Spring Boot and Flyway will find the migration script in <code>resources/db/migration</code>, you can change it on <a href="index.html#applicationproperties">application.properties</a> with <code>spring.flyway.locations</code> property.</li>
+<li>SQL script file name should follow Flyway convention <a href="https://flywaydb.org/documentation/migrations#naming">https://flywaydb.org/documentation/migrations#naming</a></li>
+</ul>
+
+<p>That's it folks! Thanks for joining and have a happy coding. Full source code of this example is available as below</p>
 
 <h3 id="sourcecode">Source code</h3>
 
-<p><code>git@github.com:hellokoding/uploadingfiles-springboot.git</code>
-<a href="https://github.com/hellokoding/uploadingfiles-springboot">https://github.com/hellokoding/uploadingfiles-springboot</a></p>
-
-<h3 id="links">Links</h3>
-
-<p><a href="https://developer.mozilla.org/en/docs/Using_files_from_web_applications">Using files from web applications</a> <br>
-<a href="https://spring.io/guides/gs/uploading-files/">Getting Started Uploading Files</a></p>
+<p><a href="https://github.com/hellokoding/springboot-examples/tree/master/jpa-hibernate-mysql/db-migration-flyway">https://github.com/hellokoding/springboot-examples/tree/master/jpa-hibernate-mysql/db-migration-flyway</a></p>
             <div class="post__tags">
-              <a href="../tag/upload/">Upload</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
           </div>
 
@@ -340,17 +328,17 @@ Hello Spring Boot Series:
 </div>
           <ul class="share-list">
   <li>
-    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Uploading%20Multiple%20Files%20Example%20with%20Spring%20Boot&amp;url=http://hellokoding.com/uploading-multiple-files-example-with-spring-boot/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Database%20Migration%2FEvolution%20Example%20with%20Flyway%20and%20JPA%2FHibernate&amp;url=http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <div data-icon="ei-sc-twitter" data-size="s" class="share-list__icon share-list__icon--twitter"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/uploading-multiple-files-example-with-spring-boot/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="s" class="share-list__icon share-list__icon--facebook"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/uploading-multiple-files-example-with-spring-boot/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
+    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
     <div data-icon="ei-sc-google-plus" data-size="s" class="share-list__icon share-list__icon--google"></div>
     </a>
   </li>
@@ -359,8 +347,8 @@ Hello Spring Boot Series:
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../todo-app-with-react-native/" class="block" title="Todo App with React Native">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/03/hellokoding-todoapp-reactnative-1.gif) ">
+       <a href="../full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/" class="block" title="Full Stack CRUD Web App and RESTful API Services Example with Spring Boot, MySQL and VueJS">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/Screenshot-2019-01-25-at-12-07-49-AM-1.png) ">
       </div>
     </a>
 
@@ -369,14 +357,14 @@ Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-01-27">27 January 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Todo App with React Native" href="../todo-app-with-react-native/">Todo App with React Native</a>
+        <a title="Full Stack CRUD Web App and RESTful API Services Example with Spring Boot, MySQL and VueJS" href="../full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/">Full Stack CRUD Web App and RESTful API Services Example with Spring Boot, MySQL and VueJS</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/react-native/">React Native</a>
+              <a href="../tag/full-stack/">Full Stack</a><a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
 
    </div>
@@ -384,32 +372,6 @@ Hello Spring Boot Series:
   </div>
 </article>
 
-    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
-  <div class="post-card ">
-       <a href="../todo-app-with-react-native-realm/" class="block" title="Todo App with React Native, Realm">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/hellokoding-todoapp-reactnative--2-.gif) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Todo App with React Native, Realm" href="../todo-app-with-react-native-realm/">Todo App with React Native, Realm</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/react-native/">React Native</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
 
   </div>
 </div>          <section class="disqus">
@@ -417,8 +379,8 @@ Hello Spring Boot Series:
   <div id="disqus_thread"></div>
 <script>
       var disqus_config = function () {
-        this.page.url = 'http://hellokoding.com/uploading-multiple-files-example-with-spring-boot/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = '21'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '51'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
 
       (function() { // DON'T EDIT BELOW THIS LINE
@@ -441,14 +403,6 @@ Hello Spring Boot Series:
   <aside class="widget">
   <h3 class="widget__title">Related Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Spring Boot Tutorial and Example Series" href="../spring-boot-tutorial-series/"><div style="background-image: url(../content/images/2019/01/spring-boot-series.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot Tutorial and Example Series" href="../spring-boot-tutorial-series/">Spring Boot Tutorial and Example Series</a></h2>
-<div class="post__tags">
-              <a href="../tag/series/">Series</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div></div>
-<div class="post-card"><a title="Database Migration/Evolution Example with Flyway and JPA/Hibernate" href="../database-migration-evolution-with-flyway-and-jpa-hibernate/"><div style="background-image: url(../content/images/2019/01/database-migration.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Database Migration/Evolution Example with Flyway and JPA/Hibernate" href="../database-migration-evolution-with-flyway-and-jpa-hibernate/">Database Migration/Evolution Example with Flyway and JPA/Hibernate</a></h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div></div>
 <div class="post-card"><a title="JPA/Hibernate Many To Many Extra Columns Example of Bidirectional Relationship Mapping" href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/"><div style="background-image: url(../content/images/2019/01/jpa-many-to-many-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="JPA/Hibernate Many To Many Extra Columns Example of Bidirectional Relationship Mapping" href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate Many To Many Extra Columns Example of Bidirectional Relationship Mapping</a></h2>
 <div class="post__tags">
               <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
@@ -461,13 +415,21 @@ Hello Spring Boot Series:
 <div class="post__tags">
               <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div></div>
+<div class="post-card"><a title="JPA/Hibernate One To One Example of Foreign Key Bidirectional Relationship Mapping" href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/"><div style="background-image: url(../content/images/2019/01/jpa-one-to--one.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="JPA/Hibernate One To One Example of Foreign Key Bidirectional Relationship Mapping" href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate One To One Example of Foreign Key Bidirectional Relationship Mapping</a></h2>
+<div class="post__tags">
+              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div></div>
+<div class="post-card"><a title="JPA/Hibernate One To Many Example of Bidirectional Relationship Mapping" href="../jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/"><div style="background-image: url(../content/images/2019/01/jpa-one-to-many.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="JPA/Hibernate One To Many Example of Bidirectional Relationship Mapping" href="../jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate One To Many Example of Bidirectional Relationship Mapping</a></h2>
+<div class="post__tags">
+              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div></div>
   </div>
 </aside>
 
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Database Migration/Evolution Example with Flyway and JPA/Hibernate" href="../database-migration-evolution-with-flyway-and-jpa-hibernate/"><div style="background-image: url(../content/images/2019/01/database-migration.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Database Migration/Evolution Example with Flyway and JPA/Hibernate" href="../database-migration-evolution-with-flyway-and-jpa-hibernate/">Database Migration/Evolution Example with Flyway and JPA/Hibernate</a></h2>
+<div class="post-card"><a title="Database Migration/Evolution Example with Flyway and JPA/Hibernate" href="index.html"><div style="background-image: url(../content/images/2019/01/database-migration.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Database Migration/Evolution Example with Flyway and JPA/Hibernate" href="index.html">Database Migration/Evolution Example with Flyway and JPA/Hibernate</a></h2>
 <div class="post__tags">
               <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div></div>
@@ -535,61 +497,6 @@ Hello Spring Boot Series:
           <div class="column large-12">
             <h5 class="heading">More</h5>
           </div>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card  post-card--featured ">
-       <a href="../spring-boot-tutorial-series/" class="block" title="Spring Boot Tutorial and Example Series">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/spring-boot-series.png) ">
-        <span title="Featured Post">
-          <span class="post-card--featured__icon" data-icon="ei-star" data-size="s"></span>
-        </span>
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-27">27 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Spring Boot Tutorial and Example Series" href="../spring-boot-tutorial-series/">Spring Boot Tutorial and Example Series</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/series/">Series</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../database-migration-evolution-with-flyway-and-jpa-hibernate/" class="block" title="Database Migration/Evolution Example with Flyway and JPA/Hibernate">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/database-migration.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-28">28 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Database Migration/Evolution Example with Flyway and JPA/Hibernate" href="../database-migration-evolution-with-flyway-and-jpa-hibernate/">Database Migration/Evolution Example with Flyway and JPA/Hibernate</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
        <a href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA/Hibernate Many To Many Extra Columns Example of Bidirectional Relationship Mapping">
@@ -766,6 +673,165 @@ Hello Spring Boot Series:
       </h2>
 <div class="post__tags">
               <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-hsql/" class="block" title="JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-tutorials-11.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL" href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-hsql/">JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../jpa-many-to-many-relationship-mapping-example-with-spring-boot-hsql/" class="block" title="JPA Many-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, and HSQL">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-tutorials-10.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="JPA Many-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, and HSQL" href="../jpa-many-to-many-relationship-mapping-example-with-spring-boot-hsql/">JPA Many-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, and HSQL</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../jpa-one-to-many-relationship-mapping-example-with-spring-boot-hsql/" class="block" title="JPA One-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, HSQL">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-tutorials-9.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="JPA One-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, HSQL" href="../jpa-one-to-many-relationship-mapping-example-with-spring-boot-hsql/">JPA One-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, HSQL</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-hsql/" class="block" title="JPA One-To-One Shared Primary Key Relationship Mapping Example with Spring Boot, Spring Data JPA, HSQL">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-tutorials-8.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="JPA One-To-One Shared Primary Key Relationship Mapping Example with Spring Boot, Spring Data JPA, HSQL" href="../jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-hsql/">JPA One-To-One Shared Primary Key Relationship Mapping Example with Spring Boot, Spring Data JPA, HSQL</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../jpa-one-to-one-foreign-key-relationship-mapping-example-with-spring-boot-hsql/" class="block" title="JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA, HSQL">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-tutorials-7.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA, HSQL" href="../jpa-one-to-one-foreign-key-relationship-mapping-example-with-spring-boot-hsql/">JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot, Spring Data JPA, HSQL</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card  post-card--featured ">
+       <a href="../spring-boot-tutorial-series/" class="block" title="Spring Boot Tutorial and Example Series">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/spring-boot-series.png) ">
+        <span title="Featured Post">
+          <span class="post-card--featured__icon" data-icon="ei-star" data-size="s"></span>
+        </span>
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-01-27">27 January 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="Spring Boot Tutorial and Example Series" href="../spring-boot-tutorial-series/">Spring Boot Tutorial and Example Series</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/series/">Series</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
 
    </div>
@@ -1052,110 +1118,6 @@ Hello Spring Boot Series:
       </h2>
 <div class="post__tags">
               <a href="../tag/form/">Form</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/" class="block" title="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/register-1.PNG) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL" href="../registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/">Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/security/">Security</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-hsql/" class="block" title="JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-tutorials-11.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL" href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-hsql/">JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-many-to-many-relationship-mapping-example-with-spring-boot-hsql/" class="block" title="JPA Many-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, and HSQL">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-tutorials-10.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA Many-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, and HSQL" href="../jpa-many-to-many-relationship-mapping-example-with-spring-boot-hsql/">JPA Many-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, and HSQL</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-one-to-many-relationship-mapping-example-with-spring-boot-hsql/" class="block" title="JPA One-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, HSQL">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-tutorials-9.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA One-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, HSQL" href="../jpa-one-to-many-relationship-mapping-example-with-spring-boot-hsql/">JPA One-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, HSQL</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
 
    </div>
