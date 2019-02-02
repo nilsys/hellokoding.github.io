@@ -25,7 +25,7 @@
     <meta property="og:url" content="http://hellokoding.com/mapping-jpa-hibernate-entity-and-dto-with-mapstruct/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/mapping-objects.png">
     <meta property="article:published_time" content="2019-02-01T14:36:40.000Z">
-    <meta property="article:modified_time" content="2019-02-02T10:44:13.000Z">
+    <meta property="article:modified_time" content="2019-02-02T12:02:16.000Z">
     <meta property="article:tag" content="RESTful API">
     <meta property="article:tag" content="Spring Boot">
     
@@ -65,7 +65,7 @@
     "headline": "Mapping JPA/Hibernate Entity and DTO with MapStruct",
     "url": "http://hellokoding.com/mapping-jpa-hibernate-entity-and-dto-with-mapstruct/",
     "datePublished": "2019-02-01T14:36:40.000Z",
-    "dateModified": "2019-02-02T10:44:13.000Z",
+    "dateModified": "2019-02-02T12:02:16.000Z",
     "image": "http://hellokoding.com/content/images/2019/02/mapping-objects.png",
     "keywords": "RESTful API, Spring Boot",
     "description": "In this tutorial, you will learn using MapStruct for mapping/converting Java objects, JPA/Hibernate entity to DTO and vice versa. Let&#x27;s get started to build a RESTful APIs example with Spring Boot and MySQL to see how MapStruct playing in the context. What you&#x27;ll need Docker CE 18+ Project"
@@ -265,7 +265,7 @@ ghost.init({
 
 <h3 id="applicationconfiguration">Application Configuration</h3>
 
-<pre><code class="language-markup embedfile-https://github.com/hellokoding/springboot-examples/blob/master/restful-api/springboot-mapstruct/src/main/resources/application.properties">
+<pre><code class="language-properties embedfile-https://github.com/hellokoding/springboot-examples/blob/master/restful-api/springboot-mapstruct/src/main/resources/application.properties">
 </code></pre>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/restful-api/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/Application.java">
@@ -280,19 +280,19 @@ ghost.init({
 
 <p>Start your application and infrastructure via Docker Compose. Make sure your local Docker is running and your bash console is at the <a href="https://github.com/hellokoding/springboot-examples">springboot-examples</a> project root directory.</p>
 
-<pre><code>docker-compose -f docker-compose-restful.yaml up --renew-anon-volumes springboot-mapstruct
+<pre><code class="language-bash">docker-compose -f docker-compose-restful.yaml up --renew-anon-volumes springboot-mapstruct
 </code></pre>
 
 <h3 id="testwithcurl">Test with <code>curl</code></h3>
 
-<p>Create a new product  </p>
+<p>Create a new product</p>
 
-<pre><code>curl -H "Content-Type: application/json" -X POST -d '{"name":"Hello Koding","description": "Simple coding examples and tutorials","price":"1"}' http://localhost:8080/api/v1/products
+<pre><code class="language-bash">curl -H "Content-Type: application/json" -X POST -d '{"name":"Hello Koding","description": "Simple coding examples and tutorials","price":"1"}' http://localhost:8080/api/v1/products
 </code></pre>
 
 <p>Find all products</p>
 
-<pre><code>curl http://localhost:8080/api/v1/products
+<pre><code class="language-bash">curl http://localhost:8080/api/v1/products
 </code></pre>
 
 <p>That's it! Thanks for joining and have a happy coding. You can find the full source code as below</p>
