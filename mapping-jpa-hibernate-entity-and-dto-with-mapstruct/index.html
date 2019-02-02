@@ -25,7 +25,7 @@
     <meta property="og:url" content="http://hellokoding.com/mapping-jpa-hibernate-entity-and-dto-with-mapstruct/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/mapping-objects.png">
     <meta property="article:published_time" content="2019-02-01T14:36:40.000Z">
-    <meta property="article:modified_time" content="2019-02-02T03:12:51.000Z">
+    <meta property="article:modified_time" content="2019-02-02T05:30:22.000Z">
     <meta property="article:tag" content="RESTful API">
     <meta property="article:tag" content="Spring Boot">
     
@@ -65,7 +65,7 @@
     "headline": "Mapping JPA/Hibernate Entity and DTO with MapStruct",
     "url": "http://hellokoding.com/mapping-jpa-hibernate-entity-and-dto-with-mapstruct/",
     "datePublished": "2019-02-01T14:36:40.000Z",
-    "dateModified": "2019-02-02T03:12:51.000Z",
+    "dateModified": "2019-02-02T05:30:22.000Z",
     "image": "http://hellokoding.com/content/images/2019/02/mapping-objects.png",
     "keywords": "RESTful API, Spring Boot",
     "description": "In this tutorial, you will learn using MapStruct for mapping/converting Java objects, JPA/Hibernate entity to DTO and vice versa. Let&#x27;s get started to build a RESTful APIs example with Spring Boot and MySQL to see how MapStruct playing in the context. What you&#x27;ll need Docker CE 18+ Project"
@@ -222,7 +222,9 @@ ghost.init({
 
 <h3 id="settingupmapstruct">Setting up MapStruct</h3>
 
-<p>MapStruct generates code based on Java annotation. Add MapStruct dependency into <code>pom.xml</code> and configure <code>annotationProcessorPaths</code> of <code>maven-compiler-plugin</code>. Full project dependencies and build plugins as below</p>
+<p>MapStruct is a Java annotation processor for generating bean mapping classes. </p>
+
+<p>To set up, add MapStruct dependency into <code>pom.xml</code> and configure <code>annotationProcessorPaths</code> of <code>maven-compiler-plugin</code>. Full project dependencies and build plugins as below</p>
 
 <pre><code class="language-xml embedfile-https://github.com/hellokoding/springboot-examples/blob/master/restful-api/springboot-mapstruct/pom.xml">
 </code></pre>
@@ -231,6 +233,8 @@ ghost.init({
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/restful-api/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/product/Product.java">
 </code></pre>
+
+<p>DTO, stands for Data Transfer Object, is a design pattern used for customizing/aggregating data input and output so reducing the number of call to remote API.</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/restful-api/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/product/ProductDTO.java">
 </code></pre>
@@ -382,6 +386,32 @@ ghost.init({
   </div>
 </article>
 
+    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
+  <div class="post-card ">
+       <a href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/" class="block" title="Spring Boot RESTful API Documentation with Swagger and SpringFox">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/restful-api-swagger.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-02-02">02 February 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="Spring Boot RESTful API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/">Spring Boot RESTful API Documentation with Swagger and SpringFox</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
 
   </div>
 </div>          <section class="disqus">
@@ -417,6 +447,10 @@ ghost.init({
   <aside class="widget">
   <h3 class="widget__title">Related Examples</h3>
   <div class="widget__body recent-posts1">
+<div class="post-card"><a title="Spring Boot RESTful API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/"><div style="background-image: url(../content/images/2019/02/restful-api-swagger.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot RESTful API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/">Spring Boot RESTful API Documentation with Swagger and SpringFox</a></h2>
+<div class="post__tags">
+              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div></div>
 <div class="post-card"><a title="RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS" href="../restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/"><div style="background-image: url(../content/images/2019/01/restful-spring-boot.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS" href="../restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/">RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS</a></h2>
 <div class="post__tags">
               <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
@@ -433,25 +467,21 @@ ghost.init({
 <div class="post__tags">
               <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div></div>
-<div class="post-card"><a title="RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/"><div style="background-image: url(../content/images/2019/01/restful-spring-data-rest-2.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/">RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many</a></h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div></div>
   </div>
 </aside>
 
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
+<div class="post-card"><a title="Spring Boot RESTful API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/"><div style="background-image: url(../content/images/2019/02/restful-api-swagger.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot RESTful API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/">Spring Boot RESTful API Documentation with Swagger and SpringFox</a></h2>
+<div class="post__tags">
+              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div></div>
 <div class="post-card"><a title="Mapping JPA/Hibernate Entity and DTO with MapStruct" href="index.html"><div style="background-image: url(../content/images/2019/02/mapping-objects.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Mapping JPA/Hibernate Entity and DTO with MapStruct" href="index.html">Mapping JPA/Hibernate Entity and DTO with MapStruct</a></h2>
 <div class="post__tags">
               <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div></div>
 <div class="post-card"><a title="JPA/Hibernate One To Many Bidirectional Relationship Mapping" href="../jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/"><div style="background-image: url(../content/images/2019/01/jpa-one-to-many.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="JPA/Hibernate One To Many Bidirectional Relationship Mapping" href="../jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate One To Many Bidirectional Relationship Mapping</a></h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div></div>
-<div class="post-card"><a title="JPA/Hibernate Composite Primary Key Example" href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/"><div style="background-image: url(../content/images/2019/01/jpa-composite-key.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="JPA/Hibernate Composite Primary Key Example" href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/">JPA/Hibernate Composite Primary Key Example</a></h2>
 <div class="post__tags">
               <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div></div>
@@ -510,6 +540,32 @@ ghost.init({
           <div class="column large-12">
             <h5 class="heading">More</h5>
           </div>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/" class="block" title="Spring Boot RESTful API Documentation with Swagger and SpringFox">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/restful-api-swagger.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-02-02">02 February 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="Spring Boot RESTful API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/">Spring Boot RESTful API Documentation with Swagger and SpringFox</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
        <a href="../restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/" class="block" title="RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS">
@@ -1102,32 +1158,6 @@ ghost.init({
 
       <h2 class="post-card__title">
         <a title="Spring Boot Hello World Example with JSP" href="../spring-boot-hello-world-example-with-jsp/">Spring Boot Hello World Example with JSP</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../spring-boot-hello-world-example-with-freemarker/" class="block" title="Spring Boot Hello World Example with FreeMarker">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/hello--1--4.gif) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-29">29 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Spring Boot Hello World Example with FreeMarker" href="../spring-boot-hello-world-example-with-freemarker/">Spring Boot Hello World Example with FreeMarker</a>
       </h2>
 <div class="post__tags">
               <a href="../tag/spring-boot/">Spring Boot</a>
