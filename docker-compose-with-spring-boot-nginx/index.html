@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Docker Compose with Spring Boot, NGINX</title>
+  <title>Dockerizing Spring Boot application</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -20,21 +20,21 @@
     
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Docker Compose with Spring Boot, NGINX">
-    <meta property="og:description" content="This post walks you through the steps of creating a simple Spring Boot web application running behind NGINX and inside Docker containers. What you'll need Docker CE Stack Docker Spring Boot NGINX Maven Project structure ├── app │   ├── src │   │   └── main │   │       ├── java │   │       │   └── com │   │       │       └── hellokoding │   │       │           └── springboot │   │       │               ├── IndexController.java │   │       │               └── WebApplication.java │   │       └── resources │   │           ├── static │   │           │   ├── css │   │           │   │   └── main.">
+    <meta property="og:title" content="Dockerizing Spring Boot application">
+    <meta property="og:description" content="This tutorial will walk you through the steps of dockerizing a simple Spring Boot web application with NGINX proxy server What you'll need Docker CE Stack Docker Spring Boot NGINX Maven Project structure ├── app │   ├── src │   │   └── main │   │       ├── java │   │       │   └── com │   │       │       └── hellokoding │   │       │           └── springboot │   │       │               ├── IndexController.java │   │       │               └── WebApplication.java │   │       └── resources │   │           ├── static │   │           │   ├── css │   │           │   │   └── main.css │   │           │   └── js">
     <meta property="og:url" content="http://hellokoding.com/docker-compose-with-spring-boot-nginx/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/docker-tutorials.png">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/docker-springboot.png">
     <meta property="article:published_time" content="2017-12-29T15:49:28.000Z">
-    <meta property="article:modified_time" content="2019-01-25T01:52:43.000Z">
+    <meta property="article:modified_time" content="2019-02-02T12:33:06.000Z">
     <meta property="article:tag" content="Spring Boot">
     <meta property="article:tag" content="Docker">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Docker Compose with Spring Boot, NGINX">
-    <meta name="twitter:description" content="This post walks you through the steps of creating a simple Spring Boot web application running behind NGINX and inside Docker containers. What you'll need Docker CE Stack Docker Spring Boot NGINX Maven Project structure ├── app │   ├── src │   │   └── main │   │       ├── java │   │       │   └── com │   │       │       └── hellokoding │   │       │           └── springboot │   │       │               ├── IndexController.java │   │       │               └── WebApplication.java │   │       └── resources │   │           ├── static │   │           │   ├── css │   │           │   │   └── main.">
+    <meta name="twitter:title" content="Dockerizing Spring Boot application">
+    <meta name="twitter:description" content="This tutorial will walk you through the steps of dockerizing a simple Spring Boot web application with NGINX proxy server What you'll need Docker CE Stack Docker Spring Boot NGINX Maven Project structure ├── app │   ├── src │   │   └── main │   │       ├── java │   │       │   └── com │   │       │       └── hellokoding │   │       │           └── springboot │   │       │               ├── IndexController.java │   │       │               └── WebApplication.java │   │       └── resources │   │           ├── static │   │           │   ├── css │   │           │   │   └── main.css │   │           │   └── js">
     <meta name="twitter:url" content="http://hellokoding.com/docker-compose-with-spring-boot-nginx/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/01/docker-tutorials.png">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/02/docker-springboot.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
@@ -62,13 +62,13 @@
         ],
         "description": "Giau is a software engineer, creator of Hello Koding. He is interested in making simple code examples and tutorials. Follow Giau on GitHub/Twitter or drop a message at hellokoding [at] gmail [dot] com"
     },
-    "headline": "Docker Compose with Spring Boot, NGINX",
+    "headline": "Dockerizing Spring Boot application",
     "url": "http://hellokoding.com/docker-compose-with-spring-boot-nginx/",
     "datePublished": "2017-12-29T15:49:28.000Z",
-    "dateModified": "2019-01-25T01:52:43.000Z",
-    "image": "http://hellokoding.com/content/images/2019/01/docker-tutorials.png",
+    "dateModified": "2019-02-02T12:33:06.000Z",
+    "image": "http://hellokoding.com/content/images/2019/02/docker-springboot.png",
     "keywords": "Spring Boot, Docker",
-    "description": "This post walks you through the steps of creating a simple Spring Boot web application running behind NGINX and inside Docker containers. What you&#x27;ll need Docker CE Stack Docker Spring Boot NGINX Maven Project structure ├── app │   ├── src │   │   └── main │   │       ├── java │   │       │   └── com │   │       │       └── hellokoding │   │       │           └── springboot │   │       │               ├── IndexController.java │   │       │               └── WebApplication.java │   │       └── resources │   │           ├── static │   │           │   ├── css │   │           │   │   └── main."
+    "description": "This tutorial will walk you through the steps of dockerizing a simple Spring Boot web application with NGINX proxy server What you&#x27;ll need Docker CE Stack Docker Spring Boot NGINX Maven Project structure ├── app │   ├── src │   │   └── main │   │       ├── java │   │       │   └── com │   │       │       └── hellokoding │   │       │           └── springboot │   │       │               ├── IndexController.java │   │       │               └── WebApplication.java │   │       └── resources │   │           ├── static │   │           │   ├── css │   │           │   │   └── main.css │   │           │   └── js"
 }
     </script>
 
@@ -200,15 +200,15 @@ ghost.init({
         <article class="post tag-spring-boot tag-docker">
 
           <header class="post__header">
-            <h2 class="post__title">Docker Compose with Spring Boot, NGINX</h2>
-            <time class="post__date" datetime="2019-01-25">Last modified @ 25 January 2019</time>
+            <h2 class="post__title">Dockerizing Spring Boot application</h2>
+            <time class="post__date" datetime="2019-02-02">Last modified @ 02 February 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
               <a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/docker/">Docker</a>
             </div>
-            <p>This post walks you through the steps of creating a simple Spring Boot web application running behind NGINX and inside Docker containers.</p>
+            <p>This tutorial will walk you through the steps of dockerizing a simple Spring Boot web application with NGINX proxy server</p>
 
 <h3 id="whatyoullneed">What you'll need</h3>
 
@@ -347,7 +347,7 @@ ghost.init({
 </div>
           <ul class="share-list">
   <li>
-    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Docker%20Compose%20with%20Spring%20Boot%2C%20NGINX&amp;url=http://hellokoding.com/docker-compose-with-spring-boot-nginx/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Dockerizing%20Spring%20Boot%20application&amp;url=http://hellokoding.com/docker-compose-with-spring-boot-nginx/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <div data-icon="ei-sc-twitter" data-size="s" class="share-list__icon share-list__icon--twitter"></div>
     </a>
   </li>
@@ -394,7 +394,7 @@ ghost.init({
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
   <div class="post-card ">
        <a href="../docker-compose-with-spring-boot-mongodb-nginx/" class="block" title="Docker Compose with Spring Boot, MongoDB, NGINX">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/docker-tutorials-1.png) ">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/docker-springboot-2.png) ">
       </div>
     </a>
 
@@ -403,7 +403,7 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-02">02 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
@@ -452,11 +452,11 @@ ghost.init({
   <aside class="widget">
   <h3 class="widget__title">Related Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Docker Compose with Spring Boot, MySQL, NGINX" href="../docker-compose-with-spring-boot-mysql-nginx/"><div style="background-image: url(../content/images/2019/01/docker-tutorials-2.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Docker Compose with Spring Boot, MySQL, NGINX" href="../docker-compose-with-spring-boot-mysql-nginx/">Docker Compose with Spring Boot, MySQL, NGINX</a></h2>
+<div class="post-card"><a title="Docker Compose with Spring Boot, MongoDB, NGINX" href="../docker-compose-with-spring-boot-mongodb-nginx/"><div style="background-image: url(../content/images/2019/02/docker-springboot-2.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Docker Compose with Spring Boot, MongoDB, NGINX" href="../docker-compose-with-spring-boot-mongodb-nginx/">Docker Compose with Spring Boot, MongoDB, NGINX</a></h2>
 <div class="post__tags">
               <a href="../tag/docker/">Docker</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div></div>
-<div class="post-card"><a title="Docker Compose with Spring Boot, MongoDB, NGINX" href="../docker-compose-with-spring-boot-mongodb-nginx/"><div style="background-image: url(../content/images/2019/01/docker-tutorials-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Docker Compose with Spring Boot, MongoDB, NGINX" href="../docker-compose-with-spring-boot-mongodb-nginx/">Docker Compose with Spring Boot, MongoDB, NGINX</a></h2>
+<div class="post-card"><a title="Docker Compose with Spring Boot, MySQL, NGINX" href="../docker-compose-with-spring-boot-mysql-nginx/"><div style="background-image: url(../content/images/2019/02/docker-springboot-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Docker Compose with Spring Boot, MySQL, NGINX" href="../docker-compose-with-spring-boot-mysql-nginx/">Docker Compose with Spring Boot, MySQL, NGINX</a></h2>
 <div class="post__tags">
               <a href="../tag/docker/">Docker</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div></div>
@@ -478,17 +478,17 @@ ghost.init({
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Mapping JPA/Hibernate Entity and DTO with MapStruct" href="../mapping-jpa-hibernate-entity-and-dto-with-mapstruct/"><div style="background-image: url(../content/images/2019/02/mapping-objects.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Mapping JPA/Hibernate Entity and DTO with MapStruct" href="../mapping-jpa-hibernate-entity-and-dto-with-mapstruct/">Mapping JPA/Hibernate Entity and DTO with MapStruct</a></h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div></div>
-<div class="post-card"><a title="Spring Boot RESTful API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/"><div style="background-image: url(../content/images/2019/02/restful-api-swagger.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot RESTful API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/">Spring Boot RESTful API Documentation with Swagger and SpringFox</a></h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div></div>
 <div class="post-card"><a title="Spring Boot Tutorial and Example Series" href="../spring-boot-tutorial-series/"><div style="background-image: url(../content/images/2019/01/spring-boot-series.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot Tutorial and Example Series" href="../spring-boot-tutorial-series/">Spring Boot Tutorial and Example Series</a></h2>
 <div class="post__tags">
               <a href="../tag/series/">Series</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div></div>
+<div class="post-card"><a title="Docker Compose with Spring Boot, MongoDB, NGINX" href="../docker-compose-with-spring-boot-mongodb-nginx/"><div style="background-image: url(../content/images/2019/02/docker-springboot-2.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Docker Compose with Spring Boot, MongoDB, NGINX" href="../docker-compose-with-spring-boot-mongodb-nginx/">Docker Compose with Spring Boot, MongoDB, NGINX</a></h2>
+<div class="post__tags">
+              <a href="../tag/docker/">Docker</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div></div>
+<div class="post-card"><a title="Docker Compose with Spring Boot, MySQL, NGINX" href="../docker-compose-with-spring-boot-mysql-nginx/"><div style="background-image: url(../content/images/2019/02/docker-springboot-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Docker Compose with Spring Boot, MySQL, NGINX" href="../docker-compose-with-spring-boot-mysql-nginx/">Docker Compose with Spring Boot, MySQL, NGINX</a></h2>
+<div class="post__tags">
+              <a href="../tag/docker/">Docker</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div></div>
   </div>
 </aside>
@@ -547,8 +547,8 @@ ghost.init({
           </div>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../docker-compose-with-spring-boot-mysql-nginx/" class="block" title="Docker Compose with Spring Boot, MySQL, NGINX">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/docker-tutorials-2.png) ">
+       <a href="../docker-compose-with-spring-boot-mongodb-nginx/" class="block" title="Docker Compose with Spring Boot, MongoDB, NGINX">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/docker-springboot-2.png) ">
       </div>
     </a>
 
@@ -557,11 +557,11 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-02">02 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Docker Compose with Spring Boot, MySQL, NGINX" href="../docker-compose-with-spring-boot-mysql-nginx/">Docker Compose with Spring Boot, MySQL, NGINX</a>
+        <a title="Docker Compose with Spring Boot, MongoDB, NGINX" href="../docker-compose-with-spring-boot-mongodb-nginx/">Docker Compose with Spring Boot, MongoDB, NGINX</a>
       </h2>
 <div class="post__tags">
               <a href="../tag/docker/">Docker</a><a href="../tag/spring-boot/">Spring Boot</a>
@@ -573,8 +573,8 @@ ghost.init({
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../docker-compose-with-spring-boot-mongodb-nginx/" class="block" title="Docker Compose with Spring Boot, MongoDB, NGINX">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/docker-tutorials-1.png) ">
+       <a href="../docker-compose-with-spring-boot-mysql-nginx/" class="block" title="Docker Compose with Spring Boot, MySQL, NGINX">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/docker-springboot-1.png) ">
       </div>
     </a>
 
@@ -583,11 +583,11 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-02">02 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Docker Compose with Spring Boot, MongoDB, NGINX" href="../docker-compose-with-spring-boot-mongodb-nginx/">Docker Compose with Spring Boot, MongoDB, NGINX</a>
+        <a title="Docker Compose with Spring Boot, MySQL, NGINX" href="../docker-compose-with-spring-boot-mysql-nginx/">Docker Compose with Spring Boot, MySQL, NGINX</a>
       </h2>
 <div class="post__tags">
               <a href="../tag/docker/">Docker</a><a href="../tag/spring-boot/">Spring Boot</a>
