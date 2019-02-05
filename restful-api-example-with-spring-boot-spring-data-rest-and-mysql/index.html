@@ -21,18 +21,18 @@
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
     <meta property="og:title" content="RESTful API Example with Spring Data REST">
-    <meta property="og:description" content="This tutorial will walk you through the steps of creating a RESTful API Example with Spring Data REST, JPA, Hibernate, MySQL and Docker. What you'll need Docker CE 18+ Project structure Project dependencies Define JPA Entity Spring Data Repository Spring Data JPA and Spring Data Rest will auto create RESTful">
+    <meta property="og:description" content="This tutorial will walk you through the steps of creating a RESTful API Example with Spring Data REST, JPA, Hibernate, MySQL and Docker. What you'll need Docker CE 18+ Project structure Project dependencies Define JPA Entity Define Spring Data Repository Spring Data Rest will auto create RESTful APIs based on">
     <meta property="og:url" content="http://hellokoding.com/restful-api-example-with-spring-boot-spring-data-rest-and-mysql/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/restful-spring-data-rest.png">
     <meta property="article:published_time" content="2017-06-24T07:19:55.000Z">
-    <meta property="article:modified_time" content="2019-01-27T15:51:43.000Z">
+    <meta property="article:modified_time" content="2019-02-05T14:10:35.000Z">
     <meta property="article:tag" content="RESTful API">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="RESTful API Example with Spring Data REST">
-    <meta name="twitter:description" content="This tutorial will walk you through the steps of creating a RESTful API Example with Spring Data REST, JPA, Hibernate, MySQL and Docker. What you'll need Docker CE 18+ Project structure Project dependencies Define JPA Entity Spring Data Repository Spring Data JPA and Spring Data Rest will auto create RESTful">
+    <meta name="twitter:description" content="This tutorial will walk you through the steps of creating a RESTful API Example with Spring Data REST, JPA, Hibernate, MySQL and Docker. What you'll need Docker CE 18+ Project structure Project dependencies Define JPA Entity Define Spring Data Repository Spring Data Rest will auto create RESTful APIs based on">
     <meta name="twitter:url" content="http://hellokoding.com/restful-api-example-with-spring-boot-spring-data-rest-and-mysql/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/01/restful-spring-data-rest.png">
     <meta name="twitter:label1" content="Written by">
@@ -65,10 +65,10 @@
     "headline": "RESTful API Example with Spring Data REST",
     "url": "http://hellokoding.com/restful-api-example-with-spring-boot-spring-data-rest-and-mysql/",
     "datePublished": "2017-06-24T07:19:55.000Z",
-    "dateModified": "2019-01-27T15:51:43.000Z",
+    "dateModified": "2019-02-05T14:10:35.000Z",
     "image": "http://hellokoding.com/content/images/2019/01/restful-spring-data-rest.png",
     "keywords": "RESTful API, Spring Boot",
-    "description": "This tutorial will walk you through the steps of creating a RESTful API Example with Spring Data REST, JPA, Hibernate, MySQL and Docker. What you&#x27;ll need Docker CE 18+ Project structure Project dependencies Define JPA Entity Spring Data Repository Spring Data JPA and Spring Data Rest will auto create RESTful"
+    "description": "This tutorial will walk you through the steps of creating a RESTful API Example with Spring Data REST, JPA, Hibernate, MySQL and Docker. What you&#x27;ll need Docker CE 18+ Project structure Project dependencies Define JPA Entity Define Spring Data Repository Spring Data Rest will auto create RESTful APIs based on"
 }
     </script>
 
@@ -201,7 +201,7 @@ ghost.init({
 
           <header class="post__header">
             <h2 class="post__title">RESTful API Example with Spring Data REST</h2>
-            <time class="post__date" datetime="2019-01-27">Last modified @ 27 January 2019</time>
+            <time class="post__date" datetime="2019-02-05">Last modified @ 05 February 2019</time>
           </header>
 
           <div class="post-content">
@@ -230,9 +230,9 @@ ghost.init({
 <pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/restful-api/springdatarest-mysql-single/src/main/java/com/hellokoding/springboot/jpa/book/Book.java">
 </code></pre>
 
-<h3 id="springdatarepository">Spring Data Repository</h3>
+<h3 id="definespringdatarepository">Define Spring Data Repository</h3>
 
-<p>Spring Data JPA and Spring Data Rest will auto create RESTful APIs for you, we only need to extend <code>JpaRepository</code></p>
+<p>Spring Data Rest will auto create RESTful APIs based on domain model and repository, all you have to do in this example is to extend <code>JpaRepository</code></p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/restful-api/springdatarest-mysql-single/src/main/java/com/hellokoding/springboot/jpa/book/BookRepository.java">
 </code></pre>
@@ -252,14 +252,14 @@ ghost.init({
 <pre><code class="language-java embedfile-https://github.com/hellokoding/springboot-examples/blob/master/restful-api/springdatarest-mysql-single/Dockerfile">
 </code></pre>
 
-<p>Start your application and infrastructure via Docker Compose. Make sure your local Docker is running and your bash console is at the <a href="https://github.com/hellokoding/springboot-examples">springboot-examples</a> project root directory. JPA/Hibernate will construct MySQL database schema, insert data into <code>book</code> table.</p>
+<p>Start your application and infrastructure via Docker Compose. Make sure your local Docker is running and your bash console is at the <a href="https://github.com/hellokoding/springboot-examples">springboot-examples</a> project root directory</p>
 
-<pre><code>docker-compose -f docker-compose-restful.yaml up --renew-anon-volumes springdatarest-mysql-single
+<pre><code class="language-bash">docker-compose -f docker-compose-restful.yaml up --renew-anon-volumes springdatarest-mysql-single
 </code></pre>
 
-<p>Let's check the data on MySQL database. Access to MySQL Server docker container by issuing below bash command and key in hellokoding on Enter password:</p>
+<p>Access to MySQL Server docker container by issuing below bash command and key in <code>hellokoding</code> on Enter password:</p>
 
-<pre><code>docker exec -it hk-mysql mysql -p
+<pre><code class="language-bash">docker exec -it hk-mysql mysql -p
 </code></pre>
 
 <p>Check the data table schema created by JPA/Hibernate based on your definition on <code>Book.java</code></p>
@@ -276,42 +276,49 @@ ghost.init({
 
 <p>Create some new books</p>
 
-<pre><code>curl -i -X POST -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding\", \"description\": \"Simple coding examples and tutorials\"}" http://localhost:8080/books
+<pre><code class="language-bash">curl -i -X POST -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding\", \"description\": \"Simple coding examples and tutorials\"}" http://localhost:8080/books
 </code></pre>
 
-<pre><code>curl -i -X POST -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding 2\", \"description\": \"Simple coding examples and tutorials 2\"}" http://localhost:8080/books
+<pre><code class="language-bash">curl -i -X POST -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding 2\", \"description\": \"Simple coding examples and tutorials 2\"}" http://localhost:8080/books
 </code></pre>
 
 <p>Find all books</p>
 
-<pre><code>curl http://localhost:8080/books
+<pre><code class="language-bash">curl http://localhost:8080/books
 </code></pre>
 
 <p>Find book with id=2</p>
 
-<pre><code>curl curl http://localhost:8080/books/2
+<pre><code class="language-bash">curl curl http://localhost:8080/books/2
 </code></pre>
 
 <p>Update book id 2</p>
 
-<pre><code>curl -i -X PATCH -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding 2 updated\"}" http://localhost:8080/books/2
+<pre><code class="language-bash">curl -i -X PATCH -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding 2 updated\"}" http://localhost:8080/books/2
 </code></pre>
 
 <p>Replace book id 2</p>
 
-<pre><code>curl -i -X PUT -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding 2 replaced\"}" http://localhost:8080/books/2
+<pre><code class="language-bash">curl -i -X PUT -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding 2 replaced\"}" http://localhost:8080/books/2
 </code></pre>
 
 <p>Delete book id 2</p>
 
-<pre><code>curl -i -X DELETE http://localhost:8080/books/2
+<pre><code class="language-bash">curl -i -X DELETE http://localhost:8080/books/2
 </code></pre>
 
-<p>And that's it! Thanks for joining and have a happy coding. You can find the full source code as below</p>
+<p>That's it! Thanks for joining and have a happy coding. You can find the full source code as below</p>
 
 <h3 id="sourcecode">Source code</h3>
 
 <p><a href="https://github.com/hellokoding/springboot-examples/tree/master/restful-api/springdatarest-mysql-single">https://github.com/hellokoding/springboot-examples/tree/master/restful-api/springdatarest-mysql-single</a></p>
+
+<p><big></big></p>
+
+<p></p><pre>
+You may also like
+<a href="https://hellokoding.com/handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/">Handling Circular Reference of JPA/Hibernate Entity Bidirectional Relationships with Jackson JsonIgnoreProperties</a>
+</pre>
             <div class="post__tags">
               <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
@@ -413,7 +420,7 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-02">02 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
@@ -466,21 +473,21 @@ ghost.init({
 <div class="post__tags">
               <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div></div>
-<div class="post-card"><a title="Spring Boot RESTful API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/"><div style="background-image: url(../content/images/2019/02/restful-api-swagger.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot RESTful API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/">Spring Boot RESTful API Documentation with Swagger and SpringFox</a></h2>
+<div class="post-card"><a title="RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-extra-columns-relationship-and-mysql/"><div style="background-image: url(../content/images/2019/01/restful-spring-data-rest-3.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-extra-columns-relationship-and-mysql/">RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns</a></h2>
 <div class="post__tags">
               <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div></div>
-<div class="post-card"><a title="RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS" href="../restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/"><div style="background-image: url(../content/images/2019/01/restful-spring-boot.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS" href="../restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/">RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS</a></h2>
+<div class="post-card"><a title="RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/"><div style="background-image: url(../content/images/2019/01/restful-spring-data-rest-2.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/">RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many</a></h2>
 <div class="post__tags">
               <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div></div>
-<div class="post-card"><a title="Spring Boot CRUD Example with TodoMVC, REST APIs, VueJS" href="../build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/"><div style="background-image: url(../content/images/2019/01/Screenshot-2019-01-23-at-12-50-59-AM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot CRUD Example with TodoMVC, REST APIs, VueJS" href="../build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/">Spring Boot CRUD Example with TodoMVC, REST APIs, VueJS</a></h2>
+<div class="post-card"><a title="RESTful API Example with Spring Data REST and JPA/Hibernate One to Many" href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/"><div style="background-image: url(../content/images/2019/01/restful-spring-data-rest-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful API Example with Spring Data REST and JPA/Hibernate One to Many" href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/">RESTful API Example with Spring Data REST and JPA/Hibernate One to Many</a></h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/full-stack/">Full Stack</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div></div>
-<div class="post-card"><a title="Spring Boot CRUD Example with RESTful APIs, VueJS" href="../full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/"><div style="background-image: url(../content/images/2019/01/Screenshot-2019-01-25-at-12-07-49-AM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot CRUD Example with RESTful APIs, VueJS" href="../full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/">Spring Boot CRUD Example with RESTful APIs, VueJS</a></h2>
+<div class="post-card"><a title="REST API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/"><div style="background-image: url(../content/images/2019/02/restful-api-swagger.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="REST API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/">REST API Documentation with Swagger and SpringFox</a></h2>
 <div class="post__tags">
-              <a href="../tag/full-stack/">Full Stack</a><a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div></div>
   </div>
 </aside>
@@ -488,17 +495,17 @@ ghost.init({
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Mapping JPA/Hibernate Entity and DTO with MapStruct" href="../mapping-jpa-hibernate-entity-and-dto-with-mapstruct/"><div style="background-image: url(../content/images/2019/02/mapping-objects.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Mapping JPA/Hibernate Entity and DTO with MapStruct" href="../mapping-jpa-hibernate-entity-and-dto-with-mapstruct/">Mapping JPA/Hibernate Entity and DTO with MapStruct</a></h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div></div>
 <div class="post-card"><a title="Spring Boot Tutorial and Example Series" href="../spring-boot-tutorial-series/"><div style="background-image: url(../content/images/2019/01/spring-boot-series.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot Tutorial and Example Series" href="../spring-boot-tutorial-series/">Spring Boot Tutorial and Example Series</a></h2>
 <div class="post__tags">
               <a href="../tag/series/">Series</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div></div>
-<div class="post-card"><a title="Docker Compose with Spring Boot, MongoDB, NGINX" href="../docker-compose-with-spring-boot-mongodb-nginx/"><div style="background-image: url(../content/images/2019/02/docker-springboot-2.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Docker Compose with Spring Boot, MongoDB, NGINX" href="../docker-compose-with-spring-boot-mongodb-nginx/">Docker Compose with Spring Boot, MongoDB, NGINX</a></h2>
+<div class="post-card"><a title="Mapping JPA/Hibernate Entity and DTO with MapStruct" href="../mapping-jpa-hibernate-entity-and-dto-with-mapstruct/"><div style="background-image: url(../content/images/2019/02/mapping-objects.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Mapping JPA/Hibernate Entity and DTO with MapStruct" href="../mapping-jpa-hibernate-entity-and-dto-with-mapstruct/">Mapping JPA/Hibernate Entity and DTO with MapStruct</a></h2>
 <div class="post__tags">
-              <a href="../tag/docker/">Docker</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div></div>
+<div class="post-card"><a title="RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-extra-columns-relationship-and-mysql/"><div style="background-image: url(../content/images/2019/01/restful-spring-data-rest-3.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-extra-columns-relationship-and-mysql/">RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns</a></h2>
+<div class="post__tags">
+              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div></div>
   </div>
 </aside>
@@ -567,7 +574,7 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-02">02 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
@@ -583,7 +590,85 @@ ghost.init({
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/" class="block" title="Spring Boot RESTful API Documentation with Swagger and SpringFox">
+       <a href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-extra-columns-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-data-rest-3.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-extra-columns-relationship-and-mysql/">RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-data-rest-2.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/">RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Data REST and JPA/Hibernate One to Many">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-data-rest-1.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="RESTful API Example with Spring Data REST and JPA/Hibernate One to Many" href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/">RESTful API Example with Spring Data REST and JPA/Hibernate One to Many</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/" class="block" title="REST API Documentation with Swagger and SpringFox">
       <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/restful-api-swagger.png) ">
       </div>
     </a>
@@ -593,11 +678,11 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-02">02 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Spring Boot RESTful API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/">Spring Boot RESTful API Documentation with Swagger and SpringFox</a>
+        <a title="REST API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/">REST API Documentation with Swagger and SpringFox</a>
       </h2>
 <div class="post__tags">
               <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
@@ -686,84 +771,6 @@ ghost.init({
   </div>
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-extra-columns-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-data-rest-3.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-27">27 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-extra-columns-relationship-and-mysql/">RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-data-rest-2.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-27">27 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/">RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Data REST and JPA/Hibernate One to Many">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-data-rest-1.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-27">27 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="RESTful API Example with Spring Data REST and JPA/Hibernate One to Many" href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/">RESTful API Example with Spring Data REST and JPA/Hibernate One to Many</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card  post-card--featured ">
        <a href="../spring-boot-tutorial-series/" class="block" title="Spring Boot Tutorial and Example Series">
       <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/spring-boot-series.png) ">
@@ -778,7 +785,7 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-02">02 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
@@ -786,6 +793,32 @@ ghost.init({
       </h2>
 <div class="post__tags">
               <a href="../tag/series/">Series</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/" class="block" title="Handling Circular Reference of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-circular-reference.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-02-03">03 February 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="Handling Circular Reference of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`" href="../handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/">Handling Circular Reference of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
 
    </div>
@@ -1017,32 +1050,6 @@ ghost.init({
 
       <h2 class="post-card__title">
         <a title="JPA/Hibernate One To One Bidirectional Relationship Mapping" href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate One To One Bidirectional Relationship Mapping</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/" class="block" title="Handling Circular Reference of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-circular-reference.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-01">01 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Handling Circular Reference of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`" href="../handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/">Handling Circular Reference of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`</a>
       </h2>
 <div class="post__tags">
               <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
