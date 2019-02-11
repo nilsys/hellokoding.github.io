@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spring MVC Hello World Example with XML Configuration, Maven and JSP</title>
+  <title>Stack Data Structure</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -15,29 +15,29 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=4c85ea1c15">
   <link rel="stylesheet" type="text/css" href="../assets/css/ads-carbon.css?v=4c85ea1c15">
    
-  <link rel="canonical" href="http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/">
+  <link rel="canonical" href="http://hellokoding.com/stack-data-structure/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Spring MVC Hello World Example with XML Configuration, Maven and JSP">
-    <meta property="og:description" content="This post walks you through the process of creating a Hello World example web site with Spring MVC. Hello Spring MVC Series: - Spring MVC Hello World Example with XML Configuration, Maven and JSP - Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf What you'll build What">
-    <meta property="og:url" content="http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2017/02/hello--1-.gif">
-    <meta property="article:published_time" content="2015-10-12T00:13:28.000Z">
-    <meta property="article:modified_time" content="2019-01-25T15:10:56.000Z">
-    <meta property="article:tag" content="Spring MVC">
+    <meta property="og:title" content="Stack Data Structure">
+    <meta property="og:description" content="In this tutorial, you will learn the basic implementation of Stack with Java. You will also quickly walk through some official supports of Stack in Java such as java.util.Deque, java.util.concurrent.BlockingDeque and java.util.Stack What is Stack? Stack is a linear data structure of similar">
+    <meta property="og:url" content="http://hellokoding.com/stack-data-structure/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/stack-data-structure.png">
+    <meta property="article:published_time" content="2019-02-10T15:32:49.000Z">
+    <meta property="article:modified_time" content="2019-02-11T14:16:08.000Z">
+    <meta property="article:tag" content="Data Structure">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Spring MVC Hello World Example with XML Configuration, Maven and JSP">
-    <meta name="twitter:description" content="This post walks you through the process of creating a Hello World example web site with Spring MVC. Hello Spring MVC Series: - Spring MVC Hello World Example with XML Configuration, Maven and JSP - Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf What you'll build What">
-    <meta name="twitter:url" content="http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2017/02/hello--1-.gif">
+    <meta name="twitter:title" content="Stack Data Structure">
+    <meta name="twitter:description" content="In this tutorial, you will learn the basic implementation of Stack with Java. You will also quickly walk through some official supports of Stack in Java such as java.util.Deque, java.util.concurrent.BlockingDeque and java.util.Stack What is Stack? Stack is a linear data structure of similar">
+    <meta name="twitter:url" content="http://hellokoding.com/stack-data-structure/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/02/stack-data-structure.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Spring MVC">
+    <meta name="twitter:data2" content="Data Structure">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -61,13 +61,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He is interested in making simple code examples and tutorials. Follow Giau on GitHub/Twitter or drop a message at hellokoding [at] gmail [dot] com"
     },
-    "headline": "Spring MVC Hello World Example with XML Configuration, Maven and JSP",
-    "url": "http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/",
-    "datePublished": "2015-10-12T00:13:28.000Z",
-    "dateModified": "2019-01-25T15:10:56.000Z",
-    "image": "http://hellokoding.com/content/images/2017/02/hello--1-.gif",
-    "keywords": "Spring MVC",
-    "description": "This post walks you through the process of creating a Hello World example web site with Spring MVC. Hello Spring MVC Series: - Spring MVC Hello World Example with XML Configuration, Maven and JSP - Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf What you&#x27;ll build What"
+    "headline": "Stack Data Structure",
+    "url": "http://hellokoding.com/stack-data-structure/",
+    "datePublished": "2019-02-10T15:32:49.000Z",
+    "dateModified": "2019-02-11T14:16:08.000Z",
+    "image": "http://hellokoding.com/content/images/2019/02/stack-data-structure.png",
+    "keywords": "Data Structure",
+    "description": "In this tutorial, you will learn the basic implementation of Stack with Java. You will also quickly walk through some official supports of Stack in Java such as java.util.Deque, java.util.concurrent.BlockingDeque and java.util.Stack What is Stack? Stack is a linear data structure of similar"
 }
     </script>
 
@@ -81,7 +81,7 @@ ghost.init({
     <meta name="generator" content="Ghost 0.9">
     <link rel="alternate" type="application/rss+xml" title="Hello Koding" href="http://hellokoding.com/rss/">
 </head>
-<body class="post-template tag-spring-mvc">
+<body class="post-template tag-data-structure">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -196,136 +196,81 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-8 column">
-        <article class="post tag-spring-mvc">
+        <article class="post tag-data-structure">
 
           <header class="post__header">
-            <h2 class="post__title">Spring MVC Hello World Example with XML Configuration, Maven and JSP</h2>
-            <time class="post__date" datetime="2019-01-25">Last modified @ 25 January 2019</time>
+            <h2 class="post__title">Stack Data Structure</h2>
+            <time class="post__date" datetime="2019-02-11">Last modified @ 11 February 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/spring-mvc/">Spring MVC</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
-            <p>This post walks you through the process of creating a Hello World example web site with Spring MVC.</p>
+            <p>In this tutorial, you will learn the basic implementation of <code>Stack</code> with Java. You will also quickly walk through some official supports of Stack in Java such as <code>java.util.Deque</code>, <code>java.util.concurrent.BlockingDeque</code> and <code>java.util.Stack</code></p>
 
-<p><big></big></p>
+<h3 id="whatisstack">What is Stack?</h3>
 
-<p></p><pre>
-Hello Spring MVC Series:
-- <a href="https://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/">Spring MVC Hello World Example with XML Configuration, Maven and JSP</a>
-- <a href="https://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-thymeleaf/">Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf</a>
-</pre>
+<p>Stack is a linear data structure of similar data type items, stores data in LIFO (Last In First Out) order</p>
 
-<h3 id="whatyoullbuild">What you'll build</h3>
-
-<p><img src="../content/images/2016/07/hello.gif" alt=""></p>
-
-<h3 id="whatyoullneed">What you'll need</h3>
+<h3 id="basicoperations">Basic operations</h3>
 
 <ul>
-<li>JDK 1.8 or later</li>
-<li>Maven 3 or later</li>
+<li><code>push</code> adds an item onto the stack</li>
+<li><code>pop</code> removes last pushed item from the stack</li>
+<li><code>peek</code> returns the last item pushed onto the stack</li>
 </ul>
 
-<h3 id="stack">Stack</h3>
+<h3 id="otheroperations">Other operations</h3>
 
 <ul>
-<li>Spring MVC 4</li>
-<li>JSP View Template</li>
+<li><code>isEmpty</code> returns true if no more items can be popped</li>
+<li><code>isFull</code> returns true if no more items can be pushed</li>
+<li><code>size</code> returns the number of items on the stack</li>
 </ul>
 
-<h3 id="projectstructure">Project structure</h3>
+<h3 id="implementation">Implementation</h3>
 
-<pre><code>├── src
-│   └── main
-│       ├── java
-│       │   └── com
-│       │       └── hellokoding
-│       │           └── hello
-│       │               └── web
-│       │                   └── HelloController.java
-│       ├── resources
-│       │   ├── application.properties
-│       │   └── logback.xml
-│       └── webapp
-│           ├── resources
-│           │   ├── css
-│           │   │   └── bootstrap.min.css
-│           │   ├── images
-│           │   └── js
-│           │       └── bootstrap.min.js
-│           └── WEB-INF
-│               ├── views
-│               │   └── hello.jsp
-|               ├── appconfig-mvc.xml
-│               ├── appconfig-root.xml 
-│               └── web.xml
-└── pom.xml
+<p>You can implement a stack with either a <code>linked list</code> or an <code>array</code> (static or dynamic)</p>
+
+<h3 id="stackimplementationexamplewithstaticarray">Stack implementation example with Static Array</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/datastructure-algorithm-java/blob/master/src/main/java/com/hellokoding/algorithm/MyStack.java">
 </code></pre>
 
-<h3 id="projectdependencies">Project dependencies</h3>
+<h3 id="application">Application</h3>
 
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/pom.xml">
+<ul>
+<li>Depth First Search uses a stack to track which elements to visit next</li>
+</ul>
+
+<h3 id="stacksupportsinjava">Stack supports in Java</h3>
+
+<ul>
+<li><code>java.util.Deque</code> (interface), since Java 1.6, unsynchronized / not thread-safe. For example</li>
+</ul>
+
+<pre><code class="language-java">Deque&lt;Integer&gt; stack = new ArrayDeque&lt;&gt;();  
+stack.push(1);  
+stack.peek();  
+stack.pop();  
 </code></pre>
 
-<h3 id="hellocontroller">Hello Controller</h3>
+<ul>
+<li><code>java.util.concurrent.BlockingDeque</code> (interface), since Java 1.6, synchronized / thread-safe. For example</li>
+</ul>
 
-<p><code>Controller</code> maps HTTP Requests with <code>View</code>.</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/java/com/hellokoding/hello/web/HelloController.java">
+<pre><code class="language-java">BlockingDeque&lt;Integer&gt; stack = new LinkedBlockingDeque&lt;&gt;();  
+stack.push(1);  
+stack.peek();  
+stack.pop();  
 </code></pre>
 
-<p><code>@RequestMapping</code> maps <code>/hello</code> request to <code>hello()</code> method.</p>
-
-<p><code>name</code> is a query string parameter of <code>/hello</code> request.</p>
-
-<p><code>Model</code> object passes value to <code>hello</code> view (<code>hello.jsp</code>).</p>
-
-<h3 id="jspjstlviewtemplate">JSP/JSTL View Template</h3>
-
-<p>JSP performs server side rendering of the HTML. It parses the <code>hello.jsp</code> template below and evaluate the EL (Expression Language) to render the value of ${name} parameter that was set in the controller.</p>
-
-<pre><code class="language-html embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/webapp/WEB-INF/views/hello.jsp">
-</code></pre>
-
-<h3 id="xmlconfiguration">XML Configuration</h3>
-
-<p>An application usually has several XML configuration files, but there should only be ONE bootstrap file (<code>appconfig-root.xml</code>). This bootstrap file should use the <code>&lt;import resource="" /&gt;</code> to include other config files.</p>
-
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/webapp/WEB-INF/appconfig-root.xml">
-</code></pre>
-
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/webapp/WEB-INF/appconfig-mvc.xml">
-</code></pre>
-
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/webapp/WEB-INF/web.xml">
-</code></pre>
-
-<h3 id="run">Run</h3>
-
-<pre><code>mvn jetty:run
-</code></pre>
-
-<h3 id="sourcecode">Source code</h3>
-
-<p><code>git@github.com:hellokoding/hello-springmvc-xml-maven-jsp.git</code>
-<a href="https://github.com/hellokoding/hello-springmvc-xml-maven-jsp">https://github.com/hellokoding/hello-springmvc-xml-maven-jsp</a></p>
-
-<p><big></big></p>
-
-<p></p><pre>
-You may also like the Hello Spring Boot Series:
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-freemarker/">Spring Boot Hello World Example with FreeMarker</a>
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/">Spring Boot Hello World Example with Thymeleaf</a>
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-jsp/">Spring Boot Hello World Example with JSP</a>
-</pre>
-
-<h3 id="links">Links</h3>
-
-<p><a href="https://spring.io/guides/gs/serving-web-content/">Serving Web Content with Spring MVC</a></p>
+<ul>
+<li><code>java.util.Stack</code> (class), since Java 1.1, extends <code>Vector</code>, synchronized, should not be used due to its negative impact on performance</li>
+</ul>
             <div class="post__tags">
-              <a href="../tag/spring-mvc/">Spring MVC</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
           </div>
 
@@ -366,28 +311,27 @@ You may also like the Hello Spring Boot Series:
 </div>
           <ul class="share-list">
   <li>
-    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Spring%20MVC%20Hello%20World%20Example%20with%20XML%20Configuration%2C%20Maven%20and%20JSP&amp;url=http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Stack%20Data%20Structure&amp;url=http://hellokoding.com/stack-data-structure/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <div data-icon="ei-sc-twitter" data-size="s" class="share-list__icon share-list__icon--twitter"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/stack-data-structure/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="s" class="share-list__icon share-list__icon--facebook"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
+    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/stack-data-structure/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
     <div data-icon="ei-sc-google-plus" data-size="s" class="share-list__icon share-list__icon--google"></div>
     </a>
   </li>
 </ul>          <div class="row">
   <div class="post-prev-next-pagination post-list">
 
-
-    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
+    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-thymeleaf/" class="block" title="Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/hello--1--2.gif) ">
+       <a href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/" class="block" title="REST API Documentation with Swagger and SpringFox">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/restful-api-swagger.png) ">
       </div>
     </a>
 
@@ -396,14 +340,41 @@ You may also like the Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf" href="../spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-thymeleaf/">Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf</a>
+        <a title="REST API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/">REST API Documentation with Swagger and SpringFox</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/spring-mvc/">Spring MVC</a>
+              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+
+    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
+  <div class="post-card ">
+       <a href="../queue-data-structure/" class="block" title="Queue Data Structure">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/queue-data-structure.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-02-11">11 February 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="Queue Data Structure" href="../queue-data-structure/">Queue Data Structure</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -417,8 +388,8 @@ You may also like the Hello Spring Boot Series:
   <div id="disqus_thread"></div>
 <script>
       var disqus_config = function () {
-        this.page.url = 'http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = '2'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://hellokoding.com/stack-data-structure/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '59'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
 
       (function() { // DON'T EDIT BELOW THIS LINE
@@ -445,13 +416,13 @@ You may also like the Hello Spring Boot Series:
   <aside class="widget">
   <h3 class="widget__title">Related Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf" href="../spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-thymeleaf/"><div style="background-image: url(../content/images/2017/02/hello--1--2.gif)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf" href="../spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-thymeleaf/">Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf</a></h2>
+<div class="post-card"><a title="Disjoint Sets Data Structure and Union Find Algorithm" href="../disjoint-sets-data-structure-and-union-find-algorithm/"><div style="background-image: url(../content/images/2017/09/Screen-Shot-2017-09-24-at-11-11-23-AM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Disjoint Sets Data Structure and Union Find Algorithm" href="../disjoint-sets-data-structure-and-union-find-algorithm/">Disjoint Sets Data Structure and Union Find Algorithm</a></h2>
 <div class="post__tags">
-              <a href="../tag/spring-mvc/">Spring MVC</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
-<div class="post-card"><a title="Registration and Login Example with Spring MVC, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL" href="../registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/"><div style="background-image: url(../content/images/2019/01/register2.PNG)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Registration and Login Example with Spring MVC, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL" href="../registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/">Registration and Login Example with Spring MVC, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL</a></h2>
+<div class="post-card"><a title="Queue Data Structure" href="../queue-data-structure/"><div style="background-image: url(../content/images/2019/02/queue-data-structure.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Queue Data Structure" href="../queue-data-structure/">Queue Data Structure</a></h2>
 <div class="post__tags">
-              <a href="../tag/security/">Security</a><a href="../tag/spring-mvc/">Spring MVC</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
   </div>
 </aside>
@@ -528,8 +499,8 @@ You may also like the Hello Spring Boot Series:
           </div>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-thymeleaf/" class="block" title="Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/hello--1--2.gif) ">
+       <a href="../disjoint-sets-data-structure-and-union-find-algorithm/" class="block" title="Disjoint Sets Data Structure and Union Find Algorithm">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/09/Screen-Shot-2017-09-24-at-11-11-23-AM-1.png) ">
       </div>
     </a>
 
@@ -538,14 +509,14 @@ You may also like the Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-11">11 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf" href="../spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-thymeleaf/">Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf</a>
+        <a title="Disjoint Sets Data Structure and Union Find Algorithm" href="../disjoint-sets-data-structure-and-union-find-algorithm/">Disjoint Sets Data Structure and Union Find Algorithm</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/spring-mvc/">Spring MVC</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -554,8 +525,8 @@ You may also like the Hello Spring Boot Series:
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/" class="block" title="Registration and Login Example with Spring MVC, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/register2.PNG) ">
+       <a href="../queue-data-structure/" class="block" title="Queue Data Structure">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/queue-data-structure.png) ">
       </div>
     </a>
 
@@ -564,14 +535,14 @@ You may also like the Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-11">11 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Registration and Login Example with Spring MVC, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL" href="../registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/">Registration and Login Example with Spring MVC, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL</a>
+        <a title="Queue Data Structure" href="../queue-data-structure/">Queue Data Structure</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/security/">Security</a><a href="../tag/spring-mvc/">Spring MVC</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
