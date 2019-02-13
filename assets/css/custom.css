@@ -28,6 +28,7 @@
   margin-bottom: 0!important;
   margin-top: 13px!important;
 }
+
 @media only screen and (min-width: 64.063em){
 .wrapper-ad {
 	padding: 25px 0 0 0;
@@ -38,3 +39,12 @@
     padding: 32px 0 0 0;
 }
 
+@media only screen and (min-width: 64.063em){
+.wrapper-ad-bottom {
+	padding: 0 0 25px 0;
+}
+}
+
+.wrapper-ad-bottom {
+	padding: 0 0 32px 0;
+}
