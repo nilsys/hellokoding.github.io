@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/heap-data-structure/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-15-at-12-16-04-AM.png">
     <meta property="article:published_time" content="2019-02-14T15:14:47.000Z">
-    <meta property="article:modified_time" content="2019-02-15T02:03:09.000Z">
+    <meta property="article:modified_time" content="2019-02-15T15:50:29.000Z">
     <meta property="article:tag" content="Data Structure">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Heap Data Structure",
     "url": "http://hellokoding.com/heap-data-structure/",
     "datePublished": "2019-02-14T15:14:47.000Z",
-    "dateModified": "2019-02-15T02:03:09.000Z",
+    "dateModified": "2019-02-15T15:50:29.000Z",
     "image": "http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-15-at-12-16-04-AM.png",
     "keywords": "Data Structure",
     "description": "In this tutorial, you will learn the Heap data structure, its operations and basic implementation example with Java What is Heap Data Structure? Heap is a tree-based data structure in which all nodes in the tree are in the specific order. There are 2 types of heap, typically: Max Heap:"
@@ -239,6 +239,8 @@ ghost.init({
 <li>Min Heap: all parent node's values are less than or equal to children node's values, root node value is the smallest.</li>
 </ul>
 
+<p><img src="../content/images/2019/02/Screenshot-2019-02-15-at-11-41-45-PM.png" alt=""></p>
+
 <h3 id="basicoperations">Basic operations</h3>
 
 <ul>
@@ -253,7 +255,7 @@ ghost.init({
 <li><code>heapify</code>, maintains max or min heap property (all parent node's values should be greater/less than or equal to child node's values)</li>
 </ul>
 
-<h3 id="implementation">Implementation</h3>
+<h3 id="implementations">Implementations</h3>
 
 <p>A common implementation of a heap is the binary heap which based on binary tree data structure</p>
 
@@ -273,6 +275,22 @@ ghost.init({
 </ul>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/datastructure-algorithm-java/blob/master/src/main/java/com/hellokoding/datastructure/MyMaxHeap.java">
+</code></pre>
+
+<h3 id="binaryminheapimplementationexamplewithstaticarray">Binary Min Heap implementation example with Static Array</h3>
+
+<h4 id="approach">Approach</h4>
+
+<ul>
+<li>Represented by 1-based integer array A[N+1]</li>
+<li>With a node A[k] (1&lt;=k&lt;=N) 
+<ul><li>Its parent is A[k/2]</li>
+<li>Left child is A[k*2] (k*2 &lt;= N)</li>
+<li>Right child is A[k*2+1] (k*2+1 &lt;= N)</li></ul></li>
+<li>A[1] is root node, A[0] is <code>Integer.MIN_VALUE</code></li>
+</ul>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/datastructure-algorithm-java/blob/master/src/main/java/com/hellokoding/datastructure/MyMinHeap.java">
 </code></pre>
             <div class="post__tags">
               <a href="../tag/data-structure/">Data Structure</a>
@@ -419,6 +437,10 @@ ghost.init({
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
+<div class="post-card"><a title="Heap Data Structure" href="index.html"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-15-at-12-16-04-AM.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Heap Data Structure" href="index.html">Heap Data Structure</a></h2>
+<div class="post__tags">
+              <a href="../tag/data-structure/">Data Structure</a>
+            </div></div>
 <div class="post-card"><a title="Mapping JPA/Hibernate Entity and DTO Example with MapStruct" href="../mapping-jpa-hibernate-entity-and-dto-with-mapstruct/"><div style="background-image: url(../content/images/2019/02/mapping-objects.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Mapping JPA/Hibernate Entity and DTO Example with MapStruct" href="../mapping-jpa-hibernate-entity-and-dto-with-mapstruct/">Mapping JPA/Hibernate Entity and DTO Example with MapStruct</a></h2>
 <div class="post__tags">
               <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
@@ -426,10 +448,6 @@ ghost.init({
 <div class="post-card"><a title="Queue implementations in Java" href="../queue-implementations-in-java/"><div style="background-image: url(../content/images/2019/02/queue-in-java.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Queue implementations in Java" href="../queue-implementations-in-java/">Queue implementations in Java</a></h2>
 <div class="post__tags">
               <a href="../tag/java/">Java</a>
-            </div></div>
-<div class="post-card"><a title="Heap Data Structure" href="index.html"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-15-at-12-16-04-AM.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Heap Data Structure" href="index.html">Heap Data Structure</a></h2>
-<div class="post__tags">
-              <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
   </div>
 </aside>
