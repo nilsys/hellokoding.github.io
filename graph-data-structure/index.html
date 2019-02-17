@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot</title>
+  <title>Graph Data Structure</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,30 +14,29 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=2298d51d1b">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=2298d51d1b">
    
-  <link rel="canonical" href="http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">
+  <link rel="canonical" href="http://hellokoding.com/graph-data-structure/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot">
-    <meta property="og:description" content="This tutorial will walk you through the steps of creating a Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World Example">
-    <meta property="og:url" content="http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2016/08/hello-sso-jwt-1.gif">
-    <meta property="article:published_time" content="2016-08-01T14:28:32.000Z">
-    <meta property="article:modified_time" content="2019-02-08T05:35:25.000Z">
-    <meta property="article:tag" content="Security">
-    <meta property="article:tag" content="Spring Boot">
+    <meta property="og:title" content="Graph Data Structure">
+    <meta property="og:description" content="In this tutorial, you will learn the Graph data structure, its operations and basic implementation example with Java What is Graph Data Structure? Graph is a non-linear data structure consisting of a set of nodes/vertices and a set of edges which connect a pair of nodes Types of Graphs">
+    <meta property="og:url" content="http://hellokoding.com/graph-data-structure/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-17-at-2-02-13-PM-1.png">
+    <meta property="article:published_time" content="2019-02-17T06:13:10.000Z">
+    <meta property="article:modified_time" content="2019-02-17T06:16:29.000Z">
+    <meta property="article:tag" content="Data Structure">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot">
-    <meta name="twitter:description" content="This tutorial will walk you through the steps of creating a Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World Example">
-    <meta name="twitter:url" content="http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2016/08/hello-sso-jwt-1.gif">
+    <meta name="twitter:title" content="Graph Data Structure">
+    <meta name="twitter:description" content="In this tutorial, you will learn the Graph data structure, its operations and basic implementation example with Java What is Graph Data Structure? Graph is a non-linear data structure consisting of a set of nodes/vertices and a set of edges which connect a pair of nodes Types of Graphs">
+    <meta name="twitter:url" content="http://hellokoding.com/graph-data-structure/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-17-at-2-02-13-PM-1.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Security, Spring Boot">
+    <meta name="twitter:data2" content="Data Structure">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -61,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He is interested in making simple code examples and tutorials. Follow Giau on GitHub/Twitter or drop a message at hellokoding [at] gmail [dot] com"
     },
-    "headline": "Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot",
-    "url": "http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/",
-    "datePublished": "2016-08-01T14:28:32.000Z",
-    "dateModified": "2019-02-08T05:35:25.000Z",
-    "image": "http://hellokoding.com/content/images/2016/08/hello-sso-jwt-1.gif",
-    "keywords": "Security, Spring Boot",
-    "description": "This tutorial will walk you through the steps of creating a Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World Example"
+    "headline": "Graph Data Structure",
+    "url": "http://hellokoding.com/graph-data-structure/",
+    "datePublished": "2019-02-17T06:13:10.000Z",
+    "dateModified": "2019-02-17T06:16:29.000Z",
+    "image": "http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-17-at-2-02-13-PM-1.png",
+    "keywords": "Data Structure",
+    "description": "In this tutorial, you will learn the Graph data structure, its operations and basic implementation example with Java What is Graph Data Structure? Graph is a non-linear data structure consisting of a set of nodes/vertices and a set of edges which connect a pair of nodes Types of Graphs"
 }
     </script>
 
@@ -88,7 +87,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-security tag-spring-boot">
+<body class="post-template tag-data-structure">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -213,208 +212,51 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-8 column">
-        <article class="post tag-security tag-spring-boot">
+        <article class="post tag-data-structure">
 
           <header class="post__header">
-            <h2 class="post__title">Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot</h2>
-            <time class="post__date" datetime="2019-02-08">Last modified @ 08 February 2019</time>
+            <h2 class="post__title">Graph Data Structure</h2>
+            <time class="post__date" datetime="2019-02-17">Last modified @ 17 February 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/security/">Security</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
-            <p>This tutorial will walk you through the steps of creating a <a href="https://en.wikipedia.org/wiki/Single_sign-on">Single Sign On (SSO)</a> Example with <a href="https://jwt.io/">JSON Web Token (JWT)</a> and Spring Boot.</p>
+            <p>In this tutorial, you will learn the Graph data structure, its operations and basic implementation example with Java</p>
 
-<p><big></big></p>
+<h3 id="whatisgraphdatastructure">What is Graph Data Structure?</h3>
 
-<p></p><pre>
-Hello Spring Boot Series:
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-freemarker/">Spring Boot Hello World Example with FreeMarker</a>
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/">Spring Boot Hello World Example with Thymeleaf</a>
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-jsp/">Spring Boot Hello World Example with JSP</a>
-</pre>
+<p>Graph is a non-linear data structure consisting of a set of nodes/vertices and a set of edges which connect a pair of nodes</p>
 
-<h3 id="whatyoullbuild">What you'll build</h3>
-
-<p>You'll build 3 separated services:</p>
+<h3 id="typesofgraphs">Types of Graphs</h3>
 
 <ul>
-<li><p>1 Authentication Service: will be deployed at <code>localhost:8080</code>.</p></li>
-<li><p>2 Resource Services (to simplify, we use the same code base): will be deployed at <code>localhost:8180</code> and <code>localhost:8280</code>.</p></li>
+<li><p>Undirected graph
+<img src="../content/images/2019/02/Screenshot-2019-02-17-at-2-02-13-PM.png" alt=""></p></li>
+<li><p>Directed graph
+<img src="../content/images/2019/02/Screenshot-2019-02-17-at-2-03-02-PM.png" alt=""></p></li>
 </ul>
 
-<p><img src="../content/images/2016/08/hello-sso-jwt.gif" alt=""></p>
-
-<h3 id="whatyoullneed">What you'll need</h3>
+<h3 id="basicoperations">Basic operations</h3>
 
 <ul>
-<li>JDK 1.7+</li>
-<li>Maven 3+</li>
+<li><code>addEdge</code>, add an edge between two vertices of the graph</li>
 </ul>
 
-<h3 id="stack">Stack</h3>
+<h3 id="representations">Representations</h3>
 
 <ul>
-<li>Java</li>
-<li>Single Sign On</li>
-<li>JSON Web Token</li>
-<li>Spring Boot</li>
-<li>Freemarker</li>
+<li>Adjacency List, every vertex stores a list of adjacent vertices</li>
+<li>Adjacency Matrix</li>
 </ul>
 
-<h1 id="authenticationservice">Authentication Service</h1>
+<h3 id="undirectedgraphimplementationexamplewithadjacencylist">Undirected Graph implementation example with Adjacency List</h3>
 
-<h3 id="projectstructure">Project structure</h3>
-
-<pre><code>├── src
-│   └── main
-│       ├── java
-│       │   └── com
-│       │       └── hellokoding
-│       │           └── sso
-│       │               └── auth
-│       │                   ├── CookieUtil.java
-│       │                   ├── JwtUtil.java
-│       │                   ├── LoginController.java
-│       │                   └── WebApplication.java
-│       ├── resources
-│       │   └── application.properties
-│       └── webapp
-│           └── login.ftl
-└── pom.xml
-</code></pre>
-
-<h3 id="projectdependencies">Project dependencies</h3>
-
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/pom.xml">
-</code></pre>
-
-<h3 id="cookieutil">CookieUtil</h3>
-
-<p>JWT Token'll be saved and extracted from browser cookies.</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/java/com/hellokoding/sso/auth/CookieUtil.java">
-</code></pre>
-
-<p><code>cookie.setSecure(secure)</code>: secure=true =&gt; work on HTTPS only.</p>
-
-<p><code>cookie.setHttpOnly(true)</code>: invisible to JavaScript.</p>
-
-<p><code>cookie.setMaxAge(maxAge)</code>: maxAge=0: expire cookie now, maxAge&lt;0: expire cookiie on browser exit.</p>
-
-<p><code>cookie.setDomain(domain)</code>: visible to <code>domain</code> only.</p>
-
-<p><code>cookie.setPath("/")</code>: visible to all paths.</p>
-
-<h3 id="jwtutil">JwtUtil</h3>
-
-<p>We use <a href="https://github.com/jwtk/jjwt">JJWT</a> to generate/parse JWT Token.</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/java/com/hellokoding/sso/auth/JwtUtil.java">
-</code></pre>
-
-<h3 id="logincontroller">LoginController</h3>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/java/com/hellokoding/sso/auth/LoginController.java">
-</code></pre>
-
-<p>To simplify, we use a HashMap (<code>credentials</code>) as user database.</p>
-
-<h3 id="viewtemplate">View Template</h3>
-
-<pre><code class="language-html embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/webapp/login.ftl">
-</code></pre>
-
-<h3 id="applicationconfiguration">Application Configuration</h3>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/resources/application.properties">
-</code></pre>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/java/com/hellokoding/sso/auth/WebApplication.java">
-</code></pre>
-
-<h3 id="run">Run</h3>
-
-<pre><code>mvn clean spring-boot:run
-</code></pre>
-
-<h1 id="resourceservice">Resource Service</h1>
-
-<h3 id="projectstructure">Project structure</h3>
-
-<pre><code>── src
-│   └── main
-│       ├── java
-│       │   └── com
-│       │       └── hellokoding
-│       │           └── sso
-│       │               └── resource
-│       │                   ├── CookieUtil.java
-│       │                   ├── JwtFilter.java
-│       │                   ├── JwtUtil.java
-│       │                   ├── ResourceController.java
-│       │                   └── WebApplication.java
-│       ├── resources
-│       │   └── application.properties
-│       └── webapp
-│           └── protected-resource.ftl
-└── pom.xml
-</code></pre>
-
-<h3 id="projectdependencies">Project dependencies</h3>
-
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/pom.xml">
-</code></pre>
-
-<h3 id="jwtfilter">JwtFilter</h3>
-
-<p>JwtFilter enforces SSO. If JWT Token's not existed (unauthenticated), redirects to Authentication Service. If JWT Token's existed (authenticated), extracts user identity and forwards the request.</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/src/main/java/com/hellokoding/sso/resource/JwtFilter.java">
-</code></pre>
-
-<h3 id="resourcecontroller">ResourceController</h3>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/src/main/java/com/hellokoding/sso/resource/ResourceController.java">
-</code></pre>
-
-<h3 id="viewtemplate">View Template</h3>
-
-<pre><code class="language-html embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/src/main/webapp/protected-resource.ftl">
-</code></pre>
-
-<h3 id="applicationconfiguration">Application Configuration</h3>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/src/main/resources/application.properties">
-</code></pre>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/src/main/java/com/hellokoding/sso/resource/WebApplication.java">
-</code></pre>
-
-<h3 id="run">Run</h3>
-
-<p>Resource Service 1</p>
-
-<pre><code>mvn clean spring-boot:run -Dserver.port=8180
-</code></pre>
-
-<p>Resource Service 2</p>
-
-<pre><code>mvn clean spring-boot:run -Dserver.port=8280
-</code></pre>
-
-<h3 id="sourcecode">Source code</h3>
-
-<p><code>git@github.com:hellokoding/hello-sso-jwt.git</code> <br>
-<a href="https://github.com/hellokoding/hello-sso-jwt">https://github.com/hellokoding/hello-sso-jwt</a></p>
-
-<p><code>hello-sso-jwt.git</code> is a git submodules project. You may clone it using this command</p>
-
-<pre><code>git clone --recurse-submodules -j8 git@github.com:hellokoding/hello-sso-jwt.git
+<pre><code class="language-java embedfile-https://github.com/hellokoding/datastructure-algorithm-java/blob/master/src/main/java/com/hellokoding/datastructure/UndirectedGraphByAdjacencyList.java">
 </code></pre>
             <div class="post__tags">
-              <a href="../tag/security/">Security</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
           </div>
 
@@ -461,17 +303,17 @@ Hello Spring Boot Series:
 </div>
           <ul class="share-list">
   <li>
-    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Single%20Sign%20On%20(SSO)%20Example%20with%20JSON%20Web%20Token%20(JWT)%20and%20Spring%20Boot&amp;url=http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Graph%20Data%20Structure&amp;url=http://hellokoding.com/graph-data-structure/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <div data-icon="ei-sc-twitter" data-size="s" class="share-list__icon share-list__icon--twitter"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/graph-data-structure/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="s" class="share-list__icon share-list__icon--facebook"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
+    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/graph-data-structure/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
     <div data-icon="ei-sc-google-plus" data-size="s" class="share-list__icon share-list__icon--google"></div>
     </a>
   </li>
@@ -480,8 +322,8 @@ Hello Spring Boot Series:
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../hackernewsapp-with-reactnative/" class="block" title="Hacker News App with React Native">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/03/ReactNative-1.png) ">
+       <a href="../binary-search-tree-data-structure/" class="block" title="Binary Search Tree Data Structure">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-1.png) ">
       </div>
     </a>
 
@@ -490,14 +332,14 @@ Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-17">17 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Hacker News App with React Native" href="../hackernewsapp-with-reactnative/">Hacker News App with React Native</a>
+        <a title="Binary Search Tree Data Structure" href="../binary-search-tree-data-structure/">Binary Search Tree Data Structure</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/react-native/">React Native</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -505,32 +347,6 @@ Hello Spring Boot Series:
   </div>
 </article>
 
-    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
-  <div class="post-card ">
-       <a href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/" class="block" title="Single Sign Out Example with JSON Web Token (JWT), Spring Boot and Redis">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/03/hello-sso-jwt.gif) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-08">08 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Single Sign Out Example with JSON Web Token (JWT), Spring Boot and Redis" href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/">Single Sign Out Example with JSON Web Token (JWT), Spring Boot and Redis</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/security/">Security</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
 
   </div>
 </div>          <section class="disqus">
@@ -538,8 +354,8 @@ Hello Spring Boot Series:
   <div id="disqus_thread"></div>
 <script>
       var disqus_config = function () {
-        this.page.url = 'http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = '24'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://hellokoding.com/graph-data-structure/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '70'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
 
       (function() { // DON'T EDIT BELOW THIS LINE
@@ -562,25 +378,25 @@ Hello Spring Boot Series:
   <aside class="widget">
   <h3 class="widget__title">Related Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Single Sign Out Example with JSON Web Token (JWT), Spring Boot and Redis" href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/"><div style="background-image: url(../content/images/2017/03/hello-sso-jwt.gif)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Single Sign Out Example with JSON Web Token (JWT), Spring Boot and Redis" href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/">Single Sign Out Example with JSON Web Token (JWT), Spring Boot and Redis</a></h2>
+<div class="post-card"><a title="Disjoint Sets Data Structure and Union Find Algorithm" href="../disjoint-sets-data-structure-and-union-find-algorithm/"><div style="background-image: url(../content/images/2017/09/Screen-Shot-2017-09-24-at-11-11-23-AM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Disjoint Sets Data Structure and Union Find Algorithm" href="../disjoint-sets-data-structure-and-union-find-algorithm/">Disjoint Sets Data Structure and Union Find Algorithm</a></h2>
 <div class="post__tags">
-              <a href="../tag/security/">Security</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
-<div class="post-card"><a title="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL" href="../registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/"><div style="background-image: url(../content/images/2017/02/register-1.PNG)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL" href="../registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/">Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL</a></h2>
+<div class="post-card"><a title="Heap Data Structure" href="../heap-data-structure/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-15-at-12-37-39-AM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Heap Data Structure" href="../heap-data-structure/">Heap Data Structure</a></h2>
 <div class="post__tags">
-              <a href="../tag/security/">Security</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
-<div class="post-card"><a title="Spring Boot Tutorial and Example Series" href="../spring-boot-tutorial-series/"><div style="background-image: url(../content/images/2019/01/spring-boot-series.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot Tutorial and Example Series" href="../spring-boot-tutorial-series/">Spring Boot Tutorial and Example Series</a></h2>
+<div class="post-card"><a title="Binary Search Tree Data Structure" href="../binary-search-tree-data-structure/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Binary Search Tree Data Structure" href="../binary-search-tree-data-structure/">Binary Search Tree Data Structure</a></h2>
 <div class="post__tags">
-              <a href="../tag/series/">Series</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
-<div class="post-card"><a title="Mapping JPA/Hibernate Entity and DTO Example with MapStruct" href="../mapping-jpa-hibernate-entity-and-dto-with-mapstruct/"><div style="background-image: url(../content/images/2019/02/mapping-objects.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Mapping JPA/Hibernate Entity and DTO Example with MapStruct" href="../mapping-jpa-hibernate-entity-and-dto-with-mapstruct/">Mapping JPA/Hibernate Entity and DTO Example with MapStruct</a></h2>
+<div class="post-card"><a title="Double Ended Queue Data Structure" href="../double-ended-queue-data-structure/"><div style="background-image: url(../content/images/2019/02/deque-data-structure.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Double Ended Queue Data Structure" href="../double-ended-queue-data-structure/">Double Ended Queue Data Structure</a></h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
-<div class="post-card"><a title="Uploading Files Example with Spring Boot" href="../uploading-multiple-files-example-with-spring-boot/"><div style="background-image: url(../content/images/2017/02/uploadfiles-springboot-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Uploading Files Example with Spring Boot" href="../uploading-multiple-files-example-with-spring-boot/">Uploading Files Example with Spring Boot</a></h2>
+<div class="post-card"><a title="Queue Data Structure" href="../queue-data-structure/"><div style="background-image: url(../content/images/2019/02/queue-data-structure.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Queue Data Structure" href="../queue-data-structure/">Queue Data Structure</a></h2>
 <div class="post__tags">
-              <a href="../tag/upload/">Upload</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
   </div>
 </aside>
@@ -588,7 +404,7 @@ Hello Spring Boot Series:
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Graph Data Structure" href="../graph-data-structure/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-2-02-13-PM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Graph Data Structure" href="../graph-data-structure/">Graph Data Structure</a></h2>
+<div class="post-card"><a title="Graph Data Structure" href="index.html"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-2-02-13-PM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Graph Data Structure" href="index.html">Graph Data Structure</a></h2>
 <div class="post__tags">
               <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
@@ -667,8 +483,8 @@ Hello Spring Boot Series:
           </div>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/" class="block" title="Single Sign Out Example with JSON Web Token (JWT), Spring Boot and Redis">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/03/hello-sso-jwt.gif) ">
+       <a href="../disjoint-sets-data-structure-and-union-find-algorithm/" class="block" title="Disjoint Sets Data Structure and Union Find Algorithm">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/09/Screen-Shot-2017-09-24-at-11-11-23-AM-1.png) ">
       </div>
     </a>
 
@@ -677,14 +493,14 @@ Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-08">08 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-17">17 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Single Sign Out Example with JSON Web Token (JWT), Spring Boot and Redis" href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/">Single Sign Out Example with JSON Web Token (JWT), Spring Boot and Redis</a>
+        <a title="Disjoint Sets Data Structure and Union Find Algorithm" href="../disjoint-sets-data-structure-and-union-find-algorithm/">Disjoint Sets Data Structure and Union Find Algorithm</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/security/">Security</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -693,8 +509,8 @@ Hello Spring Boot Series:
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/" class="block" title="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/register-1.PNG) ">
+       <a href="../heap-data-structure/" class="block" title="Heap Data Structure">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-15-at-12-37-39-AM-1.png) ">
       </div>
     </a>
 
@@ -703,43 +519,14 @@ Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-17">17 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL" href="../registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/">Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL</a>
+        <a title="Heap Data Structure" href="../heap-data-structure/">Heap Data Structure</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/security/">Security</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card  post-card--featured ">
-       <a href="../spring-boot-tutorial-series/" class="block" title="Spring Boot Tutorial and Example Series">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/spring-boot-series.png) ">
-        <span title="Featured Post">
-          <span class="post-card--featured__icon" data-icon="ei-star" data-size="s"></span>
-        </span>
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-13">13 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Spring Boot Tutorial and Example Series" href="../spring-boot-tutorial-series/">Spring Boot Tutorial and Example Series</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/series/">Series</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -748,8 +535,8 @@ Hello Spring Boot Series:
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../mapping-jpa-hibernate-entity-and-dto-with-mapstruct/" class="block" title="Mapping JPA/Hibernate Entity and DTO Example with MapStruct">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/mapping-objects.png) ">
+       <a href="../binary-search-tree-data-structure/" class="block" title="Binary Search Tree Data Structure">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-1.png) ">
       </div>
     </a>
 
@@ -758,14 +545,14 @@ Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-15">15 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-17">17 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Mapping JPA/Hibernate Entity and DTO Example with MapStruct" href="../mapping-jpa-hibernate-entity-and-dto-with-mapstruct/">Mapping JPA/Hibernate Entity and DTO Example with MapStruct</a>
+        <a title="Binary Search Tree Data Structure" href="../binary-search-tree-data-structure/">Binary Search Tree Data Structure</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -774,8 +561,8 @@ Hello Spring Boot Series:
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../uploading-multiple-files-example-with-spring-boot/" class="block" title="Uploading Files Example with Spring Boot">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/uploadfiles-springboot-1.png) ">
+       <a href="../double-ended-queue-data-structure/" class="block" title="Double Ended Queue Data Structure">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/deque-data-structure.png) ">
       </div>
     </a>
 
@@ -784,14 +571,14 @@ Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-13">13 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-17">17 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Uploading Files Example with Spring Boot" href="../uploading-multiple-files-example-with-spring-boot/">Uploading Files Example with Spring Boot</a>
+        <a title="Double Ended Queue Data Structure" href="../double-ended-queue-data-structure/">Double Ended Queue Data Structure</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/upload/">Upload</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -800,8 +587,8 @@ Hello Spring Boot Series:
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/" class="block" title="Handling Circular References/Dependencies of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-circular-reference.png) ">
+       <a href="../queue-data-structure/" class="block" title="Queue Data Structure">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/queue-data-structure.png) ">
       </div>
     </a>
 
@@ -810,14 +597,14 @@ Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-12">12 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-17">17 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Handling Circular References/Dependencies of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`" href="../handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/">Handling Circular References/Dependencies of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`</a>
+        <a title="Queue Data Structure" href="../queue-data-structure/">Queue Data Structure</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -826,8 +613,8 @@ Hello Spring Boot Series:
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-extra-columns-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-data-rest-3.png) ">
+       <a href="../stack-data-structure/" class="block" title="Stack Data Structure">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/stack-data-structure.png) ">
       </div>
     </a>
 
@@ -836,456 +623,14 @@ Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-17">17 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-extra-columns-relationship-and-mysql/">RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns</a>
+        <a title="Stack Data Structure" href="../stack-data-structure/">Stack Data Structure</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-data-rest-2.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/">RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Data REST and JPA/Hibernate One to Many">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-data-rest-1.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="RESTful API Example with Spring Data REST and JPA/Hibernate One to Many" href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/">RESTful API Example with Spring Data REST and JPA/Hibernate One to Many</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../restful-api-example-with-spring-boot-spring-data-rest-and-mysql/" class="block" title="RESTful API Example with Spring Data REST">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-data-rest.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="RESTful API Example with Spring Data REST" href="../restful-api-example-with-spring-boot-spring-data-rest-and-mysql/">RESTful API Example with Spring Data REST</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/" class="block" title="REST API Documentation with Swagger and SpringFox">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/restful-api-swagger.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="REST API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/">REST API Documentation with Swagger and SpringFox</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../docker-compose-with-spring-boot-mongodb-nginx/" class="block" title="Docker Compose with Spring Boot, MongoDB, NGINX">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/docker-springboot-2.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-02">02 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Docker Compose with Spring Boot, MongoDB, NGINX" href="../docker-compose-with-spring-boot-mongodb-nginx/">Docker Compose with Spring Boot, MongoDB, NGINX</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/docker/">Docker</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../docker-compose-with-spring-boot-mysql-nginx/" class="block" title="Docker Compose with Spring Boot, MySQL, NGINX">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/docker-springboot-1.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-02">02 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Docker Compose with Spring Boot, MySQL, NGINX" href="../docker-compose-with-spring-boot-mysql-nginx/">Docker Compose with Spring Boot, MySQL, NGINX</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/docker/">Docker</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../docker-compose-with-spring-boot-nginx/" class="block" title="Dockerizing Spring Boot application">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/docker-springboot.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-02">02 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Dockerizing Spring Boot application" href="../docker-compose-with-spring-boot-nginx/">Dockerizing Spring Boot application</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/docker/">Docker</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA/Hibernate One To Many Bidirectional Relationship Mapping">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-one-to-many.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-02">02 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA/Hibernate One To Many Bidirectional Relationship Mapping" href="../jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate One To Many Bidirectional Relationship Mapping</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/" class="block" title="JPA/Hibernate Composite Primary Key Example">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-composite-key.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-01">01 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA/Hibernate Composite Primary Key Example" href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/">JPA/Hibernate Composite Primary Key Example</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA/Hibernate Many To Many Extra Columns Bidirectional Relationship Mapping">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-many-to-many-1.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-01">01 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA/Hibernate Many To Many Extra Columns Bidirectional Relationship Mapping" href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate Many To Many Extra Columns Bidirectional Relationship Mapping</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-many-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA/Hibernate Many To Many Bidirectional Relationship Mapping">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-many-to-many.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-01">01 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA/Hibernate Many To Many Bidirectional Relationship Mapping" href="../jpa-many-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate Many To Many Bidirectional Relationship Mapping</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA/Hibernate One To One Shared Primary Key Bidirectional Relationship Mapping">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-one-to--one-1.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-01">01 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA/Hibernate One To One Shared Primary Key Bidirectional Relationship Mapping" href="../jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate One To One Shared Primary Key Bidirectional Relationship Mapping</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA/Hibernate One To One Bidirectional Relationship Mapping">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-one-to--one.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-01">01 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA/Hibernate One To One Bidirectional Relationship Mapping" href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate One To One Bidirectional Relationship Mapping</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../handling-properties-file-in-spring-boot-application/" class="block" title="Nested Properties File Example in Spring Boot with @ConfigurationProperties">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/12/PropertiesFile-1.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-31">31 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Nested Properties File Example in Spring Boot with @ConfigurationProperties" href="../handling-properties-file-in-spring-boot-application/">Nested Properties File Example in Spring Boot with @ConfigurationProperties</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/properties-file/">Properties file</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../handling-form-submission-example-with-java-spring-boot-and-freemarker/" class="block" title="Form Submission Example with Spring Boot and FreeMarker">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/form-submission.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-31">31 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Form Submission Example with Spring Boot and FreeMarker" href="../handling-form-submission-example-with-java-spring-boot-and-freemarker/">Form Submission Example with Spring Boot and FreeMarker</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/form/">Form</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../contact-form-example-with-java-spring-boot-freemarker-and-amazon-ses/" class="block" title="Contact Form Example with Spring Boot, FreeMarker and Amazon SES">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/contact-form.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-31">31 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Contact Form Example with Spring Boot, FreeMarker and Amazon SES" href="../contact-form-example-with-java-spring-boot-freemarker-and-amazon-ses/">Contact Form Example with Spring Boot, FreeMarker and Amazon SES</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/form/">Form</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../form-data-binding-and-validation-example-with-java-spring-boot-and-freemarker/" class="block" title="Form Data Binding and Validation Example with Spring Boot and FreeMarker">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/form-validation.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-31">31 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Form Data Binding and Validation Example with Spring Boot and FreeMarker" href="../form-data-binding-and-validation-example-with-java-spring-boot-and-freemarker/">Form Data Binding and Validation Example with Spring Boot and FreeMarker</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/form/">Form</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
