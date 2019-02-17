@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Todo App with React Native</title>
+  <title>Breath First Search Algorithm on Graph</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,29 +14,29 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=2298d51d1b">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=2298d51d1b">
    
-  <link rel="canonical" href="http://hellokoding.com/todo-app-with-react-native/">
+  <link rel="canonical" href="http://hellokoding.com/breath-first-search-algorithm-on-graph/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Todo App with React Native">
-    <meta property="og:description" content="This tutorial will walk you through the process of creating a Todo App for iOS and Android devices with React Native.  If you're new to React Native or CSS Flexbox, it'd be best to walk your way through: Getting Started React Native Layout with Flexbox What you'll build What you'll">
-    <meta property="og:url" content="http://hellokoding.com/todo-app-with-react-native/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2017/03/hellokoding-todoapp-reactnative-1.gif">
-    <meta property="article:published_time" content="2016-07-12T04:08:05.000Z">
-    <meta property="article:modified_time" content="2019-01-25T01:38:10.000Z">
-    <meta property="article:tag" content="React Native">
+    <meta property="og:title" content="Breath First Search Algorithm on Graph">
+    <meta property="og:description" content="In this tutorial, you will learn the Breath First Search implementation example on Graph with Java Problem Traversing a graph layer-wise, exploring the neighbour before children nodes For the above graph with 0 as the starting vertex, the traversing order will be 0 -&gt; 1 -&gt; 2 -&gt; 3 -&gt;">
+    <meta property="og:url" content="http://hellokoding.com/breath-first-search-algorithm-on-graph/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-3.png">
+    <meta property="article:published_time" content="2019-02-17T07:26:00.000Z">
+    <meta property="article:modified_time" content="2019-02-17T08:19:17.000Z">
+    <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Todo App with React Native">
-    <meta name="twitter:description" content="This tutorial will walk you through the process of creating a Todo App for iOS and Android devices with React Native.  If you're new to React Native or CSS Flexbox, it'd be best to walk your way through: Getting Started React Native Layout with Flexbox What you'll build What you'll">
-    <meta name="twitter:url" content="http://hellokoding.com/todo-app-with-react-native/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2017/03/hellokoding-todoapp-reactnative-1.gif">
+    <meta name="twitter:title" content="Breath First Search Algorithm on Graph">
+    <meta name="twitter:description" content="In this tutorial, you will learn the Breath First Search implementation example on Graph with Java Problem Traversing a graph layer-wise, exploring the neighbour before children nodes For the above graph with 0 as the starting vertex, the traversing order will be 0 -&gt; 1 -&gt; 2 -&gt; 3 -&gt;">
+    <meta name="twitter:url" content="http://hellokoding.com/breath-first-search-algorithm-on-graph/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-3.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="React Native">
+    <meta name="twitter:data2" content="Algorithm">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -60,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He is interested in making simple code examples and tutorials. Follow Giau on GitHub/Twitter or drop a message at hellokoding [at] gmail [dot] com"
     },
-    "headline": "Todo App with React Native",
-    "url": "http://hellokoding.com/todo-app-with-react-native/",
-    "datePublished": "2016-07-12T04:08:05.000Z",
-    "dateModified": "2019-01-25T01:38:10.000Z",
-    "image": "http://hellokoding.com/content/images/2017/03/hellokoding-todoapp-reactnative-1.gif",
-    "keywords": "React Native",
-    "description": "This tutorial will walk you through the process of creating a Todo App for iOS and Android devices with React Native.  If you&#x27;re new to React Native or CSS Flexbox, it&#x27;d be best to walk your way through: Getting Started React Native Layout with Flexbox What you&#x27;ll build What you&#x27;ll"
+    "headline": "Breath First Search Algorithm on Graph",
+    "url": "http://hellokoding.com/breath-first-search-algorithm-on-graph/",
+    "datePublished": "2019-02-17T07:26:00.000Z",
+    "dateModified": "2019-02-17T08:19:17.000Z",
+    "image": "http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-3.png",
+    "keywords": "Algorithm",
+    "description": "In this tutorial, you will learn the Breath First Search implementation example on Graph with Java Problem Traversing a graph layer-wise, exploring the neighbour before children nodes For the above graph with 0 as the starting vertex, the traversing order will be 0 -&gt; 1 -&gt; 2 -&gt; 3 -&gt;"
 }
     </script>
 
@@ -87,7 +87,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-react-native">
+<body class="post-template tag-algorithm">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -212,159 +212,40 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-8 column">
-        <article class="post tag-react-native">
+        <article class="post tag-algorithm">
 
           <header class="post__header">
-            <h2 class="post__title">Todo App with React Native</h2>
-            <time class="post__date" datetime="2019-01-25">Last modified @ 25 January 2019</time>
+            <h2 class="post__title">Breath First Search Algorithm on Graph</h2>
+            <time class="post__date" datetime="2019-02-17">Last modified @ 17 February 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/react-native/">React Native</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div>
-            <p>This tutorial will walk you through the process of creating a Todo App for iOS and Android devices with React Native. <br>
-<big></big></p>
+            <p>In this tutorial, you will learn the Breath First Search implementation example on Graph with Java</p>
 
-<p></p><pre>
-If you're new to React Native or CSS Flexbox, it'd be best to walk your way through:
-<a href="https://facebook.github.io/react-native/docs/getting-started.html">Getting Started React Native</a>
-<a href="https://facebook.github.io/react-native/docs/flexbox.html">Layout with Flexbox</a>
-</pre>
+<h3 id="problem">Problem</h3>
 
-<h2 id="whatyoullbuild">What you'll build</h2>
+<p>Traversing a graph layer-wise, exploring the neighbour before children nodes</p>
 
-<p><img src="../content/images/2017/03/hellokoding-todoapp-reactnative.gif" alt=""></p>
+<p><img src="../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-2.png" alt=""></p>
 
-<h2 id="whatyoullneed">What you'll need</h2>
+<p>For the above graph with 0 as the starting vertex, the traversing order will be 0 -&gt; 1 -&gt; 2 -&gt; 3 -&gt; 4</p>
+
+<h3 id="approach">Approach</h3>
 
 <ul>
-<li>MacOS, Xcode</li>
-<li>NodeJS</li>
-<li>NPM</li>
-<li>React Native 0.28+</li>
+<li>Using an array to track visited nodes to avoid processing a node more than once (graph may contain a cycles)</li>
+<li>Using a queue to track which nodes to visit next</li>
 </ul>
 
-<h2 id="stack">Stack</h2>
+<h3 id="implementation">Implementation</h3>
 
-<ul>
-<li>ES6</li>
-<li>React Native</li>
-<li>CSS Flexbox</li>
-</ul>
-
-<h2 id="projectstructure">Project structure</h2>
-
-<pre><code>├── android
-├── ios
-├── src
-│   ├── CheckBox.js
-│   ├── ListViewItem.js
-│   ├── ListView.js
-│   ├── OmniBox.js
-│   ├── TodoModel.js
-│   └── Utils.js
-├── index.android.js
-├── index.ios.js
-└── package.json
+<pre><code class="language-java embedfile-https://github.com/hellokoding/datastructure-algorithm-java/blob/master/src/main/java/com/hellokoding/algorithm/BreathFirstSearchOnGraph.java">
 </code></pre>
-
-<h2 id="projectdependencies">Project dependencies</h2>
-
-<pre><code class="language-json embedfile-https://github.com/hellokoding/todoapp-reactnative/blob/master/package.json">
-</code></pre>
-
-<h2 id="letsstart">Let's start</h2>
-
-<h3 id="initproject">Init project</h3>
-
-<pre><code>react-native init TodoApp  
-cd TodoApp
-</code></pre>
-
-<h3 id="datamodel">Data Model</h3>
-
-<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative/blob/master/src/TodoModel.js">
-</code></pre>
-
-<h3 id="utils">Utils</h3>
-
-<p>We define some common functions  </p>
-
-<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative/blob/master/src/Utils.js">
-</code></pre>
-
-<h3 id="makeacheckbox">Make a CheckBox</h3>
-
-<p>React Native does not have CheckBox, so we make one.</p>
-
-<p>Install <a href="https://github.com/oblador/react-native-vector-icons">react-native-vector-icons</a></p>
-
-<pre><code>npm install react-native-vector-icons --save  
-react-native link
-</code></pre>
-
-<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative/blob/master/src/CheckBox.js">
-</code></pre>
-
-<p><code>onPress={this.props.onCheckBoxPressed}</code>: when checkbox's clicked, the <code>onCheckBoxPressed</code> function of parent component 'd be called.</p>
-
-<h3 id="omnibox">OmniBox</h3>
-
-<p>It's a <code>TextInput</code>, can search on typing or add a new Todo (if not existed) on pressing <code>Return/Enter</code>.</p>
-
-<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative/blob/master/src/OmniBox.js">
-</code></pre>
-
-<p><code>onChange={this.onChange}</code>: handles Search.</p>
-
-<p><code>onKeyPress={this.onKeyPress}</code>: handles Add  new a todo.</p>
-
-<p><code>this.props.updateDataList(dataList);</code>: the <code>updateDataList</code> function of parent component'd be called.</p>
-
-<h3 id="listviewitem">ListViewItem</h3>
-
-<p>We'll build a ListViewItem to show <code>TodoModel</code>  </p>
-
-<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative/blob/master/src/ListViewItem.js">
-</code></pre>
-
-<h3 id="sortablelistview">Sortable ListView</h3>
-
-<p>It shows Todo list. User can drag and drop a Todo item to sort.</p>
-
-<p>Install <a href="https://github.com/deanmcpherson/react-native-sortable-listview">react-native-sortable-listview</a></p>
-
-<pre><code>npm install react-native-sortable-listview --save
-</code></pre>
-
-<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative/blob/master/src/ListView.js">
-</code></pre>
-
-<h3 id="finalpiece">Final piece</h3>
-
-<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative/blob/master/index.ios.js">
-</code></pre>
-
-<h3 id="run">Run</h3>
-
-<pre><code>react-native run-ios
-</code></pre>
-
-<h2 id="sourcecode">Source code</h2>
-
-<p><code>git@github.com:hellokoding/todoapp-reactnative.git</code>
-<a href="https://github.com/hellokoding/todoapp-reactnative">https://github.com/hellokoding/todoapp-reactnative</a></p>
-
-<p><big></big></p>
-
-<p></p><pre>
-Todo App with React Native series:
-<a href="https://hellokoding.com/todo-app-with-react-native/">Todo App with React Native</a>
-<a href="https://hellokoding.com/todo-app-with-react-native-realm/">Todo App with React Native, Realm</a>
-</pre>
             <div class="post__tags">
-              <a href="../tag/react-native/">React Native</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div>
           </div>
 
@@ -411,17 +292,17 @@ Todo App with React Native series:
 </div>
           <ul class="share-list">
   <li>
-    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Todo%20App%20with%20React%20Native&amp;url=http://hellokoding.com/todo-app-with-react-native/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Breath%20First%20Search%20Algorithm%20on%20Graph&amp;url=http://hellokoding.com/breath-first-search-algorithm-on-graph/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <div data-icon="ei-sc-twitter" data-size="s" class="share-list__icon share-list__icon--twitter"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/todo-app-with-react-native/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/breath-first-search-algorithm-on-graph/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="s" class="share-list__icon share-list__icon--facebook"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/todo-app-with-react-native/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
+    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/breath-first-search-algorithm-on-graph/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
     <div data-icon="ei-sc-google-plus" data-size="s" class="share-list__icon share-list__icon--google"></div>
     </a>
   </li>
@@ -430,8 +311,8 @@ Todo App with React Native series:
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../jooq-example-with-mysql/" class="block" title="jOOQ Example with MySQL">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jOOQ-tutorials.png) ">
+       <a href="../graph-data-structure/" class="block" title="Graph Data Structure">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-2-47-54-PM-1.png) ">
       </div>
     </a>
 
@@ -440,14 +321,14 @@ Todo App with React Native series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-17">17 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="jOOQ Example with MySQL" href="../jooq-example-with-mysql/">jOOQ Example with MySQL</a>
+        <a title="Graph Data Structure" href="../graph-data-structure/">Graph Data Structure</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/java/">Java</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -457,8 +338,8 @@ Todo App with React Native series:
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
   <div class="post-card ">
-       <a href="../uploading-multiple-files-example-with-spring-boot/" class="block" title="Uploading Files Example with Spring Boot">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/uploadfiles-springboot-1.png) ">
+       <a href="../depth-first-search-algorithm-on-graph/" class="block" title="Depth First Search Algorithm on Graph">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-1.png) ">
       </div>
     </a>
 
@@ -467,14 +348,14 @@ Todo App with React Native series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-13">13 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-17">17 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Uploading Files Example with Spring Boot" href="../uploading-multiple-files-example-with-spring-boot/">Uploading Files Example with Spring Boot</a>
+        <a title="Depth First Search Algorithm on Graph" href="../depth-first-search-algorithm-on-graph/">Depth First Search Algorithm on Graph</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/upload/">Upload</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div>
 
    </div>
@@ -488,8 +369,8 @@ Todo App with React Native series:
   <div id="disqus_thread"></div>
 <script>
       var disqus_config = function () {
-        this.page.url = 'http://hellokoding.com/todo-app-with-react-native/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = '20'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://hellokoding.com/breath-first-search-algorithm-on-graph/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '71'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
 
       (function() { // DON'T EDIT BELOW THIS LINE
@@ -512,13 +393,13 @@ Todo App with React Native series:
   <aside class="widget">
   <h3 class="widget__title">Related Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Hacker News App with React Native" href="../hackernewsapp-with-reactnative/"><div style="background-image: url(../content/images/2017/03/ReactNative-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Hacker News App with React Native" href="../hackernewsapp-with-reactnative/">Hacker News App with React Native</a></h2>
+<div class="post-card"><a title="Depth First Search Algorithm on Graph" href="../depth-first-search-algorithm-on-graph/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Depth First Search Algorithm on Graph" href="../depth-first-search-algorithm-on-graph/">Depth First Search Algorithm on Graph</a></h2>
 <div class="post__tags">
-              <a href="../tag/react-native/">React Native</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div></div>
-<div class="post-card"><a title="Todo App with React Native, Realm" href="../todo-app-with-react-native-realm/"><div style="background-image: url(../content/images/2017/02/hellokoding-todoapp-reactnative--2-.gif)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Todo App with React Native, Realm" href="../todo-app-with-react-native-realm/">Todo App with React Native, Realm</a></h2>
+<div class="post-card"><a title="Longest Increasing Subsequence" href="../longest-increasing-subsequence/"><div style="background-image: url(../content/images/2017/10/DynamicProgramming-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Longest Increasing Subsequence" href="../longest-increasing-subsequence/">Longest Increasing Subsequence</a></h2>
 <div class="post__tags">
-              <a href="../tag/react-native/">React Native</a>
+              <a href="../tag/algorithm/">Algorithm</a><a href="../tag/dynamic-programming/">Dynamic Programming</a>
             </div></div>
   </div>
 </aside>
@@ -526,7 +407,7 @@ Todo App with React Native series:
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Breath First Search Algorithm on Graph" href="../breath-first-search-algorithm-on-graph/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-3.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Breath First Search Algorithm on Graph" href="../breath-first-search-algorithm-on-graph/">Breath First Search Algorithm on Graph</a></h2>
+<div class="post-card"><a title="Breath First Search Algorithm on Graph" href="index.html"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-3.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Breath First Search Algorithm on Graph" href="index.html">Breath First Search Algorithm on Graph</a></h2>
 <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
             </div></div>
@@ -605,8 +486,8 @@ Todo App with React Native series:
           </div>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../hackernewsapp-with-reactnative/" class="block" title="Hacker News App with React Native">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/03/ReactNative-1.png) ">
+       <a href="../depth-first-search-algorithm-on-graph/" class="block" title="Depth First Search Algorithm on Graph">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-1.png) ">
       </div>
     </a>
 
@@ -615,14 +496,14 @@ Todo App with React Native series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-17">17 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Hacker News App with React Native" href="../hackernewsapp-with-reactnative/">Hacker News App with React Native</a>
+        <a title="Depth First Search Algorithm on Graph" href="../depth-first-search-algorithm-on-graph/">Depth First Search Algorithm on Graph</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/react-native/">React Native</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div>
 
    </div>
@@ -631,8 +512,8 @@ Todo App with React Native series:
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../todo-app-with-react-native-realm/" class="block" title="Todo App with React Native, Realm">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/hellokoding-todoapp-reactnative--2-.gif) ">
+       <a href="../longest-increasing-subsequence/" class="block" title="Longest Increasing Subsequence">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/10/DynamicProgramming-1.png) ">
       </div>
     </a>
 
@@ -641,14 +522,14 @@ Todo App with React Native series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-11">11 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Todo App with React Native, Realm" href="../todo-app-with-react-native-realm/">Todo App with React Native, Realm</a>
+        <a title="Longest Increasing Subsequence" href="../longest-increasing-subsequence/">Longest Increasing Subsequence</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/react-native/">React Native</a>
+              <a href="../tag/algorithm/">Algorithm</a><a href="../tag/dynamic-programming/">Dynamic Programming</a>
             </div>
 
    </div>
