@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spring MVC Hello World Example with XML Configuration, Maven and JSP</title>
+  <title>Tree Traversal with Depth First Search</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,29 +14,29 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=34ee3545d2">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=34ee3545d2">
    
-  <link rel="canonical" href="http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/">
+  <link rel="canonical" href="http://hellokoding.com/tree-traversal-with-depth-first-search/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Spring MVC Hello World Example with XML Configuration, Maven and JSP">
-    <meta property="og:description" content="This post walks you through the process of creating a Hello World example web site with Spring MVC. Hello Spring MVC Series: - Spring MVC Hello World Example with XML Configuration, Maven and JSP - Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf What you'll build What">
-    <meta property="og:url" content="http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2017/02/hello--1-.gif">
-    <meta property="article:published_time" content="2015-10-12T00:13:28.000Z">
-    <meta property="article:modified_time" content="2019-01-25T15:10:56.000Z">
-    <meta property="article:tag" content="Spring MVC">
+    <meta property="og:title" content="Tree Traversal with Depth First Search">
+    <meta property="og:description" content="In this tutorial, you will learn the Tree Traversal implementation example with Depth First Search Tree Traversal Tree traversal is a process of visiting each node in a tree exactly once. Unlike linear data structures such as array and linked list which are canonically traversed in linear order, tree may">
+    <meta property="og:url" content="http://hellokoding.com/tree-traversal-with-depth-first-search/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2-1-1-1.png">
+    <meta property="article:published_time" content="2019-02-18T15:42:46.000Z">
+    <meta property="article:modified_time" content="2019-02-18T16:05:14.000Z">
+    <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Spring MVC Hello World Example with XML Configuration, Maven and JSP">
-    <meta name="twitter:description" content="This post walks you through the process of creating a Hello World example web site with Spring MVC. Hello Spring MVC Series: - Spring MVC Hello World Example with XML Configuration, Maven and JSP - Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf What you'll build What">
-    <meta name="twitter:url" content="http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2017/02/hello--1-.gif">
+    <meta name="twitter:title" content="Tree Traversal with Depth First Search">
+    <meta name="twitter:description" content="In this tutorial, you will learn the Tree Traversal implementation example with Depth First Search Tree Traversal Tree traversal is a process of visiting each node in a tree exactly once. Unlike linear data structures such as array and linked list which are canonically traversed in linear order, tree may">
+    <meta name="twitter:url" content="http://hellokoding.com/tree-traversal-with-depth-first-search/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2-1-1-1.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Spring MVC">
+    <meta name="twitter:data2" content="Algorithm">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -60,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He is interested in making simple code examples and tutorials. Follow Giau on GitHub/Twitter or drop a message at hellokoding [at] gmail [dot] com"
     },
-    "headline": "Spring MVC Hello World Example with XML Configuration, Maven and JSP",
-    "url": "http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/",
-    "datePublished": "2015-10-12T00:13:28.000Z",
-    "dateModified": "2019-01-25T15:10:56.000Z",
-    "image": "http://hellokoding.com/content/images/2017/02/hello--1-.gif",
-    "keywords": "Spring MVC",
-    "description": "This post walks you through the process of creating a Hello World example web site with Spring MVC. Hello Spring MVC Series: - Spring MVC Hello World Example with XML Configuration, Maven and JSP - Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf What you&#x27;ll build What"
+    "headline": "Tree Traversal with Depth First Search",
+    "url": "http://hellokoding.com/tree-traversal-with-depth-first-search/",
+    "datePublished": "2019-02-18T15:42:46.000Z",
+    "dateModified": "2019-02-18T16:05:14.000Z",
+    "image": "http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2-1-1-1.png",
+    "keywords": "Algorithm",
+    "description": "In this tutorial, you will learn the Tree Traversal implementation example with Depth First Search Tree Traversal Tree traversal is a process of visiting each node in a tree exactly once. Unlike linear data structures such as array and linked list which are canonically traversed in linear order, tree may"
 }
     </script>
 
@@ -87,7 +87,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-spring-mvc">
+<body class="post-template tag-algorithm">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -218,136 +218,49 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-8 column">
-        <article class="post tag-spring-mvc">
+        <article class="post tag-algorithm">
 
           <header class="post__header">
-            <h2 class="post__title">Spring MVC Hello World Example with XML Configuration, Maven and JSP</h2>
-            <time class="post__date" datetime="2019-01-25">Last modified @ 25 January 2019</time>
+            <h2 class="post__title">Tree Traversal with Depth First Search</h2>
+            <time class="post__date" datetime="2019-02-18">Last modified @ 18 February 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/spring-mvc/">Spring MVC</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div>
-            <p>This post walks you through the process of creating a Hello World example web site with Spring MVC.</p>
+            <p>In this tutorial, you will learn the Tree Traversal implementation example with Depth First Search</p>
 
-<p><big></big></p>
+<h3 id="treetraversal">Tree Traversal</h3>
 
-<p></p><pre>
-Hello Spring MVC Series:
-- <a href="https://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/">Spring MVC Hello World Example with XML Configuration, Maven and JSP</a>
-- <a href="https://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-thymeleaf/">Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf</a>
-</pre>
+<p>Tree traversal is a process of visiting each node in a tree exactly once. Unlike linear data structures such as array and linked list which are canonically traversed in linear order, tree may be traversed in multiple ways</p>
 
-<h3 id="whatyoullbuild">What you'll build</h3>
+<h3 id="depthfirsttraversal">Depth First Traversal</h3>
 
-<p><img src="../content/images/2016/07/hello.gif" alt=""></p>
-
-<h3 id="whatyoullneed">What you'll need</h3>
+<p>There are 3 ways of depth first traversal, typically, classified by the orders in which nodes are visited</p>
 
 <ul>
-<li>JDK 1.8 or later</li>
-<li>Maven 3 or later</li>
+<li>Pre-order, processing the parent node before all traversal to the left and the right subtree</li>
+<li>In-order, processing the parent node between traversal to the left and the right subtree</li>
+<li>Post-order, processing the parent node after all traversal to the left and the right subtree</li>
 </ul>
 
-<h3 id="stack">Stack</h3>
+<p><img src="../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2-1-1.png" alt=""></p>
+
+<p>Depth first traversal orders for the above tree</p>
 
 <ul>
-<li>Spring MVC 4</li>
-<li>JSP View Template</li>
+<li>Pre-oder is 7-2-1-3-9</li>
+<li>In-order is 1-2-3-7-9</li>
+<li>Post-oder is 1-3-2-9-7</li>
 </ul>
 
-<h3 id="projectstructure">Project structure</h3>
+<h3 id="implementationexamplewithrecursivealgorithm">Implementation example with Recursive algorithm</h3>
 
-<pre><code>├── src
-│   └── main
-│       ├── java
-│       │   └── com
-│       │       └── hellokoding
-│       │           └── hello
-│       │               └── web
-│       │                   └── HelloController.java
-│       ├── resources
-│       │   ├── application.properties
-│       │   └── logback.xml
-│       └── webapp
-│           ├── resources
-│           │   ├── css
-│           │   │   └── bootstrap.min.css
-│           │   ├── images
-│           │   └── js
-│           │       └── bootstrap.min.js
-│           └── WEB-INF
-│               ├── views
-│               │   └── hello.jsp
-|               ├── appconfig-mvc.xml
-│               ├── appconfig-root.xml 
-│               └── web.xml
-└── pom.xml
+<pre><code class="language-java embedfile-https://github.com/hellokoding/datastructure-algorithm-java/blob/master/src/main/java/com/hellokoding/algorithm/TreeDepthFirstTraversalRecursively.java">
 </code></pre>
-
-<h3 id="projectdependencies">Project dependencies</h3>
-
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/pom.xml">
-</code></pre>
-
-<h3 id="hellocontroller">Hello Controller</h3>
-
-<p><code>Controller</code> maps HTTP Requests with <code>View</code>.</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/java/com/hellokoding/hello/web/HelloController.java">
-</code></pre>
-
-<p><code>@RequestMapping</code> maps <code>/hello</code> request to <code>hello()</code> method.</p>
-
-<p><code>name</code> is a query string parameter of <code>/hello</code> request.</p>
-
-<p><code>Model</code> object passes value to <code>hello</code> view (<code>hello.jsp</code>).</p>
-
-<h3 id="jspjstlviewtemplate">JSP/JSTL View Template</h3>
-
-<p>JSP performs server side rendering of the HTML. It parses the <code>hello.jsp</code> template below and evaluate the EL (Expression Language) to render the value of ${name} parameter that was set in the controller.</p>
-
-<pre><code class="language-html embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/webapp/WEB-INF/views/hello.jsp">
-</code></pre>
-
-<h3 id="xmlconfiguration">XML Configuration</h3>
-
-<p>An application usually has several XML configuration files, but there should only be ONE bootstrap file (<code>appconfig-root.xml</code>). This bootstrap file should use the <code>&lt;import resource="" /&gt;</code> to include other config files.</p>
-
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/webapp/WEB-INF/appconfig-root.xml">
-</code></pre>
-
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/webapp/WEB-INF/appconfig-mvc.xml">
-</code></pre>
-
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/springmvc4-xml-maven-jsp/blob/master/src/main/webapp/WEB-INF/web.xml">
-</code></pre>
-
-<h3 id="run">Run</h3>
-
-<pre><code>mvn jetty:run
-</code></pre>
-
-<h3 id="sourcecode">Source code</h3>
-
-<p><code>git@github.com:hellokoding/hello-springmvc-xml-maven-jsp.git</code>
-<a href="https://github.com/hellokoding/hello-springmvc-xml-maven-jsp">https://github.com/hellokoding/hello-springmvc-xml-maven-jsp</a></p>
-
-<p><big></big></p>
-
-<p></p><pre>
-You may also like the Hello Spring Boot Series:
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-freemarker/">Spring Boot Hello World Example with FreeMarker</a>
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/">Spring Boot Hello World Example with Thymeleaf</a>
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-jsp/">Spring Boot Hello World Example with JSP</a>
-</pre>
-
-<h3 id="links">Links</h3>
-
-<p><a href="https://spring.io/guides/gs/serving-web-content/">Serving Web Content with Spring MVC</a></p>
             <div class="post__tags">
-              <a href="../tag/spring-mvc/">Spring MVC</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div>
           </div>
 
@@ -394,28 +307,27 @@ You may also like the Hello Spring Boot Series:
 </div>
           <ul class="share-list">
   <li>
-    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Spring%20MVC%20Hello%20World%20Example%20with%20XML%20Configuration%2C%20Maven%20and%20JSP&amp;url=http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Tree%20Traversal%20with%20Depth%20First%20Search&amp;url=http://hellokoding.com/tree-traversal-with-depth-first-search/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <div data-icon="ei-sc-twitter" data-size="s" class="share-list__icon share-list__icon--twitter"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/tree-traversal-with-depth-first-search/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="s" class="share-list__icon share-list__icon--facebook"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
+    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/tree-traversal-with-depth-first-search/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
     <div data-icon="ei-sc-google-plus" data-size="s" class="share-list__icon share-list__icon--google"></div>
     </a>
   </li>
 </ul>          <div class="row">
   <div class="post-prev-next-pagination post-list">
 
-
-    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
+    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-thymeleaf/" class="block" title="Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/hello--1--2.gif) ">
+       <a href="../height-of-a-binary-tree/" class="block" title="Height of a Binary Tree">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2.png) ">
       </div>
     </a>
 
@@ -424,14 +336,14 @@ You may also like the Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-18">18 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf" href="../spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-thymeleaf/">Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf</a>
+        <a title="Height of a Binary Tree" href="../height-of-a-binary-tree/">Height of a Binary Tree</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/spring-mvc/">Spring MVC</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div>
 
    </div>
@@ -439,14 +351,15 @@ You may also like the Hello Spring Boot Series:
   </div>
 </article>
 
+
   </div>
 </div>          <section class="disqus">
   <h4 class="heading">Comments</h4>
   <div id="disqus_thread"></div>
 <script>
       var disqus_config = function () {
-        this.page.url = 'http://hellokoding.com/spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-jsp/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = '2'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://hellokoding.com/tree-traversal-with-depth-first-search/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '74'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
 
       (function() { // DON'T EDIT BELOW THIS LINE
@@ -469,13 +382,21 @@ You may also like the Hello Spring Boot Series:
   <aside class="widget">
   <h3 class="widget__title">Related Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf" href="../spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-thymeleaf/"><div style="background-image: url(../content/images/2017/02/hello--1--2.gif)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf" href="../spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-thymeleaf/">Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf</a></h2>
+<div class="post-card"><a title="Height of a Binary Tree" href="../height-of-a-binary-tree/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Height of a Binary Tree" href="../height-of-a-binary-tree/">Height of a Binary Tree</a></h2>
 <div class="post__tags">
-              <a href="../tag/spring-mvc/">Spring MVC</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div></div>
-<div class="post-card"><a title="Registration and Login Example with Spring MVC, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL" href="../registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/"><div style="background-image: url(../content/images/2019/01/register2.PNG)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Registration and Login Example with Spring MVC, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL" href="../registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/">Registration and Login Example with Spring MVC, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL</a></h2>
+<div class="post-card"><a title="Longest Increasing Subsequence" href="../longest-increasing-subsequence/"><div style="background-image: url(../content/images/2017/10/DynamicProgramming-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Longest Increasing Subsequence" href="../longest-increasing-subsequence/">Longest Increasing Subsequence</a></h2>
 <div class="post__tags">
-              <a href="../tag/security/">Security</a><a href="../tag/spring-mvc/">Spring MVC</a>
+              <a href="../tag/algorithm/">Algorithm</a><a href="../tag/dynamic-programming/">Dynamic Programming</a>
+            </div></div>
+<div class="post-card"><a title="Breath First Search Algorithm on Graph" href="../breath-first-search-algorithm-on-graph/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-3.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Breath First Search Algorithm on Graph" href="../breath-first-search-algorithm-on-graph/">Breath First Search Algorithm on Graph</a></h2>
+<div class="post__tags">
+              <a href="../tag/algorithm/">Algorithm</a>
+            </div></div>
+<div class="post-card"><a title="Depth First Search Algorithm on Graph" href="../depth-first-search-algorithm-on-graph/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Depth First Search Algorithm on Graph" href="../depth-first-search-algorithm-on-graph/">Depth First Search Algorithm on Graph</a></h2>
+<div class="post__tags">
+              <a href="../tag/algorithm/">Algorithm</a>
             </div></div>
   </div>
 </aside>
@@ -483,7 +404,7 @@ You may also like the Hello Spring Boot Series:
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Tree Traversal with Depth First Search" href="../tree-traversal-with-depth-first-search/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2-1-1-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Tree Traversal with Depth First Search" href="../tree-traversal-with-depth-first-search/">Tree Traversal with Depth First Search</a></h2>
+<div class="post-card"><a title="Tree Traversal with Depth First Search" href="index.html"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2-1-1-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Tree Traversal with Depth First Search" href="index.html">Tree Traversal with Depth First Search</a></h2>
 <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
             </div></div>
@@ -562,8 +483,8 @@ You may also like the Hello Spring Boot Series:
           </div>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-thymeleaf/" class="block" title="Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/hello--1--2.gif) ">
+       <a href="../height-of-a-binary-tree/" class="block" title="Height of a Binary Tree">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2.png) ">
       </div>
     </a>
 
@@ -572,14 +493,14 @@ You may also like the Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-18">18 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf" href="../spring-mvc-4-hello-world-example-with-xml-configuration-maven-and-thymeleaf/">Spring MVC Hello World Example with XML Configuration, Maven, and Thymeleaf</a>
+        <a title="Height of a Binary Tree" href="../height-of-a-binary-tree/">Height of a Binary Tree</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/spring-mvc/">Spring MVC</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div>
 
    </div>
@@ -588,8 +509,8 @@ You may also like the Hello Spring Boot Series:
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/" class="block" title="Registration and Login Example with Spring MVC, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/register2.PNG) ">
+       <a href="../longest-increasing-subsequence/" class="block" title="Longest Increasing Subsequence">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/10/DynamicProgramming-1.png) ">
       </div>
     </a>
 
@@ -598,14 +519,66 @@ You may also like the Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-18">18 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Registration and Login Example with Spring MVC, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL" href="../registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/">Registration and Login Example with Spring MVC, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL</a>
+        <a title="Longest Increasing Subsequence" href="../longest-increasing-subsequence/">Longest Increasing Subsequence</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/security/">Security</a><a href="../tag/spring-mvc/">Spring MVC</a>
+              <a href="../tag/algorithm/">Algorithm</a><a href="../tag/dynamic-programming/">Dynamic Programming</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../breath-first-search-algorithm-on-graph/" class="block" title="Breath First Search Algorithm on Graph">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-3.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-02-17">17 February 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="Breath First Search Algorithm on Graph" href="../breath-first-search-algorithm-on-graph/">Breath First Search Algorithm on Graph</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/algorithm/">Algorithm</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../depth-first-search-algorithm-on-graph/" class="block" title="Depth First Search Algorithm on Graph">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-1.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-02-17">17 February 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="Depth First Search Algorithm on Graph" href="../depth-first-search-algorithm-on-graph/">Depth First Search Algorithm on Graph</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/algorithm/">Algorithm</a>
             </div>
 
    </div>
