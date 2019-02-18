@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Uploading Files Example with Spring Boot</title>
+  <title>Height of a Binary Tree</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,30 +14,29 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=34ee3545d2">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=34ee3545d2">
    
-  <link rel="canonical" href="http://hellokoding.com/uploading-multiple-files-example-with-spring-boot/">
+  <link rel="canonical" href="http://hellokoding.com/height-of-a-binary-tree/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Uploading Files Example with Spring Boot">
-    <meta property="og:description" content="This tutorial will walk you through the steps of creating an Uploading Files Example with Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World Example with JSP What you'll build What you'll">
-    <meta property="og:url" content="http://hellokoding.com/uploading-multiple-files-example-with-spring-boot/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2017/02/uploadfiles-springboot-1.png">
-    <meta property="article:published_time" content="2016-07-12T09:14:27.000Z">
-    <meta property="article:modified_time" content="2019-02-13T15:11:49.000Z">
-    <meta property="article:tag" content="Upload">
-    <meta property="article:tag" content="Spring Boot">
+    <meta property="og:title" content="Height of a Binary Tree">
+    <meta property="og:description" content="Height of a Binary Tree is a number of edges between the tree's root and its furthest leaf. For example, the height of the following binary tree is 2 A tree consisting of only a single node has a height of 0 Problem Find height or maximum depth of a">
+    <meta property="og:url" content="http://hellokoding.com/height-of-a-binary-tree/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2.png">
+    <meta property="article:published_time" content="2019-02-18T01:21:12.000Z">
+    <meta property="article:modified_time" content="2019-02-18T09:29:03.000Z">
+    <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Uploading Files Example with Spring Boot">
-    <meta name="twitter:description" content="This tutorial will walk you through the steps of creating an Uploading Files Example with Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World Example with JSP What you'll build What you'll">
-    <meta name="twitter:url" content="http://hellokoding.com/uploading-multiple-files-example-with-spring-boot/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2017/02/uploadfiles-springboot-1.png">
+    <meta name="twitter:title" content="Height of a Binary Tree">
+    <meta name="twitter:description" content="Height of a Binary Tree is a number of edges between the tree's root and its furthest leaf. For example, the height of the following binary tree is 2 A tree consisting of only a single node has a height of 0 Problem Find height or maximum depth of a">
+    <meta name="twitter:url" content="http://hellokoding.com/height-of-a-binary-tree/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Upload, Spring Boot">
+    <meta name="twitter:data2" content="Algorithm">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -61,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He is interested in making simple code examples and tutorials. Follow Giau on GitHub/Twitter or drop a message at hellokoding [at] gmail [dot] com"
     },
-    "headline": "Uploading Files Example with Spring Boot",
-    "url": "http://hellokoding.com/uploading-multiple-files-example-with-spring-boot/",
-    "datePublished": "2016-07-12T09:14:27.000Z",
-    "dateModified": "2019-02-13T15:11:49.000Z",
-    "image": "http://hellokoding.com/content/images/2017/02/uploadfiles-springboot-1.png",
-    "keywords": "Upload, Spring Boot",
-    "description": "This tutorial will walk you through the steps of creating an Uploading Files Example with Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World Example with JSP What you&#x27;ll build What you&#x27;ll"
+    "headline": "Height of a Binary Tree",
+    "url": "http://hellokoding.com/height-of-a-binary-tree/",
+    "datePublished": "2019-02-18T01:21:12.000Z",
+    "dateModified": "2019-02-18T09:29:03.000Z",
+    "image": "http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2.png",
+    "keywords": "Algorithm",
+    "description": "Height of a Binary Tree is a number of edges between the tree&#x27;s root and its furthest leaf. For example, the height of the following binary tree is 2 A tree consisting of only a single node has a height of 0 Problem Find height or maximum depth of a"
 }
     </script>
 
@@ -88,7 +87,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-upload tag-spring-boot">
+<body class="post-template tag-algorithm">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -219,110 +218,37 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-8 column">
-        <article class="post tag-upload tag-spring-boot">
+        <article class="post tag-algorithm">
 
           <header class="post__header">
-            <h2 class="post__title">Uploading Files Example with Spring Boot</h2>
-            <time class="post__date" datetime="2019-02-13">Last modified @ 13 February 2019</time>
+            <h2 class="post__title">Height of a Binary Tree</h2>
+            <time class="post__date" datetime="2019-02-18">Last modified @ 18 February 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/upload/">Upload</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div>
-            <p>This tutorial will walk you through the steps of creating an Uploading Files Example with Spring Boot.</p>
+            <p>Height of a Binary Tree is a number of edges between the tree's root and its furthest leaf. For example, the height of the following binary tree is 2</p>
 
-<p><big></big></p>
+<p><img src="../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2-1.png" alt=""></p>
 
-<p></p><pre>
-Hello Spring Boot Series:
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-freemarker/">Spring Boot Hello World Example with FreeMarker</a>
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/">Spring Boot Hello World Example with Thymeleaf</a>
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-jsp/">Spring Boot Hello World Example with JSP</a>
-</pre>
+<p>A tree consisting of only a single node has a height of 0</p>
 
-<h3 id="whatyoullbuild">What you'll build</h3>
+<h3 id="problem">Problem</h3>
 
-<p><img src="../content/images/2016/07/uploadfiles-springboot-1.png" alt=""></p>
+<p>Find height or maximum depth of a given binary tree</p>
 
-<h3 id="whatyoullneed">What you'll need</h3>
+<h3 id="approach">Approach</h3>
 
-<ul>
-<li>JDK 1.7 or later</li>
-<li>Maven 3 or later</li>
-</ul>
+<p>Using recursive/top-down algorithm, <code>height(root node) = max (height(left subtree of root node), height(right subtree of root node)) + 1</code> and so on</p>
 
-<h3 id="stack">Stack</h3>
+<h3 id="implementation">Implementation</h3>
 
-<ul>
-<li>Java</li>
-<li>Spring Boot</li>
-<li>Freemarker</li>
-</ul>
-
-<h3 id="projectstructure">Project structure</h3>
-
-<pre><code>├── src
-│   └── main
-│       ├── java
-│       │   └── com
-│       │       └── hellokoding
-│       │           └── uploadingfiles
-│       │               ├── Application.java
-│       │               └── UploadingController.java
-│       ├── resources
-│       │   └── application.properties
-│       └── webapp
-│           └── uploading.ftl
-└── pom.xml
+<pre><code class="language-java embedfile-https://github.com/hellokoding/datastructure-algorithm-java/blob/master/src/main/java/com/hellokoding/algorithm/BinaryTreeHeight.java">
 </code></pre>
-
-<h3 id="projectdependencies">Project dependencies</h3>
-
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/uploadingfiles-springboot/blob/master/pom.xml">
-</code></pre>
-
-<h3 id="uploadingcontroller">Uploading Controller</h3>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/uploadingfiles-springboot/blob/master/src/main/java/com/hellokoding/uploadingfiles/UploadingController.java">
-</code></pre>
-
-<h3 id="viewtemplate">View Template</h3>
-
-<pre><code class="language-html embedfile-https://github.com/hellokoding/uploadingfiles-springboot/blob/master/src/main/webapp/uploading.ftl">
-</code></pre>
-
-<pre><code>&lt;form name="uploadingForm" enctype="multipart/form-data" action="/" method="POST"&gt;  
-</code></pre>
-
-<p><code>action="/"</code> and <code>method="POST"</code> map with <code>uploadingPost()</code> of <code>UploadingController</code>, <code>enctype="multipart/form-data"</code> works with <code>MultipartFile</code>.</p>
-
-<h3 id="applicationconfiguration">Application Configuration</h3>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/uploadingfiles-springboot/blob/master/src/main/resources/application.properties">
-</code></pre>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/uploadingfiles-springboot/blob/master/src/main/java/com/hellokoding/uploadingfiles/Application.java">
-</code></pre>
-
-<p><code>new File(UploadingController.uploadingdir).mkdirs();</code> makes a directory for uploading files if not exists.</p>
-
-<h3 id="run">Run</h3>
-
-<pre><code>mvn spring-boot:run
-</code></pre>
-
-<h3 id="sourcecode">Source code</h3>
-
-<p><code>git@github.com:hellokoding/uploadingfiles-springboot.git</code>
-<a href="https://github.com/hellokoding/uploadingfiles-springboot">https://github.com/hellokoding/uploadingfiles-springboot</a></p>
-
-<h3 id="links">Links</h3>
-
-<p><a href="https://developer.mozilla.org/en/docs/Using_files_from_web_applications">Using files from web applications</a> <br>
-<a href="https://spring.io/guides/gs/uploading-files/">Getting Started Uploading Files</a></p>
             <div class="post__tags">
-              <a href="../tag/upload/">Upload</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div>
           </div>
 
@@ -369,17 +295,17 @@ Hello Spring Boot Series:
 </div>
           <ul class="share-list">
   <li>
-    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Uploading%20Files%20Example%20with%20Spring%20Boot&amp;url=http://hellokoding.com/uploading-multiple-files-example-with-spring-boot/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Height%20of%20a%20Binary%20Tree&amp;url=http://hellokoding.com/height-of-a-binary-tree/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <div data-icon="ei-sc-twitter" data-size="s" class="share-list__icon share-list__icon--twitter"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/uploading-multiple-files-example-with-spring-boot/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/height-of-a-binary-tree/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="s" class="share-list__icon share-list__icon--facebook"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/uploading-multiple-files-example-with-spring-boot/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
+    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/height-of-a-binary-tree/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
     <div data-icon="ei-sc-google-plus" data-size="s" class="share-list__icon share-list__icon--google"></div>
     </a>
   </li>
@@ -388,8 +314,8 @@ Hello Spring Boot Series:
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../todo-app-with-react-native/" class="block" title="Todo App with React Native">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/03/hellokoding-todoapp-reactnative-1.gif) ">
+       <a href="../depth-first-search-algorithm-on-graph/" class="block" title="Depth First Search Algorithm on Graph">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-1.png) ">
       </div>
     </a>
 
@@ -398,14 +324,14 @@ Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-17">17 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Todo App with React Native" href="../todo-app-with-react-native/">Todo App with React Native</a>
+        <a title="Depth First Search Algorithm on Graph" href="../depth-first-search-algorithm-on-graph/">Depth First Search Algorithm on Graph</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/react-native/">React Native</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div>
 
    </div>
@@ -413,32 +339,6 @@ Hello Spring Boot Series:
   </div>
 </article>
 
-    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
-  <div class="post-card ">
-       <a href="../todo-app-with-react-native-realm/" class="block" title="Todo App with React Native, Realm">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/hellokoding-todoapp-reactnative--2-.gif) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Todo App with React Native, Realm" href="../todo-app-with-react-native-realm/">Todo App with React Native, Realm</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/react-native/">React Native</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
 
   </div>
 </div>          <section class="disqus">
@@ -446,8 +346,8 @@ Hello Spring Boot Series:
   <div id="disqus_thread"></div>
 <script>
       var disqus_config = function () {
-        this.page.url = 'http://hellokoding.com/uploading-multiple-files-example-with-spring-boot/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = '21'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://hellokoding.com/height-of-a-binary-tree/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '73'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
 
       (function() { // DON'T EDIT BELOW THIS LINE
@@ -470,25 +370,17 @@ Hello Spring Boot Series:
   <aside class="widget">
   <h3 class="widget__title">Related Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Spring Boot Tutorial and Example Series" href="../spring-boot-tutorial-series/"><div style="background-image: url(../content/images/2019/01/spring-boot-series.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot Tutorial and Example Series" href="../spring-boot-tutorial-series/">Spring Boot Tutorial and Example Series</a></h2>
+<div class="post-card"><a title="Longest Increasing Subsequence" href="../longest-increasing-subsequence/"><div style="background-image: url(../content/images/2017/10/DynamicProgramming-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Longest Increasing Subsequence" href="../longest-increasing-subsequence/">Longest Increasing Subsequence</a></h2>
 <div class="post__tags">
-              <a href="../tag/series/">Series</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/algorithm/">Algorithm</a><a href="../tag/dynamic-programming/">Dynamic Programming</a>
             </div></div>
-<div class="post-card"><a title="Mapping JPA/Hibernate Entity and DTO Example with MapStruct" href="../mapping-jpa-hibernate-entity-and-dto-with-mapstruct/"><div style="background-image: url(../content/images/2019/02/mapping-objects.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Mapping JPA/Hibernate Entity and DTO Example with MapStruct" href="../mapping-jpa-hibernate-entity-and-dto-with-mapstruct/">Mapping JPA/Hibernate Entity and DTO Example with MapStruct</a></h2>
+<div class="post-card"><a title="Breath First Search Algorithm on Graph" href="../breath-first-search-algorithm-on-graph/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-3.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Breath First Search Algorithm on Graph" href="../breath-first-search-algorithm-on-graph/">Breath First Search Algorithm on Graph</a></h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div></div>
-<div class="post-card"><a title="Handling Circular References/Dependencies of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`" href="../handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/"><div style="background-image: url(../content/images/2019/01/jpa-circular-reference.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Handling Circular References/Dependencies of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`" href="../handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/">Handling Circular References/Dependencies of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`</a></h2>
+<div class="post-card"><a title="Depth First Search Algorithm on Graph" href="../depth-first-search-algorithm-on-graph/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Depth First Search Algorithm on Graph" href="../depth-first-search-algorithm-on-graph/">Depth First Search Algorithm on Graph</a></h2>
 <div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div></div>
-<div class="post-card"><a title="Single Sign Out Example with JSON Web Token (JWT), Spring Boot and Redis" href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/"><div style="background-image: url(../content/images/2017/03/hello-sso-jwt.gif)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Single Sign Out Example with JSON Web Token (JWT), Spring Boot and Redis" href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/">Single Sign Out Example with JSON Web Token (JWT), Spring Boot and Redis</a></h2>
-<div class="post__tags">
-              <a href="../tag/security/">Security</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div></div>
-<div class="post-card"><a title="Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot" href="../hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/"><div style="background-image: url(../content/images/2016/08/hello-sso-jwt-1.gif)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot" href="../hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot</a></h2>
-<div class="post__tags">
-              <a href="../tag/security/">Security</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div></div>
   </div>
 </aside>
@@ -496,7 +388,7 @@ Hello Spring Boot Series:
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Height of a Binary Tree" href="../height-of-a-binary-tree/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Height of a Binary Tree" href="../height-of-a-binary-tree/">Height of a Binary Tree</a></h2>
+<div class="post-card"><a title="Height of a Binary Tree" href="index.html"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Height of a Binary Tree" href="index.html">Height of a Binary Tree</a></h2>
 <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
             </div></div>
@@ -574,12 +466,9 @@ Hello Spring Boot Series:
             <h5 class="heading">More</h5>
           </div>
             <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card  post-card--featured ">
-       <a href="../spring-boot-tutorial-series/" class="block" title="Spring Boot Tutorial and Example Series">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/spring-boot-series.png) ">
-        <span title="Featured Post">
-          <span class="post-card--featured__icon" data-icon="ei-star" data-size="s"></span>
-        </span>
+  <div class="post-card ">
+       <a href="../longest-increasing-subsequence/" class="block" title="Longest Increasing Subsequence">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/10/DynamicProgramming-1.png) ">
       </div>
     </a>
 
@@ -588,14 +477,14 @@ Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-13">13 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-18">18 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Spring Boot Tutorial and Example Series" href="../spring-boot-tutorial-series/">Spring Boot Tutorial and Example Series</a>
+        <a title="Longest Increasing Subsequence" href="../longest-increasing-subsequence/">Longest Increasing Subsequence</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/series/">Series</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/algorithm/">Algorithm</a><a href="../tag/dynamic-programming/">Dynamic Programming</a>
             </div>
 
    </div>
@@ -604,8 +493,8 @@ Hello Spring Boot Series:
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../mapping-jpa-hibernate-entity-and-dto-with-mapstruct/" class="block" title="Mapping JPA/Hibernate Entity and DTO Example with MapStruct">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/mapping-objects.png) ">
+       <a href="../breath-first-search-algorithm-on-graph/" class="block" title="Breath First Search Algorithm on Graph">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-3.png) ">
       </div>
     </a>
 
@@ -614,14 +503,14 @@ Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-15">15 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-17">17 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Mapping JPA/Hibernate Entity and DTO Example with MapStruct" href="../mapping-jpa-hibernate-entity-and-dto-with-mapstruct/">Mapping JPA/Hibernate Entity and DTO Example with MapStruct</a>
+        <a title="Breath First Search Algorithm on Graph" href="../breath-first-search-algorithm-on-graph/">Breath First Search Algorithm on Graph</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div>
 
    </div>
@@ -630,8 +519,8 @@ Hello Spring Boot Series:
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/" class="block" title="Handling Circular References/Dependencies of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-circular-reference.png) ">
+       <a href="../depth-first-search-algorithm-on-graph/" class="block" title="Depth First Search Algorithm on Graph">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-1.png) ">
       </div>
     </a>
 
@@ -640,560 +529,14 @@ Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-12">12 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-17">17 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Handling Circular References/Dependencies of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`" href="../handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/">Handling Circular References/Dependencies of  JPA/Hibernate Entity Bidirectional Relationships with Jackson `JsonIgnoreProperties`</a>
+        <a title="Depth First Search Algorithm on Graph" href="../depth-first-search-algorithm-on-graph/">Depth First Search Algorithm on Graph</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/" class="block" title="Single Sign Out Example with JSON Web Token (JWT), Spring Boot and Redis">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/03/hello-sso-jwt.gif) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-08">08 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Single Sign Out Example with JSON Web Token (JWT), Spring Boot and Redis" href="../scalable-authentication-single-sign-on-out-sso-example-with-json-web-token-jwt-cookie-redis-java-spring-boot-freemarker/">Single Sign Out Example with JSON Web Token (JWT), Spring Boot and Redis</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/security/">Security</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/" class="block" title="Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2016/08/hello-sso-jwt-1.gif) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-08">08 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot" href="../hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/security/">Security</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-extra-columns-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-data-rest-3.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-extra-columns-relationship-and-mysql/">RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-data-rest-2.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/">RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Data REST and JPA/Hibernate One to Many">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-data-rest-1.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="RESTful API Example with Spring Data REST and JPA/Hibernate One to Many" href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/">RESTful API Example with Spring Data REST and JPA/Hibernate One to Many</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../restful-api-example-with-spring-boot-spring-data-rest-and-mysql/" class="block" title="RESTful API Example with Spring Data REST">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-data-rest.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="RESTful API Example with Spring Data REST" href="../restful-api-example-with-spring-boot-spring-data-rest-and-mysql/">RESTful API Example with Spring Data REST</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/" class="block" title="REST API Documentation with Swagger and SpringFox">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/restful-api-swagger.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="REST API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/">REST API Documentation with Swagger and SpringFox</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../docker-compose-with-spring-boot-mongodb-nginx/" class="block" title="Docker Compose with Spring Boot, MongoDB, NGINX">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/docker-springboot-2.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-02">02 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Docker Compose with Spring Boot, MongoDB, NGINX" href="../docker-compose-with-spring-boot-mongodb-nginx/">Docker Compose with Spring Boot, MongoDB, NGINX</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/docker/">Docker</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../docker-compose-with-spring-boot-mysql-nginx/" class="block" title="Docker Compose with Spring Boot, MySQL, NGINX">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/docker-springboot-1.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-02">02 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Docker Compose with Spring Boot, MySQL, NGINX" href="../docker-compose-with-spring-boot-mysql-nginx/">Docker Compose with Spring Boot, MySQL, NGINX</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/docker/">Docker</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../docker-compose-with-spring-boot-nginx/" class="block" title="Dockerizing Spring Boot application">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/docker-springboot.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-02">02 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Dockerizing Spring Boot application" href="../docker-compose-with-spring-boot-nginx/">Dockerizing Spring Boot application</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/docker/">Docker</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA/Hibernate One To Many Bidirectional Relationship Mapping">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-one-to-many.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-02">02 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA/Hibernate One To Many Bidirectional Relationship Mapping" href="../jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate One To Many Bidirectional Relationship Mapping</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/" class="block" title="JPA/Hibernate Composite Primary Key Example">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-composite-key.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-01">01 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA/Hibernate Composite Primary Key Example" href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/">JPA/Hibernate Composite Primary Key Example</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA/Hibernate Many To Many Extra Columns Bidirectional Relationship Mapping">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-many-to-many-1.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-01">01 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA/Hibernate Many To Many Extra Columns Bidirectional Relationship Mapping" href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate Many To Many Extra Columns Bidirectional Relationship Mapping</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-many-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA/Hibernate Many To Many Bidirectional Relationship Mapping">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-many-to-many.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-01">01 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA/Hibernate Many To Many Bidirectional Relationship Mapping" href="../jpa-many-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate Many To Many Bidirectional Relationship Mapping</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA/Hibernate One To One Shared Primary Key Bidirectional Relationship Mapping">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-one-to--one-1.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-01">01 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA/Hibernate One To One Shared Primary Key Bidirectional Relationship Mapping" href="../jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate One To One Shared Primary Key Bidirectional Relationship Mapping</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA/Hibernate One To One Bidirectional Relationship Mapping">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-one-to--one.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-01">01 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA/Hibernate One To One Bidirectional Relationship Mapping" href="../jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate One To One Bidirectional Relationship Mapping</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../handling-properties-file-in-spring-boot-application/" class="block" title="Nested Properties File Example in Spring Boot with @ConfigurationProperties">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/12/PropertiesFile-1.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-31">31 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Nested Properties File Example in Spring Boot with @ConfigurationProperties" href="../handling-properties-file-in-spring-boot-application/">Nested Properties File Example in Spring Boot with @ConfigurationProperties</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/properties-file/">Properties file</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../handling-form-submission-example-with-java-spring-boot-and-freemarker/" class="block" title="Form Submission Example with Spring Boot and FreeMarker">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/form-submission.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-31">31 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Form Submission Example with Spring Boot and FreeMarker" href="../handling-form-submission-example-with-java-spring-boot-and-freemarker/">Form Submission Example with Spring Boot and FreeMarker</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/form/">Form</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../contact-form-example-with-java-spring-boot-freemarker-and-amazon-ses/" class="block" title="Contact Form Example with Spring Boot, FreeMarker and Amazon SES">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/contact-form.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-31">31 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Contact Form Example with Spring Boot, FreeMarker and Amazon SES" href="../contact-form-example-with-java-spring-boot-freemarker-and-amazon-ses/">Contact Form Example with Spring Boot, FreeMarker and Amazon SES</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/form/">Form</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../form-data-binding-and-validation-example-with-java-spring-boot-and-freemarker/" class="block" title="Form Data Binding and Validation Example with Spring Boot and FreeMarker">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/form-validation.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-31">31 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Form Data Binding and Validation Example with Spring Boot and FreeMarker" href="../form-data-binding-and-validation-example-with-java-spring-boot-and-freemarker/">Form Data Binding and Validation Example with Spring Boot and FreeMarker</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/form/">Form</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/" class="block" title="RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-boot.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-01-31">31 January 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS" href="../restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/">RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div>
 
    </div>
