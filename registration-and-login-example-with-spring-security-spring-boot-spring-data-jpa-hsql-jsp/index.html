@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL</title>
+  <title>Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, Hibernate, HSQL, JSP and Bootstrap</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,19 +19,19 @@
     
     <meta property="og:site_name" content="Hello Koding">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL">
-    <meta property="og:description" content="This post walks you through the process of creating a simple Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA and HSQL. If you are new to Spring Boot or Spring Data JPA, it would be best to work your way through below before starting this example:">
+    <meta property="og:title" content="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, Hibernate, HSQL, JSP and Bootstrap">
+    <meta property="og:description" content="This post will walk you through the steps of creating a simple Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, Hibernate, HSQL, JSP and Bootstrap. Update note: Giau updated this tutorial to Spring Boot 2 and Hibernate 5 If you are new to Spring Boot or">
     <meta property="og:url" content="http://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2017/02/register-1.PNG">
     <meta property="article:published_time" content="2016-07-05T07:27:29.000Z">
-    <meta property="article:modified_time" content="2019-01-25T02:02:40.000Z">
+    <meta property="article:modified_time" content="2019-02-20T15:15:19.000Z">
     <meta property="article:tag" content="Security">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL">
-    <meta name="twitter:description" content="This post walks you through the process of creating a simple Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA and HSQL. If you are new to Spring Boot or Spring Data JPA, it would be best to work your way through below before starting this example:">
+    <meta name="twitter:title" content="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, Hibernate, HSQL, JSP and Bootstrap">
+    <meta name="twitter:description" content="This post will walk you through the steps of creating a simple Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, Hibernate, HSQL, JSP and Bootstrap. Update note: Giau updated this tutorial to Spring Boot 2 and Hibernate 5 If you are new to Spring Boot or">
     <meta name="twitter:url" content="http://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2017/02/register-1.PNG">
     <meta name="twitter:label1" content="Written by">
@@ -61,13 +61,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He is interested in making simple code examples and tutorials. Follow Giau on GitHub/Twitter or drop a message at hellokoding [at] gmail [dot] com"
     },
-    "headline": "Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL",
+    "headline": "Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, Hibernate, HSQL, JSP and Bootstrap",
     "url": "http://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/",
     "datePublished": "2016-07-05T07:27:29.000Z",
-    "dateModified": "2019-01-25T02:02:40.000Z",
+    "dateModified": "2019-02-20T15:15:19.000Z",
     "image": "http://hellokoding.com/content/images/2017/02/register-1.PNG",
     "keywords": "Security, Spring Boot",
-    "description": "This post walks you through the process of creating a simple Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA and HSQL. If you are new to Spring Boot or Spring Data JPA, it would be best to work your way through below before starting this example:"
+    "description": "This post will walk you through the steps of creating a simple Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, Hibernate, HSQL, JSP and Bootstrap. Update note: Giau updated this tutorial to Spring Boot 2 and Hibernate 5 If you are new to Spring Boot or"
 }
     </script>
 
@@ -222,15 +222,18 @@ ghost.init({
         <article class="post tag-security tag-spring-boot">
 
           <header class="post__header">
-            <h2 class="post__title">Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, and HSQL</h2>
-            <time class="post__date" datetime="2019-01-25">Last modified @ 25 January 2019</time>
+            <h2 class="post__title">Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, Hibernate, HSQL, JSP and Bootstrap</h2>
+            <time class="post__date" datetime="2019-02-20">Last modified @ 20 February 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
               <a href="../tag/security/">Security</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
-            <p>This post walks you through the process of creating a simple Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA and HSQL.</p>
+            <p>This post will walk you through the steps of creating a simple Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, Hibernate, HSQL, JSP and Bootstrap.</p>
+
+<pre><code>Update note: Giau updated this tutorial to Spring Boot 2 and Hibernate 5
+</code></pre>
 
 <p><big></big></p>
 
@@ -261,22 +264,13 @@ If you are new to Spring Boot or Spring Data JPA, it would be best to work your 
 <h3 id="whatyoullneed">What you'll need</h3>
 
 <ul>
-<li>JDK 1.7 or later</li>
-<li>Maven 3 or later</li>
-</ul>
-
-<h3 id="stack">Stack</h3>
-
-<ul>
-<li>Spring Security</li>
-<li>Spring Boot</li>
-<li>Spring Data JPA</li>
-<li>JSP</li>
+<li>Java 8+</li>
+<li>Maven 3+</li>
 </ul>
 
 <h3 id="projectstructure">Project structure</h3>
 
-<pre><code>├── src
+<pre><code class="language-bash">├── src
 │   └── main
 │       ├── java
 │       │   └── com
@@ -318,104 +312,122 @@ If you are new to Spring Boot or Spring Data JPA, it would be best to work your 
 
 <h3 id="projectdependencies">Project dependencies</h3>
 
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/pom.xml">
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/pom.xml">
 </code></pre>
 
 <h3 id="definejpaentities">Define JPA Entities</h3>
 
 <p>JPA Entity is defined with <code>@Entity</code> annotation, represent a table in your database.</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/model/User.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/java/com/hellokoding/auth/model/User.java">
 </code></pre>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/model/Role.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/java/com/hellokoding/auth/model/Role.java">
 </code></pre>
 
 <p><code>@Table</code> maps the entity with the table. If no <code>@Table</code> is defined, the default value is used: the class name of the entity.</p>
 
 <p><code>@Id</code> declares the identifier property of the entity.</p>
 
-<p><code>@ManyToMany</code> defines a many-to-many relationship between 2 entities. <code>@JoinColumn</code> indicates the entity is the owner of the relationship: the corresponding table has a column with a foreign key to the referenced table. <code>mappedBy</code> indicates the entity is the inverse of the relationship.</p>
+<p><code>@ManyToMany</code> defines a many-to-many relationship between 2 entities.</p>
+
+<p><code>mappedBy</code> indicates the entity is the inverse of the relationship.</p>
 
 <h3 id="springdatajparepositories">Spring Data JPA Repositories</h3>
 
-<p>Spring Data JPA contains some built-in <code>Repository</code> implemented some common functions to work with database: <code>findOne</code>, <code>findAll</code>, <code>save</code>,...</p>
+<p>Spring Data JPA contains some built-in <code>Repository</code> implemented common functions to work with database such as <code>findOne</code>, <code>findAll</code> and <code>save</code></p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/repository/UserRepository.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/java/com/hellokoding/auth/repository/UserRepository.java">
 </code></pre>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/repository/RoleRepository.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/java/com/hellokoding/auth/repository/RoleRepository.java">
 </code></pre>
 
 <h3 id="springsecuritysuserdetailsservice">Spring Security's UserDetailsService</h3>
 
 <p>To implement login/authentication with Spring Security, we need to implement <code>org.springframework.security.core.userdetails.UserDetailsService</code> interface</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/service/UserDetailsServiceImpl.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/java/com/hellokoding/auth/service/UserDetailsServiceImpl.java">
 </code></pre>
 
 <h3 id="securityservice">Security Service</h3>
 
-<p>We create <code>SecurityService</code> to provide current loggedin user and auto login user after resgistering an account.  </p>
+<p>We create <code>SecurityService</code> to provide current logged-in user and auto login user after registration  </p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/service/SecurityServiceImpl.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/java/com/hellokoding/auth/service/SecurityService.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/java/com/hellokoding/auth/service/SecurityServiceImpl.java">
 </code></pre>
 
 <h3 id="userservice">User Service</h3>
 
 <p>Provide service for registering account  </p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/service/UserServiceImpl.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/java/com/hellokoding/auth/service/UserService.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/java/com/hellokoding/auth/service/UserServiceImpl.java">
 </code></pre>
 
 <h3 id="springvalidator">Spring Validator</h3>
 
-<p>To provide input-data validation for <code>/registration</code> controller with Spring Validator, we implement <code>org.springframework.validation.Validator</code>. Error codes, e.g. <code>Size.userForm.username</code>, are defined by <a href="https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/resources/validation.properties">validation.properties</a>  </p>
+<p>To provide input-data validation for <code>/registration</code> controller with Spring Validator, we implement <code>org.springframework.validation.Validator</code>. Error codes, e.g. <code>Size.userForm.username</code>, are defined by <a href="https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/resources/validation.properties">validation.properties</a></p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/validator/UserValidator.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/java/com/hellokoding/auth/validator/UserValidator.java">
 </code></pre>
 
 <h3 id="controllers">Controllers</h3>
 
-<p><code>/login</code> POST controller is provided by Spring Security</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/web/UserController.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/java/com/hellokoding/auth/web/UserController.java">
 </code></pre>
+
+<p>We don't define <code>/login</code> POST controller, it is provided by Spring Security</p>
 
 <h3 id="properties">Properties</h3>
 
-<pre><code class="language-markup embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/resources/application.properties">
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/resources/application.properties">
 </code></pre>
 
-<pre><code class="language-markup embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/resources/validation.properties">
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/resources/validation.properties">
 </code></pre>
 
 <h3 id="websecurityconfiguration">Web Security Configuration</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/WebSecurityConfig.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/java/com/hellokoding/auth/WebSecurityConfig.java">
 </code></pre>
 
 <h3 id="applicationconfiguration">Application Configuration</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/registration-login-spring-hsql/blob/master/src/main/java/com/hellokoding/auth/WebApplication.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/java/com/hellokoding/auth/WebApplication.java">
+</code></pre>
+
+<h3 id="jspviewtemplateswithbootstrap">JSP View Templates with Bootstrap</h3>
+
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/webapp/registration.jsp">
+</code></pre>
+
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/webapp/login.jsp">
+</code></pre>
+
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/security/registration-login/src/main/webapp/welcome.jsp">
 </code></pre>
 
 <h3 id="run">Run</h3>
 
 <p>You can run the application using <code>mvn clean spring-boot:run</code> and visit to <code>http://localhost:8080</code></p>
 
+<p>That's all folks! Happy learning!</p>
+
 <h3 id="sourcecode">Source code</h3>
 
-<p><code>git@github.com:hellokoding/registration-login-spring-hsql.git</code></p>
-
-<p><a href="https://github.com/hellokoding/registration-login-spring-hsql">https://github.com/hellokoding/registration-login-spring-hsql</a></p>
+<p><a href="https://github.com/hellokoding/hellokoding-series/tree/master/springboot-examples/security/registration-login">https://github.com/hellokoding/hellokoding-series/tree/master/springboot-examples/security/registration-login</a></p>
 
 <p><big></big></p>
 
 <p></p><pre>
-Registration and Login Example Brothers:
-- <a href="https://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/">Registration and Login Example with Spring Security, Spring Data JPA, Spring Boot</a> 
-- <a href="https://hellokoding.com/registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/">Registration and Login Example with Spring MVC 4, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL</a>
+You may also like
+<a href="https://hellokoding.com/registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/">Registration and Login Example with Spring MVC, Spring Security, Spring Data JPA, XML Configuration, Maven, JSP and MySQL</a>
 </pre>
             <div class="post__tags">
               <a href="../tag/security/">Security</a><a href="../tag/spring-boot/">Spring Boot</a>
@@ -465,7 +477,7 @@ Registration and Login Example Brothers:
 </div>
           <ul class="share-list">
   <li>
-    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Registration%20and%20Login%20Example%20with%20Spring%20Boot%2C%20Spring%20Security%2C%20Spring%20Data%20JPA%2C%20and%20HSQL&amp;url=http://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Registration%20and%20Login%20Example%20with%20Spring%20Boot%2C%20Spring%20Security%2C%20Spring%20Data%20JPA%2C%20Hibernate%2C%20HSQL%2C%20JSP%20and%20Bootstrap&amp;url=http://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <div data-icon="ei-sc-twitter" data-size="s" class="share-list__icon share-list__icon--twitter"></div>
     </a>
   </li>
@@ -592,6 +604,10 @@ Registration and Login Example Brothers:
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
+<div class="post-card"><a title="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, Hibernate, HSQL, JSP and Bootstrap" href="index.html"><div style="background-image: url(../content/images/2017/02/register-1.PNG)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, Hibernate, HSQL, JSP and Bootstrap" href="index.html">Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, Hibernate, HSQL, JSP and Bootstrap</a></h2>
+<div class="post__tags">
+              <a href="../tag/security/">Security</a><a href="../tag/spring-boot/">Spring Boot</a>
+            </div></div>
 <div class="post-card"><a title="Nested Properties File Example in Spring Boot with @ConfigurationProperties" href="../handling-properties-file-in-spring-boot-application/"><div style="background-image: url(../content/images/2017/12/PropertiesFile-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Nested Properties File Example in Spring Boot with @ConfigurationProperties" href="../handling-properties-file-in-spring-boot-application/">Nested Properties File Example in Spring Boot with @ConfigurationProperties</a></h2>
 <div class="post__tags">
               <a href="../tag/properties-file/">Properties file</a><a href="../tag/spring-boot/">Spring Boot</a>
@@ -599,10 +615,6 @@ Registration and Login Example Brothers:
 <div class="post-card"><a title="Uploading Files Example with Spring Boot" href="../uploading-multiple-files-example-with-spring-boot/"><div style="background-image: url(../content/images/2017/02/uploadfiles-springboot-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Uploading Files Example with Spring Boot" href="../uploading-multiple-files-example-with-spring-boot/">Uploading Files Example with Spring Boot</a></h2>
 <div class="post__tags">
               <a href="../tag/upload/">Upload</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div></div>
-<div class="post-card"><a title="Tree Traversal with Depth First Search" href="../tree-traversal-with-depth-first-search/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2-1-1-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Tree Traversal with Depth First Search" href="../tree-traversal-with-depth-first-search/">Tree Traversal with Depth First Search</a></h2>
-<div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
             </div></div>
   </div>
 </aside>
