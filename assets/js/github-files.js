@@ -4,7 +4,7 @@
       code = $(code);
 
       var filePath = /github.com\/(\S*)/i.exec(code.attr('class'))[1];
-      var fileName = /blob\/[^/]*\/(.*)/.exec(filePath)[1];
+      var fileName = filePath.substring(filePath.lastIndexOf('/')+1);
       var linkToGithubFile = $("<p><a target='_blank' href='" + "https://github.com/" + filePath + "'>" + fileName + "</a></p>");
 
       var fullFilePath = /embedfile-(\S*)/i.exec(code.attr('class'))[1];
