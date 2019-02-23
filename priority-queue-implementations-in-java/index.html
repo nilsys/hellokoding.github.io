@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/priority-queue-implementations-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/priority-queue-java.png">
     <meta property="article:published_time" content="2019-02-22T16:21:55.000Z">
-    <meta property="article:modified_time" content="2019-02-23T13:19:58.000Z">
+    <meta property="article:modified_time" content="2019-02-23T13:42:27.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java PriorityQueue + PriorityBlockingQueue Tutorial and Example",
     "url": "http://hellokoding.com/priority-queue-implementations-in-java/",
     "datePublished": "2019-02-22T16:21:55.000Z",
-    "dateModified": "2019-02-23T13:19:58.000Z",
+    "dateModified": "2019-02-23T13:42:27.000Z",
     "image": "http://hellokoding.com/content/images/2019/02/priority-queue-java.png",
     "keywords": "Java",
     "description": "In this tutorial, you will learn the priority queue implementations in Java and theirs usage examples Priority Queue Implementations in Java There&#x27;re two priority queue data structure implementations in Java, java.util.PriorityQueue and java.util.concurrent.PriorityBlockingQueue. They are both based on binary heap data structure java.util.PriorityQueue"
@@ -235,7 +235,7 @@ ghost.init({
 <h3 id="javautilpriorityqueueclass">java.util.PriorityQueue class</h3>
 
 <ul>
-<li>Designed to be used in single threaded environment. All operations are not thread safe</li>
+<li>Designed for holding elements prior to processing in single threaded environment. All operations are not thread safe</li>
 <li>Supported since Java 1.5</li>
 </ul>
 
@@ -269,11 +269,11 @@ ghost.init({
 
 <p><br>  </p>
 
-<h3 id="javautilpriorityblockingqueueclass">java.util.PriorityBlockingQueue class</h3>
+<h3 id="javautilconcurrentpriorityblockingqueueclass">java.util.concurrent.PriorityBlockingQueue class</h3>
 
 <ul>
+<li>Designed to be used primarily for producer-consumer queues in multi threaded environment. All public operations are protected with a single lock</li>
 <li><code>PriorityBlockingQueue</code> uses the same ordering rules as <code>PriorityQueue</code> and supplies blocking retrieval operations</li>
-<li>Designed to be used in multi threaded environment. All public operations are protected with a single lock</li>
 <li>Supported since Java 1.5</li>
 </ul>
 
@@ -404,11 +404,11 @@ ghost.init({
   <aside class="widget">
   <h3 class="widget__title">Related Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="jOOQ Tutorial and Example with MySQL" href="../jooq-example-with-mysql/"><div style="background-image: url(../content/images/2019/01/jOOQ-tutorials.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="jOOQ Tutorial and Example with MySQL" href="../jooq-example-with-mysql/">jOOQ Tutorial and Example with MySQL</a></h2>
+<div class="post-card"><a title="Java Queue + BlockingQueue Tutorial and Example" href="../queue-implementations-in-java/"><div style="background-image: url(../content/images/2019/02/queue-in-java.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Java Queue + BlockingQueue Tutorial and Example" href="../queue-implementations-in-java/">Java Queue + BlockingQueue Tutorial and Example</a></h2>
 <div class="post__tags">
               <a href="../tag/java/">Java</a>
             </div></div>
-<div class="post-card"><a title="Java Queue + BlockingQueue Tutorial and Example" href="../queue-implementations-in-java/"><div style="background-image: url(../content/images/2019/02/queue-in-java.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Java Queue + BlockingQueue Tutorial and Example" href="../queue-implementations-in-java/">Java Queue + BlockingQueue Tutorial and Example</a></h2>
+<div class="post-card"><a title="jOOQ Tutorial and Example with MySQL" href="../jooq-example-with-mysql/"><div style="background-image: url(../content/images/2019/01/jOOQ-tutorials.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="jOOQ Tutorial and Example with MySQL" href="../jooq-example-with-mysql/">jOOQ Tutorial and Example with MySQL</a></h2>
 <div class="post__tags">
               <a href="../tag/java/">Java</a>
             </div></div>
@@ -430,15 +430,15 @@ ghost.init({
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="jOOQ Tutorial and Example with MySQL" href="../jooq-example-with-mysql/"><div style="background-image: url(../content/images/2019/01/jOOQ-tutorials.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="jOOQ Tutorial and Example with MySQL" href="../jooq-example-with-mysql/">jOOQ Tutorial and Example with MySQL</a></h2>
-<div class="post__tags">
-              <a href="../tag/java/">Java</a>
-            </div></div>
 <div class="post-card"><a title="Java PriorityQueue + PriorityBlockingQueue Tutorial and Example" href="index.html"><div style="background-image: url(../content/images/2019/02/priority-queue-java.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Java PriorityQueue + PriorityBlockingQueue Tutorial and Example" href="index.html">Java PriorityQueue + PriorityBlockingQueue Tutorial and Example</a></h2>
 <div class="post__tags">
               <a href="../tag/java/">Java</a>
             </div></div>
 <div class="post-card"><a title="Java Queue + BlockingQueue Tutorial and Example" href="../queue-implementations-in-java/"><div style="background-image: url(../content/images/2019/02/queue-in-java.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Java Queue + BlockingQueue Tutorial and Example" href="../queue-implementations-in-java/">Java Queue + BlockingQueue Tutorial and Example</a></h2>
+<div class="post__tags">
+              <a href="../tag/java/">Java</a>
+            </div></div>
+<div class="post-card"><a title="jOOQ Tutorial and Example with MySQL" href="../jooq-example-with-mysql/"><div style="background-image: url(../content/images/2019/01/jOOQ-tutorials.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="jOOQ Tutorial and Example with MySQL" href="../jooq-example-with-mysql/">jOOQ Tutorial and Example with MySQL</a></h2>
 <div class="post__tags">
               <a href="../tag/java/">Java</a>
             </div></div>
@@ -509,32 +509,6 @@ ghost.init({
           </div>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../jooq-example-with-mysql/" class="block" title="jOOQ Tutorial and Example with MySQL">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jOOQ-tutorials.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-23">23 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="jOOQ Tutorial and Example with MySQL" href="../jooq-example-with-mysql/">jOOQ Tutorial and Example with MySQL</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/java/">Java</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
        <a href="../queue-implementations-in-java/" class="block" title="Java Queue + BlockingQueue Tutorial and Example">
       <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/queue-in-java.png) ">
       </div>
@@ -550,6 +524,32 @@ ghost.init({
 
       <h2 class="post-card__title">
         <a title="Java Queue + BlockingQueue Tutorial and Example" href="../queue-implementations-in-java/">Java Queue + BlockingQueue Tutorial and Example</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/java/">Java</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../jooq-example-with-mysql/" class="block" title="jOOQ Tutorial and Example with MySQL">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jOOQ-tutorials.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-02-23">23 February 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="jOOQ Tutorial and Example with MySQL" href="../jooq-example-with-mysql/">jOOQ Tutorial and Example with MySQL</a>
       </h2>
 <div class="post__tags">
               <a href="../tag/java/">Java</a>
