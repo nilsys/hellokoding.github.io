@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/longest-increasing-subsequence/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2017/10/DynamicProgramming-1.png">
     <meta property="article:published_time" content="2017-10-10T15:10:49.000Z">
-    <meta property="article:modified_time" content="2019-02-26T07:05:58.000Z">
+    <meta property="article:modified_time" content="2019-02-26T07:44:16.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Longest Increasing Subsequence",
     "url": "http://hellokoding.com/longest-increasing-subsequence/",
     "datePublished": "2017-10-10T15:10:49.000Z",
-    "dateModified": "2019-02-26T07:05:58.000Z",
+    "dateModified": "2019-02-26T07:44:16.000Z",
     "image": "http://hellokoding.com/content/images/2017/10/DynamicProgramming-1.png",
     "keywords": "Algorithm",
     "description": "What is Subsequence? A subsequence is a sequence that can be derived from another sequence by deleting some elements without changing the order of the remaining elements. For example, the sequence {A, B, D} is a subsequence of {A, B, C, D, E, F} obtained after removal of elements C,"
@@ -236,9 +236,7 @@ ghost.init({
 
 <h4 id="approach">Approach</h4>
 
-<ul>
-<li>Uses Dynamic Programming Bottom-up/Tabulation algorithm</li>
-</ul>
+<p>Using dynamic programming bottom-up/tabulation algorithm</p>
 
 <h4 id="implementation">Implementation</h4>
 
@@ -256,9 +254,16 @@ Space complexity: O(n)</p>
 
 <h4 id="approach">Approach</h4>
 
+<p>Using dynamic programming bottom-up/tabulation algorithm</p>
+
 <ul>
-<li>Uses Dynamic Programming Bottom-up/Tabulation algorithm</li>
+<li>Given an array <code>A[N]</code></li>
+<li>Lets say <code>L[N]</code> is your tabulation</li>
+<li>The length of the LIS of <code>A[N]</code> at the index <code>i</code> will be </li>
 </ul>
+
+<pre><code>L[i] = 1 + max(L[j]) with 0 &lt; j &lt; i and A[j] &lt; A[i]
+</code></pre>
 
 <h4 id="implementation">Implementation</h4>
 
@@ -416,23 +421,27 @@ Space complexity: O(n)</p>
   <aside class="widget">
   <h3 class="widget__title">Related Examples</h3>
   <div class="widget__body recent-posts1">
+<div class="post-card"><a title="Dynamic Programming" href="../dynamic-programming/"><div style="background-image: url(../content/images/2019/02/dynamic-programming.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Dynamic Programming" href="../dynamic-programming/">Dynamic Programming</a></h2>
+<div class="post__tags">
+              <a href="../tag/algorithm/">Algorithm</a>
+            </div></div>
   </div>
 </aside>
 
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Longest Increasing Subsequence" href="index.html"><div style="background-image: url(../content/images/2017/10/DynamicProgramming-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Longest Increasing Subsequence" href="index.html">Longest Increasing Subsequence</a></h2>
+<div class="post-card"><a title="Dynamic Programming" href="../dynamic-programming/"><div style="background-image: url(../content/images/2019/02/dynamic-programming.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Dynamic Programming" href="../dynamic-programming/">Dynamic Programming</a></h2>
 <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
             </div></div>
-<div class="post-card"><a title="Spring Boot CRUD TodoMVC Example with REST APIs, JPA, Hibernate, MySQL and VueJS" href="../build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/"><div style="background-image: url(../content/images/2019/01/Screenshot-2019-01-23-at-12-50-59-AM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot CRUD TodoMVC Example with REST APIs, JPA, Hibernate, MySQL and VueJS" href="../build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/">Spring Boot CRUD TodoMVC Example with REST APIs, JPA, Hibernate, MySQL and VueJS</a></h2>
+<div class="post-card"><a title="Registration and Login Example with Spring MVC, Spring Security, Spring Data JPA, Hibernate, MySQL, JSP and Bootstrap" href="../registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/"><div style="background-image: url(../content/images/2019/01/register2.PNG)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Registration and Login Example with Spring MVC, Spring Security, Spring Data JPA, Hibernate, MySQL, JSP and Bootstrap" href="../registration-and-login-example-with-spring-xml-configuration-maven-jsp-and-mysql/">Registration and Login Example with Spring MVC, Spring Security, Spring Data JPA, Hibernate, MySQL, JSP and Bootstrap</a></h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/security/">Security</a><a href="../tag/spring-mvc/">Spring MVC</a>
             </div></div>
-<div class="post-card"><a title="Spring Boot CRUD Example with RESTful APIs,  JPA, Hibernate, MySQL and VueJS" href="../full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/"><div style="background-image: url(../content/images/2019/01/Screenshot-2019-01-25-at-12-07-49-AM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot CRUD Example with RESTful APIs,  JPA, Hibernate, MySQL and VueJS" href="../full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/">Spring Boot CRUD Example with RESTful APIs,  JPA, Hibernate, MySQL and VueJS</a></h2>
+<div class="post-card"><a title="Longest Increasing Subsequence" href="index.html"><div style="background-image: url(../content/images/2017/10/DynamicProgramming-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Longest Increasing Subsequence" href="index.html">Longest Increasing Subsequence</a></h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div></div>
   </div>
 </aside>
@@ -496,6 +505,35 @@ Space complexity: O(n)</p>
   <div class="column column--center medium-12 large-12">
     <div class="row">
       <div class="post-list">
+          <div class="column large-12">
+            <h5 class="heading">More</h5>
+          </div>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../dynamic-programming/" class="block" title="Dynamic Programming">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/dynamic-programming.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-02-26">26 February 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="Dynamic Programming" href="../dynamic-programming/">Dynamic Programming</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/algorithm/">Algorithm</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
       </div>
     </div>
   </div>
