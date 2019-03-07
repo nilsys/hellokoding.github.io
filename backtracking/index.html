@@ -17,14 +17,14 @@
   <link rel="canonical" href="http://hellokoding.com/backtracking/">
     <meta name="referrer" content="origin-when-cross-origin">
     
-    <meta property="og:site_name" content="Hello Koding - Free Online Coding Courses In Practice">
+    <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Backtracking">
     <meta property="og:description" content="In this tutorial, you will learn about Backtracking and its approach to solve constraint satisfaction problems such as crosswords and puzzles What is Backtracking? Backtracking is a method for solving a constraint satisfaction problem by incrementally building candidates to solution and abandoning a candidate as soon as it can not">
     <meta property="og:url" content="http://hellokoding.com/backtracking/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/03/backtracking.png">
     <meta property="article:published_time" content="2019-02-28T15:26:18.000Z">
-    <meta property="article:modified_time" content="2019-03-06T14:01:34.000Z">
+    <meta property="article:modified_time" content="2019-03-07T13:47:44.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -46,7 +46,7 @@
     "@type": "Article",
     "publisher": {
         "@type": "Organization",
-        "name": "Hello Koding - Free Online Coding Courses In Practice",
+        "name": "Hello Koding - Practical Coding Courses, Tutorials and Examples",
         "logo": "http://hellokoding.com/content/images/2016/06/k.png"
     },
     "author": {
@@ -63,7 +63,7 @@
     "headline": "Backtracking",
     "url": "http://hellokoding.com/backtracking/",
     "datePublished": "2019-02-28T15:26:18.000Z",
-    "dateModified": "2019-03-06T14:01:34.000Z",
+    "dateModified": "2019-03-07T13:47:44.000Z",
     "image": "http://hellokoding.com/content/images/2019/03/backtracking.png",
     "keywords": "Algorithm",
     "description": "In this tutorial, you will learn about Backtracking and its approach to solve constraint satisfaction problems such as crosswords and puzzles What is Backtracking? Backtracking is a method for solving a constraint satisfaction problem by incrementally building candidates to solution and abandoning a candidate as soon as it can not"
@@ -78,7 +78,7 @@ ghost.init({
 });
 </script>
     <meta name="generator" content="Ghost 0.9">
-    <link rel="alternate" type="application/rss+xml" title="Hello Koding - Free Online Coding Courses In Practice" href="http://hellokoding.com/rss/">
+    <link rel="alternate" type="application/rss+xml" title="Hello Koding - Practical Coding Courses, Tutorials and Examples" href="http://hellokoding.com/rss/">
     <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({
@@ -94,7 +94,7 @@ ghost.init({
 
   <div class="row">
     <div class="column small-10 large-3">
-      <a class="logo" href="http://hellokoding.com"><img class="logo__img" src="../content/images/2016/06/k.png" alt="Hello Koding - Free Online Coding Courses In Practice"></a>
+      <a class="logo" href="http://hellokoding.com"><img class="logo__img" src="../content/images/2016/06/k.png" alt="Hello Koding - Practical Coding Courses, Tutorials and Examples"></a>
     </div>
 
     <label class="off-canvas-toggle"><span data-icon="ei-navicon" data-size="s"></span></label>
@@ -213,7 +213,7 @@ ghost.init({
 
           <header class="post__header">
             <h2 class="post__title">Backtracking</h2>
-            <time class="post__date" datetime="2019-03-06">Last modified @ 06 March 2019</time>
+            <time class="post__date" datetime="2019-03-07">Last modified @ 07 March 2019</time>
           </header>
 
           <div class="post-content">
@@ -230,12 +230,24 @@ ghost.init({
 
 <h3 id="thenqueenspuzzle">The N queens puzzle</h3>
 
-<p>Write an algorithm to place N chess queens on an NxN chessboard so that no two queens threaten each other; thus, a solution requires that no two queens share the same row, column, or diagonal</p>
+<p>Write an algorithm to place N chess queens on an NxN chessboard so that no two queens threaten each other; thus, a solution requires that no two queens share the same row, column or diagonal</p>
 
 <h3 id="backtrackingapproach">Backtracking approach</h3>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/datastructure-algorithm-java/src/main/java/com/hellokoding/algorithm/NQueens.java">
 </code></pre>
+
+<p><code>int[][] board = new int[8][8]</code> all cells default value are 0</p>
+
+<p><code>isValid(board, row, col)</code> ensures no two queens share the same row, column or diagonal</p>
+
+<p><code>enumerate(board, col)</code> tries all possible candidates starting from column 0 to 7, backtracks to remove the queen from the board as soon as can not build solution</p>
+
+<p><code>col == board.length</code> means all queen are placed on the board</p>
+
+<p><code>board[i][col] = 1</code> places a queen on the board at rows <code>i</code> and column <code>col</code></p>
+
+<p><code>board[i][col] = 0</code> removes the queen at rows <code>i</code> and column <code>col</code> from the board</p>
             <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
             </div>
@@ -612,7 +624,7 @@ ghost.init({
         <div class="row">
 
           <div class="site-footer__section column medium-3 large-3  medium-4 large-4 ">
-            <a href="http://hellokoding.com">Hello Koding - Free Online Coding Courses In Practice</a>
+            <a href="http://hellokoding.com">Hello Koding - Practical Coding Courses, Tutorials and Examples</a>
           </div>
 
           <div class="site-footer__section column medium-3 large-3  medium-4 large-4 ">
@@ -676,7 +688,7 @@ ghost.init({
 
           <div class="column medium-6 large-6">
             <div class="font-tiny">
-              © 2019 Hello Koding - Free Online Coding Courses In Practice
+              © 2019 Hello Koding - Practical Coding Courses, Tutorials and Examples
             </div>
           </div>
 
