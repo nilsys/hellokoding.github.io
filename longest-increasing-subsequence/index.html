@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Longest Increasing Subsequence">
-    <meta property="og:description" content="What you will learn In this tutorial, you will learn about Longest Increasing Subsequence problems and how to solve it by using Dynamic Programming What you will need Understanding Dynamic Programming and its approaches to solve a problem which has overlapping subproblems Subsequence A subsequence is derived from a sequence">
+    <meta property="og:description" content="Longest increasing subsequence is obtained from a sequence, has elements in increasing sorted order and as long as possible. The subsequence does not necessarily have to be contiguous or unique For example, given the array [0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7,">
     <meta property="og:url" content="http://hellokoding.com/longest-increasing-subsequence/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/longest-increasing-subsequence.png">
     <meta property="article:published_time" content="2017-10-10T15:10:49.000Z">
-    <meta property="article:modified_time" content="2019-03-04T01:30:40.000Z">
+    <meta property="article:modified_time" content="2019-03-11T14:03:41.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Longest Increasing Subsequence">
-    <meta name="twitter:description" content="What you will learn In this tutorial, you will learn about Longest Increasing Subsequence problems and how to solve it by using Dynamic Programming What you will need Understanding Dynamic Programming and its approaches to solve a problem which has overlapping subproblems Subsequence A subsequence is derived from a sequence">
+    <meta name="twitter:description" content="Longest increasing subsequence is obtained from a sequence, has elements in increasing sorted order and as long as possible. The subsequence does not necessarily have to be contiguous or unique For example, given the array [0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7,">
     <meta name="twitter:url" content="http://hellokoding.com/longest-increasing-subsequence/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/02/longest-increasing-subsequence.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Longest Increasing Subsequence",
     "url": "http://hellokoding.com/longest-increasing-subsequence/",
     "datePublished": "2017-10-10T15:10:49.000Z",
-    "dateModified": "2019-03-04T01:30:40.000Z",
+    "dateModified": "2019-03-11T14:03:41.000Z",
     "image": "http://hellokoding.com/content/images/2019/02/longest-increasing-subsequence.png",
     "keywords": "Algorithm",
-    "description": "What you will learn In this tutorial, you will learn about Longest Increasing Subsequence problems and how to solve it by using Dynamic Programming What you will need Understanding Dynamic Programming and its approaches to solve a problem which has overlapping subproblems Subsequence A subsequence is derived from a sequence"
+    "description": "Longest increasing subsequence is obtained from a sequence, has elements in increasing sorted order and as long as possible. The subsequence does not necessarily have to be contiguous or unique For example, given the array [0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7,"
 }
     </script>
 
@@ -213,32 +213,20 @@ ghost.init({
 
           <header class="post__header">
             <h2 class="post__title">Longest Increasing Subsequence</h2>
-            <time class="post__date" datetime="2019-03-04">Last modified @ 04 March 2019</time>
+            <time class="post__date" datetime="2019-03-11">Last modified @ 11 March 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
             </div>
-            <h3 id="whatyouwilllearn">What you will learn</h3>
+            <p>Longest increasing subsequence is obtained from a sequence, has elements in increasing sorted order and as long as possible. The subsequence does not necessarily have to be contiguous or unique</p>
 
-<p>In this tutorial, you will learn about Longest Increasing Subsequence problems and how to solve it by using Dynamic Programming</p>
+<p>For example, given the array [0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15], the longest increasing subsequences is {0, 2, 6, 9, 11, 15}. It's not contiguous or unique. Other instances are {0, 2, 6, 9, 13, 15}, {0, 4, 6, 9, 11, 15, {0, 4, 6, 9, 13, 15}</p>
 
-<h3 id="whatyouwillneed">What you will need</h3>
+<h2 id="problem1">Problem 1</h2>
 
-<p>Understanding <a href="https://hellokoding.com/dynamic-programming/">Dynamic Programming</a> and its approaches to solve a problem which has overlapping subproblems</p>
-
-<h3 id="subsequence">Subsequence</h3>
-
-<p>A subsequence is derived from a sequence by deleting some elements without changing the order of the remaining elements. For example, the sequence {A, B, D} is a subsequence of {A, B, C, D, E, F} obtained after removal of elements C, E, and F.</p>
-
-<h3 id="longestincreasingsubsequence">Longest Increasing Subsequence</h3>
-
-<p>Longest increasing subsequence of a sequence has elements in increasing sorted order and as long as possible, not necessarily contiguous or unique. For example, the longest increasing subsequences of the sequence {0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15} is {0, 2, 6, 9, 11, 15}. It's not unique. Other instances are {0, 2, 6, 9, 13, 15}, {0, 4, 6, 9, 11, 15, {0, 4, 6, 9, 13, 15}</p>
-
-<h3 id="problem1">Problem 1</h3>
-
-<p>Given an array, write an algorithm to find the length of its longest increasing subsequence</p>
+<p>Given an array of numbers, write an algorithm to find the length of the longest increasing subsequence in the array</p>
 
 <h4 id="dynamicprogrammingbottomuptabulationapproach">Dynamic programming bottom-up/tabulation approach</h4>
 
@@ -250,9 +238,9 @@ ghost.init({
 <p>Time complexity: O(n<sup>2</sup>) <br>
 Space complexity: O(n)</p>
 
-<h3 id="problem2">Problem 2</h3>
+<h2 id="problem2">Problem 2</h2>
 
-<p>Given an array, write an algorithm to find its longest increasing subsequence</p>
+<p>Given an array of numbers, write an algorithm to find the longest increasing subsequence in the array</p>
 
 <h4 id="dynamicprogrammingbottomuptabulationapproach">Dynamic programming bottom-up/tabulation approach</h4>
 
@@ -438,15 +426,15 @@ Space complexity: O(n)</p>
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
+<div class="post-card"><a title="Longest Increasing Subsequence" href="index.html"><div style="background-image: url(../content/images/2019/02/longest-increasing-subsequence.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Longest Increasing Subsequence" href="index.html">Longest Increasing Subsequence</a></h2>
+<div class="post__tags">
+              <a href="../tag/algorithm/">Algorithm</a>
+            </div></div>
 <div class="post-card"><a title="Divide and Conquer Tutorial and Example" href="../divide-and-conquer/"><div style="background-image: url(../content/images/2019/02/divide-and-conquer.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Divide and Conquer Tutorial and Example" href="../divide-and-conquer/">Divide and Conquer Tutorial and Example</a></h2>
 <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
             </div></div>
 <div class="post-card"><a title="Dynamic Programming Tutorial and Example" href="../dynamic-programming/"><div style="background-image: url(../content/images/2019/02/dynamic-programming.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Dynamic Programming Tutorial and Example" href="../dynamic-programming/">Dynamic Programming Tutorial and Example</a></h2>
-<div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
-            </div></div>
-<div class="post-card"><a title="Backtracking Tutorial and Example" href="../backtracking/"><div style="background-image: url(../content/images/2019/03/backtracking.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Backtracking Tutorial and Example" href="../backtracking/">Backtracking Tutorial and Example</a></h2>
 <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
             </div></div>
