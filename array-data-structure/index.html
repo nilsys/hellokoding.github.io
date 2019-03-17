@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Graph Data Structure</title>
+  <title>Array Data Structure Tutorial and Example</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,25 +14,25 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=b629f23a2c">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=b629f23a2c">
    
-  <link rel="canonical" href="http://hellokoding.com/graph-data-structure/">
+  <link rel="canonical" href="http://hellokoding.com/array-data-structure/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Graph Data Structure">
-    <meta property="og:description" content="In this tutorial, you will learn the Graph data structure, its operations and basic implementation example with Java What is Graph Data Structure? Graph is a non-linear data structure consisting of a finite set of nodes/vertices and a set of finite edges which connect a pair of nodes Types">
-    <meta property="og:url" content="http://hellokoding.com/graph-data-structure/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-17-at-2-47-54-PM-1.png">
-    <meta property="article:published_time" content="2019-02-17T06:13:10.000Z">
-    <meta property="article:modified_time" content="2019-02-19T14:58:42.000Z">
+    <meta property="og:title" content="Array Data Structure Tutorial and Example">
+    <meta property="og:description" content="Array is a linear data structure consisting of a collection of elements identified by index One dimensional array Given a one-dimensional array A has 4 elements like the below image  Each element in the array can be accessed directly by A[0], A[1], A[2] and A[3] with">
+    <meta property="og:url" content="http://hellokoding.com/array-data-structure/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/03/Screenshot-2019-03-17-at-9-13-28-PM-1.png">
+    <meta property="article:published_time" content="2019-03-17T13:18:39.000Z">
+    <meta property="article:modified_time" content="2019-03-17T13:38:45.000Z">
     <meta property="article:tag" content="Data Structure">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Graph Data Structure">
-    <meta name="twitter:description" content="In this tutorial, you will learn the Graph data structure, its operations and basic implementation example with Java What is Graph Data Structure? Graph is a non-linear data structure consisting of a finite set of nodes/vertices and a set of finite edges which connect a pair of nodes Types">
-    <meta name="twitter:url" content="http://hellokoding.com/graph-data-structure/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-17-at-2-47-54-PM-1.png">
+    <meta name="twitter:title" content="Array Data Structure Tutorial and Example">
+    <meta name="twitter:description" content="Array is a linear data structure consisting of a collection of elements identified by index One dimensional array Given a one-dimensional array A has 4 elements like the below image  Each element in the array can be accessed directly by A[0], A[1], A[2] and A[3] with">
+    <meta name="twitter:url" content="http://hellokoding.com/array-data-structure/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/03/Screenshot-2019-03-17-at-9-13-28-PM-1.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He has 12+ years hands-on experience of designing and developing web and data services. He was born to make online coding courses, tutorials and examples"
     },
-    "headline": "Graph Data Structure",
-    "url": "http://hellokoding.com/graph-data-structure/",
-    "datePublished": "2019-02-17T06:13:10.000Z",
-    "dateModified": "2019-02-19T14:58:42.000Z",
-    "image": "http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-17-at-2-47-54-PM-1.png",
+    "headline": "Array Data Structure Tutorial and Example",
+    "url": "http://hellokoding.com/array-data-structure/",
+    "datePublished": "2019-03-17T13:18:39.000Z",
+    "dateModified": "2019-03-17T13:38:45.000Z",
+    "image": "http://hellokoding.com/content/images/2019/03/Screenshot-2019-03-17-at-9-13-28-PM-1.png",
     "keywords": "Data Structure",
-    "description": "In this tutorial, you will learn the Graph data structure, its operations and basic implementation example with Java What is Graph Data Structure? Graph is a non-linear data structure consisting of a finite set of nodes/vertices and a set of finite edges which connect a pair of nodes Types"
+    "description": "Array is a linear data structure consisting of a collection of elements identified by index One dimensional array Given a one-dimensional array A has 4 elements like the below image  Each element in the array can be accessed directly by A[0], A[1], A[2] and A[3] with"
 }
     </script>
 
@@ -218,47 +218,39 @@ ghost.init({
         <article class="post tag-data-structure">
 
           <header class="post__header">
-            <h2 class="post__title">Graph Data Structure</h2>
-            <time class="post__date" datetime="2019-02-19">Last modified @ 19 February 2019</time>
+            <h2 class="post__title">Array Data Structure Tutorial and Example</h2>
+            <time class="post__date" datetime="2019-03-17">Last modified @ 17 March 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
               <a href="../tag/data-structure/">Data Structure</a>
             </div>
-            <p>In this tutorial, you will learn the Graph data structure, its operations and basic implementation example with Java</p>
+            <p>Array is a linear data structure consisting of a collection of elements identified by index</p>
 
-<h3 id="whatisgraphdatastructure">What is Graph Data Structure?</h3>
+<h2 id="onedimensionalarray">One dimensional array</h2>
 
-<p>Graph is a non-linear data structure consisting of a finite set of nodes/vertices and a set of finite edges which connect a pair of nodes</p>
+<p>Given a one-dimensional array A has 4 elements like the below image <br>
+<img src="../content/images/2019/03/Screenshot-2019-03-17-at-9-13-28-PM.png" alt=""></p>
 
-<h3 id="typesofgraphs">Types of Graphs</h3>
+<p>Each element in the array can be accessed directly by A[0], A[1], A[2] and A[3] with the corresponding value 9, 2, 6 and 8 respectively</p>
 
-<ul>
-<li><p>Undirected graph
-<img src="../content/images/2019/02/Screenshot-2019-02-17-at-2-47-54-PM.png" alt=""></p></li>
-<li><p>Directed graph
-<img src="../content/images/2019/02/Screenshot-2019-02-17-at-2-46-47-PM.png" alt=""></p></li>
-<li><p>Tree is a connected graph (existing a path between every pair of vertices) with no cycles
-<img src="../content/images/2019/02/Screenshot-2019-02-17-at-2-48-57-PM.png" alt=""></p></li>
-</ul>
+<h4 id="traversalexample">Traversal Example</h4>
 
-<h3 id="basicoperations">Basic operations</h3>
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/datastructure-algorithm-java/src/main/java/com/hellokoding/datastructure/Array1D.java">
+</code></pre>
 
-<ul>
-<li><code>addEdge</code>, add an edge between two vertices of the graph</li>
-</ul>
+<h2 id="twodimensionalarray">Two dimensional array</h2>
 
-<h3 id="representations">Representations</h3>
+<p>Given a two-dimensional array A has 8 elements like the below image</p>
 
-<ul>
-<li>Adjacency List, every vertex stores a list of adjacent vertices</li>
-<li>Adjacency Matrix, a two dimensional matrix array in which the rows represent source vertices and columns represent destination vertices</li>
-</ul>
+<p><img src="../content/images/2019/03/Screenshot-2019-03-17-at-9-07-49-PM.png" alt=""></p>
 
-<h3 id="undirectedgraphimplementationexamplewithadjacencylist">Undirected Graph implementation example with Adjacency List</h3>
+<p>Each element in the array can be accessed directly by A[0][0], A[0][1], A[0][2], A[0][3], A[1][0], A[1][1], A[1][2] and A[1][3] with the corresponding value 9, 2, 6, 8, 5, 7, 1 and 3 respectively</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/datastructure-algorithm-java/src/main/java/com/hellokoding/datastructure/UndirectedGraphByAdjacencyList.java">
+<h4 id="traversalexample">Traversal Example</h4>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/datastructure-algorithm-java/src/main/java/com/hellokoding/datastructure/Array2D.java">
 </code></pre>
             <div class="post__tags">
               <a href="../tag/data-structure/">Data Structure</a>
@@ -308,17 +300,17 @@ ghost.init({
 </div>
           <ul class="share-list">
   <li>
-    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Graph%20Data%20Structure&amp;url=http://hellokoding.com/graph-data-structure/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Array%20Data%20Structure%20Tutorial%20and%20Example&amp;url=http://hellokoding.com/array-data-structure/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <div data-icon="ei-sc-twitter" data-size="s" class="share-list__icon share-list__icon--twitter"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/graph-data-structure/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/array-data-structure/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="s" class="share-list__icon share-list__icon--facebook"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/graph-data-structure/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
+    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/array-data-structure/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
     <div data-icon="ei-sc-google-plus" data-size="s" class="share-list__icon share-list__icon--google"></div>
     </a>
   </li>
@@ -327,35 +319,8 @@ ghost.init({
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../binary-search-tree-data-structure/" class="block" title="Binary Search Tree Data Structure">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-1.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-21">21 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Binary Search Tree Data Structure" href="../binary-search-tree-data-structure/">Binary Search Tree Data Structure</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/data-structure/">Data Structure</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-
-    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
-  <div class="post-card ">
-       <a href="../breadth-first-search-algorithm-on-graph/" class="block" title="Graph Traversal with Breadth First Search">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-3.png) ">
+       <a href="../the-3sum-problem/" class="block" title="The 3Sum Problem">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/03/two-pointers-1.png) ">
       </div>
     </a>
 
@@ -368,10 +333,10 @@ ghost.init({
       </div>
 
       <h2 class="post-card__title">
-        <a title="Graph Traversal with Breadth First Search" href="../breadth-first-search-algorithm-on-graph/">Graph Traversal with Breadth First Search</a>
+        <a title="The 3Sum Problem" href="../the-3sum-problem/">The 3Sum Problem</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/data-structure/">Data Structure</a>
+              <a href="../tag/algorithm/">Algorithm</a>
             </div>
 
    </div>
@@ -379,14 +344,15 @@ ghost.init({
   </div>
 </article>
 
+
   </div>
 </div>          <section class="disqus">
   <h4 class="heading">Comments</h4>
   <div id="disqus_thread"></div>
 <script>
       var disqus_config = function () {
-        this.page.url = 'http://hellokoding.com/graph-data-structure/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = '70'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://hellokoding.com/array-data-structure/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '91'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
 
       (function() { // DON'T EDIT BELOW THIS LINE
@@ -413,10 +379,6 @@ ghost.init({
 <div class="post__tags">
               <a href="../tag/data-structure/">Data Structure</a><a href="../tag/courses/">Courses</a>
             </div></div>
-<div class="post-card"><a title="Array Data Structure Tutorial and Example" href="../array-data-structure/"><div style="background-image: url(../content/images/2019/03/Screenshot-2019-03-17-at-9-13-28-PM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Array Data Structure Tutorial and Example" href="../array-data-structure/">Array Data Structure Tutorial and Example</a></h2>
-<div class="post__tags">
-              <a href="../tag/data-structure/">Data Structure</a>
-            </div></div>
 <div class="post-card"><a title="Height of a Binary Tree" href="../height-of-a-binary-tree/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Height of a Binary Tree" href="../height-of-a-binary-tree/">Height of a Binary Tree</a></h2>
 <div class="post__tags">
               <a href="../tag/data-structure/">Data Structure</a>
@@ -429,13 +391,17 @@ ghost.init({
 <div class="post__tags">
               <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
+<div class="post-card"><a title="Graph Traversal with Breadth First Search" href="../breadth-first-search-algorithm-on-graph/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-3.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Graph Traversal with Breadth First Search" href="../breadth-first-search-algorithm-on-graph/">Graph Traversal with Breadth First Search</a></h2>
+<div class="post__tags">
+              <a href="../tag/data-structure/">Data Structure</a>
+            </div></div>
   </div>
 </aside>
 
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Array Data Structure Tutorial and Example" href="../array-data-structure/"><div style="background-image: url(../content/images/2019/03/Screenshot-2019-03-17-at-9-13-28-PM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Array Data Structure Tutorial and Example" href="../array-data-structure/">Array Data Structure Tutorial and Example</a></h2>
+<div class="post-card"><a title="Array Data Structure Tutorial and Example" href="index.html"><div style="background-image: url(../content/images/2019/03/Screenshot-2019-03-17-at-9-13-28-PM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Array Data Structure Tutorial and Example" href="index.html">Array Data Structure Tutorial and Example</a></h2>
 <div class="post__tags">
               <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
@@ -535,32 +501,6 @@ ghost.init({
       </h2>
 <div class="post__tags">
               <a href="../tag/data-structure/">Data Structure</a><a href="../tag/courses/">Courses</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../array-data-structure/" class="block" title="Array Data Structure Tutorial and Example">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/03/Screenshot-2019-03-17-at-9-13-28-PM-1.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-03-17">17 March 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Array Data Structure Tutorial and Example" href="../array-data-structure/">Array Data Structure Tutorial and Example</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -740,6 +680,32 @@ ghost.init({
 
       <h2 class="post-card__title">
         <a title="Binary Search Tree Data Structure" href="../binary-search-tree-data-structure/">Binary Search Tree Data Structure</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/data-structure/">Data Structure</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../graph-data-structure/" class="block" title="Graph Data Structure">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-2-47-54-PM-1.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-02-19">19 February 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="Graph Data Structure" href="../graph-data-structure/">Graph Data Structure</a>
       </h2>
 <div class="post__tags">
               <a href="../tag/data-structure/">Data Structure</a>
