@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MapStruct Example of Mapping JPA/Hibernate Entity with DTO</title>
+  <title>Linked List Data Structure Tutorial and Example</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,30 +14,29 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=b629f23a2c">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=b629f23a2c">
    
-  <link rel="canonical" href="http://hellokoding.com/mapping-jpa-hibernate-entity-and-dto-with-mapstruct/">
+  <link rel="canonical" href="http://hellokoding.com/linked-list-data-structure-tutorial-and-example/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="MapStruct Example of Mapping JPA/Hibernate Entity with DTO">
-    <meta property="og:description" content="In this tutorial, you will learn using MapStruct for mapping/converting Java objects, JPA/Hibernate entity to DTO and vice versa. Let's get started to build a RESTful APIs example with Spring Boot and MySQL to see how MapStruct playing in the context. What you'll need Docker CE 18+ Project">
-    <meta property="og:url" content="http://hellokoding.com/mapping-jpa-hibernate-entity-and-dto-with-mapstruct/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/mapping-objects.png">
-    <meta property="article:published_time" content="2019-02-01T14:36:40.000Z">
-    <meta property="article:modified_time" content="2019-02-23T15:06:28.000Z">
-    <meta property="article:tag" content="RESTful API">
-    <meta property="article:tag" content="Spring Boot">
+    <meta property="og:title" content="Linked List Data Structure Tutorial and Example">
+    <meta property="og:description" content="Linked List is a linear data structure consisting of a collection of nodes which are stored in distributed physical memory locations Each node comprises two parts, the data and the pointer to the next node Operations and Time complexity Traversal O(N) Add First O(1), Add Last O(N)">
+    <meta property="og:url" content="http://hellokoding.com/linked-list-data-structure-tutorial-and-example/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/03/Screenshot-2019-03-18-at-12-02-20-AM-1.png">
+    <meta property="article:published_time" content="2019-03-18T15:53:52.000Z">
+    <meta property="article:modified_time" content="2019-03-18T16:41:55.000Z">
+    <meta property="article:tag" content="Data Structure">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MapStruct Example of Mapping JPA/Hibernate Entity with DTO">
-    <meta name="twitter:description" content="In this tutorial, you will learn using MapStruct for mapping/converting Java objects, JPA/Hibernate entity to DTO and vice versa. Let's get started to build a RESTful APIs example with Spring Boot and MySQL to see how MapStruct playing in the context. What you'll need Docker CE 18+ Project">
-    <meta name="twitter:url" content="http://hellokoding.com/mapping-jpa-hibernate-entity-and-dto-with-mapstruct/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/02/mapping-objects.png">
+    <meta name="twitter:title" content="Linked List Data Structure Tutorial and Example">
+    <meta name="twitter:description" content="Linked List is a linear data structure consisting of a collection of nodes which are stored in distributed physical memory locations Each node comprises two parts, the data and the pointer to the next node Operations and Time complexity Traversal O(N) Add First O(1), Add Last O(N)">
+    <meta name="twitter:url" content="http://hellokoding.com/linked-list-data-structure-tutorial-and-example/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/03/Screenshot-2019-03-18-at-12-02-20-AM-1.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="RESTful API, Spring Boot">
+    <meta name="twitter:data2" content="Data Structure">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -61,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He has 12+ years hands-on experience of designing and developing web and data services. He was born to make online coding courses, tutorials and examples"
     },
-    "headline": "MapStruct Example of Mapping JPA/Hibernate Entity with DTO",
-    "url": "http://hellokoding.com/mapping-jpa-hibernate-entity-and-dto-with-mapstruct/",
-    "datePublished": "2019-02-01T14:36:40.000Z",
-    "dateModified": "2019-02-23T15:06:28.000Z",
-    "image": "http://hellokoding.com/content/images/2019/02/mapping-objects.png",
-    "keywords": "RESTful API, Spring Boot",
-    "description": "In this tutorial, you will learn using MapStruct for mapping/converting Java objects, JPA/Hibernate entity to DTO and vice versa. Let&#x27;s get started to build a RESTful APIs example with Spring Boot and MySQL to see how MapStruct playing in the context. What you&#x27;ll need Docker CE 18+ Project"
+    "headline": "Linked List Data Structure Tutorial and Example",
+    "url": "http://hellokoding.com/linked-list-data-structure-tutorial-and-example/",
+    "datePublished": "2019-03-18T15:53:52.000Z",
+    "dateModified": "2019-03-18T16:41:55.000Z",
+    "image": "http://hellokoding.com/content/images/2019/03/Screenshot-2019-03-18-at-12-02-20-AM-1.png",
+    "keywords": "Data Structure",
+    "description": "Linked List is a linear data structure consisting of a collection of nodes which are stored in distributed physical memory locations Each node comprises two parts, the data and the pointer to the next node Operations and Time complexity Traversal O(N) Add First O(1), Add Last O(N)"
 }
     </script>
 
@@ -88,7 +87,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-restful tag-spring-boot">
+<body class="post-template tag-data-structure">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -216,111 +215,37 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-8 column">
-        <article class="post tag-restful tag-spring-boot">
+        <article class="post tag-data-structure">
 
           <header class="post__header">
-            <h2 class="post__title">MapStruct Example of Mapping JPA/Hibernate Entity with DTO</h2>
-            <time class="post__date" datetime="2019-02-23">Last modified @ 23 February 2019</time>
+            <h2 class="post__title">Linked List Data Structure Tutorial and Example</h2>
+            <time class="post__date" datetime="2019-03-18">Last modified @ 18 March 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
-            <p>In this tutorial, you will learn using MapStruct for mapping/converting Java objects, JPA/Hibernate entity to DTO and vice versa. Let's get started to build a RESTful APIs example with Spring Boot and MySQL to see how MapStruct playing in the context.</p>
+            <p>Linked List is a linear data structure consisting of a collection of nodes which are stored in distributed physical memory locations</p>
 
-<h3 id="whatyoullneed">What you'll need</h3>
+<p>Each node comprises two parts, the data and the pointer to the next node</p>
+
+<p><img src="../content/images/2019/03/Screenshot-2019-03-18-at-12-02-20-AM.png" alt=""></p>
+
+<h3 id="operationsandtimecomplexity">Operations and Time complexity</h3>
 
 <ul>
-<li>Docker CE 18+</li>
+<li>Traversal O(N)</li>
+<li>Add First O(1), Add Last O(N)</li>
+<li>Remove First O(1), Remove Last O(N)</li>
 </ul>
 
-<h3 id="projectstructure">Project structure</h3>
+<h3 id="implementationexample">Implementation example</h3>
 
-<p><img src="../content/images/2019/02/Screenshot-2019-02-01-at-10-29-09-PM.png" alt=""></p>
-
-<h3 id="settingupmapstruct">Setting up MapStruct</h3>
-
-<p>MapStruct is a Java annotation processor for generating bean mapping classes. </p>
-
-<p>To set up, add MapStruct dependency into <code>pom.xml</code> and configure <code>annotationProcessorPaths</code> of <code>maven-compiler-plugin</code>. Full project dependencies and build plugins as below</p>
-
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/restful-api/springboot-mapstruct/pom.xml">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/datastructure-algorithm-java/src/main/java/com/hellokoding/datastructure/MyLinkedList.java">
 </code></pre>
-
-<h3 id="definejpahibernateentitydtorepositoryandservice">Define JPA/Hibernate Entity, DTO, Repository, and Service</h3>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/restful-api/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/product/Product.java">
-</code></pre>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/restful-api/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/product/ProductDTO.java">
-</code></pre>
-
-<p>DTO, stands for Data Transfer Object, is a design pattern used for customizing/aggregating data input and output so reducing the number of call to remote API.</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/restful-api/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/product/ProductRespository.java">
-</code></pre>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/restful-api/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/product/ProductService.java">
-</code></pre>
-
-<h3 id="definemapstructmapper">Define MapStruct Mapper</h3>
-
-<p>To using MapStruct, you have to define a <code>@Mapper</code> interface which declares any required mapping methods to map between entity and DTO</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/restful-api/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/product/ProductMapper.java">
-</code></pre>
-
-<p>Here you only define simple method signatures, converting Entity to DTO, DTO to Entity, List of Entity to List of DTOs. MapStruct will generate implementation code for you during build time.</p>
-
-<h3 id="usingmapstructonrestapi">Using MapStruct on REST API</h3>
-
-<p>Inject your previous defined <code>@Mapper</code> interface into REST API and start using its methods. </p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/restful-api/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/product/ProductAPI.java">
-</code></pre>
-
-<p>Wow! what a clean REST API without writing a single mapping/converting logic :)</p>
-
-<h3 id="applicationconfiguration">Application Configuration</h3>
-
-<pre><code class="language-properties embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/restful-api/springboot-mapstruct/src/main/resources/application.properties">
-</code></pre>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/restful-api/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/Application.java">
-</code></pre>
-
-<h3 id="runtheapplication">Run the application</h3>
-
-<p>Prepare Dockerfile for Java/Spring Boot application</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-series/blob/master/springboot-examples/restful-api/springboot-mapstruct/Dockerfile">
-</code></pre>
-
-<p>Start your application and infrastructure via Docker Compose. Make sure your local Docker is running and your bash console is at the <a href="https://github.com/hellokoding/hellokoding-series/tree/master/springboot-examples">springboot-examples</a> project root directory.</p>
-
-<pre><code class="language-bash">docker-compose -f docker-compose-restful.yaml up --renew-anon-volumes springboot-mapstruct
-</code></pre>
-
-<h3 id="testwithcurl">Test with <code>curl</code></h3>
-
-<p>Create a new product</p>
-
-<pre><code class="language-bash">curl -i -H "Content-Type: application/json" -X POST -d '{"name":"Hello Koding","description": "Simple coding examples and tutorials","price":"1"}' http://localhost:8080/api/v1/products
-</code></pre>
-
-<p>Find all products</p>
-
-<pre><code class="language-bash">curl -i http://localhost:8080/api/v1/products
-</code></pre>
-
-<p>That's it! Thanks for joining and have a happy coding. You can find the full source code as below</p>
-
-<h3 id="sourcecode">Source code</h3>
-
-<p><a href="https://github.com/hellokoding/hellokoding-series/tree/master/springboot-examples/restful-api/springboot-mapstruct">https://github.com/hellokoding/hellokoding-series/tree/master/springboot-examples/restful-api/springboot-mapstruct</a></p>
             <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
           </div>
 
@@ -367,17 +292,17 @@ ghost.init({
 </div>
           <ul class="share-list">
   <li>
-    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=MapStruct%20Example%20of%20Mapping%20JPA%2FHibernate%20Entity%20with%20DTO&amp;url=http://hellokoding.com/mapping-jpa-hibernate-entity-and-dto-with-mapstruct/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <a class="share-list__link" title="Share on Twitter" href="https://twitter.com/share?text=Linked%20List%20Data%20Structure%20Tutorial%20and%20Example&amp;url=http://hellokoding.com/linked-list-data-structure-tutorial-and-example/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
       <div data-icon="ei-sc-twitter" data-size="s" class="share-list__icon share-list__icon--twitter"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/mapping-jpa-hibernate-entity-and-dto-with-mapstruct/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+    <a class="share-list__link" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/linked-list-data-structure-tutorial-and-example/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="s" class="share-list__icon share-list__icon--facebook"></div>
     </a>
   </li>
   <li>
-    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/mapping-jpa-hibernate-entity-and-dto-with-mapstruct/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
+    <a class="share-list__link" title="Share on Google Plus" href="https://plus.google.com/share?url=http://hellokoding.com/linked-list-data-structure-tutorial-and-example/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530'); return false;">
     <div data-icon="ei-sc-google-plus" data-size="s" class="share-list__icon share-list__icon--google"></div>
     </a>
   </li>
@@ -386,8 +311,8 @@ ghost.init({
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../deleting-data-with-jpa-hibernate/" class="block" title="JPA/Hibernate Deleting Entity with JPQL, CascadeType, and orphanRemoval">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-crud.png) ">
+       <a href="../array-data-structure/" class="block" title="Array Data Structure Tutorial and Example">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/03/Screenshot-2019-03-17-at-9-13-28-PM-1.png) ">
       </div>
     </a>
 
@@ -396,14 +321,14 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-03-08">08 March 2019</time>
+        <time class="post-card__meta__date" datetime="2019-03-17">17 March 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="JPA/Hibernate Deleting Entity with JPQL, CascadeType, and orphanRemoval" href="../deleting-data-with-jpa-hibernate/">JPA/Hibernate Deleting Entity with JPQL, CascadeType, and orphanRemoval</a>
+        <a title="Array Data Structure Tutorial and Example" href="../array-data-structure/">Array Data Structure Tutorial and Example</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -411,32 +336,6 @@ ghost.init({
   </div>
 </article>
 
-    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
-  <div class="post-card ">
-       <a href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/" class="block" title="Spring Boot REST API Documentation with Swagger and SpringFox">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/restful-api-swagger.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-25">25 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Spring Boot REST API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/">Spring Boot REST API Documentation with Swagger and SpringFox</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
 
   </div>
 </div>          <section class="disqus">
@@ -444,8 +343,8 @@ ghost.init({
   <div id="disqus_thread"></div>
 <script>
       var disqus_config = function () {
-        this.page.url = 'http://hellokoding.com/mapping-jpa-hibernate-entity-and-dto-with-mapstruct/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = '54'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://hellokoding.com/linked-list-data-structure-tutorial-and-example/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '110'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
       };
 
       (function() { // DON'T EDIT BELOW THIS LINE
@@ -468,25 +367,25 @@ ghost.init({
   <aside class="widget">
   <h3 class="widget__title">Related Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Spring Boot CRUD TodoMVC Example with REST APIs, JPA, Hibernate, MySQL and VueJS" href="../build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/"><div style="background-image: url(../content/images/2019/01/Screenshot-2019-01-23-at-12-50-59-AM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot CRUD TodoMVC Example with REST APIs, JPA, Hibernate, MySQL and VueJS" href="../build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/">Spring Boot CRUD TodoMVC Example with REST APIs, JPA, Hibernate, MySQL and VueJS</a></h2>
+<div class="post-card"><a title="Data Structure Course for your next Coding Interview" href="../data-structure-tutorial-example-series/"><div style="background-image: url(../content/images/2019/02/data-structure-course.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Data Structure Course for your next Coding Interview" href="../data-structure-tutorial-example-series/">Data Structure Course for your next Coding Interview</a></h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a><a href="../tag/courses/">Courses</a>
             </div></div>
-<div class="post-card"><a title="Spring Boot CRUD Example with RESTful APIs,  JPA, Hibernate, MySQL and VueJS" href="../full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/"><div style="background-image: url(../content/images/2019/01/Screenshot-2019-01-25-at-12-07-49-AM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot CRUD Example with RESTful APIs,  JPA, Hibernate, MySQL and VueJS" href="../full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/">Spring Boot CRUD Example with RESTful APIs,  JPA, Hibernate, MySQL and VueJS</a></h2>
+<div class="post-card"><a title="Array Data Structure Tutorial and Example" href="../array-data-structure/"><div style="background-image: url(../content/images/2019/03/Screenshot-2019-03-17-at-9-13-28-PM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Array Data Structure Tutorial and Example" href="../array-data-structure/">Array Data Structure Tutorial and Example</a></h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
-<div class="post-card"><a title="Spring Boot REST API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/"><div style="background-image: url(../content/images/2019/02/restful-api-swagger.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Spring Boot REST API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/">Spring Boot REST API Documentation with Swagger and SpringFox</a></h2>
+<div class="post-card"><a title="Height of a Binary Tree" href="../height-of-a-binary-tree/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Height of a Binary Tree" href="../height-of-a-binary-tree/">Height of a Binary Tree</a></h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
-<div class="post-card"><a title="RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS" href="../restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/"><div style="background-image: url(../content/images/2019/01/restful-spring-boot.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS" href="../restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/">RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS</a></h2>
+<div class="post-card"><a title="Tree Level Traversal with Breadth First Search" href="../tree-level-traversal-with-breadth-first-search/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2-2.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Tree Level Traversal with Breadth First Search" href="../tree-level-traversal-with-breadth-first-search/">Tree Level Traversal with Breadth First Search</a></h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
-<div class="post-card"><a title="RESTful API Example with Spring Data REST" href="../restful-api-example-with-spring-boot-spring-data-rest-and-mysql/"><div style="background-image: url(../content/images/2019/01/restful-spring-data-rest.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="RESTful API Example with Spring Data REST" href="../restful-api-example-with-spring-boot-spring-data-rest-and-mysql/">RESTful API Example with Spring Data REST</a></h2>
+<div class="post-card"><a title="Tree Traversal with Depth First Search" href="../tree-traversal-with-depth-first-search/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2-1-1-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Tree Traversal with Depth First Search" href="../tree-traversal-with-depth-first-search/">Tree Traversal with Depth First Search</a></h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
   </div>
 </aside>
@@ -494,7 +393,7 @@ ghost.init({
   <aside class="widget">
   <h3 class="widget__title">Recent Examples</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Linked List Data Structure Tutorial and Example" href="../linked-list-data-structure-tutorial-and-example/"><div style="background-image: url(../content/images/2019/03/Screenshot-2019-03-18-at-12-02-20-AM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Linked List Data Structure Tutorial and Example" href="../linked-list-data-structure-tutorial-and-example/">Linked List Data Structure Tutorial and Example</a></h2>
+<div class="post-card"><a title="Linked List Data Structure Tutorial and Example" href="index.html"><div style="background-image: url(../content/images/2019/03/Screenshot-2019-03-18-at-12-02-20-AM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Linked List Data Structure Tutorial and Example" href="index.html">Linked List Data Structure Tutorial and Example</a></h2>
 <div class="post__tags">
               <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
@@ -572,9 +471,12 @@ ghost.init({
             <h5 class="heading">More</h5>
           </div>
             <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/" class="block" title="Spring Boot CRUD TodoMVC Example with REST APIs, JPA, Hibernate, MySQL and VueJS">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/Screenshot-2019-01-23-at-12-50-59-AM-1.png) ">
+  <div class="post-card  post-card--featured ">
+       <a href="../data-structure-tutorial-example-series/" class="block" title="Data Structure Course for your next Coding Interview">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/data-structure-course.png) ">
+        <span title="Featured Post">
+          <span class="post-card--featured__icon" data-icon="ei-star" data-size="s"></span>
+        </span>
       </div>
     </a>
 
@@ -583,14 +485,14 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-26">26 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-03-17">17 March 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Spring Boot CRUD TodoMVC Example with REST APIs, JPA, Hibernate, MySQL and VueJS" href="../build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/">Spring Boot CRUD TodoMVC Example with REST APIs, JPA, Hibernate, MySQL and VueJS</a>
+        <a title="Data Structure Course for your next Coding Interview" href="../data-structure-tutorial-example-series/">Data Structure Course for your next Coding Interview</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a><a href="../tag/courses/">Courses</a>
             </div>
 
    </div>
@@ -599,8 +501,8 @@ ghost.init({
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/" class="block" title="Spring Boot CRUD Example with RESTful APIs,  JPA, Hibernate, MySQL and VueJS">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/Screenshot-2019-01-25-at-12-07-49-AM-1.png) ">
+       <a href="../array-data-structure/" class="block" title="Array Data Structure Tutorial and Example">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/03/Screenshot-2019-03-17-at-9-13-28-PM-1.png) ">
       </div>
     </a>
 
@@ -609,14 +511,14 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-26">26 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-03-17">17 March 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Spring Boot CRUD Example with RESTful APIs,  JPA, Hibernate, MySQL and VueJS" href="../full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/">Spring Boot CRUD Example with RESTful APIs,  JPA, Hibernate, MySQL and VueJS</a>
+        <a title="Array Data Structure Tutorial and Example" href="../array-data-structure/">Array Data Structure Tutorial and Example</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -625,8 +527,8 @@ ghost.init({
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/" class="block" title="Spring Boot REST API Documentation with Swagger and SpringFox">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/restful-api-swagger.png) ">
+       <a href="../height-of-a-binary-tree/" class="block" title="Height of a Binary Tree">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2.png) ">
       </div>
     </a>
 
@@ -635,14 +537,14 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-25">25 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-03-16">16 March 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Spring Boot REST API Documentation with Swagger and SpringFox" href="../spring-boot-restful-api-documentation-with-swagger-and-springfox/">Spring Boot REST API Documentation with Swagger and SpringFox</a>
+        <a title="Height of a Binary Tree" href="../height-of-a-binary-tree/">Height of a Binary Tree</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -651,8 +553,112 @@ ghost.init({
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/" class="block" title="RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-boot.png) ">
+       <a href="../tree-level-traversal-with-breadth-first-search/" class="block" title="Tree Level Traversal with Breadth First Search">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2-2.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-03-16">16 March 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="Tree Level Traversal with Breadth First Search" href="../tree-level-traversal-with-breadth-first-search/">Tree Level Traversal with Breadth First Search</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/data-structure/">Data Structure</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../tree-traversal-with-depth-first-search/" class="block" title="Tree Traversal with Depth First Search">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-2-1-1-1.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-03-16">16 March 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="Tree Traversal with Depth First Search" href="../tree-traversal-with-depth-first-search/">Tree Traversal with Depth First Search</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/data-structure/">Data Structure</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../breadth-first-search-algorithm-on-graph/" class="block" title="Graph Traversal with Breadth First Search">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-3.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-03-16">16 March 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="Graph Traversal with Breadth First Search" href="../breadth-first-search-algorithm-on-graph/">Graph Traversal with Breadth First Search</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/data-structure/">Data Structure</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../depth-first-search-algorithm-on-graph/" class="block" title="Graph Traversal with Depth First Search">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-1.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-03-16">16 March 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="Graph Traversal with Depth First Search" href="../depth-first-search-algorithm-on-graph/">Graph Traversal with Depth First Search</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/data-structure/">Data Structure</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../priority-queue-data-structure/" class="block" title="Priority Queue Data Structure">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/priority-queue.png) ">
       </div>
     </a>
 
@@ -665,10 +671,10 @@ ghost.init({
       </div>
 
       <h2 class="post-card__title">
-        <a title="RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS" href="../restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/">RESTful API Example with Spring Boot, Unit Test with MockMVC and Simple UI Integration with VueJS</a>
+        <a title="Priority Queue Data Structure" href="../priority-queue-data-structure/">Priority Queue Data Structure</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -677,8 +683,34 @@ ghost.init({
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../restful-api-example-with-spring-boot-spring-data-rest-and-mysql/" class="block" title="RESTful API Example with Spring Data REST">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-data-rest.png) ">
+       <a href="../binary-search-tree-data-structure/" class="block" title="Binary Search Tree Data Structure">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-16-at-11-02-11-PM-1.png) ">
+      </div>
+    </a>
+
+    <div class="post-card__info">
+      <div class="post-card__meta">
+          <span class="post-card__meta__author-name">
+            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
+          </span>
+        <time class="post-card__meta__date" datetime="2019-02-21">21 February 2019</time>
+      </div>
+
+      <h2 class="post-card__title">
+        <a title="Binary Search Tree Data Structure" href="../binary-search-tree-data-structure/">Binary Search Tree Data Structure</a>
+      </h2>
+<div class="post__tags">
+              <a href="../tag/data-structure/">Data Structure</a>
+            </div>
+
+   </div>
+
+  </div>
+</article>
+            <article class="post-card-wrap column medium-6 large-4  ">
+  <div class="post-card ">
+       <a href="../graph-data-structure/" class="block" title="Graph Data Structure">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-17-at-2-47-54-PM-1.png) ">
       </div>
     </a>
 
@@ -691,10 +723,10 @@ ghost.init({
       </div>
 
       <h2 class="post-card__title">
-        <a title="RESTful API Example with Spring Data REST" href="../restful-api-example-with-spring-boot-spring-data-rest-and-mysql/">RESTful API Example with Spring Data REST</a>
+        <a title="Graph Data Structure" href="../graph-data-structure/">Graph Data Structure</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -703,8 +735,8 @@ ghost.init({
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-extra-columns-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-data-rest-3.png) ">
+       <a href="../heap-data-structure/" class="block" title="Heap Data Structure">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/Screenshot-2019-02-15-at-12-37-39-AM-1.png) ">
       </div>
     </a>
 
@@ -713,14 +745,14 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-19">19 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-extra-columns-relationship-and-mysql/">RESTful API Example with Spring Data REST and JPA/Hibernate Many To Many Extra Columns</a>
+        <a title="Heap Data Structure" href="../heap-data-structure/">Heap Data Structure</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -729,8 +761,8 @@ ghost.init({
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-data-rest-2.png) ">
+       <a href="../double-ended-queue-data-structure/" class="block" title="Double Ended Queue Data Structure">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/deque-data-structure.png) ">
       </div>
     </a>
 
@@ -739,14 +771,14 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-19">19 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many" href="../restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/">RESTful API Example with Spring Data REST and  JPA/Hibernate Many To Many</a>
+        <a title="Double Ended Queue Data Structure" href="../double-ended-queue-data-structure/">Double Ended Queue Data Structure</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -755,8 +787,8 @@ ghost.init({
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/" class="block" title="RESTful API Example with Spring Data REST and JPA/Hibernate One to Many">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/restful-spring-data-rest-1.png) ">
+       <a href="../queue-data-structure/" class="block" title="Queue Data Structure">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/queue-data-structure.png) ">
       </div>
     </a>
 
@@ -765,43 +797,14 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-05">05 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-19">19 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="RESTful API Example with Spring Data REST and JPA/Hibernate One to Many" href="../restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/">RESTful API Example with Spring Data REST and JPA/Hibernate One to Many</a>
+        <a title="Queue Data Structure" href="../queue-data-structure/">Queue Data Structure</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card  post-card--featured ">
-       <a href="../spring-boot-tutorial-series/" class="block" title="Spring Boot Course In Practice with Hands-On Tutorials and Examples Series">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/spring-boot-couse-1.png) ">
-        <span title="Featured Post">
-          <span class="post-card--featured__icon" data-icon="ei-star" data-size="s"></span>
-        </span>
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-03-09">09 March 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Spring Boot Course In Practice with Hands-On Tutorials and Examples Series" href="../spring-boot-tutorial-series/">Spring Boot Course In Practice with Hands-On Tutorials and Examples Series</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/courses/">Courses</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -810,8 +813,8 @@ ghost.init({
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../jpa-one-to-one-foreign-key-relationship-mapping-example-with-spring-boot-hsql/" class="block" title="JPA/Hibernate One-To-One Relationship Mapping Example with Spring Boot, Spring Data JPA, HSQL">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-tutorials-7.png) ">
+       <a href="../stack-data-structure/" class="block" title="Stack Data Structure">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/stack-data-structure.png) ">
       </div>
     </a>
 
@@ -820,14 +823,14 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-03-08">08 March 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-19">19 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="JPA/Hibernate One-To-One Relationship Mapping Example with Spring Boot, Spring Data JPA, HSQL" href="../jpa-one-to-one-foreign-key-relationship-mapping-example-with-spring-boot-hsql/">JPA/Hibernate One-To-One Relationship Mapping Example with Spring Boot, Spring Data JPA, HSQL</a>
+        <a title="Stack Data Structure" href="../stack-data-structure/">Stack Data Structure</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -836,8 +839,8 @@ ghost.init({
 </article>
             <article class="post-card-wrap column medium-6 large-4  ">
   <div class="post-card ">
-       <a href="../jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA/Hibernate One To One Shared Primary Key Relationship Mapping Example">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-one-to--one-1.png) ">
+       <a href="../disjoint-sets-data-structure-and-union-find-algorithm/" class="block" title="Disjoint Sets Data Structure and Union Find Algorithm">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/09/Screen-Shot-2017-09-24-at-11-11-23-AM-1.png) ">
       </div>
     </a>
 
@@ -846,352 +849,14 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-03-08">08 March 2019</time>
+        <time class="post-card__meta__date" datetime="2019-02-17">17 February 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="JPA/Hibernate One To One Shared Primary Key Relationship Mapping Example" href="../jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate One To One Shared Primary Key Relationship Mapping Example</a>
+        <a title="Disjoint Sets Data Structure and Union Find Algorithm" href="../disjoint-sets-data-structure-and-union-find-algorithm/">Disjoint Sets Data Structure and Union Find Algorithm</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../deleting-data-with-jpa-hibernate/" class="block" title="JPA/Hibernate Deleting Entity with JPQL, CascadeType, and orphanRemoval">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-crud.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-03-08">08 March 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA/Hibernate Deleting Entity with JPQL, CascadeType, and orphanRemoval" href="../deleting-data-with-jpa-hibernate/">JPA/Hibernate Deleting Entity with JPQL, CascadeType, and orphanRemoval</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../database-migration-evolution-with-flyway-and-jpa-hibernate/" class="block" title="Spring Boot Flyway Example of Database Migration with JPA and Hibernate">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/database-migration.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-03-05">05 March 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Spring Boot Flyway Example of Database Migration with JPA and Hibernate" href="../database-migration-evolution-with-flyway-and-jpa-hibernate/">Spring Boot Flyway Example of Database Migration with JPA and Hibernate</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../spring-boot-hello-world-example-with-thymeleaf/" class="block" title="Spring Boot Hello World Example with Thymeleaf">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/hello--1--1.gif) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-26">26 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Spring Boot Hello World Example with Thymeleaf" href="../spring-boot-hello-world-example-with-thymeleaf/">Spring Boot Hello World Example with Thymeleaf</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../spring-boot-hello-world-example-with-freemarker/" class="block" title="Spring Boot Hello World Example with FreeMarker">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/hello--1--4.gif) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-26">26 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Spring Boot Hello World Example with FreeMarker" href="../spring-boot-hello-world-example-with-freemarker/">Spring Boot Hello World Example with FreeMarker</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../spring-boot-hello-world-example-with-jsp/" class="block" title="Spring Boot Hello World Example with JSP">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/hello--1--3.gif) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-26">26 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Spring Boot Hello World Example with JSP" href="../spring-boot-hello-world-example-with-jsp/">Spring Boot Hello World Example with JSP</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../docker-compose-with-spring-boot-nginx/" class="block" title="Docker with Spring Boot Example">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/docker-springboot.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-25">25 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Docker with Spring Boot Example" href="../docker-compose-with-spring-boot-nginx/">Docker with Spring Boot Example</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/spring-boot/">Spring Boot</a><a href="../tag/docker/">Docker</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/" class="block" title="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, Hibernate, HSQL, JSP and Bootstrap">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/register-1.PNG) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-25">25 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, Hibernate, HSQL, JSP and Bootstrap" href="../registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/">Registration and Login Example with Spring Boot, Spring Security, Spring Data JPA, Hibernate, HSQL, JSP and Bootstrap</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/security/">Security</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../uploading-multiple-files-example-with-spring-boot/" class="block" title="Spring Boot File Upload Example with MultipartFile">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2017/02/uploadfiles-springboot-1.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-24">24 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Spring Boot File Upload Example with MultipartFile" href="../uploading-multiple-files-example-with-spring-boot/">Spring Boot File Upload Example with MultipartFile</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/" class="block" title="JPA/Hibernate Circular References/Dependencies Handling Example with Jackson `JsonIgnoreProperties`">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-circular-reference.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-24">24 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA/Hibernate Circular References/Dependencies Handling Example with Jackson `JsonIgnoreProperties`" href="../handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/">JPA/Hibernate Circular References/Dependencies Handling Example with Jackson `JsonIgnoreProperties`</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/" class="block" title="JPA/Hibernate Composite Primary Key Mapping Example">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-composite-key.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-23">23 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA/Hibernate Composite Primary Key Mapping Example" href="../jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/">JPA/Hibernate Composite Primary Key Mapping Example</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-many-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA/Hibernate Many To Many Relationship Mapping Example">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-many-to-many.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-23">23 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA/Hibernate Many To Many Relationship Mapping Example" href="../jpa-many-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate Many To Many Relationship Mapping Example</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA/Hibernate Many To Many Extra Columns Relationship Mapping Example">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-many-to-many-1.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-23">23 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA/Hibernate Many To Many Extra Columns Relationship Mapping Example" href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate Many To Many Extra Columns Relationship Mapping Example</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-            <article class="post-card-wrap column medium-6 large-4  ">
-  <div class="post-card ">
-       <a href="../jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/" class="block" title="JPA/Hibernate One To Many Relationship Mapping Example">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-one-to-many.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-23">23 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="JPA/Hibernate One To Many Relationship Mapping Example" href="../jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA/Hibernate One To Many Relationship Mapping Example</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
