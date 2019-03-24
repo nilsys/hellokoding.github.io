@@ -56,3 +56,26 @@
 blockquote{
 border-left: 2px solid;
 }
+
+.share-list {
+	border: 0px solid #ecf0f1;
+	margin-top: 0px;
+	line-height: 50px;
+}
+
+.share-list span {
+	padding: 8px 20px 8px 0;
+	font-size: 26px!important
+}
+
+.share-list__icon--twitter{
+	color: #55acee;
+}
+
+.share-list__icon--facebook {
+	color: #3b5998;
+}
+
+.share-list__link {
+	padding: 8px 0 8px 0!important
+}
