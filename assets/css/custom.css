@@ -60,22 +60,45 @@ border-left: 2px solid;
 .share-list {
 	border: 0px solid #ecf0f1;
 	margin-top: 0px;
-	line-height: 50px;
+	line-height: 25px;
+}
+
+.share-list__link, .share-list__link:hover {
+	text-decoration: none;
+	padding: 10px!important;
+	margin-right: 10px; 
+	color: white;
+}
+
+.share-list__link-twitter, .share-list__link-twitter:hover {
+	background-color: #55acee;
+}
+
+.share-list__link-facebook, .share-list__link-facebook:hover {
+	background-color: #3b5998;
 }
 
 .share-list span {
-	padding: 8px 20px 8px 0;
-	font-size: 26px!important
+	padding: 8px 8px 8px 0;
+	font-size: 18px!important;
 }
 
-.share-list__icon--twitter{
-	color: #55acee;
+.share-list__icon--twitter, .share-list__icon--twitter:hover{
+	fill: white!important;
 }
 
-.share-list__icon--facebook {
-	color: #3b5998;
+.share-list__icon--facebook, .share-list__icon--facebook:hover {
+	fill: white!important;
 }
 
-.share-list__link {
-	padding: 8px 0 8px 0!important
+.icon--sm {
+  width: 25px;
+  height: 25px;
+}
+
+.love-post {
+	margin-bottom: 15px;
+	font-size: 22px;
+	border-top: 1px solid #ecf0f1;
+	padding-top: 18px;
 }
