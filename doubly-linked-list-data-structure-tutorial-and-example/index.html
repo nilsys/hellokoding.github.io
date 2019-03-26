@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dynamic Programming Tutorial and Example with Fibonacci Numbers</title>
+  <title>Doubly Linked List Data Structure Tutorial and Example</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,29 +14,29 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=7ad588b631">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=7ad588b631">
    
-  <link rel="canonical" href="http://hellokoding.com/dynamic-programming/">
+  <link rel="canonical" href="http://hellokoding.com/doubly-linked-list-data-structure-tutorial-and-example/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Dynamic Programming Tutorial and Example with Fibonacci Numbers">
-    <meta property="og:description" content="Dynamic Programming is a method for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems to reuse them and save time later Dynamic Programming is an optimization over recursive algorithm with two approaches, top-down/memoization">
-    <meta property="og:url" content="http://hellokoding.com/dynamic-programming/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/dynamic-programming.png">
-    <meta property="article:published_time" content="2019-02-26T10:49:18.000Z">
-    <meta property="article:modified_time" content="2019-03-23T12:46:44.000Z">
-    <meta property="article:tag" content="Algorithm">
+    <meta property="og:title" content="Doubly Linked List Data Structure Tutorial and Example">
+    <meta property="og:description" content="Doubly Linked List is a linear data structure consisting of a collection of nodes which are stored in separated physical memory locations Each node comprises three parts, the data and two pointers in which one is linked to previous node and the other is linked to next node. The previous">
+    <meta property="og:url" content="http://hellokoding.com/doubly-linked-list-data-structure-tutorial-and-example/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/03/Screenshot-2019-03-20-at-10-34-37-PM-1.png">
+    <meta property="article:published_time" content="2019-03-26T15:00:30.000Z">
+    <meta property="article:modified_time" content="2019-03-26T15:05:31.000Z">
+    <meta property="article:tag" content="Data Structure">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Dynamic Programming Tutorial and Example with Fibonacci Numbers">
-    <meta name="twitter:description" content="Dynamic Programming is a method for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems to reuse them and save time later Dynamic Programming is an optimization over recursive algorithm with two approaches, top-down/memoization">
-    <meta name="twitter:url" content="http://hellokoding.com/dynamic-programming/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/02/dynamic-programming.png">
+    <meta name="twitter:title" content="Doubly Linked List Data Structure Tutorial and Example">
+    <meta name="twitter:description" content="Doubly Linked List is a linear data structure consisting of a collection of nodes which are stored in separated physical memory locations Each node comprises three parts, the data and two pointers in which one is linked to previous node and the other is linked to next node. The previous">
+    <meta name="twitter:url" content="http://hellokoding.com/doubly-linked-list-data-structure-tutorial-and-example/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/03/Screenshot-2019-03-20-at-10-34-37-PM-1.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Algorithm">
+    <meta name="twitter:data2" content="Data Structure">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -60,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He has 12+ years hands-on experience of designing and developing web and data services. He was born to make online coding courses, tutorials and examples"
     },
-    "headline": "Dynamic Programming Tutorial and Example with Fibonacci Numbers",
-    "url": "http://hellokoding.com/dynamic-programming/",
-    "datePublished": "2019-02-26T10:49:18.000Z",
-    "dateModified": "2019-03-23T12:46:44.000Z",
-    "image": "http://hellokoding.com/content/images/2019/02/dynamic-programming.png",
-    "keywords": "Algorithm",
-    "description": "Dynamic Programming is a method for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems to reuse them and save time later Dynamic Programming is an optimization over recursive algorithm with two approaches, top-down/memoization"
+    "headline": "Doubly Linked List Data Structure Tutorial and Example",
+    "url": "http://hellokoding.com/doubly-linked-list-data-structure-tutorial-and-example/",
+    "datePublished": "2019-03-26T15:00:30.000Z",
+    "dateModified": "2019-03-26T15:05:31.000Z",
+    "image": "http://hellokoding.com/content/images/2019/03/Screenshot-2019-03-20-at-10-34-37-PM-1.png",
+    "keywords": "Data Structure",
+    "description": "Doubly Linked List is a linear data structure consisting of a collection of nodes which are stored in separated physical memory locations Each node comprises three parts, the data and two pointers in which one is linked to previous node and the other is linked to next node. The previous"
 }
     </script>
 
@@ -87,7 +87,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-algorithm">
+<body class="post-template tag-data-structure">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -206,64 +206,47 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-8 column">
-        <article class="post tag-algorithm">
+        <article class="post tag-data-structure">
 
           <header class="post__header">
-            <h2 class="post__title">Dynamic Programming Tutorial and Example with Fibonacci Numbers</h2>
-            <time class="post__date" datetime="2019-03-23">Last modified @ 23 March 2019</time>
+            <h2 class="post__title">Doubly Linked List Data Structure Tutorial and Example</h2>
+            <time class="post__date" datetime="2019-03-26">Last modified @ 26 March 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
-            <p>Dynamic Programming is a method for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems to reuse them and save time later</p>
+            <p>Doubly Linked List is a linear data structure consisting of a collection of nodes which are stored in separated physical memory locations</p>
 
-<p>Dynamic Programming is an optimization over recursive algorithm with two approaches, top-down/memoization and bottom-up/tabulation</p>
+<p>Each node comprises three parts, the data and two pointers in which one is linked to previous node and the other is linked to next node. The previous pointer of the head node is linked to null while the next pointer of the tail node is linked to null</p>
 
-<p>Let's see a specific example</p>
+<p><img src="../content/images/2019/03/Screenshot-2019-03-20-at-10-34-37-PM.png" alt=""></p>
 
-<h3 id="thefibonaccinumbers">The Fibonacci numbers</h3>
+<h3 id="operationsandtimecomplexity">Operations and Time complexity</h3>
 
-<p>The Fibonacci numbers form a sequence such that each number is the sum of two preceding ones, starting from 0 and 1</p>
+<ul>
+<li>Traversal O(N)</li>
+<li>Add First O(1), Add Last O(1)</li>
+<li>Remove First O(1), Remove Last O(1)</li>
+</ul>
 
-<p>F<sub>0</sub> = 0, F<sub>1</sub> = 1 <br>
-F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub> for n &gt; 1</p>
+<h3 id="implementationexample">Implementation example</h3>
 
-<h3 id="problem">Problem</h3>
-
-<p>Given a number n, write an algorithm to print the value of Fibonacci number F<sub>n</sub></p>
-
-<h3 id="recursionapproach">Recursion approach</h3>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/FibonacciRecursion.java">
-</code></pre>
-
-<h3 id="memoizationtopdownapproach">Memoization/Top-down approach</h3>
-
-<p>Using an array to store computed results starting from N to 0, so called top-down</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/FibonacciMemoization.java">
-</code></pre>
-
-<h3 id="tabulationbottomupapproach">Tabulation/Bottom-up approach</h3>
-
-<p>Using an array to store computed results starting from 0 to N, so called bottom-up</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/FibonacciTabular.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/datastructure/MyDoublyLinkedList.java">
 </code></pre>
             <div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
           </div>
 
           <div class="love-post">Love this post?</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Dynamic%20Programming%20Tutorial%20and%20Example%20with%20Fibonacci%20Numbers&amp;url=http://hellokoding.com/dynamic-programming/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Doubly%20Linked%20List%20Data%20Structure%20Tutorial%20and%20Example&amp;url=http://hellokoding.com/doubly-linked-list-data-structure-tutorial-and-example/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Tweet</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/dynamic-programming/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/doubly-linked-list-data-structure-tutorial-and-example/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Share</span>
   </a>
@@ -312,35 +295,8 @@ F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub> for n &gt; 1</p>
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../priority-queue-implementations-in-java/" class="block" title="Java PriorityQueue + PriorityBlockingQueue Tutorial and Example">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/priority-queue-java.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-02-23">23 February 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Java PriorityQueue + PriorityBlockingQueue Tutorial and Example" href="../priority-queue-implementations-in-java/">Java PriorityQueue + PriorityBlockingQueue Tutorial and Example</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/java/">Java</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-
-    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
-  <div class="post-card ">
-       <a href="../divide-and-conquer/" class="block" title="Divide and Conquer Tutorial and Example with Merge Sort">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/02/divide-and-conquer.png) ">
+       <a href="../linked-list-data-structure-tutorial-and-example/" class="block" title="Linked List Data Structure Tutorial and Example">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/03/Screenshot-2019-03-18-at-12-02-20-AM-1.png) ">
       </div>
     </a>
 
@@ -353,10 +309,10 @@ F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub> for n &gt; 1</p>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Divide and Conquer Tutorial and Example with Merge Sort" href="../divide-and-conquer/">Divide and Conquer Tutorial and Example with Merge Sort</a>
+        <a title="Linked List Data Structure Tutorial and Example" href="../linked-list-data-structure-tutorial-and-example/">Linked List Data Structure Tutorial and Example</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div>
 
    </div>
@@ -364,14 +320,15 @@ F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub> for n &gt; 1</p>
   </div>
 </article>
 
+
   </div>
 </div>          <section class="disqus">
   <h4 class="heading">Comments</h4>                          
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/dynamic-programming/';
-      this.page.identifier = '83';
+      this.page.url = 'http://hellokoding.com/doubly-linked-list-data-structure-tutorial-and-example/';
+      this.page.identifier = '111';
     };
 
     (function() {
@@ -393,25 +350,25 @@ F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub> for n &gt; 1</p>
   <aside class="widget">
   <h3 class="widget__title">Related Articles</h3>
   <div class="widget__body recent-posts1">
-<div class="post-card"><a title="Longest Increasing Subsequence" href="../longest-increasing-subsequence/"><div style="background-image: url(../content/images/2019/03/dynamic-programming-2.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Longest Increasing Subsequence" href="../longest-increasing-subsequence/">Longest Increasing Subsequence</a></h2>
+<div class="post-card"><a title="Disjoint Sets Data Structure and Union Find Algorithm" href="../disjoint-sets-data-structure-and-union-find-algorithm/"><div style="background-image: url(../content/images/2017/09/Screen-Shot-2017-09-24-at-11-11-23-AM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Disjoint Sets Data Structure and Union Find Algorithm" href="../disjoint-sets-data-structure-and-union-find-algorithm/">Disjoint Sets Data Structure and Union Find Algorithm</a></h2>
 <div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
-<div class="post-card"><a title="Divide and Conquer Tutorial and Example with Merge Sort" href="../divide-and-conquer/"><div style="background-image: url(../content/images/2019/02/divide-and-conquer.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Divide and Conquer Tutorial and Example with Merge Sort" href="../divide-and-conquer/">Divide and Conquer Tutorial and Example with Merge Sort</a></h2>
+<div class="post-card"><a title="Stack Data Structure Tutorial and Example" href="../stack-data-structure/"><div style="background-image: url(../content/images/2019/02/stack-data-structure.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Stack Data Structure Tutorial and Example" href="../stack-data-structure/">Stack Data Structure Tutorial and Example</a></h2>
 <div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
-<div class="post-card"><a title="Backtracking Tutorial and Example with The N Queens Problem" href="../backtracking/"><div style="background-image: url(../content/images/2019/03/backtracking.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Backtracking Tutorial and Example with The N Queens Problem" href="../backtracking/">Backtracking Tutorial and Example with The N Queens Problem</a></h2>
+<div class="post-card"><a title="Queue Data Structure Tutorial and Example" href="../queue-data-structure/"><div style="background-image: url(../content/images/2019/02/queue-data-structure.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Queue Data Structure Tutorial and Example" href="../queue-data-structure/">Queue Data Structure Tutorial and Example</a></h2>
 <div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
-<div class="post-card"><a title="Binary Search Algorithm" href="../binary-search-algorithm/"><div style="background-image: url(../content/images/2019/03/binary-search-algorithm.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Binary Search Algorithm" href="../binary-search-algorithm/">Binary Search Algorithm</a></h2>
+<div class="post-card"><a title="Double Ended Queue Data Structure Tutorial and Example" href="../double-ended-queue-data-structure/"><div style="background-image: url(../content/images/2019/02/deque-data-structure.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Double Ended Queue Data Structure Tutorial and Example" href="../double-ended-queue-data-structure/">Double Ended Queue Data Structure Tutorial and Example</a></h2>
 <div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
-<div class="post-card"><a title="Find subarray with given sum" href="../find-subarray-with-given-sum/"><div style="background-image: url(../content/images/2019/03/window-sliding-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Find subarray with given sum" href="../find-subarray-with-given-sum/">Find subarray with given sum</a></h2>
+<div class="post-card"><a title="Heap Data Structure Tutorial and Example" href="../heap-data-structure/"><div style="background-image: url(../content/images/2019/02/Screenshot-2019-02-15-at-12-37-39-AM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Heap Data Structure Tutorial and Example" href="../heap-data-structure/">Heap Data Structure Tutorial and Example</a></h2>
 <div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
+              <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
   </div>
 </aside>
@@ -423,7 +380,7 @@ F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub> for n &gt; 1</p>
 <div class="post__tags">
               <a href="../tag/data-structure/">Data Structure</a><a href="../tag/courses/">Courses</a>
             </div></div>
-<div class="post-card"><a title="Doubly Linked List Data Structure Tutorial and Example" href="../doubly-linked-list-data-structure-tutorial-and-example/"><div style="background-image: url(../content/images/2019/03/Screenshot-2019-03-20-at-10-34-37-PM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Doubly Linked List Data Structure Tutorial and Example" href="../doubly-linked-list-data-structure-tutorial-and-example/">Doubly Linked List Data Structure Tutorial and Example</a></h2>
+<div class="post-card"><a title="Doubly Linked List Data Structure Tutorial and Example" href="index.html"><div style="background-image: url(../content/images/2019/03/Screenshot-2019-03-20-at-10-34-37-PM-1.png)" class="grey-bg post-card__image post-card__image--has-outline CoverImage FlexEmbed FlexEmbed--4by3"></div></a><h2 class="post-card__title post-card__title--small"><a title="Doubly Linked List Data Structure Tutorial and Example" href="index.html">Doubly Linked List Data Structure Tutorial and Example</a></h2>
 <div class="post__tags">
               <a href="../tag/data-structure/">Data Structure</a>
             </div></div>
