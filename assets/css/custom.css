@@ -102,3 +102,17 @@ border-left: 2px solid;
 	border-top: 1px solid #ecf0f1;
 	padding-top: 18px;
 }
+
+.ads-size {
+	width: 300px!important;
+	height: 250px!important;
+}
+
+.sponsors {
+	padding: 12px;
+	font-size: 16px;
+}
+
+.sponsors h3 {
+	border-bottom: 1px solid #ecf0f1;
+}
