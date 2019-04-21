@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Java Array Examples">
-    <meta property="og:description" content="Array declaration and initialization int[] arr = new int[3];   arr[0] = 1;   arr[1] = 2;   arr[2] = 3;   Array declaration and initialization in one line int[] arr = {1, 2, 3};   Print array int[] arr = {1, 2, 3};   System.out.println(Arrays.toString(arr));   Get array length int[] arr = {1, 2,">
+    <meta property="og:description" content="Array declaration and initialization In one line int[] arr = {1, 2, 3};   In multiple lines int[] arr = new int[3];   arr[0] = 1;   arr[1] = 2;   arr[2] = 3;   Get array length int[] arr = {1, 2, 3};   int N = arr.length;   Array traversal int[] arr = {1, 2, 3};   for(int">
     <meta property="og:url" content="http://hellokoding.com/java-array-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/04/Screenshot-2019-03-17-at-9-13-28-PM.png">
     <meta property="article:published_time" content="2019-04-20T04:27:53.000Z">
-    <meta property="article:modified_time" content="2019-04-20T08:18:30.000Z">
+    <meta property="article:modified_time" content="2019-04-21T04:22:55.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Java Array Examples">
-    <meta name="twitter:description" content="Array declaration and initialization int[] arr = new int[3];   arr[0] = 1;   arr[1] = 2;   arr[2] = 3;   Array declaration and initialization in one line int[] arr = {1, 2, 3};   Print array int[] arr = {1, 2, 3};   System.out.println(Arrays.toString(arr));   Get array length int[] arr = {1, 2,">
+    <meta name="twitter:description" content="Array declaration and initialization In one line int[] arr = {1, 2, 3};   In multiple lines int[] arr = new int[3];   arr[0] = 1;   arr[1] = 2;   arr[2] = 3;   Get array length int[] arr = {1, 2, 3};   int N = arr.length;   Array traversal int[] arr = {1, 2, 3};   for(int">
     <meta name="twitter:url" content="http://hellokoding.com/java-array-examples/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/04/Screenshot-2019-03-17-at-9-13-28-PM.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Java Array Examples",
     "url": "http://hellokoding.com/java-array-examples/",
     "datePublished": "2019-04-20T04:27:53.000Z",
-    "dateModified": "2019-04-20T08:18:30.000Z",
+    "dateModified": "2019-04-21T04:22:55.000Z",
     "image": "http://hellokoding.com/content/images/2019/04/Screenshot-2019-03-17-at-9-13-28-PM.png",
     "keywords": "Java",
-    "description": "Array declaration and initialization int[] arr &#x3D; new int[3];   arr[0] &#x3D; 1;   arr[1] &#x3D; 2;   arr[2] &#x3D; 3;   Array declaration and initialization in one line int[] arr &#x3D; {1, 2, 3};   Print array int[] arr &#x3D; {1, 2, 3};   System.out.println(Arrays.toString(arr));   Get array length int[] arr &#x3D; {1, 2,"
+    "description": "Array declaration and initialization In one line int[] arr &#x3D; {1, 2, 3};   In multiple lines int[] arr &#x3D; new int[3];   arr[0] &#x3D; 1;   arr[1] &#x3D; 2;   arr[2] &#x3D; 3;   Get array length int[] arr &#x3D; {1, 2, 3};   int N &#x3D; arr.length;   Array traversal int[] arr &#x3D; {1, 2, 3};   for(int"
 }
     </script>
 
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h2 class="post__title">Java Array Examples</h2>
-            <time class="post__date" datetime="2019-04-20">Last modified @ 20 April 2019</time>
+            <time class="post__date" datetime="2019-04-21">Last modified @ 21 April 2019</time>
           </header>
 
           <div class="post-content">
@@ -229,21 +229,21 @@ ghost.init({
             </div>
             <h3 id="arraydeclarationandinitialization">Array declaration and initialization</h3>
 
+<ul>
+<li>In one line</li>
+</ul>
+
+<pre><code class="language-java">int[] arr = {1, 2, 3};  
+</code></pre>
+
+<ul>
+<li>In multiple lines</li>
+</ul>
+
 <pre><code class="language-java">int[] arr = new int[3];  
 arr[0] = 1;  
 arr[1] = 2;  
 arr[2] = 3;  
-</code></pre>
-
-<h3 id="arraydeclarationandinitializationinoneline">Array declaration and initialization in one line</h3>
-
-<pre><code class="language-java">int[] arr = {1, 2, 3};  
-</code></pre>
-
-<h3 id="printarray">Print array</h3>
-
-<pre><code class="language-java">int[] arr = {1, 2, 3};  
-System.out.println(Arrays.toString(arr));  
 </code></pre>
 
 <h3 id="getarraylength">Get array length</h3>
@@ -255,25 +255,79 @@ int N = arr.length;
 <h3 id="arraytraversal">Array traversal</h3>
 
 <pre><code class="language-java">int[] arr = {1, 2, 3};  
-for(int e : arr) {  
-    System.out.println(e);
+for(int i = 0; i &lt; arr.length; i++) {  
+    System.out.println(arr[i]);
 }
 </code></pre>
 
-<h3 id="convertstringarraytointarray">Convert <code>String</code> array to <code>int</code> array</h3>
+<pre><code class="language-java">int[] arr = {1, 2, 3};  
+for(int ele : arr) {  
+    System.out.println(ele);
+}
+</code></pre>
 
-<p>With Java 8+  </p>
+<h3 id="conversion">Conversion</h3>
+
+<ul>
+<li>Convert <code>String</code> array to <code>int</code> array</li>
+</ul>
 
 <pre><code class="language-java">String[] strs = {"1", "2", "3"};  
 int[] arr = Arrays.stream(strs).mapToInt(Integer::parseInt).toArray();  
 </code></pre>
 
-<h3 id="stringjoinintlongfloatdoublearray">String join <code>int</code> / <code>long</code> / <code>float</code> / <code>double</code> array</h3>
-
-<p>With Java 8+  </p>
+<ul>
+<li>String join <code>int</code> / <code>long</code> / <code>float</code> / <code>double</code> array</li>
+</ul>
 
 <pre><code class="language-java">int[] arr = {1, 2, 3};  
 String str = Arrays.stream(arr).mapToObj(String::valueOf).collect(Collectors.joining(","));  
+</code></pre>
+
+<ul>
+<li>Print array</li>
+</ul>
+
+<pre><code class="language-java">int[] arr = {1, 2, 3};  
+System.out.println(Arrays.toString(arr));  
+</code></pre>
+
+<h3 id="aggregation">Aggregation</h3>
+
+<ul>
+<li>Sum of an array</li>
+</ul>
+
+<pre><code class="language-java">int[] arr = {1, 2, 3};  
+int sum = Arrays.stream(arr).sum();  
+</code></pre>
+
+<pre><code class="language-java">Integer[] arr = {1, 2, 3};  
+int sum = Arrays.stream(arr).mapToInt(Integer::intValue).sum();  
+</code></pre>
+
+<ul>
+<li>Average of an array</li>
+</ul>
+
+<pre><code class="language-java">int[] arr = {1, 2, 3};  
+int sum = Arrays.stream(arr).average();  
+</code></pre>
+
+<ul>
+<li>Min of an array</li>
+</ul>
+
+<pre><code class="language-java">int[] arr = {1, 2, 3};  
+int sum = Arrays.stream(arr).min();  
+</code></pre>
+
+<ul>
+<li>Max of an array</li>
+</ul>
+
+<pre><code class="language-java">int[] arr = {1, 2, 3};  
+int sum = Arrays.stream(arr).max();  
 </code></pre>
             <div class="post__tags">
               <a href="../tag/java/">Java</a>
