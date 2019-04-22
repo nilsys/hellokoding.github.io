@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-array-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/04/Screenshot-2019-03-17-at-9-13-28-PM.png">
     <meta property="article:published_time" content="2019-04-20T04:27:53.000Z">
-    <meta property="article:modified_time" content="2019-04-22T13:33:30.000Z">
+    <meta property="article:modified_time" content="2019-04-22T13:45:04.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java Array Examples",
     "url": "http://hellokoding.com/java-array-examples/",
     "datePublished": "2019-04-20T04:27:53.000Z",
-    "dateModified": "2019-04-22T13:33:30.000Z",
+    "dateModified": "2019-04-22T13:45:04.000Z",
     "image": "http://hellokoding.com/content/images/2019/04/Screenshot-2019-03-17-at-9-13-28-PM.png",
     "keywords": "Java",
     "description": "Array declaration and initialization In one line int[] arr &#x3D; {1, 2, 3};   In multiple lines int[] arr &#x3D; new int[3];   arr[0] &#x3D; 1;   arr[1] &#x3D; 2;   arr[2] &#x3D; 3;   Array properties Get array length int[] arr &#x3D; {1, 2, 3};   int N &#x3D; arr.length;   Array methods Clone an array int[] arr"
@@ -325,7 +325,7 @@ int sum = Arrays.stream(arr).mapToInt(Integer::intValue).sum();
 </ul>
 
 <pre><code class="language-java">int[] arr = {1, 2, 3};  
-int sum = Arrays.stream(arr).average();  
+double avg = Arrays.stream(arr).average().getAsDouble();  
 </code></pre>
 
 <ul>
@@ -333,7 +333,7 @@ int sum = Arrays.stream(arr).average();
 </ul>
 
 <pre><code class="language-java">int[] arr = {1, 2, 3};  
-int sum = Arrays.stream(arr).min();  
+int min = Arrays.stream(arr).min().getAsInt();  
 </code></pre>
 
 <ul>
@@ -341,7 +341,7 @@ int sum = Arrays.stream(arr).min();
 </ul>
 
 <pre><code class="language-java">int[] arr = {1, 2, 3};  
-int sum = Arrays.stream(arr).max();  
+int max = Arrays.stream(arr).max().getAsInt();  
 </code></pre>
 
 <h3 id="notes">Notes</h3>
