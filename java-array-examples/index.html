@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-array-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/04/Screenshot-2019-03-17-at-9-13-28-PM.png">
     <meta property="article:published_time" content="2019-04-20T04:27:53.000Z">
-    <meta property="article:modified_time" content="2019-04-22T13:51:07.000Z">
+    <meta property="article:modified_time" content="2019-04-23T02:07:06.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java Array Examples",
     "url": "http://hellokoding.com/java-array-examples/",
     "datePublished": "2019-04-20T04:27:53.000Z",
-    "dateModified": "2019-04-22T13:51:07.000Z",
+    "dateModified": "2019-04-23T02:07:06.000Z",
     "image": "http://hellokoding.com/content/images/2019/04/Screenshot-2019-03-17-at-9-13-28-PM.png",
     "keywords": "Java",
     "description": "Array declaration and initialization In one line int[] arr &#x3D; {1, 2, 3};   In multiple lines int[] arr &#x3D; new int[3];   arr[0] &#x3D; 1;   arr[1] &#x3D; 2;   arr[2] &#x3D; 3;   Array properties Get array length int[] arr &#x3D; {1, 2, 3};   int N &#x3D; arr.length;   Array methods Clone an array int[] arr"
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h2 class="post__title">Java Array Examples</h2>
-            <time class="post__date" datetime="2019-04-22">Last modified @ 22 April 2019</time>
+            <time class="post__date" datetime="2019-04-23">Last modified @ 23 April 2019</time>
           </header>
 
           <div class="post-content">
@@ -278,6 +278,28 @@ for(int i = 0; i &lt; arr.length; i++) {
 for(int ele : arr) {  
     System.out.println(ele);
 }
+</code></pre>
+
+<h3 id="arraysorting">Array sorting</h3>
+
+<ul>
+<li>Sort an array in ascending order</li>
+</ul>
+
+<pre><code class="language-java">int[] arr = {1, 2, 3};  
+Arrays.sort(arr);  
+</code></pre>
+
+<ul>
+<li>Sort an array in descending order</li>
+</ul>
+
+<pre><code class="language-java">int[] arr = {1, 2, 3};  
+arr = Arrays.stream(arr).boxed().sorted(Comparator.reverseOrder()).mapToInt(Integer::intValue).toArray();  
+</code></pre>
+
+<pre><code class="language-java">Integer[] arr = {1, 2, 3};  
+Arrays.sort(arr, Collections.reverseOrder());  
 </code></pre>
 
 <h3 id="conversion">Conversion</h3>
@@ -347,7 +369,7 @@ int max = Arrays.stream(arr).max().getAsInt();
 <h3 id="notes">Notes</h3>
 
 <ul>
-<li><code>Arrays.stream</code> method is defined in <code>java.util</code> package and available since Java 8</li>
+<li><code>Arrays.stream</code> and <code>Comparator.reverseOrder</code> methods are defined in <code>java.util</code> package and available since Java 8</li>
 <li><code>Collectors</code> class is defined in <code>java.util.stream</code> package and available since Java 8</li>
 </ul>
             <div class="post__tags">
