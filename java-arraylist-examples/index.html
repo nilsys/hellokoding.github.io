@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-arraylist-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/04/java-arraylist.png">
     <meta property="article:published_time" content="2019-04-26T15:13:39.000Z">
-    <meta property="article:modified_time" content="2019-04-26T15:31:05.000Z">
+    <meta property="article:modified_time" content="2019-04-26T16:07:13.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java ArrayList Examples",
     "url": "http://hellokoding.com/java-arraylist-examples/",
     "datePublished": "2019-04-26T15:13:39.000Z",
-    "dateModified": "2019-04-26T15:31:05.000Z",
+    "dateModified": "2019-04-26T16:07:13.000Z",
     "image": "http://hellokoding.com/content/images/2019/04/java-arraylist.png",
     "keywords": "Java",
     "description": "ArrayList declaration and initialization In one line with Arrays.asList List&amp;lt;Integer&amp;gt; lst &#x3D; Arrays.asList(1, 2, 3);   In one line with Double brace initialization (should not be used) List&amp;lt;Integer&amp;gt; lst &#x3D; new ArrayList&amp;lt;Integer&amp;gt;(){{       add(1);     add(2);     add(3); }}; Double brace initialization"
@@ -293,6 +293,14 @@ int[] arr = lst.stream().mapToInt(Integer::intValue).toArray();
 
 <pre><code class="language-java">int[] arr = {1, 2, 3};  
 List&lt;Integer&gt; lst = Arrays.stream(arr).boxed().collect(Collectors.toList());  
+</code></pre>
+
+<ul>
+<li>String join <code>List&lt;String&gt;</code></li>
+</ul>
+
+<pre><code class="language-java">List&lt;String&gt; lst = Arrays.asList("ABC", "ACB");  
+String str = lst.stream().collect(Collectors.joining(", ");  
 </code></pre>
 
 <h3 id="notes">Notes</h3>
