@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Java ArrayList Examples</title>
+  <title>Java ArrayList Tutorial with Examples</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,18 +19,18 @@
     
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Java ArrayList Examples">
-    <meta property="og:description" content="ArrayList declaration and initialization In one line with Arrays.asList List&amp;lt;Integer&amp;gt; lst = Arrays.asList(1, 2, 3);   In one line with Double brace initialization (should not be used) List&amp;lt;Integer&amp;gt; lst = new ArrayList&amp;lt;Integer&amp;gt;(){{       add(1);     add(2);     add(3); }}; Double brace initialization">
+    <meta property="og:title" content="Java ArrayList Tutorial with Examples">
+    <meta property="og:description" content="Java ArrayList is an ordered collection aka sequence, implementation of java.util.List interface. ArrayList has the following attributes Backed by dynamic array data structure, its capacity auto grows internally Allow null and duplicate elements Elements are positioned as their insertion order Zero based integer index, can access (get / insert">
     <meta property="og:url" content="http://hellokoding.com/java-arraylist-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/04/java-arraylist.png">
     <meta property="article:published_time" content="2019-04-26T15:13:39.000Z">
-    <meta property="article:modified_time" content="2019-04-27T01:13:08.000Z">
+    <meta property="article:modified_time" content="2019-04-27T04:59:44.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Java ArrayList Examples">
-    <meta name="twitter:description" content="ArrayList declaration and initialization In one line with Arrays.asList List&amp;lt;Integer&amp;gt; lst = Arrays.asList(1, 2, 3);   In one line with Double brace initialization (should not be used) List&amp;lt;Integer&amp;gt; lst = new ArrayList&amp;lt;Integer&amp;gt;(){{       add(1);     add(2);     add(3); }}; Double brace initialization">
+    <meta name="twitter:title" content="Java ArrayList Tutorial with Examples">
+    <meta name="twitter:description" content="Java ArrayList is an ordered collection aka sequence, implementation of java.util.List interface. ArrayList has the following attributes Backed by dynamic array data structure, its capacity auto grows internally Allow null and duplicate elements Elements are positioned as their insertion order Zero based integer index, can access (get / insert">
     <meta name="twitter:url" content="http://hellokoding.com/java-arraylist-examples/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/04/java-arraylist.png">
     <meta name="twitter:label1" content="Written by">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He has 12+ years hands-on experience of designing and developing web and data services. He was born to make online coding courses, tutorials and examples"
     },
-    "headline": "Java ArrayList Examples",
+    "headline": "Java ArrayList Tutorial with Examples",
     "url": "http://hellokoding.com/java-arraylist-examples/",
     "datePublished": "2019-04-26T15:13:39.000Z",
-    "dateModified": "2019-04-27T01:13:08.000Z",
+    "dateModified": "2019-04-27T04:59:44.000Z",
     "image": "http://hellokoding.com/content/images/2019/04/java-arraylist.png",
     "keywords": "Java",
-    "description": "ArrayList declaration and initialization In one line with Arrays.asList List&amp;lt;Integer&amp;gt; lst &#x3D; Arrays.asList(1, 2, 3);   In one line with Double brace initialization (should not be used) List&amp;lt;Integer&amp;gt; lst &#x3D; new ArrayList&amp;lt;Integer&amp;gt;(){{       add(1);     add(2);     add(3); }}; Double brace initialization"
+    "description": "Java ArrayList is an ordered collection aka sequence, implementation of java.util.List interface. ArrayList has the following attributes Backed by dynamic array data structure, its capacity auto grows internally Allow null and duplicate elements Elements are positioned as their insertion order Zero based integer index, can access (get / insert"
 }
     </script>
 
@@ -219,7 +219,7 @@ ghost.init({
         <article class="post tag-java">
 
           <header class="post__header">
-            <h2 class="post__title">Java ArrayList Examples</h2>
+            <h2 class="post__title">Java ArrayList Tutorial with Examples</h2>
             <time class="post__date" datetime="2019-04-27">Last modified @ 27 April 2019</time>
           </header>
 
@@ -227,7 +227,17 @@ ghost.init({
             <div class="post__tags">
               <a href="../tag/java/">Java</a>
             </div>
-            <h3 id="arraylistdeclarationandinitialization">ArrayList declaration and initialization</h3>
+            <p>Java ArrayList is an ordered collection aka sequence, implementation of java.util.List interface. ArrayList has the following attributes</p>
+
+<ul>
+<li><p>Backed by dynamic array data structure, its capacity auto grows internally</p></li>
+<li><p>Allow null and duplicate elements</p></li>
+<li><p>Elements are positioned as their insertion order</p></li>
+<li><p>Zero based integer index, can access (get / insert / remove) elements by their index</p></li>
+<li><p>Unsynchronized implementation. In multi-threading environment with at least one thread modifies the list, it must be synchronized externally</p></li>
+</ul>
+
+<h3 id="arraylistdeclarationandinitialization">ArrayList declaration and initialization</h3>
 
 <ul>
 <li>In one line with Arrays.asList</li>
@@ -257,6 +267,65 @@ ghost.init({
 lst.add(1);  
 lst.add(2);  
 lst.add(3);  
+</code></pre>
+
+<h3 id="crudoperationswitharraylistelementandindex">CRUD operations with ArrayList element and index</h3>
+
+<ul>
+<li>Appends an element at the end of the list</li>
+</ul>
+
+<pre><code class="language-java">List&lt;Integer&gt; lst = Arrays.asList(1, 2, 3);  
+lst.add(4);  
+</code></pre>
+
+<ul>
+<li>Inserts an element at a specified index in the list, shifts the current and subsequent elements to the right, throws <code>IndexOutOfBoundsException</code> if the index is out of range</li>
+</ul>
+
+<pre><code class="language-java">List&lt;Integer&gt; lst = Arrays.asList(1, 2, 3);  
+lst.add(1, 10); // insert 10 at index 1  
+lst.add(5, 10); // throws `IndexOutOfBoundsException`  
+</code></pre>
+
+<ul>
+<li>Gets an element at a specified index in the list, throws <code>IndexOutOfBoundsException</code> if the index is out of range</li>
+</ul>
+
+<pre><code class="language-java">List&lt;Integer&gt; lst = Arrays.asList(1, 2, 3);  
+Integer ele = lst.get(0); // get element at index 0  
+Integer invalidEle = lst.get(3); // throws IndexOutOfBoundsException  
+</code></pre>
+
+<ul>
+<li>Replaces an element at a specified index in the list, throws <code>IndexOutOfBoundsException</code> if the index is out of range</li>
+</ul>
+
+<pre><code class="language-java">List&lt;Integer&gt; lst = Arrays.asList(1, 2, 3);  
+lst.set(0, 10); // replace element at index 0 with 10
+</code></pre>
+
+<ul>
+<li>Removes an element at a specified location in the list, shifts any subsequent elements to the left, throws <code>IndexOutOfBoundsException</code> if the index is out of range</li>
+</ul>
+
+<pre><code class="language-java">List&lt;Integer&gt; lst = Arrays.asList(1, 2, 3);  
+lst.remove(0); // remove element at index 0 from the list
+</code></pre>
+
+<h3 id="arraylisttraversal">ArrayList traversal</h3>
+
+<pre><code class="language-java">List&lt;Integer&gt; lst = Arrays.asList(1, 2, 3);  
+for (int i = 0; i &lt; lst.size(); i++) {  
+    Integer ele = lst.get(i);
+    System.out.println(ele);
+}
+</code></pre>
+
+<pre><code class="language-java">List&lt;Integer&gt; lst = Arrays.asList(1, 2, 3);  
+for (Integer ele : lst) {  
+    System.out.println(ele);
+}
 </code></pre>
 
 <h3 id="arraylistsorting">ArrayList sorting</h3>
@@ -315,7 +384,7 @@ String str = lst.stream().collect(Collectors.joining(", ");
 
           <div class="love-post">Love this post?</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Java%20ArrayList%20Examples&amp;url=http://hellokoding.com/java-arraylist-examples/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Java%20ArrayList%20Tutorial%20with%20Examples&amp;url=http://hellokoding.com/java-arraylist-examples/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Tweet</span>
   </a>
