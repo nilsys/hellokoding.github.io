@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JPA Many-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, and HSQL</title>
+  <title>Hibernate Many To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,25 +19,25 @@
     
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="JPA Many-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, and HSQL">
-    <meta property="og:description" content="This post walks you through the process of mapping a many-to-many relationship with Spring Boot, Spring Data JPA and HSQL. JPA Series with Spring Boot: - JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot - JPA One-To-One Shared Primary Key Relationship Mapping Example with Spring Boot - JPA">
+    <meta property="og:title" content="Hibernate Many To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL">
+    <meta property="og:description" content="This tutorial walks you through the process of mapping a Hibernate many-to-many relationship with Spring Boot, Spring Data JPA and HSQL What you'll need JDK 1.7 or later Maven 3 or later Stack Spring Data JPA Spring Boot Project structure ├── src │   └── main │       ├── java │       │   └── com │       │       └── hellokoding │       │           └── jpa │       │               ├── model │       │               │   ├── Book.java">
     <meta property="og:url" content="http://hellokoding.com/jpa-many-to-many-relationship-mapping-example-with-spring-boot-hsql/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/jpa-tutorials-10.png">
     <meta property="article:published_time" content="2016-07-04T08:43:46.000Z">
-    <meta property="article:modified_time" content="2019-01-25T02:01:43.000Z">
-    <meta property="article:tag" content="JPA/Hibernate">
+    <meta property="article:modified_time" content="2019-04-29T13:39:30.000Z">
+    <meta property="article:tag" content="JPA and Hibernate">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="JPA Many-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, and HSQL">
-    <meta name="twitter:description" content="This post walks you through the process of mapping a many-to-many relationship with Spring Boot, Spring Data JPA and HSQL. JPA Series with Spring Boot: - JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot - JPA One-To-One Shared Primary Key Relationship Mapping Example with Spring Boot - JPA">
+    <meta name="twitter:title" content="Hibernate Many To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL">
+    <meta name="twitter:description" content="This tutorial walks you through the process of mapping a Hibernate many-to-many relationship with Spring Boot, Spring Data JPA and HSQL What you'll need JDK 1.7 or later Maven 3 or later Stack Spring Data JPA Spring Boot Project structure ├── src │   └── main │       ├── java │       │   └── com │       │       └── hellokoding │       │           └── jpa │       │               ├── model │       │               │   ├── Book.java">
     <meta name="twitter:url" content="http://hellokoding.com/jpa-many-to-many-relationship-mapping-example-with-spring-boot-hsql/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/01/jpa-tutorials-10.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="JPA/Hibernate, Spring Boot">
+    <meta name="twitter:data2" content="JPA and Hibernate, Spring Boot">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -61,13 +61,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He has 12+ years hands-on experience of designing and developing web and data services. He was born to make online coding courses, tutorials and examples"
     },
-    "headline": "JPA Many-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, and HSQL",
+    "headline": "Hibernate Many To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL",
     "url": "http://hellokoding.com/jpa-many-to-many-relationship-mapping-example-with-spring-boot-hsql/",
     "datePublished": "2016-07-04T08:43:46.000Z",
-    "dateModified": "2019-01-25T02:01:43.000Z",
+    "dateModified": "2019-04-29T13:39:30.000Z",
     "image": "http://hellokoding.com/content/images/2019/01/jpa-tutorials-10.png",
-    "keywords": "JPA/Hibernate, Spring Boot",
-    "description": "This post walks you through the process of mapping a many-to-many relationship with Spring Boot, Spring Data JPA and HSQL. JPA Series with Spring Boot: - JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot - JPA One-To-One Shared Primary Key Relationship Mapping Example with Spring Boot - JPA"
+    "keywords": "JPA and Hibernate, Spring Boot",
+    "description": "This tutorial walks you through the process of mapping a Hibernate many-to-many relationship with Spring Boot, Spring Data JPA and HSQL What you&#x27;ll need JDK 1.7 or later Maven 3 or later Stack Spring Data JPA Spring Boot Project structure ├── src │   └── main │       ├── java │       │   └── com │       │       └── hellokoding │       │           └── jpa │       │               ├── model │       │               │   ├── Book.java"
 }
     </script>
 
@@ -220,26 +220,15 @@ ghost.init({
         <article class="post tag-jpa tag-spring-boot">
 
           <header class="post__header">
-            <h2 class="post__title">JPA Many-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, and HSQL</h2>
-            <time class="post__date" datetime="2019-01-25">Last modified @ 25 January 2019</time>
+            <h2 class="post__title">Hibernate Many To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL</h2>
+            <time class="post__date" datetime="2019-04-29">Last modified @ 29 April 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/jpa/">JPA and Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
-            <p>This post walks you through the process of mapping a many-to-many relationship with Spring Boot, Spring Data JPA and HSQL.</p>
-
-<p><big></big></p>
-
-<p></p><pre>
-JPA Series with Spring Boot:
-- <a href="https://hellokoding.com/jpa-one-to-one-foreign-key-relationship-mapping-example-with-spring-boot-hsql/">JPA One-To-One Foreign Key Relationship Mapping Example with Spring Boot</a>
-- <a href="https://hellokoding.com/jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-hsql/">JPA One-To-One Shared Primary Key Relationship Mapping Example with Spring Boot</a>
-- <a href="https://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-hsql/">JPA One-To-Many Relationship Mapping Example with Spring Boot</a>
-- <a href="https://hellokoding.com/jpa-many-to-many-relationship-mapping-example-with-spring-boot-hsql/">JPA Many-To-Many Relationship Mapping Example with Spring Boot</a>
-- <a href="https://hellokoding.com/jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-hsql/">JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot</a>
-</pre>
+            <p>This tutorial walks you through the process of mapping a Hibernate many-to-many relationship with Spring Boot, Spring Data JPA and HSQL</p>
 
 <h3 id="whatyoullneed">What you'll need</h3>
 
@@ -257,7 +246,7 @@ JPA Series with Spring Boot:
 
 <h3 id="projectstructure">Project structure</h3>
 
-<pre><code>├── src
+<pre><code class="language-bash">├── src
 │   └── main
 │       ├── java
 │       │   └── com
@@ -330,22 +319,14 @@ JPA Series with Spring Boot:
 <p><code>git@github.com:hellokoding/jpa-manytomany-springboot-hsql.git</code></p>
 
 <p><a href="https://github.com/hellokoding/jpa-manytomany-springboot-hsql">https://github.com/hellokoding/jpa-manytomany-springboot-hsql</a></p>
-
-<p><big></big></p>
-
-<p></p><pre>
-JPA Many-To-Many Examples:
-- <a href="https://hellokoding.com/jpa-many-to-many-relationship-mapping-example-with-spring-boot-hsql/">JPA Many-To-Many Relationship Mapping Example with Spring Boot</a>
-- <a href="https://hellokoding.com/jpa-many-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/">JPA Many-To-Many Relationship Mapping Example with Spring Boot, Maven and MySQL</a>
-</pre>
             <div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/jpa/">JPA and Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
           </div>
 
           <div class="love-post">Love this post?</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=JPA%20Many-To-Many%20Relationship%20Mapping%20Example%20with%20Spring%20Boot%2C%20Spring%20Data%20JPA%2C%20and%20HSQL&amp;url=http://hellokoding.com/jpa-many-to-many-relationship-mapping-example-with-spring-boot-hsql/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Hibernate%20Many%20To%20Many%20Relationship%20Mapping%20Example%20with%20Spring%20Boot%2C%20Spring%20Data%20JPA%20and%20HSQL&amp;url=http://hellokoding.com/jpa-many-to-many-relationship-mapping-example-with-spring-boot-hsql/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Tweet</span>
   </a>
@@ -398,7 +379,7 @@ JPA Many-To-Many Examples:
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../jpa-one-to-many-relationship-mapping-example-with-spring-boot-hsql/" class="block" title="JPA One-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, HSQL">
+       <a href="../jpa-one-to-many-relationship-mapping-example-with-spring-boot-hsql/" class="block" title="Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL">
       <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-tutorials-9.png) ">
       </div>
     </a>
@@ -408,14 +389,14 @@ JPA Many-To-Many Examples:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-04-29">29 April 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="JPA One-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, HSQL" href="../jpa-one-to-many-relationship-mapping-example-with-spring-boot-hsql/">JPA One-To-Many Relationship Mapping Example with Spring Boot, Spring Data JPA, HSQL</a>
+        <a title="Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL" href="../jpa-one-to-many-relationship-mapping-example-with-spring-boot-hsql/">Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/jpa/">JPA and Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
 
    </div>
@@ -425,7 +406,7 @@ JPA Many-To-Many Examples:
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
   <div class="post-card ">
-       <a href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-hsql/" class="block" title="JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL">
+       <a href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-hsql/" class="block" title="Hibernate Many To Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL">
       <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/01/jpa-tutorials-11.png) ">
       </div>
     </a>
@@ -435,14 +416,14 @@ JPA Many-To-Many Examples:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-01-25">25 January 2019</time>
+        <time class="post-card__meta__date" datetime="2019-04-29">29 April 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL" href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-hsql/">JPA Many-To-Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL</a>
+        <a title="Hibernate Many To Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL" href="../jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-hsql/">Hibernate Many To Many Extra Columns Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/jpa/">JPA/Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/jpa/">JPA and Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
 
    </div>
