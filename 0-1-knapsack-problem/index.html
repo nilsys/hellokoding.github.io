@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Given a set, find all subsets</title>
+  <title>0-1 Knapsack Problem</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,25 +14,25 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=59f377ff65">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=59f377ff65">
    
-  <link rel="canonical" href="http://hellokoding.com/given-a-set-find-all-subsets/">
+  <link rel="canonical" href="http://hellokoding.com/0-1-knapsack-problem/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Given a set, find all subsets">
-    <meta property="og:description" content="Problem Given an array a, find all its subsets For example, array [1, 2, 3] will have the following subsets [] [1] [1, 2] [1, 2, 3] [1, 3] [2] [2, 3] [3] Backtracking approach">
-    <meta property="og:url" content="http://hellokoding.com/given-a-set-find-all-subsets/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/03/backtracking-1.png">
-    <meta property="article:published_time" content="2019-03-14T15:41:00.000Z">
-    <meta property="article:modified_time" content="2019-03-23T12:47:22.000Z">
+    <meta property="og:title" content="0-1 Knapsack Problem">
+    <meta property="og:description" content="Problem Given a set of items, each with a weight and a value. Determine the maximum value of items to include in a collection so that the total weight is less than or equal to the given limit Example Given 3 items with weights = {10, 20 , 30} and values = {60,">
+    <meta property="og:url" content="http://hellokoding.com/0-1-knapsack-problem/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/04/dynamic-programming.png">
+    <meta property="article:published_time" content="2019-04-30T14:55:24.000Z">
+    <meta property="article:modified_time" content="2019-04-30T16:36:29.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Given a set, find all subsets">
-    <meta name="twitter:description" content="Problem Given an array a, find all its subsets For example, array [1, 2, 3] will have the following subsets [] [1] [1, 2] [1, 2, 3] [1, 3] [2] [2, 3] [3] Backtracking approach">
-    <meta name="twitter:url" content="http://hellokoding.com/given-a-set-find-all-subsets/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/03/backtracking-1.png">
+    <meta name="twitter:title" content="0-1 Knapsack Problem">
+    <meta name="twitter:description" content="Problem Given a set of items, each with a weight and a value. Determine the maximum value of items to include in a collection so that the total weight is less than or equal to the given limit Example Given 3 items with weights = {10, 20 , 30} and values = {60,">
+    <meta name="twitter:url" content="http://hellokoding.com/0-1-knapsack-problem/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/04/dynamic-programming.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He has 12+ years hands-on experience of designing and developing web and data services. He was born to make online coding courses, tutorials and examples"
     },
-    "headline": "Given a set, find all subsets",
-    "url": "http://hellokoding.com/given-a-set-find-all-subsets/",
-    "datePublished": "2019-03-14T15:41:00.000Z",
-    "dateModified": "2019-03-23T12:47:22.000Z",
-    "image": "http://hellokoding.com/content/images/2019/03/backtracking-1.png",
+    "headline": "0-1 Knapsack Problem",
+    "url": "http://hellokoding.com/0-1-knapsack-problem/",
+    "datePublished": "2019-04-30T14:55:24.000Z",
+    "dateModified": "2019-04-30T16:36:29.000Z",
+    "image": "http://hellokoding.com/content/images/2019/04/dynamic-programming.png",
     "keywords": "Algorithm",
-    "description": "Problem Given an array a, find all its subsets For example, array [1, 2, 3] will have the following subsets [] [1] [1, 2] [1, 2, 3] [1, 3] [2] [2, 3] [3] Backtracking approach"
+    "description": "Problem Given a set of items, each with a weight and a value. Determine the maximum value of items to include in a collection so that the total weight is less than or equal to the given limit Example Given 3 items with weights &#x3D; {10, 20 , 30} and values &#x3D; {60,"
 }
     </script>
 
@@ -219,8 +219,8 @@ ghost.init({
         <article class="post tag-algorithm">
 
           <header class="post__header">
-            <h2 class="post__title">Given a set, find all subsets</h2>
-            <time class="post__date" datetime="2019-03-23">Last modified @ 23 March 2019</time>
+            <h2 class="post__title">0-1 Knapsack Problem</h2>
+            <time class="post__date" datetime="2019-04-30">Last modified @ 30 April 2019</time>
           </header>
 
           <div class="post-content">
@@ -229,24 +229,37 @@ ghost.init({
             </div>
             <h3 id="problem">Problem</h3>
 
-<p>Given an array <code>a</code>, find all its subsets</p>
+<p>Given a set of items, each with a weight and a value. Determine the maximum value of items to include in a collection so that the total weight is less than or equal to the given limit</p>
 
-<p>For example, array <code>[1, 2, 3]</code> will have the following subsets</p>
+<h3 id="example">Example</h3>
 
-<pre><code class="language-bash">[]
-[1]
-[1, 2]
-[1, 2, 3]
-[1, 3]
-[2]
-[2, 3]
-[3]
+<p>Given 3 items with weights = {10, 20 , 30} and values = {60, 100, 120} respectively. The maximum value of items to include in the 60 weight limit knapsack is 220</p>
+
+<h3 id="dynamicprogrammingapproach">Dynamic programming approach</h3>
+
+<p>Fill up a cache matrix <code>int[][] cache = new int[N+1][W+1]</code> with</p>
+
+<ul>
+<li>0 to <code>N</code> items as columns</li>
+<li>0 to <code>W</code> weight-limit as rows</li>
+<li>each matrix cell <code>cache[i, w]</code> is the maximum value can be attained with weight less than or equal to <code>w</code> using <code>i</code> items</li>
+</ul>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/DP_Knapsack.java">
 </code></pre>
 
-<h3 id="backtrackingapproach">Backtracking approach</h3>
+<ul>
+<li><code>weights[i-1]</code> is weight of current item as <code>int[] weights</code> is 0 based index</li>
+<li><code>values[i-1]</code> is value of current item as <code>int[] values</code> is 0 based index</li>
+<li><code>cache[i][w]</code> is maximum value of current item</li>
+</ul>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/BackTracking_FindAllSubsets.java">
-</code></pre>
+<h3 id="references">References</h3>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Knapsack_problem">https://en.wikipedia.org/wiki/Knapsack_problem</a></li>
+<li><a href="https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/">https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/</a></li>
+</ul>
             <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
             </div>
@@ -254,11 +267,11 @@ ghost.init({
 
           <div class="love-post">Love this post?</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Given%20a%20set%2C%20find%20all%20subsets&amp;url=http://hellokoding.com/given-a-set-find-all-subsets/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=0-1%20Knapsack%20Problem&amp;url=http://hellokoding.com/0-1-knapsack-problem/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Tweet</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/given-a-set-find-all-subsets/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/0-1-knapsack-problem/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Share</span>
   </a>
@@ -307,8 +320,8 @@ ghost.init({
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../given-two-strings-find-a-minimum-substring/" class="block" title="Given two strings, find a minimum substring">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/03/window-sliding-2.png) ">
+       <a href="../given-a-string-find-all-permutations/" class="block" title="Given a string, find all permutations">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/04/backtracking.png) ">
       </div>
     </a>
 
@@ -317,11 +330,11 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-03-23">23 March 2019</time>
+        <time class="post-card__meta__date" datetime="2019-04-29">29 April 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Given two strings, find a minimum substring" href="../given-two-strings-find-a-minimum-substring/">Given two strings, find a minimum substring</a>
+        <a title="Given a string, find all permutations" href="../given-a-string-find-all-permutations/">Given a string, find all permutations</a>
       </h2>
 <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
@@ -332,32 +345,6 @@ ghost.init({
   </div>
 </article>
 
-    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
-  <div class="post-card ">
-       <a href="../count-unique-paths-in-a-grid-maze-matrix/" class="block" title="Unique Paths Without Obstacles">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/03/dynamic-programming.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-04-30">30 April 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Unique Paths Without Obstacles" href="../count-unique-paths-in-a-grid-maze-matrix/">Unique Paths Without Obstacles</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
 
   </div>
 </div>          <section class="disqus">
@@ -365,8 +352,8 @@ ghost.init({
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/given-a-set-find-all-subsets/';
-      this.page.identifier = '104';
+      this.page.url = 'http://hellokoding.com/0-1-knapsack-problem/';
+      this.page.identifier = '116';
     };
 
     (function() {
