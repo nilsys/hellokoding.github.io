@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>0-1 Knapsack Problem</title>
+  <title>Box Stacking Problem</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,25 +14,25 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=59f377ff65">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=59f377ff65">
    
-  <link rel="canonical" href="http://hellokoding.com/0-1-knapsack-problem/">
+  <link rel="canonical" href="http://hellokoding.com/box-stacking-problem/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="0-1 Knapsack Problem">
-    <meta property="og:description" content="Problem Given a set of items, each with a weight and a value. Determine the maximum value of items to include in a collection so that the total weight is less than or equal to a given limit Example Given 3 items with weights = {10, 20 , 30} and values = {60,">
-    <meta property="og:url" content="http://hellokoding.com/0-1-knapsack-problem/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/04/dynamic-programming.png">
-    <meta property="article:published_time" content="2019-04-30T14:55:24.000Z">
-    <meta property="article:modified_time" content="2019-05-01T04:19:26.000Z">
+    <meta property="og:title" content="Box Stacking Problem">
+    <meta property="og:description" content="Problem Given a set of rectangular 3D boxes, each with height, width and depth. Find the maximum height of the stack created from them The lower box must have area larger than the higher box A box can be rotated to any side Can use multiple instances of the same">
+    <meta property="og:url" content="http://hellokoding.com/box-stacking-problem/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/dynamic-programming.png">
+    <meta property="article:published_time" content="2019-05-01T16:07:09.000Z">
+    <meta property="article:modified_time" content="2019-05-01T16:07:37.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="0-1 Knapsack Problem">
-    <meta name="twitter:description" content="Problem Given a set of items, each with a weight and a value. Determine the maximum value of items to include in a collection so that the total weight is less than or equal to a given limit Example Given 3 items with weights = {10, 20 , 30} and values = {60,">
-    <meta name="twitter:url" content="http://hellokoding.com/0-1-knapsack-problem/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/04/dynamic-programming.png">
+    <meta name="twitter:title" content="Box Stacking Problem">
+    <meta name="twitter:description" content="Problem Given a set of rectangular 3D boxes, each with height, width and depth. Find the maximum height of the stack created from them The lower box must have area larger than the higher box A box can be rotated to any side Can use multiple instances of the same">
+    <meta name="twitter:url" content="http://hellokoding.com/box-stacking-problem/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/05/dynamic-programming.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He has 12+ years hands-on experience of designing and developing web and data services. He was born to make online coding courses, tutorials and examples"
     },
-    "headline": "0-1 Knapsack Problem",
-    "url": "http://hellokoding.com/0-1-knapsack-problem/",
-    "datePublished": "2019-04-30T14:55:24.000Z",
-    "dateModified": "2019-05-01T04:19:26.000Z",
-    "image": "http://hellokoding.com/content/images/2019/04/dynamic-programming.png",
+    "headline": "Box Stacking Problem",
+    "url": "http://hellokoding.com/box-stacking-problem/",
+    "datePublished": "2019-05-01T16:07:09.000Z",
+    "dateModified": "2019-05-01T16:07:37.000Z",
+    "image": "http://hellokoding.com/content/images/2019/05/dynamic-programming.png",
     "keywords": "Algorithm",
-    "description": "Problem Given a set of items, each with a weight and a value. Determine the maximum value of items to include in a collection so that the total weight is less than or equal to a given limit Example Given 3 items with weights &#x3D; {10, 20 , 30} and values &#x3D; {60,"
+    "description": "Problem Given a set of rectangular 3D boxes, each with height, width and depth. Find the maximum height of the stack created from them The lower box must have area larger than the higher box A box can be rotated to any side Can use multiple instances of the same"
 }
     </script>
 
@@ -219,7 +219,7 @@ ghost.init({
         <article class="post tag-algorithm">
 
           <header class="post__header">
-            <h2 class="post__title">0-1 Knapsack Problem</h2>
+            <h2 class="post__title">Box Stacking Problem</h2>
             <time class="post__date" datetime="2019-05-01">Last modified @ 01 May 2019</time>
           </header>
 
@@ -229,41 +229,28 @@ ghost.init({
             </div>
             <h3 id="problem">Problem</h3>
 
-<p>Given a set of items, each with a weight and a value. Determine the maximum value of items to include in a collection so that the total weight is less than or equal to a given limit</p>
+<p>Given a set of rectangular 3D boxes, each with height, width and depth. Find the maximum height of the stack created from them</p>
 
-<h3 id="example">Example</h3>
-
-<p>Given 3 items with weights = {10, 20 , 30} and values = {60, 100, 120} respectively, knapsack weight capacity is 50. The maximum value of items to include in the knapsack is 220</p>
+<ul>
+<li>The lower box must have area larger than the higher box</li>
+<li>A box can be rotated to any side</li>
+<li>Can use multiple instances of the same box</li>
+</ul>
 
 <h3 id="dynamicprogrammingapproach">Dynamic programming approach</h3>
 
-<p>Fill up a cache matrix <code>int[][] cache = new int[N+1][W+1]</code> with</p>
-
 <ul>
-<li>0 to <code>N</code> items as columns</li>
-<li>0 to <code>W</code> weight-limit as rows</li>
-<li>each matrix cell <code>cache[i][w]</code> is the maximum value can be attained with weight less than or equal to <code>w</code> using <code>i</code> items</li>
+<li><p>Max height of stack at <code>i</code> = max height of stack at <code>j</code> + height of box <code>i</code> with <code>i &gt; j</code></p></li>
+<li><p>Each box has 3 instances to try as it can be rotated to any side</p></li>
 </ul>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/DP_Knapsack.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/DP_BoxStacking.java">
 </code></pre>
-
-<ul>
-<li><code>i</code> is the current item</li>
-<li><code>w</code> is the current weight limit</li>
-<li><code>weights[i-1]</code> is weight of current item as <code>int[] weights</code> is 0 based index</li>
-<li><code>values[i-1]</code> is value of current item as <code>int[] values</code> is 0 based index</li>
-<li><code>cache[i][w]</code> is maximum value of current item as <code>int[][] cache</code> is 1 based index</li>
-<li><code>weights[i-1] &gt; w</code> weight of the current item is more than the weight limit</li>
-<li><code>cache[i][w] = cache[i-1][w]</code> excludes the current item</li>
-<li><code>cache[i-1][w-weights[i-1]] + values[i-1]</code> includes the current item</li>
-</ul>
 
 <h3 id="references">References</h3>
 
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Knapsack_problem">https://en.wikipedia.org/wiki/Knapsack_problem</a></li>
-<li><a href="https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/">https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/</a></li>
+<li><a href="https://www.geeksforgeeks.org/box-stacking-problem-dp-22/">https://www.geeksforgeeks.org/box-stacking-problem-dp-22/</a></li>
 </ul>
             <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
@@ -272,11 +259,11 @@ ghost.init({
 
           <div class="love-post">Love this post?</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=0-1%20Knapsack%20Problem&amp;url=http://hellokoding.com/0-1-knapsack-problem/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Box%20Stacking%20Problem&amp;url=http://hellokoding.com/box-stacking-problem/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Tweet</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/0-1-knapsack-problem/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/box-stacking-problem/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Share</span>
   </a>
@@ -325,35 +312,8 @@ ghost.init({
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../given-a-string-find-all-permutations/" class="block" title="Given a string, find all permutations">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/04/backtracking.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-04-29">29 April 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Given a string, find all permutations" href="../given-a-string-find-all-permutations/">Given a string, find all permutations</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-
-    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
-  <div class="post-card ">
-       <a href="../box-stacking-problem/" class="block" title="Box Stacking Problem">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/05/dynamic-programming.png) ">
+       <a href="../0-1-knapsack-problem/" class="block" title="0-1 Knapsack Problem">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/04/dynamic-programming.png) ">
       </div>
     </a>
 
@@ -366,7 +326,7 @@ ghost.init({
       </div>
 
       <h2 class="post-card__title">
-        <a title="Box Stacking Problem" href="../box-stacking-problem/">Box Stacking Problem</a>
+        <a title="0-1 Knapsack Problem" href="../0-1-knapsack-problem/">0-1 Knapsack Problem</a>
       </h2>
 <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
@@ -377,14 +337,15 @@ ghost.init({
   </div>
 </article>
 
+
   </div>
 </div>          <section class="disqus">
   <h4 class="heading">Comments</h4>                          
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/0-1-knapsack-problem/';
-      this.page.identifier = '116';
+      this.page.url = 'http://hellokoding.com/box-stacking-problem/';
+      this.page.identifier = '117';
     };
 
     (function() {
