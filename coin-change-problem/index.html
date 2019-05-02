@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Two Pointers Tutorial and Example with The 2Sum Problem</title>
+  <title>Coin Change Problem</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,25 +14,25 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=59f377ff65">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=59f377ff65">
    
-  <link rel="canonical" href="http://hellokoding.com/two-pointers-tutorial-and-example/">
+  <link rel="canonical" href="http://hellokoding.com/coin-change-problem/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Two Pointers Tutorial and Example with The 2Sum Problem">
-    <meta property="og:description" content="Two pointers is a method for iterating over a linear collection, such as array list and string, by maintaining two indices instead of one to reduce the time complexity of the solution Let's see a specific example The 2Sum Problem Given an array of integers A[N] and an integer">
-    <meta property="og:url" content="http://hellokoding.com/two-pointers-tutorial-and-example/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/03/two-pointers.png">
-    <meta property="article:published_time" content="2019-03-16T07:31:05.000Z">
-    <meta property="article:modified_time" content="2019-03-23T12:45:52.000Z">
+    <meta property="og:title" content="Coin Change Problem">
+    <meta property="og:description" content="Problem Given a set of infinite coins Find the number of ways of making a change for a specific amount of money, without considering the order of the coins Example Input: given a set of infinite coins {2, 3, 1}. Find the number of ways of making change for 4">
+    <meta property="og:url" content="http://hellokoding.com/coin-change-problem/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/dynamic-programming-1.png">
+    <meta property="article:published_time" content="2019-05-02T15:39:09.000Z">
+    <meta property="article:modified_time" content="2019-05-02T16:26:42.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Two Pointers Tutorial and Example with The 2Sum Problem">
-    <meta name="twitter:description" content="Two pointers is a method for iterating over a linear collection, such as array list and string, by maintaining two indices instead of one to reduce the time complexity of the solution Let's see a specific example The 2Sum Problem Given an array of integers A[N] and an integer">
-    <meta name="twitter:url" content="http://hellokoding.com/two-pointers-tutorial-and-example/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/03/two-pointers.png">
+    <meta name="twitter:title" content="Coin Change Problem">
+    <meta name="twitter:description" content="Problem Given a set of infinite coins Find the number of ways of making a change for a specific amount of money, without considering the order of the coins Example Input: given a set of infinite coins {2, 3, 1}. Find the number of ways of making change for 4">
+    <meta name="twitter:url" content="http://hellokoding.com/coin-change-problem/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/05/dynamic-programming-1.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He has 12+ years hands-on experience of designing and developing web and data services. He was born to make online coding courses, tutorials and examples"
     },
-    "headline": "Two Pointers Tutorial and Example with The 2Sum Problem",
-    "url": "http://hellokoding.com/two-pointers-tutorial-and-example/",
-    "datePublished": "2019-03-16T07:31:05.000Z",
-    "dateModified": "2019-03-23T12:45:52.000Z",
-    "image": "http://hellokoding.com/content/images/2019/03/two-pointers.png",
+    "headline": "Coin Change Problem",
+    "url": "http://hellokoding.com/coin-change-problem/",
+    "datePublished": "2019-05-02T15:39:09.000Z",
+    "dateModified": "2019-05-02T16:26:42.000Z",
+    "image": "http://hellokoding.com/content/images/2019/05/dynamic-programming-1.png",
     "keywords": "Algorithm",
-    "description": "Two pointers is a method for iterating over a linear collection, such as array list and string, by maintaining two indices instead of one to reduce the time complexity of the solution Let&#x27;s see a specific example The 2Sum Problem Given an array of integers A[N] and an integer"
+    "description": "Problem Given a set of infinite coins Find the number of ways of making a change for a specific amount of money, without considering the order of the coins Example Input: given a set of infinite coins {2, 3, 1}. Find the number of ways of making change for 4"
 }
     </script>
 
@@ -219,28 +219,54 @@ ghost.init({
         <article class="post tag-algorithm">
 
           <header class="post__header">
-            <h2 class="post__title">Two Pointers Tutorial and Example with The 2Sum Problem</h2>
-            <time class="post__date" datetime="2019-03-23">Last modified @ 23 March 2019</time>
+            <h2 class="post__title">Coin Change Problem</h2>
+            <time class="post__date" datetime="2019-05-02">Last modified @ 02 May 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
             </div>
-            <p>Two pointers is a method for iterating over a linear collection, such as array list and string, by maintaining two indices instead of one to reduce the time complexity of the solution</p>
+            <h3 id="problem">Problem</h3>
 
-<p>Let's see a specific example</p>
+<ul>
+<li>Given a set of infinite coins</li>
+<li>Find the number of ways of making a change for a specific amount of money, without considering the order of the coins</li>
+</ul>
 
-<h3 id="the2sumproblem">The 2Sum Problem</h3>
+<h3 id="example">Example</h3>
 
-<p>Given an array of integers <code>A[N]</code> and an integer number <code>targetSum</code></p>
+<ul>
+<li>Input: given a set of infinite coins {2, 3, 1}. Find the number of ways of making change for 4</li>
+<li>Expected output: 4</li>
+<li>Explanation: those 4 ways are {1, 1, 1, 1}, {1, 1, 2}, {1, 3} and {2, 2}</li>
+</ul>
 
-<p>Find if existing in <code>A</code> two integers <code>A[i]</code> and <code>A[j]</code> such that <code>A[i] + A[j] = targetSum</code></p>
+<h3 id="approach">Approach</h3>
 
-<h3 id="twopointersapproach">Two pointers approach</h3>
+<p>For each coin in the set <code>c[i]</code>, calculate the ways of making change <code>w[j]</code> with <code>c[i] &lt;= j &lt;= target</code></p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/TwoPointers_2Sum.java">
+<p><code>w[j] = w[j] + w[j - c[i]]</code></p>
+
+<p><code>w[target]</code> is the final result</p>
+
+<h3 id="implementation">Implementation</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/DP_CoinChange.java">
 </code></pre>
+
+<h3 id="complexity">Complexity</h3>
+
+<ul>
+<li>Time complexity: O(nm) with n is the change target, m is the number of coins</li>
+<li>Space complexity: O(n) with n is the change target</li>
+</ul>
+
+<h3 id="references">References</h3>
+
+<ul>
+<li><a href="https://www.geeksforgeeks.org/coin-change-dp-7/">https://www.geeksforgeeks.org/coin-change-dp-7/</a></li>
+</ul>
             <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
             </div>
@@ -248,11 +274,11 @@ ghost.init({
 
           <div class="love-post">Love this post?</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Two%20Pointers%20Tutorial%20and%20Example%20with%20The%202Sum%20Problem&amp;url=http://hellokoding.com/two-pointers-tutorial-and-example/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Coin%20Change%20Problem&amp;url=http://hellokoding.com/coin-change-problem/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Tweet</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/two-pointers-tutorial-and-example/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/coin-change-problem/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Share</span>
   </a>
@@ -300,39 +326,9 @@ ghost.init({
   <div class="post-prev-next-pagination post-list">
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
-  <div class="post-card  post-card--featured ">
-       <a href="../algorithm-course-with-tutorials-and-examples-series/" class="block" title="Algorithms Bootcamp for your next Coding Interview">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/03/agorithm-course.png) ">
-        <span title="Featured Post">
-          <span class="post-card--featured__icon" data-icon="ei-star" data-size="s"></span>
-        </span>
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-05-02">02 May 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Algorithms Bootcamp for your next Coding Interview" href="../algorithm-course-with-tutorials-and-examples-series/">Algorithms Bootcamp for your next Coding Interview</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a><a href="../tag/courses/">Courses</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-
-    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
   <div class="post-card ">
-       <a href="../the-3sum-problem/" class="block" title="3Sum Problem">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/03/two-pointers-1.png) ">
+       <a href="../box-stacking-problem/" class="block" title="Box Stacking Problem">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/05/dynamic-programming.png) ">
       </div>
     </a>
 
@@ -341,11 +337,11 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-04-27">27 April 2019</time>
+        <time class="post-card__meta__date" datetime="2019-05-01">01 May 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="3Sum Problem" href="../the-3sum-problem/">3Sum Problem</a>
+        <a title="Box Stacking Problem" href="../box-stacking-problem/">Box Stacking Problem</a>
       </h2>
 <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
@@ -356,14 +352,15 @@ ghost.init({
   </div>
 </article>
 
+
   </div>
 </div>          <section class="disqus">
   <h4 class="heading">Comments</h4>                          
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/two-pointers-tutorial-and-example/';
-      this.page.identifier = '107';
+      this.page.url = 'http://hellokoding.com/coin-change-problem/';
+      this.page.identifier = '118';
     };
 
     (function() {
