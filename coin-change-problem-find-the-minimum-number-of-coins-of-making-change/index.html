@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Unique Paths Without Obstacles</title>
+  <title>Coin Change Problem: Find the minimum number of coins to making change</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,25 +14,25 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=59f377ff65">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=59f377ff65">
    
-  <link rel="canonical" href="http://hellokoding.com/count-unique-paths-in-a-grid-maze-matrix/">
+  <link rel="canonical" href="http://hellokoding.com/coin-change-problem-find-the-minimum-number-of-coins-of-making-change/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Unique Paths Without Obstacles">
-    <meta property="og:description" content="Problem Given a 2D array A[M][N], aka Grid / Maze / Matrix Write an algorithm to count the number of unique paths to reach to A[M-1][N-1] from A[0][0] At any cell (x, y), you can either go to (x+1, y) or (x, y+1) Example">
-    <meta property="og:url" content="http://hellokoding.com/count-unique-paths-in-a-grid-maze-matrix/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/03/dynamic-programming.png">
-    <meta property="article:published_time" content="2019-03-15T15:18:27.000Z">
-    <meta property="article:modified_time" content="2019-05-03T06:48:46.000Z">
+    <meta property="og:title" content="Coin Change Problem: Find the minimum number of coins to making change">
+    <meta property="og:description" content="Problem Given a set of infinite coins Find the minimum number of coins to making change for a specific amount of money, without considering the order of the coins Example Input: given a set of infinite coins {2, 3, 1}. Find the minimum number of coins of making change for">
+    <meta property="og:url" content="http://hellokoding.com/coin-change-problem-find-the-minimum-number-of-coins-of-making-change/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/dynamic-programming-2.png">
+    <meta property="article:published_time" content="2019-05-03T10:17:10.000Z">
+    <meta property="article:modified_time" content="2019-05-03T10:25:34.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Unique Paths Without Obstacles">
-    <meta name="twitter:description" content="Problem Given a 2D array A[M][N], aka Grid / Maze / Matrix Write an algorithm to count the number of unique paths to reach to A[M-1][N-1] from A[0][0] At any cell (x, y), you can either go to (x+1, y) or (x, y+1) Example">
-    <meta name="twitter:url" content="http://hellokoding.com/count-unique-paths-in-a-grid-maze-matrix/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/03/dynamic-programming.png">
+    <meta name="twitter:title" content="Coin Change Problem: Find the minimum number of coins to making change">
+    <meta name="twitter:description" content="Problem Given a set of infinite coins Find the minimum number of coins to making change for a specific amount of money, without considering the order of the coins Example Input: given a set of infinite coins {2, 3, 1}. Find the minimum number of coins of making change for">
+    <meta name="twitter:url" content="http://hellokoding.com/coin-change-problem-find-the-minimum-number-of-coins-of-making-change/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/05/dynamic-programming-2.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He has 12+ years hands-on experience of designing and developing web and data services. He was born to make online coding courses, tutorials and examples"
     },
-    "headline": "Unique Paths Without Obstacles",
-    "url": "http://hellokoding.com/count-unique-paths-in-a-grid-maze-matrix/",
-    "datePublished": "2019-03-15T15:18:27.000Z",
-    "dateModified": "2019-05-03T06:48:46.000Z",
-    "image": "http://hellokoding.com/content/images/2019/03/dynamic-programming.png",
+    "headline": "Coin Change Problem: Find the minimum number of coins to making change",
+    "url": "http://hellokoding.com/coin-change-problem-find-the-minimum-number-of-coins-of-making-change/",
+    "datePublished": "2019-05-03T10:17:10.000Z",
+    "dateModified": "2019-05-03T10:25:34.000Z",
+    "image": "http://hellokoding.com/content/images/2019/05/dynamic-programming-2.png",
     "keywords": "Algorithm",
-    "description": "Problem Given a 2D array A[M][N], aka Grid / Maze / Matrix Write an algorithm to count the number of unique paths to reach to A[M-1][N-1] from A[0][0] At any cell (x, y), you can either go to (x+1, y) or (x, y+1) Example"
+    "description": "Problem Given a set of infinite coins Find the minimum number of coins to making change for a specific amount of money, without considering the order of the coins Example Input: given a set of infinite coins {2, 3, 1}. Find the minimum number of coins of making change for"
 }
     </script>
 
@@ -219,7 +219,7 @@ ghost.init({
         <article class="post tag-algorithm">
 
           <header class="post__header">
-            <h2 class="post__title">Unique Paths Without Obstacles</h2>
+            <h2 class="post__title">Coin Change Problem: Find the minimum number of coins to making change</h2>
             <time class="post__date" datetime="2019-05-03">Last modified @ 03 May 2019</time>
           </header>
 
@@ -229,31 +229,44 @@ ghost.init({
             </div>
             <h3 id="problem">Problem</h3>
 
-<p>Given a 2D array A[M][N], aka Grid / Maze / Matrix</p>
-
-<p>Write an algorithm to count the number of unique paths to reach to A[M-1][N-1] from A[0][0]</p>
-
-<p>At any cell (x, y), you can either go to (x+1, y) or (x, y+1)</p>
+<ul>
+<li>Given a set of infinite coins</li>
+<li>Find the minimum number of coins to making change for a specific amount of money, without considering the order of the coins</li>
+</ul>
 
 <h3 id="example">Example</h3>
 
-<p>Input <code>A[3][3]</code> with values <code>{{0, 0, 0}, {0, 0, 0}, {0, 0, 0}}</code></p>
-
-<p>Expected output <code>6</code></p>
+<ul>
+<li>Input: given a set of infinite coins {2, 3, 1}. Find the minimum number of coins of making change for 3</li>
+<li>Expected output: 1</li>
+<li>Explanation: there're 3 ways to making change for 3: {3}, {1, 1, 1}, {1, 2}, minimum is {3}</li>
+</ul>
 
 <h3 id="approach">Approach</h3>
 
-<p>Using dynamic programming bottom-up</p>
-
 <ul>
-<li>Fill up matrix <code>cache[i][j]</code> to count unique paths to <code>(i,j)</code></li>
-<li><code>cache[i][j] = cache[i-1][j] + cache[i][j-1]</code> for each <code>(i,j)</code></li>
-<li><code>cache[i][0]</code> and <code>cache[0][j]</code> are base cases </li>
-<li><code>cache[rows-1][cols-1]</code> is final result</li>
+<li><p>To making change for a value <code>j</code>, need to use coins with value less than or equal to <code>j</code></p></li>
+<li><p>For each coin in the set <code>c[j]</code>, calculate the minimum number of coins to making change <code>m[i] = Math.min(m[i], m[i - c[j]]) + 1</code> with <code>c[j] &lt;= i &lt;= target</code>, <code>m[0] = 0</code> is base case, <code>m[target]</code> is the final result</p></li>
 </ul>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/DP_UniquePaths_WithOutObstacles.java">
+<h3 id="implementation">Implementation</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/DP_CoinChange2.java">
 </code></pre>
+
+<h3 id="complexity">Complexity</h3>
+
+<ul>
+<li>Time complexity: O(nm) with n is the change target, m is the number of coins</li>
+<li>Space complexity: O(n) with n is the change target</li>
+</ul>
+
+<h3 id="references">References</h3>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Change-making_problem">https://en.wikipedia.org/wiki/Change-making_problem</a></li>
+<li><a href="https://leetcode.com/problems/coin-change/">https://leetcode.com/problems/coin-change/</a></li>
+</ul>
             <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
             </div>
@@ -261,11 +274,11 @@ ghost.init({
 
           <div class="love-post">Love this post?</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Unique%20Paths%20Without%20Obstacles&amp;url=http://hellokoding.com/count-unique-paths-in-a-grid-maze-matrix/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Coin%20Change%20Problem%3A%20Find%20the%20minimum%20number%20of%20coins%20to%20making%20change&amp;url=http://hellokoding.com/coin-change-problem-find-the-minimum-number-of-coins-of-making-change/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Tweet</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/count-unique-paths-in-a-grid-maze-matrix/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/coin-change-problem-find-the-minimum-number-of-coins-of-making-change/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Share</span>
   </a>
@@ -314,35 +327,8 @@ ghost.init({
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../given-a-set-find-all-subsets/" class="block" title="Given a set, find all subsets">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/03/backtracking-1.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-03-23">23 March 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Given a set, find all subsets" href="../given-a-set-find-all-subsets/">Given a set, find all subsets</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-
-    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
-  <div class="post-card ">
-       <a href="../count-unique-paths-in-a-2d-array-grid-maze-matrix-with-obstacles/" class="block" title="Unique Paths With Obstacles">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/03/dynamic-programming-1.png) ">
+       <a href="../coin-change-problem/" class="block" title="Coin Change Problem: Find the total ways of making change">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/05/dynamic-programming-1.png) ">
       </div>
     </a>
 
@@ -355,7 +341,7 @@ ghost.init({
       </div>
 
       <h2 class="post-card__title">
-        <a title="Unique Paths With Obstacles" href="../count-unique-paths-in-a-2d-array-grid-maze-matrix-with-obstacles/">Unique Paths With Obstacles</a>
+        <a title="Coin Change Problem: Find the total ways of making change" href="../coin-change-problem/">Coin Change Problem: Find the total ways of making change</a>
       </h2>
 <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
@@ -366,14 +352,15 @@ ghost.init({
   </div>
 </article>
 
+
   </div>
 </div>          <section class="disqus">
   <h4 class="heading">Comments</h4>                          
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/count-unique-paths-in-a-grid-maze-matrix/';
-      this.page.identifier = '105';
+      this.page.url = 'http://hellokoding.com/coin-change-problem-find-the-minimum-number-of-coins-of-making-change/';
+      this.page.identifier = '119';
     };
 
     (function() {
