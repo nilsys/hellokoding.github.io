@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/coin-change-problem-find-the-minimum-number-of-coins-of-making-change/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/dynamic-programming-2.png">
     <meta property="article:published_time" content="2019-05-03T10:17:10.000Z">
-    <meta property="article:modified_time" content="2019-05-03T10:25:34.000Z">
+    <meta property="article:modified_time" content="2019-05-03T10:28:19.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Coin Change Problem: Find the minimum number of coins to making change",
     "url": "http://hellokoding.com/coin-change-problem-find-the-minimum-number-of-coins-of-making-change/",
     "datePublished": "2019-05-03T10:17:10.000Z",
-    "dateModified": "2019-05-03T10:25:34.000Z",
+    "dateModified": "2019-05-03T10:28:19.000Z",
     "image": "http://hellokoding.com/content/images/2019/05/dynamic-programming-2.png",
     "keywords": "Algorithm",
     "description": "Problem Given a set of infinite coins Find the minimum number of coins to making change for a specific amount of money, without considering the order of the coins Example Input: given a set of infinite coins {2, 3, 1}. Find the minimum number of coins of making change for"
@@ -245,7 +245,7 @@ ghost.init({
 <h3 id="approach">Approach</h3>
 
 <ul>
-<li><p>To making change for a value <code>j</code>, need to use coins with value less than or equal to <code>j</code></p></li>
+<li><p>To making change for a value <code>i</code>, need to use coins with value less than or equal to <code>i</code></p></li>
 <li><p>For each coin in the set <code>c[j]</code>, calculate the minimum number of coins to making change <code>m[i] = Math.min(m[i], m[i - c[j]]) + 1</code> with <code>c[j] &lt;= i &lt;= target</code>, <code>m[0] = 0</code> is base case, <code>m[target]</code> is the final result</p></li>
 </ul>
 
