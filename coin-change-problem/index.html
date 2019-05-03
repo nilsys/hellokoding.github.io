@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/coin-change-problem/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/dynamic-programming-1.png">
     <meta property="article:published_time" content="2019-05-02T15:39:09.000Z">
-    <meta property="article:modified_time" content="2019-05-03T03:01:11.000Z">
+    <meta property="article:modified_time" content="2019-05-03T05:47:15.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Coin Change Problem",
     "url": "http://hellokoding.com/coin-change-problem/",
     "datePublished": "2019-05-02T15:39:09.000Z",
-    "dateModified": "2019-05-03T03:01:11.000Z",
+    "dateModified": "2019-05-03T05:47:15.000Z",
     "image": "http://hellokoding.com/content/images/2019/05/dynamic-programming-1.png",
     "keywords": "Algorithm",
     "description": "Problem Given a set of infinite coins Find the number of ways of making a change for a specific amount of money, without considering the order of the coins Example Input: given a set of infinite coins {2, 3, 1}. Find the number of ways of making change for 4"
@@ -244,13 +244,10 @@ ghost.init({
 
 <h3 id="approach">Approach</h3>
 
-<p>For each coin in the set <code>c[i]</code>, calculate the ways of making change <code>w[j]</code> with <code>c[i] &lt;= j &lt;= target</code></p>
-
-<p><code>w[j] = w[j] + w[j - c[i]]</code></p>
-
-<p><code>w[0] = 1</code> is base case</p>
-
-<p><code>w[target]</code> is the final result</p>
+<ul>
+<li><p>To making change for a value <code>j</code>, need to use coins with value less than or equal to <code>j</code></p></li>
+<li><p>For each coin in the set <code>c[i]</code>, calculate the ways of making change <code>w[j] = w[j] + w[j - c[i]]</code> with <code>c[i] &lt;= j &lt;= target</code>, <code>w[0] = 1</code> is base case, <code>w[target]</code> is the final result</p></li>
+</ul>
 
 <h3 id="implementation">Implementation</h3>
 
