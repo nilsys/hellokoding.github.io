@@ -121,3 +121,7 @@ border-left: 2px solid;
 
 @media only screen and (min-width:64.063em){.sponsors-head .sponsors-head{margin-right:-16px;margin-left:-16px}}
 @media only screen and (min-width:64.063em){.sponsors-head{padding-left:32px;padding-right:32px}}
+
+.in-arcticle-ad {
+	margin: 20 0 20 0;
+}
