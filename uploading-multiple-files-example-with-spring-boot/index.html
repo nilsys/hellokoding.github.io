@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/uploading-multiple-files-example-with-spring-boot/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2017/02/uploadfiles-springboot-1.png">
     <meta property="article:published_time" content="2016-07-12T09:14:27.000Z">
-    <meta property="article:modified_time" content="2019-03-23T06:18:16.000Z">
+    <meta property="article:modified_time" content="2019-05-04T07:36:02.000Z">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Spring Boot File Upload Example with MultipartFile",
     "url": "http://hellokoding.com/uploading-multiple-files-example-with-spring-boot/",
     "datePublished": "2016-07-12T09:14:27.000Z",
-    "dateModified": "2019-03-23T06:18:16.000Z",
+    "dateModified": "2019-05-04T07:36:02.000Z",
     "image": "http://hellokoding.com/content/images/2017/02/uploadfiles-springboot-1.png",
     "keywords": "Spring Boot",
     "description": "In this tutorial, you will learn to build an example to upload multiple files in Spring Boot with MultipartFile What you&#x27;ll build What you&#x27;ll need JDK 8+ or OpenJDK 8+ Maven 3+ Stack Java Spring Boot Freemarker Project structure ├── src │   └── main │       ├── java │       │   └── com │       │       └── hellokoding │       │           └── uploadingfiles │       │               ├── Application.java │       │               └── UploadingController.java │       ├── resources"
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h2 class="post__title">Spring Boot File Upload Example with MultipartFile</h2>
-            <time class="post__date" datetime="2019-03-23">Last modified @ 23 March 2019</time>
+            <time class="post__date" datetime="2019-05-04">Last modified @ 04 May 2019</time>
           </header>
 
           <div class="post-content">
@@ -270,6 +270,8 @@ ghost.init({
 <pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-uploading-files/pom.xml">
 </code></pre>
 
+<h2 id="controllerandviewtemplate">Controller and View Template</h2>
+
 <h3 id="uploadingcontroller">Uploading Controller</h3>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-uploading-files/src/main/java/com/hellokoding/uploadingfiles/UploadingController.java">
@@ -284,6 +286,8 @@ ghost.init({
 </code></pre>
 
 <p><code>action="/"</code> and <code>method="POST"</code> map with <code>uploadingPost()</code> of <code>UploadingController</code>, <code>enctype="multipart/form-data"</code> works with <code>MultipartFile</code>.</p>
+
+<h2 id="configandrun">Config and Run</h2>
 
 <h3 id="applicationconfigurations">Application Configurations</h3>
 
