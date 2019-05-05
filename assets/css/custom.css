@@ -117,8 +117,8 @@ border-left: 2px solid;
 
 .sponsors-head{
 	margin:0 auto;
-	padding-left:13px;
-	padding-right:13px;
+	padding-left:26px;
+	padding-right:26px;
 	max-width:1350px;
 }
 .sponsors-head:after,.sponsors-head:before{
@@ -127,8 +127,8 @@ border-left: 2px solid;
 
 @media only screen and (min-width:64.063em){
 	.sponsors-head{
-		padding-left:16px;
-		padding-right:16px;
+		padding-left:32px;
+		padding-right:32px;
 	}
 
 	.social-icons .icon{
