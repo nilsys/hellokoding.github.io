@@ -115,15 +115,34 @@ border-left: 2px solid;
 	margin-bottom: 12px;
 }
 
-.row{max-width:1350px!important}
+.sponsors-head{
+	margin:0 auto;
+	padding-left:13px;
+	padding-right:13px;
+	max-width:1100px;
+	padding:0;
+	margin-right:-13px;
+	margin-left:-13px
+}
+.sponsors-head:after,.sponsors-head:before{
+	display:table;clear:both;content:" "
+}
 
-.sponsors-head{margin:0 auto;padding-left:13px;padding-right:13px;max-width:1100px}
-.sponsors-head:after,.sponsors-head:before{display:table;clear:both;content:" "}
-.sponsors-head .sponsors-head{padding:0;margin-right:-13px;margin-left:-13px}
+@media only screen and (min-width:64.063em){
+	.sponsors-head{
+		margin-right:-16px;
+		margin-left:-16px;
+		padding-left:32px;
+		padding-right:32px;
+	}
 
-@media only screen and (min-width:64.063em){.sponsors-head .sponsors-head{margin-right:-16px;margin-left:-16px}}
-@media only screen and (min-width:64.063em){.sponsors-head{padding-left:32px;padding-right:32px}}
+	.social-icons .icon{
+		top: 0px;
+	}
+}
 
 .in-arcticle-ad {
 	margin: 70 0;
 }
+
+.row{max-width:1350px!important}
