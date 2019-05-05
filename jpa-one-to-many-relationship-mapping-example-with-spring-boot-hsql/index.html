@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-hsql/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/jpa-one-to-many.png">
     <meta property="article:published_time" content="2016-07-04T08:18:40.000Z">
-    <meta property="article:modified_time" content="2019-05-05T14:34:55.000Z">
+    <meta property="article:modified_time" content="2019-05-05T17:07:43.000Z">
     <meta property="article:tag" content="JPA and Hibernate">
     <meta property="article:tag" content="Spring Boot">
     
@@ -64,7 +64,7 @@
     "headline": "JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and HSQL",
     "url": "http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-hsql/",
     "datePublished": "2016-07-04T08:18:40.000Z",
-    "dateModified": "2019-05-05T14:34:55.000Z",
+    "dateModified": "2019-05-05T17:07:43.000Z",
     "image": "http://hellokoding.com/content/images/2019/05/jpa-one-to-many.png",
     "keywords": "JPA and Hibernate, Spring Boot",
     "description": "This tutorial walks you through the process of mapping a Hibernate one-to-many relationship with Spring Boot, Spring Data JPA and HSQL What you&#x27;ll need JDK 1.7 or later Maven 3 or later Stack Spring Data JPA Spring Boot Init project structure and dependencies Project structure ├── src │   └── main │       ├── java │       │   └── com"
@@ -267,7 +267,7 @@ ghost.init({
 
 <h3 id="projectdependencies">Project dependencies</h3>
 
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/jpa-onetomany-springboot-hsql/blob/master/pom.xml">
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-hsql/pom.xml">
 </code></pre>
 
 <h2 id="definejpaentitiesandrepositories">Define JPA Entities and Repositories</h2>
@@ -282,10 +282,10 @@ ghost.init({
 
 <p>JPA Entity is defined with <code>@Entity</code> annotation, represent a table in your database.</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/jpa-onetomany-springboot-hsql/blob/master/src/main/java/com/hellokoding/jpa/model/Book.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-hsql/src/main/java/com/hellokoding/jpa/model/Book.java">
 </code></pre>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/jpa-onetomany-springboot-hsql/blob/master/src/main/java/com/hellokoding/jpa/model/BookCategory.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-hsql/src/main/java/com/hellokoding/jpa/model/BookCategory.java">
 </code></pre>
 
 <p><code>@Table</code> maps the entity with the table. If no <code>@Table</code> is defined, the default value is used: the class name of the entity.</p>
@@ -300,28 +300,26 @@ ghost.init({
 
 <p>Spring Data JPA contains some built-in <code>Repository</code> implemented some common functions to work with database: <code>findOne</code>, <code>findAll</code>, <code>save</code>,...All we need for this example is extend it.</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/jpa-onetomany-springboot-hsql/blob/master/src/main/java/com/hellokoding/jpa/repository/BookCategoryRepository.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-hsql/src/main/java/com/hellokoding/jpa/repository/BookCategoryRepository.java">
 </code></pre>
 
 <h2 id="definepropertiesandruntheapplication">Define properties and run the application</h2>
 
 <h3 id="applicationproperties">Application Properties</h3>
 
-<pre><code class="language-markup embedfile-https://github.com/hellokoding/jpa-onetomany-springboot-hsql/blob/master/src/main/resources/application.properties">
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-hsql/src/main/resources/application.properties">
 </code></pre>
 
 <h3 id="runtheapplication">Run the application</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/jpa-onetomany-springboot-hsql/blob/master/src/main/java/com/hellokoding/jpa/HelloJpaApplication.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-hsql/src/main/java/com/hellokoding/jpa/Application.java">
 </code></pre>
 
-<p>You can run the application using <code>mvn spring-boot:run</code>, JPA will insert data into <code>book_category</code> and <code>book</code> tables.</p>
+<p>You can run the application using <code>mvn spring-boot:run</code> and check the result in the console log</p>
 
 <h3 id="sourcecode">Source code</h3>
 
-<p><code>git@github.com:hellokoding/jpa-onetomany-springboot-hsql.git</code></p>
-
-<p><a href="https://github.com/hellokoding/jpa-onetomany-springboot-hsql">https://github.com/hellokoding/jpa-onetomany-springboot-hsql</a></p>
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-hsql">https://github.com/hellokoding/hellokoding-courses/tree/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-hsql</a></p>
             <div class="post__tags">
               <a href="../tag/jpa/">JPA and Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
