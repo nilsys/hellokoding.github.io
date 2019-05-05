@@ -6,7 +6,7 @@
   }
 
   var embedAds = function(){
-    var inArticle = [getAd(9057254562), getAd(5023528837), getAd(2932907338)];
+    var inArticle = [getAd(9057254562), getAd(5023528837), getAd(2932907338), getAd(5826378570), getAd(4869833202)];
     $("h2").not('.post-card__title,.post__title').each(function(i, ele){
       if (i < inArticle.length) {
         inArticle[i].insertBefore(ele);
