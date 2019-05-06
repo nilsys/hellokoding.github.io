@@ -20,18 +20,18 @@
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot">
-    <meta property="og:description" content="This tutorial will walk you through the steps of creating a Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World Example">
+    <meta property="og:description" content="This tutorial will walk you through the steps of creating a Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot What you'll build You'll build 3 separated services: 1 Authentication Service: will be deployed at localhost:8080. 2 Resource Services (to simplify, we use the same">
     <meta property="og:url" content="http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2016/08/hello-sso-jwt-1.gif">
     <meta property="article:published_time" content="2016-08-01T14:28:32.000Z">
-    <meta property="article:modified_time" content="2019-02-08T05:35:25.000Z">
+    <meta property="article:modified_time" content="2019-05-06T13:39:58.000Z">
     <meta property="article:tag" content="Security">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot">
-    <meta name="twitter:description" content="This tutorial will walk you through the steps of creating a Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World Example">
+    <meta name="twitter:description" content="This tutorial will walk you through the steps of creating a Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot What you'll build You'll build 3 separated services: 1 Authentication Service: will be deployed at localhost:8080. 2 Resource Services (to simplify, we use the same">
     <meta name="twitter:url" content="http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2016/08/hello-sso-jwt-1.gif">
     <meta name="twitter:label1" content="Written by">
@@ -64,10 +64,10 @@
     "headline": "Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot",
     "url": "http://hellokoding.com/hello-single-sign-on-sso-with-json-web-token-jwt-spring-boot/",
     "datePublished": "2016-08-01T14:28:32.000Z",
-    "dateModified": "2019-02-08T05:35:25.000Z",
+    "dateModified": "2019-05-06T13:39:58.000Z",
     "image": "http://hellokoding.com/content/images/2016/08/hello-sso-jwt-1.gif",
     "keywords": "Security, Spring Boot",
-    "description": "This tutorial will walk you through the steps of creating a Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot. Hello Spring Boot Series: - Spring Boot Hello World Example with FreeMarker - Spring Boot Hello World Example with Thymeleaf - Spring Boot Hello World Example"
+    "description": "This tutorial will walk you through the steps of creating a Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot What you&#x27;ll build You&#x27;ll build 3 separated services: 1 Authentication Service: will be deployed at localhost:8080. 2 Resource Services (to simplify, we use the same"
 }
     </script>
 
@@ -221,23 +221,14 @@ ghost.init({
 
           <header class="post__header">
             <h2 class="post__title">Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot</h2>
-            <time class="post__date" datetime="2019-02-08">Last modified @ 08 February 2019</time>
+            <time class="post__date" datetime="2019-05-06">Last modified @ 06 May 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
               <a href="../tag/security/">Security</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
-            <p>This tutorial will walk you through the steps of creating a <a href="https://en.wikipedia.org/wiki/Single_sign-on">Single Sign On (SSO)</a> Example with <a href="https://jwt.io/">JSON Web Token (JWT)</a> and Spring Boot.</p>
-
-<p><big></big></p>
-
-<p></p><pre>
-Hello Spring Boot Series:
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-freemarker/">Spring Boot Hello World Example with FreeMarker</a>
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/">Spring Boot Hello World Example with Thymeleaf</a>
-- <a href="https://hellokoding.com/spring-boot-hello-world-example-with-jsp/">Spring Boot Hello World Example with JSP</a>
-</pre>
+            <p>This tutorial will walk you through the steps of creating a Single Sign On (SSO) Example with JSON Web Token (JWT) and Spring Boot</p>
 
 <h3 id="whatyoullbuild">What you'll build</h3>
 
@@ -267,11 +258,11 @@ Hello Spring Boot Series:
 <li>Freemarker</li>
 </ul>
 
-<h1 id="authenticationservice">Authentication Service</h1>
+<h1 id="buildauthenticationservice">Build Authentication Service</h1>
 
 <h3 id="projectstructure">Project structure</h3>
 
-<pre><code>├── src
+<pre><code class="language-bash">├── src
 │   └── main
 │       ├── java
 │       │   └── com
@@ -282,23 +273,22 @@ Hello Spring Boot Series:
 │       │                   ├── JwtUtil.java
 │       │                   ├── LoginController.java
 │       │                   └── WebApplication.java
-│       ├── resources
-│       │   └── application.properties
-│       └── webapp
-│           └── login.ftl
+│       └── resources
+│           └── templates
+│               └── login.ftl
 └── pom.xml
 </code></pre>
 
 <h3 id="projectdependencies">Project dependencies</h3>
 
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/pom.xml">
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-single-sign-on-jwt/auth-service/pom.xml">
 </code></pre>
 
 <h3 id="cookieutil">CookieUtil</h3>
 
 <p>JWT Token'll be saved and extracted from browser cookies.</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/java/com/hellokoding/sso/auth/CookieUtil.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-single-sign-on-jwt/auth-service/src/main/java/com/hellokoding/sso/auth/CookieUtil.java">
 </code></pre>
 
 <p><code>cookie.setSecure(secure)</code>: secure=true =&gt; work on HTTPS only.</p>
@@ -315,27 +305,24 @@ Hello Spring Boot Series:
 
 <p>We use <a href="https://github.com/jwtk/jjwt">JJWT</a> to generate/parse JWT Token.</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/java/com/hellokoding/sso/auth/JwtUtil.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-single-sign-on-jwt/auth-service/src/main/java/com/hellokoding/sso/auth/JwtUtil.java">
 </code></pre>
 
 <h3 id="logincontroller">LoginController</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/java/com/hellokoding/sso/auth/LoginController.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-single-sign-on-jwt/auth-service/src/main/java/com/hellokoding/sso/auth/LoginController.java">
 </code></pre>
 
 <p>To simplify, we use a HashMap (<code>credentials</code>) as user database.</p>
 
 <h3 id="viewtemplate">View Template</h3>
 
-<pre><code class="language-html embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/webapp/login.ftl">
+<pre><code class="language-html embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-single-sign-on-jwt/auth-service/src/main/resources/templates/login.ftl">
 </code></pre>
 
 <h3 id="applicationconfiguration">Application Configuration</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/resources/application.properties">
-</code></pre>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-auth/blob/master/src/main/java/com/hellokoding/sso/auth/WebApplication.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-single-sign-on-jwt/auth-service/src/main/java/com/hellokoding/sso/auth/WebApplication.java">
 </code></pre>
 
 <h3 id="run">Run</h3>
@@ -343,11 +330,11 @@ Hello Spring Boot Series:
 <pre><code>mvn clean spring-boot:run
 </code></pre>
 
-<h1 id="resourceservice">Resource Service</h1>
+<h2 id="buildresourceservice">Build Resource Service</h2>
 
 <h3 id="projectstructure">Project structure</h3>
 
-<pre><code>── src
+<pre><code class="language-bash">├── src
 │   └── main
 │       ├── java
 │       │   └── com
@@ -359,41 +346,41 @@ Hello Spring Boot Series:
 │       │                   ├── JwtUtil.java
 │       │                   ├── ResourceController.java
 │       │                   └── WebApplication.java
-│       ├── resources
-│       │   └── application.properties
-│       └── webapp
-│           └── protected-resource.ftl
+│       └── resources
+│           ├── templates
+│           │   └── protected-resource.ftl
+│           └── application.properties
 └── pom.xml
 </code></pre>
 
 <h3 id="projectdependencies">Project dependencies</h3>
 
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/pom.xml">
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-single-sign-on-jwt/resources-service/pom.xml">
 </code></pre>
 
 <h3 id="jwtfilter">JwtFilter</h3>
 
 <p>JwtFilter enforces SSO. If JWT Token's not existed (unauthenticated), redirects to Authentication Service. If JWT Token's existed (authenticated), extracts user identity and forwards the request.</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/src/main/java/com/hellokoding/sso/resource/JwtFilter.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-single-sign-on-jwt/resources-service/src/main/java/com/hellokoding/sso/resource/JwtFilter.java">
 </code></pre>
 
 <h3 id="resourcecontroller">ResourceController</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/src/main/java/com/hellokoding/sso/resource/ResourceController.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-single-sign-on-jwt/resources-service/src/main/java/com/hellokoding/sso/resource/ResourceController.java">
 </code></pre>
 
 <h3 id="viewtemplate">View Template</h3>
 
-<pre><code class="language-html embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/src/main/webapp/protected-resource.ftl">
+<pre><code class="language-html embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-single-sign-on-jwt/resources-service/src/main/resources/templates/protected-resource.ftl">
 </code></pre>
 
 <h3 id="applicationconfiguration">Application Configuration</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/src/main/resources/application.properties">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-single-sign-on-jwt/resources-service/src/main/resources/application.properties">
 </code></pre>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hello-sso-jwt-resource/blob/master/src/main/java/com/hellokoding/sso/resource/WebApplication.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-single-sign-on-jwt/resources-service/src/main/java/com/hellokoding/sso/resource/WebApplication.java">
 </code></pre>
 
 <h3 id="run">Run</h3>
@@ -410,13 +397,7 @@ Hello Spring Boot Series:
 
 <h3 id="sourcecode">Source code</h3>
 
-<p><code>git@github.com:hellokoding/hello-sso-jwt.git</code> <br>
-<a href="https://github.com/hellokoding/hello-sso-jwt">https://github.com/hellokoding/hello-sso-jwt</a></p>
-
-<p><code>hello-sso-jwt.git</code> is a git submodules project. You may clone it using this command</p>
-
-<pre><code>git clone --recurse-submodules -j8 git@github.com:hellokoding/hello-sso-jwt.git
-</code></pre>
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-single-sign-on-jwt">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-single-sign-on-jwt</a></p>
             <div class="post__tags">
               <a href="../tag/security/">Security</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
@@ -514,7 +495,7 @@ Hello Spring Boot Series:
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-02-08">08 February 2019</time>
+        <time class="post-card__meta__date" datetime="2019-05-06">06 May 2019</time>
       </div>
 
       <h2 class="post-card__title">
