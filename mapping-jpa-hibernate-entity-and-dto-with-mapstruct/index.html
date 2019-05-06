@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/mapping-jpa-hibernate-entity-and-dto-with-mapstruct/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/mapping-objects.png">
     <meta property="article:published_time" content="2019-02-01T14:36:40.000Z">
-    <meta property="article:modified_time" content="2019-04-29T13:30:28.000Z">
+    <meta property="article:modified_time" content="2019-05-06T14:04:15.000Z">
     <meta property="article:tag" content="RESTful API">
     <meta property="article:tag" content="Spring Boot">
     
@@ -64,7 +64,7 @@
     "headline": "MapStruct Example of Mapping JPA and Hibernate Entity with DTO",
     "url": "http://hellokoding.com/mapping-jpa-hibernate-entity-and-dto-with-mapstruct/",
     "datePublished": "2019-02-01T14:36:40.000Z",
-    "dateModified": "2019-04-29T13:30:28.000Z",
+    "dateModified": "2019-05-06T14:04:15.000Z",
     "image": "http://hellokoding.com/content/images/2019/02/mapping-objects.png",
     "keywords": "RESTful API, Spring Boot",
     "description": "In this tutorial, you will learn using MapStruct for mapping/converting Java objects, JPA and Hibernate entity to DTO and vice versa. Let&#x27;s get started to build a RESTful APIs example with Spring Boot and MySQL to see how MapStruct playing in the context. What you&#x27;ll need JDK 8+ or"
@@ -221,7 +221,7 @@ ghost.init({
 
           <header class="post__header">
             <h2 class="post__title">MapStruct Example of Mapping JPA and Hibernate Entity with DTO</h2>
-            <time class="post__date" datetime="2019-04-29">Last modified @ 29 April 2019</time>
+            <time class="post__date" datetime="2019-05-06">Last modified @ 06 May 2019</time>
           </header>
 
           <div class="post-content">
@@ -238,9 +238,31 @@ ghost.init({
 <li>MySQL Server 5+ or Docker CE 18+</li>
 </ul>
 
+<h2 id="initprojectstructureandmapstruct">Init project structure and MapStruct</h2>
+
 <h3 id="projectstructure">Project structure</h3>
 
-<p><img src="../content/images/2019/02/Screenshot-2019-02-01-at-10-29-09-PM.png" alt=""></p>
+<pre><code class="language-bash">├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding
+│       │           └── springboot
+│       │               └── restful
+│       │                   ├── product
+│       │                   │   ├── Product.java
+│       │                   │   ├── ProductAPI.java
+│       │                   │   ├── ProductDTO.java
+│       │                   │   ├── ProductMapper.java
+│       │                   │   ├── ProductRespository.java
+│       │                   │   └── ProductService.java
+│       │                   └── Application.java
+│       └── resources
+│           └── application.properties
+├── Dockerfile
+├── docker-compose.yml
+└── pom.xml
+</code></pre>
 
 <h3 id="settingupmapstruct">Setting up MapStruct</h3>
 
@@ -251,7 +273,7 @@ ghost.init({
 <pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mapstruct/pom.xml">
 </code></pre>
 
-<h3 id="definejpaandhibernateentitydtorepositoryandservice">Define JPA and Hibernate Entity, DTO, Repository, and Service</h3>
+<h2 id="definejpaandhibernateentitydtorepositoryandservice">Define JPA and Hibernate Entity, DTO, Repository, and Service</h2>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/product/Product.java">
 </code></pre>
@@ -266,6 +288,8 @@ ghost.init({
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/product/ProductService.java">
 </code></pre>
+
+<h2 id="usingmapstruct">Using MapStruct</h2>
 
 <h3 id="definemapstructmapper">Define MapStruct Mapper</h3>
 
@@ -284,6 +308,8 @@ ghost.init({
 </code></pre>
 
 <p>Wow! what a clean REST API without writing a single mapping/converting logic :)</p>
+
+<h2 id="configandrun">Config and Run</h2>
 
 <h3 id="applicationconfigurations">Application Configurations</h3>
 
@@ -442,7 +468,7 @@ On production environment, you may like to disable the DDL Auto feature by using
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-03-23">23 March 2019</time>
+        <time class="post-card__meta__date" datetime="2019-05-06">06 May 2019</time>
       </div>
 
       <h2 class="post-card__title">
