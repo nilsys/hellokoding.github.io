@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Spring Boot Hello World Example with FreeMarker">
-    <meta property="og:description" content="This tutorial walks you through the steps of creating a Hello World web app example with Spring Boot and FreeMarker What you'll build What you'll need JDK 8+ or OpenJDK 8+ Maven 3+ Project structure Project dependencies Hello Controller Controller maps HTTP Requests with View. @RequestMapping maps /hello request to">
+    <meta property="og:description" content="This tutorial walks you through the steps of creating a Hello World web app example with Spring Boot and FreeMarker What you'll build What you'll need JDK 8+ or OpenJDK 8+ Maven 3+ Init project structure and dependencies Project structure ├── src │   └── main │       ├── java │       │   └── com │       │       └── hellokoding │       │           └── springboot │       │               └── view │       │                   ├── Application.java │       │                   └── HelloController.">
     <meta property="og:url" content="http://hellokoding.com/spring-boot-hello-world-example-with-freemarker/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2017/02/hello--1--4.gif">
     <meta property="article:published_time" content="2016-06-29T07:50:38.000Z">
-    <meta property="article:modified_time" content="2019-03-23T05:35:00.000Z">
+    <meta property="article:modified_time" content="2019-05-06T14:43:04.000Z">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Spring Boot Hello World Example with FreeMarker">
-    <meta name="twitter:description" content="This tutorial walks you through the steps of creating a Hello World web app example with Spring Boot and FreeMarker What you'll build What you'll need JDK 8+ or OpenJDK 8+ Maven 3+ Project structure Project dependencies Hello Controller Controller maps HTTP Requests with View. @RequestMapping maps /hello request to">
+    <meta name="twitter:description" content="This tutorial walks you through the steps of creating a Hello World web app example with Spring Boot and FreeMarker What you'll build What you'll need JDK 8+ or OpenJDK 8+ Maven 3+ Init project structure and dependencies Project structure ├── src │   └── main │       ├── java │       │   └── com │       │       └── hellokoding │       │           └── springboot │       │               └── view │       │                   ├── Application.java │       │                   └── HelloController.">
     <meta name="twitter:url" content="http://hellokoding.com/spring-boot-hello-world-example-with-freemarker/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2017/02/hello--1--4.gif">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Spring Boot Hello World Example with FreeMarker",
     "url": "http://hellokoding.com/spring-boot-hello-world-example-with-freemarker/",
     "datePublished": "2016-06-29T07:50:38.000Z",
-    "dateModified": "2019-03-23T05:35:00.000Z",
+    "dateModified": "2019-05-06T14:43:04.000Z",
     "image": "http://hellokoding.com/content/images/2017/02/hello--1--4.gif",
     "keywords": "Spring Boot",
-    "description": "This tutorial walks you through the steps of creating a Hello World web app example with Spring Boot and FreeMarker What you&#x27;ll build What you&#x27;ll need JDK 8+ or OpenJDK 8+ Maven 3+ Project structure Project dependencies Hello Controller Controller maps HTTP Requests with View. @RequestMapping maps /hello request to"
+    "description": "This tutorial walks you through the steps of creating a Hello World web app example with Spring Boot and FreeMarker What you&#x27;ll build What you&#x27;ll need JDK 8+ or OpenJDK 8+ Maven 3+ Init project structure and dependencies Project structure ├── src │   └── main │       ├── java │       │   └── com │       │       └── hellokoding │       │           └── springboot │       │               └── view │       │                   ├── Application.java │       │                   └── HelloController."
 }
     </script>
 
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h2 class="post__title">Spring Boot Hello World Example with FreeMarker</h2>
-            <time class="post__date" datetime="2019-03-23">Last modified @ 23 March 2019</time>
+            <time class="post__date" datetime="2019-05-06">Last modified @ 06 May 2019</time>
           </header>
 
           <div class="post-content">
@@ -240,14 +240,37 @@ ghost.init({
 <li>Maven 3+</li>
 </ul>
 
+<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+
 <h3 id="projectstructure">Project structure</h3>
 
-<p><img src="../content/images/2019/01/Screenshot-2019-01-18-at-10-22-40-PM.png" alt=""></p>
+<pre><code class="language-bash">├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding
+│       │           └── springboot
+│       │               └── view
+│       │                   ├── Application.java
+│       │                   └── HelloController.java
+│       └── resources
+│           ├── static
+│           │   ├── css
+│           │   │   └── main.css
+│           │   └── js
+│           │       └── main.js
+│           ├── templates
+│           │   └── hello.ftl
+│           └── application.properties
+└── pom.xml
+</code></pre>
 
 <h3 id="projectdependencies">Project dependencies</h3>
 
 <pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-helloworld/pom.xml">
 </code></pre>
+
+<h2 id="definecontrollerandviewtemplate">Define Controller and View Template</h2>
 
 <h3 id="hellocontroller">Hello Controller</h3>
 
@@ -274,6 +297,8 @@ ghost.init({
 
 <pre><code class="language-html embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-helloworld/src/main/resources/static/js/main.js">
 </code></pre>
+
+<h2 id="configandrun">Config and Run</h2>
 
 <h3 id="applicationconfigurations">Application Configurations</h3>
 
