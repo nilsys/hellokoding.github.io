@@ -20,18 +20,18 @@
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Contact Form Example with Spring Boot, FreeMarker and Amazon SES">
-    <meta property="og:description" content="This post will walk you through the steps of creating a Contact Form Example with Spring Boot, FreeMarker and Amazon SES. What you'll build What you'll need JDK 1.7+ Maven 3+ Amazon SES account SMTP Credentials of your Amazon SES account Verified From email and To email on SES">
+    <meta property="og:description" content="This tutorial will walk you through the steps of creating a Contact Form Example with Spring Boot, FreeMarker and Amazon SES. What you'll build What you'll need JDK 1.7+ Maven 3+ Amazon SES account SMTP Credentials of your Amazon SES account Verified From email and To email on SES">
     <meta property="og:url" content="http://hellokoding.com/contact-form-example-with-java-spring-boot-freemarker-and-amazon-ses/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/contact-form.png">
     <meta property="article:published_time" content="2017-12-23T15:48:20.000Z">
-    <meta property="article:modified_time" content="2019-01-31T03:00:46.000Z">
+    <meta property="article:modified_time" content="2019-05-07T14:11:10.000Z">
     <meta property="article:tag" content="Form">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact Form Example with Spring Boot, FreeMarker and Amazon SES">
-    <meta name="twitter:description" content="This post will walk you through the steps of creating a Contact Form Example with Spring Boot, FreeMarker and Amazon SES. What you'll build What you'll need JDK 1.7+ Maven 3+ Amazon SES account SMTP Credentials of your Amazon SES account Verified From email and To email on SES">
+    <meta name="twitter:description" content="This tutorial will walk you through the steps of creating a Contact Form Example with Spring Boot, FreeMarker and Amazon SES. What you'll build What you'll need JDK 1.7+ Maven 3+ Amazon SES account SMTP Credentials of your Amazon SES account Verified From email and To email on SES">
     <meta name="twitter:url" content="http://hellokoding.com/contact-form-example-with-java-spring-boot-freemarker-and-amazon-ses/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/01/contact-form.png">
     <meta name="twitter:label1" content="Written by">
@@ -64,10 +64,10 @@
     "headline": "Contact Form Example with Spring Boot, FreeMarker and Amazon SES",
     "url": "http://hellokoding.com/contact-form-example-with-java-spring-boot-freemarker-and-amazon-ses/",
     "datePublished": "2017-12-23T15:48:20.000Z",
-    "dateModified": "2019-01-31T03:00:46.000Z",
+    "dateModified": "2019-05-07T14:11:10.000Z",
     "image": "http://hellokoding.com/content/images/2019/01/contact-form.png",
     "keywords": "Form, Spring Boot",
-    "description": "This post will walk you through the steps of creating a Contact Form Example with Spring Boot, FreeMarker and Amazon SES. What you&#x27;ll build What you&#x27;ll need JDK 1.7+ Maven 3+ Amazon SES account SMTP Credentials of your Amazon SES account Verified From email and To email on SES"
+    "description": "This tutorial will walk you through the steps of creating a Contact Form Example with Spring Boot, FreeMarker and Amazon SES. What you&#x27;ll build What you&#x27;ll need JDK 1.7+ Maven 3+ Amazon SES account SMTP Credentials of your Amazon SES account Verified From email and To email on SES"
 }
     </script>
 
@@ -221,7 +221,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Contact Form Example with Spring Boot, FreeMarker and Amazon SES</h1>
-            <time class="post__date" datetime="2019-01-31">Last modified @ 31 January 2019</time>
+            <time class="post__date" datetime="2019-05-07">Last modified @ 07 May 2019</time>
           </header>
 
           <div class="post-content">
@@ -229,7 +229,7 @@ ghost.init({
               <a href="../tag/form/">Form</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
 
-            <p>This post will walk you through the steps of creating a Contact Form Example with Spring Boot, FreeMarker and Amazon SES.</p>
+            <p>This tutorial will walk you through the steps of creating a Contact Form Example with Spring Boot, FreeMarker and Amazon SES.</p>
 
 <h3 id="whatyoullbuild">What you'll build</h3>
 
@@ -254,9 +254,11 @@ ghost.init({
 <li>HTML, CSS</li>
 </ul>
 
+<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+
 <h3 id="projectstructure">Project structure</h3>
 
-<pre><code>├── src
+<pre><code class="language-bash">├── src
 │   └── main
 │       ├── java
 │       │   └── com
@@ -285,52 +287,59 @@ ghost.init({
 
 <h3 id="projectdependencies">Project dependencies</h3>
 
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/form-contact-java-springboot-freemarker-awsses/blob/master/pom.xml">
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-contact/pom.xml">
 </code></pre>
+
+<h2 id="definedtoservicecontrollerandviewtemplate">Define DTO, Service, Controller and View Template</h2>
 
 <h3 id="datatransferobject">Data transfer object</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/form-contact-java-springboot-freemarker-awsses/blob/master/src/main/java/com/hellokoding/form/model/User.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-contact/src/main/java/com/hellokoding/form/model/User.java">
 </code></pre>
 
 <h3 id="service">Service</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/form-contact-java-springboot-freemarker-awsses/blob/master/src/main/java/com/hellokoding/form/service/SendingMailService.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-contact/src/main/java/com/hellokoding/form/service/SendingMailService.java">
 </code></pre>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/form-contact-java-springboot-freemarker-awsses/blob/master/src/main/java/com/hellokoding/form/service/SESService.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-contact/src/main/java/com/hellokoding/form/service/SESService.java">
 </code></pre>
 
 <h3 id="controller">Controller</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/form-contact-java-springboot-freemarker-awsses/blob/master/src/main/java/com/hellokoding/form/web/FormController.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-contact/src/main/java/com/hellokoding/form/web/FormController.java">
 </code></pre>
 
 <h3 id="viewtemplate">View template</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/form-contact-java-springboot-freemarker-awsses/blob/master/src/main/resources/templates/form.ftl">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-contact/src/main/resources/templates/form.ftl">
 </code></pre>
+
+<h2 id="configandrun">Config and Run</h2>
 
 <h3 id="applicationconfiguration">Application Configuration</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/form-contact-java-springboot-freemarker-awsses/blob/master/src/main/java/com/hellokoding/form/WebApplication.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-contact/src/main/java/com/hellokoding/form/WebApplication.java">
 </code></pre>
 
-<pre><code class="language-markup embedfile-https://github.com/hellokoding/form-contact-java-springboot-freemarker-awsses/blob/master/src/main/resources/application.properties">
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-contact/src/main/resources/application.properties">
 </code></pre>
 
-<pre><code class="language-markup embedfile-https://github.com/hellokoding/form-contact-java-springboot-freemarker-awsses/blob/master/src/main/java/com/hellokoding/form/model/MailProperties.java">
+<p>Make sure updating all macros such as <code>{YOUR_SES_SMTP_HOST}</code> and <code>{YOUR_SES_SMTP_PORT}</code> to your configs</p>
+
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-contact/src/main/java/com/hellokoding/form/model/MailProperties.java">
 </code></pre>
 
 <h3 id="runtheapplication">Run the application</h3>
 
-<p><code>mvn clean spring-boot:run</code></p>
+<p>Type the following Maven command on the terminal console at the project root directory  </p>
+
+<pre><code>mvn clean spring-boot:run
+</code></pre>
 
 <h3 id="sourcecode">Source code</h3>
 
-<p><code>git@github.com:hellokoding/form-contact-java-springboot-freemarker-awsses.git</code></p>
-
-<p><a href="https://github.com/hellokoding/form-contact-java-springboot-freemarker-awsses">https://github.com/hellokoding/form-contact-java-springboot-freemarker-awsses</a></p>
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-freemarker-form-contact">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-freemarker-form-contact</a></p>
             
             <div class="post__tags">
               <a href="../tag/form/">Form</a><a href="../tag/spring-boot/">Spring Boot</a>
