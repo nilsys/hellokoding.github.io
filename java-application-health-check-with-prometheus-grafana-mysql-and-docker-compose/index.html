@@ -20,18 +20,18 @@
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Java Application Health Check with Prometheus, Grafana, MySQL and Docker Compose">
-    <meta property="og:description" content="This post walks you through the steps of creating a Java Application Health Check Example with Prometheus, Grafana, MySQL and Docker Compose. What you'll need Docker CE 18+ Stack Java Prometheus Grafana MySQL Docker Compose Project structure Project dependencies Define Health Check Extends Strengthened's HealthCheck and implements MySQL Database connection">
+    <meta property="og:description" content="This post walks you through the steps of creating a Java Application Health Check Example with Prometheus, Grafana, MySQL and Docker Compose. What you'll need Docker CE 18+ Stack Java Prometheus Grafana MySQL Docker Compose Init project structure and dependencies Project structure Project dependencies Define and Export Health Check for">
     <meta property="og:url" content="http://hellokoding.com/java-application-health-check-with-prometheus-grafana-mysql-and-docker-compose/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-09-at-11-24-39-PM.png">
     <meta property="article:published_time" content="2019-01-09T15:25:10.000Z">
-    <meta property="article:modified_time" content="2019-03-28T12:57:08.000Z">
+    <meta property="article:modified_time" content="2019-05-09T12:07:23.000Z">
     <meta property="article:tag" content="Monitoring">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Java Application Health Check with Prometheus, Grafana, MySQL and Docker Compose">
-    <meta name="twitter:description" content="This post walks you through the steps of creating a Java Application Health Check Example with Prometheus, Grafana, MySQL and Docker Compose. What you'll need Docker CE 18+ Stack Java Prometheus Grafana MySQL Docker Compose Project structure Project dependencies Define Health Check Extends Strengthened's HealthCheck and implements MySQL Database connection">
+    <meta name="twitter:description" content="This post walks you through the steps of creating a Java Application Health Check Example with Prometheus, Grafana, MySQL and Docker Compose. What you'll need Docker CE 18+ Stack Java Prometheus Grafana MySQL Docker Compose Init project structure and dependencies Project structure Project dependencies Define and Export Health Check for">
     <meta name="twitter:url" content="http://hellokoding.com/java-application-health-check-with-prometheus-grafana-mysql-and-docker-compose/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-09-at-11-24-39-PM.png">
     <meta name="twitter:label1" content="Written by">
@@ -64,10 +64,10 @@
     "headline": "Java Application Health Check with Prometheus, Grafana, MySQL and Docker Compose",
     "url": "http://hellokoding.com/java-application-health-check-with-prometheus-grafana-mysql-and-docker-compose/",
     "datePublished": "2019-01-09T15:25:10.000Z",
-    "dateModified": "2019-03-28T12:57:08.000Z",
+    "dateModified": "2019-05-09T12:07:23.000Z",
     "image": "http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-09-at-11-24-39-PM.png",
     "keywords": "Monitoring, Java",
-    "description": "This post walks you through the steps of creating a Java Application Health Check Example with Prometheus, Grafana, MySQL and Docker Compose. What you&#x27;ll need Docker CE 18+ Stack Java Prometheus Grafana MySQL Docker Compose Project structure Project dependencies Define Health Check Extends Strengthened&#x27;s HealthCheck and implements MySQL Database connection"
+    "description": "This post walks you through the steps of creating a Java Application Health Check Example with Prometheus, Grafana, MySQL and Docker Compose. What you&#x27;ll need Docker CE 18+ Stack Java Prometheus Grafana MySQL Docker Compose Init project structure and dependencies Project structure Project dependencies Define and Export Health Check for"
 }
     </script>
 
@@ -221,7 +221,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java Application Health Check with Prometheus, Grafana, MySQL and Docker Compose</h1>
-            <time class="post__date" datetime="2019-03-28">Last modified @ 28 March 2019</time>
+            <time class="post__date" datetime="2019-05-09">Last modified @ 09 May 2019</time>
           </header>
 
           <div class="post-content">
@@ -247,44 +247,48 @@ ghost.init({
 <li>Docker Compose</li>
 </ul>
 
+<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+
 <h3 id="projectstructure">Project structure</h3>
 
 <p><img src="../content/images/2019/01/Screenshot-2019-01-09-at-10-52-20-PM.png" alt=""></p>
 
 <h3 id="projectdependencies">Project dependencies</h3>
 
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/java-app-healthcheck-prometheus/blob/master/pom.xml">
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-app-healthcheck-prometheus/pom.xml">
 </code></pre>
+
+<h2 id="defineandexporthealthcheckforprometheus">Define and Export Health Check for Prometheus</h2>
 
 <h3 id="definehealthcheck">Define Health Check</h3>
 
 <p>Extends <a href="https://github.com/strengthened">Strengthened</a>'s <a href="https://github.com/strengthened/prometheus-healthchecks/blob/master/src/main/java/com/github/strengthened/prometheus/healthchecks/HealthCheck.java">HealthCheck</a> and implements MySQL Database connection status checking method</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/java-app-healthcheck-prometheus/blob/master/src/main/java/com/hellokoding/monitoring/DbHealthCheck.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-app-healthcheck-prometheus/src/main/java/com/hellokoding/monitoring/DbHealthCheck.java">
 </code></pre>
 
 <h3 id="exporthealthcheckforprometheus">Export Health Check for Prometheus</h3>
 
 <p>Start a simple HTTP Sever by using <code>Jetty</code>, listening connection on port 8080 and expose health check through <code>/metrics</code> end point.</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/java-app-healthcheck-prometheus/blob/master/src/main/java/com/hellokoding/monitoring/HealthCheckExporter.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-app-healthcheck-prometheus/src/main/java/com/hellokoding/monitoring/HealthCheckExporter.java">
 </code></pre>
 
-<h3 id="gluethingstogether">Glue things together</h3>
+<h2 id="gluethingstogether">Glue things together</h2>
 
 <p>Create a <code>HealthChecksCollector</code> with metric name as <code>hello_koding_health_check</code> (to be use as a key to query on <code>Prometheus</code> and <code>Grafana</code>), add above health check definition to the collector and trigger <code>export</code> function.</p>
 
-<pre><code class="language-markup embedfile-https://github.com/hellokoding/java-app-healthcheck-prometheus/blob/master/src/main/java/com/hellokoding/monitoring/Application.java">
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-app-healthcheck-prometheus/src/main/java/com/hellokoding/monitoring/Application.java">
 </code></pre>
 
 <p>Prepare <code>Dockerfile</code> to build the Java application</p>
 
-<pre><code class="language-markup embedfile-https://github.com/hellokoding/java-app-healthcheck-prometheus/blob/master/Dockerfile">
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-app-healthcheck-prometheus/Dockerfile">
 </code></pre>
 
 <p>Prepare <code>docker-compose.yaml</code> to provision MySQL, Prometheus and Grafana</p>
 
-<pre><code class="language-bash embedfile-https://github.com/hellokoding/java-app-healthcheck-prometheus/blob/master/docker-compose.yaml">
+<pre><code class="language-bash embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-app-healthcheck-prometheus/docker-compose.yaml">
 </code></pre>
 
 <p>Start your application and infrastructure via Docker Compose. Make sure your local Docker is running</p>
@@ -309,9 +313,7 @@ hello_koding_health_check{system="database",} 1.0
 
 <h3 id="sourcecode">Source code</h3>
 
-<p><code>git@github.com:hellokoding/java-app-healthcheck-prometheus.git</code></p>
-
-<p><a href="https://github.com/hellokoding/java-app-healthcheck-prometheus">https://github.com/hellokoding/java-app-healthcheck-prometheus</a></p>
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/java-examples/java-app-healthcheck-prometheus">https://github.com/hellokoding/hellokoding-courses/tree/master/java-examples/java-app-healthcheck-prometheus</a></p>
             
             <div class="post__tags">
               <a href="../tag/monitoring/">Monitoring</a><a href="../tag/java/">Java</a>

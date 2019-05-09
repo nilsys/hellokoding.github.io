@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
     <meta property="og:title" content="jOOQ Tutorial and Example with MySQL">
-    <meta property="og:description" content="This tutorial will walk you through the process of creating a jOOQ example with MySQL. What you'll need JDK 1.7+ Maven 3+ MySQL 5.6+ Stack Java jOOQ Project structure ├── src │   └── main │       └── java │           └── com │               └── hellokoding │                   └── jooq │                       ├── model │                       │   ├── tables │                       │   │   ├── records │                       │   │   │   └── AuthorRecord.java │                       │   │   └── Author.java │                       │   ├── DefaultCatalog.java │                       │   ├── Keys.java │                       │   ├── Library.java">
+    <meta property="og:description" content="This tutorial will walk you through the process of creating a jOOQ example with MySQL. What you'll need JDK 1.7+ Maven 3+ MySQL 5.6+ Stack Java jOOQ Init project structure, dependencies and database Project structure ├── src │   └── main │       └── java │           └── com │               └── hellokoding │                   └── jooq │                       ├── model │                       │   ├── tables │                       │   │   ├── records │                       │   │   │   └── AuthorRecord.java │                       │   │   └── Author.java">
     <meta property="og:url" content="http://hellokoding.com/jooq-example-with-mysql/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/jOOQ-tutorials.png">
     <meta property="article:published_time" content="2016-07-11T03:54:07.000Z">
-    <meta property="article:modified_time" content="2019-02-23T13:22:37.000Z">
+    <meta property="article:modified_time" content="2019-05-09T12:04:37.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="jOOQ Tutorial and Example with MySQL">
-    <meta name="twitter:description" content="This tutorial will walk you through the process of creating a jOOQ example with MySQL. What you'll need JDK 1.7+ Maven 3+ MySQL 5.6+ Stack Java jOOQ Project structure ├── src │   └── main │       └── java │           └── com │               └── hellokoding │                   └── jooq │                       ├── model │                       │   ├── tables │                       │   │   ├── records │                       │   │   │   └── AuthorRecord.java │                       │   │   └── Author.java │                       │   ├── DefaultCatalog.java │                       │   ├── Keys.java │                       │   ├── Library.java">
+    <meta name="twitter:description" content="This tutorial will walk you through the process of creating a jOOQ example with MySQL. What you'll need JDK 1.7+ Maven 3+ MySQL 5.6+ Stack Java jOOQ Init project structure, dependencies and database Project structure ├── src │   └── main │       └── java │           └── com │               └── hellokoding │                   └── jooq │                       ├── model │                       │   ├── tables │                       │   │   ├── records │                       │   │   │   └── AuthorRecord.java │                       │   │   └── Author.java">
     <meta name="twitter:url" content="http://hellokoding.com/jooq-example-with-mysql/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/01/jOOQ-tutorials.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "jOOQ Tutorial and Example with MySQL",
     "url": "http://hellokoding.com/jooq-example-with-mysql/",
     "datePublished": "2016-07-11T03:54:07.000Z",
-    "dateModified": "2019-02-23T13:22:37.000Z",
+    "dateModified": "2019-05-09T12:04:37.000Z",
     "image": "http://hellokoding.com/content/images/2019/01/jOOQ-tutorials.png",
     "keywords": "Java",
-    "description": "This tutorial will walk you through the process of creating a jOOQ example with MySQL. What you&#x27;ll need JDK 1.7+ Maven 3+ MySQL 5.6+ Stack Java jOOQ Project structure ├── src │   └── main │       └── java │           └── com │               └── hellokoding │                   └── jooq │                       ├── model │                       │   ├── tables │                       │   │   ├── records │                       │   │   │   └── AuthorRecord.java │                       │   │   └── Author.java │                       │   ├── DefaultCatalog.java │                       │   ├── Keys.java │                       │   ├── Library.java"
+    "description": "This tutorial will walk you through the process of creating a jOOQ example with MySQL. What you&#x27;ll need JDK 1.7+ Maven 3+ MySQL 5.6+ Stack Java jOOQ Init project structure, dependencies and database Project structure ├── src │   └── main │       └── java │           └── com │               └── hellokoding │                   └── jooq │                       ├── model │                       │   ├── tables │                       │   │   ├── records │                       │   │   │   └── AuthorRecord.java │                       │   │   └── Author.java"
 }
     </script>
 
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">jOOQ Tutorial and Example with MySQL</h1>
-            <time class="post__date" datetime="2019-02-23">Last modified @ 23 February 2019</time>
+            <time class="post__date" datetime="2019-05-09">Last modified @ 09 May 2019</time>
           </header>
 
           <div class="post-content">
@@ -244,6 +244,8 @@ ghost.init({
 <li>Java</li>
 <li>jOOQ</li>
 </ul>
+
+<h2 id="initprojectstructuredependenciesanddatabase">Init project structure, dependencies and database</h2>
 
 <h3 id="projectstructure">Project structure</h3>
 
@@ -271,7 +273,7 @@ ghost.init({
 
 <h3 id="projectdependencies">Project dependencies</h3>
 
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/jooq-mysql/blob/master/pom.xml">
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-jooq-mysql/pom.xml">
 </code></pre>
 
 <p><code>jooq-codegen-maven</code> plugin's used for generate domain and DAO objects in <code>com/hellokoding/jooq/model</code></p>
@@ -280,12 +282,12 @@ ghost.init({
 
 <p>Run below script to create a sample MySQL database</p>
 
-<pre><code class="language-sql embedfile-https://github.com/hellokoding/jooq-mysql/blob/master/create_db.sql">
+<pre><code class="language-sql embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-jooq-mysql/create_db.sql">
 </code></pre>
 
-<h3 id="run">Run</h3>
+<h2 id="run">Run</h2>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/jooq-mysql/blob/master/src/main/java/com/hellokoding/jooq/Application.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-jooq-mysql/src/main/java/com/hellokoding/jooq/Application.java">
 </code></pre>
 
 <p><code>System.property()</code>'s bound to <code>systemProperty</code> of <code>exec-maven-plugin</code> configuration in <code>pom.xml</code></p>
@@ -294,8 +296,7 @@ ghost.init({
 
 <h3 id="sourcecode">Source code</h3>
 
-<p><code>git@github.com:hellokoding/jooq-mysql.git</code>
-<a href="https://github.com/hellokoding/jooq-mysql">https://github.com/hellokoding/jooq-mysql</a></p>
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/java-examples/java-jooq-mysql">https://github.com/hellokoding/hellokoding-courses/tree/master/java-examples/java-jooq-mysql</a></p>
             
             <div class="post__tags">
               <a href="../tag/java/">Java</a>
