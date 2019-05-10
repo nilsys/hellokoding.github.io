@@ -66,7 +66,7 @@
         if (isDesktopSite()) {
             $('.sidebar').height($('article').height()) + 747;
 
-            $('aside ins.adsbygoogle:last').css({
+            $('.widget>ins:last').css({
                 'posistion': 'sticky',
                 'position': '-webkit-sticky',
                 'top': 10,
