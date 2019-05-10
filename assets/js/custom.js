@@ -14,5 +14,6 @@
 
   $(function() {
     sticky();
+    $(document.body).trigger("sticky_kit:recalc");
   });
 })(jQuery);
