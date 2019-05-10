@@ -44,17 +44,24 @@
     }
 
     $(function () {
-        $(window).resize(function() {
-            if (isDesktopSite()) {
-                sticky();
-            }
-            else {
-                unSticky();
-            }
-        });
+        // $(window).resize(function() {
+        //     if (isDesktopSite()) {
+        //         sticky();
+        //     }
+        //     else {
+        //         unSticky();
+        //     }
+        // });
 
-        if (isDesktopSite()) {
-            sticky();
-        }
+        // if (isDesktopSite()) {
+        //     sticky();
+        // }
+
+        var sidebar = new StickySidebar('.sidebar', {
+            topSpacing: 10,
+            bottomSpacing: $('footer').height() + 64*2,
+            containerSelector: '.widget',
+            innerWrapperSelector: '.widget'
+          });
     });
 })(jQuery);
