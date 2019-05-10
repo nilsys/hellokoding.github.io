@@ -57,10 +57,21 @@
         //     sticky();
         // }
 
-        var sidebar = new StickySidebar('.sidebar', {
-            topSpacing: 10,
-            bottomSpacing: $('footer').height() + 64*2,
-            innerWrapperSelector: 'aside.sponsors'
-          });
+        // var sidebar = new StickySidebar('.sidebar', {
+        //     topSpacing: 10,
+        //     bottomSpacing: $('footer').height() + 64*2,
+        //     innerWrapperSelector: 'aside.sponsors'
+        //   });
+
+        if (isDesktopSite()) {
+            $('.sidebar').height($('article').height()) + 747;
+
+            $('ins.adsbygoogle:last').css({
+                'posistion': 'sticky',
+                'position': '-webkit-sticky',
+                'top': 10,
+                'bottom': $('footer').height() + 64*2
+            });
+        }
     });
 })(jQuery);
