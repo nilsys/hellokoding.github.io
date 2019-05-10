@@ -38,15 +38,23 @@
         }
     }
 
+    function isDesktopSite() {
+        var w = $(window).width() / parseFloat($("body").css("font-size"));
+        return w >= 64.063;
+    }
+
     $(function () {
         $(window).resize(function() {
-            var w = $(window).width() / parseFloat($("body").css("font-size"));
-            if (w >= 64.063) {
+            if (isDesktopSite()) {
                 sticky();
             }
             else {
                 unSticky();
             }
         });
+
+        if (isDesktopSite()) {
+            sticky();
+        }
     });
 })(jQuery);
