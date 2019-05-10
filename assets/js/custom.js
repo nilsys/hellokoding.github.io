@@ -15,20 +15,26 @@
     var sticky = function () {
         var stickyItem = findStickyItem();
         if (stickyItem) {
-            var options = {
-                offset: {
-                    top: 10,
-                    bottom: $('footer').height() + 64*2
-                }
-            }
-            $.stickysidebarscroll(stickyItem, options);
+            // var options = {
+            //     offset: {
+            //         top: 10,
+            //         bottom: $('footer').height() + 64*2
+            //     }
+            // }
+            // $.stickysidebarscroll(stickyItem, options);
+
+            stickyItem.stick_in_parent({
+                parent: ".sidebar",
+                spacer: ".widget",
+            });
         }
     };
 
     var unSticky = function() {
         var stickyItem = findStickyItem();
         if (stickyItem) {
-            $(window).unbind('scroll resize orientationchange load', stickyItem);
+            // $(window).unbind('scroll resize orientationchange load', stickyItem);
+            stickyItem.trigger("sticky_kit:detach");
         }
     }
 
