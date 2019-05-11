@@ -163,7 +163,7 @@ aside.sponsors{
 } */
 
 @media only screen and (min-width: 64.063em){
-	.row {
+	.wrapper>.row {
 		display: flex;
 	}
 
