@@ -161,3 +161,19 @@ aside.sponsors{
 	transform: translate3d(0, 0, 0);
 	will-change: position, transform;
 } */
+
+@media only screen and (min-width: 64.063em){
+	.row {
+		display: flex;
+	}
+
+	.sidebar {
+		display: table-cell;
+	}
+
+	.widget:last-child {
+		position: sticky;
+		top: 10px;
+		bottom: 436px;
+	}
+}
