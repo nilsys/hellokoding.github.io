@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
     <meta property="og:title" content="SSH Tutorial with Examples">
-    <meta property="og:description" content="The SSH protocol, aka Secure Shell, is a method for secure remote login from one computer to another. It is a secure alternative to the non-protected login protocols such as telnet and insecure file transfer methods such as FTP In practice, you may see the following examples Generate public and">
+    <meta property="og:description" content="The SSH protocol, aka Secure Shell, is a method for secure remote login from one computer to another. It is a secure alternative to the non-protected login protocols such as telnet and insecure file transfer methods such as FTP Generate public and private RSA key pair with ssh-keygen ssh-keygen is">
     <meta property="og:url" content="http://hellokoding.com/ssh-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/03/ssh-in-practice.png">
     <meta property="article:published_time" content="2019-02-12T17:22:56.000Z">
-    <meta property="article:modified_time" content="2019-05-13T17:46:49.000Z">
+    <meta property="article:modified_time" content="2019-05-13T17:53:57.000Z">
     <meta property="article:tag" content="DevOps">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SSH Tutorial with Examples">
-    <meta name="twitter:description" content="The SSH protocol, aka Secure Shell, is a method for secure remote login from one computer to another. It is a secure alternative to the non-protected login protocols such as telnet and insecure file transfer methods such as FTP In practice, you may see the following examples Generate public and">
+    <meta name="twitter:description" content="The SSH protocol, aka Secure Shell, is a method for secure remote login from one computer to another. It is a secure alternative to the non-protected login protocols such as telnet and insecure file transfer methods such as FTP Generate public and private RSA key pair with ssh-keygen ssh-keygen is">
     <meta name="twitter:url" content="http://hellokoding.com/ssh-examples/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/03/ssh-in-practice.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "SSH Tutorial with Examples",
     "url": "http://hellokoding.com/ssh-examples/",
     "datePublished": "2019-02-12T17:22:56.000Z",
-    "dateModified": "2019-05-13T17:46:49.000Z",
+    "dateModified": "2019-05-13T17:53:57.000Z",
     "image": "http://hellokoding.com/content/images/2019/03/ssh-in-practice.png",
     "keywords": "DevOps",
-    "description": "The SSH protocol, aka Secure Shell, is a method for secure remote login from one computer to another. It is a secure alternative to the non-protected login protocols such as telnet and insecure file transfer methods such as FTP In practice, you may see the following examples Generate public and"
+    "description": "The SSH protocol, aka Secure Shell, is a method for secure remote login from one computer to another. It is a secure alternative to the non-protected login protocols such as telnet and insecure file transfer methods such as FTP Generate public and private RSA key pair with ssh-keygen ssh-keygen is"
 }
     </script>
 
@@ -230,8 +230,6 @@ ghost.init({
 
             <p>The SSH protocol, aka Secure Shell, is a method for secure remote login from one computer to another. It is a secure alternative to the non-protected login protocols such as telnet and insecure file transfer methods such as FTP</p>
 
-<p>In practice, you may see the following examples</p>
-
 <h3 id="generatepublicandprivatersakeypairwithsshkeygen">Generate public and private RSA key pair with <code>ssh-keygen</code></h3>
 
 <p><code>ssh-keygen</code> is a tool for creating a new authentication key pairs (public and private keys) for SSH</p>
@@ -255,7 +253,7 @@ Enter same passphrase again:
 
 <p>Bastion host is a computer specifically designed and configured to withstand attacks, generally hosts a proxy server providing access to a private network from an external network, such as the internet</p>
 
-<p>Type the following command on your terminal console, make sure </p>
+<p>Type the following command on your terminal console</p>
 
 <pre><code class="language-bash">    ssh -o ServerAliveInterval=5 -fNL LOCAL_PORT:REMOTE_HOST:REMOTE_PORT 
     BASTION_USER@BASTION_HOST -i /path/to/private-key
@@ -271,17 +269,20 @@ Enter same passphrase again:
 
 <ul>
 <li>Your public key should have already installed on the bastion host</li>
-<li>Your private key should have <code>400</code> permission. The following command should work</li>
+<li>Your private key should have <code>400</code> permission. The <code>chmod</code> command should work</li>
 </ul>
 
 <pre><code class="language-bash">chmod 400 /path/to/private-key  
 </code></pre>
 
 <ul>
-<li>Your local port should not being used by any processes. You may check it with the following command</li>
+<li>Your local port should not being used by any processes. You may check it with the <code>lsof</code> command and terminate them with <code>kill</code> command</li>
 </ul>
 
 <pre><code class="language-bash">lsof -i :LOCAL_PORT  
+</code></pre>
+
+<pre><code class="language-bash">kill -9 PID  
 </code></pre>
             
             <div class="post__tags">
