@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Spring Boot Test Data Layer Example with @DataJPATest">
-    <meta property="og:description" content="You can implement unit test of the JPA and Hibernate layer by using @DataJPATest annotation. @DataJPATest will do Configure in-memory test database Auto scan @Entity classes Auto configure Spring Data JPA, Hibernate and Data Source In summary, your implementation should be using the following  Class annotations Use @RunWith(SpringRunner.class)">
+    <meta property="og:description" content="You can implement unit test of the JPA and Hibernate layer by using @DataJPATest annotation with in-memory database. @DataJPATest will do Configure in-memory test database Auto scan @Entity classes Auto configure Spring Data JPA, Hibernate and Data Source In summary, your implementation should be using the following Project dependencies Include">
     <meta property="og:url" content="http://hellokoding.com/spring-boot-test-data-layer-example-with-datajpatest/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/SpringBoot_Testing.png">
     <meta property="article:published_time" content="2019-05-12T16:37:30.000Z">
-    <meta property="article:modified_time" content="2019-05-12T16:39:17.000Z">
+    <meta property="article:modified_time" content="2019-05-13T03:44:36.000Z">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Spring Boot Test Data Layer Example with @DataJPATest">
-    <meta name="twitter:description" content="You can implement unit test of the JPA and Hibernate layer by using @DataJPATest annotation. @DataJPATest will do Configure in-memory test database Auto scan @Entity classes Auto configure Spring Data JPA, Hibernate and Data Source In summary, your implementation should be using the following  Class annotations Use @RunWith(SpringRunner.class)">
+    <meta name="twitter:description" content="You can implement unit test of the JPA and Hibernate layer by using @DataJPATest annotation with in-memory database. @DataJPATest will do Configure in-memory test database Auto scan @Entity classes Auto configure Spring Data JPA, Hibernate and Data Source In summary, your implementation should be using the following Project dependencies Include">
     <meta name="twitter:url" content="http://hellokoding.com/spring-boot-test-data-layer-example-with-datajpatest/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/05/SpringBoot_Testing.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Spring Boot Test Data Layer Example with @DataJPATest",
     "url": "http://hellokoding.com/spring-boot-test-data-layer-example-with-datajpatest/",
     "datePublished": "2019-05-12T16:37:30.000Z",
-    "dateModified": "2019-05-12T16:39:17.000Z",
+    "dateModified": "2019-05-13T03:44:36.000Z",
     "image": "http://hellokoding.com/content/images/2019/05/SpringBoot_Testing.png",
     "keywords": "Spring Boot",
-    "description": "You can implement unit test of the JPA and Hibernate layer by using @DataJPATest annotation. @DataJPATest will do Configure in-memory test database Auto scan @Entity classes Auto configure Spring Data JPA, Hibernate and Data Source In summary, your implementation should be using the following  Class annotations Use @RunWith(SpringRunner.class)"
+    "description": "You can implement unit test of the JPA and Hibernate layer by using @DataJPATest annotation with in-memory database. @DataJPATest will do Configure in-memory test database Auto scan @Entity classes Auto configure Spring Data JPA, Hibernate and Data Source In summary, your implementation should be using the following Project dependencies Include"
 }
     </script>
 
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Spring Boot Test Data Layer Example with @DataJPATest</h1>
-            <time class="post__date" datetime="2019-05-12">Last modified @ 12 May 2019</time>
+            <time class="post__date" datetime="2019-05-13">Last modified @ 13 May 2019</time>
           </header>
 
           <div class="post-content">
@@ -228,7 +228,7 @@ ghost.init({
               <a href="../tag/spring-boot/">Spring Boot</a>
             </div>
 
-            <p>You can implement unit test of the JPA and Hibernate layer by using <code>@DataJPATest</code> annotation. <code>@DataJPATest</code> will do</p>
+            <p>You can implement unit test of the JPA and Hibernate layer by using <code>@DataJPATest</code> annotation with in-memory database. <code>@DataJPATest</code> will do</p>
 
 <ul>
 <li>Configure in-memory test database</li>
@@ -236,13 +236,29 @@ ghost.init({
 <li>Auto configure Spring Data JPA, Hibernate and Data Source</li>
 </ul>
 
-<p>In summary, your implementation should be using the following </p>
+<p>In summary, your implementation should be using the following</p>
+
+<h3 id="projectdependencies">Project dependencies</h3>
+
+<p>Include <code>spring-boot-starter-test</code> and <code>hsqldb</code> into your <code>pom.xml</code> file</p>
+
+<pre><code class="language-xml">&lt;dependency&gt;  
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+&lt;/dependency&gt;
+
+&lt;dependency&gt;  
+    &lt;groupId&gt;org.hsqldb&lt;/groupId&gt;
+    &lt;artifactId&gt;hsqldb&lt;/artifactId&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;  
+</code></pre>
 
 <h3 id="classannotations">Class annotations</h3>
 
 <ul>
 <li>Use <code>@RunWith(SpringRunner.class)</code> to tell <code>JUnit</code> to run the unit tests in Spring's testing supports</li>
-<li><code>@DataJPATest</code> to test JPA and Hibernate layer</li>
+<li>Use <code>@DataJPATest</code> to test JPA and Hibernate layer</li>
 </ul>
 
 <h3 id="fieldsinjection">Fields injection</h3>
@@ -269,6 +285,10 @@ private ProductRespository productRespository;
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-restapi-testing-all-layers/src/test/java/com/hellokoding/springboot/restful/product/ProductRepositoryTest.java">
 </code></pre>
+
+<h3 id="sourcecode">Source code</h3>
+
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-restapi-testing-all-layers">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-restapi-testing-all-layers</a></p>
             
             <div class="post__tags">
               <a href="../tag/spring-boot/">Spring Boot</a>
