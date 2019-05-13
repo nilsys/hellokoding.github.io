@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/ssh-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/03/ssh-in-practice.png">
     <meta property="article:published_time" content="2019-02-12T17:22:56.000Z">
-    <meta property="article:modified_time" content="2019-05-13T17:53:57.000Z">
+    <meta property="article:modified_time" content="2019-05-13T18:03:46.000Z">
     <meta property="article:tag" content="DevOps">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "SSH Tutorial with Examples",
     "url": "http://hellokoding.com/ssh-examples/",
     "datePublished": "2019-02-12T17:22:56.000Z",
-    "dateModified": "2019-05-13T17:53:57.000Z",
+    "dateModified": "2019-05-13T18:03:46.000Z",
     "image": "http://hellokoding.com/content/images/2019/03/ssh-in-practice.png",
     "keywords": "DevOps",
     "description": "The SSH protocol, aka Secure Shell, is a method for secure remote login from one computer to another. It is a secure alternative to the non-protected login protocols such as telnet and insecure file transfer methods such as FTP Generate public and private RSA key pair with ssh-keygen ssh-keygen is"
@@ -232,7 +232,7 @@ ghost.init({
 
 <h3 id="generatepublicandprivatersakeypairwithsshkeygen">Generate public and private RSA key pair with <code>ssh-keygen</code></h3>
 
-<p><code>ssh-keygen</code> is a tool for creating a new authentication key pairs (public and private keys) for SSH</p>
+<p><code>ssh-keygen</code> is a tool for creating a new authentication key pair (public and private keys) for SSH</p>
 
 <p>Type the below command into your terminal</p>
 
@@ -276,13 +276,13 @@ Enter same passphrase again:
 </code></pre>
 
 <ul>
-<li>Your local port should not being used by any processes. You may check it with the <code>lsof</code> command and terminate them with <code>kill</code> command</li>
+<li>Your local port should not being used by any processes. You may check it with the <code>lsof</code> command, try with <code>sudo</code> if it doesn't work for you at the first time</li>
 </ul>
 
 <pre><code class="language-bash">lsof -i :LOCAL_PORT  
 </code></pre>
 
-<pre><code class="language-bash">kill -9 PID  
+<pre><code class="language-bash">sudo lsof -i :LOCAL_PORT  
 </code></pre>
             
             <div class="post__tags">
