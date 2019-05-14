@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/ssh-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/03/ssh-in-practice.png">
     <meta property="article:published_time" content="2019-02-12T17:22:56.000Z">
-    <meta property="article:modified_time" content="2019-05-14T04:41:28.000Z">
+    <meta property="article:modified_time" content="2019-05-14T04:57:23.000Z">
     <meta property="article:tag" content="DevOps">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "SSH Tutorial with Examples",
     "url": "http://hellokoding.com/ssh-examples/",
     "datePublished": "2019-02-12T17:22:56.000Z",
-    "dateModified": "2019-05-14T04:41:28.000Z",
+    "dateModified": "2019-05-14T04:57:23.000Z",
     "image": "http://hellokoding.com/content/images/2019/03/ssh-in-practice.png",
     "keywords": "DevOps",
     "description": "The SSH protocol, aka Secure Shell, is a method for secure remote login from one computer to another. It is a secure alternative to the non-protected login protocols such as telnet and insecure file transfer methods such as FTP Generate public and private RSA key pair with ssh-keygen ssh-keygen is"
@@ -236,12 +236,12 @@ ghost.init({
 
 <p>Type the below command into your terminal</p>
 
-<pre><code class="language-bash">ssh-keygen -C your_email@example.com
+<pre><code>ssh-keygen -C your_email@example.com
 </code></pre>
 
 <p><code>ssh-keygen</code> will prompt you the file to save the key pair</p>
 
-<pre><code class="language-bash">Generating public/private rsa key pair.  
+<pre><code>Generating public/private rsa key pair.  
 Enter file in which to save the key (/Users/admin/.ssh/id_rsa):  
 Enter passphrase (empty for no passphrase):  
 Enter same passphrase again:
@@ -255,7 +255,7 @@ Enter same passphrase again:
 
 <p>Type the following command on your terminal console</p>
 
-<pre><code class="language-bash">ssh -fNL LOCAL_PORT:REMOTE_HOST:REMOTE_PORT BASTION_USER@BASTION_HOST -i /path/to/private-key -o ServerAliveInterval=5
+<pre><code>ssh -fNL LOCAL_PORT:REMOTE_HOST:REMOTE_PORT BASTION_USER@BASTION_HOST -i /path/to/private-key -o ServerAliveInterval=5
 </code></pre>
 
 <p><code>ServerAliveInterval</code> is the number of seconds that the <code>ssh</code> client will wait before sending a message to request a response from server to keep the connection alive, value 0 means disabled (default)</p>
@@ -285,10 +285,10 @@ Could not request local forwarding.
 
 <p>Try the <code>lsof</code> command to check the opened processes, try with <code>sudo</code> if it doesn't work for you at the first time</p>
 
-<pre><code class="language-bash">lsof -i :LOCAL_PORT  
+<pre><code>lsof -i :LOCAL_PORT  
 </code></pre>
 
-<pre><code class="language-bash">sudo lsof -i :LOCAL_PORT  
+<pre><code>sudo lsof -i :LOCAL_PORT  
 </code></pre>
             
             <div class="post__tags">
