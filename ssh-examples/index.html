@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/ssh-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/03/ssh-in-practice.png">
     <meta property="article:published_time" content="2019-02-12T17:22:56.000Z">
-    <meta property="article:modified_time" content="2019-05-13T18:03:46.000Z">
+    <meta property="article:modified_time" content="2019-05-14T02:54:25.000Z">
     <meta property="article:tag" content="DevOps">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "SSH Tutorial with Examples",
     "url": "http://hellokoding.com/ssh-examples/",
     "datePublished": "2019-02-12T17:22:56.000Z",
-    "dateModified": "2019-05-13T18:03:46.000Z",
+    "dateModified": "2019-05-14T02:54:25.000Z",
     "image": "http://hellokoding.com/content/images/2019/03/ssh-in-practice.png",
     "keywords": "DevOps",
     "description": "The SSH protocol, aka Secure Shell, is a method for secure remote login from one computer to another. It is a secure alternative to the non-protected login protocols such as telnet and insecure file transfer methods such as FTP Generate public and private RSA key pair with ssh-keygen ssh-keygen is"
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">SSH Tutorial with Examples</h1>
-            <time class="post__date" datetime="2019-05-13">Last modified @ 13 May 2019</time>
+            <time class="post__date" datetime="2019-05-14">Last modified @ 14 May 2019</time>
           </header>
 
           <div class="post-content">
@@ -255,8 +255,7 @@ Enter same passphrase again:
 
 <p>Type the following command on your terminal console</p>
 
-<pre><code class="language-bash">    ssh -o ServerAliveInterval=5 -fNL LOCAL_PORT:REMOTE_HOST:REMOTE_PORT 
-    BASTION_USER@BASTION_HOST -i /path/to/private-key
+<pre><code class="language-bash">ssh -fNL LOCAL_PORT:REMOTE_HOST:REMOTE_PORT BASTION_USER@BASTION_HOST -i /path/to/private-key -o ServerAliveInterval=5
 </code></pre>
 
 <p><code>ServerAliveInterval</code> is the number of seconds that the <code>ssh</code> client will wait before sending a message to request a response from server to keep the connection alive, value 0 means disabled (default)</p>
@@ -265,19 +264,26 @@ Enter same passphrase again:
 
 <p><code>-fN</code> for running in the background</p>
 
-<h4 id="notes">Notes</h4>
+<h4 id="troubleshooting">Troubleshooting</h4>
 
 <ul>
-<li>Your public key should have already installed on the bastion host</li>
-<li>Your private key should have <code>400</code> permission. The <code>chmod</code> command should work</li>
+<li><p>Your public key should have already installed on the bastion host</p></li>
+<li><p>Your private key should have <code>400</code> permission. The <code>chmod</code> command should work</p></li>
 </ul>
 
-<pre><code class="language-bash">chmod 400 /path/to/private-key  
+<pre><code>chmod 400 /path/to/private-key
 </code></pre>
 
 <ul>
-<li>Your local port should not being used by any processes. You may check it with the <code>lsof</code> command, try with <code>sudo</code> if it doesn't work for you at the first time</li>
+<li>Your may get the <code>Address already in use</code> exception if your local forward port is being used by other processes, for example</li>
 </ul>
+
+<pre><code>bind [127.0.0.1]:3306: Address already in use  
+channel_setup_fwd_listener_tcpip: cannot listen to port: 3306  
+Could not request local forwarding.
+</code></pre>
+
+<p>Try the <code>lsof</code> command to check the opened processes, try with <code>sudo</code> if it doesn't work for you at the first time</p>
 
 <pre><code class="language-bash">lsof -i :LOCAL_PORT  
 </code></pre>
