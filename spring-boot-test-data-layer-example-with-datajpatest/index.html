@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/spring-boot-test-data-layer-example-with-datajpatest/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/SpringBoot_Testing.png">
     <meta property="article:published_time" content="2019-05-12T16:37:30.000Z">
-    <meta property="article:modified_time" content="2019-05-14T12:37:53.000Z">
+    <meta property="article:modified_time" content="2019-05-14T14:29:30.000Z">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Spring Boot Test Data Layer Example with @DataJPATest",
     "url": "http://hellokoding.com/spring-boot-test-data-layer-example-with-datajpatest/",
     "datePublished": "2019-05-12T16:37:30.000Z",
-    "dateModified": "2019-05-14T12:37:53.000Z",
+    "dateModified": "2019-05-14T14:29:30.000Z",
     "image": "http://hellokoding.com/content/images/2019/05/SpringBoot_Testing.png",
     "keywords": "Spring Boot",
     "description": "In this tutorial, you will learn to implement integration test of the JPA and Hibernate data layer in Spring Boot by using @DataJPATest annotation with in-memory database @DataJPATest provides the following features Configure in-memory test database Auto scan @Entity classes Auto configure Spring Data JPA, Hibernate and Data Source Turn"
@@ -284,12 +284,25 @@ private TestEntityManager testEntityManager;
 private ProductRespository productRespository;  
 </code></pre>
 
+<h3 id="verifythetestresultwithassertjsassertthat">Verify the test result with AssertJ's <code>assertThat(..).</code></h3>
+
+<ul>
+<li>Prefer AssertJ's <code>assertThat</code> to verify the test result for more readability, for example</li>
+</ul>
+
+<pre><code class="language-java">// when
+List&lt;Product&gt; products = productRespository.findAll();
+
+// then
+assertThat(products).hasSize(1);  
+</code></pre>
+
 <h2 id="implementationexample">Implementation example</h2>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-restapi-testing-all-layers/src/test/java/com/hellokoding/springboot/restful/product/ProductRepositoryTest.java">
 </code></pre>
 
-<p><code>@DataJPATest</code> will begin a new transaction before and roll back it after running a test method. You should see something like this in the console when running the test</p>
+<p><code>@DataJPATest</code> by default will begin a new transaction before and roll back it after running a test method. You should see something like this in the console when running the test</p>
 
 <pre><code>Began transaction (1) for test context [DefaultTestContext@43ee72e6 testClass = ProductRepositoryTest... testMethod = whenFindByName_thenReturnProduct@ProductRepositoryTest...  
 ...
