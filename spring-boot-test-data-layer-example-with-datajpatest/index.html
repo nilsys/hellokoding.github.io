@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/spring-boot-test-data-layer-example-with-datajpatest/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/SpringBoot_Testing.png">
     <meta property="article:published_time" content="2019-05-12T16:37:30.000Z">
-    <meta property="article:modified_time" content="2019-05-14T14:29:30.000Z">
+    <meta property="article:modified_time" content="2019-05-15T12:58:06.000Z">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Spring Boot Test Data Layer Example with @DataJPATest",
     "url": "http://hellokoding.com/spring-boot-test-data-layer-example-with-datajpatest/",
     "datePublished": "2019-05-12T16:37:30.000Z",
-    "dateModified": "2019-05-14T14:29:30.000Z",
+    "dateModified": "2019-05-15T12:58:06.000Z",
     "image": "http://hellokoding.com/content/images/2019/05/SpringBoot_Testing.png",
     "keywords": "Spring Boot",
     "description": "In this tutorial, you will learn to implement integration test of the JPA and Hibernate data layer in Spring Boot by using @DataJPATest annotation with in-memory database @DataJPATest provides the following features Configure in-memory test database Auto scan @Entity classes Auto configure Spring Data JPA, Hibernate and Data Source Turn"
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Spring Boot Test Data Layer Example with @DataJPATest</h1>
-            <time class="post__date" datetime="2019-05-14">Last modified @ 14 May 2019</time>
+            <time class="post__date" datetime="2019-05-15">Last modified @ 15 May 2019</time>
           </header>
 
           <div class="post-content">
@@ -257,11 +257,13 @@ ghost.init({
 
 <p><code>spring-boot-starter-test</code> contains some testing support libraries such as JUnit, Spring Test + Spring Boot Test, Mockito, AssertJ, Hamcrest and JsonPath</p>
 
+<h2 id="definethetestclass">Define the test class</h2>
+
 <h3 id="runthetestswithrunwithspringrunnerclassanddatajpatest">Run the tests with <code>@RunWith(SpringRunner.class)</code> and <code>@DataJPATest</code></h3>
 
 <ul>
-<li>Use <code>@RunWith(SpringRunner.class)</code> to tell <code>JUnit</code> to run the unit tests in Spring's testing supports</li>
-<li>Use <code>@DataJPATest</code> to test JPA and Hibernate layer</li>
+<li>Use <code>@RunWith(SpringRunner.class)</code> class annotation to tell <code>JUnit</code> to run the unit tests in Spring's testing supports</li>
+<li>Use <code>@DataJPATest</code> class annoation to test JPA and Hibernate layer</li>
 </ul>
 
 <h3 id="injectdependencieswithautowired">Inject dependencies with <code>@Autowired</code></h3>
