@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/spring-boot-test-api-and-controller-layer-example-with-webmvctest-and-mockmvc/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/SpringBoot_Testing-2.png">
     <meta property="article:published_time" content="2019-05-14T12:15:55.000Z">
-    <meta property="article:modified_time" content="2019-05-14T14:37:43.000Z">
+    <meta property="article:modified_time" content="2019-05-15T03:31:44.000Z">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Spring Boot Test REST API and Controller Layer Example with @WebMvcTest and MockMvc",
     "url": "http://hellokoding.com/spring-boot-test-api-and-controller-layer-example-with-webmvctest-and-mockmvc/",
     "datePublished": "2019-05-14T12:15:55.000Z",
-    "dateModified": "2019-05-14T14:37:43.000Z",
+    "dateModified": "2019-05-15T03:31:44.000Z",
     "image": "http://hellokoding.com/content/images/2019/05/SpringBoot_Testing-2.png",
     "keywords": "Spring Boot",
     "description": "In this tutorial, you will learn to implement unit test of the REST API and Controller layer in Spring Boot by using @WebMvcTest and MockMvc @WebMvcTest is used in combination with @RunWith(SpringRunner.class) when a test focuses only on Spring MVC components. It provides the following features Disable full"
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Spring Boot Test REST API and Controller Layer Example with @WebMvcTest and MockMvc</h1>
-            <time class="post__date" datetime="2019-05-14">Last modified @ 14 May 2019</time>
+            <time class="post__date" datetime="2019-05-15">Last modified @ 15 May 2019</time>
           </header>
 
           <div class="post-content">
@@ -253,7 +253,7 @@ ghost.init({
 
 <ul>
 <li>Use the <code>@RunWith(SpringRunner.class)</code> class annotation to tell JUnit to run the unit tests in Spring's testing supports</li>
-<li>User <code>@WebMvcTest</code> to test only Spring MVC components</li>
+<li>Use the <code>@WebMvcTest</code> class annotation to test only Spring MVC components</li>
 </ul>
 
 <h3 id=""> </h3>
@@ -274,7 +274,7 @@ private ProductMapper productMapper;
 <h3 id="stubmethodswithmockitosdoreturnwhen">Stub methods with Mockito's <code>doReturn...when</code></h3>
 
 <ul>
-<li>Using <code>Mockito.doReturn(...).when(aMock).doSomething(...)</code> to give the test input, for example</li>
+<li>Use <code>Mockito.doReturn(...).when(aMock).doSomething(...)</code> to give the test input, for example</li>
 </ul>
 
 <pre><code class="language-java">// given
@@ -291,10 +291,11 @@ doReturn(new ArrayList&lt;&gt;()).when(productService).findAll();
 doReturn(productDTOs).when(productMapper).toProductDTOs(any());  
 </code></pre>
 
-<h3 id="verifythetestresultwithjsonpathandhamcrest">Verify the test result with <code>JsonPath</code> and <code>Hamcrest</code></h3>
+<h3 id="performthetestwithmockmvcsperformandverifythetestresultwithjsonpathandhamcrest">Perform the test with <code>MockMVC</code>'s <code>perform(...)</code> and Verify the test result with <code>JsonPath</code> and <code>Hamcrest</code></h3>
 
 <ul>
-<li>Use <code>JsonPath</code> and <code>Hamcrest</code> to verify the JSON response data, for example</li>
+<li>Use <code>MockMVC</code>'s <code>perform(...)</code> to perform a mock HTTP test request with <code>MockMvcRequestBuilders</code></li>
+<li>Use <code>JsonPath</code> and <code>Hamcrest</code> to verify the JSON response data</li>
 </ul>
 
 <pre><code class="language-java">// when + then
