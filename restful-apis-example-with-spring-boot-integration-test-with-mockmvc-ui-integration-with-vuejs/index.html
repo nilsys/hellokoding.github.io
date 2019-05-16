@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/restful-spring-boot.png">
     <meta property="article:published_time" content="2018-03-24T04:07:49.000Z">
-    <meta property="article:modified_time" content="2019-05-15T15:37:12.000Z">
+    <meta property="article:modified_time" content="2019-05-16T03:08:55.000Z">
     <meta property="article:tag" content="RESTful API">
     <meta property="article:tag" content="Spring Boot">
     
@@ -64,7 +64,7 @@
     "headline": "Spring Boot RESTful API Example, Unit Test with MockMVC and simple UI Integration with VueJS",
     "url": "http://hellokoding.com/restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/",
     "datePublished": "2018-03-24T04:07:49.000Z",
-    "dateModified": "2019-05-15T15:37:12.000Z",
+    "dateModified": "2019-05-16T03:08:55.000Z",
     "image": "http://hellokoding.com/content/images/2019/01/restful-spring-boot.png",
     "keywords": "RESTful API, Spring Boot",
     "description": "This tutorial will walk you through the steps of creating a RESTful API web service example with Spring Boot, JPA, Hibernate, HSQL and Lombok, Unit Test with MockMVC and UI Integration with VueJS If you are looking for a full CRUD integration of RESTful APIs and web app using Spring"
@@ -221,7 +221,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Spring Boot RESTful API Example, Unit Test with MockMVC and simple UI Integration with VueJS</h1>
-            <time class="post__date" datetime="2019-05-15">Last modified @ 15 May 2019</time>
+            <time class="post__date" datetime="2019-05-16">Last modified @ 16 May 2019</time>
           </header>
 
           <div class="post-content">
@@ -311,25 +311,13 @@ If you are looking for a full CRUD integration of RESTful APIs and web app using
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mockmvc-hsql/src/main/java/com/hellokoding/springboot/restful/StockAPI.java">
 </code></pre>
 
-<p><code>@RestController</code> is a shorthand for <code>@Controller</code> and <code>@ResponseBody</code></p>
-
-<p><code>@Controller</code> indicates the class will define handlers of HTTP requests</p>
-
-<p><code>@ResponseBody</code> indicates handler methods return value will be serialized as JSON and bind to the web response body</p>
+<p><code>@RestController</code> is a shorthand for <code>@Controller</code> and <code>@ResponseBody</code>. <code>@Controller</code> indicates the class will define handlers of HTTP requests. <code>@ResponseBody</code> indicates handler methods return value will be serialized as JSON and bind to the web response body</p>
 
 <p><code>@RequestMapping</code> class annotation maps HTTP requests with end point <code>/api/v1/stocks</code> to all handler methods in <code>StockAPI</code> class</p>
 
-<p><code>@RequestBody</code> indicates HTTP request body will be converted as JSON and bind to the handler parameter</p>
+<p><code>@GetMapping</code>, <code>@PostMapping</code>, <code>@PatchMapping</code>, and <code>@DeleteMapping</code> indicate HTTP GET, POST, PATCH and DELETE request handlers respectively</p>
 
-<p><code>@GetMapping</code> indicates HTTP GET request handler</p>
-
-<p><code>@PostMapping</code> indicates HTTP POST request handler</p>
-
-<p><code>@PatchMapping</code> indicates HTTP PATCH request handler</p>
-
-<p><code>@DeleteMapping</code> indicates HTTP DELETE request handler</p>
-
-<p><code>@PathVariable</code> maps the handler parameter with the URI variable</p>
+<p><code>@PathVariable</code> maps the handler parameter with the URI variable. <code>@RequestBody</code> indicates HTTP request body will be converted as JSON and bind to the handler parameter</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mockmvc-hsql/src/main/java/com/hellokoding/springboot/restful/StockController.java">
 </code></pre>
