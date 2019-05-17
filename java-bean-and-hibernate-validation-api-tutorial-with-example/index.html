@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-bean-and-hibernate-validation-api-tutorial-with-example/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/java-validation-api.png">
     <meta property="article:published_time" content="2019-05-17T14:32:36.000Z">
-    <meta property="article:modified_time" content="2019-05-17T15:02:52.000Z">
+    <meta property="article:modified_time" content="2019-05-17T15:22:16.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java Bean Validation API and Hibernate Validator Tutorial with Example",
     "url": "http://hellokoding.com/java-bean-and-hibernate-validation-api-tutorial-with-example/",
     "datePublished": "2019-05-17T14:32:36.000Z",
-    "dateModified": "2019-05-17T15:02:52.000Z",
+    "dateModified": "2019-05-17T15:22:16.000Z",
     "image": "http://hellokoding.com/content/images/2019/05/java-validation-api.png",
     "keywords": "Java",
     "description": "Java Bean Validation API is a specification which Providing data validation model via built-in and custom defined constraint annotations placed on class, field and method Defined in javax.validation package and available as a part of Java EE since Java 6 Hibernate Validator is an implementation of the API In"
@@ -297,7 +297,9 @@ ghost.init({
 
 <p><code>@NotNull</code>, <code>@Size</code> and <code>@Min</code> are built-in constraints</p>
 
-<p><code>@ProductCodeExisting</code> is custom constraint</p>
+<p><code>@ProductCodeExisting</code> is a custom constraint defined as below</p>
+
+<p><code>{Size.name}</code> is a message template. Its value will be replaced at run time by the below <code>ValidationMessages.properties</code></p>
 
 <h3 id="definecustomconstraint">Define custom constraint</h3>
 
@@ -308,6 +310,8 @@ ghost.init({
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-bean-validation/src/main/java/com/hellokoding/validation/ProductCodeExistingValidator.java">
 </code></pre>
+
+<p><code>{ProductCodeExisting}</code> is a message template. Its value will be replaced at run time by the below <code>ValidationMessages.properties</code></p>
 
 <h3 id="customizethevalidationmessages">Customize the validation messages</h3>
 
@@ -339,7 +343,7 @@ CODE "Hello Koding" is not existing
 
 <h3 id="sourcecode">Source code</h3>
 
-<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-restfulapi">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-restfulapi</a></p>
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/java-examples/java-bean-validation">https://github.com/hellokoding/hellokoding-courses/tree/master/java-examples/java-bean-validation</a></p>
             
             <div class="post__tags">
               <a href="../tag/java/">Java</a>
