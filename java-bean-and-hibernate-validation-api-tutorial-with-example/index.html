@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-bean-and-hibernate-validation-api-tutorial-with-example/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/java-validation-api.png">
     <meta property="article:published_time" content="2019-05-17T14:32:36.000Z">
-    <meta property="article:modified_time" content="2019-05-18T05:44:31.000Z">
+    <meta property="article:modified_time" content="2019-05-18T06:25:10.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java Bean Validation API and Hibernate Validator Tutorial with Example",
     "url": "http://hellokoding.com/java-bean-and-hibernate-validation-api-tutorial-with-example/",
     "datePublished": "2019-05-17T14:32:36.000Z",
-    "dateModified": "2019-05-18T05:44:31.000Z",
+    "dateModified": "2019-05-18T06:25:10.000Z",
     "image": "http://hellokoding.com/content/images/2019/05/java-validation-api.png",
     "keywords": "Java",
     "description": "Java Bean Validation API is a specification which Providing data validation model via built-in and custom defined constraint annotations placed on class, field and method Providing APIs to validate objects, object graphs, parameters and return values of methods and constructors Defined in javax.validation package and available as a part"
@@ -307,6 +307,16 @@ ghost.init({
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-bean-validation/src/main/java/com/hellokoding/validation/ProductCodeExisting.java">
 </code></pre>
 
+<p>An annotation type is defined using the <code>@interface</code> keyword</p>
+
+<p>All attributes of an annotation type are declared in a method-like manner, the following are required</p>
+
+<ul>
+<li><p>an attribute <code>message</code> that returns the default violation messages</p></li>
+<li><p>an attribute <code>groups</code> to restrict the set of constraints applied during validation</p></li>
+<li><p>an attribute <code>payload</code> used by clients of the Bean Validation API to assign custom payload objects to a constraint</p></li>
+</ul>
+
 <p><code>{ProductCodeExisting}</code> is a message template. Its value will be replaced at run time by the below <code>ValidationMessages.properties</code></p>
 
 <h3 id="definecustomconstraintvalidator">Define custom constraint validator</h3>
@@ -316,7 +326,7 @@ ghost.init({
 
 <h3 id="interpolatecustomizethevalidationmessages">Interpolate / customize the validation messages</h3>
 
-<p>Add a file named <code>ValidationMessages.properties</code> to the classpath to interpolate constraint violation messages</p>
+<p>In order to interpolate constraint violation messages, provide the message value when you express the constraint on defining data model, for example the constraint <code>@NotNull(message = "must be not null")</code> of <code>Product.java</code>, or add a file named <code>ValidationMessages.properties</code> to the classpath</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-bean-validation/src/main/resources/ValidationMessages.properties">
 </code></pre>
