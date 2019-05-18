@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-bean-and-hibernate-validation-api-tutorial-with-example/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/java-validation-api.png">
     <meta property="article:published_time" content="2019-05-17T14:32:36.000Z">
-    <meta property="article:modified_time" content="2019-05-18T06:43:08.000Z">
+    <meta property="article:modified_time" content="2019-05-18T06:48:25.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java Bean Validation API and Hibernate Validator Tutorial with Example",
     "url": "http://hellokoding.com/java-bean-and-hibernate-validation-api-tutorial-with-example/",
     "datePublished": "2019-05-17T14:32:36.000Z",
-    "dateModified": "2019-05-18T06:43:08.000Z",
+    "dateModified": "2019-05-18T06:48:25.000Z",
     "image": "http://hellokoding.com/content/images/2019/05/java-validation-api.png",
     "keywords": "Java",
     "description": "Java Bean Validation API is a specification which Providing data validation model via built-in and custom defined constraint annotations placed on class, field and method Providing APIs to validate objects, object graphs, parameters and return values of methods and constructors Defined in javax.validation package and available as a part"
@@ -356,9 +356,9 @@ ghost.init({
 
 <p>Type command <code>mvn clean package exec:java</code> at your project root directory to run, expected output</p>
 
-<pre><code>PRICE 0.79 is less than 1  
-ID is required  
+<pre><code>ID is required  
 NAME must be between 1 and 10 character long  
+PRICE 0.79 is invalid, must be greater than or equal to 1  
 DESCRIPTION must be not null  
 CODE "Hello Koding" is not existing  
 </code></pre>
