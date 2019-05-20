@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Java Bean Validation API and Hibernate Validator Tutorial with Example</title>
+  <title>Spring Boot REST API Validation + Globally Error Handling Tutorial with Example</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,29 +14,29 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=9bed7b81c6">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=9bed7b81c6">
    
-  <link rel="canonical" href="http://hellokoding.com/java-bean-and-hibernate-validation-api-tutorial-with-example/">
+  <link rel="canonical" href="http://hellokoding.com/spring-boot-rest-api-validation-tutorial-with-example/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Java Bean Validation API and Hibernate Validator Tutorial with Example">
-    <meta property="og:description" content="Java Bean Validation API is a specification which Providing data validation model via built-in and custom defined constraint annotations placed on class, field and method Providing APIs to validate objects, object graphs, parameters and return values of methods and constructors Defined in javax.validation package and available as a part">
-    <meta property="og:url" content="http://hellokoding.com/java-bean-and-hibernate-validation-api-tutorial-with-example/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/java-validation-api.png">
-    <meta property="article:published_time" content="2019-05-17T14:32:36.000Z">
-    <meta property="article:modified_time" content="2019-05-18T11:36:19.000Z">
-    <meta property="article:tag" content="Java">
+    <meta property="og:title" content="Spring Boot REST API Validation + Globally Error Handling Tutorial with Example">
+    <meta property="og:description" content="In this tutorial, you will learn to implement an REST API Validation + Error Handling Example in Spring Boot  REST API validation can be implemented by using Java Bean Validation API, Hibernate Validator and Unified Expression Language. Check this tutorial if you're new to Java Bean Validation API Error Handling for">
+    <meta property="og:url" content="http://hellokoding.com/spring-boot-rest-api-validation-tutorial-with-example/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/spring-boot-rest-apis.png">
+    <meta property="article:published_time" content="2019-05-18T13:44:01.000Z">
+    <meta property="article:modified_time" content="2019-05-20T10:21:14.000Z">
+    <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Java Bean Validation API and Hibernate Validator Tutorial with Example">
-    <meta name="twitter:description" content="Java Bean Validation API is a specification which Providing data validation model via built-in and custom defined constraint annotations placed on class, field and method Providing APIs to validate objects, object graphs, parameters and return values of methods and constructors Defined in javax.validation package and available as a part">
-    <meta name="twitter:url" content="http://hellokoding.com/java-bean-and-hibernate-validation-api-tutorial-with-example/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/05/java-validation-api.png">
+    <meta name="twitter:title" content="Spring Boot REST API Validation + Globally Error Handling Tutorial with Example">
+    <meta name="twitter:description" content="In this tutorial, you will learn to implement an REST API Validation + Error Handling Example in Spring Boot  REST API validation can be implemented by using Java Bean Validation API, Hibernate Validator and Unified Expression Language. Check this tutorial if you're new to Java Bean Validation API Error Handling for">
+    <meta name="twitter:url" content="http://hellokoding.com/spring-boot-rest-api-validation-tutorial-with-example/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/05/spring-boot-rest-apis.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Java">
+    <meta name="twitter:data2" content="Spring Boot">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -60,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He has 12+ years hands-on experience of designing and developing web and data services. He was born to make online coding courses, tutorials and examples"
     },
-    "headline": "Java Bean Validation API and Hibernate Validator Tutorial with Example",
-    "url": "http://hellokoding.com/java-bean-and-hibernate-validation-api-tutorial-with-example/",
-    "datePublished": "2019-05-17T14:32:36.000Z",
-    "dateModified": "2019-05-18T11:36:19.000Z",
-    "image": "http://hellokoding.com/content/images/2019/05/java-validation-api.png",
-    "keywords": "Java",
-    "description": "Java Bean Validation API is a specification which Providing data validation model via built-in and custom defined constraint annotations placed on class, field and method Providing APIs to validate objects, object graphs, parameters and return values of methods and constructors Defined in javax.validation package and available as a part"
+    "headline": "Spring Boot REST API Validation + Globally Error Handling Tutorial with Example",
+    "url": "http://hellokoding.com/spring-boot-rest-api-validation-tutorial-with-example/",
+    "datePublished": "2019-05-18T13:44:01.000Z",
+    "dateModified": "2019-05-20T10:21:14.000Z",
+    "image": "http://hellokoding.com/content/images/2019/05/spring-boot-rest-apis.png",
+    "keywords": "Spring Boot",
+    "description": "In this tutorial, you will learn to implement an REST API Validation + Error Handling Example in Spring Boot  REST API validation can be implemented by using Java Bean Validation API, Hibernate Validator and Unified Expression Language. Check this tutorial if you&#x27;re new to Java Bean Validation API Error Handling for"
 }
     </script>
 
@@ -87,7 +87,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-java">
+<body class="post-template tag-spring-boot">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -216,35 +216,38 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-9 column">
-        <article class="post tag-java">
+        <article class="post tag-spring-boot">
 
           <header class="post__header">
-            <h1 class="post__title">Java Bean Validation API and Hibernate Validator Tutorial with Example</h1>
-            <time class="post__date" datetime="2019-05-18">Last modified @ 18 May 2019</time>
+            <h1 class="post__title">Spring Boot REST API Validation + Globally Error Handling Tutorial with Example</h1>
+            <time class="post__date" datetime="2019-05-20">Last modified @ 20 May 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/java/">Java</a>
+              <a href="../tag/spring-boot/">Spring Boot</a>
             </div>
 
-            <p>Java Bean Validation API is a specification which</p>
+            <p>In this tutorial, you will learn to implement an REST API Validation + Error Handling Example in Spring Boot </p>
 
-<ul>
-<li>Providing data validation model via built-in and custom defined constraint annotations placed on class, field and method</li>
-<li><p>Providing APIs to validate objects, object graphs, parameters and return values of methods and constructors</p></li>
-<li><p>Defined in <code>javax.validation</code> package and available as a part of Java EE since Java 6</p></li>
-</ul>
+<p>REST API validation can be implemented by using Java Bean Validation API, Hibernate Validator and Unified Expression Language. Check <a href="https://hellokoding.com/java-bean-and-hibernate-validation-api-tutorial-with-example/">this tutorial</a> if you're new to Java Bean Validation API</p>
 
-<p>Hibernate Validator is an implementation of the API</p>
-
-<p>In this tutorial, you will learn to implement an Hibernate Validator example to validate a data model</p>
+<p>Error Handling for REST in Spring can be implemented by extending <code>ResponseEntityExceptionHandler</code> and using <code>@ControllerAdvice</code> class annotation to apply globally to all controllers</p>
 
 <h3 id="whatyoullneed">What you'll need</h3>
 
 <ul>
 <li>JDK 8+ or OpenJDK 8+</li>
 <li>Maven 3+</li>
+</ul>
+
+<h3 id="stack">Stack</h3>
+
+<ul>
+<li>Java Bean Validation API, Hibernate Validator and Unified Expression Language</li>
+<li>Spring Boot with @RestController, @RequestMapping, @Validated, ResponseEntityExceptionHandler, @ControllerAdvice and @ExceptionHandler</li>
+<li>JPA, Hibernate and HSQL</li>
+<li>Lombok with @Builder</li>
 </ul>
 
 <h3 id="projectstructure">Project structure</h3>
@@ -254,11 +257,18 @@ ghost.init({
 │       ├── java
 │       │   └── com
 │       │       └── hellokoding
-│       │           └── validation
-│       │               ├── Main.java
-│       │               ├── Product.java
-│       │               ├── ProductCodeExisting.java
-│       │               └── ProductCodeExistingValidator.java
+│       │           └── springboot
+│       │               └── restful
+│       │                   ├── product
+│       │                   │   ├── Product.java
+│       │                   │   ├── ProductAPI.java
+│       │                   │   ├── ProductIDExisting.java
+│       │                   │   ├── ProductIDExistingValidator.java
+│       │                   │   ├── ProductRepository.java
+│       │                   │   └── ProductService.java
+│       │                   ├── Application.java
+│       │                   ├── ExceptionHandler.java
+│       │                   └── ResponseDTO.java
 │       └── resources
 │           └── ValidationMessages.properties
 └── pom.xml
@@ -266,119 +276,111 @@ ghost.init({
 
 <h3 id="dependencies">Dependencies</h3>
 
-<p>Include <code>hibernate-validator</code> into your <code>pom.xml</code></p>
+<p>Include <code>spring-boot-starter-validation</code> into your <code>pom.xml</code></p>
 
 <pre><code class="language-xml">&lt;dependency&gt;  
-    &lt;groupId&gt;org.hibernate&lt;/groupId&gt;
-    &lt;artifactId&gt;hibernate-validator&lt;/artifactId&gt;
-    &lt;version&gt;6.0.16.Final&lt;/version&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-validation&lt;/artifactId&gt;
 &lt;/dependency&gt;  
 </code></pre>
 
-<p>Unified Expression Language (EL) is also required for evaluating dynamic expressions in constraint violation messages when you run your application in Java SE. In Java EE,  it is already provided by container</p>
+<p><code>spring-boot-starter-validation</code> contains </p>
 
-<pre><code class="language-xml">&lt;dependency&gt;  
-    &lt;groupId&gt;org.glassfish&lt;/groupId&gt;
-    &lt;artifactId&gt;javax.el&lt;/artifactId&gt;
-    &lt;version&gt;3.0.1-b09&lt;/version&gt;
-&lt;/dependency&gt;  
-</code></pre>
+<ul>
+<li><p><code>hibernate-validator</code>: an implementation of Java Bean Validation API</p></li>
+<li><p><code>tomcat-embed-el</code>: an implementation of Java Unified Expression Language (EL)</p></li>
+</ul>
 
 <p>Full content of <code>pom.xml</code> as below</p>
 
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-bean-validation/pom.xml">
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-restapi-validation/pom.xml">
 </code></pre>
 
 <h2 id="definedatamodelandvalidationconstraints">Define data model and validation constraints</h2>
 
 <h3 id="definedatamodel">Define data model</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-bean-validation/src/main/java/com/hellokoding/validation/Product.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-restapi-validation/src/main/java/com/hellokoding/springboot/restful/product/Product.java">
 </code></pre>
 
 <p><code>@NotNull</code>, <code>@Size</code> and <code>@Min</code> are built-in constraints</p>
 
-<p><code>@ProductCodeExisting</code> is a custom constraint defined as below</p>
+<p><code>@ProductIDExisting</code> is a custom constraint defined as below</p>
 
-<p><code>{Size.name}</code> and <code>{Min.price}</code> are message templates, theirs value will be replaced at run time by the below <code>ValidationMessages.properties</code></p>
+<p><code>{NotNull}</code> is message templates, its value will be replaced at run time by the below <code>ValidationMessages.properties</code></p>
 
 <h3 id="definecustomconstraint">Define custom constraint</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-bean-validation/src/main/java/com/hellokoding/validation/ProductCodeExisting.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-restapi-validation/src/main/java/com/hellokoding/springboot/restful/product/ProductIDExisting.java">
 </code></pre>
 
-<p>An annotation type is defined using the <code>@interface</code> keyword</p>
-
-<p>All attributes of an annotation type are declared in a method-like manner, the following are required</p>
-
-<ul>
-<li><p>an attribute <code>message</code> that returns the default violation messages</p></li>
-<li><p>an attribute <code>groups</code> to restrict the set of constraints applied during validation</p></li>
-<li><p>an attribute <code>payload</code> used by clients of the Bean Validation API to assign custom payload objects to a constraint</p></li>
-</ul>
-
-<p><code>{ProductCodeExisting}</code> is a message template. Its value will be replaced at run time by the below <code>ValidationMessages.properties</code></p>
+<p><code>{ProductIDExisting}</code> is a message template. Its value will be replaced at run time by the below <code>ValidationMessages.properties</code></p>
 
 <h3 id="definecustomconstraintvalidator">Define custom constraint validator</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-bean-validation/src/main/java/com/hellokoding/validation/ProductCodeExistingValidator.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-restapi-validation/src/main/java/com/hellokoding/springboot/restful/product/ProductIDExistingValidator.java">
 </code></pre>
 
-<h3 id="interpolatecustomizethevalidationmessages">Interpolate / customize the validation messages</h3>
+<h3 id="customthevalidationmessages">Custom the validation messages</h3>
 
-<p>Provide the message value when you express the constraint on defining data model, for example the constraint <code>@NotNull(message = "must be not null")</code> of <code>Product.java</code>, or add a file named <code>ValidationMessages.properties</code> to the classpath</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-bean-validation/src/main/resources/ValidationMessages.properties">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-restapi-validation/src/main/resources/ValidationMessages.properties">
 </code></pre>
 
-<p>Bean Validation API uses the Unified Expression Language (EL) in constraint violation messages. The following objects available in the EL context</p>
+<h2 id="defineresponsedtorestapiandapiexceptionhandler">Define ResponseDTO, REST API and API Exception Handler</h2>
 
-<ul>
-<li><p>the attribute values of the constraint mapped to the attribute names, for example <code>{min}</code> and <code>{max}</code> of the message <code>Size.name</code> mapped to <code>@Size</code> constraint annotation in <code>Product.java</code></p></li>
-<li><p><code>${validatedValue}</code> mapped to the current validated value of field, bean or method parameter</p></li>
-<li><p>a bean named <code>formatter</code> exposing the var-arg method format(String format, Object…​ args) which behaves like java.util.Formatter.format(String format, Object…​ args)</p></li>
-</ul>
-
-<h2 id="validatingtheconstraints">Validating the constraints</h2>
-
-<p>Use the built-in <code>ValidatorFactory</code> of <code>javax.validation</code> to get a <code>Validator</code> instance</p>
-
-<pre><code class="language-java">Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-restapi-validation/src/main/java/com/hellokoding/springboot/restful/ResponseDTO.java">
 </code></pre>
 
-<p>User <code>validator</code> to validate all constraints on object, for example</p>
+<p>ResponseDTO is defined to unify REST API response data format to client</p>
 
-<pre><code class="language-java">Set&lt;ConstraintViolation&lt;Product&gt;&gt; constraintViolations = validator.validate(product);
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-restapi-validation/src/main/java/com/hellokoding/springboot/restful/product/ProductAPI.java">
 </code></pre>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-bean-validation/src/main/java/com/hellokoding/validation/Main.java">
+<p>REST APIs are defined with <code>@RestController</code>, <code>@RequestMapping</code>, <code>@GetMapping</code>, <code>@PostMapping</code>, <code>@@PutMapping</code> and <code>@DeleteMapping</code></p>
+
+<p><code>@Valid</code> indicates validation cascading: constraints defined on the object and its properties are be validated when the property, method parameter or method return type is validated</p>
+
+<p><code>@Validated</code> is a variant of <code>@Valid</code> indicating that a specific class is supposed to be validated at the method level. In this example, it is using to trigger validation for <code>@ProductIDExisting</code> method parameters</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-restapi-validation/src/main/java/com/hellokoding/springboot/restful/APIExceptionHandler.java">
 </code></pre>
 
-<p>Type command <code>mvn clean package exec:java</code> at your project root directory to run, xpected output</p>
+<p><code>ResponseEntityExceptionHandler</code> provides centralized exception handling across all <code>@RequestMapping</code> methods through <code>@ExceptionHandler</code> methods which return <code>ResponseEntity</code></p>
 
-<pre><code>PRICE 0.79 is less than 1  
-ID is required  
-NAME must be between 1 and 10 character long  
-DESCRIPTION must be not null  
-CODE "Hello Koding" is not existing  
+<p><code>@ControllerAdvice</code> is a specialization for classes that declare @ExceptionHandler, @InitBinder, or @ModelAttribute methods to be shared across multiple @Controller classes</p>
+
+<h2 id="runandtest">Run and Test</h2>
+
+<h3 id="runwithmaven">Run with Maven</h3>
+
+<p>Type command <code>mvn clean spring-boot:run</code> at your project root directory to run the application</p>
+
+<h3 id="testwithcurl">Test with <code>cURL</code></h3>
+
+<pre><code>curl -i -X PUT -H "Content-Type:application/json" -d "{\"id\": 1, \"name\" : \"Hello Koding\", \"description\": \"Practical Coding Courses, Tutorials and Examples\", \"price\":1}" http://localhost:8080/api/v1/products/1
+</code></pre>
+
+<p>Expected output</p>
+
+<pre><code>{"status":"400 BAD_REQUEST","message":"Product ID 1 is not existing","body": null}
 </code></pre>
 
 <h3 id="sourcecode">Source code</h3>
 
-<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/java-examples/java-bean-validation">https://github.com/hellokoding/hellokoding-courses/tree/master/java-examples/java-bean-validation</a></p>
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-restapi-validation">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-restapi-validation</a></p>
             
             <div class="post__tags">
-              <a href="../tag/java/">Java</a>
+              <a href="../tag/spring-boot/">Spring Boot</a>
             </div>
           </div>
 
           <div class="love-post">Love this post?</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Java%20Bean%20Validation%20API%20and%20Hibernate%20Validator%20Tutorial%20with%20Example&amp;url=http://hellokoding.com/java-bean-and-hibernate-validation-api-tutorial-with-example/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Spring%20Boot%20REST%20API%20Validation%20%2B%20Globally%20Error%20Handling%20Tutorial%20with%20Example&amp;url=http://hellokoding.com/spring-boot-rest-api-validation-tutorial-with-example/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Tweet</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/java-bean-and-hibernate-validation-api-tutorial-with-example/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/spring-boot-rest-api-validation-tutorial-with-example/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Share</span>
   </a>
@@ -427,8 +429,8 @@ CODE "Hello Koding" is not existing
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../spring-boot-test-api-and-controller-layer-example-with-webmvctest-and-mockmvc/" class="block" title="Spring Boot Test REST API and Controller Layer Example with @WebMvcTest and MockMvc">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/05/SpringBoot_Testing-2.png) ">
+       <a href="../java-bean-and-hibernate-validation-api-tutorial-with-example/" class="block" title="Java Bean Validation API and Hibernate Validator Tutorial with Example">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/05/java-validation-api.png) ">
       </div>
     </a>
 
@@ -437,14 +439,14 @@ CODE "Hello Koding" is not existing
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-05-15">15 May 2019</time>
+        <time class="post-card__meta__date" datetime="2019-05-18">18 May 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Spring Boot Test REST API and Controller Layer Example with @WebMvcTest and MockMvc" href="../spring-boot-test-api-and-controller-layer-example-with-webmvctest-and-mockmvc/">Spring Boot Test REST API and Controller Layer Example with @WebMvcTest and MockMvc</a>
+        <a title="Java Bean Validation API and Hibernate Validator Tutorial with Example" href="../java-bean-and-hibernate-validation-api-tutorial-with-example/">Java Bean Validation API and Hibernate Validator Tutorial with Example</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/java/">Java</a>
             </div>
 
    </div>
@@ -452,32 +454,6 @@ CODE "Hello Koding" is not existing
   </div>
 </article>
 
-    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
-  <div class="post-card ">
-       <a href="../spring-boot-rest-api-validation-tutorial-with-example/" class="block" title="Spring Boot REST API Validation + Globally Error Handling Tutorial with Example">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/05/spring-boot-rest-apis.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-05-20">20 May 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Spring Boot REST API Validation + Globally Error Handling Tutorial with Example" href="../spring-boot-rest-api-validation-tutorial-with-example/">Spring Boot REST API Validation + Globally Error Handling Tutorial with Example</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/spring-boot/">Spring Boot</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
 
   </div>
 </div>          <section class="disqus">
@@ -485,8 +461,8 @@ CODE "Hello Koding" is not existing
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/java-bean-and-hibernate-validation-api-tutorial-with-example/';
-      this.page.identifier = '125';
+      this.page.url = 'http://hellokoding.com/spring-boot-rest-api-validation-tutorial-with-example/';
+      this.page.identifier = '126';
     };
 
     (function() {
