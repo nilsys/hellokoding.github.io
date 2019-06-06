@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/longest-palindromic-substring/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/Algorithms_PalindromeString.png">
     <meta property="article:published_time" content="2019-06-06T08:36:04.000Z">
-    <meta property="article:modified_time" content="2019-06-06T14:19:40.000Z">
+    <meta property="article:modified_time" content="2019-06-06T14:32:53.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Longest Palindromic Substring",
     "url": "http://hellokoding.com/longest-palindromic-substring/",
     "datePublished": "2019-06-06T08:36:04.000Z",
-    "dateModified": "2019-06-06T14:19:40.000Z",
+    "dateModified": "2019-06-06T14:32:53.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/Algorithms_PalindromeString.png",
     "keywords": "Algorithm",
     "description": "Problem Given a string S Write an algorithm to find the longest palindromic substring in S Palindromic string reads the same backwards. A character itself is a palindrome Example Input: &quot;bananas&quot;. Expected output: &quot;anana&quot; Input: &quot;bb&quot;. Expected output: &quot;bb&quot; Input: &quot;a&quot;. Expected output: &quot;a&quot; Approach 1: Brute Force Find all"
@@ -271,7 +271,9 @@ ghost.init({
 <p>Base cases: <code>P(i,i) = true</code> as a character itself is a palindrome, <code>P(i,i+1) = (S(i) == S(i+1))</code></p>
 
 <p>For example, <code>anana</code> is a palindrome thanks to <code>nan</code> is a palindrome and the beginning character is the same with the ending character (<code>a</code>)</p></li>
-<li><p>Bottom up filling <code>P[i][j]</code> value as <code>true</code> if substring at <code>i</code> and <code>j</code> is palindrome</p></li>
+<li><p>Bottom up filling <code>P[i][j]</code> value as <code>true</code> if substring at <code>i</code> and <code>j</code> is palindrome, starting with one, two letters and so on</p>
+
+<p>At each iteration, remember the substring's start index and max length to find the longest palindromic substring</p></li>
 </ul>
 
 <h4 id="implementation">Implementation</h4>
