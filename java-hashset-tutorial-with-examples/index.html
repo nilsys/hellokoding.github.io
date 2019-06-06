@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Check if two strings are anagram</title>
+  <title>Java HashSet Tutorial with Examples</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,29 +14,29 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=9bed7b81c6">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=9bed7b81c6">
    
-  <link rel="canonical" href="http://hellokoding.com/check-if-two-strings-are-anagram/">
+  <link rel="canonical" href="http://hellokoding.com/java-hashset-tutorial-with-examples/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Check if two strings are anagram">
-    <meta property="og:description" content='Problem Given two strings Write an algorithm to check if they are anagrams Two strings are anagram if they contain same characters. The order of the characters may be different Example Input: given two strings "abc" and "bca". Expected output: true Input: given two strings "abc" and "bcb". Expected output:'>
-    <meta property="og:url" content="http://hellokoding.com/check-if-two-strings-are-anagram/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/Algorithms_StringAnagram.png">
-    <meta property="article:published_time" content="2019-06-05T03:29:00.000Z">
-    <meta property="article:modified_time" content="2019-06-06T01:45:33.000Z">
-    <meta property="article:tag" content="Algorithm">
+    <meta property="og:title" content="Java HashSet Tutorial with Examples">
+    <meta property="og:description" content="Java HashSet is an unordered and no-duplicate elements collection, implementation of java.util.Set interface. HashSet has the following attributes Backed by hash table data structure (actually a HashMap instance) No guarantees to the iteration order Contains no duplicate elements, at most one null element Offers constant time performance for">
+    <meta property="og:url" content="http://hellokoding.com/java-hashset-tutorial-with-examples/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/java-collection-hashset.png">
+    <meta property="article:published_time" content="2019-06-05T13:13:02.000Z">
+    <meta property="article:modified_time" content="2019-06-06T04:33:31.000Z">
+    <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Check if two strings are anagram">
-    <meta name="twitter:description" content='Problem Given two strings Write an algorithm to check if they are anagrams Two strings are anagram if they contain same characters. The order of the characters may be different Example Input: given two strings "abc" and "bca". Expected output: true Input: given two strings "abc" and "bcb". Expected output:'>
-    <meta name="twitter:url" content="http://hellokoding.com/check-if-two-strings-are-anagram/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/Algorithms_StringAnagram.png">
+    <meta name="twitter:title" content="Java HashSet Tutorial with Examples">
+    <meta name="twitter:description" content="Java HashSet is an unordered and no-duplicate elements collection, implementation of java.util.Set interface. HashSet has the following attributes Backed by hash table data structure (actually a HashMap instance) No guarantees to the iteration order Contains no duplicate elements, at most one null element Offers constant time performance for">
+    <meta name="twitter:url" content="http://hellokoding.com/java-hashset-tutorial-with-examples/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/java-collection-hashset.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Algorithm">
+    <meta name="twitter:data2" content="Java">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -60,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He has 12+ years hands-on experience of designing and developing web and data services. He was born to make online coding courses, tutorials and examples"
     },
-    "headline": "Check if two strings are anagram",
-    "url": "http://hellokoding.com/check-if-two-strings-are-anagram/",
-    "datePublished": "2019-06-05T03:29:00.000Z",
-    "dateModified": "2019-06-06T01:45:33.000Z",
-    "image": "http://hellokoding.com/content/images/2019/06/Algorithms_StringAnagram.png",
-    "keywords": "Algorithm",
-    "description": "Problem Given two strings Write an algorithm to check if they are anagrams Two strings are anagram if they contain same characters. The order of the characters may be different Example Input: given two strings &quot;abc&quot; and &quot;bca&quot;. Expected output: true Input: given two strings &quot;abc&quot; and &quot;bcb&quot;. Expected output:"
+    "headline": "Java HashSet Tutorial with Examples",
+    "url": "http://hellokoding.com/java-hashset-tutorial-with-examples/",
+    "datePublished": "2019-06-05T13:13:02.000Z",
+    "dateModified": "2019-06-06T04:33:31.000Z",
+    "image": "http://hellokoding.com/content/images/2019/06/java-collection-hashset.png",
+    "keywords": "Java",
+    "description": "Java HashSet is an unordered and no-duplicate elements collection, implementation of java.util.Set interface. HashSet has the following attributes Backed by hash table data structure (actually a HashMap instance) No guarantees to the iteration order Contains no duplicate elements, at most one null element Offers constant time performance for"
 }
     </script>
 
@@ -87,7 +87,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-algorithm">
+<body class="post-template tag-java">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -216,64 +216,216 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-9 column">
-        <article class="post tag-algorithm">
+        <article class="post tag-java">
 
           <header class="post__header">
-            <h1 class="post__title">Check if two strings are anagram</h1>
+            <h1 class="post__title">Java HashSet Tutorial with Examples</h1>
             <time class="post__date" datetime="2019-06-06">Last modified @ 06 June 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
+              <a href="../tag/java/">Java</a>
             </div>
 
-            <h3 id="problem">Problem</h3>
+            <p>Java HashSet is an unordered and no-duplicate elements collection, implementation of java.util.Set interface. HashSet has the following attributes</p>
 
 <ul>
-<li>Given two strings</li>
-<li>Write an algorithm to check if they are anagrams</li>
-<li>Two strings are anagram if they contain same characters. The order of the characters may be different</li>
+<li><p>Backed by hash table data structure (actually a <code>HashMap</code> instance)</p></li>
+<li><p>No guarantees to the iteration order</p></li>
+<li><p>Contains no duplicate elements, at most one null element</p></li>
+<li><p>Offers constant time performance for add, remove, contains and size operations, assuming the hash function distributes the elements properly among the buckets</p></li>
+<li><p>Unsynchronized implementation. In multi-threading environment with at least one thread modifies the list, it must be synchronized externally</p></li>
 </ul>
 
-<h3 id="example">Example</h3>
+<h2 id="hashsetdeclarationandinitialization">HashSet declaration and initialization</h2>
 
 <ul>
-<li>Input: given two strings "abc" and "bca". Expected output: true</li>
-<li>Input: given two strings "abc" and "bcb". Expected output: false</li>
+<li>In one line with Arrays.asList</li>
 </ul>
 
-<h3 id="approach">Approach</h3>
-
-<ul>
-<li>Sort two given strings</li>
-<li>Compare the sorted strings</li>
-</ul>
-
-<h3 id="implementation">Implementation</h3>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/String_Anagram.java">
+<pre><code class="language-java">Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Arrays.asList(1, 2, 3));  
 </code></pre>
 
-<h4 id="complexity">Complexity</h4>
+<ul>
+<li>Create an unmodifiable set in one line with Set.of since Java 9+</li>
+</ul>
+
+<pre><code class="language-java">Set&lt;Integer&gt; set = Set.of(1, 2, 3);  
+</code></pre>
 
 <ul>
-<li>Time complexity: O(n)</li>
-<li>Space complexity: O(n)</li>
+<li>In one line with double brace initialization (should not be used)</li>
 </ul>
+
+<pre><code class="language-java">Set&lt;Integer&gt; set = new HashSet&lt;Integer&gt;(){{  
+    add(1);
+    add(2);
+    add(3);
+}};
+</code></pre>
+
+<p>Double brace initialization can lead to memory leaks as it creates an anonymous class with a reference to the owner object</p>
+
+<ul>
+<li>In multiple lines</li>
+</ul>
+
+<pre><code class="language-java">Set&lt;Integer&gt; set = new HashSet&lt;&gt;();  
+set.add(1);  
+set.add(2);  
+set.add(3);  
+</code></pre>
+
+<h2 id="hashsettraversal">HashSet traversal</h2>
+
+<ul>
+<li>with for-each loop aka enhanced for-loop thanks to <code>Iterable</code> implementation</li>
+</ul>
+
+<pre><code class="language-java">Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Arrays.asList(1, 2, 3));  
+for(int ele : set) {  
+    System.out.println(ele);
+}
+</code></pre>
+
+<ul>
+<li>with <code>forEach(Consumer&lt;? super T&gt; action)</code> of <code>Iterable</code> interface, since Java 8+</li>
+</ul>
+
+<pre><code class="language-java">Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Arrays.asList(1, 2, 3));  
+set.forEach(System.out::println);  
+</code></pre>
+
+<ul>
+<li>with <code>Iterator&lt;E&gt; iterator()</code> returns an iterator over the set elements in no particular order</li>
+</ul>
+
+<pre><code class="language-java">Iterator iter = set.iterator();  
+while (iter.hasNext())  
+    System.out.println(iter.next());
+</code></pre>
+
+<h2 id="queryoperations">Query operations</h2>
+
+<ul>
+<li><code>int size()</code> gets the number of elements in a set, O(1)</li>
+</ul>
+
+<pre><code class="language-java">Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Arrays.asList(1, 2, 3));  
+set.size(); // 3
+</code></pre>
+
+<ul>
+<li><code>boolean isEmpty()</code> checks if a set contains no elements, O(1)</li>
+</ul>
+
+<pre><code class="language-java">Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Arrays.asList(1, 2, 3));  
+set.isEmpty(); // false
+</code></pre>
+
+<ul>
+<li><code>boolean contains(Object o)</code> checks if a set contains the specified element, O(1)</li>
+</ul>
+
+<pre><code class="language-java">Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Arrays.asList(1, 2, 3));  
+set.contains(1); // true  
+set.contains("a"); // false  
+</code></pre>
+
+<ul>
+<li><code>boolean containsAll(Collection&lt;?&gt; c)</code> checks if a set contains all elements of the specified collection</li>
+</ul>
+
+<pre><code class="language-java">Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Arrays.asList(1, 2, 3));  
+System.out.println(set.containsAll(Arrays.asList(1, 3))); // true  
+System.out.println(set.containsAll(Arrays.asList(1, 3, 1))); // true  
+System.out.println(set.containsAll(Arrays.asList(4))); // false
+</code></pre>
+
+<ul>
+<li><code>Iterator&lt;E&gt; iterator()</code> gets an iterator over the set elements in no particular oder</li>
+</ul>
+
+<pre><code class="language-java">Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Arrays.asList(1, 2, 3));  
+Iterator iter = set.iterator();  
+</code></pre>
+
+<ul>
+<li><code>&lt;T&gt; T[] toArray(T[] a)</code> gets an array containing all elements in a set with the runtime type <code>T</code> as the specified array. A new array is allocated if the set size greater than the array <code>a</code> size</li>
+</ul>
+
+<pre><code class="language-java">Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Arrays.asList(1, 2, 3));  
+Integer[] arr = set.toArray(new Integer[0]);  
+System.out.println(Arrays.toString(arr)); // [1, 2, 3]
+
+Integer[] arr2 = new Integer[4];  
+set.toArray(arr2);  
+System.out.println(Arrays.toString(arr2)); // [1, 2, 3, null]
+</code></pre>
+
+<h2 id="modificationoperations">Modification operations</h2>
+
+<ul>
+<li><code>boolean add(E e)</code> adds an element to the set, O(1)</li>
+</ul>
+
+<pre><code class="language-java">Set&lt;Integer&gt; set = new HashSet&lt;&gt;();  
+set.add(1); // the set now is [1]
+</code></pre>
+
+<ul>
+<li><code>boolean remove(Object o)</code> removes element from a set, O(1)</li>
+</ul>
+
+<pre><code class="language-java">Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Arrays.asList(1, 2, 3));  
+set.remove(2); // the set now is [1, 3]
+</code></pre>
+
+<ul>
+<li><code>boolean retainAll(Collection&lt;?&gt; c)</code> retains all elements from a set that are contained in the specified collection</li>
+</ul>
+
+<pre><code class="language-java">Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Arrays.asList(1, 2, 3));  
+set.retainAll(Arrays.asList(1, 4)); // the set now is [1]
+</code></pre>
+
+<ul>
+<li><code>boolean removeAll(Collection&lt;?&gt; c)</code> removes all elements from a set that are contained in the specified collection</li>
+</ul>
+
+<pre><code class="language-java">Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Arrays.asList(1, 2, 3));  
+set.removeAll(Arrays.asList(1, 4)); // the set now is [2, 3]
+</code></pre>
+
+<ul>
+<li><code>boolean removeIf(Predicate&lt;? super E&gt; filter)</code> removes all elements from a set that satisfy the given predicate <code>filter</code></li>
+</ul>
+
+<pre><code class="language-java">Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Arrays.asList(1, 2, 3));  
+set.removeIf(x -&gt; x &gt;= 2); // the set now is [1]
+</code></pre>
+
+<ul>
+<li><code>void clear()</code> removes all elements from a set</li>
+</ul>
+
+<pre><code class="language-java">Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Arrays.asList(1, 2, 3));  
+set.clear(); // the set now is empty []
+</code></pre>
             
             <div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
+              <a href="../tag/java/">Java</a>
             </div>
           </div>
 
           <div class="love-post">Love this post?</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Check%20if%20two%20strings%20are%20anagram&amp;url=http://hellokoding.com/check-if-two-strings-are-anagram/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Java%20HashSet%20Tutorial%20with%20Examples&amp;url=http://hellokoding.com/java-hashset-tutorial-with-examples/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Tweet</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/check-if-two-strings-are-anagram/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/java-hashset-tutorial-with-examples/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Share</span>
   </a>
@@ -322,33 +474,6 @@ ghost.init({
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../java-linkedlist-tutorial-with-examples/" class="block" title="Java LinkedList Tutorial with Examples">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/05/java-linkedlist.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-06-05">05 June 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Java LinkedList Tutorial with Examples" href="../java-linkedlist-tutorial-with-examples/">Java LinkedList Tutorial with Examples</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/java/">Java</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-
-    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
-  <div class="post-card ">
        <a href="../reverse-words-in-a-string/" class="block" title="Reverse words in a string">
       <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/06/Algorithms_StringReverse.png) ">
       </div>
@@ -374,14 +499,15 @@ ghost.init({
   </div>
 </article>
 
+
   </div>
 </div>          <section class="disqus">
   <h4 class="heading">Comments</h4>                          
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/check-if-two-strings-are-anagram/';
-      this.page.identifier = '129';
+      this.page.url = 'http://hellokoding.com/java-hashset-tutorial-with-examples/';
+      this.page.identifier = '131';
     };
 
     (function() {
