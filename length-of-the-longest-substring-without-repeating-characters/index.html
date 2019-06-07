@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Longest Palindromic Substring</title>
+  <title>Longest substring without repeating characters</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,25 +14,25 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=9bed7b81c6">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=9bed7b81c6">
    
-  <link rel="canonical" href="http://hellokoding.com/longest-palindromic-substring/">
+  <link rel="canonical" href="http://hellokoding.com/length-of-the-longest-substring-without-repeating-characters/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Longest Palindromic Substring">
-    <meta property="og:description" content='Problem Given a string S Write an algorithm to find the longest palindromic substring in S Palindromic string reads the same backwards. A character itself is a palindrome Example Input: "bananas". Expected output: "anana" Input: "bb". Expected output: "bb" Input: "a". Expected output: "a" Approach 1: Brute Force Find all'>
-    <meta property="og:url" content="http://hellokoding.com/longest-palindromic-substring/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/Algorithms_PalindromeString.png">
-    <meta property="article:published_time" content="2019-06-06T08:36:04.000Z">
-    <meta property="article:modified_time" content="2019-06-06T14:57:31.000Z">
+    <meta property="og:title" content="Longest substring without repeating characters">
+    <meta property="og:description" content='Problem Given a string s Write an algorithm to find the longest substring without repeating characters Example Input: "HelloKoding". Expected output: "Koding" Approach: Sliding Window Use a HashSet to manage distinct characters Maintain a substring window with start index i and end index j to find the longest substring Iterate'>
+    <meta property="og:url" content="http://hellokoding.com/length-of-the-longest-substring-without-repeating-characters/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/Longest_Distinct_Characters.png">
+    <meta property="article:published_time" content="2019-06-07T03:20:13.000Z">
+    <meta property="article:modified_time" content="2019-06-07T03:25:49.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Longest Palindromic Substring">
-    <meta name="twitter:description" content='Problem Given a string S Write an algorithm to find the longest palindromic substring in S Palindromic string reads the same backwards. A character itself is a palindrome Example Input: "bananas". Expected output: "anana" Input: "bb". Expected output: "bb" Input: "a". Expected output: "a" Approach 1: Brute Force Find all'>
-    <meta name="twitter:url" content="http://hellokoding.com/longest-palindromic-substring/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/Algorithms_PalindromeString.png">
+    <meta name="twitter:title" content="Longest substring without repeating characters">
+    <meta name="twitter:description" content='Problem Given a string s Write an algorithm to find the longest substring without repeating characters Example Input: "HelloKoding". Expected output: "Koding" Approach: Sliding Window Use a HashSet to manage distinct characters Maintain a substring window with start index i and end index j to find the longest substring Iterate'>
+    <meta name="twitter:url" content="http://hellokoding.com/length-of-the-longest-substring-without-repeating-characters/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/Longest_Distinct_Characters.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He has 12+ years hands-on experience of designing and developing web and data services. He was born to make online coding courses, tutorials and examples"
     },
-    "headline": "Longest Palindromic Substring",
-    "url": "http://hellokoding.com/longest-palindromic-substring/",
-    "datePublished": "2019-06-06T08:36:04.000Z",
-    "dateModified": "2019-06-06T14:57:31.000Z",
-    "image": "http://hellokoding.com/content/images/2019/06/Algorithms_PalindromeString.png",
+    "headline": "Longest substring without repeating characters",
+    "url": "http://hellokoding.com/length-of-the-longest-substring-without-repeating-characters/",
+    "datePublished": "2019-06-07T03:20:13.000Z",
+    "dateModified": "2019-06-07T03:25:49.000Z",
+    "image": "http://hellokoding.com/content/images/2019/06/Longest_Distinct_Characters.png",
     "keywords": "Algorithm",
-    "description": "Problem Given a string S Write an algorithm to find the longest palindromic substring in S Palindromic string reads the same backwards. A character itself is a palindrome Example Input: &quot;bananas&quot;. Expected output: &quot;anana&quot; Input: &quot;bb&quot;. Expected output: &quot;bb&quot; Input: &quot;a&quot;. Expected output: &quot;a&quot; Approach 1: Brute Force Find all"
+    "description": "Problem Given a string s Write an algorithm to find the longest substring without repeating characters Example Input: &quot;HelloKoding&quot;. Expected output: &quot;Koding&quot; Approach: Sliding Window Use a HashSet to manage distinct characters Maintain a substring window with start index i and end index j to find the longest substring Iterate"
 }
     </script>
 
@@ -219,8 +219,8 @@ ghost.init({
         <article class="post tag-algorithm">
 
           <header class="post__header">
-            <h1 class="post__title">Longest Palindromic Substring</h1>
-            <time class="post__date" datetime="2019-06-06">Last modified @ 06 June 2019</time>
+            <h1 class="post__title">Longest substring without repeating characters</h1>
+            <time class="post__date" datetime="2019-06-07">Last modified @ 07 June 2019</time>
           </header>
 
           <div class="post-content">
@@ -231,61 +231,35 @@ ghost.init({
             <h3 id="problem">Problem</h3>
 
 <ul>
-<li>Given a string <code>S</code></li>
-<li>Write an algorithm to find the longest palindromic substring in <code>S</code></li>
-<li>Palindromic string reads the same backwards. A character itself is a palindrome</li>
+<li>Given a string <code>s</code></li>
+<li>Write an algorithm to find the longest substring without repeating characters</li>
 </ul>
 
 <h3 id="example">Example</h3>
 
 <ul>
-<li>Input: "bananas". Expected output: "anana"</li>
-<li>Input: "bb". Expected output: "bb"</li>
-<li>Input: "a". Expected output: "a"</li>
+<li>Input: "HelloKoding". Expected output: "Koding"</li>
 </ul>
 
-<h3 id="approach1bruteforce">Approach 1: Brute Force</h3>
+<h3 id="approachslidingwindow">Approach: Sliding Window</h3>
 
 <ul>
-<li>Find all substrings in the given string <code>S</code></li>
-<li>For each substring, check if it is the longest palindrome</li>
+<li>Use a <code>HashSet</code> to manage distinct characters</li>
+<li><p>Maintain a substring window with start index <code>i</code> and end index <code>j</code> to find the longest substring</p>
+
+<p>Iterate over the string <code>s</code>, increase <code>j</code> value to 1 if the character at <code>s[j]</code> is not existed in the <code>HashSet</code>, otherwise increase <code>i</code> value to 1</p></li>
 </ul>
 
 <h4 id="implementation">Implementation</h4>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/String_LongestPalindrome_BruteForce.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/String_LongestDistinct.java">
 </code></pre>
 
 <h4 id="complexity">Complexity</h4>
 
 <ul>
-<li>Time complexity: O(n<sup>3</sup>)</li>
-<li>Space complexity: O(1)</li>
-</ul>
-
-<h3 id="approach2dynamicprogramming">Approach 2: Dynamic Programming</h3>
-
-<ul>
-<li><p>Given a string <code>bananas</code>, we can say <code>anana</code>  is a palindrome thanks to <code>nan</code> is a palindrome and the beginning character is the same with the ending character (<code>a</code>). And so on, <code>nan</code> is a palindrome due to <code>a</code> is a palindrome and the start letter equals to the end letter (<code>n</code>)</p>
-
-<p>So the optimal substructure is <code>P(i,j) = (S(i) == S(j) &amp;&amp; P(i+1,j-1))</code> with <code>P(i,j)</code> is a palindromic substring from index <code>i</code> to <code>j</code></p>
-
-<p>Base cases: <code>P(i,i) = true</code> as a character itself is a palindrome, <code>P(i,i+1) = (S(i) == S(i+1))</code></p></li>
-<li><p>Bottom up filling <code>P[i][j]</code> value as <code>true</code> if substring at <code>i</code> and <code>j</code> is palindrome, starting with one, two letters and so on</p>
-
-<p>At each iteration, remember the substring's start index and max length to find the longest palindromic substring</p></li>
-</ul>
-
-<h4 id="implementation">Implementation</h4>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/String_LongestPalindrome_DP.java">
-</code></pre>
-
-<h4 id="complexity">Complexity</h4>
-
-<ul>
-<li>Time complexity: O(n<sup>2</sup>)</li>
-<li>Space complexity: O(n<sup>2</sup>)</li>
+<li>Time complexity: O(n)</li>
+<li>Space complexity: O(n)</li>
 </ul>
             
             <div class="post__tags">
@@ -295,11 +269,11 @@ ghost.init({
 
           <div class="love-post">Love this post?</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Longest%20Palindromic%20Substring&amp;url=http://hellokoding.com/longest-palindromic-substring/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Longest%20substring%20without%20repeating%20characters&amp;url=http://hellokoding.com/length-of-the-longest-substring-without-repeating-characters/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Tweet</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/longest-palindromic-substring/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/length-of-the-longest-substring-without-repeating-characters/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Share</span>
   </a>
@@ -348,8 +322,8 @@ ghost.init({
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../java-hashset-tutorial-with-examples/" class="block" title="Java HashSet Tutorial with Examples">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/06/java-collection-hashset.png) ">
+       <a href="../longest-palindromic-substring/" class="block" title="Longest Palindromic Substring">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/06/Algorithms_PalindromeString.png) ">
       </div>
     </a>
 
@@ -362,34 +336,7 @@ ghost.init({
       </div>
 
       <h2 class="post-card__title">
-        <a title="Java HashSet Tutorial with Examples" href="../java-hashset-tutorial-with-examples/">Java HashSet Tutorial with Examples</a>
-      </h2>
-<div class="post__tags">
-              <a href="../tag/java/">Java</a>
-            </div>
-
-   </div>
-
-  </div>
-</article>
-
-    <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
-  <div class="post-card ">
-       <a href="../length-of-the-longest-substring-without-repeating-characters/" class="block" title="Longest substring without repeating characters">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/06/Longest_Distinct_Characters.png) ">
-      </div>
-    </a>
-
-    <div class="post-card__info">
-      <div class="post-card__meta">
-          <span class="post-card__meta__author-name">
-            <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
-          </span>
-        <time class="post-card__meta__date" datetime="2019-06-07">07 June 2019</time>
-      </div>
-
-      <h2 class="post-card__title">
-        <a title="Longest substring without repeating characters" href="../length-of-the-longest-substring-without-repeating-characters/">Longest substring without repeating characters</a>
+        <a title="Longest Palindromic Substring" href="../longest-palindromic-substring/">Longest Palindromic Substring</a>
       </h2>
 <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
@@ -400,14 +347,15 @@ ghost.init({
   </div>
 </article>
 
+
   </div>
 </div>          <section class="disqus">
   <h4 class="heading">Comments</h4>                          
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/longest-palindromic-substring/';
-      this.page.identifier = '132';
+      this.page.url = 'http://hellokoding.com/length-of-the-longest-substring-without-repeating-characters/';
+      this.page.identifier = '133';
     };
 
     (function() {
