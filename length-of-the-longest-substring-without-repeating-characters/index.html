@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Longest substring without repeating characters">
-    <meta property="og:description" content='Problem Given a string s Write an algorithm to find the longest substring without repeating characters Example Input: "HelloKoding". Expected output: "Koding" Approach: Sliding Window Use a HashSet to manage distinct characters Maintain a substring window with start index i and end index j to find the longest substring Iterate'>
+    <meta property="og:description" content='Problem Given a string s Write an algorithm to find the longest substring without repeating characters Example Input: "HelloKoding". Expected output: "Koding" Approach: Sliding Window Use a HashSet chars to manage distinct characters Maintain a substring window with start index i and end index j to find the longest substring'>
     <meta property="og:url" content="http://hellokoding.com/length-of-the-longest-substring-without-repeating-characters/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/StringAlgorithms_LongestDistinct.png">
     <meta property="article:published_time" content="2019-06-07T03:20:13.000Z">
-    <meta property="article:modified_time" content="2019-06-08T05:51:46.000Z">
+    <meta property="article:modified_time" content="2019-06-08T08:26:11.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Longest substring without repeating characters">
-    <meta name="twitter:description" content='Problem Given a string s Write an algorithm to find the longest substring without repeating characters Example Input: "HelloKoding". Expected output: "Koding" Approach: Sliding Window Use a HashSet to manage distinct characters Maintain a substring window with start index i and end index j to find the longest substring Iterate'>
+    <meta name="twitter:description" content='Problem Given a string s Write an algorithm to find the longest substring without repeating characters Example Input: "HelloKoding". Expected output: "Koding" Approach: Sliding Window Use a HashSet chars to manage distinct characters Maintain a substring window with start index i and end index j to find the longest substring'>
     <meta name="twitter:url" content="http://hellokoding.com/length-of-the-longest-substring-without-repeating-characters/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/StringAlgorithms_LongestDistinct.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Longest substring without repeating characters",
     "url": "http://hellokoding.com/length-of-the-longest-substring-without-repeating-characters/",
     "datePublished": "2019-06-07T03:20:13.000Z",
-    "dateModified": "2019-06-08T05:51:46.000Z",
+    "dateModified": "2019-06-08T08:26:11.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/StringAlgorithms_LongestDistinct.png",
     "keywords": "Algorithm",
-    "description": "Problem Given a string s Write an algorithm to find the longest substring without repeating characters Example Input: &quot;HelloKoding&quot;. Expected output: &quot;Koding&quot; Approach: Sliding Window Use a HashSet to manage distinct characters Maintain a substring window with start index i and end index j to find the longest substring Iterate"
+    "description": "Problem Given a string s Write an algorithm to find the longest substring without repeating characters Example Input: &quot;HelloKoding&quot;. Expected output: &quot;Koding&quot; Approach: Sliding Window Use a HashSet chars to manage distinct characters Maintain a substring window with start index i and end index j to find the longest substring"
 }
     </script>
 
@@ -244,10 +244,10 @@ ghost.init({
 <h3 id="approachslidingwindow">Approach: Sliding Window</h3>
 
 <ul>
-<li>Use a <code>HashSet</code> to manage distinct characters</li>
+<li><p>Use a <code>HashSet</code> <code>chars</code> to manage distinct characters</p></li>
 <li><p>Maintain a substring window with start index <code>i</code> and end index <code>j</code> to find the longest substring</p>
 
-<p>Iterate over the string <code>s</code>, increase <code>j</code> value to 1 if the character at <code>s[j]</code> is not existed in the <code>HashSet</code>, otherwise increase <code>i</code> value to 1</p></li>
+<p>Iterate over the string <code>s</code>, add the character at <code>s[j]</code> to the set <code>chars</code> and increase <code>j</code> value to 1 if <code>s[j]</code> is not existed in <code>chars</code>, otherwise remove <code>s[i]</code> from the set and increase <code>i</code> value to 1</p></li>
 </ul>
 
 <h4 id="implementation">Implementation</h4>
