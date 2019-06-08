@@ -22,9 +22,9 @@
     <meta property="og:title" content="Java Read Properties File Example">
     <meta property="og:description" content="Properties are configuration String values managed as key/value pairs. java.util.Properties is extended from java.util.Hashtable, provide the following features loading key/value pairs into a Properties object from a stream retrieve a value from its key listing the keys and their values testing to see if">
     <meta property="og:url" content="http://hellokoding.com/handling-properties-file-in-java-application/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2017/12/PropertiesFile.png">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/JavaUtil_PropertiesFile.png">
     <meta property="article:published_time" content="2017-12-25T14:23:46.000Z">
-    <meta property="article:modified_time" content="2019-05-21T12:38:13.000Z">
+    <meta property="article:modified_time" content="2019-06-08T04:46:27.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -32,7 +32,7 @@
     <meta name="twitter:title" content="Java Read Properties File Example">
     <meta name="twitter:description" content="Properties are configuration String values managed as key/value pairs. java.util.Properties is extended from java.util.Hashtable, provide the following features loading key/value pairs into a Properties object from a stream retrieve a value from its key listing the keys and their values testing to see if">
     <meta name="twitter:url" content="http://hellokoding.com/handling-properties-file-in-java-application/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2017/12/PropertiesFile.png">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/JavaUtil_PropertiesFile.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
@@ -63,8 +63,8 @@
     "headline": "Java Read Properties File Example",
     "url": "http://hellokoding.com/handling-properties-file-in-java-application/",
     "datePublished": "2017-12-25T14:23:46.000Z",
-    "dateModified": "2019-05-21T12:38:13.000Z",
-    "image": "http://hellokoding.com/content/images/2017/12/PropertiesFile.png",
+    "dateModified": "2019-06-08T04:46:27.000Z",
+    "image": "http://hellokoding.com/content/images/2019/06/JavaUtil_PropertiesFile.png",
     "keywords": "Java",
     "description": "Properties are configuration String values managed as key/value pairs. java.util.Properties is extended from java.util.Hashtable, provide the following features loading key/value pairs into a Properties object from a stream retrieve a value from its key listing the keys and their values testing to see if"
 }
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java Read Properties File Example</h1>
-            <time class="post__date" datetime="2019-05-21">Last modified @ 21 May 2019</time>
+            <time class="post__date" datetime="2019-06-08">Last modified @ 08 June 2019</time>
           </header>
 
           <div class="post-content">
@@ -286,6 +286,17 @@ ghost.init({
 <h3 id="readingpropertiesfile">Reading Properties file</h3>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-properties-file/src/main/java/com/hellokoding/util/ApplicationProperties.java">
+</code></pre>
+
+<ul>
+<li><p>The <code>load(InputStream inStream)</code> method of <code>Properties</code> class reads a property list (key and element pairs) from the input byte stream. </p>
+
+<p><code>IOException</code>, <code>IllegalArgumentException</code> and <code>NullPointerException</code> will be thrown if an error occurred when reading from the input stream, if the input stream contains malformed Unicode escape sequence and if the <code>inStream</code> is null respectively</p></li>
+<li><p>The <code>getResourceAsStream(String name)</code> method of <code>ClassLoader</code> class returns an input stream for reading the specified resource or returns <code>null</code> if the resource could not be found</p></li>
+<li><p>Apart from getting the input stream from <code>ClassLoader</code>, you can also do it directly via <code>FileInputStream</code>, for example</p></li>
+</ul>
+
+<pre><code class="language-java">properties.load(new FileInputStream("src/main/resources/application.properties"));
 </code></pre>
 
 <h2 id="test">Test</h2>
