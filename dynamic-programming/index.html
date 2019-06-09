@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Dynamic Programming Tutorial and Example with Fibonacci Numbers">
-    <meta property="og:description" content="Dynamic Programming is a method for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems to reuse them and save time later Dynamic Programming is an optimization over recursive algorithm with two approaches, top-down/memoization">
+    <meta property="og:description" content="Dynamic Programming is a method for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems to reuse them and save time later Let's see a specific example The Fibonacci numbers The Fibonacci numbers form a">
     <meta property="og:url" content="http://hellokoding.com/dynamic-programming/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/dynamic-programming.png">
     <meta property="article:published_time" content="2019-02-26T10:49:18.000Z">
-    <meta property="article:modified_time" content="2019-03-23T12:46:44.000Z">
+    <meta property="article:modified_time" content="2019-06-08T09:24:23.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Dynamic Programming Tutorial and Example with Fibonacci Numbers">
-    <meta name="twitter:description" content="Dynamic Programming is a method for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems to reuse them and save time later Dynamic Programming is an optimization over recursive algorithm with two approaches, top-down/memoization">
+    <meta name="twitter:description" content="Dynamic Programming is a method for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems to reuse them and save time later Let's see a specific example The Fibonacci numbers The Fibonacci numbers form a">
     <meta name="twitter:url" content="http://hellokoding.com/dynamic-programming/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/02/dynamic-programming.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Dynamic Programming Tutorial and Example with Fibonacci Numbers",
     "url": "http://hellokoding.com/dynamic-programming/",
     "datePublished": "2019-02-26T10:49:18.000Z",
-    "dateModified": "2019-03-23T12:46:44.000Z",
+    "dateModified": "2019-06-08T09:24:23.000Z",
     "image": "http://hellokoding.com/content/images/2019/02/dynamic-programming.png",
     "keywords": "Algorithm",
-    "description": "Dynamic Programming is a method for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems to reuse them and save time later Dynamic Programming is an optimization over recursive algorithm with two approaches, top-down/memoization"
+    "description": "Dynamic Programming is a method for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems to reuse them and save time later Let&#x27;s see a specific example The Fibonacci numbers The Fibonacci numbers form a"
 }
     </script>
 
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Dynamic Programming Tutorial and Example with Fibonacci Numbers</h1>
-            <time class="post__date" datetime="2019-03-23">Last modified @ 23 March 2019</time>
+            <time class="post__date" datetime="2019-06-08">Last modified @ 08 June 2019</time>
           </header>
 
           <div class="post-content">
@@ -229,8 +229,6 @@ ghost.init({
             </div>
 
             <p>Dynamic Programming is a method for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems to reuse them and save time later</p>
-
-<p>Dynamic Programming is an optimization over recursive algorithm with two approaches, top-down/memoization and bottom-up/tabulation</p>
 
 <p>Let's see a specific example</p>
 
@@ -245,19 +243,19 @@ F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub> for n &gt; 1</p>
 
 <p>Given a number n, write an algorithm to print the value of Fibonacci number F<sub>n</sub></p>
 
-<h3 id="recursionapproach">Recursion approach</h3>
+<h3 id="approach1recursion">Approach 1: Recursion</h3>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/FibonacciRecursion.java">
 </code></pre>
 
-<h3 id="memoizationtopdownapproach">Memoization/Top-down approach</h3>
+<h3 id="approach2memoizationtopdowndynamicprogramming">Approach 2: Memoization/Top-down Dynamic Programming</h3>
 
 <p>Using an array to store computed results starting from N to 0, so called top-down</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/FibonacciMemoization.java">
 </code></pre>
 
-<h3 id="tabulationbottomupapproach">Tabulation/Bottom-up approach</h3>
+<h3 id="approach3tabulationbottomupdynamicprogramming">Approach 3: Tabulation/Bottom-up Dynamic Programming</h3>
 
 <p>Using an array to store computed results starting from 0 to N, so called bottom-up</p>
 
