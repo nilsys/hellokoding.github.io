@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Longest Common Substring</title>
+  <title>Sort a HashSet in Java</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,29 +14,29 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=9bed7b81c6">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=9bed7b81c6">
    
-  <link rel="canonical" href="http://hellokoding.com/longest-common-substring/">
+  <link rel="canonical" href="http://hellokoding.com/sort-a-hashset-in-java/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Longest Common Substring">
-    <meta property="og:description" content='Problem Given two strings, S of length m and T of length n Write an algorithm to find the longest substring of both S and T Example Input: given two strings "ABABC" and "BABCA". Expected output: "ABC" Approach: Bottom Up Dynamic Programming Optimal substructure: L(i, j) = L(i-1, j-1)'>
-    <meta property="og:url" content="http://hellokoding.com/longest-common-substring/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/StringAlgorithms_LongestCommonSubstring.png">
-    <meta property="article:published_time" content="2019-06-10T03:38:36.000Z">
-    <meta property="article:modified_time" content="2019-06-10T12:34:00.000Z">
-    <meta property="article:tag" content="Algorithm">
+    <meta property="og:title" content="Sort a HashSet in Java">
+    <meta property="og:description" content="HashSet in Java is an unordered and no-duplicate elements collection. To sort it, you can try using TreeSet or ArrayList with Collections Let's define two object classes (one implements Comparable interface and one doesn't) and implement some unit test classes to see the examples in practice The above compareTo method">
+    <meta property="og:url" content="http://hellokoding.com/sort-a-hashset-in-java/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/JavaCollections_SortaHashSet.png">
+    <meta property="article:published_time" content="2019-06-13T05:48:31.000Z">
+    <meta property="article:modified_time" content="2019-06-13T09:52:10.000Z">
+    <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Longest Common Substring">
-    <meta name="twitter:description" content='Problem Given two strings, S of length m and T of length n Write an algorithm to find the longest substring of both S and T Example Input: given two strings "ABABC" and "BABCA". Expected output: "ABC" Approach: Bottom Up Dynamic Programming Optimal substructure: L(i, j) = L(i-1, j-1)'>
-    <meta name="twitter:url" content="http://hellokoding.com/longest-common-substring/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/StringAlgorithms_LongestCommonSubstring.png">
+    <meta name="twitter:title" content="Sort a HashSet in Java">
+    <meta name="twitter:description" content="HashSet in Java is an unordered and no-duplicate elements collection. To sort it, you can try using TreeSet or ArrayList with Collections Let's define two object classes (one implements Comparable interface and one doesn't) and implement some unit test classes to see the examples in practice The above compareTo method">
+    <meta name="twitter:url" content="http://hellokoding.com/sort-a-hashset-in-java/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/JavaCollections_SortaHashSet.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Algorithm">
+    <meta name="twitter:data2" content="Java">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -60,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He has 12+ years hands-on experience of designing and developing web and data services. He was born to make online coding courses, tutorials and examples"
     },
-    "headline": "Longest Common Substring",
-    "url": "http://hellokoding.com/longest-common-substring/",
-    "datePublished": "2019-06-10T03:38:36.000Z",
-    "dateModified": "2019-06-10T12:34:00.000Z",
-    "image": "http://hellokoding.com/content/images/2019/06/StringAlgorithms_LongestCommonSubstring.png",
-    "keywords": "Algorithm",
-    "description": "Problem Given two strings, S of length m and T of length n Write an algorithm to find the longest substring of both S and T Example Input: given two strings &quot;ABABC&quot; and &quot;BABCA&quot;. Expected output: &quot;ABC&quot; Approach: Bottom Up Dynamic Programming Optimal substructure: L(i, j) &#x3D; L(i-1, j-1)"
+    "headline": "Sort a HashSet in Java",
+    "url": "http://hellokoding.com/sort-a-hashset-in-java/",
+    "datePublished": "2019-06-13T05:48:31.000Z",
+    "dateModified": "2019-06-13T09:52:10.000Z",
+    "image": "http://hellokoding.com/content/images/2019/06/JavaCollections_SortaHashSet.png",
+    "keywords": "Java",
+    "description": "HashSet in Java is an unordered and no-duplicate elements collection. To sort it, you can try using TreeSet or ArrayList with Collections Let&#x27;s define two object classes (one implements Comparable interface and one doesn&#x27;t) and implement some unit test classes to see the examples in practice The above compareTo method"
 }
     </script>
 
@@ -87,7 +87,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-algorithm">
+<body class="post-template tag-java">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -216,64 +216,71 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-9 column">
-        <article class="post tag-algorithm">
+        <article class="post tag-java">
 
           <header class="post__header">
-            <h1 class="post__title">Longest Common Substring</h1>
-            <time class="post__date" datetime="2019-06-10">Last modified @ 10 June 2019</time>
+            <h1 class="post__title">Sort a HashSet in Java</h1>
+            <time class="post__date" datetime="2019-06-13">Last modified @ 13 June 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
+              <a href="../tag/java/">Java</a>
             </div>
 
-            <h3 id="problem">Problem</h3>
+            <p><code>HashSet</code> in Java is an unordered and no-duplicate elements collection. To sort it, you can try using <code>TreeSet</code> or <code>ArrayList</code> with <code>Collections</code></p>
 
-<ul>
-<li>Given two strings, <code>S</code> of length <code>m</code> and <code>T</code> of length <code>n</code></li>
-<li>Write an algorithm to find the longest substring of both <code>S</code> and <code>T</code></li>
-</ul>
+<p>Let's define two object classes (one implements Comparable interface and one doesn't) and implement some unit test classes to see the examples in practice</p>
 
-<h3 id="example">Example</h3>
-
-<ul>
-<li>Input: given two strings "ABABC" and "BABCA". Expected output: "ABC"</li>
-</ul>
-
-<h3 id="approachbottomupdynamicprogramming">Approach: Bottom Up Dynamic Programming</h3>
-
-<ul>
-<li><p>Optimal substructure: <code>L(i, j) = L(i-1, j-1) + 1</code> if <code>S(i-1) == T(j-1)</code> with <code>L(i, j)</code> is the length of the common substring at character <code>S(i)</code> and <code>T(j)</code></p>
-
-<p>For the above example, the longest common substring "ABC" has the length at the last common character <code>C</code> of both <code>S</code> and <code>T</code>, <code>L(5, 4)</code>, equals to the length at the immediate preceding common character <code>B</code>, <code>L(4, 3)</code>, plus 1</p></li>
-<li><p>Bottom up filling the 2D array <code>L[m+1][n+1]</code> and keep track the max length and start index of the longest common substring</p></li>
-</ul>
-
-<h4 id="implementation">Implementation</h4>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/String_LongestCommon.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-collections/src/test/java/com/hellokoding/java/collections/NonComparableBook.java">
 </code></pre>
 
-<h4 id="complexity">Complexity</h4>
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-collections/src/test/java/com/hellokoding/java/collections/ComparableBook.java">
+</code></pre>
+
+<p>The above <code>compareTo</code> method provides the default / natural order in ascending  to <code>ComparableBook</code> objects. If you want the default order in descending, try below</p>
+
+<pre><code class="language-java">@Override
+public int compareTo(ComparableBook o) {  
+    return o.title.compareTo(this.title);
+}
+</code></pre>
+
+<h2 id="usingtreesetonlogntime">Using <code>TreeSet</code>, O(nlogn) time</h2>
 
 <ul>
-<li>Time complexity: O(mn)</li>
-<li>Space complexity: O(mn)</li>
+<li><p>Sort the <code>HashSet</code> by creating a new TreeSet with the constructor <code>TreeSet(Collection)</code> to copy all elements from the specified collection you want to sort</p></li>
+<li><p>All elements inserted into the <code>TreeSet</code> must implement the <code>Comparable</code> interface</p>
+
+<p>They also must be mutually comparable: : <code>e1.compareTo(e2)</code> must not throw a <code>ClassCastException</code> for any elements in the set</p></li>
 </ul>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-collections/src/test/java/com/hellokoding/java/collections/HashSetSortingByTreeSetTest.java">
+</code></pre>
+
+<h2 id="usingarraylistonlogntime">Using <code>ArrayList</code>, O(nlogn) time</h2>
+
+<ul>
+<li><p>Sort the <code>HashSet</code> by creating a new ArrayList with the constructor <code>ArrayList(Collection)</code> to copy all elements from the specified collection you want to sort</p></li>
+<li><p>Using <code>Collections.sort(List)</code> to sort <code>Comparable</code> implemented objects</p></li>
+<li><p>Using <code>Collections.sort(List, Comparator)</code> to control over the sort order or to provide natural ordering to non-<code>Comparable</code> implemented objects</p></li>
+</ul>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-collections/src/test/java/com/hellokoding/java/collections/HashSetSortingByArrayListTest.java">
+</code></pre>
             
             <div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
+              <a href="../tag/java/">Java</a>
             </div>
           </div>
 
           <div class="love-post">Love this post?</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Longest%20Common%20Substring&amp;url=http://hellokoding.com/longest-common-substring/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Sort%20a%20HashSet%20in%20Java&amp;url=http://hellokoding.com/sort-a-hashset-in-java/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Tweet</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/longest-common-substring/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/sort-a-hashset-in-java/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Share</span>
   </a>
@@ -322,8 +329,8 @@ ghost.init({
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation prev ">
   <div class="post-card ">
-       <a href="../java-comparable-vs-comparator-examples/" class="block" title="Java Comparable vs Comparator Examples">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/06/JavaCore_ComparablevsComparator.png) ">
+       <a href="../sort-a-hashmap-in-java/" class="block" title="Sort a HashMap in Java">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/06/JavaCollections_SortaHashMap.png) ">
       </div>
     </a>
 
@@ -336,7 +343,7 @@ ghost.init({
       </div>
 
       <h2 class="post-card__title">
-        <a title="Java Comparable vs Comparator Examples" href="../java-comparable-vs-comparator-examples/">Java Comparable vs Comparator Examples</a>
+        <a title="Sort a HashMap in Java" href="../sort-a-hashmap-in-java/">Sort a HashMap in Java</a>
       </h2>
 <div class="post__tags">
               <a href="../tag/java/">Java</a>
@@ -349,8 +356,8 @@ ghost.init({
 
     <article class="post-card-wrap column medium-6 large-4 medium-6 large-6 post-navigation next ">
   <div class="post-card ">
-       <a href="../longest-common-subsequence/" class="block" title="Longest Common Subsequence">
-      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/06/DynamicProgramming_LongestCommonSubsequence.png) ">
+       <a href="../sort-an-arraylist-in-java/" class="block" title="Sort an ArrayList in Java">
+      <div class="grey-bg post-card__image CoverImage FlexEmbed FlexEmbed--16by9 " style="background-image: url(../content/images/2019/06/JavaCollections_SortanArrayList.png) ">
       </div>
     </a>
 
@@ -359,14 +366,14 @@ ghost.init({
           <span class="post-card__meta__author-name">
             <a href="../author/giau/" title="Giau Ngo">Giau Ngo - </a>
           </span>
-        <time class="post-card__meta__date" datetime="2019-06-10">10 June 2019</time>
+        <time class="post-card__meta__date" datetime="2019-06-13">13 June 2019</time>
       </div>
 
       <h2 class="post-card__title">
-        <a title="Longest Common Subsequence" href="../longest-common-subsequence/">Longest Common Subsequence</a>
+        <a title="Sort an ArrayList in Java" href="../sort-an-arraylist-in-java/">Sort an ArrayList in Java</a>
       </h2>
 <div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
+              <a href="../tag/java/">Java</a>
             </div>
 
    </div>
@@ -380,8 +387,8 @@ ghost.init({
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/longest-common-substring/';
-      this.page.identifier = '136';
+      this.page.url = 'http://hellokoding.com/sort-a-hashset-in-java/';
+      this.page.identifier = '139';
     };
 
     (function() {
