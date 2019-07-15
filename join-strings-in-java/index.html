@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/join-strings-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/07/JavaCore_JoinStrings.png">
     <meta property="article:published_time" content="2019-07-15T14:47:13.000Z">
-    <meta property="article:modified_time" content="2019-07-15T14:47:13.000Z">
+    <meta property="article:modified_time" content="2019-07-15T14:53:56.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Join Strings in Java",
     "url": "http://hellokoding.com/join-strings-in-java/",
     "datePublished": "2019-07-15T14:47:13.000Z",
-    "dateModified": "2019-07-15T14:47:13.000Z",
+    "dateModified": "2019-07-15T14:53:56.000Z",
     "image": "http://hellokoding.com/content/images/2019/07/JavaCore_JoinStrings.png",
     "keywords": "Java",
     "description": "In Java, you can join strings with StringJoiner, String&#x27;s join method or StringBuilder Using Java 8+ StringJoiner StringJoiner is used to join a sequence of strings by a delimiter @Test public void joinWithStringJoiners() {       StringJoiner stringJoiner &#x3D; new StringJoiner(&quot;, &quot;);     stringJoiner.add(&quot;apple&quot;)         .add(&quot;orange&quot;)         .add(&quot;passion&quot;);     String result &#x3D; stringJoiner.toString();     assertThat(result)"
@@ -253,7 +253,7 @@ public void joinWithStringJoiners() {
 <p>String's join method is used to join an array or a list of strings by a delimiter</p>
 
 <pre><code class="language-java">@Test
-public void joinListStringsWithStringJoin() {  
+public void joinListOfStringsWithStringJoin() {  
     List&lt;String&gt; lst = Arrays.asList("apple", "orange", "passion");
 
     String result = String.join(", ", lst);
