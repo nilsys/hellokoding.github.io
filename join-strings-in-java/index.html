@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Join Strings in Java">
-    <meta property="og:description" content="In Java, you can join strings with StringJoiner, String's join method or StringBuilder Using Java 8+ StringJoiner StringJoiner is used to join a sequence of strings by a delimiter @Test public void joinWithStringJoiners() {       StringJoiner stringJoiner = new StringJoiner(&quot;, &quot;);     stringJoiner.add(&quot;apple&quot;)         .add(&quot;orange&quot;)         .add(&quot;passion&quot;);     String result = stringJoiner.toString();     assertThat(result)">
+    <meta property="og:description" content="In Java, you can join strings with StringJoiner, String's join method, StringBuilder, StringBuffer, String's concat method and + operator Using Java 8+ StringJoiner StringJoiner is used to join a sequence of strings by a delimiter @Test public void joinWithStringJoiners() {       StringJoiner stringJoiner = new StringJoiner(&quot;, &quot;);     stringJoiner.add(&quot;apple&quot;)         .add(&quot;orange&quot;)         .add(&quot;passion&quot;);     String">
     <meta property="og:url" content="http://hellokoding.com/join-strings-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/07/JavaCore_JoinStrings.png">
     <meta property="article:published_time" content="2019-07-15T14:47:13.000Z">
-    <meta property="article:modified_time" content="2019-07-15T14:53:56.000Z">
+    <meta property="article:modified_time" content="2019-07-15T15:39:10.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Join Strings in Java">
-    <meta name="twitter:description" content="In Java, you can join strings with StringJoiner, String's join method or StringBuilder Using Java 8+ StringJoiner StringJoiner is used to join a sequence of strings by a delimiter @Test public void joinWithStringJoiners() {       StringJoiner stringJoiner = new StringJoiner(&quot;, &quot;);     stringJoiner.add(&quot;apple&quot;)         .add(&quot;orange&quot;)         .add(&quot;passion&quot;);     String result = stringJoiner.toString();     assertThat(result)">
+    <meta name="twitter:description" content="In Java, you can join strings with StringJoiner, String's join method, StringBuilder, StringBuffer, String's concat method and + operator Using Java 8+ StringJoiner StringJoiner is used to join a sequence of strings by a delimiter @Test public void joinWithStringJoiners() {       StringJoiner stringJoiner = new StringJoiner(&quot;, &quot;);     stringJoiner.add(&quot;apple&quot;)         .add(&quot;orange&quot;)         .add(&quot;passion&quot;);     String">
     <meta name="twitter:url" content="http://hellokoding.com/join-strings-in-java/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/07/JavaCore_JoinStrings.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Join Strings in Java",
     "url": "http://hellokoding.com/join-strings-in-java/",
     "datePublished": "2019-07-15T14:47:13.000Z",
-    "dateModified": "2019-07-15T14:53:56.000Z",
+    "dateModified": "2019-07-15T15:39:10.000Z",
     "image": "http://hellokoding.com/content/images/2019/07/JavaCore_JoinStrings.png",
     "keywords": "Java",
-    "description": "In Java, you can join strings with StringJoiner, String&#x27;s join method or StringBuilder Using Java 8+ StringJoiner StringJoiner is used to join a sequence of strings by a delimiter @Test public void joinWithStringJoiners() {       StringJoiner stringJoiner &#x3D; new StringJoiner(&quot;, &quot;);     stringJoiner.add(&quot;apple&quot;)         .add(&quot;orange&quot;)         .add(&quot;passion&quot;);     String result &#x3D; stringJoiner.toString();     assertThat(result)"
+    "description": "In Java, you can join strings with StringJoiner, String&#x27;s join method, StringBuilder, StringBuffer, String&#x27;s concat method and + operator Using Java 8+ StringJoiner StringJoiner is used to join a sequence of strings by a delimiter @Test public void joinWithStringJoiners() {       StringJoiner stringJoiner &#x3D; new StringJoiner(&quot;, &quot;);     stringJoiner.add(&quot;apple&quot;)         .add(&quot;orange&quot;)         .add(&quot;passion&quot;);     String"
 }
     </script>
 
@@ -228,9 +228,9 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p>In Java, you can join strings with StringJoiner, String's join method or StringBuilder</p>
+            <p>In Java, you can join strings with <code>StringJoiner</code>, <code>String</code>'s <code>join</code> method, <code>StringBuilder</code>, <code>StringBuffer</code>, <code>String</code>'s <code>concat</code> method and <code>+</code> operator</p>
 
-<h3 id="usingjava8stringjoiner">Using Java 8+ StringJoiner</h3>
+<h3 id="usingjava8stringjoiner">Using Java 8+ <code>StringJoiner</code></h3>
 
 <p><code>StringJoiner</code> is used to join a sequence of strings by a delimiter</p>
 
@@ -248,9 +248,9 @@ public void joinWithStringJoiners() {
 }
 </code></pre>
 
-<h3 id="usingjava8stringsjoinmethod">Using Java 8+ String's join method</h3>
+<h3 id="usingjava8stringsjoinmethod">Using Java 8+ <code>String</code>'s <code>join</code> method</h3>
 
-<p>String's join method is used to join an array or a list of strings by a delimiter</p>
+<p><code>String</code>'s <code>join</code> method is used to join an array or a list of strings by a delimiter</p>
 
 <pre><code class="language-java">@Test
 public void joinListOfStringsWithStringJoin() {  
@@ -271,29 +271,26 @@ public void joinArrayOfStringsWithStringJoin() {
 }
 </code></pre>
 
-<h3 id="usingstringbuilder">Using StringBuilder</h3>
+<h3 id="usingstringbuilderstringbufferstringsconcatmethodoroperator">Using <code>StringBuilder</code>, <code>StringBuffer</code>, <code>String</code>'s <code>concat</code> method or <code>+</code> operator</h3>
 
-<p>StringBuilder does not support delimiter, we have to handle it manually. On the good side, it is the fastest method to join strings</p>
+<p><code>StringBuilder</code>, <code>StringBuffer</code>, <code>String</code>'s <code>concat</code> method and <code>+</code> operator do not support delimiter, we have to handle manually</p>
 
 <pre><code class="language-java">@Test
-public void joinStringsWithStringBuilder() {  
-    StringBuilder stringBuilder = new StringBuilder();
+public void joinStringsWithStringConcat() {  
+    final String DELIMITER = ", ";
+    String joinedString = "apple"
+        .concat(DELIMITER)
+        .concat("orange")
+        .concat(DELIMITER)
+        .concat("passion");
 
-    stringBuilder.append("apple")
-        .append(", ")
-        .append("orange")
-        .append(", ")
-        .append("passion");
-
-    String result = stringBuilder.toString();
-
-    assertThat(result).isEqualTo("apple, orange, passion");
+    assertThat(joinedString).isEqualTo("apple, orange, passion");
 }
 </code></pre>
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>In this tutorial, we learned various methods to join strings in Java. While <code>StringBuilder</code> is the best performance method, StringJoiner and String's join methods support to join strings with delimiter. You can find the full source code as below</p>
+<p>In this tutorial, we learned various methods to join strings in Java. While <code>StringJoiner</code> and <code>String</code>'s <code>join</code> methods support to join strings with delimiter, other methods we have to handle manually. You can find the full source code as below</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/lang/StringJoiningTest.java">
 </code></pre>

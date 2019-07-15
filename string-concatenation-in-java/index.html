@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/string-concatenation-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/07/JavaCore_StringConcatenation-1.png">
     <meta property="article:published_time" content="2019-07-11T16:00:27.000Z">
-    <meta property="article:modified_time" content="2019-07-11T16:53:26.000Z">
+    <meta property="article:modified_time" content="2019-07-15T15:41:19.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "String Concatenation in Java",
     "url": "http://hellokoding.com/string-concatenation-in-java/",
     "datePublished": "2019-07-11T16:00:27.000Z",
-    "dateModified": "2019-07-11T16:53:26.000Z",
+    "dateModified": "2019-07-15T15:41:19.000Z",
     "image": "http://hellokoding.com/content/images/2019/07/JavaCore_StringConcatenation-1.png",
     "keywords": "Java",
     "description": "In Java, you can concatenate multiple strings with StringBuilder, StringBuffer, String&#x27;s concat(String) method or + operator (ordered by performance preference) Using StringBuilder You can use StringBuilder&#x27;s append or insert method to concatenate strings. They are overloaded to accept any data type. While append method always adds the string at the"
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">String Concatenation in Java</h1>
-            <time class="post__date" datetime="2019-07-11">Last modified @ 11 July 2019</time>
+            <time class="post__date" datetime="2019-07-15">Last modified @ 15 July 2019</time>
           </header>
 
           <div class="post-content">
@@ -233,8 +233,6 @@ ghost.init({
 <h3 id="usingstringbuilder">Using StringBuilder</h3>
 
 <p>You can use StringBuilder's <code>append</code> or <code>insert</code> method to concatenate strings. They are overloaded to accept any data type. While <code>append</code> method always adds the string at the end of the builder, the <code>insert</code> method adds the string at a specified index</p>
-
-<p><code>StringBuilder</code> is the fastest way to concat strings in Java</p>
 
 <p>Instances of <code>StringBuilder</code> are not safe to be used by multiple threads. In that case, consider using <code>StringBuffer</code></p>
 
@@ -298,7 +296,7 @@ public void givenMultipleDataTypes_whenConcatByPlus_thenSuccess() {
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>In this tutorial, we learned various methods to concatenate strings in Java. <code>StringBuilder</code> is recommended to be used in most circumstances as it provides the best performance. You can find the full source code as below</p>
+<p>In this tutorial, we learned various methods to concatenate strings in Java. While String's concat and <code>+</code> operator are used in simple cases, <code>StringBuilder</code> is recommended to be used when you want to care about the performance. The full source code can be found as below</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/lang/StringConcatenationTest.java">
 </code></pre>
