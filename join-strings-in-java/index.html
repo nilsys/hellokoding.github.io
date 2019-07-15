@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/join-strings-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/07/JavaCore_JoinStrings.png">
     <meta property="article:published_time" content="2019-07-15T14:47:13.000Z">
-    <meta property="article:modified_time" content="2019-07-15T15:39:10.000Z">
+    <meta property="article:modified_time" content="2019-07-15T15:53:32.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Join Strings in Java",
     "url": "http://hellokoding.com/join-strings-in-java/",
     "datePublished": "2019-07-15T14:47:13.000Z",
-    "dateModified": "2019-07-15T15:39:10.000Z",
+    "dateModified": "2019-07-15T15:53:32.000Z",
     "image": "http://hellokoding.com/content/images/2019/07/JavaCore_JoinStrings.png",
     "keywords": "Java",
     "description": "In Java, you can join strings with StringJoiner, String&#x27;s join method, StringBuilder, StringBuffer, String&#x27;s concat method and + operator Using Java 8+ StringJoiner StringJoiner is used to join a sequence of strings by a delimiter @Test public void joinWithStringJoiners() {       StringJoiner stringJoiner &#x3D; new StringJoiner(&quot;, &quot;);     stringJoiner.add(&quot;apple&quot;)         .add(&quot;orange&quot;)         .add(&quot;passion&quot;);     String"
@@ -277,20 +277,19 @@ public void joinArrayOfStringsWithStringJoin() {
 
 <pre><code class="language-java">@Test
 public void joinStringsWithStringConcat() {  
-    final String DELIMITER = ", ";
     String joinedString = "apple"
-        .concat(DELIMITER)
+        .concat(",")
         .concat("orange")
-        .concat(DELIMITER)
+        .concat(";")
         .concat("passion");
 
-    assertThat(joinedString).isEqualTo("apple, orange, passion");
+    assertThat(joinedString).isEqualTo("apple, orange; passion");
 }
 </code></pre>
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>In this tutorial, we learned various methods to join strings in Java. While <code>StringJoiner</code> and <code>String</code>'s <code>join</code> methods support to join strings with delimiter, other methods we have to handle manually. You can find the full source code as below</p>
+<p>In this tutorial, we learned various methods to join strings in Java. While <code>StringJoiner</code> and <code>String</code>'s <code>join</code> methods support to join strings with delimiter, other methods offer more flexible. You can find the full source code as below</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/lang/StringJoiningTest.java">
 </code></pre>
