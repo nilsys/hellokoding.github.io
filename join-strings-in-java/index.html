@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>String Concatenation in Java</title>
+  <title>Join Strings in Java</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,25 +14,25 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=e5aa66f70c">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=e5aa66f70c">
    
-  <link rel="canonical" href="http://hellokoding.com/string-concatenation-in-java/">
+  <link rel="canonical" href="http://hellokoding.com/join-strings-in-java/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="String Concatenation in Java">
-    <meta property="og:description" content="In Java, you can concatenate multiple strings with StringBuilder, StringBuffer, String's concat(String) method or + operator (ordered by performance preference) Using StringBuilder You can use StringBuilder's append or insert method to concatenate strings. They are overloaded to accept any data type. While append method always adds the string at the">
-    <meta property="og:url" content="http://hellokoding.com/string-concatenation-in-java/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/07/JavaCore_StringConcatenation-1.png">
-    <meta property="article:published_time" content="2019-07-11T16:00:27.000Z">
-    <meta property="article:modified_time" content="2019-07-11T16:53:26.000Z">
+    <meta property="og:title" content="Join Strings in Java">
+    <meta property="og:description" content="In Java, you can join strings with StringJoiner, String's join method or StringBuilder Using Java 8+ StringJoiner StringJoiner is used to join a sequence of strings by a delimiter @Test public void joinWithStringJoiners() {       StringJoiner stringJoiner = new StringJoiner(&quot;, &quot;);     stringJoiner.add(&quot;apple&quot;)         .add(&quot;orange&quot;)         .add(&quot;passion&quot;);     String result = stringJoiner.toString();     assertThat(result)">
+    <meta property="og:url" content="http://hellokoding.com/join-strings-in-java/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/07/JavaCore_JoinStrings.png">
+    <meta property="article:published_time" content="2019-07-15T14:47:13.000Z">
+    <meta property="article:modified_time" content="2019-07-15T14:47:13.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="String Concatenation in Java">
-    <meta name="twitter:description" content="In Java, you can concatenate multiple strings with StringBuilder, StringBuffer, String's concat(String) method or + operator (ordered by performance preference) Using StringBuilder You can use StringBuilder's append or insert method to concatenate strings. They are overloaded to accept any data type. While append method always adds the string at the">
-    <meta name="twitter:url" content="http://hellokoding.com/string-concatenation-in-java/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/07/JavaCore_StringConcatenation-1.png">
+    <meta name="twitter:title" content="Join Strings in Java">
+    <meta name="twitter:description" content="In Java, you can join strings with StringJoiner, String's join method or StringBuilder Using Java 8+ StringJoiner StringJoiner is used to join a sequence of strings by a delimiter @Test public void joinWithStringJoiners() {       StringJoiner stringJoiner = new StringJoiner(&quot;, &quot;);     stringJoiner.add(&quot;apple&quot;)         .add(&quot;orange&quot;)         .add(&quot;passion&quot;);     String result = stringJoiner.toString();     assertThat(result)">
+    <meta name="twitter:url" content="http://hellokoding.com/join-strings-in-java/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/07/JavaCore_JoinStrings.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He has 12+ years hands-on experience of designing and developing web and data services. He was born to make online coding courses, tutorials and examples"
     },
-    "headline": "String Concatenation in Java",
-    "url": "http://hellokoding.com/string-concatenation-in-java/",
-    "datePublished": "2019-07-11T16:00:27.000Z",
-    "dateModified": "2019-07-11T16:53:26.000Z",
-    "image": "http://hellokoding.com/content/images/2019/07/JavaCore_StringConcatenation-1.png",
+    "headline": "Join Strings in Java",
+    "url": "http://hellokoding.com/join-strings-in-java/",
+    "datePublished": "2019-07-15T14:47:13.000Z",
+    "dateModified": "2019-07-15T14:47:13.000Z",
+    "image": "http://hellokoding.com/content/images/2019/07/JavaCore_JoinStrings.png",
     "keywords": "Java",
-    "description": "In Java, you can concatenate multiple strings with StringBuilder, StringBuffer, String&#x27;s concat(String) method or + operator (ordered by performance preference) Using StringBuilder You can use StringBuilder&#x27;s append or insert method to concatenate strings. They are overloaded to accept any data type. While append method always adds the string at the"
+    "description": "In Java, you can join strings with StringJoiner, String&#x27;s join method or StringBuilder Using Java 8+ StringJoiner StringJoiner is used to join a sequence of strings by a delimiter @Test public void joinWithStringJoiners() {       StringJoiner stringJoiner &#x3D; new StringJoiner(&quot;, &quot;);     stringJoiner.add(&quot;apple&quot;)         .add(&quot;orange&quot;)         .add(&quot;passion&quot;);     String result &#x3D; stringJoiner.toString();     assertThat(result)"
 }
     </script>
 
@@ -219,8 +219,8 @@ ghost.init({
         <article class="post tag-java">
 
           <header class="post__header">
-            <h1 class="post__title">String Concatenation in Java</h1>
-            <time class="post__date" datetime="2019-07-11">Last modified @ 11 July 2019</time>
+            <h1 class="post__title">Join Strings in Java</h1>
+            <time class="post__date" datetime="2019-07-15">Last modified @ 15 July 2019</time>
           </header>
 
           <div class="post-content">
@@ -228,79 +228,74 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p>In Java, you can concatenate multiple strings with StringBuilder, StringBuffer, String's <code>concat(String)</code> method or <code>+</code> operator (ordered by performance preference)</p>
+            <p>In Java, you can join strings with StringJoiner, String's join method or StringBuilder</p>
+
+<h3 id="usingjava8stringjoiner">Using Java 8+ StringJoiner</h3>
+
+<p><code>StringJoiner</code> is used to join a sequence of strings by a delimiter</p>
+
+<pre><code class="language-java">@Test
+public void joinWithStringJoiners() {  
+    StringJoiner stringJoiner = new StringJoiner(", ");
+
+    stringJoiner.add("apple")
+        .add("orange")
+        .add("passion");
+
+    String result = stringJoiner.toString();
+
+    assertThat(result).isEqualTo("apple, orange, passion");
+}
+</code></pre>
+
+<h3 id="usingjava8stringsjoinmethod">Using Java 8+ String's join method</h3>
+
+<p>String's join method is used to join an array or a list of strings by a delimiter</p>
+
+<pre><code class="language-java">@Test
+public void joinListStringsWithStringJoin() {  
+    List&lt;String&gt; lst = Arrays.asList("apple", "orange", "passion");
+
+    String result = String.join(", ", lst);
+
+    assertThat(result).isEqualTo("apple, orange, passion");
+}
+
+@Test
+public void joinArrayOfStringsWithStringJoin() {  
+    String[] arr = {"apple", "orange", "passion"};
+
+    String result = String.join(", ", arr);
+
+    assertThat(result).isEqualTo("apple, orange, passion");
+}
+</code></pre>
 
 <h3 id="usingstringbuilder">Using StringBuilder</h3>
 
-<p>You can use StringBuilder's <code>append</code> or <code>insert</code> method to concatenate strings. They are overloaded to accept any data type. While <code>append</code> method always adds the string at the end of the builder, the <code>insert</code> method adds the string at a specified index</p>
-
-<p><code>StringBuilder</code> is the fastest way to concat strings in Java</p>
-
-<p>Instances of <code>StringBuilder</code> are not safe to be used by multiple threads. In that case, consider using <code>StringBuffer</code></p>
+<p>StringBuilder does not support delimiter, we have to handle it manually. On the good side, it is the fastest method to join strings</p>
 
 <pre><code class="language-java">@Test
-public void givenMultipleDataTypes_whenConcatByStringBuilder_thenSuccess() {  
-    StringBuilder sb = new StringBuilder();
-    sb.append("Hello ");
-    sb.append("Koding ");
-    sb.append(2015);
-    String result = sb.toString();
+public void joinStringsWithStringBuilder() {  
+    StringBuilder stringBuilder = new StringBuilder();
 
-    assertThat(result).isEqualTo("Hello Koding 2015");
-}
-</code></pre>
+    stringBuilder.append("apple")
+        .append(", ")
+        .append("orange")
+        .append(", ")
+        .append("passion");
 
-<h3 id="usingstringbuffer">Using StringBuffer</h3>
+    String result = stringBuilder.toString();
 
-<p><code>StringBuffer</code> has the API compatible with <code>StringBuilder</code>, so you can also use <code>append</code> or <code>insert</code> methods of <code>StringBuffer</code> to concatenate strings</p>
-
-<p><code>StringBuffer</code> is designed to be used in multiple threads environment</p>
-
-<pre><code class="language-java">@Test
-public void givenMultipleDataTypes_whenConcatByStringBuilder_thenSuccess() {  
-    StringBuffer sb = new StringBuffer();
-    sb.append("Hello ");
-    sb.append("Koding ");
-    sb.append(2015);
-    String result = sb.toString();
-
-    assertThat(result).isEqualTo("Hello Koding 2015");
-}
-</code></pre>
-
-<h3 id="usingstringsconcatstringmethod">Using String's concat(String) method</h3>
-
-<p>The Java <code>String</code> class provides the <code>concat(String)</code> method to concatenate the specified string to the end of the caller string</p>
-
-<p>The <code>concat</code> method only accept <code>String</code> data type, so try converting the argument to <code>String</code> before passing to the method</p>
-
-<pre><code class="language-java">@Test
-public void givenMultipleDataTypes_whenConcatByStringConcat_thenSuccess() {  
-    int foundedYear = 2015;
-    String result = "Hello ".concat("Koding ").concat(Integer.toString(foundedYear));
-
-    assertThat(result).isEqualTo("Hello Koding 2015");
-}
-</code></pre>
-
-<h3 id="usingoperator">Using <code>+</code> operator</h3>
-
-<p>The Java <code>+</code> operator will try to convert the input parameters to String before concatenation. It offers convenient typing but with slowest performance as a new String object will be created on every operations</p>
-
-<pre><code class="language-java">@Test
-public void givenMultipleDataTypes_whenConcatByPlus_thenSuccess() {  
-    int foundedYear = 2015;
-    String result = "Hello " + "Koding " + foundedYear;
-
-    assertThat(result).isEqualTo("Hello Koding 2015");
+    assertThat(result).isEqualTo("apple, orange, passion");
 }
 </code></pre>
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>In this tutorial, we learned various methods to concatenate strings in Java. <code>StringBuilder</code> is recommended to be used in most circumstances as it provides the best performance. You can find the full source code as below</p>
+<p>In this tutorial, we learned various methods to join strings in Java. While <code>StringBuilder</code> is the best performance method, StringJoiner and String's join methods support to join strings with delimiter. You can find the full source code as below</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/lang/StringConcatenationTest.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/lang/StringJoiningTest.java">
 </code></pre>
             
             <div class="post__tags">
@@ -310,11 +305,11 @@ public void givenMultipleDataTypes_whenConcatByPlus_thenSuccess() {
 
           <div class="love-post">Love this post?</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=String%20Concatenation%20in%20Java&amp;url=http://hellokoding.com/string-concatenation-in-java/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Join%20Strings%20in%20Java&amp;url=http://hellokoding.com/join-strings-in-java/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Tweet</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/string-concatenation-in-java/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/join-strings-in-java/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Share</span>
   </a>
@@ -368,8 +363,8 @@ public void givenMultipleDataTypes_whenConcatByPlus_thenSuccess() {
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/string-concatenation-in-java/';
-      this.page.identifier = '143';
+      this.page.url = 'http://hellokoding.com/join-strings-in-java/';
+      this.page.identifier = '144';
     };
 
     (function() {
