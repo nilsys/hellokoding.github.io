@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/join-strings-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/07/JavaCore_JoinStrings.png">
     <meta property="article:published_time" content="2019-07-15T14:47:13.000Z">
-    <meta property="article:modified_time" content="2019-07-15T15:53:32.000Z">
+    <meta property="article:modified_time" content="2019-07-16T03:02:29.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Join Strings in Java",
     "url": "http://hellokoding.com/join-strings-in-java/",
     "datePublished": "2019-07-15T14:47:13.000Z",
-    "dateModified": "2019-07-15T15:53:32.000Z",
+    "dateModified": "2019-07-16T03:02:29.000Z",
     "image": "http://hellokoding.com/content/images/2019/07/JavaCore_JoinStrings.png",
     "keywords": "Java",
     "description": "In Java, you can join strings with StringJoiner, String&#x27;s join method, StringBuilder, StringBuffer, String&#x27;s concat method and + operator Using Java 8+ StringJoiner StringJoiner is used to join a sequence of strings by a delimiter @Test public void joinWithStringJoiners() {       StringJoiner stringJoiner &#x3D; new StringJoiner(&quot;, &quot;);     stringJoiner.add(&quot;apple&quot;)         .add(&quot;orange&quot;)         .add(&quot;passion&quot;);     String"
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Join Strings in Java</h1>
-            <time class="post__date" datetime="2019-07-15">Last modified @ 15 July 2019</time>
+            <time class="post__date" datetime="2019-07-16">Last modified @ 16 July 2019</time>
           </header>
 
           <div class="post-content">
@@ -250,9 +250,18 @@ public void joinWithStringJoiners() {
 
 <h3 id="usingjava8stringsjoinmethod">Using Java 8+ <code>String</code>'s <code>join</code> method</h3>
 
-<p><code>String</code>'s <code>join</code> method is used to join an array or a list of strings by a delimiter</p>
+<p><code>String</code>'s <code>join</code> method is used to join an array or any <code>Iterable</code> collections like <code>List</code> or <code>Set</code> of strings by a delimiter</p>
 
 <pre><code class="language-java">@Test
+public void joinArrayOfStringsWithStringJoin() {  
+    String[] arr = {"apple", "orange", "passion"};
+
+    String result = String.join(", ", arr);
+
+    assertThat(result).isEqualTo("apple, orange, passion");
+}
+
+@Test
 public void joinListOfStringsWithStringJoin() {  
     List&lt;String&gt; lst = Arrays.asList("apple", "orange", "passion");
 
@@ -262,10 +271,10 @@ public void joinListOfStringsWithStringJoin() {
 }
 
 @Test
-public void joinArrayOfStringsWithStringJoin() {  
-    String[] arr = {"apple", "orange", "passion"};
+public void joinSetOfStringsWithStringJoin() {  
+    Set&lt;String&gt; set = new LinkedHashSet&lt;&gt;(Arrays.asList("apple", "orange", "passion"));
 
-    String result = String.join(", ", arr);
+    String result = String.join(", ", set);
 
     assertThat(result).isEqualTo("apple, orange, passion");
 }
