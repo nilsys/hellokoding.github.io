@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Iterate a HashMap in Java">
-    <meta property="og:description" content="Java HashMap and other Map collections are not implemented Iterable interface like List or Set. However, you can iterate theirs key-value pairs, entrySet(), keySet() and values() as below Iterate over key-value pairs with Java 8+ forEach(BiConsumer&amp;lt;? super K, ? super V&amp;gt; action) of Map interface Map&amp;lt;String,">
+    <meta property="og:description" content='Java HashMap and other Map collections are not implemented Iterable interface like List or Set. However, you can iterate theirs key-value pairs, entrySet(), keySet() and values() as below Iterate over key-value pairs with Java 8+ forEach(BiConsumer) of Map interface Map&amp;lt;String, Integer&amp;gt; immutableMap = Map.of("k1", 1,'>
     <meta property="og:url" content="http://hellokoding.com/iterate-a-hashmap-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/07/JavaCollections_IterateaHashMap.png">
     <meta property="article:published_time" content="2019-07-17T12:48:15.000Z">
-    <meta property="article:modified_time" content="2019-07-17T12:48:40.000Z">
+    <meta property="article:modified_time" content="2019-07-19T08:33:18.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Iterate a HashMap in Java">
-    <meta name="twitter:description" content="Java HashMap and other Map collections are not implemented Iterable interface like List or Set. However, you can iterate theirs key-value pairs, entrySet(), keySet() and values() as below Iterate over key-value pairs with Java 8+ forEach(BiConsumer&amp;lt;? super K, ? super V&amp;gt; action) of Map interface Map&amp;lt;String,">
+    <meta name="twitter:description" content='Java HashMap and other Map collections are not implemented Iterable interface like List or Set. However, you can iterate theirs key-value pairs, entrySet(), keySet() and values() as below Iterate over key-value pairs with Java 8+ forEach(BiConsumer) of Map interface Map&amp;lt;String, Integer&amp;gt; immutableMap = Map.of("k1", 1,'>
     <meta name="twitter:url" content="http://hellokoding.com/iterate-a-hashmap-in-java/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/07/JavaCollections_IterateaHashMap.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Iterate a HashMap in Java",
     "url": "http://hellokoding.com/iterate-a-hashmap-in-java/",
     "datePublished": "2019-07-17T12:48:15.000Z",
-    "dateModified": "2019-07-17T12:48:40.000Z",
+    "dateModified": "2019-07-19T08:33:18.000Z",
     "image": "http://hellokoding.com/content/images/2019/07/JavaCollections_IterateaHashMap.png",
     "keywords": "Java",
-    "description": "Java HashMap and other Map collections are not implemented Iterable interface like List or Set. However, you can iterate theirs key-value pairs, entrySet(), keySet() and values() as below Iterate over key-value pairs with Java 8+ forEach(BiConsumer&amp;lt;? super K, ? super V&amp;gt; action) of Map interface Map&amp;lt;String,"
+    "description": "Java HashMap and other Map collections are not implemented Iterable interface like List or Set. However, you can iterate theirs key-value pairs, entrySet(), keySet() and values() as below Iterate over key-value pairs with Java 8+ forEach(BiConsumer) of Map interface Map&amp;lt;String, Integer&amp;gt; immutableMap &#x3D; Map.of(&quot;k1&quot;, 1,"
 }
     </script>
 
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Iterate a HashMap in Java</h1>
-            <time class="post__date" datetime="2019-07-17">Last modified @ 17 July 2019</time>
+            <time class="post__date" datetime="2019-07-19">Last modified @ 19 July 2019</time>
           </header>
 
           <div class="post-content">
@@ -233,7 +233,7 @@ ghost.init({
 <h3 id="iterateoverkeyvaluepairs">Iterate over key-value pairs</h3>
 
 <ul>
-<li>with Java 8+ <code>forEach(BiConsumer&lt;? super K, ? super V&gt; action)</code> of <code>Map</code> interface</li>
+<li>with Java 8+ <code>forEach(BiConsumer)</code> of <code>Map</code> interface</li>
 </ul>
 
 <pre><code class="language-java">Map&lt;String, Integer&gt; immutableMap = Map.of("k1", 1, "k2", 2);  
@@ -255,7 +255,7 @@ for (Map.Entry&lt;String, Integer&gt; entry : immutableMap.entrySet()) {
 </code></pre>
 
 <ul>
-<li>with Java 8+ <code>forEach(Consumer&lt;? super T&gt; action)</code> of <code>Iterable</code> interface</li>
+<li>with Java 8+ <code>forEach(Consumer)</code> of <code>Iterable</code> interface</li>
 </ul>
 
 <pre><code class="language-java">Map&lt;String, Integer&gt; immutableMap = Map.of("k1", 1, "k2", 2);  
@@ -277,7 +277,7 @@ for (String key : immutableMap.keySet()) {
 </code></pre>
 
 <ul>
-<li>with Java 8+ <code>forEach(Consumer&lt;? super T&gt; action)</code> of <code>Iterable</code> interface</li>
+<li>with Java 8+ <code>forEach(Consumer)</code> of <code>Iterable</code> interface</li>
 </ul>
 
 <pre><code class="language-java">Map&lt;String, Integer&gt; immutableMap = Map.of("k1", 1, "k2", 2);  
@@ -299,7 +299,7 @@ for (Integer value : immutableMap.values()) {
 </code></pre>
 
 <ul>
-<li>with Java 8+ <code>forEach(Consumer&lt;? super T&gt; action)</code> of <code>Iterable</code> interface</li>
+<li>with Java 8+ <code>forEach(Consumer)</code> of <code>Iterable</code> interface</li>
 </ul>
 
 <pre><code class="language-java">Map&lt;String, Integer&gt; immutableMap = Map.of("k1", 1, "k2", 2);  
@@ -310,7 +310,7 @@ immutableMap.values().forEach(System.out::println);
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>In this tutorial, we learned some ways to iterate over a HashMap key-value pairs, entry set, key set and values by using Java 8+ <code>Iterable</code>'s <code>forEach</code> and the enhanced for-each loop</p>
+<p>In this tutorial, we learned some ways to iterate over a HashMap key-value pairs, entry set, key set and values by using the enhanced for-each loop, Java 8+ <code>Map</code>'s <code>forEach(BiConsumer)</code> and <code>Iterable</code>'s <code>forEach(Consumer)</code></p>
             
             <div class="post__tags">
               <a href="../tag/java/">Java</a>
