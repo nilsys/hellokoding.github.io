@@ -1,9 +1,10 @@
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Streaming Data from Kafka to Postgres with Kafka Connect, AVRO, Schema Registry and Python</title>
+  <title>Iterate an ArrayList in Java</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -13,29 +14,29 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=e5aa66f70c">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=e5aa66f70c">
    
-  <link rel="canonical" href="http://hellokoding.com/kafka-connect-sinks-data-to-postgres-example-with-avro-schema-registry-and-python/">
+  <link rel="canonical" href="http://hellokoding.com/iterate-an-arraylist-in-java/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Streaming Data from Kafka to Postgres with Kafka Connect, AVRO, Schema Registry and Python">
-    <meta property="og:description" content="This post walks you through the process of Streaming Data from Kafka to Postgres with Kafka Connect AVRO, Schema Registry and Python. What you'll need Confluent OSS Confluent CLI Python and pipenv Docker Compose Stack Python 3 Pipenv Flake8 Docker Compose Postgres Kafka Kafka Connect AVRO Confluent Schema Registry Project">
-    <meta property="og:url" content="http://hellokoding.com/kafka-connect-sinks-data-to-postgres-example-with-avro-schema-registry-and-python/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/kafka-tutorials.png">
-    <meta property="article:published_time" content="2018-06-10T11:46:14.000Z">
-    <meta property="article:modified_time" content="2019-01-25T01:55:36.000Z">
-    <meta property="article:tag" content="Kafka">
+    <meta property="og:title" content="Iterate an ArrayList in Java">
+    <meta property="og:description" content="In Java Collections Framework, ArrayList implements the Iterable interface which offering iterator, so beside the traditional while and for loop,  we can use the enhanced for-loop statement and its iterator to iterate over ArrayList elements Java 8+ List interface also provides the forEach(Consumer), internally is a for-each loop, for">
+    <meta property="og:url" content="http://hellokoding.com/iterate-an-arraylist-in-java/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/07/JavaCollections_IterateanArrayList.png">
+    <meta property="article:published_time" content="2019-07-21T14:37:51.000Z">
+    <meta property="article:modified_time" content="2019-07-21T14:37:51.000Z">
+    <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Streaming Data from Kafka to Postgres with Kafka Connect, AVRO, Schema Registry and Python">
-    <meta name="twitter:description" content="This post walks you through the process of Streaming Data from Kafka to Postgres with Kafka Connect AVRO, Schema Registry and Python. What you'll need Confluent OSS Confluent CLI Python and pipenv Docker Compose Stack Python 3 Pipenv Flake8 Docker Compose Postgres Kafka Kafka Connect AVRO Confluent Schema Registry Project">
-    <meta name="twitter:url" content="http://hellokoding.com/kafka-connect-sinks-data-to-postgres-example-with-avro-schema-registry-and-python/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/01/kafka-tutorials.png">
+    <meta name="twitter:title" content="Iterate an ArrayList in Java">
+    <meta name="twitter:description" content="In Java Collections Framework, ArrayList implements the Iterable interface which offering iterator, so beside the traditional while and for loop,  we can use the enhanced for-loop statement and its iterator to iterate over ArrayList elements Java 8+ List interface also provides the forEach(Consumer), internally is a for-each loop, for">
+    <meta name="twitter:url" content="http://hellokoding.com/iterate-an-arraylist-in-java/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/07/JavaCollections_IterateanArrayList.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Kafka">
+    <meta name="twitter:data2" content="Java">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -59,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He has 12+ years hands-on experience of designing and developing web and data services. He was born to make online coding courses, tutorials and examples"
     },
-    "headline": "Streaming Data from Kafka to Postgres with Kafka Connect, AVRO, Schema Registry and Python",
-    "url": "http://hellokoding.com/kafka-connect-sinks-data-to-postgres-example-with-avro-schema-registry-and-python/",
-    "datePublished": "2018-06-10T11:46:14.000Z",
-    "dateModified": "2019-01-25T01:55:36.000Z",
-    "image": "http://hellokoding.com/content/images/2019/01/kafka-tutorials.png",
-    "keywords": "Kafka",
-    "description": "This post walks you through the process of Streaming Data from Kafka to Postgres with Kafka Connect AVRO, Schema Registry and Python. What you&#x27;ll need Confluent OSS Confluent CLI Python and pipenv Docker Compose Stack Python 3 Pipenv Flake8 Docker Compose Postgres Kafka Kafka Connect AVRO Confluent Schema Registry Project"
+    "headline": "Iterate an ArrayList in Java",
+    "url": "http://hellokoding.com/iterate-an-arraylist-in-java/",
+    "datePublished": "2019-07-21T14:37:51.000Z",
+    "dateModified": "2019-07-21T14:37:51.000Z",
+    "image": "http://hellokoding.com/content/images/2019/07/JavaCollections_IterateanArrayList.png",
+    "keywords": "Java",
+    "description": "In Java Collections Framework, ArrayList implements the Iterable interface which offering iterator, so beside the traditional while and for loop,  we can use the enhanced for-loop statement and its iterator to iterate over ArrayList elements Java 8+ List interface also provides the forEach(Consumer), internally is a for-each loop, for"
 }
     </script>
 
@@ -86,7 +87,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-kafka">
+<body class="post-template tag-java">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -215,134 +216,96 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-9 column">
-        <article class="post tag-kafka">
+        <article class="post tag-java">
 
           <header class="post__header">
-            <h1 class="post__title">Streaming Data from Kafka to Postgres with Kafka Connect, AVRO, Schema Registry and Python</h1>
-            <time class="post__date" datetime="2019-01-25">Last modified @ 25 January 2019</time>
+            <h1 class="post__title">Iterate an ArrayList in Java</h1>
+            <time class="post__date" datetime="2019-07-21">Last modified @ 21 July 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/kafka/">Kafka</a>
+              <a href="../tag/java/">Java</a>
             </div>
 
-            <p>This post walks you through the process of Streaming Data from Kafka to Postgres with Kafka Connect AVRO, Schema Registry and Python.</p>
+            <p>In Java Collections Framework, <code>ArrayList</code> implements the <code>Iterable</code> interface which offering iterator, so beside the traditional <code>while</code> and <code>for</code> loop,  we can use the enhanced for-loop statement and its <code>iterator</code> to iterate over ArrayList elements</p>
 
-<h3 id="whatyoullneed">What you'll need</h3>
+<p>Java 8+ <code>List</code> interface also provides the <code>forEach(Consumer)</code>, internally is a for-each loop, for your convenient</p>
 
-<ul>
-<li><a href="https://www.confluent.io/download/">Confluent OSS</a></li>
-<li><a href="https://github.com/confluentinc/confluent-cli">Confluent CLI</a></li>
-<li><a href="https://www.python.org/downloads/">Python</a> and <a href="https://github.com/pypa/pipenv">pipenv</a></li>
-<li><a href="https://docs.docker.com/compose/install/">Docker Compose</a></li>
-</ul>
+<h3 id="usingtheforloop">Using the <code>for</code> loop</h3>
 
-<h3 id="stack">Stack</h3>
+<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
+lst.add(3);  
+lst.add(1);  
+lst.add(3);
 
-<ul>
-<li>Python 3</li>
-<li>Pipenv</li>
-<li>Flake8</li>
-<li>Docker Compose</li>
-<li>Postgres</li>
-<li>Kafka</li>
-<li>Kafka Connect</li>
-<li>AVRO</li>
-<li>Confluent Schema Registry</li>
-</ul>
-
-<h3 id="projectstructure">Project structure</h3>
-
-<pre><code>├── Pipfile
-├── Pipfile.lock
-├── avro_producer.py
-├── docker-compose.yml
-├── setup.cfg
-└── sink-postgres.json
+for(int i=0; i&lt;lst.size(); i++){  
+    int ele = lst.get(i);
+    System.out.println(ele);
+}
 </code></pre>
 
-<h3 id="projectdependencies">Project dependencies</h3>
+<p><br></p>
 
-<pre><code class="language-json embedfile-https://github.com/hellokoding/kafka-connect-sink-postgres-with-avro-schemaregistry-python/blob/master/Pipfile">
+<h3 id="usingtheenhancedforeachloop">Using the enhanced for-each loop</h3>
+
+<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
+lst.add(3);  
+lst.add(1);  
+lst.add(3);
+
+for(int ele : lst){  
+    System.out.println(ele);
+}
 </code></pre>
 
-<h3 id="kafkaavroproducer">Kafka AVRO Producer</h3>
+<p><br>  </p>
 
-<pre><code class="language-python embedfile-https://github.com/hellokoding/kafka-connect-sink-postgres-with-avro-schemaregistry-python/blob/master/avro_producer.py">
+<h3 id="usingtheiterator">Using the <code>iterator</code></h3>
+
+<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
+lst.add(3);  
+lst.add(1);  
+lst.add(3);
+
+Iterator&lt;Integer&gt; iterator = lst.iterator();  
+while (iterator.hasNext()){  
+    System.out.println(iterator.next());
+}
 </code></pre>
 
-<h3 id="kafkaconnectsinkpostgresconfig">Kafka Connect Sink Postgres Config</h3>
+<p><br>  </p>
 
-<pre><code class="language-json embedfile-https://github.com/hellokoding/kafka-connect-sink-postgres-with-avro-schemaregistry-python/blob/master/sink-postgres.json">
+<h3 id="usingjava8foreachconsumer">Using Java 8+ forEach(Consumer)</h3>
+
+<p><code>NullPointerException</code> will be thrown if the specified consumer action or the caller list is null</p>
+
+<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
+lst.add(3);  
+lst.add(1);  
+lst.add(3);
+
+lst.forEach(System.out::println);  
 </code></pre>
 
-<h3 id="dockercompose">Docker Compose</h3>
+<p><br>  </p>
 
-<pre><code class="language-json embedfile-https://github.com/hellokoding/kafka-connect-sink-postgres-with-avro-schemaregistry-python/blob/master/docker-compose.yml">
-</code></pre>
+<h3 id="conclusion">Conclusion</h3>
 
-<h3 id="letsstart">Let's Start</h3>
-
-<h4 id="startconfluentplatform">Start Confluent Platform</h4>
-
-<pre><code>confluent start
-</code></pre>
-
-<p>You would see this</p>
-
-<pre><code>connect is [UP]  
-kafka-rest is [UP]  
-schema-registry is [UP]  
-kafka is [UP]  
-zookeeper is [UP]
-</code></pre>
-
-<p>ZooKeeper, Kafka, Schema Registry and Kafka Connect should be start listening connections on port 2181, 9092, 8081, 8083 respectively.</p>
-
-<h4 id="startpostgresqldatabase">Start PostgreSQL Database</h4>
-
-<pre><code>docker-compose up
-</code></pre>
-
-<p>PostgreSQL Database Server should be start listening connections on port 5432</p>
-
-<h4 id="installprojectsdependencies">Install project's dependencies</h4>
-
-<pre><code>pipenv install  
-pipenv shell
-</code></pre>
-
-<h4 id="sendingdatatokafkatopicwithavroproducer">Sending data to Kafka topic with AVRO Producer</h4>
-
-<pre><code>python avro_producer.py
-</code></pre>
-
-<h4 id="loadkafkaconnector">Load Kafka Connector</h4>
-
-<pre><code>confluent load sink-1 -d sink-postgres.json
-</code></pre>
-
-<p>Postgres should have a table <code>page_1</code> with data streaming from the consumer.</p>
-
-<h3 id="sourcecode">Source code</h3>
-
-<p><code>git@github.com:hellokoding/kafka-connect-sink-postgres-with-avro-schemaregistry-python.git</code></p>
-
-<p><a href="https://github.com/hellokoding/kafka-connect-sink-postgres-with-avro-schemaregistry-python">https://github.com/hellokoding/kafka-connect-sink-postgres-with-avro-schemaregistry-python</a></p>
+<p>In this tutorial, we learned some ways to iterate over an ArrayList by using the <code>for</code> loop, <code>for-each</code> loop, iterator and Java 8+ forEach(Consumer)</p>
             
             <div class="post__tags">
-              <a href="../tag/kafka/">Kafka</a>
+              <a href="../tag/java/">Java</a>
             </div>
           </div>
 
           <div class="love-post">Love this post?</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Streaming%20Data%20from%20Kafka%20to%20Postgres%20with%20Kafka%20Connect%2C%20AVRO%2C%20Schema%20Registry%20and%20Python&amp;url=http://hellokoding.com/kafka-connect-sinks-data-to-postgres-example-with-avro-schema-registry-and-python/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Iterate%20an%20ArrayList%20in%20Java&amp;url=http://hellokoding.com/iterate-an-arraylist-in-java/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Tweet</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/kafka-connect-sinks-data-to-postgres-example-with-avro-schema-registry-and-python/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/iterate-an-arraylist-in-java/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Share</span>
   </a>
@@ -396,8 +359,8 @@ pipenv shell
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/kafka-connect-sinks-data-to-postgres-example-with-avro-schema-registry-and-python/';
-      this.page.identifier = '45';
+      this.page.url = 'http://hellokoding.com/iterate-an-arraylist-in-java/';
+      this.page.identifier = '151';
     };
 
     (function() {

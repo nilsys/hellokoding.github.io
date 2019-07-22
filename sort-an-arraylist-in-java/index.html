@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Sort an ArrayList in Java">
-    <meta property="og:description" content="ArrayList in Java is a resizable-array implementation, part of the Collections framework. To sort it, you can try using its instance sort(Comparator) method or using Collections.sort(Comparator) Let's define two object classes (one implements Comparable interface and one doesn't) and implement some unit test classes to see the">
+    <meta property="og:description" content="To sort an ArrayList in Java, you can use ArrayList instance's sort(Comparator), Collections.sort(List) or Collections.sort(List, Comparator) methods in conjunction with Comparable and Comparator to control over the sort order For the Comparable implemented objects, using Comparator.naturalOrder() to sort in natural order and Comparator.reverseOrder(">
     <meta property="og:url" content="http://hellokoding.com/sort-an-arraylist-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/JavaCollections_SortanArrayList.png">
     <meta property="article:published_time" content="2019-06-13T08:23:01.000Z">
-    <meta property="article:modified_time" content="2019-06-15T01:13:19.000Z">
+    <meta property="article:modified_time" content="2019-07-22T14:14:22.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sort an ArrayList in Java">
-    <meta name="twitter:description" content="ArrayList in Java is a resizable-array implementation, part of the Collections framework. To sort it, you can try using its instance sort(Comparator) method or using Collections.sort(Comparator) Let's define two object classes (one implements Comparable interface and one doesn't) and implement some unit test classes to see the">
+    <meta name="twitter:description" content="To sort an ArrayList in Java, you can use ArrayList instance's sort(Comparator), Collections.sort(List) or Collections.sort(List, Comparator) methods in conjunction with Comparable and Comparator to control over the sort order For the Comparable implemented objects, using Comparator.naturalOrder() to sort in natural order and Comparator.reverseOrder(">
     <meta name="twitter:url" content="http://hellokoding.com/sort-an-arraylist-in-java/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/JavaCollections_SortanArrayList.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Sort an ArrayList in Java",
     "url": "http://hellokoding.com/sort-an-arraylist-in-java/",
     "datePublished": "2019-06-13T08:23:01.000Z",
-    "dateModified": "2019-06-15T01:13:19.000Z",
+    "dateModified": "2019-07-22T14:14:22.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/JavaCollections_SortanArrayList.png",
     "keywords": "Java",
-    "description": "ArrayList in Java is a resizable-array implementation, part of the Collections framework. To sort it, you can try using its instance sort(Comparator) method or using Collections.sort(Comparator) Let&#x27;s define two object classes (one implements Comparable interface and one doesn&#x27;t) and implement some unit test classes to see the"
+    "description": "To sort an ArrayList in Java, you can use ArrayList instance&#x27;s sort(Comparator), Collections.sort(List) or Collections.sort(List, Comparator) methods in conjunction with Comparable and Comparator to control over the sort order For the Comparable implemented objects, using Comparator.naturalOrder() to sort in natural order and Comparator.reverseOrder("
 }
     </script>
 
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Sort an ArrayList in Java</h1>
-            <time class="post__date" datetime="2019-06-15">Last modified @ 15 June 2019</time>
+            <time class="post__date" datetime="2019-07-22">Last modified @ 22 July 2019</time>
           </header>
 
           <div class="post-content">
@@ -228,9 +228,47 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p><code>ArrayList</code> in Java is a resizable-array implementation, part of the Collections framework. To sort it, you can try using its instance <code>sort(Comparator)</code> method or using <code>Collections.sort(Comparator)</code></p>
+            <p>To sort an ArrayList in Java, you can use <code>ArrayList</code> instance's <code>sort(Comparator)</code>, <code>Collections.sort(List)</code> or <code>Collections.sort(List, Comparator)</code> methods in conjunction with <code>Comparable</code> and <code>Comparator</code> to control over the sort order</p>
 
-<p>Let's define two object classes (one implements Comparable interface and one doesn't) and implement some unit test classes to see the examples in practice</p>
+<ul>
+<li><p>For the <code>Comparable</code> implemented objects, using <code>Comparator.naturalOrder()</code> to sort in natural order and <code>Comparator.reverseOrder()</code> to sort in reverse order</p></li>
+<li><p>Using <code>Comparator.comparing</code> or your defined lambda functions to extract a <code>Comparable</code> sort key from the objects you want to sort</p></li>
+<li><p><code>Collections.sort</code> methods are internally call to <code>ArrayList</code> instance's <code>sort(Comparator)</code> method which in turn also dispatches to the Java 8+ <code>sort(Comparator)</code> method of <code>List</code> interface</p></li>
+</ul>
+
+<h2 id="sortanarraylistofstringsandnumbers">Sort an ArrayList of strings and numbers</h2>
+
+<p>You can use <code>Comparator.naturalOrder()</code> and <code>Comparator.reverseOrder()</code> along with the sort methods as <code>String</code> and <code>Number</code> objects such as <code>Integer</code>, <code>Long</code>, <code>Short</code>, <code>Double</code>, <code>Float</code>, <code>Byte</code> are implemented <code>Comparable</code> by default</p>
+
+<ul>
+<li>Sort in ascending order</li>
+</ul>
+
+<pre><code class="language-java">List&lt;Integer&gt; lst1 = List.of(3, 1, 2);  
+lst1.sort(Comparator.naturalOrder());  
+System.out.println(lst1); // [1, 2, 3]
+
+List&lt;Integer&gt; lst2 = List.of(3, 1, 2);  
+Collections.sort(lst2);  
+System.out.println(lst2); // [1, 2, 3]
+</code></pre>
+
+<ul>
+<li>Sort in descending order</li>
+</ul>
+
+<pre><code class="language-java">List&lt;Integer&gt; lst1 = List.of(3, 1, 2);  
+lst1.sort(Comparator.reverseOrder());  
+System.out.println(lst1); // [3, 2, 1]
+
+List&lt;Integer&gt; lst2 = List.of(3, 1, 2);  
+Collections.sort(lst2, Comparator.reverseOrder());  
+System.out.println(lst2); // [3, 2, 1]  
+</code></pre>
+
+<h2 id="sortanarraylistofobjectsbyfieldproperty">Sort an ArrayList of objects by field / property</h2>
+
+<p>Let's say we have two classes, <code>NonComparableBook</code> without <code>Comparable</code> and <code>ComparableBook</code> with <code>Comparable</code> implementation as below</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/NonComparableBook.java">
 </code></pre>
@@ -238,7 +276,7 @@ ghost.init({
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/ComparableBook.java">
 </code></pre>
 
-<p>The above <code>compareTo</code> method provides the default / natural order in ascending  to <code>ComparableBook</code> objects. If you want the default order in descending, try below</p>
+<p>The above <code>compareTo</code> method provides the default / natural order in ascending to <code>ComparableBook</code> objects by the field <code>title</code>. If you want the default order in descending, try to reverse the operands of <code>compareTo</code></p>
 
 <pre><code class="language-java">@Override
 public int compareTo(ComparableBook o) {  
@@ -246,15 +284,16 @@ public int compareTo(ComparableBook o) {
 }
 </code></pre>
 
-<h2 id="usingarraylistinstancessortcomparatororcollectionssortcomparatormethodonlogntime">Using <code>ArrayList</code> instance's <code>sort(Comparator)</code> or <code>Collections.sort(Comparator)</code> method, O(nlogn) time</h2>
-
-<ul>
-<li><p>Using <code>ArrayList</code> instance's <code>sort(null)</code> or <code>Collections.sort(List)</code> to sort <code>Comparable</code> implemented objects</p></li>
-<li><p>Using <code>ArrayList</code> instance's <code>sort(Comparator)</code> or <code>Collections.sort(List, Comparator)</code> to control over the sort order (use <code>Comparator.reverseOrder()</code> to sort in reverse / descending order, for example) or to provide natural ordering to non-<code>Comparable</code> implemented objects</p></li>
-</ul>
+<p>The following test cases show you how to sort an ArrayList of <code>NonComparableBook</code> and <code>ComparableBook</code> objects in ascending and descending order of the field <code>title</code></p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/ArrayListSortingTest.java">
 </code></pre>
+
+<p><br>  </p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>In this tutorial, we learned using <code>ArrayList</code> instance's <code>sort(Comparator)</code>, <code>Collections.sort(List)</code> and <code>Collections.sort(List, Comparator)</code> as well as with <code>Comparable</code> and <code>Comparator</code> interfaces to sort an ArrayList of strings, numbers and objects</p>
             
             <div class="post__tags">
               <a href="../tag/java/">Java</a>
