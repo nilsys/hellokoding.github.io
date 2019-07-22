@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/create-and-initialize-an-arraylist-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/07/JavaCollections_InitializeanArrayList.png">
     <meta property="article:published_time" content="2019-07-22T14:18:39.000Z">
-    <meta property="article:modified_time" content="2019-07-22T14:59:25.000Z">
+    <meta property="article:modified_time" content="2019-07-22T15:28:54.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Create and Initialize an ArrayList in Java",
     "url": "http://hellokoding.com/create-and-initialize-an-arraylist-in-java/",
     "datePublished": "2019-07-22T14:18:39.000Z",
-    "dateModified": "2019-07-22T14:59:25.000Z",
+    "dateModified": "2019-07-22T15:28:54.000Z",
     "image": "http://hellokoding.com/content/images/2019/07/JavaCollections_InitializeanArrayList.png",
     "keywords": "Java",
     "description": "You can create and initialize an ArrayList by using its constructors, util methods of Collection class or Java 9+ List.of() and List.copyOf() Using ArrayList&#x27;s constructors Create a new empty ArrayList List&amp;lt;Integer&amp;gt; lst &#x3D; new ArrayList&amp;lt;&amp;gt;();   ArrayList is backed by a resizable array with the"
@@ -303,7 +303,7 @@ System.out.println(lst); // [1, 2, 3]
 
 <p><code>Collections</code> class provide some factory methods to create and init immutable ArrayList in one line</p>
 
-<p><code>UnsupportedOperationException</code> will be thrown if attempting to add, remove or update elements in the list after creation</p>
+<p><code>UnsupportedOperationException</code> will be thrown if attempting to add, remove, update or sort elements in the list after creation</p>
 
 <ul>
 <li>Create a new empty immutable (unmodifiable) and serializable list with <code>Collections.emptyList()</code></li>
@@ -327,7 +327,7 @@ System.out.println(lst); // [1, 2, 3]
 
 <p><code>NullPointerException</code> will be thrown if attempting to create with null elements</p>
 
-<p><code>UnsupportedOperationException</code> will be thrown if attempting to add, remove or update elements in the list after creation</p>
+<p><code>UnsupportedOperationException</code> will be thrown if attempting to add, remove, update or sort elements in the list after creation</p>
 
 <ul>
 <li><code>List.of(E... elements)</code> method returns an immutable list containing an arbitrary number of elements</li>
