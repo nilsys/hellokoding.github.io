@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-string-stringbuffer-and-stringbuilder/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/08/JavaCore_StringVsStringBuilder.png">
     <meta property="article:published_time" content="2019-08-02T13:01:04.000Z">
-    <meta property="article:modified_time" content="2019-08-02T13:10:22.000Z">
+    <meta property="article:modified_time" content="2019-08-02T13:35:03.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java String, StringBuffer and StringBuilder",
     "url": "http://hellokoding.com/java-string-stringbuffer-and-stringbuilder/",
     "datePublished": "2019-08-02T13:01:04.000Z",
-    "dateModified": "2019-08-02T13:10:22.000Z",
+    "dateModified": "2019-08-02T13:35:03.000Z",
     "image": "http://hellokoding.com/content/images/2019/08/JavaCore_StringVsStringBuilder.png",
     "keywords": "Java",
     "description": "In Java, sometimes you may wonder why existing StringBuilder and StringBuffer along with String, how they are different and what are the use cases. Let&#x27;s walk through this tutorial to figure out String is immutable String in Java is immutable / constant, when you attempt to change its value, a new"
@@ -245,6 +245,8 @@ public void stringIsImmutable() {
 }
 </code></pre>
 
+<p><code>s1.concat(" is awesome!")</code> internally creates and returns a new string object to fill the concatenation value "Hello Koding is awesome!"</p>
+
 <h3 id="stringbufferismutable">StringBuffer is mutable</h3>
 
 <p>StringBuffer is like a String but can be modified, designed to be used in multi-threaded environment</p>
@@ -259,6 +261,8 @@ public void StringBufferIsMutable() {
     assertThat(s1 == s2).isTrue();
 }
 </code></pre>
+
+<p><code>s1.append(" is awesome!")</code> does not create a new StringBuffer object, internally, it appends the " is awesome!" into a resizable array</p>
 
 <h3 id="stringbuilderismutableandfaster">StringBuilder is mutable and faster</h3>
 
