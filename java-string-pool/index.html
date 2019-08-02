@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-string-pool/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/08/JavaCore_StringPool.png">
     <meta property="article:published_time" content="2019-08-02T04:20:53.000Z">
-    <meta property="article:modified_time" content="2019-08-02T08:56:00.000Z">
+    <meta property="article:modified_time" content="2019-08-02T09:37:32.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java String Pool",
     "url": "http://hellokoding.com/java-string-pool/",
     "datePublished": "2019-08-02T04:20:53.000Z",
-    "dateModified": "2019-08-02T08:56:00.000Z",
+    "dateModified": "2019-08-02T09:37:32.000Z",
     "image": "http://hellokoding.com/content/images/2019/08/JavaCore_StringPool.png",
     "keywords": "Java",
     "description": "In Java, string pool is a reserved memory for caching string literals to reduce the cost of allocating a new string. It is located in the main part of the Java heap memory (known as the young and old generations) since Java 7+; in the permanent generation of the Java"
@@ -244,7 +244,7 @@ public void testStringLiterals() {
     // This string is reused from the string pool
     String s2 = "Hello Koding";
 
-    assertThat(s1).isSameAs(s2);
+    assertThat(s1 == s2).isTrue();
 }
 </code></pre>
 
@@ -262,7 +262,7 @@ public void testStringObjects() {
     // This string is created and stored in a random location in heap memory
     String s2 = new String("Hello Koding");
 
-    assertThat(s1).isNotSameAs(s2);
+    assertThat(s1 == s2).isFalse();
 }
 </code></pre>
 
@@ -280,7 +280,7 @@ public void testStringLiteralVsObject() {
     // This string is created and stored in the string pool
     String s2 = "Hello Koding";
 
-    assertThat(s1).isNotSameAs(s2);
+    assertThat(s1 == s2).isFalse();
 }
 </code></pre>
 
@@ -295,7 +295,7 @@ public void testStringIntern() {
 
     String s2 = "Hello Koding";
 
-    assertThat(s1).isSameAs(s2);
+    assertThat(s1 == s2).isTrue();
 }
 </code></pre>
 
