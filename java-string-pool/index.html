@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>0-1 Knapsack Problem</title>
+  <title>Java String Pool</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,29 +14,29 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=932e1e8bae">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=932e1e8bae">
    
-  <link rel="canonical" href="http://hellokoding.com/0-1-knapsack-problem/">
+  <link rel="canonical" href="http://hellokoding.com/java-string-pool/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="0-1 Knapsack Problem">
-    <meta property="og:description" content="Problem Given a set of items, each with a weight and a value. Determine the maximum value of items to include in a collection so that the total weight is less than or equal to a given limit Example Given 3 items with weights = {10, 20 , 30} and values = {60,">
-    <meta property="og:url" content="http://hellokoding.com/0-1-knapsack-problem/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/DynamicProgramming_0-1Knapsack.png">
-    <meta property="article:published_time" content="2019-04-30T14:55:24.000Z">
-    <meta property="article:modified_time" content="2019-06-11T04:19:50.000Z">
-    <meta property="article:tag" content="Algorithm">
+    <meta property="og:title" content="Java String Pool">
+    <meta property="og:description" content="In Java, string pool is a reserved memory for caching string literals to reduce the cost of allocating a new string. It is located in the main part of the Java heap memory (known as the young and old generations) since Java 7+; in the permanent generation of the Java">
+    <meta property="og:url" content="http://hellokoding.com/java-string-pool/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/08/JavaCore_StringPool.png">
+    <meta property="article:published_time" content="2019-08-02T04:20:53.000Z">
+    <meta property="article:modified_time" content="2019-08-02T08:56:00.000Z">
+    <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="0-1 Knapsack Problem">
-    <meta name="twitter:description" content="Problem Given a set of items, each with a weight and a value. Determine the maximum value of items to include in a collection so that the total weight is less than or equal to a given limit Example Given 3 items with weights = {10, 20 , 30} and values = {60,">
-    <meta name="twitter:url" content="http://hellokoding.com/0-1-knapsack-problem/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/DynamicProgramming_0-1Knapsack.png">
+    <meta name="twitter:title" content="Java String Pool">
+    <meta name="twitter:description" content="In Java, string pool is a reserved memory for caching string literals to reduce the cost of allocating a new string. It is located in the main part of the Java heap memory (known as the young and old generations) since Java 7+; in the permanent generation of the Java">
+    <meta name="twitter:url" content="http://hellokoding.com/java-string-pool/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/08/JavaCore_StringPool.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Algorithm">
+    <meta name="twitter:data2" content="Java">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -60,13 +60,13 @@
         ],
         "description": "Giau is the creator of Hello Koding. He has 12+ years hands-on experience of designing and developing web and data services. He was born to make online coding courses, tutorials and examples"
     },
-    "headline": "0-1 Knapsack Problem",
-    "url": "http://hellokoding.com/0-1-knapsack-problem/",
-    "datePublished": "2019-04-30T14:55:24.000Z",
-    "dateModified": "2019-06-11T04:19:50.000Z",
-    "image": "http://hellokoding.com/content/images/2019/06/DynamicProgramming_0-1Knapsack.png",
-    "keywords": "Algorithm",
-    "description": "Problem Given a set of items, each with a weight and a value. Determine the maximum value of items to include in a collection so that the total weight is less than or equal to a given limit Example Given 3 items with weights &#x3D; {10, 20 , 30} and values &#x3D; {60,"
+    "headline": "Java String Pool",
+    "url": "http://hellokoding.com/java-string-pool/",
+    "datePublished": "2019-08-02T04:20:53.000Z",
+    "dateModified": "2019-08-02T08:56:00.000Z",
+    "image": "http://hellokoding.com/content/images/2019/08/JavaCore_StringPool.png",
+    "keywords": "Java",
+    "description": "In Java, string pool is a reserved memory for caching string literals to reduce the cost of allocating a new string. It is located in the main part of the Java heap memory (known as the young and old generations) since Java 7+; in the permanent generation of the Java"
 }
     </script>
 
@@ -87,7 +87,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-algorithm">
+<body class="post-template tag-java">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -216,78 +216,108 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-9 column">
-        <article class="post tag-algorithm">
+        <article class="post tag-java">
 
           <header class="post__header">
-            <h1 class="post__title">0-1 Knapsack Problem</h1>
-            <time class="post__date" datetime="2019-06-11">Last modified @ 11 June 2019</time>
+            <h1 class="post__title">Java String Pool</h1>
+            <time class="post__date" datetime="2019-08-02">Last modified @ 02 August 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
+              <a href="../tag/java/">Java</a>
             </div>
 
-            <h3 id="problem">Problem</h3>
+            <p>In Java, string pool is a reserved memory for caching string literals to reduce the cost of allocating a new string. It is located in the main part of the Java heap memory (known as the young and old generations) since Java 7+; in the permanent generation of the Java heap memory before Java 7</p>
 
-<p>Given a set of items, each with a weight and a value. Determine the maximum value of items to include in a collection so that the total weight is less than or equal to a given limit</p>
+<h2 id="howthestringpoolworks">How the string pool works</h2>
 
-<h3 id="example">Example</h3>
+<h3 id="stringliteralsandinterning">String literals and interning</h3>
 
-<p>Given 3 items with weights = {10, 20 , 30} and values = {60, 100, 120} respectively, knapsack weight capacity is 50. The maximum value of items to include in the knapsack is 220</p>
+<p>String literals are added or reused if existing from the string pool</p>
 
-<h3 id="dynamicprogrammingapproach">Dynamic programming approach</h3>
+<pre><code class="language-java">@Test
+public void testStringLiterals() {  
+    // This string is created and stored in the string pool
+    String s1 = "Hello Koding";
 
-<p>Have 2 options at each collecting step</p>
+    // This string is reused from the string pool
+    String s2 = "Hello Koding";
 
-<ul>
-<li>Including the <code>i</code> item if not exceeding the weight limit</li>
-<li>Excluding the <code>i</code> item if exceeding the weight limit</li>
-</ul>
-
-<h3 id="implementation">Implementation</h3>
-
-<p>Fill up a cache matrix <code>int[][] cache = new int[N+1][W+1]</code> with</p>
-
-<ul>
-<li>0 to <code>N</code> items as columns</li>
-<li>0 to <code>W</code> weight-limit as rows</li>
-<li>each matrix cell <code>cache[i][w]</code> is the maximum value can be attained with weight less than or equal to <code>w</code> using <code>i</code> items</li>
-</ul>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/DP_Knapsack.java">
+    assertThat(s1).isSameAs(s2);
+}
 </code></pre>
 
-<ul>
-<li><code>i</code> is the current item</li>
-<li><code>w</code> is the current weight limit</li>
-<li><code>weights[i-1]</code> is weight of current item as <code>int[] weights</code> is 0 based index</li>
-<li><code>values[i-1]</code> is value of current item as <code>int[] values</code> is 0 based index</li>
-<li><code>cache[i][w]</code> is maximum value of current item as <code>int[][] cache</code> is 1 based index</li>
-<li><code>weights[i-1] &gt; w</code> weight of the current item is more than the weight limit</li>
-<li><code>cache[i][w] = cache[i-1][w]</code> excludes the current item</li>
-<li><code>cache[i-1][w-weights[i-1]] + values[i-1]</code> includes the current item</li>
-</ul>
+<p>The process of caching string literals into the pool is called interning</p>
 
-<h3 id="references">References</h3>
+<h3 id="stringobjects">String objects</h3>
 
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Knapsack_problem">https://en.wikipedia.org/wiki/Knapsack_problem</a></li>
-<li><a href="https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/">https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/</a></li>
-</ul>
+<p>String objects created by <code>new</code> operator are stored in different locations in heap memory</p>
+
+<pre><code class="language-java">@Test
+public void testStringObjects() {  
+    // This string is created and stored in a random location in heap memory
+    String s1 = new String("Hello Koding");
+
+    // This string is created and stored in a random location in heap memory
+    String s2 = new String("Hello Koding");
+
+    assertThat(s1).isNotSameAs(s2);
+}
+</code></pre>
+
+<p>We should not use <code>new</code> operator to create a new string in practice, the example is only for demonstration</p>
+
+<h3 id="stringobjectvsstringliteral">String object vs String literal</h3>
+
+<p>A string object has a different memory location with a string literal although they have the same value</p>
+
+<pre><code class="language-java">@Test
+public void testStringLiteralVsObject() {  
+    // This string is created and stored in heap memory
+    String s1 = new String("Hello Koding");
+
+    // This string is created and stored in the string pool
+    String s2 = "Hello Koding";
+
+    assertThat(s1).isNotSameAs(s2);
+}
+</code></pre>
+
+<h3 id="interningastringobject">Interning a string object</h3>
+
+<p>Using String's <code>intern()</code> method to add a string into the pool, if not existing, and get the reference address in the pool</p>
+
+<pre><code class="language-java">@Test
+public void testStringIntern() {  
+    String s1 = new String("Hello Koding");
+    s1 = s1.intern();
+
+    String s2 = "Hello Koding";
+
+    assertThat(s1).isSameAs(s2);
+}
+</code></pre>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this tutorials, we learned about string pool and explored the difference between string literals and string objects. You can find below all usage test cases</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/lang/StringPoolTest.java">
+</code></pre>
             
             <div class="post__tags">
-              <a href="../tag/algorithm/">Algorithm</a>
+              <a href="../tag/java/">Java</a>
             </div>
           </div>
 
           <div class="love-post">Love this post?</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=0-1%20Knapsack%20Problem&amp;url=http://hellokoding.com/0-1-knapsack-problem/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Java%20String%20Pool&amp;url=http://hellokoding.com/java-string-pool/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Tweet</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/0-1-knapsack-problem/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/java-string-pool/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Share</span>
   </a>
@@ -341,8 +371,8 @@ ghost.init({
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/0-1-knapsack-problem/';
-      this.page.identifier = '116';
+      this.page.url = 'http://hellokoding.com/java-string-pool/';
+      this.page.identifier = '154';
     };
 
     (function() {
