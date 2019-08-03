@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-string-pool/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/08/JavaCore_StringPool.png">
     <meta property="article:published_time" content="2019-08-02T04:20:53.000Z">
-    <meta property="article:modified_time" content="2019-08-02T11:42:54.000Z">
+    <meta property="article:modified_time" content="2019-08-03T12:18:16.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java String Pool",
     "url": "http://hellokoding.com/java-string-pool/",
     "datePublished": "2019-08-02T04:20:53.000Z",
-    "dateModified": "2019-08-02T11:42:54.000Z",
+    "dateModified": "2019-08-03T12:18:16.000Z",
     "image": "http://hellokoding.com/content/images/2019/08/JavaCore_StringPool.png",
     "keywords": "Java",
     "description": "In Java, string pool is a reserved memory for caching string literals to reduce the cost of allocating a new string. It is located in the main part of the Java heap memory (aka the young and old generations) since Java 7+; in the permanent generation (aka PermGen) of the"
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java String Pool</h1>
-            <time class="post__date" datetime="2019-08-02">Last modified @ 02 August 2019</time>
+            <time class="post__date" datetime="2019-08-03">Last modified @ 03 August 2019</time>
           </header>
 
           <div class="post-content">
@@ -244,7 +244,7 @@ public void testStringLiterals() {
     // This string is reused from the string pool
     String s2 = "Hello Koding";
 
-    assertThat(s1 == s2).isTrue();
+    assertThat(s1).isSameAs(s2);
 }
 </code></pre>
 
@@ -252,17 +252,17 @@ public void testStringLiterals() {
 
 <h3 id="stringobjects">String objects</h3>
 
-<p>String objects created by <code>new</code> operator are stored in different locations in heap memory</p>
+<p>String objects created by <code>new</code> operator are stored in heap memory</p>
 
 <pre><code class="language-java">@Test
 public void testStringObjects() {  
-    // This string is created and stored in a random location in heap memory
+    // This string is created and stored in heap memory
     String s1 = new String("Hello Koding");
 
-    // This string is created and stored in a random location in heap memory
+    // This string is created and stored in heap memory
     String s2 = new String("Hello Koding");
 
-    assertThat(s1 == s2).isFalse();
+    assertThat(s1).isNotSameAs(s2);
 }
 </code></pre>
 
@@ -280,7 +280,7 @@ public void testStringLiteralVsObject() {
     // This string is created and stored in the string pool
     String s2 = "Hello Koding";
 
-    assertThat(s1 == s2).isFalse();
+    assertThat(s1).isNotSameAs(s2);
 }
 </code></pre>
 
@@ -295,7 +295,7 @@ public void testStringIntern() {
 
     String s2 = "Hello Koding";
 
-    assertThat(s1 == s2).isTrue();
+    assertThat(s1).isSameAs(s2);
 }
 </code></pre>
 
