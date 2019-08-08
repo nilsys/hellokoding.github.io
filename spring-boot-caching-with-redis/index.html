@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/spring-boot-caching-with-redis/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/08/SpringBoot_CachingWithRedis.png">
     <meta property="article:published_time" content="2019-08-08T14:52:23.000Z">
-    <meta property="article:modified_time" content="2019-08-08T15:09:58.000Z">
+    <meta property="article:modified_time" content="2019-08-08T15:26:47.000Z">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Introduction to Spring Boot Caching with Redis",
     "url": "http://hellokoding.com/spring-boot-caching-with-redis/",
     "datePublished": "2019-08-08T14:52:23.000Z",
-    "dateModified": "2019-08-08T15:09:58.000Z",
+    "dateModified": "2019-08-08T15:26:47.000Z",
     "image": "http://hellokoding.com/content/images/2019/08/SpringBoot_CachingWithRedis.png",
     "keywords": "Spring Boot",
     "description": "Spring Boot provides abstraction for adding caching into application and supporting Redis as one of its providers. This post will give you some highlights when implement What you&#x27;ll need JDK 8+ or OpenJDK 8+ Maven 3+ Redis server Dependencies Beside other Spring Boot starter dependencies, include the  Data Redis starter"
@@ -279,11 +279,21 @@ spring.cache.redis.time-to-live=100000
 <li><p>Caching in Spring uses Java Serialization by default to serialize key and value objects. You can implement <code>Serializable</code> to your objects or change the default configuration</p></li>
 </ul>
 
+<pre><code class="language-java">import java.io.Serializable;
+
+public class Product implements Serializable {  
+}
+</code></pre>
+
 <h3 id="applycachingintoamethod">Apply caching into a method</h3>
 
 <p>Add the <code>@Cacheable</code> annotation to the method you want to cache its result</p>
 
-<pre><code class="language-java">@Cacheable(key = "#id")
+<pre><code class="language-java">import org.springframework.cache.annotation.Cacheable;
+
+...
+
+@Cacheable(key = "#id")
 public Optional&lt;Product&gt; findById(Long id) {  
     return productRepository.findById(id);
 }
@@ -297,7 +307,11 @@ public Optional&lt;Product&gt; findById(Long id) {
 
 <p>The <code>@EnableCaching</code> annotation enables Spring caching capability, can be used together with <code>@Configuration</code> when you need to customize the default configuration</p>
 
-<pre><code class="language-java">@SpringBootApplication
+<pre><code class="language-java">import org.springframework.boot.SpringApplication;  
+import org.springframework.boot.autoconfigure.SpringBootApplication;  
+import org.springframework.cache.annotation.EnableCaching;
+
+@SpringBootApplication
 @EnableCaching
 public class Application {  
     public static void main(String[] args) {
