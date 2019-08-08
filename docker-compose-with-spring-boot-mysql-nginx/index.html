@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/docker-compose-with-spring-boot-mysql-nginx/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/docker-springboot-1.png">
     <meta property="article:published_time" content="2018-01-09T15:27:18.000Z">
-    <meta property="article:modified_time" content="2019-05-06T14:55:13.000Z">
+    <meta property="article:modified_time" content="2019-08-08T01:50:21.000Z">
     <meta property="article:tag" content="Docker">
     <meta property="article:tag" content="Spring Boot">
     
@@ -64,7 +64,7 @@
     "headline": "Spring Boot + Docker Compose Example with MySQL and NGINX",
     "url": "http://hellokoding.com/docker-compose-with-spring-boot-mysql-nginx/",
     "datePublished": "2018-01-09T15:27:18.000Z",
-    "dateModified": "2019-05-06T14:55:13.000Z",
+    "dateModified": "2019-08-08T01:50:21.000Z",
     "image": "http://hellokoding.com/content/images/2019/02/docker-springboot-1.png",
     "keywords": "Docker, Spring Boot",
     "description": "This tutorial walks you through the steps of creating a simple Spring Boot web application with NGINX and MySQL running inside Docker containers  What you&#x27;ll need Docker CE Stack Docker Spring Boot MySQL NGINX Maven Init project structure and dependencies Project structure ├── app │   ├── src │   │   └── main │   │       ├── java │   │       │   └── com │   │       │       └── hellokoding │   │       │           └── springboot │   │       │               ├── IndexController."
@@ -221,7 +221,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Spring Boot + Docker Compose Example with MySQL and NGINX</h1>
-            <time class="post__date" datetime="2019-05-06">Last modified @ 06 May 2019</time>
+            <time class="post__date" datetime="2019-08-08">Last modified @ 08 August 2019</time>
           </header>
 
           <div class="post-content">
@@ -294,7 +294,14 @@ ghost.init({
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/docker-examples/dockercompose-springboot-mysql-nginx/app/src/main/resources/templates/index.ftl">
 </code></pre>
 
-<h3 id="applicationconfiguration">Application Configuration</h3>
+<h3 id="applicationconfigurations">Application Configurations</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/docker-examples/dockercompose-springboot-mysql-nginx/app/src/main/resources/application.properties">
+</code></pre>
+
+<p><code>spring.datasource.*</code> are common properties of Spring Boot Data Source auto-configuration for MySQL</p>
+
+<p>In the datasource url property, <code>hk-mysql</code> is the Docker Compose service name of MySQL as we're going to run this Spring Boot application and MySQL server in the Docker containers. You can find it in the <code>docker-compose.yaml</code> file below</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/docker-examples/dockercompose-springboot-mysql-nginx/app/src/main/java/com/hellokoding/springboot/WebApplication.java">
 </code></pre>
