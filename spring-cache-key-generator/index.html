@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/spring-cache-key-generator/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/08/SpringCache_KeyGenerator.png">
     <meta property="article:published_time" content="2019-08-09T17:51:24.000Z">
-    <meta property="article:modified_time" content="2019-08-10T06:25:04.000Z">
+    <meta property="article:modified_time" content="2019-08-10T06:38:04.000Z">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Spring Cache Key Generator",
     "url": "http://hellokoding.com/spring-cache-key-generator/",
     "datePublished": "2019-08-09T17:51:24.000Z",
-    "dateModified": "2019-08-10T06:25:04.000Z",
+    "dateModified": "2019-08-10T06:38:04.000Z",
     "image": "http://hellokoding.com/content/images/2019/08/SpringCache_KeyGenerator.png",
     "keywords": "Spring Boot",
     "description": "In this tutorial, we will explore some ways to define and generate the cache key in Spring Cache  Define the cache key at global level Cache key prefix You can use the Spring Cache property spring.cache.redis.key-prefix to add the prefix to all generated cache key in Spring"
@@ -243,7 +243,13 @@ ghost.init({
 
 <p>By default, <code>SimpleKeyGenerator</code> in the <code>org.springframework.cache.interceptor</code> package, an implementation of <code>KeyGenerator</code> interface, is used to generate the cache key</p>
 
-<p><code>SimpleKeyGenerator</code> evaluates parameters of the cache annotated methods (by <code>@Cachable</code>, <code>@CachePut</code> and <code>@CacheEvict</code>). It returns the param itself if only existing non-null one, otherwise returns a <code>SimpleKey</code> of the params</p>
+<p><code>SimpleKeyGenerator</code> evaluates parameters of the cache annotated methods (by <code>@Cachable</code>, <code>@CachePut</code> and <code>@CacheEvict</code>). If only one non-null param is existing, it returns the param itself, otherwise uses <code>SimpleKey</code>'s toString() method as below to compute all params</p>
+
+<pre><code class="language-java">@Override
+public String toString() {  
+    return getClass().getSimpleName() + " [" + StringUtils.arrayToCommaDelimitedString(this.params) + "]";
+}
+</code></pre>
 
 <h3 id="customkeygenerator">Custom key generator</h3>
 
