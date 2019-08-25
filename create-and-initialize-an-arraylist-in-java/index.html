@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/create-and-initialize-an-arraylist-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/07/JavaCollections_InitializeanArrayList.png">
     <meta property="article:published_time" content="2019-07-22T14:18:39.000Z">
-    <meta property="article:modified_time" content="2019-08-25T06:36:29.000Z">
+    <meta property="article:modified_time" content="2019-08-25T06:44:37.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Create and Initialize an ArrayList in Java",
     "url": "http://hellokoding.com/create-and-initialize-an-arraylist-in-java/",
     "datePublished": "2019-07-22T14:18:39.000Z",
-    "dateModified": "2019-08-25T06:36:29.000Z",
+    "dateModified": "2019-08-25T06:44:37.000Z",
     "image": "http://hellokoding.com/content/images/2019/07/JavaCollections_InitializeanArrayList.png",
     "keywords": "Java",
     "description": "You can create a new ArrayList in Java by using the new operator and then initialize it by using add or addAll method. Apart from that, you can also initialize from another collection when constructing a new instance Let&#x27;s walk through this tutorial to explore them in more details Initialize"
@@ -240,7 +240,7 @@ ghost.init({
 
 <pre><code class="language-java">@Test
 public void initializeInMultipleLines() {  
-    // Create a new HashSet
+    // Create a new ArrayList
     List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
 
     // Add elements to ArrayList
@@ -292,7 +292,7 @@ public void initializeInOneLine() {
 
 <pre><code class="language-java">@Test
 public void initializeByAddAll() {  
-    // Create a new HashSet
+    // Create a new ArrayList
     List&lt;Integer&gt; lst1 = new ArrayList&lt;&gt;();
 
     // Add all from Java 9+ List.of
@@ -307,7 +307,7 @@ public void initializeByAddAll() {
     assertThat(lst1).hasSize(9);
 
     // Add all from an existing collection
-    Set&lt;Integer&gt; lst2 = new HashSet&lt;&gt;();
+    List&lt;Integer&gt; lst2 = new ArrayList&lt;&gt;();
     lst2.addAll(lst1);
     assertThat(lst2).hasSize(9);
 }
@@ -333,7 +333,7 @@ public void initializeFromAnotherCollectionWhenCreating() {
 
     // create and initialize from an existing collection
     List&lt;Integer&gt; lst4 = new ArrayList&lt;&gt;(lst3);
-    assertThat(lst3).hasSize(3);
+    assertThat(lst4).hasSize(3);
 }
 </code></pre>
 
