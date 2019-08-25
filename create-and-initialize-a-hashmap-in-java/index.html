@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Create and Initialize a HashMap in Java">
-    <meta property="og:description" content="You can create and initialize a HashMap by using its constructors, util methods of Collection class or Map.of(), Map.ofEntries() and Map.copyOf() of Java 9+  Using HashMap's constructors Create a new empty HashMap Map&amp;lt;String, Integer&amp;gt; map = new HashMap&amp;lt;&amp;gt;();   Create and init a new">
+    <meta property="og:description" content="You can create a new HashMap in Java by using the new operator and then initialize it by using put, Java 8+ putIfAbsent or putAll method. Apart from that, you can also initialize from another map when constructing a new instance Let's walk through this tutorial to explore them in">
     <meta property="og:url" content="http://hellokoding.com/create-and-initialize-a-hashmap-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/07/JavaCollections_InitializeaHashMap.png">
     <meta property="article:published_time" content="2019-07-07T13:55:37.000Z">
-    <meta property="article:modified_time" content="2019-07-17T14:27:07.000Z">
+    <meta property="article:modified_time" content="2019-08-25T09:58:01.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Create and Initialize a HashMap in Java">
-    <meta name="twitter:description" content="You can create and initialize a HashMap by using its constructors, util methods of Collection class or Map.of(), Map.ofEntries() and Map.copyOf() of Java 9+  Using HashMap's constructors Create a new empty HashMap Map&amp;lt;String, Integer&amp;gt; map = new HashMap&amp;lt;&amp;gt;();   Create and init a new">
+    <meta name="twitter:description" content="You can create a new HashMap in Java by using the new operator and then initialize it by using put, Java 8+ putIfAbsent or putAll method. Apart from that, you can also initialize from another map when constructing a new instance Let's walk through this tutorial to explore them in">
     <meta name="twitter:url" content="http://hellokoding.com/create-and-initialize-a-hashmap-in-java/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/07/JavaCollections_InitializeaHashMap.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Create and Initialize a HashMap in Java",
     "url": "http://hellokoding.com/create-and-initialize-a-hashmap-in-java/",
     "datePublished": "2019-07-07T13:55:37.000Z",
-    "dateModified": "2019-07-17T14:27:07.000Z",
+    "dateModified": "2019-08-25T09:58:01.000Z",
     "image": "http://hellokoding.com/content/images/2019/07/JavaCollections_InitializeaHashMap.png",
     "keywords": "Java",
-    "description": "You can create and initialize a HashMap by using its constructors, util methods of Collection class or Map.of(), Map.ofEntries() and Map.copyOf() of Java 9+  Using HashMap&#x27;s constructors Create a new empty HashMap Map&amp;lt;String, Integer&amp;gt; map &#x3D; new HashMap&amp;lt;&amp;gt;();   Create and init a new"
+    "description": "You can create a new HashMap in Java by using the new operator and then initialize it by using put, Java 8+ putIfAbsent or putAll method. Apart from that, you can also initialize from another map when constructing a new instance Let&#x27;s walk through this tutorial to explore them in"
 }
     </script>
 
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Create and Initialize a HashMap in Java</h1>
-            <time class="post__date" datetime="2019-07-17">Last modified @ 17 July 2019</time>
+            <time class="post__date" datetime="2019-08-25">Last modified @ 25 August 2019</time>
           </header>
 
           <div class="post-content">
@@ -228,104 +228,143 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p>You can create and initialize a HashMap by using its constructors, util methods of <code>Collection</code> class or <code>Map.of()</code>, <code>Map.ofEntries()</code> and <code>Map.copyOf()</code> of Java 9+ </p>
+            <p>You can create a new HashMap in Java by using the <code>new</code> operator and then initialize it by using <code>put</code>, Java 8+ <code>putIfAbsent</code> or <code>putAll</code> method. Apart from that, you can also initialize from another map when constructing a new instance</p>
 
-<h3 id="usinghashmapsconstructors">Using <code>HashMap</code>'s constructors</h3>
+<p>Let's walk through this tutorial to explore them in more details</p>
+
+<h2 id="initializebyusingputmethod">Initialize by using <code>put</code> method</h2>
+
+<p>The <code>put</code> method is used for adding key-value mapping entry into a HashMap; <code>null</code> key and <code>null</code> values are allowed; the value of a duplicate key will be overridden</p>
 
 <ul>
-<li>Create a new empty <code>HashMap</code></li>
+<li>Create and initialize in multiple lines</li>
 </ul>
 
-<pre><code class="language-java">Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();  
+<pre><code class="language-java">@Test
+public void initializeWithPut() {  
+    // Create a new HashMap
+    Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
+
+    // Add elements to HashMap
+    map.put("k1", 1);
+    map.put("k2", 2);
+    map.put("k3", 3);
+
+    // Can add null key and null values
+    map.put(null, 4);
+    map.put("k4", null);
+
+    // Value of duplicate key will be overridden
+    map.put("k1", 10);
+    assertThat(map).hasSize(5);
+
+    // The output ordering will be vary as Map is not reserved the insertion order
+    System.out.println(map);
+}
 </code></pre>
 
 <ul>
-<li>Create and init a new <code>HashMap</code> with the same mappings as the specified <code>map</code></li>
+<li>Create and initialize a HashMap in one line with double brace</li>
 </ul>
 
-<pre><code class="language-java">Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();  
-map.put("k1", 1);  
-System.out.println(map); // {k1=1}
+<pre><code class="language-java">@Test
+public void initializeWithPutInOneLine() {  
+    // Create a new HashMap
+    Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;(){{
+        put("k1", 1);
+        put("k3", 2);
+        put("k2", 3);
+    }};
 
-Map&lt;String, Integer&gt; map2 = new HashMap&lt;&gt;(map);  
-System.out.println(map2); // {k1=1}  
+    assertThat(map).hasSize(3);
+
+    // The output ordering will be vary as Map is not reserved the insertion order
+    System.out.println(map);
+}
+</code></pre>
+
+<p>Double brace initialization can lead to memory leaks as it creates an anonymous class with a reference to the owner object, so we should not use it in practice</p>
+
+<h2 id="initializebyusingjava8putifabsentmethod">Initialize by using Java 8+ <code>putIfAbsent</code> method</h2>
+
+<p>Java 8+ introduces <code>putIfAbsent</code> to ignore duplicate key when adding entry into a HashMap</p>
+
+<pre><code class="language-java">@Test
+public void initializeWithPutIfAbsent() {  
+    // Create a new HashMap
+    Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
+
+    // Add elements to HashMap
+    map.putIfAbsent("k1", 1);
+    map.putIfAbsent("k2", 2);
+    map.putIfAbsent("k3", 3);
+
+    // Can add null key and value
+    map.putIfAbsent(null, 4);
+    map.putIfAbsent("k4", null);
+
+    // Duplicate key will be ignored
+    map.putIfAbsent("k1", 10);
+    assertThat(map).hasSize(5);
+
+    // The output ordering will be vary as Map is not reserved the insertion order
+    System.out.println(map);
+}
+</code></pre>
+
+<h2 id="initializefromanothermap">Initialize from another map</h2>
+
+<p>You can initialize a HashMap from another map collection when creating a new instance or using the <code>putAll</code> method with Java 9+ <code>Map.of</code>, <code>Map.ofEntries</code> and <code>Map.copyOf</code></p>
+
+<ul>
+<li>Initialize from another map by using <code>putAll</code> method</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void initializeWithPutAll() {  
+    // Create a new HashMap
+    Map&lt;String, Integer&gt; map1 = new HashMap&lt;&gt;();
+
+    // Add all from Java 9+ Map.of
+    map1.putAll(Map.of("k1", 1, "k3", 2, "k2", 3));
+
+    // Add all from Java 9+ Map.ofEntries
+    map1.putAll(Map.ofEntries(Map.entry("k4", 4), Map.entry("k5", 5)));
+
+    assertThat(map1).hasSize(5);
+
+    // Add all from an existing map
+    Map&lt;String, Integer&gt; map2 = new HashMap&lt;&gt;();
+    map2.putAll(Map.copyOf(map1));
+    assertThat(map2).hasSize(5);
+}
 </code></pre>
 
 <ul>
-<li>Create and init a map in one line with double brace initialization (should not be used)</li>
+<li>Initialize from another collection when creating a new instance</li>
 </ul>
 
-<pre><code class="language-java">Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;(){{  
-   put("k1", 1);
-   put("k2", 2);
-}};
+<pre><code class="language-java">@Test
+public void initializeFromAnotherMapWhenCreating() {  
+    // create and initialize a HashMap from Java 9+ Map.of
+    Map&lt;String, Integer&gt; map1 = new HashMap&lt;&gt;((Map.of("k1", 1, "k3", 2, "k2", 3)));
+    assertThat(map1).hasSize(3);
+
+    // create and initialize a HashMap from Java 9+ Map.ofEntries
+    Map&lt;String, Integer&gt; map2 = new HashMap&lt;&gt;(Map.ofEntries(Map.entry("k4", 4), Map.entry("k5", 5)));
+    assertThat(map2).hasSize(2);
+
+    // create and initialize from an existing map
+    Map&lt;String, Integer&gt; map3 = new HashMap&lt;&gt;(map1);
+    assertThat(map3).hasSize(3);
+}
 </code></pre>
 
-<p>Double brace initialization can lead to memory leaks as it creates an anonymous class with a reference to the owner object</p>
+<h2 id="conclusion">Conclusion</h2>
 
-<ul>
-<li>Create and init a map in multiple lines</li>
-</ul>
+<p>In this tutorial, we learned some ways to create and initialize a HashMap in Java. You can find the full source code as below</p>
 
-<pre><code class="language-java">Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();  
-map.put("k1", 1);  
-map.put("k2", 2);  
-</code></pre>
-
-<p><br>  </p>
-
-<h3 id="usingcollectionsclass">Using <code>Collections</code> class</h3>
-
-<ul>
-<li>Create a new empty unmodifiable map with <code>Collections.emptyMap()</code></li>
-</ul>
-
-<pre><code class="language-java">Map&lt;String, Integer&gt; immutableMap = Collections.emptyMap();  
-</code></pre>
-
-<ul>
-<li>Create and init a single key-value unmodifiable map in one line with <code>Collections.singletonMap(K key, V value)</code></li>
-</ul>
-
-<pre><code class="language-java">Map&lt;String, Integer&gt; immutableMap = Collections.singletonMap("k1", 1);  
-</code></pre>
-
-<p><br>  </p>
-
-<h3 id="usingmapofmapofentriesandmapcopyofwithjava9">Using <code>Map.of</code>, <code>Map.ofEntries</code> and <code>Map.copyOf</code> with Java 9+</h3>
-
-<p>Using <code>Map.of</code>, <code>Map.ofEntries</code> and <code>Map.copyOf</code> factory methods to create and init an unmodifiable map in one line.</p>
-
-<p><code>UnsupportedOperationException</code> will be thrown if attempting to add, remove or update keys and values</p>
-
-<p><code>NullPointerException</code> will be thrown if attempting to create with <code>null</code> keys or values</p>
-
-<p><code>IllegalArgumentException</code> will be thrown if attempting to create with duplicate keys</p>
-
-<ul>
-<li>with <code>Map.of(...)</code></li>
-</ul>
-
-<pre><code class="language-java">Map&lt;String, Integer&gt; immutableMap = Map.of("k1", 1, "k2", 2);  
-</code></pre>
-
-<ul>
-<li>with <code>Map.ofEntries(...)</code></li>
-</ul>
-
-<pre><code class="language-java">Map&lt;String, Integer&gt; immutableMap = Map.ofEntries(Map.entry("k1", 1), Map.entry("k2", 2));  
-</code></pre>
-
-<ul>
-<li>with <code>Map.copyOf(...)</code></li>
-</ul>
-
-<pre><code class="language-java">Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();  
-map.put("k1", 1);  
-map.put("k2", 2);
-
-Map&lt;String, Integer&gt; immutableMap = Map.copyOf(map);  
-System.out.println(immutableMap); // {k2=2, k1=1}
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/HashMapInitializeTest.java">
 </code></pre>
             
             <div class="post__tags">
