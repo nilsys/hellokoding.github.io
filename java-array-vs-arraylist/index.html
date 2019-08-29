@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-array-vs-arraylist/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/08/JavaCore_ArrayVSArrayList.png">
     <meta property="article:published_time" content="2019-08-28T15:20:57.000Z">
-    <meta property="article:modified_time" content="2019-08-29T13:30:15.000Z">
+    <meta property="article:modified_time" content="2019-08-29T16:12:45.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java Array vs ArrayList",
     "url": "http://hellokoding.com/java-array-vs-arraylist/",
     "datePublished": "2019-08-28T15:20:57.000Z",
-    "dateModified": "2019-08-29T13:30:15.000Z",
+    "dateModified": "2019-08-29T16:12:45.000Z",
     "image": "http://hellokoding.com/content/images/2019/08/JavaCore_ArrayVSArrayList.png",
     "keywords": "Java",
     "description": "Arrays in Java are fixed size array data structure implementation, provide run-time type safety ArrayLists are resizable array implementation, a part of the Collections framework, offer compile-time type safety - through generics Let&#x27;s walk through this tutorial to see the differences between Array and ArrayList in Java in detail examples"
@@ -249,7 +249,7 @@ arr[2] = 3;
 </code></pre>
 
 <ul>
-<li><p>ArrayList can hold a large number of single type elements, capped at <code>Integer.MAX_VALUE - 8</code>, its length auto grow internally, you can add more elements than the initial capacity</p>
+<li><p>ArrayList, backed by an array, auto grow its capacity internally, you can add more elements than the initial</p>
 
 <p>The below example declares an ArrayList of length 3 and initializes its items. You can add the fourth item, although the initial capacity is 3</p></li>
 </ul>
@@ -292,7 +292,7 @@ arr[0] = 1 // throws ArrayStoreException at runtime
 </code></pre>
 
 <ul>
-<li>Generics are erasure, data type is enforced at compile time. The below is failed at compile time</li>
+<li>Generics are erasure, data type is enforced at compile time and erased at runtime. The below is failed at compile time</li>
 </ul>
 
 <pre><code class="language-java">List&lt;Object&gt; lst = new ArrayList&lt;String&gt;(); // Incompatible types  
@@ -330,23 +330,38 @@ lst.add(Integer.valueOf(1));
 Object[] arr2 = new int[3];
 </code></pre>
 
+<h2 id="operations">Operations</h2>
+
 <ul>
-<li>ArrayList </li>
+<li>You can query the capacity of an array but can't on ArrayList, although you can query the number of elements in the list</li>
 </ul>
 
-<pre><code class="language-java">List&lt;Object&gt; lst = new ArrayList&lt;String&gt;();  
-lst1.add(1);  
+<pre><code class="language-java">int[] arr = {1, 2, 3};  
+assertThat(arr.length).isEqualTo(3);
+
+List&lt;Integer&gt; lst = new ArrayList&lt;&gt;(List.of(1, 2, 3));  
+assertThat(lst.size()).isEqualTo(3);  
 </code></pre>
 
-<h2 id="multidimensional">Multi-dimensional</h2>
-
 <ul>
-<li>Arrays are more simply to represent and operate on multi-dimensional</li>
+<li>ArrayLists provide more convenient operations than arrays such as iterating and removing</li>
 </ul>
 
-<pre><code class="language-java">int[][] arr = new int[3][3];  
-for (int i=0; i&lt;3; i++) {  
-    for (int j=0; j&lt;3; j++) {
+<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;(List.of(1, 2, 3));  
+lst.forEach(ele -&gt; System.out.println(ele));  
+lst.removeIf(ele -&gt; ele &gt; 1);  
+</code></pre>
+
+<h2 id="easeoftyping">Ease of typing</h2>
+
+<ul>
+<li>Arrays are more simply for typing, especially when working with multi-dimensional</li>
+</ul>
+
+<pre><code class="language-java">// initialize
+int[][] arr = new int[10][10];  
+for (int i=0; i&lt;10; i++) {  
+    for (int j=0; j&lt;10; j++) {
         arr[i][j] = 1;
     }
 }
@@ -356,13 +371,14 @@ arr[0][0] = 10;
 </code></pre>
 
 <ul>
-<li>On the other hand, ArrayLists aren't that simple when dealing with multi-dimensional</li>
+<li>On the other hand, ArrayLists are more verbose</li>
 </ul>
 
-<pre><code class="language-java">List&lt;List&lt;Integer&gt;&gt; lst = new ArrayList&lt;&gt;();  
-for (int i=0; i&lt;3; i++) {  
+<pre><code class="language-java">// initialize
+List&lt;List&lt;Integer&gt;&gt; lst = new ArrayList&lt;&gt;();  
+for (int i=0; i&lt;10; i++) {  
     List&lt;Integer&gt; tmp = new ArrayList&lt;&gt;();
-    for (int j=0; j&lt;3; j++) {
+    for (int j=0; j&lt;10; j++) {
         tmp.add(1);
     }
     lst.add(tmp);
@@ -371,6 +387,12 @@ for (int i=0; i&lt;3; i++) {
 // update value of element at [0,0]
 lst.get(0).set(0, 10);
 </code></pre>
+
+<p><br>  </p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>In this tutorials, we learned the differences between arrays and ArrayLists in detail examples. ArrayList is usually preferred to Array thanks to its type-safety enforcement at compile time offering through generics implementation</p>
             
             <div class="post__tags">
               <a href="../tag/java/">Java</a>
