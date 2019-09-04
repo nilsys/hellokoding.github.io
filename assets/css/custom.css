@@ -173,6 +173,7 @@ aside.sponsors{
 
 	.widget:last-child {
 		position: sticky;
+		position: -webkit-sticky;
 		top: 10px;
 		bottom: 436px;
 	}
