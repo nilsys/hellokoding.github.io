@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-thread-runnable-and-callable/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/09/JavaConcurrency_ThreadvsRunnablevsCallable.png">
     <meta property="article:published_time" content="2019-09-06T15:06:21.000Z">
-    <meta property="article:modified_time" content="2019-09-06T15:09:27.000Z">
+    <meta property="article:modified_time" content="2019-09-06T15:48:52.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java Thread, Runnable and Callable",
     "url": "http://hellokoding.com/java-thread-runnable-and-callable/",
     "datePublished": "2019-09-06T15:06:21.000Z",
-    "dateModified": "2019-09-06T15:09:27.000Z",
+    "dateModified": "2019-09-06T15:48:52.000Z",
     "image": "http://hellokoding.com/content/images/2019/09/JavaConcurrency_ThreadvsRunnablevsCallable.png",
     "keywords": "Java",
     "description": "In Java, there&#x27;re some ways to run objects (class instances) in a multi-threaded environment such as inheriting the Thread class, implementing the Runnable interface, and implementing the Callable interface Let&#x27;s walk through this tutorial to see the examples in details Inherit the Thread class You can inherit your class from"
@@ -246,7 +246,7 @@ ghost.init({
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/concurrent/ThreadTest.java">
 </code></pre>
 
-<p>We created an instance of <code>ThreadCounter</code> and execute it in an <code>ExecutorService</code> with 10 thread pools</p>
+<p>We created an instance of <code>ThreadCounter</code> and execute it in an <code>ExecutorService</code> with a fixed thread pools</p>
 
 <p>Inheriting the <code>Thread</code> class is not a recommended way if you are only planning to override the <code>run()</code> method and not enhancing or modifying the default behaviour of the <code>Thread</code> class. Composition is preferred over inheritance in that case. So let's try the composition way</p>
 
@@ -264,7 +264,7 @@ ghost.init({
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/concurrent/ThreadTest.java">
 </code></pre>
 
-<p>We also created an instance of <code>RunnableCounter</code> and execute it in an <code>ExecutorService</code> with 10 thread pools</p>
+<p>We also created an instance of <code>RunnableCounter</code> and execute it in an <code>ExecutorService</code> with a fixed thread pools</p>
 
 <p>In most cases, as pointed out in the previous section, implementing the <code>Runnable</code> interface is preferred to inheriting the <code>Thread</code> class</p>
 
@@ -279,7 +279,7 @@ assertThat(counter.get()).isEqualTo(100);
 
 <h2 id="implementthecallableinterface">Implement the Callable interface</h2>
 
-<p><code>Callable</code> interface is similar to <code>Runnable</code> but return a result and may throw an exception</p>
+<p>The <code>Callable</code> interface is similar to the <code>Runnable</code> but return a result and may throw an exception</p>
 
 <p>Let's define a class that implementing the <code>Callable</code> interface as the following</p>
 
@@ -302,7 +302,7 @@ assertThat(result.get()).isEqualTo(100);
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>In this tutorial, we learned how to creating a new thread of execution, the difference between <code>Thread</code>, <code>Runnable</code> and <code>Callable</code> and when to use them</p>
+<p>In this tutorial, we learned how to creating a new thread of execution, the difference between <code>Thread</code>, <code>Runnable</code> and <code>Callable</code> and when to use them. You can find the full source code <a href="https://github.com/hellokoding/hellokoding-courses/tree/master/java-examples/java-core">here</a></p>
             
             <div class="post__tags">
               <a href="../tag/java/">Java</a>
