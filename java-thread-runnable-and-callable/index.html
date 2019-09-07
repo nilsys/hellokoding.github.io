@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-thread-runnable-and-callable/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/09/JavaConcurrency_ThreadvsRunnablevsCallable.png">
     <meta property="article:published_time" content="2019-09-06T15:06:21.000Z">
-    <meta property="article:modified_time" content="2019-09-06T15:48:52.000Z">
+    <meta property="article:modified_time" content="2019-09-07T05:03:37.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java Thread, Runnable and Callable",
     "url": "http://hellokoding.com/java-thread-runnable-and-callable/",
     "datePublished": "2019-09-06T15:06:21.000Z",
-    "dateModified": "2019-09-06T15:48:52.000Z",
+    "dateModified": "2019-09-07T05:03:37.000Z",
     "image": "http://hellokoding.com/content/images/2019/09/JavaConcurrency_ThreadvsRunnablevsCallable.png",
     "keywords": "Java",
     "description": "In Java, there&#x27;re some ways to run objects (class instances) in a multi-threaded environment such as inheriting the Thread class, implementing the Runnable interface, and implementing the Callable interface Let&#x27;s walk through this tutorial to see the examples in details Inherit the Thread class You can inherit your class from"
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java Thread, Runnable and Callable</h1>
-            <time class="post__date" datetime="2019-09-06">Last modified @ 06 September 2019</time>
+            <time class="post__date" datetime="2019-09-07">Last modified @ 07 September 2019</time>
           </header>
 
           <div class="post-content">
@@ -261,7 +261,7 @@ ghost.init({
 
 <p>The <code>RunnableCounter</code> class have to implement the <code>run()</code> method contract of the <code>Runnable</code> interface</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/concurrent/ThreadTest.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/concurrent/RunnableTest.java">
 </code></pre>
 
 <p>We also created an instance of <code>RunnableCounter</code> and execute it in an <code>ExecutorService</code> with a fixed thread pools</p>
@@ -288,7 +288,7 @@ assertThat(counter.get()).isEqualTo(100);
 
 <p>The <code>CallableCounter</code> class have to implement the <code>call()</code> method contract of the <code>Callable</code> interface</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/concurrent/CallableCounter.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/concurrent/CallableTest.java">
 </code></pre>
 
 <p><code>Callable</code> can return a result when executing the <code>get()</code> method of the <code>Future</code> class instance returned by the <code>ExecutorService</code></p>
