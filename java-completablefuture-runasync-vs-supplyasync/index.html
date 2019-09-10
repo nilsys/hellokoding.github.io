@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-completablefuture-runasync-vs-supplyasync/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/09/JavaCompletableFuture_runAsyncVssupplyAsync.png">
     <meta property="article:published_time" content="2019-09-09T13:06:11.000Z">
-    <meta property="article:modified_time" content="2019-09-10T06:03:08.000Z">
+    <meta property="article:modified_time" content="2019-09-10T06:21:44.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java 8+ CompletableFuture runAsync Vs supplyAsync",
     "url": "http://hellokoding.com/java-completablefuture-runasync-vs-supplyasync/",
     "datePublished": "2019-09-09T13:06:11.000Z",
-    "dateModified": "2019-09-10T06:03:08.000Z",
+    "dateModified": "2019-09-10T06:21:44.000Z",
     "image": "http://hellokoding.com/content/images/2019/09/JavaCompletableFuture_runAsyncVssupplyAsync.png",
     "keywords": "Java",
     "description": "Since Java 8+, you can run a method asynchronously by using CompletableFuture.supplyAsync methods if you want to do something with the result it returns or using CompletableFuture.runAsync methods if you don&#x27;t Apart from that, you can also use lambda statements, lambda expressions and method references to provision the"
@@ -264,10 +264,10 @@ public void supplyAsync() throws ExecutionException, InterruptedException {
 }
 </code></pre>
 
-<h2 id="runasyncandsupplyasynccallbacks"><code>runAsync</code> and <code>supplyAsync</code> callbacks</h2>
+<h2 id="runasyncandsupplyasynccallbackschain"><code>runAsync</code> and <code>supplyAsync</code> callbacks chain</h2>
 
 <ul>
-<li>You can only attach <code>thenRun</code> or <code>thenRunAsync</code> to the <code>runAsync</code> callbacks</li>
+<li>You can only attach <code>thenRun</code> or <code>thenRunAsync</code> to the <code>runAsync</code> callbacks chain</li>
 </ul>
 
 <pre><code class="language-java">@Test
@@ -283,7 +283,7 @@ public void runAsyncWithCallbacks() throws ExecutionException, InterruptedExcept
 <p><br></p>
 
 <ul>
-<li>You can attach <code>thenApply*</code>, <code>thenCombine*</code>, <code>thenCompose*</code>, <code>thenAccept*</code> and <code>thenRun*</code> to the <code>supplyAsync</code> callbacks</li>
+<li>You can attach <code>thenApply*</code>, <code>thenCombine*</code>, <code>thenCompose*</code>, <code>thenAccept*</code> and <code>thenRun*</code> to the <code>supplyAsync</code> callbacks chain</li>
 </ul>
 
 <pre><code class="language-java">@Test
