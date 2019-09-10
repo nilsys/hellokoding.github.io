@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-completablefuture-runasync-vs-supplyasync/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/09/JavaCompletableFuture_runAsyncVssupplyAsync.png">
     <meta property="article:published_time" content="2019-09-09T13:06:11.000Z">
-    <meta property="article:modified_time" content="2019-09-09T15:20:21.000Z">
+    <meta property="article:modified_time" content="2019-09-10T05:47:43.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java 8+ CompletableFuture runAsync Vs supplyAsync",
     "url": "http://hellokoding.com/java-completablefuture-runasync-vs-supplyasync/",
     "datePublished": "2019-09-09T13:06:11.000Z",
-    "dateModified": "2019-09-09T15:20:21.000Z",
+    "dateModified": "2019-09-10T05:47:43.000Z",
     "image": "http://hellokoding.com/content/images/2019/09/JavaCompletableFuture_runAsyncVssupplyAsync.png",
     "keywords": "Java",
     "description": "Since Java 8+, you can run a method asynchronously by using CompletableFuture.supplyAsync methods if you want to do something with the result it returns or using CompletableFuture.runAsync methods if you don&#x27;t Apart from that, you can also use lambda statements, lambda expressions and method references to provision the"
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java 8+ CompletableFuture runAsync Vs supplyAsync</h1>
-            <time class="post__date" datetime="2019-09-09">Last modified @ 09 September 2019</time>
+            <time class="post__date" datetime="2019-09-10">Last modified @ 10 September 2019</time>
           </header>
 
           <div class="post-content">
@@ -234,114 +234,102 @@ ghost.init({
 
 <p>Lets walk through this tutorial to see the detail examples</p>
 
-<h2 id="usecompletablefuturerunasynctorunasynchronouslyarunnablemethod">Use <code>CompletableFuture.runAsync</code> to run asynchronously a <code>Runnable</code> method</h2>
+<h2 id="runasynchasnoreturnvalueswhilesupplyasynchas"><code>runAsync</code> has no return values while <code>supplyAsync</code> has</h2>
 
-<p><code>Runnable</code> is a functional interface defined as below</p>
-
-<pre><code class="language-java">@FunctionalInterface
-public interface Runnable {  
-    void run();
-}
-</code></pre>
-
-<p>As long as you have a void method with no arguments then you can pass it to <code>CompletableFuture.runAsync</code> via lambda statements, lambda expressions and method references</p>
-
-<p>Lets say you have a <code>Counter</code> class with a method <code>increaseRunnable</code> as the following</p>
-
-<pre><code class="language-java">class Counter {  
-    int count = 0;
-
-    synchronized void increaseRunnable() {
-        count++;
-    }
-}
-</code></pre>
-
-<p><code>increaseRunnable</code> has no parameters and no return values like the <code>run</code> method of the <code>Runnable</code> interface, so you can run it asynchronously with <code>CompletableFuture.runAsync</code></p>
+<ul>
+<li><code>CompletableFuture.runAsync</code> accepts a <code>Runnable</code> functional interface and return a <code>CompletableFuture&lt;Void&gt;</code> which doesn't have value</li>
+</ul>
 
 <pre><code class="language-java">@Test
-public void runAsync() {  
-    Counter counter = new Counter();
+public void runAsync() throws ExecutionException, InterruptedException {  
+    CompletableFuture c = CompletableFuture
+        .runAsync(() -&gt; System.out.println("runAsync has no return values"));
 
-    for (int i = 0; i &lt; 10000; i++) {
-        CompletableFuture.runAsync(counter::increaseRunnable);
-    }
-
-    stop(ForkJoinPool.commonPool());
-
-    assertThat(counter.count).isEqualTo(10000);
+    assertThat(c.get()).isNull();
 }
 </code></pre>
 
-<p><code>counter::increaseRunnable</code> is an instance method reference</p>
+<p><br></p>
 
-<p>Internally, <code>CompletableFuture.runAsync(Runnable)</code> uses <code>ForkJoinPool.commonPool()</code> to execute. You can provision a custom <code>Executor</code> to <code>CompletableFuture.runAsync(Runnable, Executor)</code> as the following</p>
+<ul>
+<li><code>CompletableFuture.supplyAsync</code> accepts a <code>Supplier&lt;U&gt;</code> functional interface and return a <code>CompletableFuture&lt;U&gt;</code></li>
+</ul>
 
 <pre><code class="language-java">@Test
-public void runAsyncWithExecutorService() {  
-    ExecutorService executorService = Executors.newFixedThreadPool(3);
+public void supplyAsync() throws ExecutionException, InterruptedException {  
+    CompletableFuture c = CompletableFuture
+        .supplyAsync(() -&gt; "supplyAsync has return value");
 
-    Counter counter = new Counter();
+    assertThat(c.get()).isEqualTo("supplyAsync has return value");
+}
+</code></pre>
 
-    for (int i = 0; i &lt; 10000; i++) {
-        CompletableFuture.runAsync(counter::increaseRunnable, executorService);
-    }
+<h2 id="runasyncandsupplyasynccallbacks"><code>runAsync</code> and <code>supplyAsync</code> callbacks</h2>
+
+<ul>
+<li>You can only attach <code>thenRun</code> or <code>thenRunAsync</code> to the <code>runAsync</code> callbacks</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void runAsyncWithCallbacks() throws ExecutionException, InterruptedException {  
+    CompletableFuture c = CompletableFuture
+        .runAsync(() -&gt; System.out.println("runAsync"))
+        .thenRunAsync(() -&gt; System.out.println("callback"));
+
+    assertThat(c.get()).isNull();
+}
+</code></pre>
+
+<p><br></p>
+
+<ul>
+<li>You can attach <code>thenApply</code>, <code>thenApplyAsync</code>, <code>thenCombine</code>, <code>thenCombineAsync</code>, <code>thenCompose</code>, <code>thenComposeAsync</code>, <code>thenAccept</code>, <code>thenAcceptAsync</code>, <code>thenRun</code>, <code>thenRunAsync</code> to the <code>supplyAsync</code> callbacks</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void supplyAsyncWithCallbacks() throws ExecutionException, InterruptedException {  
+    CompletableFuture c = CompletableFuture
+        .supplyAsync(() -&gt; "supplyAsync")
+        .thenApplyAsync((s) -&gt; s + " callback");
+
+    assertThat(c.get()).isEqualTo("supplyAsync callback");
+}
+</code></pre>
+
+<h2 id="runrunasyncandsupplyasyncwithanexecutorservice">Run <code>runAsync</code> and <code>supplyAsync</code> with an <code>ExecutorService</code></h2>
+
+<p>Internally, <code>CompletableFuture.runAsync(Runnable)</code> and <code>CompletableFuture.supplyAsync(Supplier)</code> uses <code>ForkJoinPool.commonPool()</code> to execute</p>
+
+<ul>
+<li>You can provision a custom <code>Executor</code> to <code>CompletableFuture.runAsync(Runnable, Executor)</code> as the following</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void runAsyncWithExecutor() throws ExecutionException, InterruptedException {  
+    CompletableFuture c = CompletableFuture
+        .runAsync(() -&gt; System.out.println("Run runAsync with an Executor"), executorService);
 
     stop(executorService);
 
-    assertThat(counter.count).isEqualTo(10000);
+    assertThat(c.get()).isNull();
 }
 </code></pre>
 
-<h2 id="usecompletablefuturesupplyasynctorunasynchronouslyasuppliermethod">Use <code>CompletableFuture.supplyAsync</code> to run asynchronously a <code>Supplier</code> method</h2>
+<p><br></p>
 
-<p><code>Supplier</code> is a functional interface defined as below</p>
-
-<pre><code class="language-java">@FunctionalInterface
-public interface Supplier&lt;T&gt; {  
-    T get();
-}
-</code></pre>
-
-<p>As long as you have a method with no arguments and with a return type then you can pass it to <code>CompletableFuture.supplyAsync</code> via lambda statements, lambda expressions and method references</p>
-
-<p>Let's define a <code>Supplier</code> method inside the above <code>Counter</code> class</p>
-
-<pre><code class="language-java">class Counter {  
-    int count = 0;
-
-    synchronized void increaseRunnable() {
-        count++;
-    }
-
-    synchronized int increaseSupplier() {
-        count++;
-
-        return count;
-    }
-}
-</code></pre>
-
-<p><code>increaseSupplier</code> has return value and no parameters like the <code>get</code> method of the <code>Supplier</code> interface, so you can pass it into <code>CompletableFuture.supplyAsync(Supplier)</code></p>
+<ul>
+<li>You can also provision a custom <code>Executor</code> to <code>CompletableFuture.supplyAsync(Supplier, Executor)</code></li>
+</ul>
 
 <pre><code class="language-java">@Test
-public void supplyAsync() {  
-    Counter counter = new Counter();
+public void supplyAsyncWithCallbacks() throws ExecutionException, InterruptedException {  
+    CompletableFuture c = CompletableFuture
+        .supplyAsync(() -&gt; "supplyAsync")
+        .thenApplyAsync((s) -&gt; s + " callback");
 
-    for (int i = 0; i &lt; 10000; i++) {
-        CompletableFuture
-            .supplyAsync(counter::increaseSupplier, executorService);
-    }
-
-    stop(executorService);
-
-    assertThat(counter.count).isEqualTo(10000);
+    assertThat(c.get()).isEqualTo("supplyAsync callback");
 }
 </code></pre>
-
-<p><code>counter::increaseSupplier</code> is an instance method reference</p>
-
-<p>Like the <code>runAsync</code>, internally, <code>CompletableFuture.supplyAsync(Supplier)</code> uses a <code>ForkJoinPool.commonPool()</code> to execute. You can provision a custom <code>Executor</code> to <code>CompletableFuture.supplyAsync(Supplier, Executor)</code></p>
 
 <h2 id="conclusion">Conclusion</h2>
 
