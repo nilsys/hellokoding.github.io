@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-8-completablefuture-supplyasync-tutorial-with-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/09/JavaConcurrency_CompletableFuture_supplyAsync.png">
     <meta property="article:published_time" content="2019-09-18T15:24:40.000Z">
-    <meta property="article:modified_time" content="2019-09-18T16:11:58.000Z">
+    <meta property="article:modified_time" content="2019-09-18T16:15:54.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java 8+ CompletableFuture.supplyAsync Tutorial with Examples",
     "url": "http://hellokoding.com/java-8-completablefuture-supplyasync-tutorial-with-examples/",
     "datePublished": "2019-09-18T15:24:40.000Z",
-    "dateModified": "2019-09-18T16:11:58.000Z",
+    "dateModified": "2019-09-18T16:15:54.000Z",
     "image": "http://hellokoding.com/content/images/2019/09/JavaConcurrency_CompletableFuture_supplyAsync.png",
     "keywords": "Java",
     "description": "Since Java 8+, you can use CompletableFuture.supplyAsync to asynchronously run a task/method as the following example @Test public void supplyAsync() throws ExecutionException, InterruptedException {       CompletableFuture completableFuture &#x3D; CompletableFuture.supplyAsync(() -&amp;gt; &quot;Hello future!&quot;);     assertThat(completableFuture.get()).isEqualTo(&quot;Hello future!&quot;); } The CompletableFuture.supplyAsync run asynchronously a Supplier functional interface which represents"
@@ -263,7 +263,7 @@ public void thenApplyAsync() throws ExecutionException, InterruptedException {
 </code></pre>
 
 <ul>
-<li>Action methods in <code>CompletableFuture</code> come in 3 forms: default synchronous execution, default asynchronous execution (name with <code>Async</code> suffix) and asynchronous execution with custom <code>Executor</code>. The default async uses <code>ForkJoinPool.commonPool()</code> to execute. The following give you an example of using custom <code>Executor</code></li>
+<li>APIs in <code>CompletableFuture</code> may come in 3 forms: default synchronous execution, default asynchronous execution (name with <code>Async</code> suffix) and asynchronous execution with custom <code>Executor</code>. The default async uses <code>ForkJoinPool.commonPool()</code> to execute. The following give you an example of using custom <code>Executor</code></li>
 </ul>
 
 <pre><code class="language-java">@Test
