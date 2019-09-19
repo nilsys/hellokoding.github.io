@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Form - Hello Koding - Practical Coding Courses, Tutorials and Examples]]></title><description><![CDATA[Practical coding courses, tutorials and examples series of Data Structure, Algorithm Interview Questions, Spring, Java, JPA/Hibernate and REST API]]></description><link>http://hellokoding.com/</link><generator>Ghost 0.9</generator><lastBuildDate>Thu, 19 Sep 2019 13:35:28 GMT</lastBuildDate><atom:link href="http://hellokoding.com/tag/form/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Contact Form Example with Spring Boot, FreeMarker and Amazon SES]]></title><description><![CDATA[<p>This tutorial will walk you through the steps of creating a Contact Form Example with Spring Boot, FreeMarker and Amazon SES.</p>
+
+<h3 id="whatyoullbuild">What you'll build</h3>
+
+<p><img src="http://hellokoding.com/content/images/2017/12/contact-form-java-springboot-freemarker-ses.png" alt=""></p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 1.7+</li>
+<li>Maven 3+</li>
+<li>Amazon SES account</li>
+<li><a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html">SMTP Credentials of your Amazon SES account</a></li>
+<li><a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html">Verified From email and To email on SES</a></li></ul>]]></description><link>http://hellokoding.com/contact-form-example-with-java-spring-boot-freemarker-and-amazon-ses/</link><guid isPermaLink="false">1299fee8-19fc-4f49-8213-df933fcf597c</guid><category><![CDATA[Form]]></category><category><![CDATA[Spring Boot]]></category><dc:creator><![CDATA[Giau Ngo]]></dc:creator><pubDate>Sat, 23 Dec 2017 15:48:20 GMT</pubDate><media:content url="http://hellokoding.com/content/images/2019/01/contact-form.png" medium="image"/><content:encoded><![CDATA[<img src="http://hellokoding.com/content/images/2019/01/contact-form.png" alt="Contact Form Example with Spring Boot, FreeMarker and Amazon SES"><p>This tutorial will walk you through the steps of creating a Contact Form Example with Spring Boot, FreeMarker and Amazon SES.</p>
+
+<h3 id="whatyoullbuild">What you'll build</h3>
+
+<p><img src="http://hellokoding.com/content/images/2017/12/contact-form-java-springboot-freemarker-ses.png" alt="Contact Form Example with Spring Boot, FreeMarker and Amazon SES"></p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 1.7+</li>
+<li>Maven 3+</li>
+<li>Amazon SES account</li>
+<li><a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html">SMTP Credentials of your Amazon SES account</a></li>
+<li><a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-addresses-and-domains.html">Verified From email and To email on SES console</a></li>
+</ul>
+
+<h3 id="stack">Stack</h3>
+
+<ul>
+<li>Java, Java Mail API</li>
+<li>Spring Boot</li>
+<li>FreeMarker</li>
+<li>HTML, CSS</li>
+</ul>
+
+<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+
+<h3 id="projectstructure">Project structure</h3>
+
+<pre><code class="language-bash">├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding
+│       │           └── form
+│       │               ├── model
+│       │               │   ├── MailProperties.java
+│       │               │   └── User.java
+│       │               ├── service
+│       │               │   ├── SESService.java
+│       │               │   └── SendingMailService.java
+│       │               ├── web
+│       │               │   └── FormController.java
+│       │               └── WebApplication.java
+│       └── resources
+│           ├── static
+│           │   ├── css
+│           │   │   └── main.css
+│           │   └── js
+│           │       └── main.js
+│           ├── templates
+│           │   └── form.ftl
+│           └── application.properties
+└── pom.xml
+</code></pre>
+
+<h3 id="projectdependencies">Project dependencies</h3>
+
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-contact/pom.xml">
+</code></pre>
+
+<h2 id="definedtoservicecontrollerandviewtemplate">Define DTO, Service, Controller and View Template</h2>
+
+<h3 id="datatransferobject">Data transfer object</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-contact/src/main/java/com/hellokoding/form/model/User.java">
+</code></pre>
+
+<h3 id="service">Service</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-contact/src/main/java/com/hellokoding/form/service/SendingMailService.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-contact/src/main/java/com/hellokoding/form/service/SESService.java">
+</code></pre>
+
+<h3 id="controller">Controller</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-contact/src/main/java/com/hellokoding/form/web/FormController.java">
+</code></pre>
+
+<h3 id="viewtemplate">View template</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-contact/src/main/resources/templates/form.ftl">
+</code></pre>
+
+<h2 id="configandrun">Config and Run</h2>
+
+<h3 id="applicationconfiguration">Application Configuration</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-contact/src/main/java/com/hellokoding/form/WebApplication.java">
+</code></pre>
+
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-contact/src/main/resources/application.properties">
+</code></pre>
+
+<p>Make sure updating all macros such as <code>{YOUR_SES_SMTP_HOST}</code> and <code>{YOUR_SES_SMTP_PORT}</code> to your configs</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-contact/src/main/java/com/hellokoding/form/model/MailProperties.java">
+</code></pre>
+
+<h3 id="runtheapplication">Run the application</h3>
+
+<p>Type the following Maven command on the terminal console at the project root directory  </p>
+
+<pre><code>mvn clean spring-boot:run
+</code></pre>
+
+<h3 id="sourcecode">Source code</h3>
+
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-freemarker-form-contact">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-freemarker-form-contact</a></p>]]></content:encoded></item><item><title><![CDATA[Form Submission Example with Spring Boot and FreeMarker]]></title><description><![CDATA[<p>This tutorial will walk you through the process of creating a Handling From Submission Example with Spring Boot and FreeMarker.</p>
+
+<h3 id="whatyoullbuild">What you'll build</h3>
+
+<p><img src="http://hellokoding.com/content/images/2017/12/form-submission-1.png" alt=""></p>
+
+<p><img src="http://hellokoding.com/content/images/2017/12/form-submission-2.png" alt=""></p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 1.7+</li>
+<li>Maven 3+</li>
+</ul>
+
+<h3 id="stack">Stack</h3>
+
+<ul>
+<li>Java</li>
+<li>Spring Boot</li>
+<li>FreeMarker</li>
+<li>HTML, CSS</li>
+</ul>
+
+<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+
+<h3 id="projectstructure">Project structure</h3>
+
+<pre><code class="language-bash">├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding</code></pre>]]></description><link>http://hellokoding.com/handling-form-submission-example-with-java-spring-boot-and-freemarker/</link><guid isPermaLink="false">987e3ca5-a57b-48e7-b039-3ee6c10f62a8</guid><category><![CDATA[Form]]></category><category><![CDATA[Spring Boot]]></category><dc:creator><![CDATA[Giau Ngo]]></dc:creator><pubDate>Sun, 03 Dec 2017 01:31:38 GMT</pubDate><media:content url="http://hellokoding.com/content/images/2019/01/form-submission.png" medium="image"/><content:encoded><![CDATA[<img src="http://hellokoding.com/content/images/2019/01/form-submission.png" alt="Form Submission Example with Spring Boot and FreeMarker"><p>This tutorial will walk you through the process of creating a Handling From Submission Example with Spring Boot and FreeMarker.</p>
+
+<h3 id="whatyoullbuild">What you'll build</h3>
+
+<p><img src="http://hellokoding.com/content/images/2017/12/form-submission-1.png" alt="Form Submission Example with Spring Boot and FreeMarker"></p>
+
+<p><img src="http://hellokoding.com/content/images/2017/12/form-submission-2.png" alt="Form Submission Example with Spring Boot and FreeMarker"></p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 1.7+</li>
+<li>Maven 3+</li>
+</ul>
+
+<h3 id="stack">Stack</h3>
+
+<ul>
+<li>Java</li>
+<li>Spring Boot</li>
+<li>FreeMarker</li>
+<li>HTML, CSS</li>
+</ul>
+
+<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+
+<h3 id="projectstructure">Project structure</h3>
+
+<pre><code class="language-bash">├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding
+│       │           └── springboot
+│       │               ├── FormController.java
+│       │               ├── User.java
+│       │               └── WebApplication.java
+│       └── resources
+│           ├── static
+│           │   ├── css
+│           │   │   └── main.css
+│           │   └── js
+│           │       └── main.js
+│           ├── templates
+│           │   └── form.ftl
+│           └── application.properties
+└── pom.xml
+</code></pre>
+
+<h3 id="projectdependencies">Project dependencies</h3>
+
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-submission/pom.xml">
+</code></pre>
+
+<h2 id="definedtocontrollerandviewtemplate">Define DTO, Controller and View Template</h2>
+
+<h3 id="datatransferobjectdto">Data Transfer Object (DTO)</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-submission/src/main/java/com/hellokoding/springboot/User.java">
+</code></pre>
+
+<h3 id="controller">Controller</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-submission/src/main/java/com/hellokoding/springboot/FormController.java">
+</code></pre>
+
+<h3 id="viewtemplate">View template</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-submission/src/main/resources/templates/form.ftl">
+</code></pre>
+
+<h2 id="configandrun">Config and Run</h2>
+
+<h3 id="applicationconfiguration">Application Configuration</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-submission/src/main/java/com/hellokoding/springboot/WebApplication.java">
+</code></pre>
+
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-submission/src/main/resources/application.properties">
+</code></pre>
+
+<h3 id="runtheapplication">Run the application</h3>
+
+<p>Type the following command on the terminal at your project root directory</p>
+
+<pre><code>mvn clean spring-boot:run
+</code></pre>
+
+<h3 id="sourcecode">Source code</h3>
+
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-freemarker-form-submission">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-freemarker-form-submission</a></p>]]></content:encoded></item><item><title><![CDATA[Form Data Binding and Validation Example with Spring Boot and FreeMarker]]></title><description><![CDATA[<p>This tutorial will walk you through the steps of creating a Form Data Binding and Validation Example with Spring Boot and FreeMarker</p>
+
+<h3 id="whatyoullbuild">What you'll build</h3>
+
+<p><img src="http://hellokoding.com/content/images/2017/12/form-bindingdata-validation-1-1-1.png" alt=""></p>
+
+<p><img src="http://hellokoding.com/content/images/2017/12/form-bindingdata-validation-2.png" alt=""></p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 1.7+</li>
+<li>Maven 3+</li>
+</ul>
+
+<h3 id="stack">Stack</h3>
+
+<ul>
+<li>Java</li>
+<li>Spring Boot</li>
+<li>FreeMarker</li>
+<li>HTML, CSS</li>
+</ul>
+
+<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+
+<h3 id="projectstructure">Project structure</h3>
+
+<pre><code class="language-bash">├── src
+│   └── main
+│       ├── java</code></pre>]]></description><link>http://hellokoding.com/form-data-binding-and-validation-example-with-java-spring-boot-and-freemarker/</link><guid isPermaLink="false">332b123b-6c71-420e-9e46-e4ab9168bddf</guid><category><![CDATA[Form]]></category><category><![CDATA[Spring Boot]]></category><dc:creator><![CDATA[Giau Ngo]]></dc:creator><pubDate>Mon, 04 Dec 2017 00:39:57 GMT</pubDate><media:content url="http://hellokoding.com/content/images/2019/01/form-validation.png" medium="image"/><content:encoded><![CDATA[<img src="http://hellokoding.com/content/images/2019/01/form-validation.png" alt="Form Data Binding and Validation Example with Spring Boot and FreeMarker"><p>This tutorial will walk you through the steps of creating a Form Data Binding and Validation Example with Spring Boot and FreeMarker</p>
+
+<h3 id="whatyoullbuild">What you'll build</h3>
+
+<p><img src="http://hellokoding.com/content/images/2017/12/form-bindingdata-validation-1-1-1.png" alt="Form Data Binding and Validation Example with Spring Boot and FreeMarker"></p>
+
+<p><img src="http://hellokoding.com/content/images/2017/12/form-bindingdata-validation-2.png" alt="Form Data Binding and Validation Example with Spring Boot and FreeMarker"></p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 1.7+</li>
+<li>Maven 3+</li>
+</ul>
+
+<h3 id="stack">Stack</h3>
+
+<ul>
+<li>Java</li>
+<li>Spring Boot</li>
+<li>FreeMarker</li>
+<li>HTML, CSS</li>
+</ul>
+
+<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+
+<h3 id="projectstructure">Project structure</h3>
+
+<pre><code class="language-bash">├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding
+│       │           └── springboot
+│       │               ├── FormController.java
+│       │               ├── User.java
+│       │               └── WebApplication.java
+│       └── resources
+│           ├── static
+│           │   ├── css
+│           │   │   └── main.css
+│           │   └── js
+│           │       └── main.js
+│           ├── templates
+│           │   └── form.ftl
+│           └── application.properties
+└── pom.xml
+</code></pre>
+
+<h3 id="projectdependencies">Project dependencies</h3>
+
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-validation/pom.xml">
+</code></pre>
+
+<h2 id="definedtocontrollerandviewtemplate">Define DTO, Controller and View Template</h2>
+
+<h3 id="datatransferobjectdto">Data transfer object (DTO)</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-validation/src/main/java/com/hellokoding/springboot/User.java">
+</code></pre>
+
+<h3 id="controller">Controller</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-validation/src/main/java/com/hellokoding/springboot/FormController.java">
+</code></pre>
+
+<h3 id="viewtemplate">View template</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-validation/src/main/resources/templates/form.ftl">
+</code></pre>
+
+<h2 id="configandrun">Config and Run</h2>
+
+<h3 id="applicationconfiguration">Application Configuration</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-validation/src/main/java/com/hellokoding/springboot/WebApplication.java">
+</code></pre>
+
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-freemarker-form-validation/src/main/resources/application.properties">
+</code></pre>
+
+<h3 id="runtheapplication">Run the application</h3>
+
+<p>Type the following Maven command on your terminal console at the project root directory  </p>
+
+<pre><code>mvn clean spring-boot:run
+</code></pre>
+
+<h3 id="sourcecode">Source code</h3>
+
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-freemarker-form-validation">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-freemarker-form-validation</a></p>]]></content:encoded></item></channel></rss>

@@ -1,0 +1,1262 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[RESTful API - Hello Koding - Practical Coding Courses, Tutorials and Examples]]></title><description><![CDATA[Practical coding courses, tutorials and examples series of Data Structure, Algorithm Interview Questions, Spring, Java, JPA/Hibernate and REST API]]></description><link>http://hellokoding.com/</link><generator>Ghost 0.9</generator><lastBuildDate>Thu, 19 Sep 2019 13:35:28 GMT</lastBuildDate><atom:link href="http://hellokoding.com/tag/restful/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[MapStruct Example of Mapping JPA and Hibernate Entity to DTO]]></title><description><![CDATA[<p>In this tutorial, you will learn using MapStruct for mapping/converting Java objects, JPA and Hibernate entity to DTO and vice versa. Let's get started to build a RESTful APIs example with Spring Boot and MySQL to see how MapStruct playing in the context.</p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 8+ or</li></ul>]]></description><link>http://hellokoding.com/mapping-jpa-hibernate-entity-and-dto-with-mapstruct/</link><guid isPermaLink="false">e98a83c8-85da-4349-93c5-8d9d76addd9e</guid><category><![CDATA[RESTful API]]></category><category><![CDATA[Spring Boot]]></category><dc:creator><![CDATA[Giau Ngo]]></dc:creator><pubDate>Fri, 01 Feb 2019 14:36:40 GMT</pubDate><media:content url="http://hellokoding.com/content/images/2019/02/mapping-objects.png" medium="image"/><content:encoded><![CDATA[<img src="http://hellokoding.com/content/images/2019/02/mapping-objects.png" alt="MapStruct Example of Mapping JPA and Hibernate Entity to DTO"><p>In this tutorial, you will learn using MapStruct for mapping/converting Java objects, JPA and Hibernate entity to DTO and vice versa. Let's get started to build a RESTful APIs example with Spring Boot and MySQL to see how MapStruct playing in the context.</p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 8+ or OpenJDK 8+</li>
+<li>Maven 3+</li>
+<li>MySQL Server 5+ or Docker CE 18+</li>
+</ul>
+
+<h2 id="initprojectstructureandmapstruct">Init project structure and MapStruct</h2>
+
+<h3 id="projectstructure">Project structure</h3>
+
+<pre><code class="language-bash">├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding
+│       │           └── springboot
+│       │               └── restful
+│       │                   ├── product
+│       │                   │   ├── Product.java
+│       │                   │   ├── ProductAPI.java
+│       │                   │   ├── ProductDTO.java
+│       │                   │   ├── ProductMapper.java
+│       │                   │   ├── ProductRespository.java
+│       │                   │   └── ProductService.java
+│       │                   └── Application.java
+│       └── resources
+│           └── application.properties
+├── Dockerfile
+├── docker-compose.yml
+└── pom.xml
+</code></pre>
+
+<h3 id="settingupmapstruct">Setting up MapStruct</h3>
+
+<p>MapStruct is a Java annotation processor for generating bean mapping classes. </p>
+
+<p>To set up, add MapStruct dependency into <code>pom.xml</code> and configure <code>annotationProcessorPaths</code> of <code>maven-compiler-plugin</code>. Full project dependencies and build plugins as below</p>
+
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mapstruct/pom.xml">
+</code></pre>
+
+<h2 id="definejpaandhibernateentitydtorepositoryandservice">Define JPA and Hibernate Entity, DTO, Repository, and Service</h2>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/product/Product.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/product/ProductDTO.java">
+</code></pre>
+
+<p>DTO, stands for Data Transfer Object, is a design pattern used for customizing/aggregating data input and output so reducing the number of call to remote API.</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/product/ProductRespository.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/product/ProductService.java">
+</code></pre>
+
+<h2 id="usingmapstruct">Using MapStruct</h2>
+
+<h3 id="definemapstructmapper">Define MapStruct Mapper</h3>
+
+<p>To using MapStruct, you have to define a <code>@Mapper</code> interface which declares any required mapping methods to map between entity and DTO</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/product/ProductMapper.java">
+</code></pre>
+
+<p>Here you only define simple method signatures, converting Entity to DTO, DTO to Entity, List of Entity to List of DTOs. MapStruct will generate implementation code for you during build time.</p>
+
+<h3 id="usingmapstructonrestapi">Using MapStruct on REST API</h3>
+
+<p>Inject your previous defined <code>@Mapper</code> interface into REST API and start using its methods. </p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/product/ProductAPI.java">
+</code></pre>
+
+<p>Wow! what a clean REST API without writing a single mapping/converting logic :)</p>
+
+<h2 id="configandrun">Config and Run</h2>
+
+<h3 id="applicationconfigurations">Application Configurations</h3>
+
+<pre><code class="language-properties embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mapstruct/src/main/resources/application.properties">
+</code></pre>
+
+<p><code>hk-mysql</code> refers to Docker Compose service defined in the below <code>docker-compose.yml</code> file</p>
+
+<p><code>spring.jpa.hibernate.ddl-auto=create</code> allows JPA/Hibernate auto create database and table schema for you.
+<big></big></p>
+
+<p><pre>
+On production environment, you may like to disable the DDL Auto feature by using <em>spring.jpa.hibernate.ddl-auto=validate</em> or <em>spring.jpa.hibernate.ddl-auto=none</em> (default). Check out this example as one of the approaches
+<a href="https://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/">Database Migration/Evolution Example with Flyway and JPA/Hibernate</a>
+</pre></p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mapstruct/src/main/java/com/hellokoding/springboot/restful/Application.java">
+</code></pre>
+
+<h3 id="runwithdocker">Run with Docker</h3>
+
+<p>Prepare Dockerfile for Java/Spring Boot application and docker-compose.yml for MySQL Server</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mapstruct/Dockerfile">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mapstruct/docker-compose.yml">
+</code></pre>
+
+<p>Type the below command at the project root directory, make sure your local Docker is running</p>
+
+<pre><code>docker-compose up  
+</code></pre>
+
+<p>Access to MySQL Server docker container by issuing below bash command  and key in <code>hellokoding</code> on <code>Enter password:</code></p>
+
+<pre><code>docker exec -it hk-mysql mysql -p
+</code></pre>
+
+<h3 id="runwithjdkopenjdkmavenandmysqlserverlocal">Run with JDK/OpenJDK, Maven and MySQL Server local</h3>
+
+<p>Update <code>hk-mysql</code> on <code>application.properties</code> to <code>localhost</code> and type the below command at the project root directory</p>
+
+<pre><code>mvn clean spring-boot:run  
+</code></pre>
+
+<h3 id="testwithcurl">Test with <code>curl</code></h3>
+
+<p>Create a new product</p>
+
+<pre><code class="language-bash">curl -i -H "Content-Type: application/json" -X POST -d '{"name":"Hello Koding","description": "Simple coding examples and tutorials","price":"1"}' http://localhost:8080/api/v1/products
+</code></pre>
+
+<p>Find all products</p>
+
+<pre><code class="language-bash">curl -i http://localhost:8080/api/v1/products
+</code></pre>
+
+<h3 id="sourcecode">Source code</h3>
+
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-mapstruct">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-mapstruct</a></p>]]></content:encoded></item><item><title><![CDATA[Spring Boot RESTful API Example, Unit Test with MockMVC and simple UI Integration with VueJS]]></title><description><![CDATA[<p>This tutorial will walk you through the steps of creating a RESTful API web service example with Spring Boot, JPA, Hibernate, HSQL and Lombok, Unit Test with MockMVC and UI Integration with VueJS</p>
+
+<p><big></big></p>
+
+<p><pre>
+If you are looking for a full CRUD integration of RESTful APIs and web app using Spring</pre></p>]]></description><link>http://hellokoding.com/restful-apis-example-with-spring-boot-integration-test-with-mockmvc-ui-integration-with-vuejs/</link><guid isPermaLink="false">24fc7a28-a7ec-42e0-97cd-8eb2a35412e4</guid><category><![CDATA[RESTful API]]></category><category><![CDATA[Spring Boot]]></category><dc:creator><![CDATA[Giau Ngo]]></dc:creator><pubDate>Sat, 24 Mar 2018 04:07:49 GMT</pubDate><media:content url="http://hellokoding.com/content/images/2019/01/restful-spring-boot.png" medium="image"/><content:encoded><![CDATA[<img src="http://hellokoding.com/content/images/2019/01/restful-spring-boot.png" alt="Spring Boot RESTful API Example, Unit Test with MockMVC and simple UI Integration with VueJS"><p>This tutorial will walk you through the steps of creating a RESTful API web service example with Spring Boot, JPA, Hibernate, HSQL and Lombok, Unit Test with MockMVC and UI Integration with VueJS</p>
+
+<p><big></big></p>
+
+<p><pre>
+If you are looking for a full CRUD integration of RESTful APIs and web app using Spring Boot and VueJS, try below tutorials:
+- <a href="https://hellokoding.com/full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/">Spring Boot CRUD Example with RESTful APIs, VueJS</a>
+- <a href="https://hellokoding.com/build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/">Spring Boot CRUD Example with TodoMVC, REST APIs, VueJS</a>
+</pre></p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 8+ or OpenJDK 8+</li>
+<li>Maven 3+</li>
+</ul>
+
+<h3 id="stack">Stack</h3>
+
+<ul>
+<li>Spring Boot</li>
+<li>MockMVC</li>
+<li>VueJS</li>
+</ul>
+
+<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+
+<h3 id="projectstructure">Project structure</h3>
+
+<pre><code class="language-bash">├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── hellokoding
+│   │   │           └── springboot
+│   │   │               └── restful
+│   │   │                   ├── Application.java
+│   │   │                   ├── Stock.java
+│   │   │                   ├── StockAPI.java
+│   │   │                   ├── StockController.java
+│   │   │                   ├── StockRepository.java
+│   │   │                   └── StockService.java
+│   │   └── resources
+│   │       ├── static
+│   │       │   ├── stocklist.css
+│   │       │   └── stocklist.js
+│   │       ├── templates
+│   │       │   └── stocklist.html
+│   │       └── application.properties
+│   └── test
+│       └── java
+│           └── com
+│               └── hellokoding
+│                   └── springboot
+│                       └── restful
+│                           └── StockAPITest.java
+└── pom.xml
+</code></pre>
+
+<h3 id="projectdependencies">Project dependencies</h3>
+
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mockmvc-hsql/pom.xml">
+</code></pre>
+
+<h2 id="definejpaentityandrepository">Define JPA Entity and Repository</h2>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mockmvc-hsql/src/main/java/com/hellokoding/springboot/restful/Stock.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mockmvc-hsql/src/main/java/com/hellokoding/springboot/restful/StockRepository.java">
+</code></pre>
+
+<p><code>StockRepository</code> extends Spring Data JPA's <code>JpaRepository</code> to provide CRUD functions to the underlying database such as <code>findAll</code>, <code>findById</code>, <code>saveAll</code>, <code>save</code>, <code>deleteById</code></p>
+
+<h2 id="defineservicerestfulapiandcontroller">Define Service, RESTful API and Controller</h2>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mockmvc-hsql/src/main/java/com/hellokoding/springboot/restful/StockService.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mockmvc-hsql/src/main/java/com/hellokoding/springboot/restful/StockAPI.java">
+</code></pre>
+
+<p><code>@RestController</code> is a shorthand for <code>@Controller</code> and <code>@ResponseBody</code>. <code>@Controller</code> indicates the class will define handlers of HTTP requests. <code>@ResponseBody</code> indicates handler methods return value will be serialized as JSON and bind to the web response body</p>
+
+<p><code>@RequestMapping</code> class annotation maps HTTP requests with end point <code>/api/v1/stocks</code> to all handler methods in <code>StockAPI</code> class</p>
+
+<p><code>@GetMapping</code>, <code>@PostMapping</code>, <code>@PatchMapping</code>, and <code>@DeleteMapping</code> indicate HTTP GET, POST, PATCH and DELETE request handlers respectively</p>
+
+<p><code>@PathVariable</code> maps the handler parameter with the URI variable. <code>@RequestBody</code> indicates HTTP request body will be converted as JSON and bind to the handler parameter</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mockmvc-hsql/src/main/java/com/hellokoding/springboot/restful/StockController.java">
+</code></pre>
+
+<h2 id="consumetherestapiwithvuejs">Consume the REST API with VueJS</h2>
+
+<pre><code class="language-html embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mockmvc-hsql/src/main/resources/templates/stocklist.html">
+</code></pre>
+
+<pre><code class="language-javascript embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mockmvc-hsql/src/main/resources/static/stocklist.js">
+</code></pre>
+
+<h2 id="configandtest">Config and Test</h2>
+
+<h3 id="applicationconfigurations">Application configurations</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mockmvc-hsql/src/main/resources/application.properties">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mockmvc-hsql/src/main/java/com/hellokoding/springboot/restful/Application.java">
+</code></pre>
+
+<h3 id="defineunittestswithwebmvctestandmockmvc">Define Unit tests with <code>@WebMvcTest</code> and <code>MockMvc</code></h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-mockmvc-hsql/src/test/java/com/hellokoding/springboot/restful/StockAPITest.java">
+</code></pre>
+
+<h3 id="runtheunittestsandlaunchtheapplicationwithjdkopenjdkandmaven">Run the unit tests and launch the application with JDK/OpenJDK and Maven</h3>
+
+<p>Type the below command at the project root directory</p>
+
+<pre><code>mvn clean test spring-boot:run
+</code></pre>
+
+<h3 id="integrationtestwithcurl">Integration test with <code>cURL</code></h3>
+
+<p>Create a new stock  </p>
+
+<pre><code>curl -H "Content-Type: application/json" -X POST -d '{"name":"Stock 1","price":"1"}' http://localhost:8080/api/v1/stocks
+</code></pre>
+
+<p>Get all stocks  </p>
+
+<pre><code>curl http://localhost:8080/api/v1/stocks
+</code></pre>
+
+<p>Get stock id 1  </p>
+
+<pre><code>curl http://localhost:8080/api/v1/stocks/1
+</code></pre>
+
+<p>Update price of stock 1  </p>
+
+<pre><code>curl -i -X PATCH -H "Content-Type:application/json" -d "{\"name\" : \"Stock 1 Updated\"}" http://localhost:8080/api/v1/stocks/1
+</code></pre>
+
+<p>Access to <code>localhost:8080</code> to see the updated data on UI <br>
+<img src="http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-27-at-9-51-38-PM.png" alt="Spring Boot RESTful API Example, Unit Test with MockMVC and simple UI Integration with VueJS"></p>
+
+<p><big></big></p>
+
+<p><pre>
+If you are looking for a full CRUD integration of RESTful APIs and web app using Spring Boot and VueJS, try below tutorials:
+- <a href="https://hellokoding.com/full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/">Spring Boot CRUD Example with RESTful APIs, VueJS</a>
+- <a href="https://hellokoding.com/build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/">Spring Boot CRUD Example with TodoMVC, REST APIs, VueJS</a>
+</pre></p>
+
+<h3 id="sourcecode">Source code</h3>
+
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-mockmvc-hsql">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-mockmvc-hsql</a></p>
+
+<h3 id="references">References</h3>
+
+<p><a href="https://vuejs.org/v2/examples/grid-component.html">VueJS Grid Component Example</a></p>]]></content:encoded></item><item><title><![CDATA[RESTful API Example with Spring Data REST,  JPA and Hibernate Many To Many Extra Columns]]></title><description><![CDATA[<p>This tutorial will walk you through the steps of creating a RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA and Hibernate Many To Many Extra Columns Relationship and MySQL</p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 1.7+</li>
+<li>Maven 3+</li>
+<li>MySQL Server 5.6+</li>
+</ul>
+
+<h3 id="stack">Stack</h3>
+
+<ul>
+<li>Spring Boot</li>
+<li>Spring Data</li></ul>]]></description><link>http://hellokoding.com/restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-extra-columns-relationship-and-mysql/</link><guid isPermaLink="false">e1d00df5-74f8-4cd1-bca6-9660663b3ef2</guid><category><![CDATA[RESTful API]]></category><category><![CDATA[Spring Boot]]></category><dc:creator><![CDATA[Giau Ngo]]></dc:creator><pubDate>Sun, 13 Aug 2017 08:18:00 GMT</pubDate><media:content url="http://hellokoding.com/content/images/2019/01/restful-spring-data-rest-3.png" medium="image"/><content:encoded><![CDATA[<img src="http://hellokoding.com/content/images/2019/01/restful-spring-data-rest-3.png" alt="RESTful API Example with Spring Data REST,  JPA and Hibernate Many To Many Extra Columns"><p>This tutorial will walk you through the steps of creating a RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA and Hibernate Many To Many Extra Columns Relationship and MySQL</p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 1.7+</li>
+<li>Maven 3+</li>
+<li>MySQL Server 5.6+</li>
+</ul>
+
+<h3 id="stack">Stack</h3>
+
+<ul>
+<li>Spring Boot</li>
+<li>Spring Data REST</li>
+<li>Spring Data JPA</li>
+<li>MySQL</li>
+</ul>
+
+<h2 id="initprojectstrucure">Init project strucure</h2>
+
+<h3 id="projectstructure">Project structure</h3>
+
+<pre><code class="language-bash">├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding
+│       │           └── restfulapi
+│       │               ├── Application.java
+│       │               ├── model
+│       │               │   ├── Book.java
+│       │               │   ├── BookPublisher.java
+│       │               │   └── Publisher.java
+│       │               └── repository
+│       │                   ├── BookPublisherRepository.java
+│       │                   ├── BookRepository.java
+│       │                   └── PublisherRepository.java
+│       └── resources
+│           └── application.properties
+└── pom.xml
+</code></pre>
+
+<h3 id="projectdependencies">Project dependencies</h3>
+
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-many-to-many-extra-columns/pom.xml">
+</code></pre>
+
+<h2 id="definejpaentitiesandrepositories">Define JPA Entities and Repositories</h2>
+
+<h3 id="createdomainobjects">Create domain objects</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-many-to-many-extra-columns/src/main/java/com/hellokoding/restfulapi/model/Book.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-many-to-many-extra-columns/src/main/java/com/hellokoding/restfulapi/model/Publisher.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-many-to-many-extra-columns/src/main/java/com/hellokoding/restfulapi/model/BookPublisher.java">
+</code></pre>
+
+<h3 id="springdatarepository">Spring Data Repository</h3>
+
+<p>Spring Data JPA and Spring Data Rest will auto create some helper methods and RESTful APIs. For this example, we only need to extend JpaRepository</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-many-to-many-extra-columns/src/main/java/com/hellokoding/restfulapi/repository/BookRepository.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-many-to-many-extra-columns/src/main/java/com/hellokoding/restfulapi/repository/PublisherRepository.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-many-to-many-extra-columns/src/main/java/com/hellokoding/restfulapi/repository/BookPublisherRepository.java">
+</code></pre>
+
+<h2 id="configandrun">Config and Run</h2>
+
+<h3 id="applicationproperties">Application Properties</h3>
+
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-many-to-many-extra-columns/src/main/resources/application.properties">
+</code></pre>
+
+<h3 id="runtheapplication">Run the application</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-many-to-many-extra-columns/src/main/java/com/hellokoding/restfulapi/Application.java">
+</code></pre>
+
+<p>Type <code>mvn clean spring-boot:run</code> on terminal at the project root directory to run</p>
+
+<h3 id="testtheapplication">Test the application</h3>
+
+<p>Create a new book  </p>
+
+<pre><code class="language-bash">curl -i -X POST -H "Content-Type:application/json" -d "{\"name\" : \"Book 1\"}" http://localhost:8080/books  
+</code></pre>
+
+<p>Create a new publisher  </p>
+
+<pre><code class="language-bash">curl -i -X POST -H "Content-Type:application/json" -d "{\"name\" : \"Publisher 1\"}" http://localhost:8080/publishers  
+</code></pre>
+
+<p>Link the book with the publisher  </p>
+
+<pre><code class="language-bash">curl -i -X POST -H "Content-Type:application/json" -d "{\"book\" : \"http://localhost:8080/books/1\", \"publisher\" : \"http://localhost:8080/publishers/1\", \"publishedDate\": \"2017-01-01\"}" http://localhost:8080/bookPublishers  
+</code></pre>
+
+<h3 id="sourcecode">Source code</h3>
+
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springdatarest-mysql-many-to-many-extra-columns">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springdatarest-mysql-many-to-many-extra-columns</a></p>
+
+<h3 id="seealso">See also</h3>
+
+<p><a href="https://hellokoding.com/handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/">Handling Circular Reference of JPA/Hibernate Entity Bidirectional Relationships with Jackson JsonIgnoreProperties</a></p>]]></content:encoded></item><item><title><![CDATA[RESTful API Example with Spring Data REST, JPA and Hibernate Many To Many]]></title><description><![CDATA[<p>This tutorial walks you through the process of creating a RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA and Hibernate Many To Many Relationship and MySQL.</p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 1.7+</li>
+<li>Maven 3+</li>
+<li>MySQL Server 5.6+</li>
+</ul>
+
+<h3 id="stack">Stack</h3>
+
+<ul>
+<li>Spring Boot</li>
+<li>Spring Data REST</li>
+<li>Spring Data</li></ul>]]></description><link>http://hellokoding.com/restful-api-example-with-spring-boot-spring-data-rest-spring-data-jpa-many-to-many-relationship-and-mysql/</link><guid isPermaLink="false">0878fe69-9f33-4c15-ae4d-7c8f6aeca459</guid><category><![CDATA[RESTful API]]></category><category><![CDATA[Spring Boot]]></category><dc:creator><![CDATA[Giau Ngo]]></dc:creator><pubDate>Thu, 13 Jul 2017 23:54:08 GMT</pubDate><media:content url="http://hellokoding.com/content/images/2019/01/restful-spring-data-rest-2.png" medium="image"/><content:encoded><![CDATA[<img src="http://hellokoding.com/content/images/2019/01/restful-spring-data-rest-2.png" alt="RESTful API Example with Spring Data REST, JPA and Hibernate Many To Many"><p>This tutorial walks you through the process of creating a RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA and Hibernate Many To Many Relationship and MySQL.</p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 1.7+</li>
+<li>Maven 3+</li>
+<li>MySQL Server 5.6+</li>
+</ul>
+
+<h3 id="stack">Stack</h3>
+
+<ul>
+<li>Spring Boot</li>
+<li>Spring Data REST</li>
+<li>Spring Data JPA</li>
+<li>MySQL</li>
+</ul>
+
+<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+
+<h3 id="projectstructure">Project structure</h3>
+
+<pre><code class="language-bash">├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding
+│       │           └── restfulapi
+│       │               ├── Application.java
+│       │               ├── model
+│       │               │   ├── Author.java
+│       │               │   └── Book.java
+│       │               └── repository
+│       │                   ├── AuthorRepository.java
+│       │                   └── BookRepository.java
+│       └── resources
+│           └── application.properties
+└── pom.xml
+</code></pre>
+
+<h3 id="projectdependencies">Project dependencies</h3>
+
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-many-to-many/pom.xml">
+</code></pre>
+
+<h2 id="definejpaentitiesandrepositories">Define JPA Entities and Repositories</h2>
+
+<h3 id="createdomainobjects">Create domain objects</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-many-to-many/src/main/java/com/hellokoding/restfulapi/model/Book.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-many-to-many/src/main/java/com/hellokoding/restfulapi/model/Author.java">
+</code></pre>
+
+<h3 id="springdatarepository">Spring Data Repository</h3>
+
+<p>Spring Data JPA and Spring Data Rest will auto create some helper methods and RESTful APIs. For this example, we only need to extend JpaRepository</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-many-to-many/src/main/java/com/hellokoding/restfulapi/repository/BookRepository.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-many-to-many/src/main/java/com/hellokoding/restfulapi/repository/AuthorRepository.java">
+</code></pre>
+
+<h2 id="configandrun">Config and Run</h2>
+
+<h3 id="applicationproperties">Application Properties</h3>
+
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-many-to-many/src/main/resources/application.properties">
+</code></pre>
+
+<h3 id="runtheapplication">Run the application</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-many-to-many/src/main/java/com/hellokoding/restfulapi/Application.java">
+</code></pre>
+
+<p>Type <code>mvn clean spring-boot:run</code> on terminal at the project root directory to run</p>
+
+<h3 id="testtheapplication">Test the application</h3>
+
+<p>Create a new book  </p>
+
+<pre><code class="language-bash">curl -i -X POST -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding\", \"description\": \"Simple coding examples and tutorials\"}" http://localhost:8080/books  
+</code></pre>
+
+<p>Create a new author  </p>
+
+<pre><code class="language-bash">curl -i -X POST -H "Content-Type:application/json" -d "{\"name\":\"Author 1\"}" http://localhost:8080/authors  
+</code></pre>
+
+<p>Assign the author to the book  </p>
+
+<pre><code class="language-bash">curl -i -X PUT -H "Content-Type:text/uri-list" -d "http://localhost:8080/authors/1" http://localhost:8080/books/1/authors  
+</code></pre>
+
+<h3 id="sourcecode">Source code</h3>
+
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springdatarest-mysql-many-to-many">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springdatarest-mysql-many-to-many</a></p>
+
+<h3 id="seealso">See also</h3>
+
+<p><a href="https://hellokoding.com/handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/">Handling Circular Reference of JPA/Hibernate Entity Bidirectional Relationships with Jackson JsonIgnoreProperties</a></p>]]></content:encoded></item><item><title><![CDATA[RESTful API Example with Spring Data REST,  JPA and Hibernate One to Many]]></title><description><![CDATA[<p>This tutorial will walk you through the steps of creating a RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA and Hibernate One To Many Relationship and MySQL.</p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 1.7+</li>
+<li>Maven 3+</li>
+<li>MySQL Server 5.6+</li>
+</ul>
+
+<h3 id="stack">Stack</h3>
+
+<ul>
+<li>Spring Boot</li>
+<li>Spring Data REST</li>
+<li>Spring</li></ul>]]></description><link>http://hellokoding.com/restful-api-example-with-spring-boot-spring-data-rest-one-to-many-relationship-and-mysql/</link><guid isPermaLink="false">20ee456c-6264-419c-a36c-356b84b25dcd</guid><category><![CDATA[RESTful API]]></category><category><![CDATA[Spring Boot]]></category><dc:creator><![CDATA[Giau Ngo]]></dc:creator><pubDate>Sun, 09 Jul 2017 00:41:58 GMT</pubDate><media:content url="http://hellokoding.com/content/images/2019/01/restful-spring-data-rest-1.png" medium="image"/><content:encoded><![CDATA[<img src="http://hellokoding.com/content/images/2019/01/restful-spring-data-rest-1.png" alt="RESTful API Example with Spring Data REST,  JPA and Hibernate One to Many"><p>This tutorial will walk you through the steps of creating a RESTful API Example with Spring Boot, Spring Data REST, Spring Data JPA and Hibernate One To Many Relationship and MySQL.</p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 1.7+</li>
+<li>Maven 3+</li>
+<li>MySQL Server 5.6+</li>
+</ul>
+
+<h3 id="stack">Stack</h3>
+
+<ul>
+<li>Spring Boot</li>
+<li>Spring Data REST</li>
+<li>Spring Data JPA</li>
+<li>MySQL</li>
+</ul>
+
+<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+
+<h3 id="projectstructure">Project structure</h3>
+
+<pre><code class="language-bash">├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding
+│       │           └── restfulapi
+│       │               ├── Application.java
+│       │               ├── model
+│       │               │   ├── Book.java
+│       │               │   └── BookCategory.java
+│       │               └── repository
+│       │                   ├── BookCategoryRepository.java
+│       │                   └── BookRepository.java
+│       └── resources
+│           └── application.properties
+└── pom.xml
+</code></pre>
+
+<h3 id="projectdependencies">Project dependencies</h3>
+
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-one-to-many/pom.xml">
+</code></pre>
+
+<h2 id="definejpaentityandrepository">Define JPA Entity and Repository</h2>
+
+<h3 id="createdomainobjects">Create domain objects</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-one-to-many/src/main/java/com/hellokoding/restfulapi/model/BookCategory.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-one-to-many/src/main/java/com/hellokoding/restfulapi/model/Book.java">
+</code></pre>
+
+<h3 id="springdatarepository">Spring Data Repository</h3>
+
+<p>Spring Data JPA and Spring Data Rest will auto create some helper methods and RESTful APIs. For this example, we only need to extend JpaRepository</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-one-to-many/src/main/java/com/hellokoding/restfulapi/repository/BookCategoryRepository.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-one-to-many/src/main/java/com/hellokoding/restfulapi/repository/BookRepository.java">
+</code></pre>
+
+<h2 id="configandrun">Config and Run</h2>
+
+<h3 id="applicationproperties">Application Properties</h3>
+
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-one-to-many/src/main/resources/application.properties">
+</code></pre>
+
+<h3 id="runtheapplication">Run the application</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-one-to-many/src/main/java/com/hellokoding/restfulapi/Application.java">
+</code></pre>
+
+<p>Type <code>mvn clean spring-boot:run</code> on terminal at the project root directory to run</p>
+
+<h3 id="testtheapplication">Test the application</h3>
+
+<p>Create a new category  </p>
+
+<pre><code class="language-bash">curl -i -X POST -H "Content-Type:application/json" -d "{\"name\":\"Cat 1\"}" http://localhost:8080/bookCategories  
+</code></pre>
+
+<p>Create a new book  </p>
+
+<pre><code class="language-bash">curl -i -X POST -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding\", \"description\": \"Simple coding examples and tutorials\"}" http://localhost:8080/books  
+</code></pre>
+
+<p>Assign book to category  </p>
+
+<pre><code class="language-bash">curl -i -X PUT -H "Content-Type:text/uri-list" -d "http://localhost:8080/bookCategories/1" http://localhost:8080/books/1/bookCategory  
+</code></pre>
+
+<h3 id="sourcecode">Source code</h3>
+
+<p><a href="https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-one-to-many">https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-one-to-many</a></p>
+
+<h3 id="seealso">See also</h3>
+
+<p><a href="https://hellokoding.com/handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/">Handling Circular Reference of JPA/Hibernate Entity Bidirectional Relationships with Jackson JsonIgnoreProperties</a></p>]]></content:encoded></item><item><title><![CDATA[RESTful API Example with Spring Data REST]]></title><description><![CDATA[<p>This tutorial will walk you through the steps of creating a RESTful API Example with Spring Boot, Spring Data REST, JPA, Hibernate, MySQL and Docker.</p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 8+ or OpenJDK 8+</li>
+<li>Maven 3+</li>
+<li>MySQL Server 5+ or Docker CE 18+</li>
+</ul>
+
+<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+
+<h3 id="projectstructure">Project structure</h3>
+
+<pre><code class="language-bash">├── src</code></pre>]]></description><link>http://hellokoding.com/restful-api-example-with-spring-boot-spring-data-rest-and-mysql/</link><guid isPermaLink="false">90c55194-2e0a-4c24-9bb4-f9bc1809520d</guid><category><![CDATA[RESTful API]]></category><category><![CDATA[Spring Boot]]></category><dc:creator><![CDATA[Giau Ngo]]></dc:creator><pubDate>Sat, 24 Jun 2017 07:19:55 GMT</pubDate><media:content url="http://hellokoding.com/content/images/2019/01/restful-spring-data-rest.png" medium="image"/><content:encoded><![CDATA[<img src="http://hellokoding.com/content/images/2019/01/restful-spring-data-rest.png" alt="RESTful API Example with Spring Data REST"><p>This tutorial will walk you through the steps of creating a RESTful API Example with Spring Boot, Spring Data REST, JPA, Hibernate, MySQL and Docker.</p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 8+ or OpenJDK 8+</li>
+<li>Maven 3+</li>
+<li>MySQL Server 5+ or Docker CE 18+</li>
+</ul>
+
+<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+
+<h3 id="projectstructure">Project structure</h3>
+
+<pre><code class="language-bash">├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding
+│       │           └── springdatarest
+│       │               ├── book
+│       │               │   ├── Book.java
+│       │               │   └── BookRepository.java
+│       │               └── Application.java
+│       └── resources
+│           └── application.properties
+├── Dockerfile
+├── docker-compose.yml
+└── pom.xml
+</code></pre>
+
+<h3 id="projectdependencies">Project dependencies</h3>
+
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-single/pom.xml">
+</code></pre>
+
+<h2 id="definejpaentityandrepository">Define JPA Entity and Repository</h2>
+
+<h3 id="definejpaentity">Define JPA Entity</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-single/src/main/java/com/hellokoding/springdatarest/book/Book.java">
+</code></pre>
+
+<h3 id="definespringdatarepository">Define Spring Data Repository</h3>
+
+<p>Spring Data Rest will auto create RESTful APIs based on domain model and repository, all you have to do in this example is to extend <code>JpaRepository</code></p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-single/src/main/java/com/hellokoding/springdatarest/book/BookRepository.java">
+</code></pre>
+
+<h2 id="configandrun">Config and Run</h2>
+
+<h3 id="applicationconfigurations">Application Configurations</h3>
+
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-single/src/main/resources/application.properties">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-single/src/main/java/com/hellokoding/springdatarest/Application.java">
+</code></pre>
+
+<h3 id="runwithjdkopenjdkmavenandmysqlserverlocal">Run with JDK/OpenJDK, Maven and MySQL Server local</h3>
+
+<p>Update <code>hk-mysql</code> on <code>application.properties</code> to <code>localhost</code> and type the below command at the project root directory</p>
+
+<pre><code>mvn clean spring-boot:run  
+</code></pre>
+
+<h3 id="runwithdocker">Run with Docker</h3>
+
+<p>Prepare Dockerfile for Java/Spring Boot application and docker-compose.yml for MySQL Server</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-single/Dockerfile">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springdatarest-mysql-single/docker-compose.yml">
+</code></pre>
+
+<p>Type the below command at the project root directory, make sure your local Docker is running</p>
+
+<pre><code>docker-compose up  
+</code></pre>
+
+<p>Access to MySQL Server docker container by issuing below bash command and key in <code>hellokoding</code> on Enter password:</p>
+
+<pre><code class="language-bash">docker exec -it hk-mysql mysql -p
+</code></pre>
+
+<p>Query schema and data created by JPA/Hibernate based on your mapping</p>
+
+<p><img src="http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-21-at-10-56-49-PM.png" alt="RESTful API Example with Spring Data REST"></p>
+
+<p>Query the data</p>
+
+<p><img src="http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-21-at-11-00-43-PM.png" alt="RESTful API Example with Spring Data REST"></p>
+
+<p><code>Book</code> data should be empty now. Let create it with the exposed RESTful APIs.</p>
+
+<h2 id="testyourrestfulapiswithcurl">Test your RESTful APIs with <code>curl</code></h2>
+
+<p>Create some new books</p>
+
+<pre><code class="language-bash">curl -i -X POST -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding\", \"description\": \"Simple coding examples and tutorials\"}" http://localhost:8080/books
+</code></pre>
+
+<pre><code class="language-bash">curl -i -X POST -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding 2\", \"description\": \"Simple coding examples and tutorials 2\"}" http://localhost:8080/books
+</code></pre>
+
+<p>Find all books</p>
+
+<pre><code class="language-bash">curl http://localhost:8080/books
+</code></pre>
+
+<p>Find book with id=2</p>
+
+<pre><code class="language-bash">curl curl http://localhost:8080/books/2
+</code></pre>
+
+<p>Update book id 2</p>
+
+<pre><code class="language-bash">curl -i -X PATCH -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding 2 updated\"}" http://localhost:8080/books/2
+</code></pre>
+
+<p>Replace book id 2</p>
+
+<pre><code class="language-bash">curl -i -X PUT -H "Content-Type:application/json" -d "{\"title\" : \"Hello Koding 2 replaced\"}" http://localhost:8080/books/2
+</code></pre>
+
+<p>Delete book id 2</p>
+
+<pre><code class="language-bash">curl -i -X DELETE http://localhost:8080/books/2
+</code></pre>
+
+<h3 id="sourcecode">Source code</h3>
+
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springdatarest-mysql-single">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springdatarest-mysql-single</a></p>
+
+<h3 id="seealso">See also</h3>
+
+<p><a href="https://hellokoding.com/handling-circular-reference-of-jpa-hibernate-bidirectional-entity-relationships-with-jackson-jsonignoreproperties/">Handling Circular Reference of JPA/Hibernate Entity Bidirectional Relationships with Jackson JsonIgnoreProperties</a>
+</p>]]></content:encoded></item><item><title><![CDATA[Spring Boot VueJS Example with TodoMVC, REST APIs, JPA, Hibernate and MySQL]]></title><description><![CDATA[<p>This tutorial will walk you through the steps of building a full stack Spring Boot VueJS Example with TodoMVC, REST APIs, JPA, Hibernate and MySQL</p>
+
+<h3 id="whatyoullbuild">What you'll build</h3>
+
+<p><img src="http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-23-at-12-50-59-AM.png" alt=""></p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 8+ or OpenJDK 8+</li>
+<li>Maven 3+</li>
+<li>MySQL Server 5+ or Docker CE 18+</li>
+</ul>
+
+<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>]]></description><link>http://hellokoding.com/build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/</link><guid isPermaLink="false">b02b5079-5dea-4189-bce5-609cc3513c89</guid><category><![CDATA[RESTful API]]></category><category><![CDATA[Spring Boot]]></category><dc:creator><![CDATA[Giau Ngo]]></dc:creator><pubDate>Tue, 22 Jan 2019 17:06:44 GMT</pubDate><media:content url="http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-23-at-12-50-59-AM-1.png" medium="image"/><content:encoded><![CDATA[<img src="http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-23-at-12-50-59-AM-1.png" alt="Spring Boot VueJS Example with TodoMVC, REST APIs, JPA, Hibernate and MySQL"><p>This tutorial will walk you through the steps of building a full stack Spring Boot VueJS Example with TodoMVC, REST APIs, JPA, Hibernate and MySQL</p>
+
+<h3 id="whatyoullbuild">What you'll build</h3>
+
+<p><img src="http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-23-at-12-50-59-AM.png" alt="Spring Boot VueJS Example with TodoMVC, REST APIs, JPA, Hibernate and MySQL"></p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 8+ or OpenJDK 8+</li>
+<li>Maven 3+</li>
+<li>MySQL Server 5+ or Docker CE 18+</li>
+</ul>
+
+<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+
+<h3 id="projectstructure">Project structure</h3>
+
+<pre><code class="language-bash">├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding
+│       │           └── springboot
+│       │               └── fullstack
+│       │                   ├── todo
+│       │                   │   ├── Todo.java
+│       │                   │   ├── TodoAPI.java
+│       │                   │   ├── TodoController.java
+│       │                   │   ├── TodoRepository.java
+│       │                   │   └── TodoService.java
+│       │                   └── Application.java
+│       └── resources
+│           ├── static
+│           │   ├── todo.css
+│           │   └── todo.js
+│           ├── templates
+│           │   └── todo.html
+│           └── application.properties
+├── Dockerfile
+├── docker-compose.yml
+└── pom.xml
+</code></pre>
+
+<h3 id="projectdependencies">Project dependencies</h3>
+
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-todomvc-mysql-vuejs/pom.xml">
+</code></pre>
+
+<h2 id="definejpaentityrepositoryandservice">Define JPA Entity, Repository and Service</h2>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-todomvc-mysql-vuejs/src/main/java/com/hellokoding/springboot/fullstack/todo/Todo.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-todomvc-mysql-vuejs/src/main/java/com/hellokoding/springboot/fullstack/todo/TodoRepository.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-todomvc-mysql-vuejs/src/main/java/com/hellokoding/springboot/fullstack/todo/TodoService.java">
+</code></pre>
+
+<h2 id="definerestapicontrollerandviewtemplate">Define REST API, Controller and View Template</h2>
+
+<h3 id="restapiandcontroller">REST API and Controller</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-todomvc-mysql-vuejs/src/main/java/com/hellokoding/springboot/fullstack/todo/TodoAPI.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-todomvc-mysql-vuejs/src/main/java/com/hellokoding/springboot/fullstack/todo/TodoController.java">
+</code></pre>
+
+<h3 id="freemarkerhtmlviewtemplate">FreeMarker/HTML View Template</h3>
+
+<pre><code class="language-html embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-todomvc-mysql-vuejs/src/main/resources/templates/todo.html">
+</code></pre>
+
+<h3 id="staticfiles">Static Files</h3>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-todomvc-mysql-vuejs/src/main/resources/static/todo.js">
+</code></pre>
+
+<pre><code class="language-css embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-todomvc-mysql-vuejs/src/main/resources/static/todo.css">
+</code></pre>
+
+<h2 id="configandrun">Config and Run</h2>
+
+<h3 id="applicationconfigurations">Application Configurations</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-todomvc-mysql-vuejs/src/main/java/com/hellokoding/springboot/fullstack/Application.java">
+</code></pre>
+
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-todomvc-mysql-vuejs/src/main/resources/application.properties">
+</code></pre>
+
+<p><code>hk-mysql</code> refers to Docker Compose service defined in the below <code>docker-compose.yml</code> file</p>
+
+<p><code>spring.jpa.hibernate.ddl-auto=create</code> allows JPA/Hibernate auto create database and table schema for you</p>
+
+<p><big></big></p>
+
+<p><pre>
+On production environment, you may like to disable the DDL Auto feature by using spring.jpa.hibernate.ddl-auto=validate or spring.jpa.hibernate.ddl-auto=none (default). Check out this example as one of the approaches
+<a href="http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/">Flyway Example of Database Migration/Evolution with Spring Boot, JPA and Hibernate</a>
+</pre></p>
+
+<h3 id="runwithdocker">Run with Docker</h3>
+
+<p>Prepare <code>Dockerfile</code> for Java/Spring Boot application and <code>docker-compose.yml</code> for MySQL Server</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-todomvc-mysql-vuejs/Dockerfile">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-todomvc-mysql-vuejs/docker-compose.yml">
+</code></pre>
+
+<p>Type the below command at the project root directory, make sure your local Docker is running</p>
+
+<pre><code>docker-compose up
+</code></pre>
+
+<h3 id="runwithmavenandmysqlserverlocal">Run with Maven and MySQL Server local</h3>
+
+<p>Update <code>hk-mysql</code> on <a href="http://hellokoding.com/build-a-full-stack-todomvc-web-app-and-rest-api-service-with-spring-boot-jpa-hibernate-mysql-freemarker-vuejs-and-docker/#applicationconfigurations">application.properties</a> to <code>localhost</code> and type the below command at the project root directory</p>
+
+<pre><code>mvn clean spring-boot:run
+</code></pre>
+
+<h3 id="testingtime">Testing time</h3>
+
+<p>Access to <code>localhost:8080</code> to see the app</p>
+
+<h3 id="sourcecode">Source code</h3>
+
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-todomvc-mysql-vuejs">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-todomvc-mysql-vuejs</a></p>
+
+<h3 id="references">References</h3>
+
+<ul>
+<li><a href="https://vuejs.org/v2/examples/todomvc.html">https://vuejs.org/v2/examples/todomvc.html</a></li>
+<li><a href="https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html">https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html</a></li>
+</ul>]]></content:encoded></item><item><title><![CDATA[Spring Boot REST API Documentation with Swagger and SpringFox]]></title><description><![CDATA[<p>In this tutorial, you will learn using Swagger and SpringFox to create REST API Documentation in Spring Boot. Let's reuse the code base of <a href="https://hellokoding.com/mapping-jpa-hibernate-entity-and-dto-with-mapstruct/">Mapping JPA/Hibernate Entity and DTO with MapStruct</a></p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 8+ or OpenJDK 8+</li>
+<li>Maven 3+</li>
+<li>MySQL Server 5+ or Docker CE 18+</li>
+</ul>
+
+<h2 id="initprojectstructureandswaggerdependencies">Init</h2>]]></description><link>http://hellokoding.com/spring-boot-restful-api-documentation-with-swagger-and-springfox/</link><guid isPermaLink="false">a9ab9b5d-a008-42d1-97a4-d0f3812170ba</guid><category><![CDATA[RESTful API]]></category><category><![CDATA[Spring Boot]]></category><dc:creator><![CDATA[Giau Ngo]]></dc:creator><pubDate>Sat, 02 Feb 2019 05:54:28 GMT</pubDate><media:content url="http://hellokoding.com/content/images/2019/02/restful-api-swagger.png" medium="image"/><content:encoded><![CDATA[<img src="http://hellokoding.com/content/images/2019/02/restful-api-swagger.png" alt="Spring Boot REST API Documentation with Swagger and SpringFox"><p>In this tutorial, you will learn using Swagger and SpringFox to create REST API Documentation in Spring Boot. Let's reuse the code base of <a href="https://hellokoding.com/mapping-jpa-hibernate-entity-and-dto-with-mapstruct/">Mapping JPA/Hibernate Entity and DTO with MapStruct</a></p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 8+ or OpenJDK 8+</li>
+<li>Maven 3+</li>
+<li>MySQL Server 5+ or Docker CE 18+</li>
+</ul>
+
+<h2 id="initprojectstructureandswaggerdependencies">Init project structure and Swagger dependencies</h2>
+
+<h3 id="projectstructure">Project structure</h3>
+
+<pre><code class="language-bash">├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding
+│       │           └── springboot
+│       │               └── restful
+│       │                   ├── product
+│       │                   │   ├── Product.java
+│       │                   │   ├── ProductAPI.java
+│       │                   │   ├── ProductDTO.java
+│       │                   │   ├── ProductMapper.java
+│       │                   │   ├── ProductRespository.java
+│       │                   │   └── ProductService.java
+│       │                   └── Application.java
+│       └── resources
+│           └── application.properties
+├── Dockerfile
+├── docker-compose.yml
+└── pom.xml
+</code></pre>
+
+<h3 id="settingupswaggerwithspringfox">Setting up Swagger with SpringFox</h3>
+
+<p>Add Swagger and Swagger UI dependency into <code>pom.xml</code> . </p>
+
+<pre><code class="language-xml">&lt;properties&gt;  
+    &lt;io.springfox.version&gt;2.7.0&lt;/io.springfox.version&gt;
+&lt;/properties&gt;
+
+...
+
+&lt;dependency&gt;  
+    &lt;groupId&gt;io.springfox&lt;/groupId&gt;
+    &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;
+    &lt;version&gt;${io.springfox.version}&lt;/version&gt;
+&lt;/dependency&gt;
+
+&lt;dependency&gt;  
+    &lt;groupId&gt;io.springfox&lt;/groupId&gt;
+    &lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;
+    &lt;version&gt;${io.springfox.version}&lt;/version&gt;
+&lt;/dependency&gt;
+
+...
+</code></pre>
+
+<h2 id="configandrun">Config and Run</h2>
+
+<h3 id="configureswagger">Configure Swagger</h3>
+
+<p>To use Swagger you have to inject <code>@EnableSwagger2</code> annotation and declare a <code>Docket</code> bean</p>
+
+<pre><code class="language-java">@Bean
+public Docket swagger() {  
+    return new Docket(DocumentationType.SWAGGER_2)
+        .select()
+        .apis(RequestHandlerSelectors.any())
+        .paths(PathSelectors.any())
+        .build();
+}
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-swagger/src/main/java/com/hellokoding/springboot/restful/Application.java">
+</code></pre>
+
+<h3 id="runwithdocker">Run with Docker</h3>
+
+<p>Prepare Dockerfile for Java/Spring Boot application and docker-compose.yml for MySQL Server</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-swagger/Dockerfile">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-swagger/docker-compose.yml">
+</code></pre>
+
+<p>Type the below command at the project root directory, make sure your local Docker is running</p>
+
+<pre><code>docker-compose up  
+</code></pre>
+
+<h3 id="runwithjdkopenjdkmavenandmysqlserverlocal">Run with JDK/OpenJDK, Maven and MySQL Server local</h3>
+
+<p>Update <code>hk-mysql</code> on <code>application.properties</code> to <code>localhost</code> and type the below command at the project root directory</p>
+
+<pre><code>mvn clean spring-boot:run  
+</code></pre>
+
+<h2 id="testingtine">Testing tine</h2>
+
+<p>Access to <code>http://localhost:8080/swagger-ui.html</code> to see REST API Documentation by Swagger UI</p>
+
+<p><img src="http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-02-at-1-40-09-PM.png" alt="Spring Boot REST API Documentation with Swagger and SpringFox"></p>
+
+<p>Try to make a POST to <code>/api/v1/products</code> to create a new product</p>
+
+<p><img src="http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-02-at-1-45-29-PM.png" alt="Spring Boot REST API Documentation with Swagger and SpringFox"></p>
+
+<p>Try a GET request to <code>/api/v1/products</code> to get product list</p>
+
+<p><img src="http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-02-at-2-07-57-PM.png" alt="Spring Boot REST API Documentation with Swagger and SpringFox"></p>
+
+<h3 id="sourcecode">Source code</h3>
+
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/restful-api/springboot-swagger">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/restful-api/springboot-swagger</a></p>]]></content:encoded></item><item><title><![CDATA[Spring Boot CRUD Example with RESTful APIs,  JPA, Hibernate, MySQL and VueJS]]></title><description><![CDATA[<p>This tutorial will walk you through the steps of building a full stack CRUD web app and RESTful APIs web services example with Spring Boot, JPA/Hibernate, MySQL, VueJS and Docker.</p>
+
+<h3 id="whatyoullbuild">What you'll build</h3>
+
+<p><img src="http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-24-at-11-54-30-PM.png" alt=""></p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 8+ or OpenJDK 8+</li>
+<li>Maven 3+</li>
+<li>MySQL Server 5+ or Docker CE</li></ul>]]></description><link>http://hellokoding.com/full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/</link><guid isPermaLink="false">ccced8f1-9ede-4446-b7f7-9d51c96b0bca</guid><category><![CDATA[RESTful API]]></category><category><![CDATA[Spring Boot]]></category><dc:creator><![CDATA[Giau Ngo]]></dc:creator><pubDate>Thu, 24 Jan 2019 16:02:30 GMT</pubDate><media:content url="http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-25-at-12-07-49-AM-1.png" medium="image"/><content:encoded><![CDATA[<img src="http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-25-at-12-07-49-AM-1.png" alt="Spring Boot CRUD Example with RESTful APIs,  JPA, Hibernate, MySQL and VueJS"><p>This tutorial will walk you through the steps of building a full stack CRUD web app and RESTful APIs web services example with Spring Boot, JPA/Hibernate, MySQL, VueJS and Docker.</p>
+
+<h3 id="whatyoullbuild">What you'll build</h3>
+
+<p><img src="http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-24-at-11-54-30-PM.png" alt="Spring Boot CRUD Example with RESTful APIs,  JPA, Hibernate, MySQL and VueJS"></p>
+
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 8+ or OpenJDK 8+</li>
+<li>Maven 3+</li>
+<li>MySQL Server 5+ or Docker CE 18+</li>
+</ul>
+
+<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+
+<h3 id="projectstructure">Project structure</h3>
+
+<pre><code class="language-bash">├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding
+│       │           └── springboot
+│       │               └── restful
+│       │                   ├── product
+│       │                   │   ├── Product.java
+│       │                   │   ├── ProductAPI.java
+│       │                   │   ├── ProductController.java
+│       │                   │   ├── ProductRespository.java
+│       │                   │   └── ProductService.java
+│       │                   └── Application.java
+│       └── resources
+│           ├── static
+│           │   ├── products.css
+│           │   └── products.js
+│           ├── templates
+│           │   └── products.html
+│           └── application.properties
+├── Dockerfile
+├── docker-compose.yml
+└── pom.xml
+</code></pre>
+
+<h3 id="projectdependencies">Project dependencies</h3>
+
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/pom.xml">
+</code></pre>
+
+<h2 id="definejpaentityrepositoryservicerestapisandcontroller">Define JPA Entity, Repository, Service, REST APIs and Controller</h2>
+
+<h3 id="jpaentityrepositoryandservice">JPA Entity, Repository and Service</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/src/main/java/com/hellokoding/springboot/restful/product/Product.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/src/main/java/com/hellokoding/springboot/restful/product/ProductRespository.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/src/main/java/com/hellokoding/springboot/restful/product/ProductService.java">
+</code></pre>
+
+<h3 id="restapisandcontroller">REST APIs and Controller</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/src/main/java/com/hellokoding/springboot/restful/product/ProductAPI.java">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/src/main/java/com/hellokoding/springboot/restful/product/ProductController.java">
+</code></pre>
+
+<h2 id="defineviewtemplateandconfigurations">Define View Template and Configurations</h2>
+
+<h3 id="freemarkerhtmlviewtemplate">FreeMarker/HTML View Template</h3>
+
+<pre><code class="language-html embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/src/main/resources/templates/products.html">
+</code></pre>
+
+<h3 id="staticfiles">Static Files</h3>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/src/main/resources/static/products.js">
+</code></pre>
+
+<pre><code class="language-css embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/src/main/resources/static/products.css">
+</code></pre>
+
+<h3 id="applicationconfigurations">Application Configurations</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/src/main/java/com/hellokoding/springboot/restful/Application.java">
+</code></pre>
+
+<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/src/main/resources/application.properties">
+</code></pre>
+
+<p><code>hk-mysql</code> refers to Docker Compose service defined in the below <code>docker-compose.yml</code> file</p>
+
+<p><code>spring.jpa.hibernate.ddl-auto=create</code> allows JPA/Hibernate auto create database and table schema for you</p>
+
+<p><big></big></p>
+
+<p><pre>
+On production environment, you may like to disable the DDL Auto feature by using spring.jpa.hibernate.ddl-auto=validate or spring.jpa.hibernate.ddl-auto=none (default). Check out this example as one of the approaches
+<a href="http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/">Flyway Example of Database Migration/Evolution with Spring Boot, JPA and Hibernate</a>
+</pre></p>
+
+<h2 id="runtheapplication">Run the application</h2>
+
+<h3 id="runwithdocker">Run with Docker</h3>
+
+<p>Prepare Dockerfile for Java/Spring Boot application and <code>docker-compose.yml</code> for MySQL Server</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/Dockerfile">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/docker-compose.yml">
+</code></pre>
+
+<p>Type the below command at the project root directory, make sure your local Docker is running</p>
+
+<pre><code>docker-compose up
+</code></pre>
+
+<h3 id="runwithjdkopenjdkmavenandmysqlserverlocal">Run with JDK/OpenJDK, Maven and MySQL Server local</h3>
+
+<p>Update <code>hk-mysql</code> on <a href="http://hellokoding.com/full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/#applicationconfigurations">application.properties</a> to <code>localhost</code> and type the below command at the project root directory</p>
+
+<pre><code>mvn clean spring-boot:run
+</code></pre>
+
+<h3 id="testingtime">Testing time</h3>
+
+<p>Access to <code>localhost:8080</code> and start playing around with the app</p>
+
+<h3 id="sourcecode">Source code</h3>
+
+<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-crud-mysql-vuejs">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-crud-mysql-vuejs</a></p>
+
+<h3 id="references">References</h3>
+
+<ul>
+<li><a href="https://codepen.io/mystrader/pen/YOdepy">https://codepen.io/mystrader/pen/YOdepy</a></li>
+<li><a href="https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html">https://vuejs.org/v2/cookbook/using-axios-to-consume-apis.html</a></li>
+</ul>]]></content:encoded></item></channel></rss>

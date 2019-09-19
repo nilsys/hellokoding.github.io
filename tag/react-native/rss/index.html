@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[React Native - Hello Koding - Practical Coding Courses, Tutorials and Examples]]></title><description><![CDATA[Practical coding courses, tutorials and examples series of Data Structure, Algorithm Interview Questions, Spring, Java, JPA/Hibernate and REST API]]></description><link>http://hellokoding.com/</link><generator>Ghost 0.9</generator><lastBuildDate>Thu, 19 Sep 2019 13:35:28 GMT</lastBuildDate><atom:link href="http://hellokoding.com/tag/react-native/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Hacker News App with React Native]]></title><description><![CDATA[<p>This post walks you through the process of creating a Hacker News App for iOS and Android devices with React Native. <br>
+<big></big></p>
+
+<p><pre>
+If you're new to React Native or CSS Flexbox, it'd be best to walk your way through:
+<a href="https://facebook.github.io/react-native/docs/getting-started.html">Getting Started React Native</a>
+<a href="https://facebook.github.io/react-native/docs/network.html">Networking: fetch, async and await</a>
+<a href="https://facebook.github.io/react-native/docs/flexbox.html">Layout with Flexbox</a></pre></p>]]></description><link>http://hellokoding.com/hackernewsapp-with-reactnative/</link><guid isPermaLink="false">6c96ed94-f7be-4e4c-a998-34a18ae40396</guid><category><![CDATA[React Native]]></category><dc:creator><![CDATA[Giau Ngo]]></dc:creator><pubDate>Wed, 27 Jul 2016 07:41:12 GMT</pubDate><media:content url="http://hellokoding.com/content/images/2017/03/ReactNative-1.png" medium="image"/><content:encoded><![CDATA[<img src="http://hellokoding.com/content/images/2017/03/ReactNative-1.png" alt="Hacker News App with React Native"><p>This post walks you through the process of creating a Hacker News App for iOS and Android devices with React Native. <br>
+<big></big></p>
+
+<p><pre>
+If you're new to React Native or CSS Flexbox, it'd be best to walk your way through:
+<a href="https://facebook.github.io/react-native/docs/getting-started.html">Getting Started React Native</a>
+<a href="https://facebook.github.io/react-native/docs/network.html">Networking: fetch, async and await</a>
+<a href="https://facebook.github.io/react-native/docs/flexbox.html">Layout with Flexbox</a>
+</pre></p>
+
+<h2 id="whatyoullneed">What you'll need</h2>
+
+<ul>
+<li>MacOS, Xcode</li>
+<li>NodeJS</li>
+<li>NPM</li>
+<li>React Native Package Manager</li>
+<li>React Native 0.26</li>
+</ul>
+
+<h2 id="stack">Stack</h2>
+
+<ul>
+<li>ES6, ES7</li>
+<li>React Native</li>
+<li>CSS Flexbox</li>
+</ul>
+
+<h2 id="projectstructure">Project structure</h2>
+
+<pre><code>├── android
+├── ios
+├── Dashboard.js
+├── HackerNewsApi.js
+├── PostWebView.js
+├── PostsListView.js
+├── index.android.js
+├── index.ios.js
+└── package.json
+</code></pre>
+
+<h2 id="projectdependencies">Project dependencies</h2>
+
+<pre><code class="language-json embedfile-https://github.com/hellokoding/hackernewsapp-reactnative/blob/master/package.json">
+</code></pre>
+
+<h2 id="letsstart">Let's start</h2>
+
+<h3 id="initproject">Init project</h3>
+
+<pre><code>react-native init HackerNewsApp  
+cd HackerNewsApp
+</code></pre>
+
+<h3 id="hackernewsapishttpsgithubcomhackernewsapi"><a href="https://github.com/HackerNews/API">Hacker News APIs</a></h3>
+
+<p>We use some <a href="https://github.com/HackerNews/API">public APIs</a> of Hacker News  </p>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/hackernewsapp-reactnative/blob/master/HackerNewsApi.js">
+</code></pre>
+
+<h3 id="webview">Web View</h3>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/hackernewsapp-reactnative/blob/master/PostWebView.js">
+</code></pre>
+
+<h3 id="listview">List View</h3>
+
+<p>Install <a href="https://github.com/FaridSafi/react-native-gifted-listview">GiftedListView</a> and <a href="https://github.com/TylerLH/react-native-timeago">react-native-timeago</a>  </p>
+
+<pre><code>npm install react-native-gifted-listview --save  
+npm install react-native-timeago --save
+</code></pre>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/hackernewsapp-reactnative/blob/master/PostsListView.js">
+</code></pre>
+
+<h3 id="dashboard">Dashboard</h3>
+
+<p>Install <a href="https://github.com/exponentjs/react-native-tab-navigator">react-native-tab-navigator</a> and <a href="https://github.com/oblador/react-native-vector-icons">react-native-vector-icons</a></p>
+
+<pre><code>npm install react-native-tab-navigator --save  
+npm install react-native-vector-icons --save  
+npm install rnpm -g  
+rnpm link
+</code></pre>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/hackernewsapp-reactnative/blob/master/Dashboard.js">
+</code></pre>
+
+<h3 id="finalpiece">Final piece</h3>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/hackernewsapp-reactnative/blob/master/index.ios.js">
+</code></pre>
+
+<h3 id="run">Run</h3>
+
+<pre><code>react-native run-ios
+</code></pre>
+
+<h2 id="sourcecode">Source code</h2>
+
+<p><code>git@github.com:hellokoding/hackernewsapp-reactnative.git</code>
+<a href="https://github.com/hellokoding/hackernewsapp-reactnative">https://github.com/hellokoding/hackernewsapp-reactnative</a></p>]]></content:encoded></item><item><title><![CDATA[Todo App with React Native, Realm]]></title><description><![CDATA[<p>This post walks you through the process of creating a Todo App for iOS and Android devices with React Native, Realm. <br>
+<big></big></p>
+
+<p><pre>
+If you're new to React Native, Realm or CSS Flexbox, it'd be best to walk your way through:
+<a href="https://facebook.github.io/react-native/docs/getting-started.html">Getting Started React Native</a>
+<a href="https://realm.io/docs/react-native/latest/">Getting Started Realm React Native</a>
+<a href="https://facebook.github.io/react-native/docs/flexbox.html">Layout with</a></pre></p>]]></description><link>http://hellokoding.com/todo-app-with-react-native-realm/</link><guid isPermaLink="false">8140e02f-b97b-4a74-84f3-63a3ae4cef7d</guid><category><![CDATA[React Native]]></category><dc:creator><![CDATA[Giau Ngo]]></dc:creator><pubDate>Wed, 13 Jul 2016 04:12:51 GMT</pubDate><media:content url="http://hellokoding.com/content/images/2017/02/hellokoding-todoapp-reactnative--2-.gif" medium="image"/><content:encoded><![CDATA[<img src="http://hellokoding.com/content/images/2017/02/hellokoding-todoapp-reactnative--2-.gif" alt="Todo App with React Native, Realm"><p>This post walks you through the process of creating a Todo App for iOS and Android devices with React Native, Realm. <br>
+<big></big></p>
+
+<p><pre>
+If you're new to React Native, Realm or CSS Flexbox, it'd be best to walk your way through:
+<a href="https://facebook.github.io/react-native/docs/getting-started.html">Getting Started React Native</a>
+<a href="https://realm.io/docs/react-native/latest/">Getting Started Realm React Native</a>
+<a href="https://facebook.github.io/react-native/docs/flexbox.html">Layout with Flexbox</a>
+</pre></p>
+
+<h2 id="whatyoullbuild">What you'll build</h2>
+
+<p><img src="http://hellokoding.com/content/images/2016/07/hellokoding-todoapp-reactnative.gif" alt="Todo App with React Native, Realm"></p>
+
+<h2 id="whatyoullneed">What you'll need</h2>
+
+<ul>
+<li>MacOS, Xcode</li>
+<li>NodeJS</li>
+<li>NPM</li>
+<li>React Native 0.28+</li>
+</ul>
+
+<h2 id="stack">Stack</h2>
+
+<ul>
+<li>ES6</li>
+<li>React Native</li>
+<li>CSS Flexbox</li>
+</ul>
+
+<h2 id="projectstructure">Project structure</h2>
+
+<pre><code>├── android
+├── ios
+├── src
+│   ├── CheckBox.js
+│   ├── ListViewItem.js
+│   ├── ListView.js
+│   ├── OmniBox.js
+│   ├── TodoModel.js
+│   ├── TodoService.js
+│   └── Utils.js
+├── index.android.js
+├── index.ios.js
+└── package.json
+</code></pre>
+
+<h2 id="projectdependencies">Project dependencies</h2>
+
+<pre><code class="language-json embedfile-https://github.com/hellokoding/todoapp-reactnative-realm/blob/master/package.json">
+</code></pre>
+
+<h2 id="letsstart">Let's start</h2>
+
+<h3 id="initproject">Init project</h3>
+
+<pre><code>react-native init TodoApp  
+cd TodoApp
+</code></pre>
+
+<h3 id="utils">Utils</h3>
+
+<p>We build some common functions  </p>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative-realm/blob/master/src/Utils.js">
+</code></pre>
+
+<p><code>Realm React Native</code> has not support auto-id yet. So we create <code>guid</code> to generate a unique id for data model (<code>TodoModel</code>).</p>
+
+<h3 id="datamodel">Data Model</h3>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative-realm/blob/master/src/TodoModel.js">
+</code></pre>
+
+<h3 id="localdatapersistencewithrealm">Local data persistence with Realm</h3>
+
+<p>Install Realm React Native  </p>
+
+<pre><code>npm install realm --save  
+react-native link
+</code></pre>
+
+<p>We wrap some built-in Realm functions in <code>TodoService.js</code></p>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative-realm/blob/master/src/TodoService.js">
+</code></pre>
+
+<h3 id="makeacheckbox">Make a CheckBox</h3>
+
+<p>React Native does not have CheckBox, so we make one.</p>
+
+<p>Install <a href="https://github.com/oblador/react-native-vector-icons">react-native-vector-icons</a></p>
+
+<pre><code>npm install react-native-vector-icons --save  
+react-native link
+</code></pre>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative-realm/blob/master/src/CheckBox.js">
+</code></pre>
+
+<p><code>onPress={this.props.onCheckBoxPressed}</code>: when checkbox's clicked, the <code>onCheckBoxPressed</code> function of parent component 'd be called.</p>
+
+<h3 id="omnibox">OmniBox</h3>
+
+<p>It's a <code>TextInput</code>, can search on typing or add a new Todo (if not existed) on pressing <code>Return/Enter</code>.</p>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative-realm/blob/master/src/OmniBox.js">
+</code></pre>
+
+<p><code>onChange={this.onChange}</code>: handles Search.</p>
+
+<p><code>onKeyPress={this.onKeyPress}</code>: handles Add  new a todo.</p>
+
+<p><code>this.props.updateDataList(dataList);</code>: the <code>updateDataList</code> function of parent component'd be called.</p>
+
+<h3 id="listviewitem">ListViewItem</h3>
+
+<p>We'll build a ListView Item to show <code>TodoModel</code>  </p>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative-realm/blob/master/src/ListViewItem.js">
+</code></pre>
+
+<h3 id="sortablelistview">Sortable ListView</h3>
+
+<p>It shows Todo list. User can drag and drop a Todo item to sort.</p>
+
+<p>Install <a href="https://github.com/deanmcpherson/react-native-sortable-listview">react-native-sortable-listview</a></p>
+
+<pre><code>npm install react-native-sortable-listview --save
+</code></pre>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative-realm/blob/master/src/ListView.js">
+</code></pre>
+
+<h3 id="finalpiece">Final piece</h3>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative-realm/blob/master/index.ios.js">
+</code></pre>
+
+<h3 id="run">Run</h3>
+
+<pre><code>react-native run-ios
+</code></pre>
+
+<h2 id="sourcecode">Source code</h2>
+
+<p><code>git@github.com:hellokoding/todoapp-reactnative-realm.git</code>
+<a href="https://github.com/hellokoding/todoapp-reactnative-realm">https://github.com/hellokoding/todoapp-reactnative-realm</a></p>
+
+<p><big></big></p>
+
+<p><pre>
+Todo App with React Native series:
+<a href="https://hellokoding.com/todo-app-with-react-native/">Todo App with React Native</a>
+<a href="https://hellokoding.com/todo-app-with-react-native-realm/">Todo App with React Native, Realm</a>
+</pre></p>]]></content:encoded></item><item><title><![CDATA[Todo App with React Native]]></title><description><![CDATA[<p>This tutorial will walk you through the process of creating a Todo App for iOS and Android devices with React Native. <br>
+<big></big></p>
+
+<p><pre>
+If you're new to React Native or CSS Flexbox, it'd be best to walk your way through:
+<a href="https://facebook.github.io/react-native/docs/getting-started.html">Getting Started React Native</a>
+<a href="https://facebook.github.io/react-native/docs/flexbox.html">Layout with Flexbox</a>
+</pre></p>
+
+<h2 id="whatyoullbuild">What you'll build</h2>
+
+<p><img src="http://hellokoding.com/content/images/2017/03/hellokoding-todoapp-reactnative.gif" alt=""></p>
+
+<h2 id="whatyoullneed">What you'll</h2>]]></description><link>http://hellokoding.com/todo-app-with-react-native/</link><guid isPermaLink="false">55a70f93-479e-40f4-8339-f08704a03b56</guid><category><![CDATA[React Native]]></category><dc:creator><![CDATA[Giau Ngo]]></dc:creator><pubDate>Tue, 12 Jul 2016 04:08:05 GMT</pubDate><media:content url="http://hellokoding.com/content/images/2017/03/hellokoding-todoapp-reactnative-1.gif" medium="image"/><content:encoded><![CDATA[<img src="http://hellokoding.com/content/images/2017/03/hellokoding-todoapp-reactnative-1.gif" alt="Todo App with React Native"><p>This tutorial will walk you through the process of creating a Todo App for iOS and Android devices with React Native. <br>
+<big></big></p>
+
+<p><pre>
+If you're new to React Native or CSS Flexbox, it'd be best to walk your way through:
+<a href="https://facebook.github.io/react-native/docs/getting-started.html">Getting Started React Native</a>
+<a href="https://facebook.github.io/react-native/docs/flexbox.html">Layout with Flexbox</a>
+</pre></p>
+
+<h2 id="whatyoullbuild">What you'll build</h2>
+
+<p><img src="http://hellokoding.com/content/images/2017/03/hellokoding-todoapp-reactnative.gif" alt="Todo App with React Native"></p>
+
+<h2 id="whatyoullneed">What you'll need</h2>
+
+<ul>
+<li>MacOS, Xcode</li>
+<li>NodeJS</li>
+<li>NPM</li>
+<li>React Native 0.28+</li>
+</ul>
+
+<h2 id="stack">Stack</h2>
+
+<ul>
+<li>ES6</li>
+<li>React Native</li>
+<li>CSS Flexbox</li>
+</ul>
+
+<h2 id="projectstructure">Project structure</h2>
+
+<pre><code>├── android
+├── ios
+├── src
+│   ├── CheckBox.js
+│   ├── ListViewItem.js
+│   ├── ListView.js
+│   ├── OmniBox.js
+│   ├── TodoModel.js
+│   └── Utils.js
+├── index.android.js
+├── index.ios.js
+└── package.json
+</code></pre>
+
+<h2 id="projectdependencies">Project dependencies</h2>
+
+<pre><code class="language-json embedfile-https://github.com/hellokoding/todoapp-reactnative/blob/master/package.json">
+</code></pre>
+
+<h2 id="letsstart">Let's start</h2>
+
+<h3 id="initproject">Init project</h3>
+
+<pre><code>react-native init TodoApp  
+cd TodoApp
+</code></pre>
+
+<h3 id="datamodel">Data Model</h3>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative/blob/master/src/TodoModel.js">
+</code></pre>
+
+<h3 id="utils">Utils</h3>
+
+<p>We define some common functions  </p>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative/blob/master/src/Utils.js">
+</code></pre>
+
+<h3 id="makeacheckbox">Make a CheckBox</h3>
+
+<p>React Native does not have CheckBox, so we make one.</p>
+
+<p>Install <a href="https://github.com/oblador/react-native-vector-icons">react-native-vector-icons</a></p>
+
+<pre><code>npm install react-native-vector-icons --save  
+react-native link
+</code></pre>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative/blob/master/src/CheckBox.js">
+</code></pre>
+
+<p><code>onPress={this.props.onCheckBoxPressed}</code>: when checkbox's clicked, the <code>onCheckBoxPressed</code> function of parent component 'd be called.</p>
+
+<h3 id="omnibox">OmniBox</h3>
+
+<p>It's a <code>TextInput</code>, can search on typing or add a new Todo (if not existed) on pressing <code>Return/Enter</code>.</p>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative/blob/master/src/OmniBox.js">
+</code></pre>
+
+<p><code>onChange={this.onChange}</code>: handles Search.</p>
+
+<p><code>onKeyPress={this.onKeyPress}</code>: handles Add  new a todo.</p>
+
+<p><code>this.props.updateDataList(dataList);</code>: the <code>updateDataList</code> function of parent component'd be called.</p>
+
+<h3 id="listviewitem">ListViewItem</h3>
+
+<p>We'll build a ListViewItem to show <code>TodoModel</code>  </p>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative/blob/master/src/ListViewItem.js">
+</code></pre>
+
+<h3 id="sortablelistview">Sortable ListView</h3>
+
+<p>It shows Todo list. User can drag and drop a Todo item to sort.</p>
+
+<p>Install <a href="https://github.com/deanmcpherson/react-native-sortable-listview">react-native-sortable-listview</a></p>
+
+<pre><code>npm install react-native-sortable-listview --save
+</code></pre>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative/blob/master/src/ListView.js">
+</code></pre>
+
+<h3 id="finalpiece">Final piece</h3>
+
+<pre><code class="language-js embedfile-https://github.com/hellokoding/todoapp-reactnative/blob/master/index.ios.js">
+</code></pre>
+
+<h3 id="run">Run</h3>
+
+<pre><code>react-native run-ios
+</code></pre>
+
+<h2 id="sourcecode">Source code</h2>
+
+<p><code>git@github.com:hellokoding/todoapp-reactnative.git</code>
+<a href="https://github.com/hellokoding/todoapp-reactnative">https://github.com/hellokoding/todoapp-reactnative</a></p>
+
+<p><big></big></p>
+
+<p><pre>
+Todo App with React Native series:
+<a href="https://hellokoding.com/todo-app-with-react-native/">Todo App with React Native</a>
+<a href="https://hellokoding.com/todo-app-with-react-native-realm/">Todo App with React Native, Realm</a>
+</pre></p>]]></content:encoded></item></channel></rss>
