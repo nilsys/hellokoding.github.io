@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Java Collections Framework Tutorial with Examples</title>
+  <title>Convert string to int in Golang</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,30 +14,29 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=9b097d6a28">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=9b097d6a28">
    
-  <link rel="canonical" href="http://hellokoding.com/java-collections-framework/">
+  <link rel="canonical" href="http://hellokoding.com/golang-convert-string-to-int/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Java Collections Framework Tutorial with Examples">
-    <meta property="og:description" content="Java Collections Framework is a set of classes and interfaces that implement common data structures such as array, linked list, stack, queue and hash table This course walks you through a series of tutorials and examples to learn using Java collections in practice Prerequisites Your local computer should have installed">
-    <meta property="og:url" content="http://hellokoding.com/java-collections-framework/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/09/JavaCollectionsFrameworkCourse.png">
-    <meta property="article:published_time" content="2019-09-04T14:33:31.000Z">
-    <meta property="article:modified_time" content="2019-09-19T08:46:48.000Z">
-    <meta property="article:tag" content="Java">
-    <meta property="article:tag" content="Courses">
+    <meta property="og:title" content="Convert string to int in Golang">
+    <meta property="og:description" content="In Golang, to convert string to int you can use strconv.Atoi(s) or strconv.ParseInt(s, base, bitSize). Lets walk through this tutorial to see the examples in practice Convert string to int with strconv.Atoi(s) You can use strconv.Atoi(s) to convert a string s to">
+    <meta property="og:url" content="http://hellokoding.com/golang-convert-string-to-int/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/09/GolangCore_Convert_string_to_int.png">
+    <meta property="article:published_time" content="2019-09-19T08:54:24.000Z">
+    <meta property="article:modified_time" content="2019-09-19T11:17:50.000Z">
+    <meta property="article:tag" content="Golang">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Java Collections Framework Tutorial with Examples">
-    <meta name="twitter:description" content="Java Collections Framework is a set of classes and interfaces that implement common data structures such as array, linked list, stack, queue and hash table This course walks you through a series of tutorials and examples to learn using Java collections in practice Prerequisites Your local computer should have installed">
-    <meta name="twitter:url" content="http://hellokoding.com/java-collections-framework/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/09/JavaCollectionsFrameworkCourse.png">
+    <meta name="twitter:title" content="Convert string to int in Golang">
+    <meta name="twitter:description" content="In Golang, to convert string to int you can use strconv.Atoi(s) or strconv.ParseInt(s, base, bitSize). Lets walk through this tutorial to see the examples in practice Convert string to int with strconv.Atoi(s) You can use strconv.Atoi(s) to convert a string s to">
+    <meta name="twitter:url" content="http://hellokoding.com/golang-convert-string-to-int/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/09/GolangCore_Convert_string_to_int.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Java, Courses">
+    <meta name="twitter:data2" content="Golang">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -61,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter and GitHub"
     },
-    "headline": "Java Collections Framework Tutorial with Examples",
-    "url": "http://hellokoding.com/java-collections-framework/",
-    "datePublished": "2019-09-04T14:33:31.000Z",
-    "dateModified": "2019-09-19T08:46:48.000Z",
-    "image": "http://hellokoding.com/content/images/2019/09/JavaCollectionsFrameworkCourse.png",
-    "keywords": "Java, Courses",
-    "description": "Java Collections Framework is a set of classes and interfaces that implement common data structures such as array, linked list, stack, queue and hash table This course walks you through a series of tutorials and examples to learn using Java collections in practice Prerequisites Your local computer should have installed"
+    "headline": "Convert string to int in Golang",
+    "url": "http://hellokoding.com/golang-convert-string-to-int/",
+    "datePublished": "2019-09-19T08:54:24.000Z",
+    "dateModified": "2019-09-19T11:17:50.000Z",
+    "image": "http://hellokoding.com/content/images/2019/09/GolangCore_Convert_string_to_int.png",
+    "keywords": "Golang",
+    "description": "In Golang, to convert string to int you can use strconv.Atoi(s) or strconv.ParseInt(s, base, bitSize). Lets walk through this tutorial to see the examples in practice Convert string to int with strconv.Atoi(s) You can use strconv.Atoi(s) to convert a string s to"
 }
     </script>
 
@@ -88,7 +87,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-java tag-courses">
+<body class="post-template tag-golang">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -217,91 +216,125 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-9 column">
-        <article class="post tag-java tag-courses featured">
+        <article class="post tag-golang">
 
           <header class="post__header">
-            <h1 class="post__title">Java Collections Framework Tutorial with Examples</h1>
+            <h1 class="post__title">Convert string to int in Golang</h1>
             <time class="post__date" datetime="2019-09-19">Last modified @ 19 September 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/java/">Java</a><a href="../tag/courses/">Courses</a>
+              <a href="../tag/golang/">Golang</a>
             </div>
 
-            <p>Java Collections Framework is a set of classes and interfaces that implement common data structures such as array, linked list, stack, queue and hash table</p>
+            <p>In Golang, to convert <code>string</code> to <code>int</code> you can use <code>strconv.Atoi(s)</code> or <code>strconv.ParseInt(s, base, bitSize)</code>. Lets walk through this tutorial to see the examples in practice</p>
 
-<p>This course walks you through a series of tutorials and examples to learn using Java collections in practice</p>
-
-<h3 id="prerequisites">Prerequisites</h3>
-
-<p>Your local computer should have installed JDK 8+ or OpenJDK 8+</p>
-
-<h2 id="curriculum">Curriculum</h2>
-
-<h3 id="listcollections">List Collections</h3>
+<h2 id="convertstringtointwithstrconvatois">Convert string to int with <code>strconv.Atoi(s)</code></h2>
 
 <ul>
-<li><p><a href="https://hellokoding.com/java-arraylist-examples/">ArrayList Tutorial with Examples</a></p>
-
-<ul><li><p><a href="https://hellokoding.com/create-and-initialize-an-arraylist-in-java/">Create and Initialize an ArrayList</a></p></li>
-<li><p><a href="https://hellokoding.com/iterate-an-arraylist-in-java/">Iterate an ArrayList</a> </p></li>
-<li><p><a href="https://hellokoding.com/query-an-arraylist-in-java/">Query an ArrayList</a> </p></li>
-<li><p><a href="https://hellokoding.com/modify-an-arraylist-in-java/">Modify an ArrayList</a> </p></li>
-<li><p><a href="https://hellokoding.com/sort-an-arraylist-in-java/">Sort an ArrayList</a></p></li>
-<li><p><a href="https://hellokoding.com/java-array-vs-arraylist/">Array vs ArrayList</a></p></li></ul></li>
-<li><p><a href="https://hellokoding.com/java-linkedlist-tutorial-with-examples/">LinkedList Tutorial with Examples</a>
-<br> <br>
-<br>  </p></li>
+<li>You can use <code>strconv.Atoi(s)</code> to convert a string <code>s</code> to int, <code>Atoi</code> stands for ASCII to integer</li>
 </ul>
 
-<h3 id="queuecollections">Queue Collections</h3>
+<pre><code class="language-go">package main
+
+import (  
+    "fmt"
+    "strconv"
+)
+
+func main() {  
+    str := "1"
+
+    n, _ := strconv.Atoi(str)
+    fmt.Println(n)
+}
+</code></pre>
+
+<p>Output</p>
+
+<pre><code>1  
+</code></pre>
 
 <ul>
-<li><p><a href="https://hellokoding.com/queue-implementations-in-java/">Queue + BlockingQueue Tutorial with Examples</a></p></li>
-<li><p><a href="https://hellokoding.com/priority-queue-implementations-in-java/">PriorityQueue + PriorityBlockingQueue Tutorial and Example</a>
-<br> <br>
-<br>  </p></li>
+<li>If the input string isn't in the integer format, you would get the zero value in return</li>
 </ul>
 
-<h3 id="setcollections">Set Collections</h3>
+<pre><code class="language-go">package main
+
+import (  
+    "fmt"
+    "strconv"
+)
+
+func main() {  
+    str := "1.9"
+
+    n, _ := strconv.Atoi(str)
+    fmt.Println(n)
+}
+</code></pre>
+
+<p>Output</p>
+
+<pre><code>0
+</code></pre>
 
 <ul>
-<li><p><a href="https://hellokoding.com/java-hashset-tutorial-with-examples/">HashSet Tutorial with Examples</a></p>
-
-<ul><li><p><a href="https://hellokoding.com/create-and-initialize-a-hashset-in-java/">Create and Initialize an HashSet</a></p></li>
-<li><p><a href="https://hellokoding.com/iterate-a-hashset-set-in-java/">Iterate a HashSet</a></p></li>
-<li><p><a href="https://hellokoding.com/find-elements-in-a-hashset/">Query a HashSet</a></p></li>
-<li><p><a href="https://hellokoding.com/java-hashset-remove-and-update-object/">Modify a HashSet</a></p></li>
-<li><p><a href="https://hellokoding.com/sort-a-hashset-in-java/">Sort a HashSet</a>
-<br> <br>
-<br>  </p></li></ul></li>
+<li>Beside returns integer value, <code>strconv.Atoi(s)</code> also returns an error in case the converting isn't success</li>
 </ul>
 
-<h3 id="mapcollections">Map Collections</h3>
+<pre><code class="language-go">package main
 
-<ul>
-<li><p><a href="https://hellokoding.com/java-hashmap-tutorial-with-examples/">HashMap Tutorial with Examples</a></p>
+import (  
+    "fmt"
+    "strconv"
+)
 
-<ul><li><p><a href="https://hellokoding.com/create-and-initialize-a-hashmap-in-java/">Create and Initialize a HashMap</a></p></li>
-<li><p><a href="https://hellokoding.com/iterate-a-hashmap-in-java/">Iterate a HashMap</a></p></li>
-<li><p><a href="https://hellokoding.com/query-a-hashmap-in-java/">Query a HashMap</a></p></li>
-<li><p><a href="https://hellokoding.com/modify-a-hashmap-in-java/">Modify a HashMap</a></p></li>
-<li><p><a href="https://hellokoding.com/sort-a-hashmap-in-java/">Sort a HashMap</a></p></li></ul></li>
-</ul>
+func main() {  
+    str := "1a"
+
+    n, err := strconv.Atoi(str)
+
+    if err != nil {
+        fmt.Println(err)
+    } else {
+        fmt.Println(n)
+    }
+}
+</code></pre>
+
+<p>Output</p>
+
+<pre><code>strconv.Atoi: parsing "1a": invalid syntax
+</code></pre>
+
+<h2 id="convertstringtointwithstrconvparseintsbasebitsize">Convert string to int with <code>strconv.ParseInt(s, base, bitSize)</code></h2>
+
+<p>The <code>strconv.ParseInt(s, base, bitSize)</code> convert the given string <code>s</code> to int in the given base (0,2 to 36) and bit size (0 to 64)</p>
+
+<p><code>Atoi(s)</code> is equivalent to Parseint(s, 10, 0)</p>
+
+<pre><code class="language-bash embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/golang-examples/golang-core/parseint.go">
+</code></pre>
+
+<p>Output</p>
+
+<pre><code>9  
+</code></pre>
             
             <div class="post__tags">
-              <a href="../tag/java/">Java</a><a href="../tag/courses/">Courses</a>
+              <a href="../tag/golang/">Golang</a>
             </div>
           </div>
 
           <div class="love-post">Love this post?</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Java%20Collections%20Framework%20Tutorial%20with%20Examples&amp;url=http://hellokoding.com/java-collections-framework/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Convert%20string%20to%20int%20in%20Golang&amp;url=http://hellokoding.com/golang-convert-string-to-int/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Tweet</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/java-collections-framework/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/golang-convert-string-to-int/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Share</span>
   </a>
@@ -355,8 +388,8 @@ ghost.init({
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/java-collections-framework/';
-      this.page.identifier = '165';
+      this.page.url = 'http://hellokoding.com/golang-convert-string-to-int/';
+      this.page.identifier = '171';
     };
 
     (function() {
