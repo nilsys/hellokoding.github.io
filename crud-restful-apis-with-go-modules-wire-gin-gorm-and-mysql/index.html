@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/crud-restful-apis-with-go-modules-wire-gin-gorm-and-mysql/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/09/GolangExamples_RESTwithGinGorm.png">
     <meta property="article:published_time" content="2019-09-17T16:31:52.000Z">
-    <meta property="article:modified_time" content="2019-09-17T16:59:07.000Z">
+    <meta property="article:modified_time" content="2019-09-19T03:45:41.000Z">
     <meta property="article:tag" content="Golang">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "CRUD RESTful APIs with Go Modules, Wire, Gin, Gorm and MySQL",
     "url": "http://hellokoding.com/crud-restful-apis-with-go-modules-wire-gin-gorm-and-mysql/",
     "datePublished": "2019-09-17T16:31:52.000Z",
-    "dateModified": "2019-09-17T16:59:07.000Z",
+    "dateModified": "2019-09-19T03:45:41.000Z",
     "image": "http://hellokoding.com/content/images/2019/09/GolangExamples_RESTwithGinGorm.png",
     "keywords": "Golang",
     "description": "This tutorial will walk you through the steps to build a CRUD RESTful APIs example by using Go Modules, Wire, Gin, Gorm and MySQL About the tech stack Go Modules is a dependency management system introduced since Go 1.1+ https://blog.golang.org/using-go-modules Wire is a code generation"
@@ -220,7 +220,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">CRUD RESTful APIs with Go Modules, Wire, Gin, Gorm and MySQL</h1>
-            <time class="post__date" datetime="2019-09-17">Last modified @ 17 September 2019</time>
+            <time class="post__date" datetime="2019-09-19">Last modified @ 19 September 2019</time>
           </header>
 
           <div class="post-content">
@@ -326,14 +326,19 @@ ghost.init({
 <pre><code class="language-go embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/golang-examples/rest-gin-gorm/main.go">
 </code></pre>
 
-<h2 id="runandtest">Run and test</h2>
+<h2 id="buildrunandtest">Build, run and test</h2>
 
-<p>Build the project with <code>go build</code> and type the following command to run</p>
+<p>You can type the following commands at the project root directory to build and run</p>
+
+<ul>
+<li><p>Build the project with <code>go build</code>. It will generate an execute file <code>rest-gin-gorm</code></p></li>
+<li><p>Type the following command to run, replace <code>root:123456</code> with your MySQL Server username and password, replace <code>test</code> with your database name</p></li>
+</ul>
 
 <pre><code>PORT=8080 DB_URL="root:123456@/test?charset=utf8&amp;parseTime=True&amp;loc=Local" ./rest-gin-gorm
 </code></pre>
 
-<p>You can test the apis by using <a href="https://httpie.org/">HTTPie</a></p>
+<p>You can test the apis by using [HTTPie] (<a href="https://httpie.org/">https://httpie.org/</a>) command line</p>
 
 <ul>
 <li>Find all products <code>http localhost:8080/products</code></li>
