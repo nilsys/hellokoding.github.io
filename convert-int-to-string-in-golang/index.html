@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Convert string to int in Golang</title>
+  <title>Convert int to string in Golang</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,25 +14,25 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=152378d516">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=152378d516">
    
-  <link rel="canonical" href="http://hellokoding.com/golang-convert-string-to-int/">
+  <link rel="canonical" href="http://hellokoding.com/convert-int-to-string-in-golang/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="Hello Koding - Practical Coding Courses, Tutorials and Examples">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Convert string to int in Golang">
-    <meta property="og:description" content="In Golang, to convert string to int you can use strconv.Atoi(s) and strconv.ParseInt(s, base, bitSize). Lets walk through this tutorial to see the examples in practice Convert string to int with strconv.Atoi(s) You can use strconv.Atoi(s) to convert a string s to">
-    <meta property="og:url" content="http://hellokoding.com/golang-convert-string-to-int/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/09/GolangCore_Convert_string_to_int.png">
-    <meta property="article:published_time" content="2019-09-19T08:54:24.000Z">
-    <meta property="article:modified_time" content="2019-09-20T07:15:54.000Z">
+    <meta property="og:title" content="Convert int to string in Golang">
+    <meta property="og:description" content="In Golang, to convert int to string you can use strconv.Itoa(i) and strconv.FormatInt(i, base). Lets walk through this tutorial to see the examples in practice Convert int to string with strconv.Itoa(i) You can use strconv.Itoa(i) to convert an integer i to string.">
+    <meta property="og:url" content="http://hellokoding.com/convert-int-to-string-in-golang/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/09/GolangCore_Convert_int_to_string.png">
+    <meta property="article:published_time" content="2019-09-20T07:11:08.000Z">
+    <meta property="article:modified_time" content="2019-09-20T07:13:16.000Z">
     <meta property="article:tag" content="Golang">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Convert string to int in Golang">
-    <meta name="twitter:description" content="In Golang, to convert string to int you can use strconv.Atoi(s) and strconv.ParseInt(s, base, bitSize). Lets walk through this tutorial to see the examples in practice Convert string to int with strconv.Atoi(s) You can use strconv.Atoi(s) to convert a string s to">
-    <meta name="twitter:url" content="http://hellokoding.com/golang-convert-string-to-int/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/09/GolangCore_Convert_string_to_int.png">
+    <meta name="twitter:title" content="Convert int to string in Golang">
+    <meta name="twitter:description" content="In Golang, to convert int to string you can use strconv.Itoa(i) and strconv.FormatInt(i, base). Lets walk through this tutorial to see the examples in practice Convert int to string with strconv.Itoa(i) You can use strconv.Itoa(i) to convert an integer i to string.">
+    <meta name="twitter:url" content="http://hellokoding.com/convert-int-to-string-in-golang/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/09/GolangCore_Convert_int_to_string.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter and GitHub"
     },
-    "headline": "Convert string to int in Golang",
-    "url": "http://hellokoding.com/golang-convert-string-to-int/",
-    "datePublished": "2019-09-19T08:54:24.000Z",
-    "dateModified": "2019-09-20T07:15:54.000Z",
-    "image": "http://hellokoding.com/content/images/2019/09/GolangCore_Convert_string_to_int.png",
+    "headline": "Convert int to string in Golang",
+    "url": "http://hellokoding.com/convert-int-to-string-in-golang/",
+    "datePublished": "2019-09-20T07:11:08.000Z",
+    "dateModified": "2019-09-20T07:13:16.000Z",
+    "image": "http://hellokoding.com/content/images/2019/09/GolangCore_Convert_int_to_string.png",
     "keywords": "Golang",
-    "description": "In Golang, to convert string to int you can use strconv.Atoi(s) and strconv.ParseInt(s, base, bitSize). Lets walk through this tutorial to see the examples in practice Convert string to int with strconv.Atoi(s) You can use strconv.Atoi(s) to convert a string s to"
+    "description": "In Golang, to convert int to string you can use strconv.Itoa(i) and strconv.FormatInt(i, base). Lets walk through this tutorial to see the examples in practice Convert int to string with strconv.Itoa(i) You can use strconv.Itoa(i) to convert an integer i to string."
 }
     </script>
 
@@ -219,7 +219,7 @@ ghost.init({
         <article class="post tag-golang">
 
           <header class="post__header">
-            <h1 class="post__title">Convert string to int in Golang</h1>
+            <h1 class="post__title">Convert int to string in Golang</h1>
             <time class="post__date" datetime="2019-09-20">Last modified @ 20 September 2019</time>
           </header>
 
@@ -228,12 +228,12 @@ ghost.init({
               <a href="../tag/golang/">Golang</a>
             </div>
 
-            <p>In Golang, to convert <code>string</code> to <code>int</code> you can use <code>strconv.Atoi(s)</code> and <code>strconv.ParseInt(s, base, bitSize)</code>. Lets walk through this tutorial to see the examples in practice</p>
+            <p>In Golang, to convert <code>int</code> to <code>string</code> you can use <code>strconv.Itoa(i)</code> and <code>strconv.FormatInt(i, base)</code>. Lets walk through this tutorial to see the examples in practice</p>
 
-<h2 id="convertstringtointwithstrconvatois">Convert string to int with <code>strconv.Atoi(s)</code></h2>
+<h2 id="convertinttostringwithstrconvitoai">Convert int to string with <code>strconv.Itoa(i)</code></h2>
 
 <ul>
-<li>You can use <code>strconv.Atoi(s)</code> to convert a string <code>s</code> to a 32 bit integer. <code>Atoi</code> stands for ASCII to integer</li>
+<li>You can use <code>strconv.Itoa(i)</code> to convert an integer <code>i</code> to string. <code>Itoa</code> stands for integer to ASCII</li>
 </ul>
 
 <pre><code class="language-go">package main
@@ -244,10 +244,11 @@ import (
 )
 
 func main() {  
-    str := "1"
+    i := 1
 
-    n, _ := strconv.Atoi(str)
-    fmt.Println(n)
+    s := strconv.Itoa(i)
+
+    fmt.Println(s)
 }
 </code></pre>
 
@@ -257,7 +258,7 @@ func main() {
 </code></pre>
 
 <ul>
-<li>If the input string isn't in the integer format, you would get the zero value in return</li>
+<li>The input integer must be a 32 bit integer, otherwise you would get the compile error</li>
 </ul>
 
 <pre><code class="language-go">package main
@@ -268,59 +269,31 @@ import (
 )
 
 func main() {  
-    str := "1.9"
+    var i int64 = 1
 
-    n, _ := strconv.Atoi(str)
-    fmt.Println(n)
+    s := strconv.Itoa(i) // compile error
+
+    fmt.Println(s)
 }
 </code></pre>
 
 <p>Output</p>
 
-<pre><code>0
+<pre><code>cannot use i (type int64) as type int in argument to strconv.Itoa
 </code></pre>
 
-<ul>
-<li>Beside returns integer value, <code>strconv.Atoi(s)</code> also returns an error in case the converting isn't successful</li>
-</ul>
+<h2 id="convertinttostringwithstrconvformatintibase">Convert int to string with <code>strconv.FormatInt(i, base)</code></h2>
 
-<pre><code class="language-go">package main
+<p>The <code>strconv.FormatInt(i, base)</code> convert the given 64 bit integer <code>i</code> to string in the given base (2 to 36)</p>
 
-import (  
-    "fmt"
-    "strconv"
-)
+<p><code>Itoa(i)</code> is equivalent to FormatInt(int64(i), 10)</p>
 
-func main() {  
-    str := "1a"
-
-    n, err := strconv.Atoi(str)
-
-    if err != nil {
-        fmt.Println(err)
-    } else {
-        fmt.Println(n)
-    }
-}
+<pre><code class="language-bash embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/golang-examples/golang-core/formatint.go">
 </code></pre>
 
 <p>Output</p>
 
-<pre><code>strconv.Atoi: parsing "1a": invalid syntax
-</code></pre>
-
-<h2 id="convertstringtointwithstrconvparseintsbasebitsize">Convert string to int with <code>strconv.ParseInt(s, base, bitSize)</code></h2>
-
-<p>The <code>strconv.ParseInt(s, base, bitSize)</code> convert the given string <code>s</code> to an integer in the given base (0,2 to 36) and bit size (0 to 64)</p>
-
-<p><code>Atoi(s)</code> is equivalent to Parseint(s, 10, 0)</p>
-
-<pre><code class="language-bash embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/golang-examples/golang-core/parseint.go">
-</code></pre>
-
-<p>Output</p>
-
-<pre><code>9  
+<pre><code>1001  
 </code></pre>
             
             <div class="post__tags">
@@ -330,11 +303,11 @@ func main() {
 
           <div class="love-post">Love this post?</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Convert%20string%20to%20int%20in%20Golang&amp;url=http://hellokoding.com/golang-convert-string-to-int/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Convert%20int%20to%20string%20in%20Golang&amp;url=http://hellokoding.com/convert-int-to-string-in-golang/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Tweet</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/golang-convert-string-to-int/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/convert-int-to-string-in-golang/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Share</span>
   </a>
@@ -388,8 +361,8 @@ func main() {
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/golang-convert-string-to-int/';
-      this.page.identifier = '171';
+      this.page.url = 'http://hellokoding.com/convert-int-to-string-in-golang/';
+      this.page.identifier = '174';
     };
 
     (function() {
