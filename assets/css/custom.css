@@ -59,7 +59,7 @@ border-left: 2px solid;
 
 .share-list {
 	border: 0px solid #ecf0f1;
-	margin-top: 0px;
+	margin-top: 0;
 	line-height: 25px;
 }
 
@@ -137,7 +137,7 @@ border-left: 2px solid;
 }
 
 .in-arcticle-ad {
-	margin: 70 0;
+	margin: 70px 0;
 }
 
 .row{max-width:1350px!important}
