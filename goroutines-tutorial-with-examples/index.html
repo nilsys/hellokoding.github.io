@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/goroutines-tutorial-with-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/09/GolangConcurrency_goroutineTutorial.png">
     <meta property="article:published_time" content="2019-09-21T07:33:11.000Z">
-    <meta property="article:modified_time" content="2019-09-21T14:55:10.000Z">
+    <meta property="article:modified_time" content="2019-09-21T15:13:37.000Z">
     <meta property="article:tag" content="Golang">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Golang goroutine Tutorial with Examples",
     "url": "http://hellokoding.com/goroutines-tutorial-with-examples/",
     "datePublished": "2019-09-21T07:33:11.000Z",
-    "dateModified": "2019-09-21T14:55:10.000Z",
+    "dateModified": "2019-09-21T15:13:37.000Z",
     "image": "http://hellokoding.com/content/images/2019/09/GolangConcurrency_goroutineTutorial.png",
     "keywords": "Golang",
     "description": "In Golang, goroutine is a light-weight thread managed by Go runtime. You can use goroutines to run functions asynchronously with this syntax go func(x, y, z) Lets take a look at the following example Output i&#x27;m sync!   i&#x27;m async!   i&#x27;m async too!   done! f(&quot;i&#x27;m sync!&quot;) is run synchronously"
@@ -255,7 +255,7 @@ done!
 
 <p><code>go f("i'm async!")</code> is run asynchronously on the other thread</p>
 
-<p>Apart from using goroutine with a defined function, you can also use it with anonymous function</p>
+<p>Apart from using goroutine with a defined function, you can also use it with an anonymous function</p>
 
 <pre><code class="language-go">go func(s string) {  
     fmt.Println(s)
@@ -264,7 +264,7 @@ done!
 
 <p>The above function is also run asynchronously on the other thread</p>
 
-<p><code>time.Sleep(time.Second)</code> try to wait a second for all goroutines to finish before program exited. In practice, you can use <a href="https://hellokoding.com/awaiting-all-goroutines-completion-with-waitgroup/">sync.WaitGroup</a> as it's a better way to handle the case</p>
+<p><code>time.Sleep(time.Second)</code> try to wait a second for all goroutines to finish before the program exited. In practice, you can use <a href="https://hellokoding.com/awaiting-all-goroutines-completion-with-waitgroup/">sync.WaitGroup</a> as it's a better way to handle the case</p>
             
             <div class="post__tags">
               <a href="../tag/golang/">Golang</a>
