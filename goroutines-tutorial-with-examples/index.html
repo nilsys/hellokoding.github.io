@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Golang goroutine Tutorial with Examples">
-    <meta property="og:description" content="In Golang, goroutine is a light-weight thread managed by Go runtime. You can use goroutines to run functions asynchronously with this syntax go func(x, y, z) Lets take a look at the following example Output i'm sync!   i'm async!   i'm async too!   done! f(&quot;i'm sync&quot;) is run synchronously">
+    <meta property="og:description" content="In Golang, goroutine is a light-weight thread managed by Go runtime. You can use goroutines to run functions asynchronously with this syntax go func(x, y, z) Lets take a look at the following example Output i'm sync!   i'm async!   i'm async too!   done! f(&quot;i'm sync!&quot;) is run synchronously">
     <meta property="og:url" content="http://hellokoding.com/goroutines-tutorial-with-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/09/GolangConcurrency_goroutineTutorial.png">
     <meta property="article:published_time" content="2019-09-21T07:33:11.000Z">
-    <meta property="article:modified_time" content="2019-09-21T08:36:59.000Z">
+    <meta property="article:modified_time" content="2019-09-21T11:54:38.000Z">
     <meta property="article:tag" content="Golang">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Golang goroutine Tutorial with Examples">
-    <meta name="twitter:description" content="In Golang, goroutine is a light-weight thread managed by Go runtime. You can use goroutines to run functions asynchronously with this syntax go func(x, y, z) Lets take a look at the following example Output i'm sync!   i'm async!   i'm async too!   done! f(&quot;i'm sync&quot;) is run synchronously">
+    <meta name="twitter:description" content="In Golang, goroutine is a light-weight thread managed by Go runtime. You can use goroutines to run functions asynchronously with this syntax go func(x, y, z) Lets take a look at the following example Output i'm sync!   i'm async!   i'm async too!   done! f(&quot;i'm sync!&quot;) is run synchronously">
     <meta name="twitter:url" content="http://hellokoding.com/goroutines-tutorial-with-examples/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/09/GolangConcurrency_goroutineTutorial.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Golang goroutine Tutorial with Examples",
     "url": "http://hellokoding.com/goroutines-tutorial-with-examples/",
     "datePublished": "2019-09-21T07:33:11.000Z",
-    "dateModified": "2019-09-21T08:36:59.000Z",
+    "dateModified": "2019-09-21T11:54:38.000Z",
     "image": "http://hellokoding.com/content/images/2019/09/GolangConcurrency_goroutineTutorial.png",
     "keywords": "Golang",
-    "description": "In Golang, goroutine is a light-weight thread managed by Go runtime. You can use goroutines to run functions asynchronously with this syntax go func(x, y, z) Lets take a look at the following example Output i&#x27;m sync!   i&#x27;m async!   i&#x27;m async too!   done! f(&quot;i&#x27;m sync&quot;) is run synchronously"
+    "description": "In Golang, goroutine is a light-weight thread managed by Go runtime. You can use goroutines to run functions asynchronously with this syntax go func(x, y, z) Lets take a look at the following example Output i&#x27;m sync!   i&#x27;m async!   i&#x27;m async too!   done! f(&quot;i&#x27;m sync!&quot;) is run synchronously"
 }
     </script>
 
@@ -251,15 +251,15 @@ i'm async too!
 done!
 </code></pre>
 
-<p><code>f("i'm sync")</code> is run synchronously on the main thread</p>
+<p><code>f("i'm sync!")</code> is run synchronously on the main thread</p>
 
-<p><code>go f("i'm async")</code> is run asynchronously on the other thread</p>
+<p><code>go f("i'm async!")</code> is run asynchronously on the other thread</p>
 
 <p>Apart from using goroutine with a defined function, you can also use it with anonymous function</p>
 
 <pre><code class="language-go">go func(s string) {  
     fmt.Println(s)
-}("i'm async")
+}("i'm async too!")
 </code></pre>
 
 <p>The above function is also run asynchronously on the other thread</p>
