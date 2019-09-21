@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/awaiting-all-goroutines-completion-with-waitgroup/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/09/GolangConcurrency_syncWaitGroup_Tutorial.png">
     <meta property="article:published_time" content="2019-09-21T14:33:26.000Z">
-    <meta property="article:modified_time" content="2019-09-21T14:36:31.000Z">
+    <meta property="article:modified_time" content="2019-09-21T14:51:29.000Z">
     <meta property="article:tag" content="Golang">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Awaiting all goroutines completion with WaitGroup",
     "url": "http://hellokoding.com/awaiting-all-goroutines-completion-with-waitgroup/",
     "datePublished": "2019-09-21T14:33:26.000Z",
-    "dateModified": "2019-09-21T14:36:31.000Z",
+    "dateModified": "2019-09-21T14:51:29.000Z",
     "image": "http://hellokoding.com/content/images/2019/09/GolangConcurrency_syncWaitGroup_Tutorial.png",
     "keywords": "Golang",
     "description": "In Golang, you can use WaitGroup to await for the completion of all goroutines in a collection. Lets take a look at the below example package main import (       &quot;fmt&quot;     //&quot;time&quot; ) func f(s string) {       fmt.Println(s) } func main() {       go f(&quot;i&#x27;m async!&quot;)     go func(s string) {         fmt.Println(s)"
@@ -260,7 +260,7 @@ func main() {
 
 <p>The number of output strings will be vary as the program may have exited before all goroutines completion. </p>
 
-<p>You can use <code>time.Sleep</code>, however <code>sync.WaitGroup</code> is a better way in practice to handle the case. The following give you an implementation example with <code>WaitGroup</code></p>
+<p>You can use <code>time.Sleep</code> by assuming a duration, however <code>sync.WaitGroup</code> is a better way in practice to handle the case. The following give you an implementation example with <code>WaitGroup</code></p>
 
 <pre><code class="language-go embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/golang-examples/golang-core/waitgroup.go">
 </code></pre>
