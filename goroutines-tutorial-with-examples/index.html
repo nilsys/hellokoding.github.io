@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Goroutines Tutorial with Examples</title>
+  <title>Golang goroutine Tutorial with Examples</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,18 +19,18 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Goroutines Tutorial with Examples">
-    <meta property="og:description" content="Goroutine is a light-weight thread managed by Go runtime. You can use goroutines to run functions asynchronously with this syntax go func(x, y, z) Lets take a look at the following example Output i'm sync   i'm async   i'm async   done! f(&quot;i'm sync&quot;) is run synchronously on the main">
+    <meta property="og:title" content="Golang goroutine Tutorial with Examples">
+    <meta property="og:description" content="In Golang, goroutine is a light-weight thread managed by Go runtime. You can use goroutines to run functions asynchronously with this syntax go func(x, y, z) Lets take a look at the following example Output i'm sync!   i'm async!   i'm async too!   done! f(&quot;i'm sync&quot;) is run synchronously">
     <meta property="og:url" content="http://hellokoding.com/goroutines-tutorial-with-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/09/GolangConcurrency_goroutineTutorial.png">
     <meta property="article:published_time" content="2019-09-21T07:33:11.000Z">
-    <meta property="article:modified_time" content="2019-09-21T07:35:05.000Z">
+    <meta property="article:modified_time" content="2019-09-21T08:36:59.000Z">
     <meta property="article:tag" content="Golang">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Goroutines Tutorial with Examples">
-    <meta name="twitter:description" content="Goroutine is a light-weight thread managed by Go runtime. You can use goroutines to run functions asynchronously with this syntax go func(x, y, z) Lets take a look at the following example Output i'm sync   i'm async   i'm async   done! f(&quot;i'm sync&quot;) is run synchronously on the main">
+    <meta name="twitter:title" content="Golang goroutine Tutorial with Examples">
+    <meta name="twitter:description" content="In Golang, goroutine is a light-weight thread managed by Go runtime. You can use goroutines to run functions asynchronously with this syntax go func(x, y, z) Lets take a look at the following example Output i'm sync!   i'm async!   i'm async too!   done! f(&quot;i'm sync&quot;) is run synchronously">
     <meta name="twitter:url" content="http://hellokoding.com/goroutines-tutorial-with-examples/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/09/GolangConcurrency_goroutineTutorial.png">
     <meta name="twitter:label1" content="Written by">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Goroutines Tutorial with Examples",
+    "headline": "Golang goroutine Tutorial with Examples",
     "url": "http://hellokoding.com/goroutines-tutorial-with-examples/",
     "datePublished": "2019-09-21T07:33:11.000Z",
-    "dateModified": "2019-09-21T07:35:05.000Z",
+    "dateModified": "2019-09-21T08:36:59.000Z",
     "image": "http://hellokoding.com/content/images/2019/09/GolangConcurrency_goroutineTutorial.png",
     "keywords": "Golang",
-    "description": "Goroutine is a light-weight thread managed by Go runtime. You can use goroutines to run functions asynchronously with this syntax go func(x, y, z) Lets take a look at the following example Output i&#x27;m sync   i&#x27;m async   i&#x27;m async   done! f(&quot;i&#x27;m sync&quot;) is run synchronously on the main"
+    "description": "In Golang, goroutine is a light-weight thread managed by Go runtime. You can use goroutines to run functions asynchronously with this syntax go func(x, y, z) Lets take a look at the following example Output i&#x27;m sync!   i&#x27;m async!   i&#x27;m async too!   done! f(&quot;i&#x27;m sync&quot;) is run synchronously"
 }
     </script>
 
@@ -224,7 +224,7 @@ ghost.init({
         <article class="post tag-golang">
 
           <header class="post__header">
-            <h1 class="post__title">Goroutines Tutorial with Examples</h1>
+            <h1 class="post__title">Golang goroutine Tutorial with Examples</h1>
             <time class="post__date" datetime="2019-09-21">Last modified @ 21 September 2019</time>
           </header>
 
@@ -233,7 +233,7 @@ ghost.init({
               <a href="../tag/golang/">Golang</a>
             </div>
 
-            <p>Goroutine is a light-weight thread managed by Go runtime. You can use goroutines to run functions asynchronously with this syntax</p>
+            <p>In Golang, goroutine is a light-weight thread managed by Go runtime. You can use goroutines to run functions asynchronously with this syntax</p>
 
 <pre><code class="language-go">go func(x, y, z)
 </code></pre>
@@ -245,9 +245,9 @@ ghost.init({
 
 <p>Output</p>
 
-<pre><code class="language-markup">i'm sync  
-i'm async  
-i'm async  
+<pre><code class="language-markup">i'm sync!  
+i'm async!  
+i'm async too!  
 done!
 </code></pre>
 
@@ -264,7 +264,7 @@ done!
 
 <p>The above function is also run asynchronously on the other thread</p>
 
-<p><code>time.Sleep(1*time.Second)</code> ensure all goroutines have completed before the program exits</p>
+<p><code>time.Sleep(time.Second)</code> ensure all goroutines have completed before the program exits</p>
             
             <div class="post__tags">
               <a href="../tag/golang/">Golang</a>
@@ -273,7 +273,7 @@ done!
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Goroutines%20Tutorial%20with%20Examples&amp;url=http://hellokoding.com/goroutines-tutorial-with-examples/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Golang%20goroutine%20Tutorial%20with%20Examples&amp;url=http://hellokoding.com/goroutines-tutorial-with-examples/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
