@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Awaiting all goroutines completion with WaitGroup</title>
+  <title>Channel in Golang Concurrency</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,25 +14,25 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=9e589b0084">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=9e589b0084">
    
-  <link rel="canonical" href="http://hellokoding.com/awaiting-all-goroutines-completion-with-waitgroup/">
+  <link rel="canonical" href="http://hellokoding.com/channel-in-golang-concurrency/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Awaiting all goroutines completion with WaitGroup">
-    <meta property="og:description" content="In Golang, you can use WaitGroup to await for the completion of all goroutines in a collection. Lets take a look at the below example package main import (       &quot;fmt&quot;     //&quot;time&quot; ) func f(s string) {       fmt.Println(s) } func main() {       go f(&quot;i'm async!&quot;)     go func(s string) {         fmt.Println(s)">
-    <meta property="og:url" content="http://hellokoding.com/awaiting-all-goroutines-completion-with-waitgroup/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/09/GolangConcurrency_syncWaitGroup_Tutorial.png">
-    <meta property="article:published_time" content="2019-09-21T14:33:26.000Z">
-    <meta property="article:modified_time" content="2019-09-22T05:37:36.000Z">
+    <meta property="og:title" content="Channel in Golang Concurrency">
+    <meta property="og:description" content="In Golang, channel provides a mechanism to communicate betweens different goroutines. This tutorial gives you some highlights when working with channel Create a new channel You have to create a new channel before using it with the make function (same as with slice and map) c := make(chan Type)    Send">
+    <meta property="og:url" content="http://hellokoding.com/channel-in-golang-concurrency/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/09/GolangConcurrency_channelTutorial.png">
+    <meta property="article:published_time" content="2019-09-22T13:11:05.000Z">
+    <meta property="article:modified_time" content="2019-09-22T13:15:11.000Z">
     <meta property="article:tag" content="Golang">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Awaiting all goroutines completion with WaitGroup">
-    <meta name="twitter:description" content="In Golang, you can use WaitGroup to await for the completion of all goroutines in a collection. Lets take a look at the below example package main import (       &quot;fmt&quot;     //&quot;time&quot; ) func f(s string) {       fmt.Println(s) } func main() {       go f(&quot;i'm async!&quot;)     go func(s string) {         fmt.Println(s)">
-    <meta name="twitter:url" content="http://hellokoding.com/awaiting-all-goroutines-completion-with-waitgroup/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/09/GolangConcurrency_syncWaitGroup_Tutorial.png">
+    <meta name="twitter:title" content="Channel in Golang Concurrency">
+    <meta name="twitter:description" content="In Golang, channel provides a mechanism to communicate betweens different goroutines. This tutorial gives you some highlights when working with channel Create a new channel You have to create a new channel before using it with the make function (same as with slice and map) c := make(chan Type)    Send">
+    <meta name="twitter:url" content="http://hellokoding.com/channel-in-golang-concurrency/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/09/GolangConcurrency_channelTutorial.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Awaiting all goroutines completion with WaitGroup",
-    "url": "http://hellokoding.com/awaiting-all-goroutines-completion-with-waitgroup/",
-    "datePublished": "2019-09-21T14:33:26.000Z",
-    "dateModified": "2019-09-22T05:37:36.000Z",
-    "image": "http://hellokoding.com/content/images/2019/09/GolangConcurrency_syncWaitGroup_Tutorial.png",
+    "headline": "Channel in Golang Concurrency",
+    "url": "http://hellokoding.com/channel-in-golang-concurrency/",
+    "datePublished": "2019-09-22T13:11:05.000Z",
+    "dateModified": "2019-09-22T13:15:11.000Z",
+    "image": "http://hellokoding.com/content/images/2019/09/GolangConcurrency_channelTutorial.png",
     "keywords": "Golang",
-    "description": "In Golang, you can use WaitGroup to await for the completion of all goroutines in a collection. Lets take a look at the below example package main import (       &quot;fmt&quot;     //&quot;time&quot; ) func f(s string) {       fmt.Println(s) } func main() {       go f(&quot;i&#x27;m async!&quot;)     go func(s string) {         fmt.Println(s)"
+    "description": "In Golang, channel provides a mechanism to communicate betweens different goroutines. This tutorial gives you some highlights when working with channel Create a new channel You have to create a new channel before using it with the make function (same as with slice and map) c :&#x3D; make(chan Type)    Send"
 }
     </script>
 
@@ -224,7 +224,7 @@ ghost.init({
         <article class="post tag-golang">
 
           <header class="post__header">
-            <h1 class="post__title">Awaiting all goroutines completion with WaitGroup</h1>
+            <h1 class="post__title">Channel in Golang Concurrency</h1>
             <time class="post__date" datetime="2019-09-22">Last modified @ 22 September 2019</time>
           </header>
 
@@ -233,69 +233,141 @@ ghost.init({
               <a href="../tag/golang/">Golang</a>
             </div>
 
-            <p>In Golang, you can use <code>WaitGroup</code> to await for the completion of all goroutines in a collection. Lets take a look at the below example</p>
+            <p>In Golang, channel provides a mechanism to communicate betweens different goroutines. This tutorial gives you some highlights when working with channel</p>
+
+<h3 id="createanewchannel">Create a new channel</h3>
+
+<p>You have to create a new channel before using it with the <code>make</code> function (same as with <code>slice</code> and <code>map</code>)</p>
+
+<pre><code class="language-go">c := make(chan Type)
+</code></pre>
+
+<p><br>  </p>
+
+<h3 id="sendandreceivemessageswithchannel">Send and receive messages with channel</h3>
+
+<p>You can use <code>channel</code> to send and receive messages of the same type between goroutines</p>
+
+<p>Lets take a look at the following example</p>
+
+<pre><code class="language-go embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/golang-examples/golang-core/channel.go">
+</code></pre>
+
+<p>Output</p>
+
+<pre><code>hello, channel!
+</code></pre>
+
+<p>In the above program</p>
+
+<ul>
+<li>We created a string channel before using with <code>make</code></li>
+</ul>
+
+<pre><code class="language-go">c := make(chan string)
+</code></pre>
+
+<ul>
+<li>You can use <code>&lt;-</code> operator to send and receive messages from channel. We sent "hello, channel!" to channel <code>c</code> inside a goroutine</li>
+</ul>
+
+<pre><code class="language-go">c &lt;- "hello, channel!"
+</code></pre>
+
+<ul>
+<li>And received message from <code>c</code></li>
+</ul>
+
+<pre><code class="language-go">s := &lt;- c
+</code></pre>
+
+<p><br>  </p>
+
+<h3 id="channeltypes">Channel types</h3>
+
+<p>There're 3 types of channel based on the channel direction operator <code>&lt;-</code></p>
+
+<ul>
+<li><p><code>chan T</code> is a bidirectional channel, can send and received messages of type <code>T</code></p></li>
+<li><p><code>chan &lt;- string</code> is a receive channel, can only receive messages of type <code>string</code></p></li>
+<li><p><code>chan -&gt; int</code> is a send channel, can only send messages of type <code>int</code></p></li>
+</ul>
+
+<h2 id="unbufferedvsbufferedchannel">Unbuffered vs buffered channel</h2>
+
+<h3 id="channelsareunbufferedandblockbydefault">Channels are unbuffered and block by default</h3>
+
+<p>When you allocate a new channel with the make function</p>
+
+<pre><code class="language-go">c := make(chan string)  
+</code></pre>
+
+<p>The created channel <code>c</code> is unbuffered and block / synchronous, sends and receives block until the other side is ready</p>
 
 <pre><code class="language-go">package main
 
 import (  
     "fmt"
-    //"time"
 )
 
-func f(s string) {  
+func main() {  
+    uc := make(chan string)
+
+    uc &lt;- "hello, unbuffered channel!"
+    s := &lt;- uc
+
     fmt.Println(s)
 }
-
-func main() {  
-    go f("i'm async!")
-
-    go func(s string) {
-        fmt.Println(s)
-    }("i'm async too!")
-
-    //time.Sleep(time.Second)
-    fmt.Println("done!")
-}
-</code></pre>
-
-<p>The number of output strings will be vary as the program may have exited before all goroutines completion. </p>
-
-<p>You can use <code>time.Sleep</code> by assuming a duration, however <code>sync.WaitGroup</code> is a better way in practice to handle the case. The following give you an implementation example with <code>WaitGroup</code></p>
-
-<pre><code class="language-go embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/golang-examples/golang-core/waitgroup.go">
-</code></pre>
-
-<p><code>WaitGroup</code> is a <code>struct</code> defined in the <code>sync</code> package. It maintains a counter to wait for a collection of goroutines to finish. In the above program</p>
-
-<ul>
-<li><p><code>waitGroup.Add(1)</code> adds a delta to the <code>WaitGroup</code> counter</p></li>
-<li><p><code>waitGroup.Done()</code> decreases the <code>WaitGroup</code> counter by one</p></li>
-<li><p><code>waitGroup.Wait()</code> blocks until the <code>WaitGroup</code> counter is zero</p></li>
-</ul>
-
-<p>Now, the quantity of output strings is always consistent (the ordering may be different for each invocation)</p>
-
-<pre><code>i'm async too!  
-i'm async!  
-done!  
-</code></pre>
-
-<h2 id="waitgroupwaittimeout">WaitGroup.Wait() timeout</h2>
-
-<p><code>WaitGroup.Wait()</code> doesn't have a timeout option. The following example give you an implementation example by using <code>channel</code> and <code>select</code></p>
-
-<pre><code class="language-go embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/golang-examples/golang-core/waitgroup_timeout.go">
 </code></pre>
 
 <p>Output</p>
 
-<pre><code>i'm async!  
-Wait timeout!  
+<pre><code>fatal error: all goroutines are asleep - deadlock!
 </code></pre>
 
-<p>A <code>select</code> blocks until one of its cases is ready to run</p>
+<p>The program throws a panic as <code>uc &lt;- "hello, channel!"</code> blocks the main goroutine because of no receives is ready</p>
 
-<p>In the above <code>waitTimeout</code> method definition, the second <code>select</code> case is ready before the first case as the second goroutine execution time (<code>time.Sleep(2*time.Second)</code>) is greater than the wait timeout parameter (<code>waitGroup.waitTimeout(time.Second)</code>). You can try to comment out the line <code>time.Sleep(2*time.Second)</code> to see the different outputs</p>
+<h3 id="bufferedchannelsonlyblockwhenfull">Buffered channels only block when full</h3>
+
+<p>You can provide an optional integer argument to indicate the buffered size when create a new channel with <code>make</code></p>
+
+<pre><code class="language-go">c := make(chan string, 2)
+</code></pre>
+
+<p>Sends to a buffered channel block when the buffer is full</p>
+
+<pre><code class="language-go">package main
+
+import (  
+    "fmt"
+)
+
+func main() {  
+    bc := make(chan string, 2)
+
+    bc &lt;- "hello, buffered channel!"
+    bc &lt;- "may i send more?"
+    s1 := &lt;- bc
+    s2 := &lt;- bc
+
+    fmt.Println(s1)
+    fmt.Println(s2)
+}
+</code></pre>
+
+<p>Output</p>
+
+<pre><code>hello, buffered channel!  
+may i send more?
+</code></pre>
+
+<p>Try to modify the above program to send more than 2 messages to the buffered channel to compare the output</p>
+
+<h3 id="closeachannel">Close a channel</h3>
+
+<p>You can close a bidirectional or send-only channel by using the built-in function <code>close(c chan&lt;- Type)</code></p>
+
+<p>Usually, you don't have to close a channel except when you want to signal sends ending</p>
             
             <div class="post__tags">
               <a href="../tag/golang/">Golang</a>
@@ -304,11 +376,11 @@ Wait timeout!
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Awaiting%20all%20goroutines%20completion%20with%20WaitGroup&amp;url=http://hellokoding.com/awaiting-all-goroutines-completion-with-waitgroup/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Channel%20in%20Golang%20Concurrency&amp;url=http://hellokoding.com/channel-in-golang-concurrency/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/awaiting-all-goroutines-completion-with-waitgroup/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/channel-in-golang-concurrency/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Facebook</span>
   </a>
@@ -368,8 +440,8 @@ Wait timeout!
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/awaiting-all-goroutines-completion-with-waitgroup/';
-      this.page.identifier = '176';
+      this.page.url = 'http://hellokoding.com/channel-in-golang-concurrency/';
+      this.page.identifier = '177';
     };
 
     (function() {
