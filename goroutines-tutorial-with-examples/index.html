@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/goroutines-tutorial-with-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/09/GolangConcurrency_goroutineTutorial.png">
     <meta property="article:published_time" content="2019-09-21T07:33:11.000Z">
-    <meta property="article:modified_time" content="2019-09-21T15:13:37.000Z">
+    <meta property="article:modified_time" content="2019-09-22T13:56:48.000Z">
     <meta property="article:tag" content="Golang">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Golang goroutine Tutorial with Examples",
     "url": "http://hellokoding.com/goroutines-tutorial-with-examples/",
     "datePublished": "2019-09-21T07:33:11.000Z",
-    "dateModified": "2019-09-21T15:13:37.000Z",
+    "dateModified": "2019-09-22T13:56:48.000Z",
     "image": "http://hellokoding.com/content/images/2019/09/GolangConcurrency_goroutineTutorial.png",
     "keywords": "Golang",
     "description": "In Golang, goroutine is a light-weight thread managed by Go runtime. You can use goroutines to run functions asynchronously with this syntax go func(x, y, z) Lets take a look at the following example Output i&#x27;m sync!   i&#x27;m async!   i&#x27;m async too!   done! f(&quot;i&#x27;m sync!&quot;) is run synchronously"
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Golang goroutine Tutorial with Examples</h1>
-            <time class="post__date" datetime="2019-09-21">Last modified @ 21 September 2019</time>
+            <time class="post__date" datetime="2019-09-22">Last modified @ 22 September 2019</time>
           </header>
 
           <div class="post-content">
@@ -251,9 +251,9 @@ i'm async too!
 done!
 </code></pre>
 
-<p><code>f("i'm sync!")</code> is run synchronously on the main thread</p>
+<p><code>f("i'm sync!")</code> is run synchronously on the main thread / goroutine</p>
 
-<p><code>go f("i'm async!")</code> is run asynchronously on the other thread</p>
+<p><code>go f("i'm async!")</code> is run asynchronously on the other goroutine</p>
 
 <p>Apart from using goroutine with a defined function, you can also use it with an anonymous function</p>
 
@@ -262,9 +262,19 @@ done!
 }("i'm async too!")
 </code></pre>
 
-<p>The above function is also run asynchronously on the other thread</p>
+<p>The above function is also run asynchronously on the other goroutine</p>
 
-<p><code>time.Sleep(time.Second)</code> try to wait a second for all goroutines to finish before the program exited. In practice, you can use <a href="https://hellokoding.com/awaiting-all-goroutines-completion-with-waitgroup/">sync.WaitGroup</a> as it's a better way to handle the case</p>
+<p><br>  </p>
+
+<h3 id="awaitingacollectionofgoroutinestofinish">Awaiting a collection of goroutines to finish</h3>
+
+<p>In the previous example, <code>time.Sleep(time.Second)</code> try to wait a second for all goroutines to finish before the program exited. In practice, you can use <a href="https://hellokoding.com/awaiting-all-goroutines-completion-with-waitgroup/">sync.WaitGroup</a> as it's a better way to handle the case</p>
+
+<p><br>  </p>
+
+<h3 id="exchangemessagesbetweengoroutines">Exchange messages between goroutines</h3>
+
+<p>You can use <a href="https://hellokoding.com/channel-in-golang-concurrency/">channels</a> to send and receive message between goroutines. Channels are block and synchronization by default to gurantee two goroutines in a known state</p>
             
             <div class="post__tags">
               <a href="../tag/golang/">Golang</a>
