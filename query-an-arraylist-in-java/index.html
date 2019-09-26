@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Query an ArrayList in Java</title>
+  <title>Query and Filter an ArrayList in Java</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,18 +19,18 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Query an ArrayList in Java">
-    <meta property="og:description" content="You can query an ArrayList in Java with get methods to return element by the specified index; indexOf methods to return index by the specified element; contains methods to check existing; size and isEmpty methods to check the ArrayList size Find / search element by index get(int) method gets the">
+    <meta property="og:title" content="Query and Filter an ArrayList in Java">
+    <meta property="og:description" content="Since Java 8+, you can filter an ArrayList by using the Stream API Apart from that, you can query an ArrayList with it's own APIs such as get methods to return element by the specified index; indexOf methods to return index by the specified element; contains methods to check existing;">
     <meta property="og:url" content="http://hellokoding.com/query-an-arraylist-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/07/JavaCollections_QueryanArrayList.png">
     <meta property="article:published_time" content="2019-07-21T14:37:34.000Z">
-    <meta property="article:modified_time" content="2019-07-23T12:39:22.000Z">
+    <meta property="article:modified_time" content="2019-09-26T15:02:28.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Query an ArrayList in Java">
-    <meta name="twitter:description" content="You can query an ArrayList in Java with get methods to return element by the specified index; indexOf methods to return index by the specified element; contains methods to check existing; size and isEmpty methods to check the ArrayList size Find / search element by index get(int) method gets the">
+    <meta name="twitter:title" content="Query and Filter an ArrayList in Java">
+    <meta name="twitter:description" content="Since Java 8+, you can filter an ArrayList by using the Stream API Apart from that, you can query an ArrayList with it's own APIs such as get methods to return element by the specified index; indexOf methods to return index by the specified element; contains methods to check existing;">
     <meta name="twitter:url" content="http://hellokoding.com/query-an-arraylist-in-java/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/07/JavaCollections_QueryanArrayList.png">
     <meta name="twitter:label1" content="Written by">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Query an ArrayList in Java",
+    "headline": "Query and Filter an ArrayList in Java",
     "url": "http://hellokoding.com/query-an-arraylist-in-java/",
     "datePublished": "2019-07-21T14:37:34.000Z",
-    "dateModified": "2019-07-23T12:39:22.000Z",
+    "dateModified": "2019-09-26T15:02:28.000Z",
     "image": "http://hellokoding.com/content/images/2019/07/JavaCollections_QueryanArrayList.png",
     "keywords": "Java",
-    "description": "You can query an ArrayList in Java with get methods to return element by the specified index; indexOf methods to return index by the specified element; contains methods to check existing; size and isEmpty methods to check the ArrayList size Find / search element by index get(int) method gets the"
+    "description": "Since Java 8+, you can filter an ArrayList by using the Stream API Apart from that, you can query an ArrayList with it&#x27;s own APIs such as get methods to return element by the specified index; indexOf methods to return index by the specified element; contains methods to check existing;"
 }
     </script>
 
@@ -224,8 +224,8 @@ ghost.init({
         <article class="post tag-java">
 
           <header class="post__header">
-            <h1 class="post__title">Query an ArrayList in Java</h1>
-            <time class="post__date" datetime="2019-07-23">Last modified @ 23 July 2019</time>
+            <h1 class="post__title">Query and Filter an ArrayList in Java</h1>
+            <time class="post__date" datetime="2019-09-26">Last modified @ 26 September 2019</time>
           </header>
 
           <div class="post-content">
@@ -233,51 +233,106 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p>You can query an ArrayList in Java with <code>get</code> methods to return element by the specified index; <code>indexOf</code> methods to return index by the specified element; <code>contains</code> methods to check existing; <code>size</code> and <code>isEmpty</code> methods to check the ArrayList size</p>
+            <p>Since Java 8+, you can filter an ArrayList by using the Stream API</p>
 
-<h3 id="findsearchelementbyindex">Find / search element by index</h3>
+<p>Apart from that, you can query an ArrayList with it's own APIs such as <code>get</code> methods to return element by the specified index; <code>indexOf</code> methods to return index by the specified element; <code>contains</code> methods to check existing; <code>size</code> and <code>isEmpty</code> methods to check the ArrayList size</p>
+
+<p>Lets walk through this tutorial to explore them in more details</p>
+
+<h3 id="filterwithjava8streamapi">Filter with Java 8+ Stream API</h3>
 
 <ul>
-<li><code>get(int)</code> method gets the element at the specified index in the list. <code>IndexOutOfBoundsException</code> will be thrown if the specified index is out of range</li>
+<li>Using <code>.stream().filter(Predicate)</code> to return elements that match with the given predicate</li>
 </ul>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(3);  
-lst.add(1);  
-lst.add(2);
+<pre><code class="language-java">@Test
+public void filter() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(3);
+    lst.add(1);
+    lst.add(2);
 
-System.out.println(lst.get(0)); // 3  
-System.out.println(lst.get(3)); // throws IndexOutOfBoundsException
+    Integer[] arr = lst.stream().filter(e -&gt; e &gt;= 2).toArray(Integer[]::new);
+    assertThat(arr).contains(2, 3);
+}
 </code></pre>
 
 <p><br>  </p>
 
-<h3 id="findsearchindexbyelement">Find / search index by element</h3>
+<h3 id="findelementbyindex">Find element by index</h3>
+
+<ul>
+<li><code>get(int)</code> method gets the element at the specified index in the list</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void get_OK() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(3);
+    lst.add(1);
+    lst.add(2);
+
+    int ele = lst.get(0);
+    assertThat(ele).isEqualTo(3);
+}
+</code></pre>
+
+<ul>
+<li><code>IndexOutOfBoundsException</code> will be thrown if the specified index is out of range</li>
+</ul>
+
+<pre><code class="language-java">@Test(expected = IndexOutOfBoundsException.class)
+public void get_Exception() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(3);
+    lst.add(1);
+    lst.add(2);
+
+    // throws IndexOutOfBoundsException
+    int ele = lst.get(4);
+}
+</code></pre>
+
+<p><br>  </p>
+
+<h3 id="findindexbyelement">Find index by element</h3>
 
 <ul>
 <li><code>indexOf(Object)</code> method returns the index of the first occurrence of the specified element in the list, otherwise returns -1</li>
 </ul>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(3);  
-lst.add(1);  
-lst.add(2);
+<pre><code class="language-java">@Test
+public void indexOf() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(3);
+    lst.add(1);
+    lst.add(2);
 
-System.out.println(lst.indexOf(3)); // 0  
-System.out.println(lst.indexOf(4)); // -1
+    int idx = lst.indexOf(3);
+    assertThat(idx).isEqualTo(0);
+
+    idx = lst.indexOf(4);
+    assertThat(idx).isEqualTo(-1);
+}
 </code></pre>
 
 <ul>
 <li><code>lastIndexOf(Object)</code> method returns the index of the last occurrence of the specified element in the list, otherwise returns -1</li>
 </ul>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(3);  
-lst.add(1);  
-lst.add(3);
+<pre><code class="language-java">@Test
+public void lastIndexOf() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(3);
+    lst.add(1);
+    lst.add(3);
 
-System.out.println(lst.lastIndexOf(3)); // 2  
-System.out.println(lst.lastIndexOf(4)); // -1
+    int idx = lst.lastIndexOf(3);
+    assertThat(idx).isEqualTo(2);
+
+    idx = lst.indexOf(4);
+    assertThat(idx).isEqualTo(-1);
+}
 </code></pre>
 
 <p><br>  </p>
@@ -288,25 +343,35 @@ System.out.println(lst.lastIndexOf(4)); // -1
 <li><code>contains(Object)</code> method checks if an ArrayList contains the specified element</li>
 </ul>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(3);  
-lst.add(1);  
-lst.add(2);
+<pre><code class="language-java">@Test
+public void contains() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(3);
+    lst.add(1);
+    lst.add(2);
 
-System.out.println(lst.contains(1)); // true  
+    boolean contained = lst.contains(1);
+    assertThat(contained).isTrue();
+}
 </code></pre>
 
 <ul>
 <li><code>containsAll(Collection)</code> method checks if an ArrayList contains all of elements in the specified collection</li>
 </ul>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(3);  
-lst.add(1);  
-lst.add(2);
+<pre><code class="language-java">@Test
+public void containsAll() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(3);
+    lst.add(1);
+    lst.add(2);
 
-System.out.println(lst.containsAll(List.of(1, 3))); // true  
-System.out.println(lst.containsAll(List.of(1, 4))); // false  
+    boolean contained = lst.containsAll(List.of(1, 3));
+    assertThat(contained).isTrue();
+
+    contained = lst.containsAll(List.of(1, 4));
+    assertThat(contained).isFalse();
+}
 </code></pre>
 
 <p><br>  </p>
@@ -317,24 +382,39 @@ System.out.println(lst.containsAll(List.of(1, 4))); // false
 <li><code>size()</code> gets the number of elements in the list</li>
 </ul>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(3);  
-lst.add(1);  
-lst.add(2);
+<pre><code class="language-java">@Test
+public void size() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(3);
+    lst.add(1);
+    lst.add(2);
 
-System.out.println(lst.size()); // 3
+    int size = lst.size();
+    assertThat(size).isEqualTo(3);
+}
 </code></pre>
 
 <ul>
 <li><code>isEmpty()</code> checks if the list contains no elements</li>
 </ul>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(3);  
-lst.add(1);  
-lst.add(2);
+<pre><code class="language-java">@Test
+public void isEmpty() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(3);
+    lst.add(1);
+    lst.add(2);
 
-System.out.println(lst.isEmpty()); // false
+    boolean empty = lst.isEmpty();
+    assertThat(empty).isFalse();
+}
+</code></pre>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this tutorial, we learned to filter and query an ArrayList in Java. You can find below the full source code</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/ArrayListQueryTest.java">
 </code></pre>
             
             <div class="post__tags">
@@ -344,7 +424,7 @@ System.out.println(lst.isEmpty()); // false
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Query%20an%20ArrayList%20in%20Java&amp;url=http://hellokoding.com/query-an-arraylist-in-java/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Query%20and%20Filter%20an%20ArrayList%20in%20Java&amp;url=http://hellokoding.com/query-an-arraylist-in-java/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
