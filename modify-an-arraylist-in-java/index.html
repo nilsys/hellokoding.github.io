@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Modify an ArrayList in Java">
-    <meta property="og:description" content="You can modify an ArrayList in Java with add methods to add elements into the list, set method to replace element and remove methods to remove element from the list For all index operations, IndexOutOfBoundsException will be thrown if the index is out of range Add elements into an ArrayList">
+    <meta property="og:description" content="You can modify an ArrayList in Java with add methods to append and insert elements into the list, set method to replace element, remove methods to remove element from the list For all index operations, IndexOutOfBoundsException will be thrown if the index is out of range Lets walk through this">
     <meta property="og:url" content="http://hellokoding.com/modify-an-arraylist-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/07/JavaCollections_ModifyanArrayList.png">
     <meta property="article:published_time" content="2019-07-21T14:38:37.000Z">
-    <meta property="article:modified_time" content="2019-07-22T14:42:10.000Z">
+    <meta property="article:modified_time" content="2019-09-28T09:21:18.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Modify an ArrayList in Java">
-    <meta name="twitter:description" content="You can modify an ArrayList in Java with add methods to add elements into the list, set method to replace element and remove methods to remove element from the list For all index operations, IndexOutOfBoundsException will be thrown if the index is out of range Add elements into an ArrayList">
+    <meta name="twitter:description" content="You can modify an ArrayList in Java with add methods to append and insert elements into the list, set method to replace element, remove methods to remove element from the list For all index operations, IndexOutOfBoundsException will be thrown if the index is out of range Lets walk through this">
     <meta name="twitter:url" content="http://hellokoding.com/modify-an-arraylist-in-java/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/07/JavaCollections_ModifyanArrayList.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Modify an ArrayList in Java",
     "url": "http://hellokoding.com/modify-an-arraylist-in-java/",
     "datePublished": "2019-07-21T14:38:37.000Z",
-    "dateModified": "2019-07-22T14:42:10.000Z",
+    "dateModified": "2019-09-28T09:21:18.000Z",
     "image": "http://hellokoding.com/content/images/2019/07/JavaCollections_ModifyanArrayList.png",
     "keywords": "Java",
-    "description": "You can modify an ArrayList in Java with add methods to add elements into the list, set method to replace element and remove methods to remove element from the list For all index operations, IndexOutOfBoundsException will be thrown if the index is out of range Add elements into an ArrayList"
+    "description": "You can modify an ArrayList in Java with add methods to append and insert elements into the list, set method to replace element, remove methods to remove element from the list For all index operations, IndexOutOfBoundsException will be thrown if the index is out of range Lets walk through this"
 }
     </script>
 
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Modify an ArrayList in Java</h1>
-            <time class="post__date" datetime="2019-07-22">Last modified @ 22 July 2019</time>
+            <time class="post__date" datetime="2019-09-28">Last modified @ 28 September 2019</time>
           </header>
 
           <div class="post-content">
@@ -233,64 +233,97 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p>You can modify an ArrayList in Java with <code>add</code> methods to add elements into the list, <code>set</code> method to replace element and <code>remove</code> methods to remove element from the list</p>
+            <p>You can modify an ArrayList in Java with <code>add</code> methods to append and insert elements into the list, <code>set</code> method to replace element, <code>remove</code> methods to remove element from the list</p>
 
 <p>For all index operations, <code>IndexOutOfBoundsException</code> will be thrown if the index is out of range</p>
 
-<h3 id="addelementsintoanarraylist">Add elements into an ArrayList</h3>
+<p>Lets walk through this tutorial to explore them in more details</p>
+
+<h3 class="hk-autoads">Append elements into an ArrayList</h3>  
 
 <ul>
 <li><code>add(Object)</code> method add (appends) the specified element into the end of the list</li>
 </ul>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(3);  
-lst.add(1);  
-lst.add(3);  
-lst.add(null);
+<pre><code class="language-java">@Test
+public void append() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;(Arrays.asList(3, 1, 2));
 
-System.out.println(lst); // [3, 1, 3, null]
+    // Appends elements to lst
+    lst.add(4);
+
+    // Can append null element
+    lst.add(null);
+
+    // Can append duplicate element
+    lst.add(2);
+
+    // Asserts that the list contains exactly the given values in order
+    assertThat(lst).containsExactly(3, 1, 2, 4, null, 2);
+}
 </code></pre>
 
-<p>ArrayList allows duplicate and null elements and preserve the insertion order of theirs elements so the output of the above example <code>[3, 1, 3, null]</code> is always consistent</p>
-
-<ul>
-<li><code>add(int, Object)</code> method inserts the specified element at the specified index in the list and shifts the current and any subsequent elements to the right</li>
-</ul>
-
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(1);  
-lst.add(2);  
-lst.add(0, 3); // insert 3 at index 0, the list now is {3, 1, 2}  
-lst.add(3, 10); // throws `IndexOutOfBoundsException`
-</code></pre>
+<p>ArrayList allows duplicate and null elements and preserve the insertion order of theirs elements</p>
 
 <ul>
 <li><code>addAll(Collection)</code> method appends all elements of the specified collection into the end of the caller list, in the order returned by the specified collection's iterator</li>
 </ul>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst1 = new ArrayList&lt;&gt;();  
-lst1.add(3);  
-lst1.addAll(Arrays.asList(1, 2));  
-System.out.println(lst1); // [3, 1, 2]
+<pre><code class="language-java">@Test
+public void appendAll() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(3);
 
-List&lt;Integer&gt; lst2 = new ArrayList&lt;&gt;();  
-lst2.add(3);  
-lst2.addAll(Set.of(1, 2));  
-System.out.println(lst2); // [3, 1, 2]
+    // Appends all elements to lst
+    lst.addAll(Arrays.asList(1, 2));
+
+    assertThat(lst).containsExactly(3, 1, 2);
+}
 </code></pre>
 
-<p>The output of the <code>lst2</code> may be different on your side as <code>Set</code> has no guarantees on the element orders</p>
+<p><br>  </p>
+
+<h3 id="insertelementatthespecifiedlocation">Insert element at the specified location</h3>
+
+<ul>
+<li><code>add(int, Object)</code> method inserts the specified element at the specified index in the list and shifts the current and any subsequent elements to the right</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void insert() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(1);
+    lst.add(2);
+
+    // Inserts element to lst at the specified index
+    lst.add(0, 3);
+
+    assertThat(lst).containsExactly(3, 1, 2);
+
+    // Asserts that the list throws IndexOutOfBoundsException
+    //     when insert element at the out of bound position
+    assertThatThrownBy(() -&gt; lst.add(5, 4))
+        .isInstanceOf(IndexOutOfBoundsException.class);
+}
+</code></pre>
 
 <ul>
 <li><code>addAll(int, Collection)</code> method inserts all elements of the specified collection into the list at the specified index and shifts the current and any subsequence elements to the right</li>
 </ul>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(1);  
-lst.add(2);  
-lst.addAll(0, Arrays.asList(3));  
-System.out.println(lst); // [3, 1, 2]
+<pre><code class="language-java">@Test
+public void insertAll() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(2);
+
+    // Inserts a collection of elements to lst at the specified index
+    lst.addAll(0, Arrays.asList(3, 1));
+
+    assertThat(lst).containsExactly(3, 1, 2);
+
+    assertThatThrownBy(() -&gt; lst.addAll(4, Arrays.asList(4, 5)))
+            .isInstanceOf(IndexOutOfBoundsException.class);
+}
 </code></pre>
 
 <p><br>  </p>
@@ -301,84 +334,130 @@ System.out.println(lst); // [3, 1, 2]
 <li><code>set(int, Object)</code> method replaces the element at the specified index with the specified element</li>
 </ul>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(1);  
-lst.add(1);  
-lst.add(2);  
-lst.set(0, 3);
+<pre><code class="language-java">@Test
+public void set() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(1);
+    lst.add(1);
+    lst.add(2);
 
-System.out.println(lst); // [3, 1, 2]  
+    // Updates element at the specified index
+    lst.set(0, 3);
+
+    assertThat(lst).containsExactly(3, 1, 2);
+}
 </code></pre>
 
 <p><br>  </p>
 
-<h3 id="removeelementsfromanarraylist">Remove elements from an ArrayList</h3>
+<h3 class="hk-autoads">Remove elements from an ArrayList</h3>
 
 <ul>
 <li><code>remove(Object)</code> method removes the first occurrence of the specified element from the list if it is present</li>
 </ul>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(3);  
-lst.add(1);  
-lst.add(3);
+<pre><code class="language-java">@Test
+public void removeElement() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(3);
+    lst.add(1);
+    lst.add(3);
 
-lst.remove(Integer.valueOf(3));  
-System.out.println(lst); // [1, 3]  
+    // Removes the first occurrence of the specified element from lst
+    lst.remove(Integer.valueOf(3));
+
+    assertThat(lst).containsExactly(1, 3);
+}
 </code></pre>
 
 <ul>
 <li><code>remove(int)</code> method removes the element at the specified index and shifts any subsequence elements to the left</li>
 </ul>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(3);  
-lst.add(1);  
-lst.add(3);
+<pre><code class="language-java">@Test
+public void removeAtIndex() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(3);
+    lst.add(1);
+    lst.add(3);
 
-lst.remove(0);  
-System.out.println(lst); // [1, 3]
+    // Removes element at the specified position in lst
+    lst.remove(0);
 
-lst.remove(3); // throws IndexOutOfBoundsException  
+    assertThat(lst).containsExactly(1, 3);
+
+    assertThatThrownBy(() -&gt; lst.remove(2))
+        .isInstanceOf(IndexOutOfBoundsException.class);
+}
 </code></pre>
 
 <ul>
 <li><code>removeAll(Collection)</code> method removes from the list all elements which contained in the specified collection</li>
 </ul>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(3);  
-lst.add(1);  
-lst.add(3);
+<pre><code class="language-java">@Test
+public void removeAll() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(3);
+    lst.add(1);
+    lst.add(3);
 
-lst.removeAll(List.of(4, 1, 3));  
-System.out.println(lst); // [] - the list is empty now  
+    // Removes elements in lst that are contained in the specified collection
+    lst.removeAll(List.of(4, 1, 3));
+
+    assertThat(lst).isEmpty();
+}
 </code></pre>
+
+<p><br>  </p>
+
+<h3 id="retainselementsinanarraylist">Retains elements in an ArrayList</h3>
 
 <ul>
 <li><code>retainAll(Collection)</code> method retains elements in the list which contained in the specified collection</li>
 </ul>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(3);  
-lst.add(1);  
-lst.add(3);
+<pre><code class="language-java">@Test
+public void retainAll() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(3);
+    lst.add(1);
+    lst.add(3);
 
-lst.removeAll(List.of(2, 3));  
-System.out.println(lst); // [3, 3]  
+    // Retains elements in lst that are contained in the specified collection
+    lst.retainAll(List.of(2, 3));
+
+    assertThat(lst).containsExactly(3, 3);
+}
 </code></pre>
 
+<p><br>  </p>
+
+<h3 id="clearanarraylist">Clear an ArrayList</h3>
+
 <ul>
-<li><code>void clear()</code> method removes all elements from the list</li>
+<li><code>clear()</code> method removes all of the elements from the list, the list will be empty after this call</li>
 </ul>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(3);  
-lst.add(1);  
-lst.add(3);
+<pre><code class="language-java">@Test
+public void clear() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(3);
+    lst.add(1);
+    lst.add(3);
 
-lst.clear();  
-System.out.println(lst); // [] - the list now is empty  
+    // Removes all of the elements from lst
+    lst.clear();
+
+    assertThat(lst).isEmpty();
+}
+</code></pre>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this tutorial, we learned to append, insert, update, remove, retain and clear elements from an ArrayList in Java. You can find below the full source code</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/ArrayListModifyTest.java">
 </code></pre>
             
             <div class="post__tags">

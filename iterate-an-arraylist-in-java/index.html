@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/iterate-an-arraylist-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/07/JavaCollections_IterateanArrayList.png">
     <meta property="article:published_time" content="2019-07-21T14:37:51.000Z">
-    <meta property="article:modified_time" content="2019-07-22T14:40:31.000Z">
+    <meta property="article:modified_time" content="2019-09-27T16:45:01.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Iterate an ArrayList in Java",
     "url": "http://hellokoding.com/iterate-an-arraylist-in-java/",
     "datePublished": "2019-07-21T14:37:51.000Z",
-    "dateModified": "2019-07-22T14:40:31.000Z",
+    "dateModified": "2019-09-27T16:45:01.000Z",
     "image": "http://hellokoding.com/content/images/2019/07/JavaCollections_IterateanArrayList.png",
     "keywords": "Java",
     "description": "In Java Collections Framework, ArrayList implements the Iterable interface which offering iterator, so beside the traditional while and for loop,  we can use the enhanced for-loop statement and its iterator to iterate over ArrayList elements Java 8+ List interface also provides the forEach(Consumer), internally is an enhanced for-each loop,"
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Iterate an ArrayList in Java</h1>
-            <time class="post__date" datetime="2019-07-22">Last modified @ 22 July 2019</time>
+            <time class="post__date" datetime="2019-09-27">Last modified @ 27 September 2019</time>
           </header>
 
           <div class="post-content">
@@ -237,16 +237,21 @@ ghost.init({
 
 <p>Java 8+ <code>List</code> interface also provides the <code>forEach(Consumer)</code>, internally is an enhanced for-each loop, for your convenient</p>
 
-<h3 id="usingtheforloop">Using the <code>for</code> loop</h3>
+<p>Lets walk through this tutorial to explore them in more details</p>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(3);  
-lst.add(1);  
-lst.add(3);
+<h3 class="hk-autoads">Using the for loop</h3>  
 
-for(int i=0; i&lt;lst.size(); i++){  
-    int ele = lst.get(i);
-    System.out.println(ele);
+<pre><code class="language-java">@Test
+public void forIndex() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(1);
+    lst.add(2);
+    lst.add(3);
+
+    for(int i=0; i&lt;lst.size(); i++){
+        int ele = lst.get(i);
+        System.out.println(ele);
+    }
 }
 </code></pre>
 
@@ -254,13 +259,16 @@ for(int i=0; i&lt;lst.size(); i++){
 
 <h3 id="usingtheenhancedforeachloop">Using the enhanced for-each loop</h3>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(3);  
-lst.add(1);  
-lst.add(3);
+<pre><code class="language-java">@Test
+public void forEach() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(1);
+    lst.add(2);
+    lst.add(3);
 
-for(int ele : lst){  
-    System.out.println(ele);
+    for(int ele : lst){
+        System.out.println(ele);
+    }
 }
 </code></pre>
 
@@ -268,14 +276,17 @@ for(int ele : lst){
 
 <h3 id="usingtheiterator">Using the <code>iterator</code></h3>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(3);  
-lst.add(1);  
-lst.add(3);
+<pre><code class="language-java">@Test
+public void iterator() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(1);
+    lst.add(2);
+    lst.add(3);
 
-Iterator&lt;Integer&gt; iterator = lst.iterator();  
-while (iterator.hasNext()){  
-    System.out.println(iterator.next());
+    Iterator&lt;Integer&gt; iterator = lst.iterator();
+    while (iterator.hasNext()){
+        System.out.println(iterator.next());
+    }
 }
 </code></pre>
 
@@ -285,19 +296,25 @@ while (iterator.hasNext()){
 
 <p><code>NullPointerException</code> will be thrown if the specified consumer action or the caller list is null</p>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(3);  
-lst.add(1);  
-lst.add(3);
+<pre><code class="language-java">@Test
+public void forEachConsumer() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
+    lst.add(1);
+    lst.add(2);
+    lst.add(3);
 
-lst.forEach(System.out::println);  
+    lst.forEach(System.out::println);
+}
 </code></pre>
 
 <p><br>  </p>
 
-<h3 id="conclusion">Conclusion</h3>
+<h2 id="conclusion">Conclusion</h2>
 
-<p>In this tutorial, we learned some ways to iterate over an ArrayList by using the <code>for</code> loop, <code>for-each</code> loop, iterator and Java 8+ forEach(Consumer)</p>
+<p>In this tutorial, we learned some ways to iterate over an ArrayList by using the <code>for</code> loop, <code>for-each</code> loop, iterator and Java 8+ forEach(Consumer). You can find below the full source code</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/ArrayListIterateTest.java">
+</code></pre>
             
             <div class="post__tags">
               <a href="../tag/java/">Java</a>
