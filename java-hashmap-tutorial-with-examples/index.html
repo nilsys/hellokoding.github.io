@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-hashmap-tutorial-with-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/JavaCollections_HashMap.png">
     <meta property="article:published_time" content="2019-06-09T03:31:38.000Z">
-    <meta property="article:modified_time" content="2019-08-25T15:27:34.000Z">
+    <meta property="article:modified_time" content="2019-09-29T12:17:30.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java HashMap Tutorial with Examples",
     "url": "http://hellokoding.com/java-hashmap-tutorial-with-examples/",
     "datePublished": "2019-06-09T03:31:38.000Z",
-    "dateModified": "2019-08-25T15:27:34.000Z",
+    "dateModified": "2019-09-29T12:17:30.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/JavaCollections_HashMap.png",
     "keywords": "Java",
     "description": "Java HashMap is an unordered key-value pair mappings collection, implementation of the java.util.Map interface and is a part of the Java Collections framework HashMap has the following attributes Backed by hash table data structure No guarantees to the iteration order No duplicate keys. Permits one null key and"
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java HashMap Tutorial with Examples</h1>
-            <time class="post__date" datetime="2019-08-25">Last modified @ 25 August 2019</time>
+            <time class="post__date" datetime="2019-09-29">Last modified @ 29 September 2019</time>
           </header>
 
           <div class="post-content">
@@ -234,8 +234,6 @@ ghost.init({
             </div>
 
             <p>Java HashMap is an unordered key-value pair mappings collection, implementation of the java.util.Map interface and is a part of the Java Collections framework</p>
-
-<p><img src="../content/images/2019/08/Screenshot-2019-08-25-at-11-26-55-PM.png" alt=""></p>
 
 <p>HashMap has the following attributes</p>
 
@@ -247,20 +245,112 @@ ghost.init({
 <li><p>Unsynchronized implementation. In multi-threading environment with at least one thread modifies the list, it must be synchronized externally</p></li>
 </ul>
 
-<p>The below examples give you basic usages of HashMap. Some of the outputs may be different on your side as HashMap has no guarantees to the iteration order</p>
+<p>Lets walk through this tutorial to explore them in more details</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/main/java/com/hellokoding/java/collections/HashMapExample.java">
+<h3 id="theclasshierarchy">The class hierarchy</h3>
+
+<p>HashMap implements the Map interface and inherits AbstractMap which also implements the Map interface</p>
+
+<p><img src="../content/images/2019/08/Screenshot-2019-08-25-at-11-26-55-PM.png" alt=""></p>
+
+<h3 id="declareahashmap">Declare a HashMap</h3>
+
+<p>As the result from the class hierarchy, you can declare a HashMap with one of the following ways</p>
+
+<pre><code class="language-java">@Test
+public void declare() {  
+    Map&lt;String, Integer&gt; map1 = new HashMap&lt;&gt;();
+    assertThat(map1).isInstanceOf(HashMap.class);
+
+    HashMap&lt;String, Integer&gt; map2 = new HashMap&lt;&gt;();
+    assertThat(map2).isInstanceOf(HashMap.class);
+}
 </code></pre>
 
-<p>You can learn using HashMap in more details with these tutorials</p>
+<h3 id="createandinitializehttpshellokodingcomcreateandinitializeahashmapinjava"><a href="https://hellokoding.com/create-and-initialize-a-hashmap-in-java/">Create and Initialize</a></h3>
 
-<ul>
-<li><p><a href="https://hellokoding.com/create-and-initialize-a-hashmap-in-java/">Create and Initialize a HashMap</a> by using its constructors, <code>put</code> and <code>putAll</code> methods</p></li>
-<li><p><a href="https://hellokoding.com/iterate-a-hashmap-in-java/">Iterate a HashMap</a> by using for-each loop and Java 8+ <code>forEach</code> default method of <code>Map</code> and <code>Iterable</code> interfaces to iterate over HashMap's <code>entrySet()</code>, <code>keySet()</code> and <code>values()</code></p></li>
-<li><p><a href="https://hellokoding.com/query-a-hashmap-in-java/">Query a HashMap</a> including get all HashMap keys and values, get value by the specified key, check if key or value existing, get size and check if the HashMap is empty</p></li>
-<li><p><a href="https://hellokoding.com/modify-a-hashmap-in-java/">Modify a HashMap</a> by using <code>put</code> methods to add key-value pairs, <code>replace</code> methods to update values and <code>remove</code> methods to remove entries</p></li>
-<li><p><a href="https://hellokoding.com/sort-a-hashmap-in-java/">Sort a HashMap</a> by using <code>TreeMap</code>, <code>TreeSet</code> and <code>ArrayList</code></p></li>
-</ul>
+<p>You can create a new HashMap in Java by using the new operator and then initialize it by using put, Java 8+ putIfAbsent or putAll method</p>
+
+<pre><code class="language-java">@Test
+public void initializeWithPutIfAbsent() {  
+    // Create a new HashMap
+    Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
+
+    // Add elements to HashMap
+    map.putIfAbsent("k1", 1);
+
+    // Can add null key and value
+    map.putIfAbsent(null, 2);
+    map.putIfAbsent("k3", null);
+
+    // Duplicate key will be ignored
+    map.putIfAbsent("k1", 10);
+
+    assertThat(map).hasSize(3);
+}
+</code></pre>
+
+<p><a href="https://hellokoding.com/create-and-initialize-a-hashmap-in-java/">Learn more</a></p>
+
+<h3 id="iterateahashmaphttpshellokodingcomiterateahashmapinjava"><a href="https://hellokoding.com/iterate-a-hashmap-in-java/">Iterate a HashMap</a></h3>
+
+<p>Iterate a HashMap by using for-each loop and Java 8+ forEach default method of Map and Iterable interfaces to iterate over HashMap's entrySet(), keySet() and values()</p>
+
+<pre><code class="language-java">@Test
+public void iterate() {  
+    Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;(Map.of("k1", 1, "k2", 2));
+    map.forEach((k, v) -&gt; System.out.printf("%s=%d%s", k, v, System.lineSeparator()));
+}
+</code></pre>
+
+<p><a href="https://hellokoding.com/iterate-a-hashmap-in-java/">Learn more</a></p>
+
+<h3 id="queryandfilter"><a href="index.html">Query and Filter</a></h3>
+
+<p>Filter HashMap values by using Java 8+ Stream API</p>
+
+<pre><code class="language-java">@Test
+public void filter() {  
+    Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;(Map.of("k1", 1, "k2", 2));
+    Integer[] arr = map.values().stream().filter(v -&gt; v &gt; 1).toArray(Integer[]::new);
+
+    assertThat(arr).contains(2);
+}
+</code></pre>
+
+<p><a href="https://hellokoding.com/query-a-hashmap-in-java/">Learn more</a></p>
+
+<h3 id="modifyhttpshellokodingcommodifyahashmapinjava"><a href="https://hellokoding.com/modify-a-hashmap-in-java/">Modify</a></h3>
+
+<p>Modify a HashMap by using <code>put</code> methods to add key-value pairs, <code>replace</code> methods to update values and <code>remove</code> methods to remove entries</p>
+
+<pre><code class="language-java">@Test
+public void replace() {  
+    Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
+    map.put("k1", 1);
+    map.put("k2", 2);
+
+    map.replace("k2", 20);
+    map.replace("k3", 3);
+
+    assertThat(map).contains(Map.entry("k1", 1), Map.entry("k2", 20));
+}
+</code></pre>
+
+<p><a href="https://hellokoding.com/modify-a-hashmap-in-java/">Learn more</a></p>
+
+<h3 id="sorthttpshellokodingcomsortahashmapinjava"><a href="https://hellokoding.com/sort-a-hashmap-in-java/">Sort</a></h3>
+
+<p>Sort a HashMap by using <code>TreeMap</code>, <code>TreeSet</code> and <code>ArrayList</code></p>
+
+<p><a href="https://hellokoding.com/sort-a-hashmap-in-java/">Learn more</a></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this tutorial, we had a quick overview of HashMap hierarchy, features and operations. You can find below the full example source code</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/HashMapOverviewTest.java">
+</code></pre>
             
             <div class="post__tags">
               <a href="../tag/java/">Java</a>
