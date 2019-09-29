@@ -146,6 +146,10 @@ border-left: 2px solid;
 	font-size: 30px;
 }
 
+.post-content h3{
+	margin-top: 60px;
+}
+
 @media only screen and (min-width: 64.063em){
 	.post__title {
 			font-size: 34px;
