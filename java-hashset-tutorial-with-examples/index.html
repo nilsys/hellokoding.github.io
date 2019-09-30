@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-hashset-tutorial-with-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/java-collection-hashset.png">
     <meta property="article:published_time" content="2019-06-05T13:13:02.000Z">
-    <meta property="article:modified_time" content="2019-08-25T15:06:44.000Z">
+    <meta property="article:modified_time" content="2019-09-30T06:48:28.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java HashSet Tutorial with Examples",
     "url": "http://hellokoding.com/java-hashset-tutorial-with-examples/",
     "datePublished": "2019-06-05T13:13:02.000Z",
-    "dateModified": "2019-08-25T15:06:44.000Z",
+    "dateModified": "2019-09-30T06:48:28.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/java-collection-hashset.png",
     "keywords": "Java",
     "description": "Java HashSet is an unordered and no-duplicate elements collection, implementation of the java.util.Set interface and is a part of the Java Collections Framework HashSet has the following attributes Backed by hash table data structure (actually a HashMap instance) No guarantees to the iteration order Contains no duplicate elements,"
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java HashSet Tutorial with Examples</h1>
-            <time class="post__date" datetime="2019-08-25">Last modified @ 25 August 2019</time>
+            <time class="post__date" datetime="2019-09-30">Last modified @ 30 September 2019</time>
           </header>
 
           <div class="post-content">
@@ -234,8 +234,6 @@ ghost.init({
             </div>
 
             <p>Java HashSet is an unordered and no-duplicate elements collection, implementation of the java.util.Set interface and is a part of the Java Collections Framework</p>
-
-<p><img src="../content/images/2019/08/Screenshot-2019-08-25-at-11-05-25-PM.png" alt=""></p>
 
 <p>HashSet has the following attributes</p>
 
@@ -247,21 +245,144 @@ ghost.init({
 <li><p>Unsynchronized implementation. In multi-threading environment with at least one thread modifies the list, it must be synchronized externally</p></li>
 </ul>
 
-<p>The below examples give you some basic usages of HashSet</p>
+<p>Lets walk through this tutorial to explore them in more details</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/main/java/com/hellokoding/java/collections/HashSetExample.java">
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="theclasshierarchy">The class hierarchy</h3>
+
+<p>HashSet implements the Set interface which extends from Collection and Iterable interfaces hierarchically</p>
+
+<p>HashSet also inherits from AbstractSet (an abstract implementation of the Set interface) and AbstractCollection (an abstract implementation of the Collection interface) hierarchically</p>
+
+<p><img src="../content/images/2019/08/Screenshot-2019-08-25-at-11-05-25-PM.png" alt=""></p>
+
+<h3 id="declareahashset">Declare a HashSet</h3>
+
+<p>As a result from the class hierarchy, you can declare a HashSet with one of the following ways</p>
+
+<pre><code class="language-java">@Test
+public void declare() {  
+    Set&lt;Integer&gt; set1 = new HashSet&lt;&gt;();
+    assertThat(set1).isInstanceOf(HashSet.class);
+
+    Collection&lt;Integer&gt; set2 = new HashSet&lt;&gt;();
+    assertThat(set2).isInstanceOf(HashSet.class);
+
+    Iterable&lt;Integer&gt; set3 = new HashSet&lt;&gt;();
+    assertThat(set3).isInstanceOf(HashSet.class);
+
+    HashSet&lt;Integer&gt; set4 = new HashSet&lt;&gt;();
+}
 </code></pre>
 
-<p><br> <br>
-You can learn using HashSet in more details with these tutorials</p>
+<p></p><div class="hk-autoads"></div>  
 
-<ul>
-<li><p><a href="https://hellokoding.com/create-and-initialize-a-hashset-in-java/">Create and Initialize an HashSet</a> by using its constructors, <code>add(Object)</code> and <code>addAll(Collection)</code> methods</p></li>
-<li><p><a href="https://hellokoding.com/iterate-a-hashset-set-in-java/">Iterate a HashSet</a> by using iterator, for-each loop and Java 8+ <code>forEach(Consumer)</code> method of <code>Iterable</code> interfaces</p></li>
-<li><p><a href="https://hellokoding.com/find-elements-in-a-hashset/">Query a HashSet</a> including find elements / objects, check if existing elements / objects and query the size of a HashSet</p></li>
-<li><p><a href="https://hellokoding.com/java-hashset-remove-and-update-object/">Modify a HashSet</a> by using <code>remove</code> and <code>add</code> methods to remove and update elements / objects in a HashSet</p></li>
-<li><p><a href="https://hellokoding.com/sort-a-hashset-in-java/">Sort a HashSet</a> by using <code>TreeSet</code>, <code>ArrayList</code> instance's <code>sort(Comparator)</code>, <code>Collections.sort(List)</code> or <code>Collections.sort(List, Comparator)</code> methods in conjunction with <code>Comparable</code> and <code>Comparator</code> interfaces to control over the sort order</p></li>
-</ul>
+<h3 id="createandinitializehttpshellokodingcomcreateandinitializeahashsetinjava"><a href="https://hellokoding.com/create-and-initialize-a-hashset-in-java/">Create and Initialize</a></h3>
+
+<p>Create a new HashSet by using the <code>new</code> operator and initialize it by using constructors, <code>add</code> and <code>addAll</code> methods</p>
+
+<pre><code class="language-java">@Test
+public void initializeWithAdd() {  
+    // Create a new HashSet
+    Set&lt;Integer&gt; set = new HashSet&lt;&gt;();
+
+    // Add elements to HashSet
+    set.add(3);
+    set.add(1);
+    set.add(2);
+
+    // Can add null element
+    set.add(null);
+
+    // Duplicate element will be ignored
+    set.add(2);
+
+    assertThat(set).hasSize(4);
+
+    // The output ordering will be vary as Set is not reserved the insertion order
+    System.out.println(set);
+}
+</code></pre>
+
+<p><a href="https://hellokoding.com/create-and-initialize-a-hashset-in-java/">Learn more</a></p>
+
+<h3 id="iteratehttpshellokodingcomiterateahashsetsetinjava"><a href="https://hellokoding.com/iterate-a-hashset-set-in-java/">Iterate</a></h3>
+
+<p>Iterate over a HashSet by using Java 8+ forEach(Consumer)</p>
+
+<pre><code class="language-java">@Test
+public void iterate() {  
+    Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Set.of(3, 1, 2));
+
+    set.forEach(ele -&gt; System.out.printf("%d ", ele));
+}
+</code></pre>
+
+<p><a href="https://hellokoding.com/iterate-a-hashset-set-in-java/">Learn more</a></p>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="queryandfilterahashsethttpshellokodingcomfindelementsinahashset"><a href="https://hellokoding.com/find-elements-in-a-hashset/">Query and Filter a HashSet</a></h3>
+
+<p>Filter a HashSet by using Java 8+ Stream APIs</p>
+
+<pre><code class="language-java">@Test
+public void filter() {  
+    Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Set.of(3, 1, 2));
+    Integer[] arr = set.stream().filter(e -&gt; e &gt;= 2).toArray(Integer[]::new);
+
+    assertThat(arr).contains(2, 3);
+}
+</code></pre>
+
+<p><a href="https://hellokoding.com/find-elements-in-a-hashset/">Learn more</a></p>
+
+<h3 id="modifyhttpshellokodingcomjavahashsetremoveandupdateobject"><a href="https://hellokoding.com/java-hashset-remove-and-update-object/">Modify</a></h3>
+
+<p>Remove multiple objects from a HashSet with Java 8+ <code>removeIf(Predicate)</code></p>
+
+<pre><code class="language-java">@Test
+public void removeIf() {  
+    Set&lt;Integer&gt; set = new HashSet&lt;&gt;();
+    set.add(3);
+    set.add(1);
+    set.add(2);
+
+    boolean result = set.removeIf(e -&gt; e &gt; 3);
+    assertThat(result).isFalse();
+    assertThat(set).hasSize(3);
+
+    result = set.removeIf(e -&gt; e &gt; 1);
+    assertThat(result).isTrue();
+    assertThat(set).hasSize(1);
+}
+</code></pre>
+
+<p><a href="https://hellokoding.com/java-hashset-remove-and-update-object/">Learn more</a></p>
+
+<h3 id="sortahashsethttpshellokodingcomsortahashsetinjava"><a href="https://hellokoding.com/sort-a-hashset-in-java/">Sort a HashSet</a></h3>
+
+<p>Sort a HashSet by using TreeSet</p>
+
+<pre><code class="language-java">@Test
+public void sort() {  
+    Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Set.of(3, 1, 2));
+    Set&lt;Integer&gt; sortedSet = new TreeSet&lt;&gt;(set);
+
+    // Asserts that the set contains the given values in order
+    assertThat(sortedSet).containsExactly(1, 2, 3);
+}
+</code></pre>
+
+<p><a href="https://hellokoding.com/sort-a-hashset-in-java/">Learn more</a></p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this tutorial, we learned about HashSet class hierarchy, features and operations. You can find below the full source code</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/main/java/com/hellokoding/java/collections/HashSetOverviewTest.java">
+</code></pre>
             
             <div class="post__tags">
               <a href="../tag/java/">Java</a>
