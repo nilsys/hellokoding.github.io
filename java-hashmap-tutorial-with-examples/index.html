@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-hashmap-tutorial-with-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/JavaCollections_HashMap.png">
     <meta property="article:published_time" content="2019-06-09T03:31:38.000Z">
-    <meta property="article:modified_time" content="2019-09-29T12:25:26.000Z">
+    <meta property="article:modified_time" content="2019-09-30T03:35:26.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java HashMap Tutorial with Examples",
     "url": "http://hellokoding.com/java-hashmap-tutorial-with-examples/",
     "datePublished": "2019-06-09T03:31:38.000Z",
-    "dateModified": "2019-09-29T12:25:26.000Z",
+    "dateModified": "2019-09-30T03:35:26.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/JavaCollections_HashMap.png",
     "keywords": "Java",
     "description": "Java HashMap is an unordered key-value pair mappings collection, implementation of the java.util.Map interface and is a part of the Java Collections framework HashMap has the following attributes Backed by hash table data structure No guarantees to the iteration order No duplicate keys. Permits one null key and"
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java HashMap Tutorial with Examples</h1>
-            <time class="post__date" datetime="2019-09-29">Last modified @ 29 September 2019</time>
+            <time class="post__date" datetime="2019-09-30">Last modified @ 30 September 2019</time>
           </header>
 
           <div class="post-content">
@@ -265,7 +265,6 @@ public void declare() {
     assertThat(map1).isInstanceOf(HashMap.class);
 
     HashMap&lt;String, Integer&gt; map2 = new HashMap&lt;&gt;();
-    assertThat(map2).isInstanceOf(HashMap.class);
 }
 </code></pre>
 
@@ -276,21 +275,26 @@ public void declare() {
 <p>You can create a new HashMap in Java by using the new operator and then initialize it by using put, Java 8+ putIfAbsent or putAll method</p>
 
 <pre><code class="language-java">@Test
-public void initializeWithPutIfAbsent() {  
+public void initializeWithPut() {  
     // Create a new HashMap
     Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
 
     // Add elements to HashMap
-    map.putIfAbsent("k1", 1);
+    map.put("k1", 1);
+    map.put("k2", 2);
+    map.put("k3", 3);
 
     // Can add null key and value
-    map.putIfAbsent(null, 2);
-    map.putIfAbsent("k3", null);
+    map.put(null, 4);
+    map.put("k4", null);
 
-    // Duplicate key will be ignored
-    map.putIfAbsent("k1", 10);
+    // Value of duplicate key will be overridden
+    map.put("k1", 10);
 
-    assertThat(map).hasSize(3);
+    assertThat(map).hasSize(5);
+
+    // The output ordering will be vary as Map is not reserved the insertion order
+    System.out.println(map);
 }
 </code></pre>
 
