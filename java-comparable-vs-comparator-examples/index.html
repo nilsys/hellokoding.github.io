@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-comparable-vs-comparator-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/JavaCore_ComparablevsComparator.png">
     <meta property="article:published_time" content="2019-06-09T14:02:24.000Z">
-    <meta property="article:modified_time" content="2019-10-01T15:36:49.000Z">
+    <meta property="article:modified_time" content="2019-10-01T15:39:17.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java Comparable vs Comparator",
     "url": "http://hellokoding.com/java-comparable-vs-comparator-examples/",
     "datePublished": "2019-06-09T14:02:24.000Z",
-    "dateModified": "2019-10-01T15:36:49.000Z",
+    "dateModified": "2019-10-01T15:39:17.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/JavaCore_ComparablevsComparator.png",
     "keywords": "Java",
     "description": "Comparable is an interface providing the default / natural ordering to the implemented objects in an array or collection (List, Set and Map) Comparator are comparison functional interfaces passed to sort methods such as sort(Comparator) of a List instance and Arrays.sort(Comparator), and passed to SortedSet and SortedMap constructors"
@@ -244,6 +244,8 @@ ghost.init({
 
 <p>Lets walk through this tutorial to explore them in more details</p>
 
+<p></p><div class="hk-autoads"></div>  
+
 <h3 id="implementcomparabletoprovidethedefaultordering">Implement <code>Comparable</code> to provide the default ordering</h3>
 
 <p>By implementing <code>Comparable</code>, you can provide the default ordering to the objects in an array or collection</p>
@@ -282,6 +284,8 @@ public void provideDefaultOrderingWithComparable() {
 }
 </code></pre>
 
+<p></p><div class="hk-autoads"></div>  
+
 <h3 id="usecomparatortoprovidethelocalorderingofnoncomparableobjects">Use <code>Comparator</code> to provide the local ordering of non-<code>Comparable</code> objects</h3>
 
 <p>Without the <code>Comparable</code> implementation, you have to specify explicitly the sorting key function by using <code>Comparator</code> functional interface, every time you sort the objects under an array or collection</p>
@@ -318,6 +322,8 @@ public void provideLocalOrderingWithComparator() {
     }
 }
 </code></pre>
+
+<p></p><div class="hk-autoads"></div>  
 
 <h3 id="usecomparatortooverridethedefaultorderingofcomparable">Use <code>Comparator</code> to override the default ordering of <code>Comparable</code></h3>
 
