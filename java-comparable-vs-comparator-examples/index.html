@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Java Comparable vs Comparator Examples</title>
+  <title>Java Comparable vs Comparator</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,18 +19,18 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Java Comparable vs Comparator Examples">
-    <meta property="og:description" content="Comparable is an interface providing the natural ordering on the implemented objects. List and arrays of them can be sorted automatically by using Collections.sort(List) and Arrays.sort(Object[]) methods Comparator is a comparison functional interface passed to a sort method as Collections.sort(List, Comparator) or Arrays.sort(">
+    <meta property="og:title" content="Java Comparable vs Comparator">
+    <meta property="og:description" content="Comparable is an interface providing the default / natural ordering to the implemented objects in an array or collection (List, Set and Map) Comparator are comparison functional interfaces passed to sort methods such as sort(Comparator) of a List instance and Arrays.sort(Comparator), and passed to SortedSet and SortedMap constructors">
     <meta property="og:url" content="http://hellokoding.com/java-comparable-vs-comparator-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/JavaCore_ComparablevsComparator.png">
     <meta property="article:published_time" content="2019-06-09T14:02:24.000Z">
-    <meta property="article:modified_time" content="2019-06-15T01:14:22.000Z">
+    <meta property="article:modified_time" content="2019-10-01T15:36:49.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Java Comparable vs Comparator Examples">
-    <meta name="twitter:description" content="Comparable is an interface providing the natural ordering on the implemented objects. List and arrays of them can be sorted automatically by using Collections.sort(List) and Arrays.sort(Object[]) methods Comparator is a comparison functional interface passed to a sort method as Collections.sort(List, Comparator) or Arrays.sort(">
+    <meta name="twitter:title" content="Java Comparable vs Comparator">
+    <meta name="twitter:description" content="Comparable is an interface providing the default / natural ordering to the implemented objects in an array or collection (List, Set and Map) Comparator are comparison functional interfaces passed to sort methods such as sort(Comparator) of a List instance and Arrays.sort(Comparator), and passed to SortedSet and SortedMap constructors">
     <meta name="twitter:url" content="http://hellokoding.com/java-comparable-vs-comparator-examples/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/JavaCore_ComparablevsComparator.png">
     <meta name="twitter:label1" content="Written by">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Java Comparable vs Comparator Examples",
+    "headline": "Java Comparable vs Comparator",
     "url": "http://hellokoding.com/java-comparable-vs-comparator-examples/",
     "datePublished": "2019-06-09T14:02:24.000Z",
-    "dateModified": "2019-06-15T01:14:22.000Z",
+    "dateModified": "2019-10-01T15:36:49.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/JavaCore_ComparablevsComparator.png",
     "keywords": "Java",
-    "description": "Comparable is an interface providing the natural ordering on the implemented objects. List and arrays of them can be sorted automatically by using Collections.sort(List) and Arrays.sort(Object[]) methods Comparator is a comparison functional interface passed to a sort method as Collections.sort(List, Comparator) or Arrays.sort("
+    "description": "Comparable is an interface providing the default / natural ordering to the implemented objects in an array or collection (List, Set and Map) Comparator are comparison functional interfaces passed to sort methods such as sort(Comparator) of a List instance and Arrays.sort(Comparator), and passed to SortedSet and SortedMap constructors"
 }
     </script>
 
@@ -224,8 +224,8 @@ ghost.init({
         <article class="post tag-java">
 
           <header class="post__header">
-            <h1 class="post__title">Java Comparable vs Comparator Examples</h1>
-            <time class="post__date" datetime="2019-06-15">Last modified @ 15 June 2019</time>
+            <h1 class="post__title">Java Comparable vs Comparator</h1>
+            <time class="post__date" datetime="2019-10-01">Last modified @ 01 October 2019</time>
           </header>
 
           <div class="post-content">
@@ -233,32 +233,129 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p><code>Comparable</code> is an interface providing the natural ordering on the implemented objects. <code>List</code> and arrays of them can be sorted automatically by using <code>Collections.sort(List)</code> and <code>Arrays.sort(Object[])</code> methods</p>
+            <p><code>Comparable</code> is an interface providing the default / natural ordering to the implemented objects in an array or collection (List, Set and Map)</p>
 
-<p><code>Comparator</code> is a comparison functional interface passed to a sort method as <code>Collections.sort(List, Comparator)</code> or <code>Arrays.sort(Object[], Comparator)</code> to control over the sort order or to provide an ordering for collections of objects that don't have a <code>Comparable</code> natural ordering</p>
+<p><code>Comparator</code> are comparison functional interfaces passed to sort methods such as <code>sort(Comparator)</code> of a List instance and <code>Arrays.sort(Comparator)</code>, and passed to <code>SortedSet</code> and <code>SortedMap</code> constructors  to </p>
 
-<p>Let's define two object classes (one implements <code>Comparable</code> interface and one doesn't) and implement two unit test classes to see the difference in practice</p>
+<ul>
+<li><p>Control the sorting order of <code>Comparable</code> objects with <code>Comparator.naturalOrder()</code> and <code>Comparator.reverseOrder()</code></p></li>
+<li><p>Provide the sorting order of objects with <code>Comparator.comparing*(Function)</code> methods</p></li>
+</ul>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/NonComparableBook.java">
-</code></pre>
+<p>Lets walk through this tutorial to explore them in more details</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/ComparableBook.java">
-</code></pre>
+<h3 id="implementcomparabletoprovidethedefaultordering">Implement <code>Comparable</code> to provide the default ordering</h3>
 
-<p>The above <code>compareTo</code> method provides the default / natural order in ascending  to <code>ComparableBook</code> objects. If you want the default order in descending, try below</p>
+<p>By implementing <code>Comparable</code>, you can provide the default ordering to the objects in an array or collection</p>
 
-<pre><code class="language-java">@Override
-public int compareTo(ComparableBook o) {  
-    return o.title.compareTo(this.title);
+<pre><code class="language-java">@Test
+public void provideDefaultOrderingWithComparable() {  
+    ComparableBook book1 = new ComparableBook(1, "b");
+    ComparableBook book2 = new ComparableBook(2, "c");
+    ComparableBook book3 = new ComparableBook(3, "a");
+
+    List&lt;ComparableBook&gt; list = Arrays.asList(book1, book2, book3);
+    list.sort(Comparator.naturalOrder());
+    assertThat(list).containsExactly(book3, book1, book2);
 }
 </code></pre>
 
-<h2 id="comparableexamples"><code>Comparable</code> examples</h2>
+<p><code>ComparableBook</code> is defined as below</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/ComparableTest.java">
+<pre><code class="language-java">class ComparableBook implements Comparable&lt;ComparableBook&gt; {  
+    int id;
+    String title;
+
+    ComparableBook(int id, String title) {
+        this.id = id;
+        this.title = title;
+    }
+
+    int getId() {
+        return id;
+    }
+
+    @Override
+    public int compareTo(ComparableBook o) {
+        return this.title.compareTo(o.title);
+    }
+}
 </code></pre>
 
-<h2 id="comparatorexamples"><code>Comparator</code> examples</h2>
+<h3 id="usecomparatortoprovidethelocalorderingofnoncomparableobjects">Use <code>Comparator</code> to provide the local ordering of non-<code>Comparable</code> objects</h3>
+
+<p>Without the <code>Comparable</code> implementation, you have to specify explicitly the sorting key function by using <code>Comparator</code> functional interface, every time you sort the objects under an array or collection</p>
+
+<pre><code class="language-java">@Test
+public void provideLocalOrderingWithComparator() {  
+    Book book1 = new Book(1, "b");
+    Book book2 = new Book(2, "c");
+    Book book3 = new Book(3, "a");
+
+    List&lt;Book&gt; list = Arrays.asList(book1, book2, book3);
+    list.sort(Comparator.comparing(Book::getTitle));
+    assertThat(list).containsExactly(book3, book1, book2);
+}
+</code></pre>
+
+<p><code>Book</code> is defined as the following</p>
+
+<pre><code class="language-java">class Book {  
+    int id;
+    String title;
+
+    Book(int id, String title) {
+        this.id = id;
+        this.title = title;
+    }
+
+    int getId() {
+        return id;
+    }
+
+    String getTitle() {
+        return title;
+    }
+}
+</code></pre>
+
+<h3 id="usecomparatortooverridethedefaultorderingofcomparable">Use <code>Comparator</code> to override the default ordering of <code>Comparable</code></h3>
+
+<ul>
+<li>You can change the default sorting direction of <code>Comparable</code> objects by using <code>Comparator.reverseOrder()</code></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void changeDefaultOrderingDirectionWithComparator() {  
+    ComparableBook book1 = new ComparableBook(1, "b");
+    ComparableBook book2 = new ComparableBook(2, "c");
+    ComparableBook book3 = new ComparableBook(3, "a");
+
+    List&lt;ComparableBook&gt; list = Arrays.asList(book1, book2, book3);
+    list.sort(Comparator.reverseOrder());
+    assertThat(list).containsExactly(book2, book1, book3);
+}
+</code></pre>
+
+<ul>
+<li>Override the sorting key of <code>Comparable</code> objects with <code>Comparator.comparing*(Function)</code></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void overrideSortingKeyWithComparator() {  
+    ComparableBook book1 = new ComparableBook(1, "b");
+    ComparableBook book2 = new ComparableBook(2, "c");
+    ComparableBook book3 = new ComparableBook(3, "a");
+
+    List&lt;ComparableBook&gt; list = Arrays.asList(book2, book3, book1);
+    list.sort(Comparator.comparing(ComparableBook::getId));
+    assertThat(list).containsExactly(book1, book2, book3);
+}
+</code></pre>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this tutorial, we learned the difference between Comparable and Comparator and when to use them to sort the underlying objects in an array or collection. You can find below the full source code</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/ComparatorTest.java">
 </code></pre>
@@ -270,7 +367,7 @@ public int compareTo(ComparableBook o) {
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Java%20Comparable%20vs%20Comparator%20Examples&amp;url=http://hellokoding.com/java-comparable-vs-comparator-examples/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Java%20Comparable%20vs%20Comparator&amp;url=http://hellokoding.com/java-comparable-vs-comparator-examples/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
