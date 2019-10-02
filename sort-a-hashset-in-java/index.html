@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/sort-a-hashset-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/JavaCollections_SortaHashSet.png">
     <meta property="article:published_time" content="2019-06-13T05:48:31.000Z">
-    <meta property="article:modified_time" content="2019-09-30T15:23:30.000Z">
+    <meta property="article:modified_time" content="2019-10-02T15:13:59.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Sort a HashSet in Java",
     "url": "http://hellokoding.com/sort-a-hashset-in-java/",
     "datePublished": "2019-06-13T05:48:31.000Z",
-    "dateModified": "2019-09-30T15:23:30.000Z",
+    "dateModified": "2019-10-02T15:13:59.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/JavaCollections_SortaHashSet.png",
     "keywords": "Java",
     "description": "You can&#x27;t sort a HashSet in Java directly as it has no guarantee on the iteration order However, you can get the HashSet elements in sorted order by converting HashSet to TreeSet and ArrayList Lets walk through this tutorial to explore them in more details Sort by converting to TreeSet"
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Sort a HashSet in Java</h1>
-            <time class="post__date" datetime="2019-09-30">Last modified @ 30 September 2019</time>
+            <time class="post__date" datetime="2019-10-02">Last modified @ 02 October 2019</time>
           </header>
 
           <div class="post-content">
@@ -240,6 +240,9 @@ ghost.init({
 <p>Lets walk through this tutorial to explore them in more details</p>
 
 <h2 id="sortbyconvertingtotreeset">Sort by converting to TreeSet</h2>
+
+<pre><code>This section gives you examples with a Set of Integer data, String and other primitive wrapper classes should work as well. If you'd like to sort your defined object, also check the note about Comparable and Comparator at the latter part of this tutorial
+</code></pre>
 
 <p>You can convert a HashSet to TreeSet by using the <code>new</code> operator and TreeSet constructor</p>
 
@@ -272,12 +275,23 @@ public void sortDescWithTreeSet() {
 </code></pre>
 
 <ul>
-<li><p>The underlying objects have to implement the <code>Comparable</code> interface. String and other primitive wrapper classes such as Integer, Long, Float, Double and BigDecimal are implemented <code>Comparable</code> by default</p>
-
-<p><a href="https://hellokoding.com/java-comparable-vs-comparator-examples/">Learn more about Comparable and Comparator</a></p></li>
+<li>Passing <code>Comparator.reverseOrder()</code> into the TreeSet constructor also has the same above effect</li>
 </ul>
 
+<pre><code class="language-java">@Test
+public void sortDescWithTreeSet2() {  
+    Set&lt;Integer&gt; set = new HashSet&lt;&gt;(Set.of(3, 1, 2));
+    NavigableSet&lt;Integer&gt; sortedSet = new TreeSet&lt;&gt;(Comparator.reverseOrder());
+    sortedSet.addAll(set);
+
+    assertThat(sortedSet).containsExactly(3, 2, 1);
+}
+</code></pre>
+
 <h2 id="sortbyconvertingtoarraylist">Sort by converting to ArrayList</h2>
+
+<pre><code>This section gives you examples with a Set of String data, other primitive wrapper classes should work as well. If you'd like to sort your defined object, also check the note about Comparable and Comparator at the latter part of this tutorial
+</code></pre>
 
 <p>You can convert a HashSet to ArrayList by using the <code>new</code> operator and ArrayList constructor</p>
 
@@ -309,13 +323,19 @@ public void sortDescWithArrayList() {
 }
 </code></pre>
 
-<ul>
-<li><p>To sort with <code>Comparator.naturalOrder()</code> and <code>Comparator.reverseOrder()</code>, the underlying objects need implement the <code>Comparable</code> interface</p>
+<h2 id="aboutcomparableandcomparator">About Comparable and Comparator</h2>
 
-<p>If they don't, you can use <code>Comparator.comparing*(Function)</code> to sort in ascending order and <code>Comparator.comparing*(Function). reversed()</code> to sort in descending order</p>
+<ul>
+<li><p>To sort with <code>Comparator.naturalOrder()</code> and <code>Comparator.reverseOrder()</code>, the underlying objects need implement the <code>Comparable</code> interface</p></li>
+<li><p>If they don't, you can use <code>Comparator.comparing*(Function)</code> to extract the sort key and provide ascending order, <code>Comparator.comparing*(Function, Comparator.reverseOrder())</code> and <code>Comparator.comparing*(Function).reversed()</code> to provide sort key in descending order</p></li>
+<li><p>String and other primitive wrapper classes such as Integer, Long, Float, Double and BigInteger are implemented <code>Comparable</code> by default</p>
 
 <p><a href="https://hellokoding.com/java-comparable-vs-comparator-examples/">Learn more about Comparable and Comparator</a></p></li>
 </ul>
+
+<h3 id="thehashsettutorial">The HashSet Tutorial</h3>
+
+<p>You can learn more about other operations on HashSet by following <a href="https://hellokoding.com/java-hashset-tutorial-with-examples/">this tutorial</a></p>
 
 <h2 id="conclusion">Conclusion</h2>
 
