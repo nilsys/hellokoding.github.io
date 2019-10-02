@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Java Comparable vs Comparator</title>
+  <title>Java Comparable and Comparator Tutorial with Examples</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,20 +19,20 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Java Comparable vs Comparator">
+    <meta property="og:title" content="Java Comparable and Comparator Tutorial with Examples">
     <meta property="og:description" content="Comparable is an interface providing the default / natural ordering to the implemented objects in an array or collection (List, Set and Map) Comparator are comparison functional interfaces passed to sort methods such as sort(Comparator) of a List instance and Arrays.sort(Comparator), and passed to SortedSet and SortedMap constructors">
     <meta property="og:url" content="http://hellokoding.com/java-comparable-vs-comparator-examples/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/JavaCore_ComparablevsComparator.png">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_Comparable-Comparator.png">
     <meta property="article:published_time" content="2019-06-09T14:02:24.000Z">
-    <meta property="article:modified_time" content="2019-10-02T05:34:33.000Z">
+    <meta property="article:modified_time" content="2019-10-02T14:05:12.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Java Comparable vs Comparator">
+    <meta name="twitter:title" content="Java Comparable and Comparator Tutorial with Examples">
     <meta name="twitter:description" content="Comparable is an interface providing the default / natural ordering to the implemented objects in an array or collection (List, Set and Map) Comparator are comparison functional interfaces passed to sort methods such as sort(Comparator) of a List instance and Arrays.sort(Comparator), and passed to SortedSet and SortedMap constructors">
     <meta name="twitter:url" content="http://hellokoding.com/java-comparable-vs-comparator-examples/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/JavaCore_ComparablevsComparator.png">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_Comparable-Comparator.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
@@ -60,11 +60,11 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Java Comparable vs Comparator",
+    "headline": "Java Comparable and Comparator Tutorial with Examples",
     "url": "http://hellokoding.com/java-comparable-vs-comparator-examples/",
     "datePublished": "2019-06-09T14:02:24.000Z",
-    "dateModified": "2019-10-02T05:34:33.000Z",
-    "image": "http://hellokoding.com/content/images/2019/06/JavaCore_ComparablevsComparator.png",
+    "dateModified": "2019-10-02T14:05:12.000Z",
+    "image": "http://hellokoding.com/content/images/2019/10/JavaCollections_Comparable-Comparator.png",
     "keywords": "Java",
     "description": "Comparable is an interface providing the default / natural ordering to the implemented objects in an array or collection (List, Set and Map) Comparator are comparison functional interfaces passed to sort methods such as sort(Comparator) of a List instance and Arrays.sort(Comparator), and passed to SortedSet and SortedMap constructors"
 }
@@ -224,7 +224,7 @@ ghost.init({
         <article class="post tag-java">
 
           <header class="post__header">
-            <h1 class="post__title">Java Comparable vs Comparator</h1>
+            <h1 class="post__title">Java Comparable and Comparator Tutorial with Examples</h1>
             <time class="post__date" datetime="2019-10-02">Last modified @ 02 October 2019</time>
           </header>
 
@@ -241,6 +241,8 @@ ghost.init({
 <li><p>Control over the sorting order of <code>Comparable</code> objects with <code>Comparator.naturalOrder()</code> and <code>Comparator.reverseOrder()</code></p></li>
 <li><p>Provide the sorting order of objects with <code>Comparator.comparing*(Function)</code> methods</p></li>
 </ul>
+
+<p><code>Comparator</code> can also be used to implement the <code>Comparable</code> contract. This is the recommended way since Java 8+, especially when you'd like to compare multiple object fields</p>
 
 <p>Both <code>Comparable</code> and <code>Comparator</code> are members of the <a href="https://hellokoding.com/java-collections-framework/">Java Collections Framework</a></p>
 
@@ -332,11 +334,11 @@ public void provideOrderingWithComparator() {
 <h3 id="usecomparatortooverridethedefaultorderingofcomparable">Use <code>Comparator</code> to override the default ordering of <code>Comparable</code></h3>
 
 <ul>
-<li>You can change the default sorting direction of <code>Comparable</code> objects by using <code>Comparator.reverseOrder()</code></li>
+<li>You can reverse the default sorting direction of <code>Comparable</code> objects by using <code>Comparator.reverseOrder()</code></li>
 </ul>
 
 <pre><code class="language-java">@Test
-public void changeDefaultOrderingDirectionWithComparator() {  
+public void reverseTheDefaultOrderingWithComparator() {  
     ComparableBook book1 = new ComparableBook(1, "b");
     ComparableBook book2 = new ComparableBook(2, "c");
     ComparableBook book3 = new ComparableBook(3, "a");
@@ -363,6 +365,93 @@ public void overrideSortKeyWithComparator() {
 }
 </code></pre>
 
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="usecomparatortoimplementcomparetoofcomparableandcomparemultiplefields">Use <code>Comparator</code> to implement <code>compareTo</code> of <code>Comparable</code> and compare multiple fields</h3>
+
+<ul>
+<li>You can use <code>Comparator.comparing</code> to implement the <code>compareTo</code> contract of <code>Comparable</code> interface. The above definition inside <code>ComparableBook</code> can be rewritten like this</li>
+</ul>
+
+<pre><code class="language-java">@Override
+public int compareTo(ComparableBook o) {  
+    //return this.title.compareTo(o.title);
+    return Comparator
+        .comparing(ComparableBook::getTitle)
+        .compare(this, o);
+}
+</code></pre>
+
+<ul>
+<li>It's especially useful when you'd like to compare multiple fields, you can attach multiple <code>thenComparing</code> into the chain after the first <code>comparing</code></li>
+</ul>
+
+<pre><code class="language-java">@Override
+public int compareTo(ComparableBook o) {  
+    //return this.title.compareTo(o.title);
+    return Comparator
+        .comparing(ComparableBook::getTitle)
+        .thenComparing(ComparableBook::getId)
+        .compare(this, o);
+}
+</code></pre>
+
+<ul>
+<li>The multiple multiple fields comparing chain also works well when providing the inline <code>Comparator</code> to the <code>sort</code> methods of a List instance or <code>SortedSet</code> and <code>SortedMap</code> constructors</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void compareMultipleFieldsWithComparator() {  
+    Book book1 = new Book(1, "b");
+    Book book2 = new Book(2, "c");
+    Book book3 = new Book(3, "a");
+
+    List&lt;Book&gt; list = Arrays.asList(book1, book2, book3);
+    list.sort(Comparator
+        .comparing(Book::getTitle)
+        .thenComparing(Book::getId));
+    assertThat(list).containsExactly(book3, book1, book2);
+}
+</code></pre>
+
+<ul>
+<li>You can sort the field in descending order by adding <code>Comparator.reverseOrder()</code> as a second argument on each <code>comparing</code> method</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void reverseTheComparingOfComparator() {  
+    Book book1 = new Book(1, "b");
+    Book book2 = new Book(2, "c");
+    Book book3 = new Book(3, "c");
+
+    List&lt;Book&gt; list = Arrays.asList(book1, book2, book3);
+    list.sort(Comparator
+            .comparing(Book::getTitle, Comparator.reverseOrder())
+            .thenComparing(Book::getId, Comparator.reverseOrder()));
+
+    assertThat(list).containsExactly(book3, book2, book1);
+}
+</code></pre>
+
+<ul>
+<li>The <code>reversed()</code> method has the same above effect but it is only useful when comparing one field</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void reverseTheComparingOfComparator2() {  
+    Book book1 = new Book(1, "b");
+    Book book2 = new Book(2, "c");
+    Book book3 = new Book(3, "a");
+
+    List&lt;Book&gt; list = Arrays.asList(book1, book2, book3);
+    list.sort(Comparator
+            .comparing(Book::getTitle)
+            .reversed());
+
+    assertThat(list).containsExactly(book2, book1, book3);
+}
+</code></pre>
+
 <h2 id="conclusion">Conclusion</h2>
 
 <p>In this tutorial, we learned the difference between Comparable and Comparator and when to use them to sort the underlying objects in an array or collection. You can find below the full source code</p>
@@ -377,7 +466,7 @@ public void overrideSortKeyWithComparator() {
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Java%20Comparable%20vs%20Comparator&amp;url=http://hellokoding.com/java-comparable-vs-comparator-examples/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Java%20Comparable%20and%20Comparator%20Tutorial%20with%20Examples&amp;url=http://hellokoding.com/java-comparable-vs-comparator-examples/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
