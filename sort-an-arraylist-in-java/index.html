@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sort an ArrayList in Java</title>
+  <title>Sort an ArrayList of strings, numbers, dates and objects in Java</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,18 +19,18 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Sort an ArrayList in Java">
-    <meta property="og:description" content="Since Java 8+, to sort an ArrayList, you can use its sort(Comparator) method in conjunction with Comparable and Comparator to control over the sort order Using Comparator.comparing or your defined lambda functions to extract a Comparable sort key from the objects you want to sort For the Comparable">
+    <meta property="og:title" content="Sort an ArrayList of strings, numbers, dates and objects in Java">
+    <meta property="og:description" content="You can sort an ArrayList of strings, numbers, dates and objects by using Collections.sort or using ArrayList instance sort method since Java 8+ Lets walk through this tutorial to see the detail examples Sort an ArrayList of strings, numbers and dates You can use Comparator.naturalOrder() to sort in">
     <meta property="og:url" content="http://hellokoding.com/sort-an-arraylist-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/JavaCollections_SortanArrayList.png">
     <meta property="article:published_time" content="2019-06-13T08:23:01.000Z">
-    <meta property="article:modified_time" content="2019-08-23T16:32:11.000Z">
+    <meta property="article:modified_time" content="2019-10-03T11:09:50.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sort an ArrayList in Java">
-    <meta name="twitter:description" content="Since Java 8+, to sort an ArrayList, you can use its sort(Comparator) method in conjunction with Comparable and Comparator to control over the sort order Using Comparator.comparing or your defined lambda functions to extract a Comparable sort key from the objects you want to sort For the Comparable">
+    <meta name="twitter:title" content="Sort an ArrayList of strings, numbers, dates and objects in Java">
+    <meta name="twitter:description" content="You can sort an ArrayList of strings, numbers, dates and objects by using Collections.sort or using ArrayList instance sort method since Java 8+ Lets walk through this tutorial to see the detail examples Sort an ArrayList of strings, numbers and dates You can use Comparator.naturalOrder() to sort in">
     <meta name="twitter:url" content="http://hellokoding.com/sort-an-arraylist-in-java/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/JavaCollections_SortanArrayList.png">
     <meta name="twitter:label1" content="Written by">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Sort an ArrayList in Java",
+    "headline": "Sort an ArrayList of strings, numbers, dates and objects in Java",
     "url": "http://hellokoding.com/sort-an-arraylist-in-java/",
     "datePublished": "2019-06-13T08:23:01.000Z",
-    "dateModified": "2019-08-23T16:32:11.000Z",
+    "dateModified": "2019-10-03T11:09:50.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/JavaCollections_SortanArrayList.png",
     "keywords": "Java",
-    "description": "Since Java 8+, to sort an ArrayList, you can use its sort(Comparator) method in conjunction with Comparable and Comparator to control over the sort order Using Comparator.comparing or your defined lambda functions to extract a Comparable sort key from the objects you want to sort For the Comparable"
+    "description": "You can sort an ArrayList of strings, numbers, dates and objects by using Collections.sort or using ArrayList instance sort method since Java 8+ Lets walk through this tutorial to see the detail examples Sort an ArrayList of strings, numbers and dates You can use Comparator.naturalOrder() to sort in"
 }
     </script>
 
@@ -224,8 +224,8 @@ ghost.init({
         <article class="post tag-java">
 
           <header class="post__header">
-            <h1 class="post__title">Sort an ArrayList in Java</h1>
-            <time class="post__date" datetime="2019-08-23">Last modified @ 23 August 2019</time>
+            <h1 class="post__title">Sort an ArrayList of strings, numbers, dates and objects in Java</h1>
+            <time class="post__date" datetime="2019-10-03">Last modified @ 03 October 2019</time>
           </header>
 
           <div class="post-content">
@@ -233,93 +233,126 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p>Since Java 8+, to sort an <code>ArrayList</code>, you can use its <code>sort(Comparator)</code> method in conjunction with <code>Comparable</code> and <code>Comparator</code> to control over the sort order</p>
+            <p>You can sort an ArrayList of strings, numbers, dates and objects by using <code>Collections.sort</code> or using ArrayList instance <code>sort</code> method since Java 8+</p>
+
+<p>Lets walk through this tutorial to see the detail examples</p>
+
+<h2 id="sortanarraylistofstringsnumbersanddates">Sort an ArrayList of strings, numbers and dates</h2>
+
+<p>You can use <code>Comparator.naturalOrder()</code> to sort in ascending order and <code>Comparator.reverseOrder()</code> to sort in descending order along with the sort method of an ArrayList instance</p>
 
 <ul>
-<li><p>Using <code>Comparator.comparing</code> or your defined lambda functions to extract a <code>Comparable</code> sort key from the objects you want to sort</p></li>
-<li><p>For the <code>Comparable</code> implemented objects, using <code>Comparator.naturalOrder()</code> to sort in natural order and <code>Comparator.reverseOrder()</code> to sort in reverse order</p></li>
+<li>Sort an ArrayList of strings in alphabetical and reversed order</li>
 </ul>
 
-<h2 id="sortanarraylistofstringsandnumbers">Sort an ArrayList of strings and numbers</h2>
+<pre><code class="language-java">@Test
+public void sortStrings(){  
+    List&lt;String&gt; strings = new ArrayList&lt;&gt;(List.of("c", "a", "b"));
 
-<p>You can use <code>Comparator.naturalOrder()</code> and <code>Comparator.reverseOrder()</code> along with the sort method as <code>String</code> and <code>Number</code> objects such as <code>Integer</code>, <code>Long</code>, <code>Short</code>, <code>Double</code>, <code>Float</code>, <code>Byte</code> are implemented <code>Comparable</code> by default</p>
+    strings.sort(Comparator.naturalOrder());
+    assertThat(strings).containsExactly("a", "b", "c");
 
-<ul>
-<li>Sort in ascending order</li>
-</ul>
-
-<pre><code class="language-java">List&lt;Integer&gt; lst1 = new ArrayList&lt;&gt;();  
-lst1.add(3);  
-lst1.add(1);  
-lst1.add(2);  
-lst1.sort(Comparator.naturalOrder());  
-System.out.println(lst1); // [1, 2, 3]
-
-List&lt;String&gt; lst2 = new ArrayList&lt;&gt;();  
-lst2.add("b");  
-lst2.add("c");  
-lst2.add("a");  
-lst2.sort(Comparator.naturalOrder());  
-System.out.println(lst2); // [a, b, c]
-</code></pre>
-
-<ul>
-<li>Sort in descending order</li>
-</ul>
-
-<pre><code class="language-java">List&lt;Integer&gt; lst1 = new ArrayList&lt;&gt;();  
-lst1.add(3);  
-lst1.add(1);  
-lst1.add(2);  
-lst1.sort(Comparator.reverseOrder());  
-System.out.println(lst1); // [3, 2, 1]
-
-List&lt;String&gt; lst2 = new ArrayList&lt;&gt;();  
-lst2.add("b");  
-lst2.add("c");  
-lst2.add("a");  
-lst2.sort(Comparator.reverseOrder());  
-System.out.println(lst1); // [c, b, a]  
-</code></pre>
-
-<h2 id="sortanarraylistofobjectsbyfieldproperty">Sort an ArrayList of objects by field / property</h2>
-
-<p>Let's say we have two classes, <code>NonComparableBook</code> without <code>Comparable</code> and <code>ComparableBook</code> with <code>Comparable</code> implementation as below</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/NonComparableBook.java">
-</code></pre>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/ComparableBook.java">
-</code></pre>
-
-<p>The above <code>compareTo</code> method provides the default / natural order in ascending to <code>ComparableBook</code> objects by the field <code>title</code>. If you want the default order in descending, try to reverse the operands of <code>compareTo</code></p>
-
-<pre><code class="language-java">@Override
-public int compareTo(ComparableBook o) {  
-    return o.title.compareTo(this.title);
+    strings.sort(Comparator.reverseOrder());
+    assertThat(strings).containsExactly("c", "b", "a");
 }
 </code></pre>
 
-<p>The following test cases show you how to sort an ArrayList of <code>NonComparableBook</code> and <code>ComparableBook</code> objects in ascending and descending order of the field <code>title</code></p>
+<ul>
+<li>Sort an ArrayList of numbers in ascending and descending order</li>
+</ul>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/ArrayListSortingTest.java">
+<pre><code class="language-java">public void sortNumbers() {  
+    List&lt;Integer&gt; numbers = new ArrayList&lt;&gt;(List.of(3, 1, 2));
+
+    numbers.sort(Comparator.naturalOrder());
+    assertThat(numbers).containsExactly(1, 2, 3);
+
+    numbers.sort(Comparator.reverseOrder());
+    assertThat(numbers).containsExactly(3, 2, 1);
+}
 </code></pre>
 
-<h2 id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li>Sort an ArrayList of dates in chronological and reversed order</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void sortDates() {  
+    LocalDate ld1 = LocalDate.of(2019, 3, 1);
+    LocalDate ld2 = LocalDate.of(2019, 1, 1);
+    LocalDate ld3 = LocalDate.of(2019, 2, 1);
+    List&lt;LocalDate&gt; dates = new ArrayList&lt;&gt;(List.of(ld1, ld2, ld3));
+
+    dates.sort(Comparator.naturalOrder());
+    assertThat(dates).containsExactly(ld2, ld3, ld1);
+
+    dates.sort(Comparator.reverseOrder());
+    assertThat(dates).containsExactly(ld1, ld3, ld2);
+}
+</code></pre>
+
+<h2 id="sortanarraylistofobjectsbyoneormultiplefields">Sort an ArrayList of objects by one or multiple fields</h2>
+
+<ul>
+<li><p>Sort an ArrayList of objects by one field with <code>Comparator.comparing(keyExtractor, keyComparator)</code></p>
+
+<p><code>keyExtractor</code> is the function used to extract the sort key</p>
+
+<p><code>keyComparator</code> is the optional <code>Comparator</code>, the default is <code>Comparator.naturalOrder</code>, used to compare the sort key</p></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void sortOneField() {  
+    Book book1 = new Book(1, "b");
+    Book book2 = new Book(2, "c");
+    Book book3 = new Book(3, "a");
+
+    List&lt;Book&gt; list = Arrays.asList(book1, book2, book3);
+    list.sort(Comparator.comparing(Book::getTitle));
+
+    assertThat(list).containsExactly(book3, book1, book2);
+}
+</code></pre>
+
+<ul>
+<li>Sort an ArrayList of objects by multiple fields with <code>Comparator.comparing(keyExtractor, keyComparator).thenComparing(keyExtractor, keyComparator)</code></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void sortMultipleFields() {  
+    Book book1 = new Book(1, "b");
+    Book book2 = new Book(2, "c");
+    Book book3 = new Book(3, "c");
+
+    List&lt;Book&gt; list = Arrays.asList(book1, book2, book3);
+    list.sort(Comparator
+        .comparing(Book::getTitle, Comparator.reverseOrder())
+        .thenComparing(Book::getId, Comparator.reverseOrder()));
+
+    assertThat(list).containsExactly(book3, book2, book1);
+}
+</code></pre>
+
+<ul>
+<li><p>You can implement the <code>compareTo</code> method contract of <code>Comparable</code> interface to provide the default sort key extractor and default ordering to the underlying objects, if you don't like to specify the <code>Comparator.comparing</code> chain explicitly when executing the sort method</p>
+
+<p><a href="https://hellokoding.com/java-comparable-vs-comparator-examples/">Learn more about Comparable and Comparator</a></p></li>
+</ul>
+
+<h3 id="troubleshooting">Troubleshooting</h3>
 
 <ul>
 <li><code>ArrayList</code> accepts <code>null</code> elements, however, <code>NullPointerException</code> will be thrown if you try to sort one contained null elements</li>
 </ul>
 
-<pre><code class="language-java">List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();  
-lst.add(3);  
-lst.add(1);  
-lst.add(2);  
-lst.add(null);  
-lst.sort(Comparator.naturalOrder()); // throws NullPointerException
-</code></pre>
+<pre><code class="language-java">@Test
+public void sortNullObject() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;(Arrays.asList(3, 1, null));
 
-<p><br>  </p>
+    ThrowableAssert.ThrowingCallable c = () -&gt; lst.sort(Comparator.naturalOrder());
+    assertThatThrownBy(c).isInstanceOf(NullPointerException.class);
+}
+</code></pre>
 
 <h3 id="notes">Notes</h3>
 
@@ -327,11 +360,12 @@ lst.sort(Comparator.naturalOrder()); // throws NullPointerException
 <li>You can also use <code>Collection.sort</code> methods to sort a List in Java. They internally call to the specified list's sort method which in turn also dispatches to the Java 8+ <code>sort(Comparator)</code> default method of the <code>List</code> interface</li>
 </ul>
 
-<p><br>  </p>
+<h2 id="conclusion">Conclusion</h2>
 
-<h3 id="conclusion">Conclusion</h3>
+<p>In this tutorial, we learned using <code>ArrayList</code>'s <code>sort(Comparator)</code> method to sort an ArrayList of strings, numbers, dates and objects. You can find below the full source code</p>
 
-<p>In this tutorial, we learned using <code>ArrayList</code>'s <code>sort(Comparator)</code> method as well as with <code>Comparable</code> and <code>Comparator</code> interfaces to sort an ArrayList of strings, numbers and objects</p>
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/ArrayListSortingTest.java">
+</code></pre>
             
             <div class="post__tags">
               <a href="../tag/java/">Java</a>
@@ -340,7 +374,7 @@ lst.sort(Comparator.naturalOrder()); // throws NullPointerException
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Sort%20an%20ArrayList%20in%20Java&amp;url=http://hellokoding.com/sort-an-arraylist-in-java/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Sort%20an%20ArrayList%20of%20strings%2C%20numbers%2C%20dates%20and%20objects%20in%20Java&amp;url=http://hellokoding.com/sort-an-arraylist-in-java/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
