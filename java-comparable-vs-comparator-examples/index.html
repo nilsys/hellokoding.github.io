@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-comparable-vs-comparator-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_Comparable-Comparator.png">
     <meta property="article:published_time" content="2019-06-09T14:02:24.000Z">
-    <meta property="article:modified_time" content="2019-10-02T14:31:21.000Z">
+    <meta property="article:modified_time" content="2019-10-03T13:34:56.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java Comparable and Comparator Tutorial with Examples",
     "url": "http://hellokoding.com/java-comparable-vs-comparator-examples/",
     "datePublished": "2019-06-09T14:02:24.000Z",
-    "dateModified": "2019-10-02T14:31:21.000Z",
+    "dateModified": "2019-10-03T13:34:56.000Z",
     "image": "http://hellokoding.com/content/images/2019/10/JavaCollections_Comparable-Comparator.png",
     "keywords": "Java",
     "description": "Comparable is an interface providing the default / natural ordering to the implemented objects in an array or collection (List, Set and Map) Comparator are comparison functional interfaces passed to sort methods such as sort(Comparator) of a List instance and Arrays.sort(Comparator), and passed to SortedSet and SortedMap constructors"
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java Comparable and Comparator Tutorial with Examples</h1>
-            <time class="post__date" datetime="2019-10-02">Last modified @ 02 October 2019</time>
+            <time class="post__date" datetime="2019-10-03">Last modified @ 03 October 2019</time>
           </header>
 
           <div class="post-content">
@@ -239,7 +239,7 @@ ghost.init({
 
 <ul>
 <li><p>Control over the sorting order of <code>Comparable</code> objects with <code>Comparator.naturalOrder()</code> and <code>Comparator.reverseOrder()</code></p></li>
-<li><p>Provide the sorting order of objects with <code>Comparator.comparing*(Function)</code> methods</p></li>
+<li><p>Provide the sorting order of objects with <code>Comparator.comparing(keyExtractor, keyComparator)</code> methods</p></li>
 </ul>
 
 <p><code>Comparator</code> can also be used to implement the <code>Comparable</code> contract. This is the recommended way since Java 8+, especially when you'd like to compare multiple object fields</p>
@@ -290,14 +290,15 @@ public void provideDefaultOrderingWithComparable() {
 }
 </code></pre>
 
-<pre><code>There's a better way for you to implement `compareTo`, check out the latter part of this tutorial  
-</code></pre>
+<p>If you'd like to compare multiple fields when implementing <code>compareTo</code>, check out the latter part of this tutorial</p>
 
 <p></p><div class="hk-autoads"></div>  
 
 <h3 id="usecomparatortoprovidetheorderingofnoncomparableobjects">Use <code>Comparator</code> to provide the ordering of non-<code>Comparable</code> objects</h3>
 
 <p>Without the <code>Comparable</code> implementation, you have to specify explicitly the sorting key function by using <code>Comparator</code> functional interface, every time you sort the objects under an array or collection</p>
+
+<p>The following example uses <code>Comparator.comparing(keyExtractor, keyComparator)</code> to provide the ordering. <code>keyExtractor</code> is a function used to extract the sort key. <code>keyComparator</code> is an optional Comparator, the default is Comparator.naturalOrder, used to compare the sort key</p>
 
 <pre><code class="language-java">@Test
 public void provideOrderingWithComparator() {  
@@ -353,7 +354,7 @@ public void reverseTheDefaultOrderingWithComparator() {
 </code></pre>
 
 <ul>
-<li>Override the sorting key of <code>Comparable</code> objects with <code>Comparator.comparing*(Function)</code></li>
+<li>Override the sorting key of <code>Comparable</code> objects with <code>Comparator.comparing(keyExtractor, keyComparator)</code></li>
 </ul>
 
 <pre><code class="language-java">@Test
