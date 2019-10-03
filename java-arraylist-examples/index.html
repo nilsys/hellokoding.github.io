@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-arraylist-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/java-collections-arraylist.png">
     <meta property="article:published_time" content="2019-04-26T15:13:39.000Z">
-    <meta property="article:modified_time" content="2019-09-29T12:25:15.000Z">
+    <meta property="article:modified_time" content="2019-10-03T11:13:04.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java ArrayList Tutorial with Examples",
     "url": "http://hellokoding.com/java-arraylist-examples/",
     "datePublished": "2019-04-26T15:13:39.000Z",
-    "dateModified": "2019-09-29T12:25:15.000Z",
+    "dateModified": "2019-10-03T11:13:04.000Z",
     "image": "http://hellokoding.com/content/images/2019/05/java-collections-arraylist.png",
     "keywords": "Java",
     "description": "ArrayList is a resizable-array implementation of the java.util.List interface, a part of the Java Collection Framework ArrayList has the following features Backed by dynamic array data structure, its capacity auto grows internally Allow null and duplicate elements Elements are positioned as their insertion order Zero based integer index,"
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java ArrayList Tutorial with Examples</h1>
-            <time class="post__date" datetime="2019-09-29">Last modified @ 29 September 2019</time>
+            <time class="post__date" datetime="2019-10-03">Last modified @ 03 October 2019</time>
           </header>
 
           <div class="post-content">
@@ -368,7 +368,22 @@ public void insert() {
 
 <h3 id="sorthttpshellokodingcomsortanarraylistinjava"><a href="https://hellokoding.com/sort-an-arraylist-in-java/">Sort</a></h3>
 
-<p>Sort an ArrayList by using its instance's <code>sort(Comparator)</code> method in conjunction with <code>Comparable</code> and <code>Comparator</code> interfaces to control over the sort order</p>
+<p>Sort an ArrayList of objects by using its instance's <code>sort(Comparator)</code> method in conjunction with <code>Comparable</code> and <code>Comparator</code> interfaces to control over the sort order</p>
+
+<pre><code class="language-java">@Test
+public void sortMultipleFields() {  
+    Book book1 = new Book(1, "b");
+    Book book2 = new Book(2, "c");
+    Book book3 = new Book(3, "c");
+
+    List&lt;Book&gt; list = Arrays.asList(book1, book2, book3);
+    list.sort(Comparator
+        .comparing(Book::getTitle, Comparator.reverseOrder())
+        .thenComparing(Book::getId, Comparator.reverseOrder()));
+
+    assertThat(list).containsExactly(book3, book2, book1);
+}
+</code></pre>
 
 <p><a href="https://hellokoding.com/sort-an-arraylist-in-java/">Learn more</a></p>
 
