@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-comparable-vs-comparator-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_Comparable-Comparator.png">
     <meta property="article:published_time" content="2019-06-09T14:02:24.000Z">
-    <meta property="article:modified_time" content="2019-10-04T03:37:44.000Z">
+    <meta property="article:modified_time" content="2019-10-04T07:20:50.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java Comparable and Comparator Tutorial with Examples",
     "url": "http://hellokoding.com/java-comparable-vs-comparator-examples/",
     "datePublished": "2019-06-09T14:02:24.000Z",
-    "dateModified": "2019-10-04T03:37:44.000Z",
+    "dateModified": "2019-10-04T07:20:50.000Z",
     "image": "http://hellokoding.com/content/images/2019/10/JavaCollections_Comparable-Comparator.png",
     "keywords": "Java",
     "description": "Comparable is an interface providing the default / natural ordering to the implemented objects in an array or collection (List, Set and Map) Comparator are comparison functional interfaces passed to sort methods such as sort(Comparator) of a List instance and Arrays.sort(Comparator), and passed to SortedSet and SortedMap constructors"
@@ -254,6 +254,8 @@ ghost.init({
 
 <p>By implementing <code>Comparable</code>, you can provide the default ordering to the objects in an array or collection</p>
 
+<p>The following example passes <code>Comparator.naturalOrder()</code> to the sort method of an ArrayList instance to use the default / natural sort logic defined by the <code>Comparable</code> implementation of the underlying objects, <code>ComparableBook</code></p>
+
 <pre><code class="language-java">@Test
 public void provideDefaultOrderingWithComparable() {  
     ComparableBook book1 = new ComparableBook(1, "b");
@@ -265,8 +267,6 @@ public void provideDefaultOrderingWithComparable() {
     assertThat(list).containsExactly(book3, book1, book2);
 }
 </code></pre>
-
-<p>Object implements <code>Comparable</code> need define the <code>int compareTo(Object)</code> contract method. String and primitive wrapper classes such as Integer, Long, Float, Double and BigInteger are already implemented <code>compareTo</code> methods of <code>Comparable</code> so you can reuse them in your definition</p>
 
 <p>The <code>ComparableBook</code> class is defined as below</p>
 
@@ -290,9 +290,11 @@ public void provideDefaultOrderingWithComparable() {
 }
 </code></pre>
 
-<p>The above <code>compareTo</code> uses <code>title</code> as the sort key, reuses the <code>compareTo</code> of <code>String</code> to sort the keys in alphabetical / ascending order</p>
+<p>Object implements <code>Comparable</code> need define the <code>int compareTo(Object)</code> contract method. String and primitive wrapper classes such as Integer, Long, Float, Double and BigInteger are already implemented <code>compareTo</code> methods of <code>Comparable</code> so you can reuse them in your definition</p>
 
-<p>They can also be sorted in descending by switching between the caller and the parameter of <code>compareTo</code> as the following implementation</p>
+<p>In the above <code>compareTo</code> implementation example, <code>title</code> is used as the sort key, <code>compareTo</code> of <code>String</code> is reused to sort the keys in alphabetical / ascending order</p>
+
+<p>Sort keys can also be ordered in descending by switching between the caller and the parameter of <code>compareTo</code> as the following implementation</p>
 
 <pre><code class="language-java">@Override
 public int compareTo(ComparableBook o) {  
