@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-linkedhashset/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_LinkedHashSetTutorial.png">
     <meta property="article:published_time" content="2019-10-06T09:10:19.000Z">
-    <meta property="article:modified_time" content="2019-10-06T12:39:15.000Z">
+    <meta property="article:modified_time" content="2019-10-06T13:30:08.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java LinkedHashSet Tutorial with Examples",
     "url": "http://hellokoding.com/java-linkedhashset/",
     "datePublished": "2019-10-06T09:10:19.000Z",
-    "dateModified": "2019-10-06T12:39:15.000Z",
+    "dateModified": "2019-10-06T13:30:08.000Z",
     "image": "http://hellokoding.com/content/images/2019/10/JavaCollections_LinkedHashSetTutorial.png",
     "keywords": "Java",
     "description": "LinkedHashSet is a hash table and doubly linked list data structure implementation of the Set interface, a part of the Java Collections Framework LinkedHashSet has the following features Provides elements examining, adding and removing operations with constant-time performance. No supports on index based operations The iteration order is as the"
@@ -252,7 +252,7 @@ ghost.init({
 
 <p>LinkedHashSet provides insertion-ordered iteration and run nearly as fast as HashSet</p>
 
-<p>HashSet has no ordering guarantees and run faster than TreeSet</p>
+<p>HashSet has no ordering guarantees and run faster than TreeSet (constant-time vs log-time for most operations)</p>
 
 <p>If you need value-ordered iteration then using TreeSet</p>
 
@@ -270,7 +270,9 @@ ghost.init({
 
 <p>LinkedHashSet implements the Set interface. Set extends from Collection and Iterable interfaces hierarchically</p>
 
-<p><img src="../content/images/2019/10/Screenshot-2019-10-06-at-2-44-54-PM.png" alt=""></p>
+<p>LinkedHashSet also extends the HashSet class which implements the Set interface</p>
+
+<p><img src="../content/images/2019/10/Screenshot-2019-10-06-at-9-10-41-PM.png" alt=""></p>
 
 <h3 id="declarealinkedhashset">Declare a LinkedHashSet</h3>
 
@@ -344,7 +346,7 @@ public void initWithAddAndAddAll() {
 <h3 id="iteratealinkedhashset">Iterate a LinkedHashSet</h3>
 
 <ul>
-<li>You can iterate a LinkedList by using either forEach(Consumer), since Java 8, or for-each and other index-loops (while, do-while, for-index)</li>
+<li>You can iterate a LinkedHashSet by using either forEach(Consumer), since Java 8, or for-each and other index-loops (while, do-while, for-index)</li>
 </ul>
 
 <pre><code class="language-java">@Test
@@ -355,7 +357,7 @@ public void iterateWithForEachConsumer() {
 </code></pre>
 
 <ul>
-<li>Iterator can also be used to iterate a LinkedList</li>
+<li>Iterator can also be used to iterate a LinkedHashSet</li>
 </ul>
 
 <pre><code class="language-java">@Test
@@ -374,7 +376,7 @@ public void iterateWithIterator() {
 <h3 id="retrieveandexamine">Retrieve and examine</h3>
 
 <ul>
-<li><p>LinkedHashSet doesn't provide an API to retrieve its elements directly. You can either use iterator or Stream API, since Java 8, in a linear-time performance</p>
+<li><p>LinkedHashSet doesn't provide APIs to retrieve its elements directly. You can either use iterator or Stream API, since Java 8, in a linear-time performance</p>
 
 <p>The following example uses Stream API to get the first element by using findFirst() and filter elements by using filter(Predicate)</p></li>
 </ul>
@@ -441,7 +443,7 @@ public void add() {
 
 <pre><code class="language-java">@Test
 public void addACustomObject() {  
-    LinkedHashSet&lt;Book&gt; linkedHashSet = new LinkedHashSet&lt;&gt;();
+    Set&lt;Book&gt; linkedHashSet = new LinkedHashSet&lt;&gt;();
     linkedHashSet.add(new Book(1, "a"));
     linkedHashSet.add(new Book(1, "a"));
 
@@ -457,7 +459,7 @@ public void addACustomObject() {
 
 <pre><code class="language-java">@Test
 public void remove() {  
-    LinkedHashSet&lt;Integer&gt; linkedHashSet = new LinkedHashSet&lt;&gt;(Set.of(1, 2, 3));
+    Set&lt;Integer&gt; linkedHashSet = new LinkedHashSet&lt;&gt;(Set.of(1, 2, 3));
     linkedHashSet.remove(1);
 
     assertThat(linkedHashSet).containsExactly(2, 3);
