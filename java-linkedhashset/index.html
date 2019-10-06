@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>equals and hashCode in Java</title>
+  <title>Java LinkedHashSet Tutorial with Examples</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,25 +14,25 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=d556408e33">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=d556408e33">
    
-  <link rel="canonical" href="http://hellokoding.com/java-equals-and-hashcode/">
+  <link rel="canonical" href="http://hellokoding.com/java-linkedhashset/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="equals and hashCode in Java">
-    <meta property="og:description" content="The equals() and hashCode() methods are defined in the Object class and inherited by all Java classes. However, for more useful, consider to override them on your objects The equals() method The equals() method of Object class is defined as below public boolean equals(Object obj) {       return (this == obj); } It">
-    <meta property="og:url" content="http://hellokoding.com/java-equals-and-hashcode/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/JavaCore_equals--andhashCode--.png">
-    <meta property="article:published_time" content="2019-06-15T05:37:51.000Z">
-    <meta property="article:modified_time" content="2019-10-06T07:57:42.000Z">
+    <meta property="og:title" content="Java LinkedHashSet Tutorial with Examples">
+    <meta property="og:description" content="LinkedHashSet is a hash table and doubly linked list data structure implementation of the Set interface, a part of the Java Collections Framework LinkedHashSet has the following features Provides elements examining, adding and removing operations with constant-time performance. No supports on index based operations The iteration order is as the">
+    <meta property="og:url" content="http://hellokoding.com/java-linkedhashset/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_LinkedHashSetTutorial.png">
+    <meta property="article:published_time" content="2019-10-06T09:10:19.000Z">
+    <meta property="article:modified_time" content="2019-10-06T09:10:19.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="equals and hashCode in Java">
-    <meta name="twitter:description" content="The equals() and hashCode() methods are defined in the Object class and inherited by all Java classes. However, for more useful, consider to override them on your objects The equals() method The equals() method of Object class is defined as below public boolean equals(Object obj) {       return (this == obj); } It">
-    <meta name="twitter:url" content="http://hellokoding.com/java-equals-and-hashcode/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/JavaCore_equals--andhashCode--.png">
+    <meta name="twitter:title" content="Java LinkedHashSet Tutorial with Examples">
+    <meta name="twitter:description" content="LinkedHashSet is a hash table and doubly linked list data structure implementation of the Set interface, a part of the Java Collections Framework LinkedHashSet has the following features Provides elements examining, adding and removing operations with constant-time performance. No supports on index based operations The iteration order is as the">
+    <meta name="twitter:url" content="http://hellokoding.com/java-linkedhashset/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_LinkedHashSetTutorial.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "equals and hashCode in Java",
-    "url": "http://hellokoding.com/java-equals-and-hashcode/",
-    "datePublished": "2019-06-15T05:37:51.000Z",
-    "dateModified": "2019-10-06T07:57:42.000Z",
-    "image": "http://hellokoding.com/content/images/2019/06/JavaCore_equals--andhashCode--.png",
+    "headline": "Java LinkedHashSet Tutorial with Examples",
+    "url": "http://hellokoding.com/java-linkedhashset/",
+    "datePublished": "2019-10-06T09:10:19.000Z",
+    "dateModified": "2019-10-06T09:10:19.000Z",
+    "image": "http://hellokoding.com/content/images/2019/10/JavaCollections_LinkedHashSetTutorial.png",
     "keywords": "Java",
-    "description": "The equals() and hashCode() methods are defined in the Object class and inherited by all Java classes. However, for more useful, consider to override them on your objects The equals() method The equals() method of Object class is defined as below public boolean equals(Object obj) {       return (this &#x3D;&#x3D; obj); } It"
+    "description": "LinkedHashSet is a hash table and doubly linked list data structure implementation of the Set interface, a part of the Java Collections Framework LinkedHashSet has the following features Provides elements examining, adding and removing operations with constant-time performance. No supports on index based operations The iteration order is as the"
 }
     </script>
 
@@ -224,7 +224,7 @@ ghost.init({
         <article class="post tag-java">
 
           <header class="post__header">
-            <h1 class="post__title">equals and hashCode in Java</h1>
+            <h1 class="post__title">Java LinkedHashSet Tutorial with Examples</h1>
             <time class="post__date" datetime="2019-10-06">Last modified @ 06 October 2019</time>
           </header>
 
@@ -233,105 +233,251 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p>The <code>equals()</code> and <code>hashCode()</code> methods are defined in the <code>Object</code> class and inherited by all Java classes. However, for more useful, consider to override them on your objects</p>
+            <p>LinkedHashSet is a hash table and <a href="https://hellokoding.com/doubly-linked-list-data-structure-tutorial-and-example/">doubly linked list data structure</a> implementation of the Set interface, a part of the <a href="https://hellokoding.com/java-collections-framework/">Java Collections Framework</a></p>
 
-<h3 id="theequalsmethod">The <code>equals()</code> method</h3>
+<p>LinkedHashSet has the following features</p>
 
-<p>The <code>equals()</code> method of <code>Object</code> class is defined as below</p>
+<ul>
+<li><p>Provides elements examining, adding and removing operations with constant-time performance. No supports on index based operations</p></li>
+<li><p>The iteration order is as the insertion order</p></li>
+<li><p>Contains no-duplicated elements, permits one null element</p></li>
+<li><p>Unsynchronized implementation. In multi-threading environment with at least one thread modifies the list, it must be synchronized externally</p></li>
+</ul>
 
-<pre><code class="language-java">public boolean equals(Object obj) {  
-    return (this == obj);
+<p>Lets walk through this tutorial to explore LinkedHashSet in more details</p>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="linkedhashsetvshashsetandtreeset">LinkedHashSet vs HashSet and TreeSet</h3>
+
+<p>LinkedList is more flexible than ArrayList and ArrayDeque as it can act as both List and Deque</p>
+
+<p>In terms of efficiency, LinkedList is slower than ArrayList on List based operations, and slower than ArrayDeque on Deque based operations</p>
+
+<p>LinkedList also consumes more memory than ArrayList and ArrayDeque as it have to allocate a node object for each element in the list</p>
+
+<p><a href="https://hellokoding.com/java-arraylist-examples/">Learn more about ArrayList</a></p>
+
+<h3 id="thelinkedhashsetclasshierarchy">The LinkedHashSet class hierarchy</h3>
+
+<p>LinkedHashSet implements the Set interface. Set extends from Collection and Iterable interfaces hierarchically</p>
+
+<p><img src="../content/images/2019/10/Screenshot-2019-10-06-at-2-44-54-PM.png" alt=""></p>
+
+<h3 id="declarealinkedhashset">Declare a LinkedHashSet</h3>
+
+<p>As a result from the above class hierarchy, a LinkedHashSet can be declared as one of the following ways</p>
+
+<pre><code class="language-java">@Test
+public void declare() {  
+    Set&lt;Integer&gt; linkedHashSet1 = new LinkedHashSet&lt;&gt;();
+    assertThat(linkedHashSet1).isInstanceOf(LinkedHashSet.class);
+
+    LinkedHashSet&lt;Integer&gt; linkedHashSet2 = new LinkedHashSet&lt;&gt;();
+}
+</code></pre>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="createandinitialize">Create and Initialize</h3>
+
+<ul>
+<li><p>You can provide either Set.of or List.of methods, since Java 9, to the LinkedHashSet(Collection) constructor to create and init a LinkedHashSet in one line</p>
+
+<p>The iteration order of the created LinkedHashSet will be decided by the iterator of the given collection</p>
+
+<p>In the following example, the iteration order of linkedHashSet1 is unpredictable while linkedHashSet2 is predictable</p></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void initInOneLine() {  
+    Set&lt;Integer&gt; linkedHashSet1 = new LinkedHashSet&lt;&gt;(Set.of(1, 2, 3));
+    assertThat(linkedHashSet1).contains(1, 2, 3);
+
+    Set&lt;Integer&gt; linkedHashSet2 = new LinkedHashSet&lt;&gt;(List.of(1, 2, 3));
+    assertThat(linkedHashSet2).containsExactly(1, 2, 3);
 }
 </code></pre>
 
 <ul>
-<li>It returns <code>true</code> when the calling and the specified <code>obj</code> refer to the same object (same physical memory address) so the following example is always false</li>
+<li>Initialize a LinkedHashSet in one line with double brace should not be used in practice as it can lead to memory leaks by creating too many anonymous classes</li>
 </ul>
 
 <pre><code class="language-java">@Test
-public void givenNonEqualsImplement_whenCompareObjects_thenReturnsFalse() {  
-    BookWithoutEquals book1 = new BookWithoutEquals("A");
-    BookWithoutEquals book2 = new BookWithoutEquals("A");
+public void initInOneLineWithDoubleBrace() {  
+    Set&lt;Integer&gt; linkedHashSet = new LinkedHashSet&lt;&gt;(){{
+        add(1);
+        add(2);
+        add(3);
+    }};
 
-    assertThat(book1.equals(book2)).isFalse();
+    assertThat(linkedHashSet).hasSize(3);
 }
-</code></pre>
-
-<p><code>BookWithoutEquals</code> is defined as below</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/lang/BookWithoutEquals.java">
 </code></pre>
 
 <ul>
-<li>To make it useful, let add <code>equals()</code> method into the above class. Now the test case returns <code>true</code> when comparing two implemented objects</li>
+<li>Initialize by using add and addAll methods</li>
 </ul>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/lang/BookWithEquals.java">
-</code></pre>
-
-<p><code>Objects</code> provides utility methods for operating on objects, available since Java 7</p>
-
 <pre><code class="language-java">@Test
-public void givenEqualsImplement_whenCompareObjects_thenReturnsTrue() {  
-    BookWithEquals book1 = new BookWithEquals("A", 1);
-    BookWithEquals book2 = new BookWithEquals("A", 1);
+public void initWithAddAndAddAll() {  
+    Set&lt;Integer&gt; linkedHashSet1 = new LinkedHashSet&lt;&gt;(Set.of(1, 2, 3));
 
-    assertThat(book1.equals(book2)).isTrue();
+    Set&lt;Integer&gt; linkedHashSet2 = new LinkedHashSet&lt;&gt;();
+    linkedHashSet2.add(1);
+    linkedHashSet2.add(1); // duplicated element will be ignored
+    linkedHashSet2.add(null); // permits null element
+    linkedHashSet2.addAll(linkedHashSet1);
+
+    assertThat(linkedHashSet2).hasSize(4);
 }
 </code></pre>
 
-<h2 id="thehashcodemethod">The <code>hashCode()</code> method</h2>
-
-<p>The <code>hashCode()</code> method returns a hash code value for the object. It provide benefits for objects in hash-based collection like <code>HashMap</code></p>
-
-<pre><code class="language-java">@Test
-public void givenEqualsImplement_whenCompareInHashMap_thenReturnsTrue() {  
-    BookWithEquals bookA = new BookWithEquals("A", 1);
-    BookWithEquals bookB = new BookWithEquals("B", 2);
-    Map&lt;BookWithEquals, Integer&gt; bookMap = Map.of(bookA, 1, bookB, 2);
-
-    assertThat(bookMap.containsKey(new BookWithEquals("A", 1))).isTrue();
-}
-</code></pre>
-
-<p>The above test case is not success as BookWithEquals only overrides <code>equals(Object)</code> method</p>
-
-<pre><code class="language-java">@Test
-public void givenEqualsAndHashCodeImplement_whenCompareInHashMap_thenReturnsTrue() {  
-    BookWithEqualsAndHashCode bookA = new BookWithEqualsAndHashCode("A", 1);
-    BookWithEqualsAndHashCode bookB = new BookWithEqualsAndHashCode("B", 2);
-    Map&lt;BookWithEqualsAndHashCode, Integer&gt; bookMap = Map.of(bookA, 1, bookB, 2);
-
-    assertThat(bookMap.containsKey(new BookWithEqualsAndHashCode("A", 1))).isTrue();
-}
-</code></pre>
-
-<p>The above test case is success as BookWithEqualsAndHashCode overrides both <code>equals(Object)</code> and <code>hashcode()</code> methods</p>
-
-<p><code>BookWithEqualsAndHashCode</code> is defined as below</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/lang/BookWithEqualsAndHashCode.java">
-</code></pre>
-
-<p>The general contract of <code>hashCode</code> is:</p>
+<h3 id="iteratealinkedhashset">Iterate a LinkedHashSet</h3>
 
 <ul>
-<li><p>Must consistently return the same integer during an execution of a Java application</p></li>
-<li><p>If two object are equals according to the <code>equals(Object)</code> method, then their's <code>hashCode()</code> method must produce the same integer result</p></li>
+<li>You can iterate a LinkedList by using either forEach(Consumer), since Java 8, or for-each and other index-loops (while, do-while, for-index)</li>
 </ul>
 
-<h3 id="conclusion">Conclusion</h3>
-
-<p>In this tutorial, we learned about the Java <code>equals()</code> and <code>hashCode()</code> methods and when we should override them. You can find below all the defined test cases</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/lang/EqualsAndHashCodeTest.java">
+<pre><code class="language-java">@Test
+public void iterateWithForEachConsumer() {  
+    Set&lt;Integer&gt; linkedHashSet = new LinkedHashSet&lt;&gt;(Set.of(1, 2, 3));
+    linkedHashSet.forEach(e -&gt; System.out.printf("%d ", e));
+}
 </code></pre>
 
-<h3 id="notes">Notes</h3>
+<ul>
+<li>Iterator can also be used to iterate a LinkedList</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void iterateWithIterator() {  
+    Set&lt;Integer&gt; linkedHashSet = new LinkedHashSet&lt;&gt;(Set.of(1, 2, 3));
+
+    Iterator&lt;Integer&gt; iterator = linkedHashSet.iterator();
+    while (iterator.hasNext()) {
+        System.out.printf("%d ", iterator.next());
+    }
+}
+</code></pre>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="retrieveandexamine">Retrieve and examine</h3>
 
 <ul>
-<li><code>Map.of(...)</code> is available since Java 9+</li>
+<li><p>LinkedHashSet doesn't provide an API to retrieve its elements directly. You can either use iterator or Stream API, since Java 8, in a linear-time performance</p>
+
+<p>The following example uses Stream API to get the first element by using findFirst() and filter elements by using filter(Predicate)</p></li>
 </ul>
+
+<pre><code class="language-java">@Test
+public void retrieve() {  
+    Set&lt;Integer&gt; linkedHashSet = new LinkedHashSet&lt;&gt;(List.of(1, 2, 3));
+    Integer firstElement = linkedHashSet.stream().findFirst().orElse(null);
+    assertThat(firstElement).isEqualTo(1);
+
+    Integer[] elements = linkedHashSet.stream().filter(e -&gt; e &gt;= 2).toArray(Integer[]::new);
+    assertThat(elements).contains(2, 3);
+}
+</code></pre>
+
+<ul>
+<li>You can examine if a LinkedHashSet contains the specified element by using contains(Object) method in a constant-time performance</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void examine() {  
+    Set&lt;Integer&gt; linkedHashSet = new LinkedHashSet&lt;&gt;(Set.of(1, 2, 3));
+    Boolean contained = linkedHashSet.contains(3);
+    assertThat(contained).isTrue();
+}
+</code></pre>
+
+<ul>
+<li><p>The above linkedHashSet.contains(3) method returns true because the Integer class already overrode equals and hashCode methods for you by default</p>
+
+<p>Remember to override equals and hashCode on your classes to make the contains(Object) works correctly for objects in a hash table based collections like Map and Set</p>
+
+<p><a href="https://hellokoding.com/java-equals-and-hashcode/">Learn more about equals and hashCode</a></p></li>
+</ul>
+
+<h3 id="addelementstoalinkedhashset">Add elements to a LinkedHashSet</h3>
+
+<ul>
+<li><p>Adding an element into a LinkedHashSet by using add(Object) method in constant-time performance</p>
+
+<p>LinkedHashSet permits one null element, duplicated elements is ignored, insertion order is maintained to keep the iteration order consistent</p></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void add() {  
+    Set&lt;Integer&gt; linkedHashSet = new LinkedHashSet&lt;&gt;();
+    linkedHashSet.add(1);
+    linkedHashSet.add(2);
+    linkedHashSet.add(3);
+
+    linkedHashSet.add(1); // duplicated element is ignored
+    linkedHashSet.add(null); // permits null element
+
+    // iteration order is same as insertion order
+    assertThat(linkedHashSet).containsExactly(1, 2, 3, null);
+}
+</code></pre>
+
+<ul>
+<li><p>Internally, the add(object) method only adds the specified object into a LinkedHashSet if its contains(object) method returns false. So overriding equals and hashCode to your defined class to make add(Object) works correctly</p>
+
+<p>The following example shows you the add(Object) method working not as expected due to lack of equals and hashCode implementation on the custom class. You can find the definition of Book class in the last part of this tutorial</p></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void addACustomObject() {  
+    LinkedHashSet&lt;Book&gt; linkedHashSet = new LinkedHashSet&lt;&gt;();
+    linkedHashSet.add(new Book(1, "a"));
+    linkedHashSet.add(new Book(1, "a"));
+
+    assertThat(linkedHashSet).hasSize(2);
+}
+</code></pre>
+
+<h3 id="removeelementsfromalinkedhashset">Remove elements from a LinkedHashSet</h3>
+
+<ul>
+<li>Remove an element from a LinkedHashSet by using remove(Object) in constant-time performance</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void remove() {  
+    LinkedHashSet&lt;Integer&gt; linkedHashSet = new LinkedHashSet&lt;&gt;(Set.of(1, 2, 3));
+    linkedHashSet.remove(1);
+
+    assertThat(linkedHashSet).containsExactly(2, 3);
+}
+</code></pre>
+
+<ul>
+<li><p>Internally, the remove(Object) method only removes the specified object from a LinkedHashSet if its contains(Object) method returns true. So overriding equals and hashCode to your defined class to make remove(object) works correctly</p>
+
+<p>The following example shows you the remove(Object) method working not as expected due to lack of equals and hashCode implementation on the custom class. You can find the definition of Book class in the last part of this tutorial</p></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void removeACustomObject() {  
+    Set&lt;Book&gt; linkedHashSet = new LinkedHashSet&lt;&gt;();
+    linkedHashSet.add(new Book(1, "a"));
+    linkedHashSet.remove(new Book(1, "a"));
+
+    assertThat(linkedHashSet).hasSize(1);
+}
+</code></pre>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this tutorial, we learned about LinkedHashSet features, class hierarchy and operations. You can find below the full source code</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/LinkedHashSetTest.java">
+</code></pre>
             
             <div class="post__tags">
               <a href="../tag/java/">Java</a>
@@ -340,11 +486,11 @@ public void givenEqualsAndHashCodeImplement_whenCompareInHashMap_thenReturnsTrue
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=equals%20and%20hashCode%20in%20Java&amp;url=http://hellokoding.com/java-equals-and-hashcode/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Java%20LinkedHashSet%20Tutorial%20with%20Examples&amp;url=http://hellokoding.com/java-linkedhashset/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/java-equals-and-hashcode/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/java-linkedhashset/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Facebook</span>
   </a>
@@ -404,8 +550,8 @@ public void givenEqualsAndHashCodeImplement_whenCompareInHashMap_thenReturnsTrue
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/java-equals-and-hashcode/';
-      this.page.identifier = '141';
+      this.page.url = 'http://hellokoding.com/java-linkedhashset/';
+      this.page.identifier = '181';
     };
 
     (function() {
