@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spring Cache Key Generator</title>
+  <title>Java TreeSet Tutorial with Examples</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,29 +14,29 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=86169ec25d">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=86169ec25d">
    
-  <link rel="canonical" href="http://hellokoding.com/spring-cache-key-generator/">
+  <link rel="canonical" href="http://hellokoding.com/java-treeset-tutorial-with-examples/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Spring Cache Key Generator">
-    <meta property="og:description" content="In Spring Cache, you can define the cache key at global level by using the key prefix configuration in conjunction with using the default or implementing a custom key generator. Apart from that, cache key definition at the class and method level is also supported Let's walk though this tutorial">
-    <meta property="og:url" content="http://hellokoding.com/spring-cache-key-generator/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/08/SpringCache_KeyGenerator.png">
-    <meta property="article:published_time" content="2019-08-09T17:51:24.000Z">
-    <meta property="article:modified_time" content="2019-09-01T13:39:54.000Z">
-    <meta property="article:tag" content="Spring Boot">
+    <meta property="og:title" content="Java TreeSet Tutorial with Examples">
+    <meta property="og:description" content="TreeSet is a red-black tree data structure implementation of the NavigableSet interface based on a TreeMap. TreeSet is a part of the Java Collections Framework TreeSet has the following features Provides value-ordered iteration. Provides contains(Object), add(Object) and remove() operations in log-time performance Elements are ordered and compared using">
+    <meta property="og:url" content="http://hellokoding.com/java-treeset-tutorial-with-examples/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_TreeSetTutorial.png">
+    <meta property="article:published_time" content="2019-10-08T15:09:30.000Z">
+    <meta property="article:modified_time" content="2019-10-08T15:49:15.000Z">
+    <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Spring Cache Key Generator">
-    <meta name="twitter:description" content="In Spring Cache, you can define the cache key at global level by using the key prefix configuration in conjunction with using the default or implementing a custom key generator. Apart from that, cache key definition at the class and method level is also supported Let's walk though this tutorial">
-    <meta name="twitter:url" content="http://hellokoding.com/spring-cache-key-generator/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/08/SpringCache_KeyGenerator.png">
+    <meta name="twitter:title" content="Java TreeSet Tutorial with Examples">
+    <meta name="twitter:description" content="TreeSet is a red-black tree data structure implementation of the NavigableSet interface based on a TreeMap. TreeSet is a part of the Java Collections Framework TreeSet has the following features Provides value-ordered iteration. Provides contains(Object), add(Object) and remove() operations in log-time performance Elements are ordered and compared using">
+    <meta name="twitter:url" content="http://hellokoding.com/java-treeset-tutorial-with-examples/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_TreeSetTutorial.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Spring Boot">
+    <meta name="twitter:data2" content="Java">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Spring Cache Key Generator",
-    "url": "http://hellokoding.com/spring-cache-key-generator/",
-    "datePublished": "2019-08-09T17:51:24.000Z",
-    "dateModified": "2019-09-01T13:39:54.000Z",
-    "image": "http://hellokoding.com/content/images/2019/08/SpringCache_KeyGenerator.png",
-    "keywords": "Spring Boot",
-    "description": "In Spring Cache, you can define the cache key at global level by using the key prefix configuration in conjunction with using the default or implementing a custom key generator. Apart from that, cache key definition at the class and method level is also supported Let&#x27;s walk though this tutorial"
+    "headline": "Java TreeSet Tutorial with Examples",
+    "url": "http://hellokoding.com/java-treeset-tutorial-with-examples/",
+    "datePublished": "2019-10-08T15:09:30.000Z",
+    "dateModified": "2019-10-08T15:49:15.000Z",
+    "image": "http://hellokoding.com/content/images/2019/10/JavaCollections_TreeSetTutorial.png",
+    "keywords": "Java",
+    "description": "TreeSet is a red-black tree data structure implementation of the NavigableSet interface based on a TreeMap. TreeSet is a part of the Java Collections Framework TreeSet has the following features Provides value-ordered iteration. Provides contains(Object), add(Object) and remove() operations in log-time performance Elements are ordered and compared using"
 }
     </script>
 
@@ -87,7 +87,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-spring-boot">
+<body class="post-template tag-java">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -221,113 +221,310 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-9 column">
-        <article class="post tag-spring-boot">
+        <article class="post tag-java">
 
           <header class="post__header">
-            <h1 class="post__title">Spring Cache Key Generator</h1>
-            <time class="post__date" datetime="2019-09-01">Last modified @ 01 September 2019</time>
+            <h1 class="post__title">Java TreeSet Tutorial with Examples</h1>
+            <time class="post__date" datetime="2019-10-08">Last modified @ 08 October 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/java/">Java</a>
             </div>
 
-            <p>In Spring Cache, you can define the cache key at global level by using the key prefix configuration in conjunction with using the default or implementing a custom key generator. Apart from that, cache key definition at the class and method level is also supported</p>
+            <p>TreeSet is a red-black tree data structure implementation of the NavigableSet interface based on a TreeMap. TreeSet is a part of the <a href="https://hellokoding.com/java-collections-framework/">Java Collections Framework</a></p>
 
-<p>Let's walk though this tutorial to explore them in more details</p>
+<p>TreeSet has the following features</p>
 
-<h2 id="definethecachekeyatgloballevel">Define the cache key at global level</h2>
+<ul>
+<li><p>Provides value-ordered iteration. Provides contains(Object), add(Object) and remove() operations in log-time performance</p>
 
-<h3 id="cachekeyprefix">Cache key prefix</h3>
+<p>Elements are ordered and compared using their <a href="https://hellokoding.com/java-comparable-vs-comparator-examples/">Comparable natural ordering, or by a Comparator</a> (irrespective of equals and hashCode) provided at creation time, depending on which constructor is used</p></li>
+<li><p>Duplicated elements are ignored. null element is not permitted, NullPointerException will be thrown when adding a null element</p></li>
+<li><p>Unsynchronized implementation. In multi-threading environment with at least one thread modifies the list, it must be synchronized externally</p></li>
+</ul>
 
-<p>You can use the Spring Cache property <code>spring.cache.redis.key-prefix</code> to add the prefix to all generated cache key in Spring Boot applications</p>
+<p>Lets walk through this tutorial to explore them in more details</p>
 
-<pre><code class="language-markup">spring.cache.redis.key-prefix=hellokoding::
-</code></pre>
+<p></p><div class="hk-autoads"></div>  
 
-<h3 id="thedefaultkeygenerator">The default key generator</h3>
+<h3 id="thetreesetclasshierarchy">The TreeSet class hierarchy</h3>
 
-<p>By default, <code>SimpleKeyGenerator</code> in the <code>org.springframework.cache.interceptor</code> package, an implementation of <code>KeyGenerator</code> interface, is used to generate the cache key</p>
+<p>TreeSet implements the NavigableSet interface. NavigableSet extends from SortedSet, Set, Collection and Iterable interfaces hierarchically</p>
 
-<p><code>SimpleKeyGenerator</code> evaluates parameters of the cache annotated methods (by <code>@Cachable</code>, <code>@CachePut</code> and <code>@CacheEvict</code>). If only one non-null param is existing, it returns the param itself, otherwise the below <code>SimpleKey</code>'s toString() method is used for computing all params</p>
+<p><img src="../content/images/2019/10/Screenshot-2019-10-06-at-9-51-10-PM.png" alt=""></p>
 
-<pre><code class="language-java">@Override
-public String toString() {  
-    return getClass().getSimpleName() + " [" + StringUtils.arrayToCommaDelimitedString(this.params) + "]";
+<h3 id="treesetvshashsetandlinkedhashset">TreeSet vs HashSet and LinkedHashSet</h3>
+
+<p>Use TreeSet if you need value-ordered iteration</p>
+
+<p><a href="https://hellokoding.com/java-hashset-tutorial-with-examples/">HashSet</a> has no ordering guarantees and run faster than TreeSet (constant-time vs log-time for most operations)</p>
+
+<p><a href="https://hellokoding.com/java-linkedhashset/">LinkedHashSet</a> provides insertion-ordered iteration and run nearly as fast as HashSet</p>
+
+<h3 id="declareatreeset">Declare a TreeSet</h3>
+
+<p>As a result from the class hierarchy, a TreeSet can be declared as the following ways</p>
+
+<pre><code class="language-java">@Test
+public void declare() {  
+    NavigableSet&lt;Integer&gt; treeSet1 = new TreeSet&lt;&gt;();
+    assertThat(treeSet1).isInstanceOf(TreeSet.class);
+
+    TreeSet&lt;Integer&gt; treeSet2 = new TreeSet&lt;&gt;();
 }
 </code></pre>
 
-<h3 id="customkeygenerator">Custom key generator</h3>
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="createandinitialize">Create and Initialize</h3>
 
 <ul>
-<li>Implement <code>KeyGenerator</code> interface to provide the custom key generator. The following give you an example</li>
+<li><p>The created TreeSets from TreeSet() and TreeSet(Collection) constructors use Comparable natural ordering of the underlying objects</p>
+
+<p>In the following example, the iteration order of treeSet1 and treeSet2 decided by the Comparable natural ordering of Integer objects (ascending order), regardless of the given collection iterator order</p></li>
 </ul>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-caching-redis/src/main/java/com/hellokoding/springboot/caching/configuration/CustomKeyGenerator.java">
+<pre><code class="language-java">@Test
+public void initWithComparable() {  
+    NavigableSet&lt;Integer&gt; treeSet1 = new TreeSet&lt;&gt;(Set.of(3, 1, 2));
+    assertThat(treeSet1).containsExactly(1, 2, 3);
+
+    NavigableSet&lt;Integer&gt; treeSet2 = new TreeSet&lt;&gt;();
+    treeSet2.add(1);
+    treeSet2.add(1); // duplicated element is ignored
+    treeSet2.addAll(treeSet1);
+    assertThat(treeSet2).containsExactly(1, 2, 3);
+}
 </code></pre>
 
 <ul>
-<li>Register the custom definition to an implementation of <code>CachingConfigurer</code>. The below give you an example with <code>CachingConfigurerSupport</code></li>
+<li>The created TreeSet from the <code>TreeSet(Comparator)</code> constructor has the iteration order based on the given Comparator</li>
 </ul>
 
-<pre><code class="language-java">import org.springframework.cache.annotation.CachingConfigurerSupport;  
-import org.springframework.cache.interceptor.CacheErrorHandler;  
-import org.springframework.context.annotation.Configuration;
+<pre><code class="language-java">@Test
+public void initWithComparator() {  
+    NavigableSet&lt;Integer&gt; treeSet = new TreeSet&lt;&gt;(Comparator.reverseOrder());
+    treeSet.addAll(List.of(1, 2, 3));
 
-@Configuration
-public class CachingConfiguration extends CachingConfigurerSupport {  
-    @Override
-    public KeyGenerator keyGenerator() {
-        return new CustomKeyGenerator();
+    assertThat(treeSet).containsExactly(3, 2, 1);
+}
+</code></pre>
+
+<h3 id="iterateatreeset">Iterate a TreeSet</h3>
+
+<ul>
+<li>You can iterate a TreeSet by using either forEach(Consumer), since Java 8, or for-each and other index-loops (while, do-while, for-index)</li>
+</ul>
+
+<pre><code class="language-java">@@Test
+public void iterateWithForEachConsumer() {  
+    NavigableSet&lt;Integer&gt; treeSet = new TreeSet&lt;&gt;(Set.of(3, 1, 2));
+    treeSet.forEach(e -&gt; System.out.printf("%d ", e));
+}
+</code></pre>
+
+<ul>
+<li>Use iterator() and descendingIterator() to iterate a TreeSet in natural and reverse order, respectively</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void iterateWithIterator() {  
+    NavigableSet&lt;Integer&gt; treeSet = new TreeSet&lt;&gt;(Set.of(1, 2, 3));
+
+    Iterator&lt;Integer&gt; iterator = treeSet.iterator();
+    while (iterator.hasNext()) {
+        System.out.printf("%d ", iterator.next());
+    }
+
+    Iterator&lt;Integer&gt; descendingIterator = treeSet.descendingIterator();
+    while (descendingIterator.hasNext()) {
+        System.out.printf("%d ", descendingIterator.next());
     }
 }
 </code></pre>
 
-<h2 id="definethecachekeyattheclassandmethodlevel">Define the cache key at the class and method level</h2>
+<p></p><div class="hk-autoads"></div>  
 
-<p>You can define the cache key at class and method level with the <code>key</code> and <code>keyGenerator</code> attributes of the <code>@Cachable</code>, <code>@CachePut</code> and <code>@CacheEvict</code> annotations</p>
+<h3 id="retrieveandexamine">Retrieve and examine</h3>
 
 <ul>
-<li>If <code>key</code> and <code>keyGenerator</code> are empty (by default), Spring Cache will use the <code>SimpleKeyGenerator</code> if no custom key generator implementations have found</li>
+<li><p>Retrieve the first and the last element from a TreeSet by using first() and last() methods</p>
+
+<p>Retrieve the reverse order view of the elements contained in a TreeSet by using descendingSet()</p></li>
 </ul>
 
-<pre><code class="language-java">@Cacheable(key = "", keyGenerator = "")
-public Optional&lt;Product&gt; findById(Long id) {  
-    return productRepository.findById(id);
+<pre><code class="language-java">@Test
+public void retrieve() {  
+    NavigableSet&lt;Integer&gt; treeSet = new TreeSet&lt;&gt;(Set.of(3, 1, 2));
+    int first = treeSet.first();
+    assertThat(first).isEqualTo(1);
+
+    int last = treeSet.last();
+    assertThat(last).isEqualTo(3);
+
+    NavigableSet&lt;Integer&gt; descendingSet = treeSet.descendingSet();
+    assertThat(descendingSet).containsExactly(3, 2, 1);
 }
 </code></pre>
 
-<p>With the <code>CustomKeyGenerator</code> implementation, the generated key should be "hellokoding::ProductService_findAll_"</p>
-
 <ul>
-<li>Spring Cache uses the Spring Expression Language (SpEL) for computing the cache key</li>
+<li><p>You can also use iterator or Stream API to retrieve elements from a TreeSet</p>
+
+<p>The following example uses Stream API to get the first element by using findFirst() and filter elements by using filter(Predicate)</p></li>
 </ul>
 
-<pre><code class="language-java">@CachePut(key = "T(java.lang.String).format('%s-%s-%s', #root.target.Class.simpleName, #root.methodName, #product.name)")
-public Product save(Product product) {  
-    return productRepository.save(product);
+<pre><code class="language-java">@Test
+public void retrieveWithStreamAPI() {  
+    NavigableSet&lt;Integer&gt; treeSet = new TreeSet&lt;&gt;(List.of(1, 2, 3));
+    Integer firstElement = treeSet.stream().findFirst().orElse(null);
+    assertThat(firstElement).isEqualTo(1);
+
+    Integer[] elements = treeSet.stream().filter(e -&gt; e &gt;= 2).toArray(Integer[]::new);
+    assertThat(elements).contains(2, 3);
 }
 </code></pre>
 
-<p>The generated cache key should be "hellokoding::ProductService-save-Hello Koding" if the product name is "Hello Koding"</p>
+<ul>
+<li>Examine if a TreeSet contains the specified element by using contains(Object) method in a constant-time performance</li>
+</ul>
 
-<h3 id="conclusion">Conclusion</h3>
+<pre><code class="language-java">@Test
+public void examine() {  
+    NavigableSet&lt;Integer&gt; treeSet = new TreeSet&lt;&gt;(Set.of(1, 2, 3));
+    Boolean contained = treeSet.contains(3);
+    assertThat(contained).isTrue();
+}
+</code></pre>
 
-<p>In this tutorial, we learned some ways to define the cache key in Spring Cache applications. You can find the full source code at <a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-caching-redis">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-caching-redis</a></p>
+<ul>
+<li><p>Internally, the contains(Object) method compares objects based on their Comparable or Comparator depending on which constructor is used at the creation time</p>
+
+<p>In the following example, treeSet.contains(new Book(2, "a")) return true instead of false, due to the compareTo method only compares title</p></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void containsACustomObject(){  
+    TreeSet&lt;Book&gt; treeSet = new TreeSet&lt;&gt;();
+    treeSet.add(new Book(1, "a"));
+
+    Boolean contained = treeSet.contains(new Book(2, "a"));
+    assertThat(contained).isTrue();
+}
+</code></pre>
+
+<p>    The Book class is defined as below</p>
+
+<pre><code class="language-java">class Book  implements Comparable&lt;Book&gt; {  
+    int id;
+    String title;
+
+    Book(int id, String title) {
+        this.id = id;
+        this.title = title;
+    }
+
+    int getId() {
+        return id;
+    }
+
+    String getTitle() {
+        return title;
+    }
+
+    @Override
+    public int compareTo(Book o) {
+        return CharSequence.compare(this.title, o.title);
+    }
+}
+</code></pre>
+
+<h3 id="addelementstoatreeset">Add elements to a TreeSet</h3>
+
+<ul>
+<li><p>Adding an element into a TreeSet by using add(Object) or addAll(Collection) method in constant-time performance</p>
+
+<p>TreeSet does not permit null element, duplicated element is ignored and the iteration order is based on Comparable or Comparator</p></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void add() {  
+    NavigableSet&lt;Integer&gt; treeSet = new TreeSet&lt;&gt;();
+    treeSet.add(1);
+    treeSet.add(1); // duplicated element is ignored
+    treeSet.addAll(Set.of(2, 3));
+
+    assertThat(treeSet).containsExactly(1, 2, 3);
+}
+</code></pre>
+
+<ul>
+<li><p>Internally, the add(Object) method only adds the specified object into a TreeSet if its contains(Object) method returns false</p>
+
+<p>In the following example, the add(Object) method works incorrectly as the compareTo only compares title</p></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void addACustomObject() {  
+    NavigableSet&lt;Book&gt; treeSet = new TreeSet&lt;&gt;();
+    treeSet.add(new Book(1, "a"));
+    treeSet.add(new Book(2, "a"));
+
+    assertThat(treeSet).hasSize(1);
+}
+</code></pre>
+
+<h3 id="removeelementsfromatreeset">Remove elements from a TreeSet</h3>
+
+<ul>
+<li>Remove an element from a TreeSet by using remove(Object) in constant-time performance</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void remove() {  
+    NavigableSet&lt;Integer&gt; treeSet = new TreeSet&lt;&gt;(Set.of(1, 2, 3));
+    treeSet.remove(1);
+
+    assertThat(treeSet).containsExactly(2, 3);
+}
+</code></pre>
+
+<ul>
+<li><p>Internally, the remove(Object) method only removes the specified object from a TreeSet if its contains(Object) method returns true</p>
+
+<p>In the following example, remove(Object) works incorrectly as the compareTo only compares title</p></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void removeACustomObject() {  
+    NavigableSet&lt;Book&gt; treeSet = new TreeSet&lt;&gt;();
+    treeSet.add(new Book(1, "a"));
+    treeSet.remove(new Book(2, "a"));
+
+    assertThat(treeSet).isEmpty();
+}
+</code></pre>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>In this tutorial, we learned about TreeSet features, class hierarchy and operations. You can find below the full source code</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/TreeSetTest.java">
+</code></pre>
             
             <div class="post__tags">
-              <a href="../tag/spring-boot/">Spring Boot</a>
+              <a href="../tag/java/">Java</a>
             </div>
           </div>
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Spring%20Cache%20Key%20Generator&amp;url=http://hellokoding.com/spring-cache-key-generator/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Java%20TreeSet%20Tutorial%20with%20Examples&amp;url=http://hellokoding.com/java-treeset-tutorial-with-examples/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/spring-cache-key-generator/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/java-treeset-tutorial-with-examples/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Facebook</span>
   </a>
@@ -387,8 +584,8 @@ public Product save(Product product) {
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/spring-cache-key-generator/';
-      this.page.identifier = '157';
+      this.page.url = 'http://hellokoding.com/java-treeset-tutorial-with-examples/';
+      this.page.identifier = '182';
     };
 
     (function() {
