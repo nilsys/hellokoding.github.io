@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-linkedhashset/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_LinkedHashSetTutorial.png">
     <meta property="article:published_time" content="2019-10-06T09:10:19.000Z">
-    <meta property="article:modified_time" content="2019-10-09T11:47:15.000Z">
+    <meta property="article:modified_time" content="2019-10-09T13:15:33.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java LinkedHashSet Tutorial with Examples",
     "url": "http://hellokoding.com/java-linkedhashset/",
     "datePublished": "2019-10-06T09:10:19.000Z",
-    "dateModified": "2019-10-09T11:47:15.000Z",
+    "dateModified": "2019-10-09T13:15:33.000Z",
     "image": "http://hellokoding.com/content/images/2019/10/JavaCollections_LinkedHashSetTutorial.png",
     "keywords": "Java",
     "description": "LinkedHashSet is a hash table and doubly linked list data structure implementation of the Set interface, a part of the Java Collections Framework LinkedHashSet has the following features Provides insertion-ordered iteration. Provides contains(Object), add(Object) and remove() operations in constant-time performance Elements are compared based on theirs equals and"
@@ -407,7 +407,7 @@ public void containsAddRemove() {
 <ul>
 <li><p>Internally, the contains(Object), add(Object) and remove(Object) methods compares objects based on their <a href="https://hellokoding.com/java-equals-and-hashcode/">equals and hashCode</a></p>
 
-<p>In the following example, <code>linkedHashSet.contains(new Book(1, "a"))</code> should return true but false, <code>linkedHashSet.add(new Book(1, "a"))</code> should not but success and <code>linkedHashSet.remove(new Book(1, "a"))</code> should success but not , due to lack of <a href="https://hellokoding.com/java-equals-and-hashcode/">equals and hashCode</a> implementation on the custom class</p></li>
+<p>In the following example, <code>linkedHashSet.contains(new Book(1, "a"))</code> should return true but false, <code>linkedHashSet.add(new Book(1, "a"))</code> should not but success and <code>linkedHashSet.remove(new Book(1, "a"))</code> should success but not , due to lack of equals and hashCode implementation on the custom class</p></li>
 </ul>
 
 <pre><code class="language-java">@Test
@@ -443,6 +443,12 @@ static class Book {
     }
 }
 </code></pre>
+
+<h3 id="sortalinkedhashset">Sort a LinkedHashSet</h3>
+
+<p>Java doesn't have a direct API to sort a LinkedHashSet, you have to convert it to TreeSet or ArrayList</p>
+
+<p><a href="https://hellokoding.com/sort-a-hashset-in-java/">Learn more</a></p>
 
 <h2 id="conclusion">Conclusion</h2>
 

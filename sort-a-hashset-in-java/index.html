@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sort a HashSet in Java</title>
+  <title>Sort a HashSet and LinkedHashSet in Java</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,18 +19,18 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Sort a HashSet in Java">
-    <meta property="og:description" content="You can't sort a HashSet in Java directly as it has no guarantee on the iteration order However, you can get the HashSet elements in sorted order by converting HashSet to TreeSet and ArrayList Lets walk through this tutorial to explore them in more details Sort by converting to TreeSet">
+    <meta property="og:title" content="Sort a HashSet and LinkedHashSet in Java">
+    <meta property="og:description" content="Java doesn't have a direct API to sort HashSet and LinkedHashSet collections. However, you can sort by converting them to TreeSet and ArrayList collections Lets walk through this tutorial to explore in more details Sort by converting to TreeSet You can convert a HashSet or LinkedHashSet to TreeSet by using">
     <meta property="og:url" content="http://hellokoding.com/sort-a-hashset-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/JavaCollections_SortaHashSet.png">
     <meta property="article:published_time" content="2019-06-13T05:48:31.000Z">
-    <meta property="article:modified_time" content="2019-10-03T16:18:10.000Z">
+    <meta property="article:modified_time" content="2019-10-09T13:12:56.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sort a HashSet in Java">
-    <meta name="twitter:description" content="You can't sort a HashSet in Java directly as it has no guarantee on the iteration order However, you can get the HashSet elements in sorted order by converting HashSet to TreeSet and ArrayList Lets walk through this tutorial to explore them in more details Sort by converting to TreeSet">
+    <meta name="twitter:title" content="Sort a HashSet and LinkedHashSet in Java">
+    <meta name="twitter:description" content="Java doesn't have a direct API to sort HashSet and LinkedHashSet collections. However, you can sort by converting them to TreeSet and ArrayList collections Lets walk through this tutorial to explore in more details Sort by converting to TreeSet You can convert a HashSet or LinkedHashSet to TreeSet by using">
     <meta name="twitter:url" content="http://hellokoding.com/sort-a-hashset-in-java/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/JavaCollections_SortaHashSet.png">
     <meta name="twitter:label1" content="Written by">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Sort a HashSet in Java",
+    "headline": "Sort a HashSet and LinkedHashSet in Java",
     "url": "http://hellokoding.com/sort-a-hashset-in-java/",
     "datePublished": "2019-06-13T05:48:31.000Z",
-    "dateModified": "2019-10-03T16:18:10.000Z",
+    "dateModified": "2019-10-09T13:12:56.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/JavaCollections_SortaHashSet.png",
     "keywords": "Java",
-    "description": "You can&#x27;t sort a HashSet in Java directly as it has no guarantee on the iteration order However, you can get the HashSet elements in sorted order by converting HashSet to TreeSet and ArrayList Lets walk through this tutorial to explore them in more details Sort by converting to TreeSet"
+    "description": "Java doesn&#x27;t have a direct API to sort HashSet and LinkedHashSet collections. However, you can sort by converting them to TreeSet and ArrayList collections Lets walk through this tutorial to explore in more details Sort by converting to TreeSet You can convert a HashSet or LinkedHashSet to TreeSet by using"
 }
     </script>
 
@@ -224,8 +224,8 @@ ghost.init({
         <article class="post tag-java">
 
           <header class="post__header">
-            <h1 class="post__title">Sort a HashSet in Java</h1>
-            <time class="post__date" datetime="2019-10-03">Last modified @ 03 October 2019</time>
+            <h1 class="post__title">Sort a HashSet and LinkedHashSet in Java</h1>
+            <time class="post__date" datetime="2019-10-09">Last modified @ 09 October 2019</time>
           </header>
 
           <div class="post-content">
@@ -233,18 +233,16 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p>You can't sort a HashSet in Java directly as it has no guarantee on the iteration order</p>
+            <p>Java doesn't have a direct API to sort <a href="https://hellokoding.com/java-hashset-tutorial-with-examples/">HashSet</a> and <a href="https://hellokoding.com/java-linkedhashset/">LinkedHashSet</a> collections. However, you can sort by converting them to <a href="https://hellokoding.com/java-treeset-tutorial-with-examples/">TreeSet</a> and <a href="https://hellokoding.com/java-arraylist-examples/">ArrayList</a> collections</p>
 
-<p>However, you can get the HashSet elements in sorted order by converting HashSet to TreeSet and ArrayList</p>
-
-<p>Lets walk through this tutorial to explore them in more details</p>
+<p>Lets walk through this tutorial to explore in more details</p>
 
 <h2 id="sortbyconvertingtotreeset">Sort by converting to TreeSet</h2>
 
-<p>You can convert a HashSet to TreeSet by using TreeSet constructors including <code>TreeSet&lt;&gt;(Collection)</code> and <code>TreeSet&lt;&gt;(Comparator)</code> with <code>addAll(Collection)</code> method</p>
+<p>You can convert a HashSet or LinkedHashSet to TreeSet by using TreeSet constructors including <code>TreeSet&lt;&gt;(Collection)</code> and <code>TreeSet&lt;&gt;(Comparator)</code></p>
 
 <ul>
-<li><p>If you use <code>TreeSet&lt;&gt;(Collection)</code> constructor to convert, the sorting logic will be defined by the <code>Comparable</code> interface implementation of the underlying objects</p>
+<li><p>If you use <code>TreeSet&lt;&gt;(Collection)</code> constructor to convert, the sorting logic will be based on the <code>Comparable</code> natural ordering of the underlying objects</p>
 
 <p>In the below example, <code>Comparable</code> is implemented in <code>Integer</code> by default. The <code>descendingSet()</code> method of a <code>TreeSet</code> instance can also be used to get the reversed order from the default <code>Comparable</code> implementation</p></li>
 </ul>
@@ -262,7 +260,7 @@ public void sortWith_TreeSet_And_Comparable() {
 </code></pre>
 
 <ul>
-<li><p>If you use <code>TreeSet&lt;&gt;(Comparator)</code> constructor and <code>addAll(Collection)</code> method to convert, the sorting logic will be controlled by the given <code>Comparator</code></p>
+<li><p>If you use <code>TreeSet&lt;&gt;(Comparator)</code> constructor in conjunction with <code>addAll(Collection)</code> method to convert, the sorting logic will be controlled by the given <code>Comparator</code></p>
 
 <p>The ordering can be inherited from the implemented <code>Comparable</code> of the underlying objects with <code>Comparator.naturalOrder()</code> or in the reverse order with <code>Comparator.reverseOrder()</code></p></li>
 </ul>
@@ -322,10 +320,10 @@ public void sortWith_TreeSet_And_CustomComparator() {
 
 <h2 id="sortbyconvertingtoarraylist">Sort by converting to ArrayList</h2>
 
-<p>You can convert a HashSet to ArrayList by using ArrayList constructor <code>ArrayList&lt;&gt;(Collection)</code></p>
+<p>You can convert a HashSet or LinkedHashSet to ArrayList by using ArrayList constructor <code>ArrayList&lt;&gt;(Collection)</code></p>
 
 <ul>
-<li><p>The created ArrayList is in the order returned by the given HashSet iterator (so no orders by default). To sort it, you can use the <code>sort(Comparator.naturalOrder())</code> method to inherit the ordering logic defined by the implemented <code>Comparable</code> of the underlying objects</p>
+<li><p>The created ArrayList is in the order returned by the given Set iterator. To sort it, you can use the <code>sort(Comparator.naturalOrder())</code> method to inherit the ordering logic defined by the implemented <code>Comparable</code> of the underlying objects</p>
 
 <p><code>Comparator.reverseOrder()</code> can also be used to get the reversed order from the default implementation</p>
 
@@ -373,13 +371,9 @@ public void sortWith_ArrayList_And_CustomComparator() {
 
 <p><a href="https://hellokoding.com/java-comparable-vs-comparator-examples/">Learn more about Comparable and Comparator</a></p>
 
-<h3 id="thehashsettutorial">The HashSet Tutorial</h3>
-
-<p><a href="https://hellokoding.com/java-hashset-tutorial-with-examples/">Learn more about other operations on HashSet</a></p>
-
 <h2 id="conclusion">Conclusion</h2>
 
-<p>In this tutorial, we learned sorting a HashSet in Java by converting it to TreeSet and ArrayList. You can find below the full source code</p>
+<p>In this tutorial, we learned sorting a HashSet or LinkedHashSet in Java by converting it to TreeSet or ArrayList. You can find below the full source code</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/HashSetSortingTest.java">
 </code></pre>
@@ -391,7 +385,7 @@ public void sortWith_ArrayList_And_CustomComparator() {
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Sort%20a%20HashSet%20in%20Java&amp;url=http://hellokoding.com/sort-a-hashset-in-java/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Sort%20a%20HashSet%20and%20LinkedHashSet%20in%20Java&amp;url=http://hellokoding.com/sort-a-hashset-in-java/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
