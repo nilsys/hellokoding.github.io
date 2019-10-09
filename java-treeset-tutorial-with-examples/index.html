@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-treeset-tutorial-with-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_TreeSetTutorial.png">
     <meta property="article:published_time" content="2019-10-08T15:09:30.000Z">
-    <meta property="article:modified_time" content="2019-10-08T16:35:53.000Z">
+    <meta property="article:modified_time" content="2019-10-09T03:34:33.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java TreeSet Tutorial with Examples",
     "url": "http://hellokoding.com/java-treeset-tutorial-with-examples/",
     "datePublished": "2019-10-08T15:09:30.000Z",
-    "dateModified": "2019-10-08T16:35:53.000Z",
+    "dateModified": "2019-10-09T03:34:33.000Z",
     "image": "http://hellokoding.com/content/images/2019/10/JavaCollections_TreeSetTutorial.png",
     "keywords": "Java",
     "description": "TreeSet is a red-black tree data structure implementation of the NavigableSet interface based on a TreeMap. TreeSet is a part of the Java Collections Framework TreeSet has the following features Provides value-ordered iteration. Provides contains(Object), add(Object) and remove() operations in log-time performance Elements are ordered and compared using"
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java TreeSet Tutorial with Examples</h1>
-            <time class="post__date" datetime="2019-10-08">Last modified @ 08 October 2019</time>
+            <time class="post__date" datetime="2019-10-09">Last modified @ 09 October 2019</time>
           </header>
 
           <div class="post-content">
@@ -347,7 +347,7 @@ public void iterateWithIterator() {
 
 <p></p><div class="hk-autoads"></div>  
 
-<h3 id="retrieveandexamine">Retrieve and examine</h3>
+<h3 id="retrieveandfilter">Retrieve and Filter</h3>
 
 <ul>
 <li><p>Retrieve the first and the last element from a TreeSet by using first() and last() methods</p>
@@ -398,19 +398,46 @@ public void examine() {
 }
 </code></pre>
 
-<ul>
-<li><p>Internally, the contains(Object) method compares objects based on their Comparable or Comparator depending on which constructor is used at the creation time</p>
+<h3 id="examineaddandremove">Examine, Add, and Remove</h3>
 
-<p>In the following example, treeSet.contains(new Book(2, "a")) return true instead of false, due to the compareTo method only compares title</p></li>
+<ul>
+<li>TreeSet provides contains(Object), add(Object) and remove(Object) methods in log-time performance to examine if a TreeSet contains the specified element, add an element, and remove an element respectively</li>
 </ul>
 
 <pre><code class="language-java">@Test
-public void containsACustomObject(){  
+public void containsAddRemove() {  
+    NavigableSet&lt;Integer&gt; treeSet = new TreeSet&lt;&gt;(Set.of(3, 1, 2));
+    Boolean contained = treeSet.contains(3);
+    assertThat(contained).isTrue();
+
+    treeSet.add(1); // duplicated element is ignored
+    treeSet.add(4);
+    assertThat(treeSet).containsExactly(1, 2, 3, 4);
+
+    treeSet.remove(3);
+    assertThat(treeSet).containsExactly(1, 2, 4);
+}
+</code></pre>
+
+<ul>
+<li><p>Internally, the contains(Object), add(Object) and remove(Object) methods compares objects based on their Comparable or Comparator, regardless of their <a href="https://hellokoding.com/java-equals-and-hashcode/">equals and hashCode</a>, depending on which constructor is used at the creation time</p>
+
+<p>In the following example, <code>treeSet.contains(new Book(2, "a"))</code> should return false but true, <code>treeSet.add(new Book(2, "a"))</code> should success but not and <code>treeSet.remove(new Book(2, "a"))</code> should not but success , due to the compareTo method only compares title</p></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void containsAddRemoveACustomObject(){  
     TreeSet&lt;Book&gt; treeSet = new TreeSet&lt;&gt;();
     treeSet.add(new Book(1, "a"));
 
     Boolean contained = treeSet.contains(new Book(2, "a"));
     assertThat(contained).isTrue();
+
+    treeSet.add(new Book(2, "a"));
+    assertThat(treeSet).hasSize(1);
+
+    treeSet.remove(new Book(2, "a"));
+    assertThat(treeSet).isEmpty();
 }
 </code></pre>
 
@@ -437,72 +464,6 @@ public void containsACustomObject(){
     public int compareTo(Book o) {
         return CharSequence.compare(this.title, o.title);
     }
-}
-</code></pre>
-
-<h3 id="addelementstoatreeset">Add elements to a TreeSet</h3>
-
-<ul>
-<li><p>Adding an element into a TreeSet by using add(Object) or addAll(Collection) method in log-time performance</p>
-
-<p>TreeSet does not permit null element, duplicated element is ignored and the iteration order is based on Comparable or Comparator</p></li>
-</ul>
-
-<pre><code class="language-java">@Test
-public void add() {  
-    NavigableSet&lt;Integer&gt; treeSet = new TreeSet&lt;&gt;();
-    treeSet.add(1);
-    treeSet.add(1); // duplicated element is ignored
-    treeSet.addAll(Set.of(2, 3));
-
-    assertThat(treeSet).containsExactly(1, 2, 3);
-}
-</code></pre>
-
-<ul>
-<li><p>Internally, the add(Object) method only adds the specified object into a TreeSet if its contains(Object) method returns false</p>
-
-<p>In the following example, the add(Object) method works incorrectly as the compareTo only compares title</p></li>
-</ul>
-
-<pre><code class="language-java">@Test
-public void addACustomObject() {  
-    NavigableSet&lt;Book&gt; treeSet = new TreeSet&lt;&gt;();
-    treeSet.add(new Book(1, "a"));
-    treeSet.add(new Book(2, "a"));
-
-    assertThat(treeSet).hasSize(1);
-}
-</code></pre>
-
-<h3 id="removeelementsfromatreeset">Remove elements from a TreeSet</h3>
-
-<ul>
-<li>Remove an element from a TreeSet by using remove(Object) in log-time performance</li>
-</ul>
-
-<pre><code class="language-java">@Test
-public void remove() {  
-    NavigableSet&lt;Integer&gt; treeSet = new TreeSet&lt;&gt;(Set.of(1, 2, 3));
-    treeSet.remove(1);
-
-    assertThat(treeSet).containsExactly(2, 3);
-}
-</code></pre>
-
-<ul>
-<li><p>Internally, the remove(Object) method only removes the specified object from a TreeSet if its contains(Object) method returns true</p>
-
-<p>In the following example, remove(Object) works incorrectly as the compareTo only compares title</p></li>
-</ul>
-
-<pre><code class="language-java">@Test
-public void removeACustomObject() {  
-    NavigableSet&lt;Book&gt; treeSet = new TreeSet&lt;&gt;();
-    treeSet.add(new Book(1, "a"));
-    treeSet.remove(new Book(2, "a"));
-
-    assertThat(treeSet).isEmpty();
 }
 </code></pre>
 
