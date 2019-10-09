@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Java HashSet Tutorial with Examples">
-    <meta property="og:description" content="Java HashSet is an unordered and no-duplicate elements collection, implementation of the java.util.Set interface and is a part of the Java Collections Framework HashSet has the following attributes Backed by hash table data structure (actually a HashMap instance) No guarantees to the iteration order Contains no duplicate elements,">
+    <meta property="og:description" content="Java HashSet is a hash table data structure implementation of the Set interface based on a HashMap, a part of the Java Collections Framework HashSet has the following attributes No guarantees to the iteration order. Provides contains(Object), add(Object) and remove(Object) operations in constant-time performance Elements are compared">
     <meta property="og:url" content="http://hellokoding.com/java-hashset-tutorial-with-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/java-collection-hashset.png">
     <meta property="article:published_time" content="2019-06-05T13:13:02.000Z">
-    <meta property="article:modified_time" content="2019-10-04T12:10:09.000Z">
+    <meta property="article:modified_time" content="2019-10-09T13:41:39.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Java HashSet Tutorial with Examples">
-    <meta name="twitter:description" content="Java HashSet is an unordered and no-duplicate elements collection, implementation of the java.util.Set interface and is a part of the Java Collections Framework HashSet has the following attributes Backed by hash table data structure (actually a HashMap instance) No guarantees to the iteration order Contains no duplicate elements,">
+    <meta name="twitter:description" content="Java HashSet is a hash table data structure implementation of the Set interface based on a HashMap, a part of the Java Collections Framework HashSet has the following attributes No guarantees to the iteration order. Provides contains(Object), add(Object) and remove(Object) operations in constant-time performance Elements are compared">
     <meta name="twitter:url" content="http://hellokoding.com/java-hashset-tutorial-with-examples/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/java-collection-hashset.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Java HashSet Tutorial with Examples",
     "url": "http://hellokoding.com/java-hashset-tutorial-with-examples/",
     "datePublished": "2019-06-05T13:13:02.000Z",
-    "dateModified": "2019-10-04T12:10:09.000Z",
+    "dateModified": "2019-10-09T13:41:39.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/java-collection-hashset.png",
     "keywords": "Java",
-    "description": "Java HashSet is an unordered and no-duplicate elements collection, implementation of the java.util.Set interface and is a part of the Java Collections Framework HashSet has the following attributes Backed by hash table data structure (actually a HashMap instance) No guarantees to the iteration order Contains no duplicate elements,"
+    "description": "Java HashSet is a hash table data structure implementation of the Set interface based on a HashMap, a part of the Java Collections Framework HashSet has the following attributes No guarantees to the iteration order. Provides contains(Object), add(Object) and remove(Object) operations in constant-time performance Elements are compared"
 }
     </script>
 
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java HashSet Tutorial with Examples</h1>
-            <time class="post__date" datetime="2019-10-04">Last modified @ 04 October 2019</time>
+            <time class="post__date" datetime="2019-10-09">Last modified @ 09 October 2019</time>
           </header>
 
           <div class="post-content">
@@ -233,15 +233,15 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p>Java HashSet is an unordered and no-duplicate elements collection, implementation of the java.util.Set interface and is a part of the Java Collections Framework</p>
+            <p>Java HashSet is a hash table data structure implementation of the Set interface based on a <a href="https://hellokoding.com/java-hashmap-tutorial-with-examples/">HashMap</a>, a part of the <a href="https://hellokoding.com/java-collections-framework/">Java Collections Framework</a></p>
 
 <p>HashSet has the following attributes</p>
 
 <ul>
-<li><p>Backed by hash table data structure (actually a <code>HashMap</code> instance)</p></li>
-<li><p>No guarantees to the iteration order</p></li>
-<li><p>Contains no duplicate elements, at most one null element</p></li>
-<li><p>Offers constant time performance for add, remove, contains and size operations, assuming the hash function distributes the elements properly among the buckets</p></li>
+<li><p>No guarantees to the iteration order. Provides contains(Object), add(Object) and remove(Object) operations in constant-time performance</p>
+
+<p>Elements are compared based on theirs <a href="https://hellokoding.com/java-equals-and-hashcode/">equals and hashCode</a></p></li>
+<li><p>Duplicated elements are ignored. Null element is permitted</p></li>
 <li><p>Unsynchronized implementation. In multi-threading environment with at least one thread modifies the list, it must be synchronized externally</p></li>
 </ul>
 
@@ -255,22 +255,24 @@ ghost.init({
 
 <p><img src="../content/images/2019/10/Screenshot-2019-10-04-at-8-08-37-PM.png" alt=""></p>
 
+<h3 id="hashsetvslinkedhashsetandtreeset">HashSet vs LinkedHashSet and TreeSet</h3>
+
+<p>HashSet has no ordering guarantees and run faster than TreeSet (constant-time vs log-time for most operations)</p>
+
+<p><a href="https://hellokoding.com/java-linkedhashset/">LinkedHashSet</a> provides insertion-ordered iteration and run nearly as fast as HashSet</p>
+
+<p><a href="https://hellokoding.com/java-treeset-tutorial-with-examples/">TreeSet</a> provides value-ordered iteration. TreeSet can be used to <a href="https://hellokoding.com/sort-a-hashset-in-java/">sort a HashSet or LinkedHashSet</a></p>
+
 <h3 id="declareahashset">Declare a HashSet</h3>
 
-<p>As a result from the class hierarchy, you can declare a HashSet with one of the following ways</p>
+<p>As a result from the class hierarchy, you can declare a HashSet with the following ways</p>
 
 <pre><code class="language-java">@Test
 public void declare() {  
     Set&lt;Integer&gt; set1 = new HashSet&lt;&gt;();
     assertThat(set1).isInstanceOf(HashSet.class);
 
-    Collection&lt;Integer&gt; set2 = new HashSet&lt;&gt;();
-    assertThat(set2).isInstanceOf(HashSet.class);
-
-    Iterable&lt;Integer&gt; set3 = new HashSet&lt;&gt;();
-    assertThat(set3).isInstanceOf(HashSet.class);
-
-    HashSet&lt;Integer&gt; set4 = new HashSet&lt;&gt;();
+    HashSet&lt;Integer&gt; set2 = new HashSet&lt;&gt;();
 }
 </code></pre>
 
