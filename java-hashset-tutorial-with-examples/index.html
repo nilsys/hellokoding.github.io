@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-hashset-tutorial-with-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/java-collection-hashset.png">
     <meta property="article:published_time" content="2019-06-05T13:13:02.000Z">
-    <meta property="article:modified_time" content="2019-10-09T13:41:39.000Z">
+    <meta property="article:modified_time" content="2019-10-11T14:19:07.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java HashSet Tutorial with Examples",
     "url": "http://hellokoding.com/java-hashset-tutorial-with-examples/",
     "datePublished": "2019-06-05T13:13:02.000Z",
-    "dateModified": "2019-10-09T13:41:39.000Z",
+    "dateModified": "2019-10-11T14:19:07.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/java-collection-hashset.png",
     "keywords": "Java",
     "description": "Java HashSet is a hash table data structure implementation of the Set interface based on a HashMap, a part of the Java Collections Framework HashSet has the following attributes No guarantees to the iteration order. Provides contains(Object), add(Object) and remove(Object) operations in constant-time performance Elements are compared"
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java HashSet Tutorial with Examples</h1>
-            <time class="post__date" datetime="2019-10-09">Last modified @ 09 October 2019</time>
+            <time class="post__date" datetime="2019-10-11">Last modified @ 11 October 2019</time>
           </header>
 
           <div class="post-content">
@@ -253,7 +253,7 @@ ghost.init({
 
 <p>HashSet implements the Set interface which extends from Collection and Iterable interfaces hierarchically</p>
 
-<p><img src="../content/images/2019/10/Screenshot-2019-10-04-at-8-08-37-PM.png" alt=""></p>
+<p><img src="../content/images/2019/10/Screenshot-2019-10-11-at-10-16-40-PM.png" alt=""></p>
 
 <h3 id="hashsetvslinkedhashsetandtreeset">HashSet vs LinkedHashSet and TreeSet</h3>
 
@@ -280,7 +280,9 @@ public void declare() {
 
 <h3 id="createandinitializehttpshellokodingcomcreateandinitializeahashsetinjava"><a href="https://hellokoding.com/create-and-initialize-a-hashset-in-java/">Create and Initialize</a></h3>
 
-<p>You can create a new HashSet by using the <code>new</code> operator and initialize it by using constructors, <code>add</code> and <code>addAll</code> methods</p>
+<p>Provide either Set.of or List.of factory method, since Java 9, or Arrays.asList factory method to the HashSet(Collection) constructor to create and init a HashSet in one line at the creation time</p>
+
+<p>You can also use add or addAll method to initialize a HashSet after the creation time</p>
 
 <pre><code class="language-java">@Test
 public void initializeWithAdd() {  
@@ -323,7 +325,7 @@ public void iterate() {
 
 <p></p><div class="hk-autoads"></div>  
 
-<h3 id="queryandfilterahashsethttpshellokodingcomfindelementsinahashset"><a href="https://hellokoding.com/find-elements-in-a-hashset/">Query and Filter a HashSet</a></h3>
+<h3 id="retrieveandfilterahashsethttpshellokodingcomfindelementsinahashset"><a href="https://hellokoding.com/find-elements-in-a-hashset/">Retrieve and Filter a HashSet</a></h3>
 
 <p>You can filter a HashSet by using Java 8+ Stream APIs</p>
 
@@ -338,7 +340,68 @@ public void filter() {
 
 <p><a href="https://hellokoding.com/find-elements-in-a-hashset/">Learn more</a></p>
 
-<h3 id="modifyhttpshellokodingcomjavahashsetremoveandupdateobject"><a href="https://hellokoding.com/java-hashset-remove-and-update-object/">Modify</a></h3>
+<h3 id="examineaddandremove">Examine, Add and Remove</h3>
+
+<ul>
+<li>HashSet provides contains(Object), add(Object) and remove(Object) methods in a constant-time performance to examine if a HashSet contains the specified element, to add a new element, and remove an existing element from a HashSet respectively</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void containsAddRemove() {  
+    Set&lt;Integer&gt; hashSet = new HashSet&lt;&gt;(List.of(1, 2, 3));
+    Boolean contained = hashSet.contains(3);
+    assertThat(contained).isTrue();
+
+    hashSet.add(1); // duplicated element is ignored
+    hashSet.add(null); // permits null element
+    assertThat(hashSet).contains(1, 2, 3, null);
+
+    hashSet.remove(2);
+    assertThat(hashSet).contains(1, 3, null);
+}
+</code></pre>
+
+<ul>
+<li><p>Internally, the contains(Object), add(Object) and remove(Object) methods compares objects based on their <a href="https://hellokoding.com/java-equals-and-hashcode/">equals and hashCode</a></p>
+
+<p>In the following example, <code>hashSet.contains(new Book(1, "a"))</code> should return true but false, <code>hashSet.add(new Book(1, "a"))</code> should not but success and <code>hashSet.remove(new Book(1, "a"))</code> should success but not , due to lack of equals and hashCode implementation on the custom class</p></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void containsAddRemoveACustomObject(){  
+    Set&lt;Book&gt; hashSet = new HashSet&lt;&gt;();
+    hashSet.add(new Book(1, "a"));
+
+    Boolean contained = hashSet.contains(new Book(1, "a"));
+    assertThat(contained).isFalse();
+
+    hashSet.add(new Book(1, "a"));
+    assertThat(hashSet).hasSize(2);
+
+    hashSet.remove(new Book(1, "a"));
+    assertThat(hashSet).hasSize(2);
+}
+
+static class Book {  
+    int id;
+    String title;
+
+    Book(int id, String title) {
+        this.id = id;
+        this.title = title;
+    }
+
+    int getId() {
+        return id;
+    }
+
+    String getTitle() {
+        return title;
+    }
+}
+</code></pre>
+
+<h3 id="removemultipleelementshttpshellokodingcomjavahashsetremoveandupdateobject"><a href="https://hellokoding.com/java-hashset-remove-and-update-object/">Remove multiple elements</a></h3>
 
 <p>Remove multiple objects from a HashSet with Java 8+ <code>removeIf(Predicate)</code></p>
 
@@ -363,7 +426,7 @@ public void removeIf() {
 
 <h3 id="sortahashsethttpshellokodingcomsortahashsetinjava"><a href="https://hellokoding.com/sort-a-hashset-in-java/">Sort a HashSet</a></h3>
 
-<p>Sort a HashSet by using TreeSet</p>
+<p>Sort a HashSet by converting to TreeSet</p>
 
 <pre><code class="language-java">@Test
 public void sort() {  
