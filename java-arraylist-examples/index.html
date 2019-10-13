@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Java ArrayList Tutorial with Examples">
-    <meta property="og:description" content="ArrayList is a resizable-array data structure implementation of the java.util.List interface, a part of the Java Collections Framework ArrayList has the following features Backed by dynamic array data structure, its capacity auto grows internally Allow null and duplicate elements Elements are positioned as their insertion order Zero based">
+    <meta property="og:description" content="ArrayList is a dynamic array data structure implementation of the List interface, a part of the Java Collections Framework ArrayList has the following features Provides insertion-ordered iteration Provides zero-based index operations (get, add, set, remove). Get, set operations run in constant-time performance. Add operation runs in amortized constant time. Other">
     <meta property="og:url" content="http://hellokoding.com/java-arraylist-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/java-collections-arraylist.png">
     <meta property="article:published_time" content="2019-04-26T15:13:39.000Z">
-    <meta property="article:modified_time" content="2019-10-04T12:05:02.000Z">
+    <meta property="article:modified_time" content="2019-10-13T08:33:08.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Java ArrayList Tutorial with Examples">
-    <meta name="twitter:description" content="ArrayList is a resizable-array data structure implementation of the java.util.List interface, a part of the Java Collections Framework ArrayList has the following features Backed by dynamic array data structure, its capacity auto grows internally Allow null and duplicate elements Elements are positioned as their insertion order Zero based">
+    <meta name="twitter:description" content="ArrayList is a dynamic array data structure implementation of the List interface, a part of the Java Collections Framework ArrayList has the following features Provides insertion-ordered iteration Provides zero-based index operations (get, add, set, remove). Get, set operations run in constant-time performance. Add operation runs in amortized constant time. Other">
     <meta name="twitter:url" content="http://hellokoding.com/java-arraylist-examples/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/05/java-collections-arraylist.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Java ArrayList Tutorial with Examples",
     "url": "http://hellokoding.com/java-arraylist-examples/",
     "datePublished": "2019-04-26T15:13:39.000Z",
-    "dateModified": "2019-10-04T12:05:02.000Z",
+    "dateModified": "2019-10-13T08:33:08.000Z",
     "image": "http://hellokoding.com/content/images/2019/05/java-collections-arraylist.png",
     "keywords": "Java",
-    "description": "ArrayList is a resizable-array data structure implementation of the java.util.List interface, a part of the Java Collections Framework ArrayList has the following features Backed by dynamic array data structure, its capacity auto grows internally Allow null and duplicate elements Elements are positioned as their insertion order Zero based"
+    "description": "ArrayList is a dynamic array data structure implementation of the List interface, a part of the Java Collections Framework ArrayList has the following features Provides insertion-ordered iteration Provides zero-based index operations (get, add, set, remove). Get, set operations run in constant-time performance. Add operation runs in amortized constant time. Other"
 }
     </script>
 
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java ArrayList Tutorial with Examples</h1>
-            <time class="post__date" datetime="2019-10-04">Last modified @ 04 October 2019</time>
+            <time class="post__date" datetime="2019-10-13">Last modified @ 13 October 2019</time>
           </header>
 
           <div class="post-content">
@@ -233,15 +233,15 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p>ArrayList is a resizable-array data structure implementation of the java.util.List interface, a part of the <a href="https://hellokoding.com/java-collections-framework/">Java Collections Framework</a></p>
+            <p>ArrayList is a dynamic <a href="https://hellokoding.com/array-data-structure/">array data structure</a> implementation of the List interface, a part of the <a href="https://hellokoding.com/java-collections-framework/">Java Collections Framework</a></p>
 
 <p>ArrayList has the following features</p>
 
 <ul>
-<li><p>Backed by dynamic array data structure, its capacity auto grows internally</p></li>
-<li><p>Allow null and duplicate elements</p></li>
-<li><p>Elements are positioned as their insertion order</p></li>
-<li><p>Zero based integer index, can access (get / insert / replace/ remove) elements by their index</p></li>
+<li><p>Provides insertion-ordered iteration</p></li>
+<li><p>Provides zero-based index operations (get, add, set, remove). Get, set operations run in constant-time performance. Add operation runs in amortized constant time. Other operations run in linear time</p></li>
+<li><p>Permits null and duplicated elements</p></li>
+<li><p>Elements are compared base on their equals method implementation</p></li>
 <li><p>Unsynchronized implementation. In multi-threading environment with at least one thread modifies the list, it must be synchronized externally</p></li>
 </ul>
 
@@ -255,22 +255,22 @@ ghost.init({
 
 <p><img src="../content/images/2019/10/Screenshot-2019-10-04-at-8-02-07-PM.png" alt=""></p>
 
+<h3 id="arraylistvsarrayandlinkedlist">ArrayList vs Array and LinkedList</h3>
+
+<p>Array is a fixed size while ArrayList is a resizable array data structure implementation. Array provides run-time type safety while ArrayList provides compile time type safety. <a href="https://hellokoding.com/java-array-vs-arraylist/">Learn more</a></p>
+
+<p><a href="https://hellokoding.com/java-linkedlist-tutorial-with-examples/">LinkedList</a> is a doubly linked list data structure implementation, more flexible than ArrayList but consumes more memory and slower</p>
+
 <h3 id="declareanarraylist">Declare an ArrayList</h3>
 
-<p>As a result from the class hierarchy, you can declare and create an ArrayList with one of the following ways</p>
+<p>As a result from the class hierarchy, you can declare and create an ArrayList with the following ways</p>
 
 <pre><code class="language-java">@Test
 public void declareAndCreate() {  
     List&lt;Integer&gt; lst1 = new ArrayList&lt;&gt;();
     assertThat(lst1).isInstanceOf(ArrayList.class);
 
-    Collection&lt;Integer&gt; lst2 = new ArrayList&lt;&gt;();
-    assertThat(lst2).isInstanceOf(ArrayList.class);
-
-    Iterable&lt;Integer&gt; lst3 = new ArrayList&lt;&gt;();
-    assertThat(lst3).isInstanceOf(ArrayList.class);
-
-    ArrayList&lt;Integer&gt; lst4 = new ArrayList&lt;&gt;();
+    ArrayList&lt;Integer&gt; lst2 = new ArrayList&lt;&gt;();
 }
 </code></pre>
 
@@ -304,7 +304,7 @@ public void initialize() {
 
 <p></p><div class="hk-autoads"></div>  
 
-<h3 id="iteratehttpshellokodingcomiterateanarraylistinjava"><a href="https://hellokoding.com/iterate-an-arraylist-in-java/">Iterate</a></h3>
+<h3 id="iterateoveranarraylisthttpshellokodingcomiterateanarraylistinjava"><a href="https://hellokoding.com/iterate-an-arraylist-in-java/">Iterate over an ArrayList</a></h3>
 
 <p>You can iterate an ArrayList by using for-each loop and Java 8+ <code>forEach(Consumer)</code> method of <code>Iterable</code> interfaces</p>
 
@@ -321,7 +321,7 @@ public void forEachConsumer() {
 
 <p><a href="https://hellokoding.com/iterate-an-arraylist-in-java/">Learn more</a></p>
 
-<h3 id="queryandfilterhttpshellokodingcomqueryanarraylistinjava"><a href="https://hellokoding.com/query-an-arraylist-in-java/">Query and Filter</a></h3>
+<h3 id="retrieveandfilterhttpshellokodingcomqueryanarraylistinjava"><a href="https://hellokoding.com/query-an-arraylist-in-java/">Retrieve and Filter</a></h3>
 
 <p>Filter an ArrayList by using Java 8+ Stream API. Using ArrayList APIs to get element by index, get index by element, check if value existing, get size and check if the list is empty</p>
 
@@ -341,32 +341,149 @@ public void filter() {
 
 <p></p><div class="hk-autoads"></div>  
 
-<h3 id="modifyhttpshellokodingcommodifyanarraylistinjava"><a href="https://hellokoding.com/modify-an-arraylist-in-java/">Modify</a></h3>
+<h3 id="examineaddupdateandremove">Examine, Add, Update and Remove</h3>
 
-<p>You can modify an ArrayList by using <code>add</code> methods to append and insert elements into the list, <code>set</code> method to replace element and <code>remove</code> methods to remove element from the list</p>
+<ul>
+<li>You can use <code>contains</code> method to examine if an element existing in an ArrayList, <code>add</code> methods to append and insert elements into the list, <code>set</code> method to update / replace element and <code>remove</code> methods to remove element from the list</li>
+</ul>
 
 <pre><code class="language-java">@Test
-public void insert() {  
-    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
-    lst.add(1);
-    lst.add(2);
+public void containsAddUpdateRemoveSingleElement() {  
+    List&lt;Integer&gt; arrayList = new ArrayList&lt;&gt;(List.of(1, 2, 3));
+    Boolean contained = arrayList.contains(3);
+    assertThat(contained).isTrue();
 
-    // Inserts element to lst at the specified index
-    lst.add(0, 3);
+    arrayList.add(4); // appends an element
+    arrayList.add(0, 10); // inserts at index 0
+    arrayList.add(null);
+    assertThat(arrayList).containsExactly(10, 1, 2, 3, 4, null);
 
-    // Asserts that the list contains exactly the given values in order
-    assertThat(lst).containsExactly(3, 1, 2);
+    arrayList.set(0, 100); // update at index 0
+    assertThat(arrayList).containsExactly(100, 1, 2, 3, 4, null);
 
-    // Asserts that the list throws IndexOutOfBoundsException
-    //     when insert element at the out of bound position
-    assertThatThrownBy(() -&gt; lst.add(5, 4))
-        .isInstanceOf(IndexOutOfBoundsException.class);
+    arrayList.remove(1); // removes at index 1
+    assertThat(arrayList).containsExactly(100, 2, 3, 4, null);
+
+    arrayList.remove(Integer.valueOf(2)); // removes an element
+    assertThat(arrayList).containsExactly(100, 3, 4, null);
 }
 </code></pre>
 
-<p><a href="https://hellokoding.com/modify-an-arraylist-in-java/">Learn more</a></p>
+<ul>
+<li>ArrayLists also support the above operations in bulk with containsAll, addAll, Java 8+ replaceAll, removeAll, Java 8+ removeIf</li>
+</ul>
 
-<h3 id="sorthttpshellokodingcomsortanarraylistinjava"><a href="https://hellokoding.com/sort-an-arraylist-in-java/">Sort</a></h3>
+<pre><code class="language-java">@Test
+public void containsAddUpdateRemoveMultipleElements() {  
+    List&lt;Integer&gt; arrayList = new ArrayList&lt;&gt;(List.of(1, 2, 3));
+    Boolean contained = arrayList.containsAll(List.of(1, 2));
+    assertThat(contained).isTrue();
+
+    arrayList.addAll(List.of(4, 5));
+    arrayList.addAll(0, List.of(10, 100));
+    assertThat(arrayList).containsExactly(10, 100, 1, 2, 3, 4, 5);
+
+    arrayList.replaceAll(e -&gt; ++e);
+    assertThat(arrayList).containsExactly(11, 101, 2, 3, 4, 5, 6);
+
+    arrayList.removeAll(List.of(1, 11, 101));
+    assertThat(arrayList).containsExactly(2, 3, 4, 5, 6);
+
+    arrayList.removeIf(e -&gt; e &gt;= 3);
+    assertThat(arrayList).contains(2);
+}
+</code></pre>
+
+<h3 id="objectscomparinginarraylist">Objects comparing in ArrayList</h3>
+
+<ul>
+<li><p>Internally, operations such as contains(Object) and remove(Object) compare objects based on their equals method implementation</p>
+
+<p>In the following example, <code>list.contains(new Book(1, "a"))</code> should return true but false, <code>list.remove(new Book(1, "a"))</code> should success but not due to lack of equals implementation on the user defined class</p></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void objectsComparingProblem(){  
+    List&lt;Book&gt; list = new ArrayList&lt;&gt;();
+    list.add(new Book(1, "a"));
+
+    Boolean contained = list.contains(new Book(1, "a"));
+    assertThat(contained).isFalse();
+
+    list.remove(new Book(1, "a"));
+    assertThat(list).hasSize(1);
+}
+
+static class Book {  
+    int id;
+    String title;
+
+    Book(int id, String title) {
+        this.id = id;
+        this.title = title;
+    }
+
+    int getId() {
+        return id;
+    }
+
+    String getTitle() {
+        return title;
+    }
+}
+</code></pre>
+
+<ul>
+<li>You can fix the above problem by implement the equals method to the custom class as the below example</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void objectsComparingFixed(){  
+    List&lt;BookFixed&gt; list = new ArrayList&lt;&gt;();
+    list.add(new BookFixed(1, "a"));
+
+    Boolean contained = list.contains(new BookFixed(1, "a"));
+    assertThat(contained).isTrue();
+
+    list.remove(new BookFixed(1, "a"));
+    assertThat(list).hasSize(0);
+}
+
+static class BookFixed {  
+    int id;
+    String title;
+
+    BookFixed(int id, String title) {
+        this.id = id;
+        this.title = title;
+    }
+
+    int getId() {
+        return id;
+    }
+
+    String getTitle() {
+        return title;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BookFixed bookFixed = (BookFixed) o;
+        return id == bookFixed.id &amp;&amp;
+                Objects.equals(title, bookFixed.title);
+    }
+}
+</code></pre>
+
+<ul>
+<li><p>In practice, consider to override hashCode when overriding equals as your defined classes may be used elsewhere in a hash table based collections such as <a href="https://hellokoding.com/java-hashset-tutorial-with-examples/">HashSet</a> and <a href="https://hellokoding.com/java-hashmap-tutorial-with-examples/">HashMap</a></p>
+
+<p><a href="https://hellokoding.com/java-equals-and-hashcode/">Learn more about equals and hashCode</a></p></li>
+</ul>
+
+<h3 id="sortanarraylisthttpshellokodingcomsortanarraylistinjava"><a href="https://hellokoding.com/sort-an-arraylist-in-java/">Sort an ArrayList</a></h3>
 
 <p>Sort an ArrayList of objects by using its instance's <code>sort(Comparator)</code> method in conjunction with <code>Comparable</code> and <code>Comparator</code> interfaces to control over the sort order</p>
 
@@ -386,12 +503,6 @@ public void sortMultipleFields() {
 </code></pre>
 
 <p><a href="https://hellokoding.com/sort-an-arraylist-in-java/">Learn more</a></p>
-
-<h3 id="arrayvsarraylisthttpshellokodingcomjavaarrayvsarraylist"><a href="https://hellokoding.com/java-array-vs-arraylist/">Array vs ArrayList</a></h3>
-
-<p>Arrays provide run-time type safety while ArrayLists provide compile time type safety</p>
-
-<p><a href="https://hellokoding.com/java-array-vs-arraylist/">Learn more</a></p>
 
 <h2 id="conclusion">Conclusion</h2>
 
