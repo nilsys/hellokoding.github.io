@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-arraylist-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/java-collections-arraylist.png">
     <meta property="article:published_time" content="2019-04-26T15:13:39.000Z">
-    <meta property="article:modified_time" content="2019-10-13T08:33:08.000Z">
+    <meta property="article:modified_time" content="2019-10-13T12:59:08.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java ArrayList Tutorial with Examples",
     "url": "http://hellokoding.com/java-arraylist-examples/",
     "datePublished": "2019-04-26T15:13:39.000Z",
-    "dateModified": "2019-10-13T08:33:08.000Z",
+    "dateModified": "2019-10-13T12:59:08.000Z",
     "image": "http://hellokoding.com/content/images/2019/05/java-collections-arraylist.png",
     "keywords": "Java",
     "description": "ArrayList is a dynamic array data structure implementation of the List interface, a part of the Java Collections Framework ArrayList has the following features Provides insertion-ordered iteration Provides zero-based index operations (get, add, set, remove). Get, set operations run in constant-time performance. Add operation runs in amortized constant time. Other"
@@ -276,7 +276,9 @@ public void declareAndCreate() {
 
 <h3 id="createandinitializehttpshellokodingcomcreateandinitializeanarraylistinjava"><a href="https://hellokoding.com/create-and-initialize-an-arraylist-in-java/">Create and Initialize</a></h3>
 
-<p>Create and initialize an ArrayList by using its constructors, <code>add</code> and <code>addAll</code> methods</p>
+<p>Provide either Set.of or List.of factory method, since Java 9, or Arrays.asList factory method to the ArrayList(Collection) constructor to create and init a HashSet in one line at the creation time</p>
+
+<p>You can also use add or addAll method to initialize a HashSet after the creation time</p>
 
 <pre><code class="language-java">@Test
 public void initialize() {  
