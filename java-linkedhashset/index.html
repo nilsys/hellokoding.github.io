@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Java LinkedHashSet Tutorial with Examples">
-    <meta property="og:description" content="LinkedHashSet is a hash table and doubly linked list data structure implementation of the Set interface, a part of the Java Collections Framework LinkedHashSet has the following features Provides insertion-ordered iteration. Provides contains(Object), add(Object) and remove(Object) operations in constant-time performance Elements are compared based on theirs equals">
+    <meta property="og:description" content="LinkedHashSet is a hash table and doubly linked list data structure implementation of the Set interface, a part of the Java Collections Framework LinkedHashSet has the following features Provides insertion-ordered iteration Provides contains(Object), add(Object) and remove(Object) operations in constant-time performance Duplicated elements are ignored. Null element is">
     <meta property="og:url" content="http://hellokoding.com/java-linkedhashset/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_LinkedHashSetTutorial.png">
     <meta property="article:published_time" content="2019-10-06T09:10:19.000Z">
-    <meta property="article:modified_time" content="2019-10-10T15:55:36.000Z">
+    <meta property="article:modified_time" content="2019-10-13T06:45:57.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Java LinkedHashSet Tutorial with Examples">
-    <meta name="twitter:description" content="LinkedHashSet is a hash table and doubly linked list data structure implementation of the Set interface, a part of the Java Collections Framework LinkedHashSet has the following features Provides insertion-ordered iteration. Provides contains(Object), add(Object) and remove(Object) operations in constant-time performance Elements are compared based on theirs equals">
+    <meta name="twitter:description" content="LinkedHashSet is a hash table and doubly linked list data structure implementation of the Set interface, a part of the Java Collections Framework LinkedHashSet has the following features Provides insertion-ordered iteration Provides contains(Object), add(Object) and remove(Object) operations in constant-time performance Duplicated elements are ignored. Null element is">
     <meta name="twitter:url" content="http://hellokoding.com/java-linkedhashset/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_LinkedHashSetTutorial.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Java LinkedHashSet Tutorial with Examples",
     "url": "http://hellokoding.com/java-linkedhashset/",
     "datePublished": "2019-10-06T09:10:19.000Z",
-    "dateModified": "2019-10-10T15:55:36.000Z",
+    "dateModified": "2019-10-13T06:45:57.000Z",
     "image": "http://hellokoding.com/content/images/2019/10/JavaCollections_LinkedHashSetTutorial.png",
     "keywords": "Java",
-    "description": "LinkedHashSet is a hash table and doubly linked list data structure implementation of the Set interface, a part of the Java Collections Framework LinkedHashSet has the following features Provides insertion-ordered iteration. Provides contains(Object), add(Object) and remove(Object) operations in constant-time performance Elements are compared based on theirs equals"
+    "description": "LinkedHashSet is a hash table and doubly linked list data structure implementation of the Set interface, a part of the Java Collections Framework LinkedHashSet has the following features Provides insertion-ordered iteration Provides contains(Object), add(Object) and remove(Object) operations in constant-time performance Duplicated elements are ignored. Null element is"
 }
     </script>
 
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java LinkedHashSet Tutorial with Examples</h1>
-            <time class="post__date" datetime="2019-10-10">Last modified @ 10 October 2019</time>
+            <time class="post__date" datetime="2019-10-13">Last modified @ 13 October 2019</time>
           </header>
 
           <div class="post-content">
@@ -238,10 +238,10 @@ ghost.init({
 <p>LinkedHashSet has the following features</p>
 
 <ul>
-<li><p>Provides insertion-ordered iteration. Provides contains(Object), add(Object) and remove(Object) operations in constant-time performance</p>
-
-<p>Elements are compared based on theirs <a href="http://localhost:2368/java-linkedhashset/(https://hellokoding.com/java-equals-and-hashcode/)">equals and hashCode</a></p></li>
+<li><p>Provides insertion-ordered iteration</p></li>
+<li><p>Provides contains(Object), add(Object) and remove(Object) operations in constant-time performance</p></li>
 <li><p>Duplicated elements are ignored. Null element is permitted</p></li>
+<li><p>Elements are compared based on theirs <a href="http://localhost:2368/java-linkedhashset/(https://hellokoding.com/java-equals-and-hashcode/)">equals and hashCode</a></p></li>
 <li><p>Unsynchronized implementation. In multi-threading environment with at least one thread modifies the list, it must be synchronized externally</p></li>
 </ul>
 
@@ -386,32 +386,56 @@ public void retrieve() {
 <h3 id="examineaddandremove">Examine, Add and Remove</h3>
 
 <ul>
-<li>LinkedHashSet provides contains(Object), add(Object) and remove(Object) methods in a constant-time performance to examine if a LinkedHashSet contains the specified element, add a new element, and remove an existing element from a LinkedHashSet respectively</li>
+<li>LinkedHashSet provides contains(Object), add(Object) and remove(Object) methods in a constant-time performance to examine if a LinkedHashSet contains the specified element, to add a new element, and remove an existing element from a LinkedHashSet respectively</li>
 </ul>
 
 <pre><code class="language-java">@Test
-public void containsAddRemove() {  
-    Set&lt;Integer&gt; linkedHashSet = new LinkedHashSet&lt;&gt;(List.of(1, 2, 3));
-    Boolean contained = linkedHashSet.contains(3);
+public void containsAddRemoveSingleElement() {  
+    Set&lt;Integer&gt; hashSet = new LinkedHashSet&lt;&gt;(Set.of(1, 2, 3));
+    Boolean contained = hashSet.contains(3);
     assertThat(contained).isTrue();
 
-    linkedHashSet.add(1); // duplicated element is ignored
-    linkedHashSet.add(null); // permits null element
-    assertThat(linkedHashSet).containsExactly(1, 2, 3, null);
+    hashSet.add(4);
+    hashSet.add(4);
+    hashSet.add(null);
+    assertThat(hashSet).contains(1, 2, 3, 4, null);
 
-    linkedHashSet.remove(2);
-    assertThat(linkedHashSet).containsExactly(1, 3, null);
+    hashSet.remove(2);
+    assertThat(hashSet).contains(1, 3, 4, null);
 }
 </code></pre>
 
 <ul>
-<li><p>Internally, the contains(Object), add(Object) and remove(Object) methods compares objects based on their <a href="https://hellokoding.com/java-equals-and-hashcode/">equals and hashCode</a></p>
+<li>You can also do the above operations in bulk with containsAll, addAll, removeAll, Java 8+ removeIf</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void containsAddRemoveMultipleElements() {  
+    Set&lt;Integer&gt; linkedHashSet = new LinkedHashSet&lt;&gt;(Set.of(1, 2, 3));
+    Boolean contained = linkedHashSet.containsAll(Set.of(1, 2));
+    assertThat(contained).isTrue();
+
+    linkedHashSet.addAll(Set.of(3, 4, 5));
+    assertThat(linkedHashSet).contains(1, 2, 3, 4, 5);
+
+    linkedHashSet.removeAll(Set.of(1, 2, 6));
+    assertThat(linkedHashSet).contains(3, 4, 5);
+
+    linkedHashSet.removeIf(e -&gt; e &gt;= 4);
+    assertThat(linkedHashSet).contains(3);
+}
+</code></pre>
+
+<h3 id="objectscomparinginlinkedhashset">Objects comparing in LinkedHashSet</h3>
+
+<ul>
+<li><p>Internally, LinkedHashSet basic operations such as contains, add and remove work based on comparing element objects which depend on their <a href="https://hellokoding.com/java-equals-and-hashcode/">equals and hashCode implementation</a></p>
 
 <p>In the following example, <code>linkedHashSet.contains(new Book(1, "a"))</code> should return true but false, <code>linkedHashSet.add(new Book(1, "a"))</code> should not but success and <code>linkedHashSet.remove(new Book(1, "a"))</code> should success but not , due to lack of equals and hashCode implementation on the custom class</p></li>
 </ul>
 
 <pre><code class="language-java">@Test
-public void containsAddRemoveACustomObject(){  
+public void objectsComparingProblem(){  
     Set&lt;Book&gt; linkedHashSet = new LinkedHashSet&lt;&gt;();
     linkedHashSet.add(new Book(1, "a"));
 
@@ -444,9 +468,71 @@ static class Book {
 }
 </code></pre>
 
+<ul>
+<li>You can fix the above problem by overriding equals and hashCode as the below example</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void objectsComparingFixed(){  
+    Set&lt;BookFixed&gt; linkedHashSet = new LinkedHashSet&lt;&gt;();
+    linkedHashSet.add(new BookFixed(1, "a"));
+
+    Boolean contained = linkedHashSet.contains(new BookFixed(1, "a"));
+    assertThat(contained).isTrue();
+
+    linkedHashSet.add(new BookFixed(1, "a"));
+    assertThat(linkedHashSet).hasSize(1);
+
+    linkedHashSet.remove(new BookFixed(1, "a"));
+    assertThat(linkedHashSet).hasSize(0);
+}
+
+static class BookFixed {  
+    int id;
+    String title;
+
+    BookFixed(int id, String title) {
+        this.id = id;
+        this.title = title;
+    }
+
+    int getId() {
+        return id;
+    }
+
+    String getTitle() {
+        return title;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BookFixed bookFixed = (BookFixed) o;
+        return id == bookFixed.id &amp;&amp;
+                Objects.equals(title, bookFixed.title);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, title);
+    }
+}
+</code></pre>
+
 <h3 id="sortalinkedhashset">Sort a LinkedHashSet</h3>
 
 <p>Java doesn't have a direct API to sort a LinkedHashSet, you have to convert it to TreeSet or ArrayList</p>
+
+<pre><code class="language-java">@Test
+public void sort() {  
+    Set&lt;Integer&gt; set = new LinkedHashSet&lt;&gt;(Set.of(3, 1, 2));
+    NavigableSet&lt;Integer&gt; sortedSet = new TreeSet&lt;&gt;(set);
+
+    // Asserts that the set contains the given values in order
+    assertThat(sortedSet).containsExactly(1, 2, 3);
+}
+</code></pre>
 
 <p><a href="https://hellokoding.com/sort-a-hashset-in-java/">Learn more</a></p>
 

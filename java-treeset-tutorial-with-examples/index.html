@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Java TreeSet Tutorial with Examples">
-    <meta property="og:description" content="TreeSet is a red-black tree data structure implementation of the NavigableSet interface based on a TreeMap. TreeSet is a part of the Java Collections Framework TreeSet has the following features Provides value-ordered iteration. Provides contains(Object), add(Object) and remove(Object) operations in log-time performance Elements are ordered and compared">
+    <meta property="og:description" content="TreeSet is a red-black tree data structure implementation of the NavigableSet interface based on a TreeMap. TreeSet is a part of the Java Collections Framework TreeSet has the following features Provides value-ordered iteration Provides contains(Object), add(Object) and remove(Object) operations in log-time performance Duplicated elements are ignored. Null">
     <meta property="og:url" content="http://hellokoding.com/java-treeset-tutorial-with-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_TreeSetTutorial.png">
     <meta property="article:published_time" content="2019-10-08T15:09:30.000Z">
-    <meta property="article:modified_time" content="2019-10-10T15:15:25.000Z">
+    <meta property="article:modified_time" content="2019-10-13T06:50:16.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Java TreeSet Tutorial with Examples">
-    <meta name="twitter:description" content="TreeSet is a red-black tree data structure implementation of the NavigableSet interface based on a TreeMap. TreeSet is a part of the Java Collections Framework TreeSet has the following features Provides value-ordered iteration. Provides contains(Object), add(Object) and remove(Object) operations in log-time performance Elements are ordered and compared">
+    <meta name="twitter:description" content="TreeSet is a red-black tree data structure implementation of the NavigableSet interface based on a TreeMap. TreeSet is a part of the Java Collections Framework TreeSet has the following features Provides value-ordered iteration Provides contains(Object), add(Object) and remove(Object) operations in log-time performance Duplicated elements are ignored. Null">
     <meta name="twitter:url" content="http://hellokoding.com/java-treeset-tutorial-with-examples/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_TreeSetTutorial.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Java TreeSet Tutorial with Examples",
     "url": "http://hellokoding.com/java-treeset-tutorial-with-examples/",
     "datePublished": "2019-10-08T15:09:30.000Z",
-    "dateModified": "2019-10-10T15:15:25.000Z",
+    "dateModified": "2019-10-13T06:50:16.000Z",
     "image": "http://hellokoding.com/content/images/2019/10/JavaCollections_TreeSetTutorial.png",
     "keywords": "Java",
-    "description": "TreeSet is a red-black tree data structure implementation of the NavigableSet interface based on a TreeMap. TreeSet is a part of the Java Collections Framework TreeSet has the following features Provides value-ordered iteration. Provides contains(Object), add(Object) and remove(Object) operations in log-time performance Elements are ordered and compared"
+    "description": "TreeSet is a red-black tree data structure implementation of the NavigableSet interface based on a TreeMap. TreeSet is a part of the Java Collections Framework TreeSet has the following features Provides value-ordered iteration Provides contains(Object), add(Object) and remove(Object) operations in log-time performance Duplicated elements are ignored. Null"
 }
     </script>
 
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java TreeSet Tutorial with Examples</h1>
-            <time class="post__date" datetime="2019-10-10">Last modified @ 10 October 2019</time>
+            <time class="post__date" datetime="2019-10-13">Last modified @ 13 October 2019</time>
           </header>
 
           <div class="post-content">
@@ -238,10 +238,10 @@ ghost.init({
 <p>TreeSet has the following features</p>
 
 <ul>
-<li><p>Provides value-ordered iteration. Provides contains(Object), add(Object) and remove(Object) operations in log-time performance</p>
-
-<p>Elements are ordered and compared using their <a href="https://hellokoding.com/java-comparable-vs-comparator-examples/">Comparable natural ordering, or by a Comparator</a> (irrespective of equals and hashCode) provided at creation time, depending on which constructor is used</p></li>
-<li><p>Duplicated elements are ignored. null element is not permitted, NullPointerException will be thrown when adding a null element</p></li>
+<li><p>Provides value-ordered iteration</p></li>
+<li><p>Provides contains(Object), add(Object) and remove(Object) operations in log-time performance</p></li>
+<li><p>Duplicated elements are ignored. Null element is not permitted, NullPointerException will be thrown when adding a null element</p></li>
+<li><p>Elements are ordered and compared using their <a href="https://hellokoding.com/java-comparable-vs-comparator-examples/">Comparable natural ordering, or by a Comparator</a> (irrespective of equals and hashCode) provided at creation time, depending on which constructor is used</p></li>
 <li><p>Unsynchronized implementation. In multi-threading environment with at least one thread modifies the list, it must be synchronized externally</p></li>
 </ul>
 
@@ -278,7 +278,7 @@ public void declare() {
 
 <p></p><div class="hk-autoads"></div>  
 
-<h3 id="createandinitialize">Create and Initialize</h3>
+<h3 id="createandinitializewithcomparableandcomparator">Create and Initialize with Comparable and Comparator</h3>
 
 <ul>
 <li><p>The created TreeSets from TreeSet() and TreeSet(Collection) constructors use Comparable natural ordering of the underlying objects</p>
@@ -311,6 +311,8 @@ public void initWithComparator() {
     assertThat(treeSet).containsExactly(3, 2, 1);
 }
 </code></pre>
+
+<p><a href="https://hellokoding.com/java-comparable-vs-comparator-examples/">Learn more about Comparable and Comparator</a></p>
 
 <h3 id="iterateatreeset">Iterate a TreeSet</h3>
 
@@ -393,13 +395,14 @@ public void retrieveWithStreamAPI() {
 </ul>
 
 <pre><code class="language-java">@Test
-public void containsAddRemove() {  
+public void containsAddRemoveSingleElement() {  
     NavigableSet&lt;Integer&gt; treeSet = new TreeSet&lt;&gt;(Set.of(3, 1, 2));
     Boolean contained = treeSet.contains(3);
     assertThat(contained).isTrue();
 
-    treeSet.add(1); // duplicated element is ignored
     treeSet.add(4);
+    treeSet.add(4);
+    assertThatThrownBy(() -&gt; treeSet.add(null)).isInstanceOf(NullPointerException.class);
     assertThat(treeSet).containsExactly(1, 2, 3, 4);
 
     treeSet.remove(3);
@@ -408,13 +411,36 @@ public void containsAddRemove() {
 </code></pre>
 
 <ul>
-<li><p>Internally, the contains(Object), add(Object) and remove(Object) methods compares objects based on their Comparable or Comparator, regardless of their <a href="https://hellokoding.com/java-equals-and-hashcode/">equals and hashCode</a>, depending on which constructor is used at the creation time</p>
+<li>Bulk operations are also supported with containsAll, addAll, removeAll, Java 8+ removeIf</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void containsAddRemoveMultipleElements() {  
+    NavigableSet&lt;Integer&gt; treeSet = new TreeSet&lt;&gt;(Set.of(3, 1, 2));
+    Boolean contained = treeSet.containsAll(Set.of(1, 2));
+    assertThat(contained).isTrue();
+
+    treeSet.addAll(Set.of(3, 4, 5));
+    assertThat(treeSet).containsExactly(1, 2, 3, 4, 5);
+
+    treeSet.removeAll(Set.of(1, 2, 6));
+    assertThat(treeSet).containsExactly(3, 4, 5);
+
+    treeSet.removeIf(e -&gt; e &gt;= 4);
+    assertThat(treeSet).contains(3);
+}
+</code></pre>
+
+<h3 id="objectscomparingintreeset">Objects comparing in TreeSet</h3>
+
+<ul>
+<li><p>Internally, TreeSet basic operations such as contains, add and remove compare objects based on their <a href="https://hellokoding.com/java-comparable-vs-comparator-examples/">Comparable or Comparator</a>, regardless of their <a href="https://hellokoding.com/java-equals-and-hashcode/">equals and hashCode</a>, depending on which TreeSet constructor is used at the creation time</p>
 
 <p>In the following example, <code>treeSet.contains(new Book(2, "a"))</code> should return false but true, <code>treeSet.add(new Book(2, "a"))</code> should success but not and <code>treeSet.remove(new Book(2, "a"))</code> should not but success , due to the compareTo method of Book instances only compare title</p></li>
 </ul>
 
 <pre><code class="language-java">@Test
-public void containsAddRemoveACustomObject(){  
+public void objectsComparingProblem(){  
     TreeSet&lt;Book&gt; treeSet = new TreeSet&lt;&gt;();
     treeSet.add(new Book(1, "a"));
 
@@ -448,6 +474,51 @@ static class Book implements Comparable&lt;Book&gt; {
     @Override
     public int compareTo(Book o) {
         return CharSequence.compare(this.title, o.title);
+    }
+}
+</code></pre>
+
+<ul>
+<li>You can fix the above problem by comparing both id and title in compareTo as the below example</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void objectsComparingFixed(){  
+    TreeSet&lt;BookFixed&gt; treeSet = new TreeSet&lt;&gt;();
+    treeSet.add(new BookFixed(1, "a"));
+
+    Boolean contained = treeSet.contains(new BookFixed(2, "a"));
+    assertThat(contained).isFalse();
+
+    treeSet.add(new BookFixed(2, "a"));
+    assertThat(treeSet).hasSize(2);
+
+    treeSet.remove(new BookFixed(2, "a"));
+    assertThat(treeSet).hasSize(1);
+}
+
+static class BookFixed implements Comparable&lt;BookFixed&gt; {  
+    int id;
+    String title;
+
+    BookFixed(int id, String title) {
+        this.id = id;
+        this.title = title;
+    }
+
+    int getId() {
+        return id;
+    }
+
+    String getTitle() {
+        return title;
+    }
+
+    @Override
+    public int compareTo(BookFixed o) {
+        return Comparator.comparing(BookFixed::getId)
+            .thenComparing(BookFixed::getTitle)
+            .compare(this, o);
     }
 }
 </code></pre>
