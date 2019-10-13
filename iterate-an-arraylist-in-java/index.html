@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iterate an ArrayList in Java</title>
+  <title>Iterate over Java ArrayList in Forward and Backward</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,18 +19,18 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Iterate an ArrayList in Java">
-    <meta property="og:description" content="In Java Collections Framework, ArrayList implements the Iterable interface which offering iterator, so beside the traditional while and for loop,  we can use the enhanced for-loop statement and its iterator to iterate over ArrayList elements Java 8+ List interface also provides the forEach(Consumer), internally is an enhanced for-each loop,">
+    <meta property="og:title" content="Iterate over Java ArrayList in Forward and Backward">
+    <meta property="og:description" content="You can iterate an ArrayList by using either forEach(Consumer), since Java 8, or for-each and other index-loops (while, do-while, for-index) Apart from that, iterator and listIterator can also be used to iterate over an ArrayList Lets walk through this tutorial to explore them in more details    Iterate forward with">
     <meta property="og:url" content="http://hellokoding.com/iterate-an-arraylist-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/07/JavaCollections_IterateanArrayList.png">
     <meta property="article:published_time" content="2019-07-21T14:37:51.000Z">
-    <meta property="article:modified_time" content="2019-09-29T05:17:05.000Z">
+    <meta property="article:modified_time" content="2019-10-13T15:16:41.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Iterate an ArrayList in Java">
-    <meta name="twitter:description" content="In Java Collections Framework, ArrayList implements the Iterable interface which offering iterator, so beside the traditional while and for loop,  we can use the enhanced for-loop statement and its iterator to iterate over ArrayList elements Java 8+ List interface also provides the forEach(Consumer), internally is an enhanced for-each loop,">
+    <meta name="twitter:title" content="Iterate over Java ArrayList in Forward and Backward">
+    <meta name="twitter:description" content="You can iterate an ArrayList by using either forEach(Consumer), since Java 8, or for-each and other index-loops (while, do-while, for-index) Apart from that, iterator and listIterator can also be used to iterate over an ArrayList Lets walk through this tutorial to explore them in more details    Iterate forward with">
     <meta name="twitter:url" content="http://hellokoding.com/iterate-an-arraylist-in-java/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/07/JavaCollections_IterateanArrayList.png">
     <meta name="twitter:label1" content="Written by">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Iterate an ArrayList in Java",
+    "headline": "Iterate over Java ArrayList in Forward and Backward",
     "url": "http://hellokoding.com/iterate-an-arraylist-in-java/",
     "datePublished": "2019-07-21T14:37:51.000Z",
-    "dateModified": "2019-09-29T05:17:05.000Z",
+    "dateModified": "2019-10-13T15:16:41.000Z",
     "image": "http://hellokoding.com/content/images/2019/07/JavaCollections_IterateanArrayList.png",
     "keywords": "Java",
-    "description": "In Java Collections Framework, ArrayList implements the Iterable interface which offering iterator, so beside the traditional while and for loop,  we can use the enhanced for-loop statement and its iterator to iterate over ArrayList elements Java 8+ List interface also provides the forEach(Consumer), internally is an enhanced for-each loop,"
+    "description": "You can iterate an ArrayList by using either forEach(Consumer), since Java 8, or for-each and other index-loops (while, do-while, for-index) Apart from that, iterator and listIterator can also be used to iterate over an ArrayList Lets walk through this tutorial to explore them in more details    Iterate forward with"
 }
     </script>
 
@@ -224,8 +224,8 @@ ghost.init({
         <article class="post tag-java">
 
           <header class="post__header">
-            <h1 class="post__title">Iterate an ArrayList in Java</h1>
-            <time class="post__date" datetime="2019-09-29">Last modified @ 29 September 2019</time>
+            <h1 class="post__title">Iterate over Java ArrayList in Forward and Backward</h1>
+            <time class="post__date" datetime="2019-10-13">Last modified @ 13 October 2019</time>
           </header>
 
           <div class="post-content">
@@ -233,77 +233,123 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p>In Java Collections Framework, <code>ArrayList</code> implements the <code>Iterable</code> interface which offering iterator, so beside the traditional <code>while</code> and <code>for</code> loop,  we can use the enhanced for-loop statement and its <code>iterator</code> to iterate over ArrayList elements</p>
+            <p>You can iterate an ArrayList by using either forEach(Consumer), since Java 8, or for-each and other index-loops (while, do-while, for-index)</p>
 
-<p>Java 8+ <code>List</code> interface also provides the <code>forEach(Consumer)</code>, internally is an enhanced for-each loop, for your convenient</p>
+<p>Apart from that, iterator and listIterator can also be used to iterate over an ArrayList</p>
 
 <p>Lets walk through this tutorial to explore them in more details</p>
 
-<h3 class="hk-autoads">Iterate an ArrayList with the for loop</h3>  
+<p></p><div class="hk-autoads"></div>  
 
-<pre><code class="language-java">@Test
-public void forIndex() {  
-    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
-    lst.add(1);
-    lst.add(2);
-    lst.add(3);
+<h3 id="iterateforwardwiththejava8foreachconsumerandforeachloop">Iterate forward with the Java 8+ forEach(Consumer) and for-each loop</h3>
 
-    for(int i=0; i&lt;lst.size(); i++){
-        int ele = lst.get(i);
-        System.out.println(ele);
-    }
-}
-</code></pre>
+<ul>
+<li><p>Use Java 8+ forEach(Consumer) to iterate over an ArrayList in forwarding order (same as insertion order)</p>
 
-<h3 id="iteratewiththeenhancedforeachloop">Iterate with the enhanced for-each loop</h3>
-
-<pre><code class="language-java">@Test
-public void forEach() {  
-    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
-    lst.add(1);
-    lst.add(2);
-    lst.add(3);
-
-    for(int ele : lst){
-        System.out.println(ele);
-    }
-}
-</code></pre>
-
-<h3 id="iteratewiththeiterator">Iterate with the <code>iterator</code></h3>
-
-<pre><code class="language-java">@Test
-public void iterator() {  
-    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
-    lst.add(1);
-    lst.add(2);
-    lst.add(3);
-
-    Iterator&lt;Integer&gt; iterator = lst.iterator();
-    while (iterator.hasNext()){
-        System.out.println(iterator.next());
-    }
-}
-</code></pre>
-
-<h3 id="iteratewiththejava8foreachconsumer">Iterate with the Java 8+ forEach(Consumer)</h3>
-
-<p><code>NullPointerException</code> will be thrown if the specified consumer action or the caller list is null</p>
+<p>NullPointerException will be thrown if the specified consumer action or the caller list is null</p></li>
+</ul>
 
 <pre><code class="language-java">@Test
 public void forEachConsumer() {  
-    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
-    lst.add(1);
-    lst.add(2);
-    lst.add(3);
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;(List.of(1, 2, 3));
 
-    lst.forEach(System.out::println);
+    lst.forEach(e -&gt; System.out.printf("%d ", e));
+}
+</code></pre>
+
+<ul>
+<li>for-each loop can also be used to iterate an ArrayList in forwarding order</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void forEach() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;(List.of(1, 2, 3));
+
+    for(int ele : lst){
+        System.out.printf("%d ", ele);
+    }
+}
+</code></pre>
+
+<ul>
+<li><p>forEach(Consumer) and for-each loop can only iterate in forwarding order</p>
+
+<p>To iterate in reverse order, you can use either index-loops or listIterator or sort the list in reverse order first</p></li>
+</ul>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="iterateforwardandbackwardwithindexloops">Iterate forward and backward with index-loops</h3>
+
+<ul>
+<li><p>Use for-index, while-index and do-while-index loops to iterate over an ArrayList in both ways, forward and backward order</p>
+
+<p>The following give you an example on iterate forward with for-index loop</p></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void forIndexForward() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;(List.of(1, 2, 3));
+
+    for(int i=0; i&lt;lst.size(); i++){
+        int ele = lst.get(i);
+        System.out.printf("%d ", ele);
+    }
+}
+</code></pre>
+
+<ul>
+<li>Iterate in backward order example with for-index loop</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void forIndexBackward() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;(List.of(1, 2, 3));
+
+    for(int i=lst.size()-1; i&gt;=0; i--){
+        int ele = lst.get(i);
+        System.out.printf("%d ", ele);
+    }
+}
+</code></pre>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="iterateforwardandbackwardwithiteratorandlistiterator">Iterate forward and backward with iterator and listIterator</h3>
+
+<ul>
+<li>Iterate forward with iterator() example</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void iterator() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;(List.of(1, 2, 3));
+
+    Iterator&lt;Integer&gt; iterator = lst.iterator();
+    while (iterator.hasNext()){
+        System.out.printf("%d ", iterator.next());
+    }
+}
+</code></pre>
+
+<ul>
+<li>Iterate backward with listIterator() example</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void listIterator() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;(List.of(1, 2, 3));
+
+    ListIterator&lt;Integer&gt; iterator = lst.listIterator(lst.size());
+    while (iterator.hasPrevious()){
+        System.out.printf("%d ", iterator.previous());
+    }
 }
 </code></pre>
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>In this tutorial, we learned some ways to iterate over an ArrayList by using the <code>for</code> loop, <code>for-each</code> loop, iterator and Java 8+ forEach(Consumer). You can find below the full source code</p>
+<p>In this tutorial, we learned some ways to iterate over an ArrayList in forward and backward order by using the Java 8+ forEach(Consumer), for-each and for-index loops, iterator and listIterator. You can find below the full source code</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/ArrayListIterateTest.java">
 </code></pre>
@@ -315,7 +361,7 @@ public void forEachConsumer() {
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Iterate%20an%20ArrayList%20in%20Java&amp;url=http://hellokoding.com/iterate-an-arraylist-in-java/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Iterate%20over%20Java%20ArrayList%20in%20Forward%20and%20Backward&amp;url=http://hellokoding.com/iterate-an-arraylist-in-java/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>

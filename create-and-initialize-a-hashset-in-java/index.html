@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/create-and-initialize-a-hashset-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/08/JavaCollections_InitializeAHashSet.png">
     <meta property="article:published_time" content="2019-08-11T08:37:38.000Z">
-    <meta property="article:modified_time" content="2019-10-10T05:48:55.000Z">
+    <meta property="article:modified_time" content="2019-10-13T13:56:21.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Initialize a HashSet in Java",
     "url": "http://hellokoding.com/create-and-initialize-a-hashset-in-java/",
     "datePublished": "2019-08-11T08:37:38.000Z",
-    "dateModified": "2019-10-10T05:48:55.000Z",
+    "dateModified": "2019-10-13T13:56:21.000Z",
     "image": "http://hellokoding.com/content/images/2019/08/JavaCollections_InitializeAHashSet.png",
     "keywords": "Java",
     "description": "You can provide either Set.of or List.of factory method, since Java 9, or Arrays.asList factory method to the HashSet(Collection) constructor to create and init a HashSet in one line Apart from that, you can use add and addAll methods after the creation time to initialize a"
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Initialize a HashSet in Java</h1>
-            <time class="post__date" datetime="2019-10-10">Last modified @ 10 October 2019</time>
+            <time class="post__date" datetime="2019-10-13">Last modified @ 13 October 2019</time>
           </header>
 
           <div class="post-content">
@@ -260,7 +260,9 @@ public void initWithListOfAndSetOf() {
 </code></pre>
 
 <ul>
-<li>List.of permits null and duplicated element while Set.of doesn't, it throws NullPointerException and IllegalArgumentException respectively</li>
+<li><p>List.of permits duplicated elements while Set.of doesn't, it throws IllegalArgumentException</p>
+
+<p>Both List.of and Set.of don't permit null element, they throw NullPointerException</p></li>
 </ul>
 
 <h3 id="initializeinonelinewitharraysaslist">Initialize in one line with Arrays.asList</h3>
@@ -315,8 +317,10 @@ public void initWithAddAndAddAll() {
 }
 </code></pre>
 
+<h3 id="doublebraceinitializationshouldnotbeusedinpractice">Double brace initialization should not be used in practice</h3>
+
 <ul>
-<li>Initialize a HashSet with double brace should not be used in practice as it can lead to memory leaks by creating too many anonymous classes</li>
+<li>Double brace initialization can cause a memory leak as it creates anonymous classes with an hidden reference to the owner instance object</li>
 </ul>
 
 <pre><code class="language-java">@Test
