@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-arraylist-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/java-collections-arraylist.png">
     <meta property="article:published_time" content="2019-04-26T15:13:39.000Z">
-    <meta property="article:modified_time" content="2019-10-13T12:59:08.000Z">
+    <meta property="article:modified_time" content="2019-10-13T15:40:05.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java ArrayList Tutorial with Examples",
     "url": "http://hellokoding.com/java-arraylist-examples/",
     "datePublished": "2019-04-26T15:13:39.000Z",
-    "dateModified": "2019-10-13T12:59:08.000Z",
+    "dateModified": "2019-10-13T15:40:05.000Z",
     "image": "http://hellokoding.com/content/images/2019/05/java-collections-arraylist.png",
     "keywords": "Java",
     "description": "ArrayList is a dynamic array data structure implementation of the List interface, a part of the Java Collections Framework ArrayList has the following features Provides insertion-ordered iteration Provides zero-based index operations (get, add, set, remove). Get, set operations run in constant-time performance. Add operation runs in amortized constant time. Other"
@@ -276,12 +276,26 @@ public void declareAndCreate() {
 
 <h3 id="createandinitializehttpshellokodingcomcreateandinitializeanarraylistinjava"><a href="https://hellokoding.com/create-and-initialize-an-arraylist-in-java/">Create and Initialize</a></h3>
 
-<p>Provide either Set.of or List.of factory method, since Java 9, or Arrays.asList factory method to the ArrayList(Collection) constructor to create and init a HashSet in one line at the creation time</p>
-
-<p>You can also use add or addAll method to initialize a HashSet after the creation time</p>
+<ul>
+<li>Provide either Set.of or List.of factory method, since Java 9, or Arrays.asList factory method to the ArrayList(Collection) constructor to create and init a HashSet in one line at the creation time</li>
+</ul>
 
 <pre><code class="language-java">@Test
-public void initialize() {  
+public void initWithListOfAndSetOf() {  
+    List&lt;Integer&gt; arrayList1 = new ArrayList&lt;&gt;(List.of(3, 1, 2));
+    assertThat(arrayList1).contains(3, 1, 2);
+
+    List&lt;Integer&gt; arrayList2 = new ArrayList&lt;&gt;(Set.of(5, 4, 6));
+    assertThat(arrayList2).contains(5, 4, 6);
+}
+</code></pre>
+
+<ul>
+<li>You can also use add or addAll method to initialize a HashSet after the creation time</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void initWithAdd() {  
     // Create a new ArrayList
     List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
 
@@ -308,16 +322,30 @@ public void initialize() {
 
 <h3 id="iterateoveranarraylisthttpshellokodingcomiterateanarraylistinjava"><a href="https://hellokoding.com/iterate-an-arraylist-in-java/">Iterate over an ArrayList</a></h3>
 
-<p>You can iterate an ArrayList by using for-each loop and Java 8+ <code>forEach(Consumer)</code> method of <code>Iterable</code> interfaces</p>
+<ul>
+<li>You can iterate over an ArrayList by using either forEach(Consumer), since Java 8, or for-each and other index-loops (while, do-while, for-index)</li>
+</ul>
 
 <pre><code class="language-java">@Test
 public void forEachConsumer() {  
-    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
-    lst.add(1);
-    lst.add(2);
-    lst.add(3);
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;(List.of(1, 2, 3));
 
     lst.forEach(e -&gt; System.out.printf("%d ", e));
+}
+</code></pre>
+
+<ul>
+<li>Iterator and ListIterator can also be used to iterate</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void iterator() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;(List.of(1, 2, 3));
+
+    Iterator&lt;Integer&gt; iterator = lst.iterator();
+    while (iterator.hasNext()){
+        System.out.printf("%d ", iterator.next());
+    }
 }
 </code></pre>
 
@@ -325,14 +353,31 @@ public void forEachConsumer() {
 
 <h3 id="retrieveandfilterhttpshellokodingcomqueryanarraylistinjava"><a href="https://hellokoding.com/query-an-arraylist-in-java/">Retrieve and Filter</a></h3>
 
-<p>Filter an ArrayList by using Java 8+ Stream API. Using ArrayList APIs to get element by index, get index by element, check if value existing, get size and check if the list is empty</p>
+<ul>
+<li>Retrieve an ArrayList element by using get(index)</li>
+</ul>
 
 <pre><code class="language-java">@Test
-public void filter() {  
-    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;();
-    lst.add(3);
-    lst.add(1);
-    lst.add(2);
+public void get() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;(List.of(1, 2, 3));
+
+    int firstElement = lst.get(0);
+    assertThat(firstElement).isEqualTo(1);
+}
+</code></pre>
+
+<ul>
+<li><p>Since Java 8, you can use Stream API to filter and retrieve elements from an ArrayList</p>
+
+<p>The following example uses Stream API to get the first element with findFirst() and filter elements with filter(Predicate)</p></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void filterAndRetrieve() {  
+    List&lt;Integer&gt; lst = new ArrayList&lt;&gt;(List.of(1, 2, 3));
+
+    Integer firstElement = lst.stream().findFirst().orElse(null);
+    assertThat(firstElement).isEqualTo(1);
 
     Integer[] arr = lst.stream().filter(e -&gt; e &gt;= 2).toArray(Integer[]::new);
     assertThat(arr).contains(2, 3);
@@ -487,7 +532,7 @@ static class BookFixed {
 
 <h3 id="sortanarraylisthttpshellokodingcomsortanarraylistinjava"><a href="https://hellokoding.com/sort-an-arraylist-in-java/">Sort an ArrayList</a></h3>
 
-<p>Sort an ArrayList of objects by using its instance's <code>sort(Comparator)</code> method in conjunction with <code>Comparable</code> and <code>Comparator</code> interfaces to control over the sort order</p>
+<p>Sort an ArrayList of objects by using its instance's <code>sort(Comparator)</code> method in conjunction with <a href="https://hellokoding.com/java-comparable-vs-comparator-examples/">Comparable and Comparator</a> interfaces to control over the sort order</p>
 
 <pre><code class="language-java">@Test
 public void sortMultipleFields() {  
@@ -510,7 +555,7 @@ public void sortMultipleFields() {
 
 <p>In this tutorial, we learned about ArrayList class hierarchy, features and operations. You can find below the full source code</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/ArrayListOverviewTest.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/ArrayListTest.java">
 </code></pre>
             
             <div class="post__tags">
