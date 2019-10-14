@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LinkedList in Java</title>
+  <title>LinkedList in Java Tutorial with Examples</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,18 +19,18 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="LinkedList in Java">
-    <meta property="og:description" content="LinkedList is a doubly linked list data structure implementation of List and Deque interfaces, a part of the Java Collections Framework LinkedList has the following features Backed by doubly linked list data structure, support element retrieving, adding and removing at both ends with constant-time performance Support index based operations with">
+    <meta property="og:title" content="LinkedList in Java Tutorial with Examples">
+    <meta property="og:description" content="LinkedList is a doubly linked list data structure implementation of the List and Deque interfaces, a part of the Java Collections Framework LinkedList has the following features Provides insertion-ordered iteration Provides element retrieving, adding and removing at both ends in constant-time performance Provides index based operations in linear-time performance. They">
     <meta property="og:url" content="http://hellokoding.com/java-linkedlist-tutorial-with-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/java-linkedlist.png">
     <meta property="article:published_time" content="2019-05-22T01:37:23.000Z">
-    <meta property="article:modified_time" content="2019-10-06T05:53:21.000Z">
+    <meta property="article:modified_time" content="2019-10-14T15:06:13.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="LinkedList in Java">
-    <meta name="twitter:description" content="LinkedList is a doubly linked list data structure implementation of List and Deque interfaces, a part of the Java Collections Framework LinkedList has the following features Backed by doubly linked list data structure, support element retrieving, adding and removing at both ends with constant-time performance Support index based operations with">
+    <meta name="twitter:title" content="LinkedList in Java Tutorial with Examples">
+    <meta name="twitter:description" content="LinkedList is a doubly linked list data structure implementation of the List and Deque interfaces, a part of the Java Collections Framework LinkedList has the following features Provides insertion-ordered iteration Provides element retrieving, adding and removing at both ends in constant-time performance Provides index based operations in linear-time performance. They">
     <meta name="twitter:url" content="http://hellokoding.com/java-linkedlist-tutorial-with-examples/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/05/java-linkedlist.png">
     <meta name="twitter:label1" content="Written by">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "LinkedList in Java",
+    "headline": "LinkedList in Java Tutorial with Examples",
     "url": "http://hellokoding.com/java-linkedlist-tutorial-with-examples/",
     "datePublished": "2019-05-22T01:37:23.000Z",
-    "dateModified": "2019-10-06T05:53:21.000Z",
+    "dateModified": "2019-10-14T15:06:13.000Z",
     "image": "http://hellokoding.com/content/images/2019/05/java-linkedlist.png",
     "keywords": "Java",
-    "description": "LinkedList is a doubly linked list data structure implementation of List and Deque interfaces, a part of the Java Collections Framework LinkedList has the following features Backed by doubly linked list data structure, support element retrieving, adding and removing at both ends with constant-time performance Support index based operations with"
+    "description": "LinkedList is a doubly linked list data structure implementation of the List and Deque interfaces, a part of the Java Collections Framework LinkedList has the following features Provides insertion-ordered iteration Provides element retrieving, adding and removing at both ends in constant-time performance Provides index based operations in linear-time performance. They"
 }
     </script>
 
@@ -224,8 +224,8 @@ ghost.init({
         <article class="post tag-java">
 
           <header class="post__header">
-            <h1 class="post__title">LinkedList in Java</h1>
-            <time class="post__date" datetime="2019-10-06">Last modified @ 06 October 2019</time>
+            <h1 class="post__title">LinkedList in Java Tutorial with Examples</h1>
+            <time class="post__date" datetime="2019-10-14">Last modified @ 14 October 2019</time>
           </header>
 
           <div class="post-content">
@@ -233,15 +233,16 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p>LinkedList is a <a href="https://hellokoding.com/doubly-linked-list-data-structure-tutorial-and-example/">doubly linked list data structure</a> implementation of List and Deque interfaces, a part of the <a href="https://hellokoding.com/java-collections-framework/">Java Collections Framework</a></p>
+            <p>LinkedList is a <a href="https://hellokoding.com/doubly-linked-list-data-structure-tutorial-and-example/">doubly linked list data structure</a> implementation of the List and Deque interfaces, a part of the <a href="https://hellokoding.com/java-collections-framework/">Java Collections Framework</a></p>
 
 <p>LinkedList has the following features</p>
 
 <ul>
-<li><p>Backed by doubly linked list data structure, support element retrieving, adding and removing at both ends with constant-time performance</p></li>
-<li><p>Support index based operations with linear-time performance. They will traverse the list from the beginning or the end, whichever is closer to the specified index</p></li>
-<li><p>Elements are positioned as their insertion order</p></li>
-<li><p>Allow null and duplicate elements</p></li>
+<li><p>Provides insertion-ordered iteration</p></li>
+<li><p>Provides element retrieving, adding and removing at both ends in constant-time performance</p></li>
+<li><p>Provides index based operations in linear-time performance. They will traverse the list either from the beginning or the end, whichever is closer to the specified index</p></li>
+<li><p>Allows null and duplicated elements</p></li>
+<li><p>Elements are compared based on their equals method implementation</p></li>
 <li><p>Can be used as a list, stack, queue or double-ended queue</p></li>
 <li><p>Unsynchronized implementation. In multi-threading environment with at least one thread modifies the list, it must be synchronized externally</p></li>
 </ul>
@@ -249,6 +250,12 @@ ghost.init({
 <p>Lets walk through this tutorial to explore LinkedList in more details</p>
 
 <p></p><div class="hk-autoads"></div>  
+
+<h3 id="thelinkedlistclasshierarchy">The LinkedList class hierarchy</h3>
+
+<p>LinkedList implements both List and Deque interfaces. List extends from Collection and Iterable interfaces hierarchically. Deque extends from Queue, Collection and Iterable hierarchically</p>
+
+<p><img src="../content/images/2019/10/Screenshot-2019-10-04-at-7-58-31-PM.png" alt=""></p>
 
 <h3 id="linkedlistvsarraylistandarraydeque">LinkedList vs ArrayList and ArrayDeque</h3>
 
@@ -259,12 +266,6 @@ ghost.init({
 <p>LinkedList also consumes more memory than ArrayList and ArrayDeque as it have to allocate a node object for each element in the list </p>
 
 <p><a href="https://hellokoding.com/java-arraylist-examples/">Learn more about ArrayList</a></p>
-
-<h3 id="thelinkedlistclasshierarchy">The LinkedList class hierarchy</h3>
-
-<p>LinkedList implements both List and Deque interfaces. List extends from Collection and Iterable interfaces hierarchically. Deque extends from Queue, Collection and Iterable hierarchically</p>
-
-<p><img src="../content/images/2019/10/Screenshot-2019-10-04-at-7-58-31-PM.png" alt=""></p>
 
 <h3 id="declarealinkedlist">Declare a LinkedList</h3>
 
@@ -290,21 +291,30 @@ public void declare() {
 <h3 id="createandinitialize">Create and Initialize</h3>
 
 <ul>
-<li>You can provide either List.of, since Java 9, or Arrays.asList to the LinkedList(Collection) constructor to create and init a LinkedList in one line</li>
+<li><p>You can provide either List.of or Set.of factory methods, since Java 9, or Arrays.asList to the LinkedList(Collection) constructor to create and init a LinkedList in one line</p>
+
+<p>The iteration order of the created LinkedList is defined by the given collection iterator</p>
+
+<p>List.of permits duplicated elements while Set.of doesn't, it throws IllegalArgumentException. Both List.of and Set.of don't permit null element, they throw NullPointerException</p>
+
+<p>Array.asList accepts duplicated and null elements</p></li>
 </ul>
 
 <pre><code class="language-java">@Test
-public void initInOneLine() {  
-    LinkedList&lt;Integer&gt; linkedList1 = new LinkedList&lt;&gt;(Arrays.asList(1, 2, 3));
-    assertThat(linkedList1).hasSize(3);
+public void initWithFactoryMethodsInOneLine() {  
+    LinkedList&lt;Integer&gt; linkedList1 = new LinkedList&lt;&gt;(List.of(3, 1, 2, 2));
+    assertThat(linkedList1).containsExactly(3, 1, 2, 2);
 
-    LinkedList&lt;Integer&gt; linkedList2 = new LinkedList&lt;&gt;(List.of(1, 2, 3));
-    assertThat(linkedList2).hasSize(3);
+    LinkedList&lt;Integer&gt; linkedList2 = new LinkedList&lt;&gt;(Set.of(1, 2, 3));
+    assertThat(linkedList2).contains(1, 2, 3);
+
+    LinkedList&lt;Integer&gt; linkedList3 = new LinkedList&lt;&gt;(Arrays.asList(3, 1, 2, 2, null));
+    assertThat(linkedList3).containsExactly(3, 1, 2, 2, null);
 }
 </code></pre>
 
 <ul>
-<li>Initialize a LinkedList in one line with double brace should not be used in practice as it can lead to memory leaks by creating too many anonymous classes</li>
+<li>Double brace initialization can cause a memory leak as it creates anonymous classes with an hidden reference to the owner instance object</li>
 </ul>
 
 <pre><code class="language-java">@Test
@@ -320,7 +330,7 @@ public void initInOneLineWithDoubleBrace() {
 </code></pre>
 
 <ul>
-<li>Initialize by using add and addAll methods</li>
+<li>Initialize after the creation time by using add and addAll methods</li>
 </ul>
 
 <pre><code class="language-java">@Test
@@ -328,9 +338,12 @@ public void initWithAddAll() {
     LinkedList&lt;Integer&gt; linkedList = new LinkedList&lt;&gt;();
     linkedList.add(1);
     linkedList.add(2);
+    linkedList.add(2); // can add duplicated element
+    linkedList.add(null); // add null element
     linkedList.addAll(List.of(4, 5, 6));
 
-    assertThat(linkedList).hasSize(5);
+    // The iteration order is same as the insertion order
+    assertThat(linkedList).containsExactly(1, 2, 2, null, 4, 5, 6);
 }
 </code></pre>
 
@@ -348,54 +361,75 @@ public void iterateWithForEachConsumer() {
 </code></pre>
 
 <ul>
-<li>Iterator can also be used to iterate a LinkedList</li>
+<li>Iterator and ListIterator can also be used to iterate a LinkedList forward and backward respectively</li>
 </ul>
 
 <pre><code class="language-java">@Test
-public void iterateWithIterator() {  
-    List&lt;Integer&gt; linkedList = new LinkedList&lt;&gt;(List.of(1, 2, 3));
+public void iterateWithIteratorAndListIterator() {  
+    LinkedList&lt;Integer&gt; linkedList = new LinkedList&lt;&gt;(List.of(1, 2, 3));
 
+    // Iterate forward with Iterator
     Iterator&lt;Integer&gt; iterator = linkedList.iterator();
     while (iterator.hasNext()){
         System.out.printf("%d ", iterator.next());
+    }
+
+    ListIterator&lt;Integer&gt; listIterator = linkedList.listIterator(linkedList.size());
+    while (listIterator.hasPrevious()){
+        System.out.printf("%d ", listIterator.previous());
     }
 }
 </code></pre>
 
 <p></p><div class="hk-autoads"></div>  
 
-<h3 id="retrieveelementsfromalinkedlist">Retrieve elements from a LinkedList</h3>
+<h3 id="retrieveandfilter">Retrieve and Filter</h3>
 
 <ul>
-<li>Retrieving the first and last element from a LinkedList by using getFirst() and getLast() methods with constant-time performance</li>
+<li>Retrieve the first and last element from a LinkedList by using getFirst() and getLast() methods in constant-time performance</li>
 </ul>
 
 <pre><code class="language-java">@Test
-public void removing() {  
+public void retrieving() {  
     LinkedList&lt;Integer&gt; linkedList = new LinkedList&lt;&gt;(List.of(1, 2, 3));
 
-    linkedList.removeFirst();
-    assertThat(linkedList).containsExactly(2, 3);
+    int firstElement = linkedList.getFirst();
+    assertThat(firstElement).isEqualTo(1);
 
-    linkedList.removeLast();
-    assertThat(linkedList).containsExactly(2);
+    int lastElement = linkedList.getLast();
+    assertThat(lastElement).isEqualTo(3);
 }
 </code></pre>
 
 <ul>
-<li>You can also retrieving an element from index by using get(index) method and retrieving index of an element by using indexOf(Object) and lastIndexOf(Object), but with linear-time performance</li>
-</ul>
+<li><p>You can also retrieve an element from a given index by using get(index) method and retrieve index of an element by using indexOf(Object) and lastIndexOf(Object), but in linear-time performance</p></li>
+<li><p>Since Java 8, you can use Stream API to filter and retrieve elements from a LinkedList</p>
 
-<h3 id="addelementstoalinkedlist">Add elements to a LinkedList</h3>
-
-<ul>
-<li><p>Adding an element into the first and last of a LinkedList by using add(Object), addFirst(Object) and addLast(Object) methods with constant-time performance</p>
-
-<p>add(Object) internally calls addLast(Object)</p></li>
+<p>The following example uses Stream API to get the first element with findFirst() and filter elements with filter(Predicate)</p></li>
 </ul>
 
 <pre><code class="language-java">@Test
-public void adding() {  
+public void filterAndRetrieve() {  
+    LinkedList&lt;Integer&gt; linkedList = new LinkedList&lt;&gt;(List.of(1, 2, 3));
+
+    Integer firstElement = linkedList.stream().findFirst().orElse(null);
+    assertThat(firstElement).isEqualTo(1);
+
+    Integer[] arr = linkedList.stream().filter(e -&gt; e &gt;= 2).toArray(Integer[]::new);
+    assertThat(arr).contains(2, 3);
+}
+</code></pre>
+
+<h3 id="examineaddupdateandremove">Examine, Add, Update and Remove</h3>
+
+<ul>
+<li><p>Add and remove an element at the first and last of a LinkedList by using add(Object), addFirst(Object), addLast(Object), remove(), removeFirst() and removeLast() methods in constant-time performance</p>
+
+<p>add(Object) and remove() internally call addLast(Object) and removeFirst()</p></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void addAndRemove() {  
     LinkedList&lt;Integer&gt; linkedList = new LinkedList&lt;&gt;(List.of(1, 2, 3));
 
     linkedList.addFirst(0);
@@ -403,36 +437,145 @@ public void adding() {
 
     linkedList.addLast(4);
     assertThat(linkedList).containsExactly(0, 1, 2, 3, 4);
+
+    linkedList.removeFirst();
+    assertThat(linkedList).containsExactly(1, 2, 3, 4);
+
+    linkedList.removeLast();
+    assertThat(linkedList).containsExactly(1, 2, 3);
 }
 </code></pre>
 
 <ul>
-<li>You can also add an element at the specified index by using add(index, Object) method, but with linear-time performance</li>
-</ul>
+<li><p>You can also add and remove an element at the specified index by using add(index, Object) and remove(index) methods, but in linear-time performance</p></li>
+<li><p>Examine if an element is existing in a LinkedList with contains(Object) method</p>
 
-<h3 id="removeelementsfromalinkedlist">Remove elements from a LinkedList</h3>
+<p>Update an element at the specified index in a LinkedList to the given object with set(index, Object) method</p>
 
-<ul>
-<li><p>Remove the first and last element from a LinkedList by using remove(), removeFirst() and removeLast() with constant-time performance</p>
-
-<p>remove() internally calls to removeFirst()</p></li>
+<p>Both contains and set methods run in linear-time performance</p></li>
 </ul>
 
 <pre><code class="language-java">@Test
-public void removing() {  
+public void examineAndUpdate() {  
     LinkedList&lt;Integer&gt; linkedList = new LinkedList&lt;&gt;(List.of(1, 2, 3));
 
-    linkedList.removeFirst();
-    assertThat(linkedList).containsExactly(2, 3);
+    boolean contained = linkedList.contains(1);
+    assertThat(contained).isTrue();
 
-    linkedList.removeLast();
-    assertThat(linkedList).containsExactly(2);
+    linkedList.set(1, 20);
+    assertThat(linkedList).containsExactly(1, 20 , 3);
+}
+</code></pre>
+
+<h3 id="objectscomparinginalinkedlist">Objects comparing in a LinkedList</h3>
+
+<ul>
+<li><p>Internally, operations such as contains(Object), add(Object) and remove(Object) compare objects based on their equals method implementation</p>
+
+<p>In the following example, <code>linkedList.contains(new Book(1, "a"))</code> should return true but false, <code>linkedList.remove(new Book(1, "a"))</code> should success but not due to lack of equals implementation on the user defined class</p></li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void objectsComparingProblem(){  
+    LinkedList&lt;Book&gt; linkedList = new LinkedList&lt;&gt;();
+    linkedList.add(new Book(1, "a"));
+
+    Boolean contained = linkedList.contains(new Book(1, "a"));
+    assertThat(contained).isFalse();
+
+    linkedList.remove(new Book(1, "a"));
+    assertThat(linkedList).hasSize(1);
+}
+
+static class Book {  
+    int id;
+    String title;
+
+    Book(int id, String title) {
+        this.id = id;
+        this.title = title;
+    }
+
+    int getId() {
+        return id;
+    }
+
+    String getTitle() {
+        return title;
+    }
 }
 </code></pre>
 
 <ul>
-<li>You can also remove an element by value and by index by using remove(Object) and remove(index) methods, but with linear-time performance</li>
+<li>You can fix the above problem by implement the equals method to the custom class as the below example</li>
 </ul>
+
+<pre><code class="language-java">@Test
+public void objectsComparingFixed(){  
+    LinkedList&lt;BookFixed&gt; linkedList = new LinkedList&lt;&gt;();
+    linkedList.add(new BookFixed(1, "a"));
+
+    Boolean contained = linkedList.contains(new BookFixed(1, "a"));
+    assertThat(contained).isTrue();
+
+    linkedList.remove(new BookFixed(1, "a"));
+    assertThat(linkedList).hasSize(0);
+}
+
+static class BookFixed {  
+    int id;
+    String title;
+
+    BookFixed(int id, String title) {
+        this.id = id;
+        this.title = title;
+    }
+
+    int getId() {
+        return id;
+    }
+
+    String getTitle() {
+        return title;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BookFixed bookFixed = (BookFixed) o;
+        return id == bookFixed.id &amp;&amp;
+                Objects.equals(title, bookFixed.title);
+    }
+}
+</code></pre>
+
+<ul>
+<li><p>In practice, consider to override hashCode when overriding equals as your defined classes may be used elsewhere in a hash table based collections such as <a href="https://hellokoding.com/java-hashset-tutorial-with-examples/">HashSet</a> and <a href="https://hellokoding.com/java-hashmap-tutorial-with-examples/">HashMap</a></p>
+
+<p><a href="https://hellokoding.com/java-equals-and-hashcode/">Learn more about equals and hashCode</a></p></li>
+</ul>
+
+<h3 id="sortalinkedlisthttpshellokodingcomsortanarraylistinjava"><a href="https://hellokoding.com/sort-an-arraylist-in-java/">Sort a LinkedList</a></h3>
+
+<p>Sort a LinkedList of objects by using its instance's <code>sort(Comparator)</code> method in conjunction with <a href="https://hellokoding.com/java-comparable-vs-comparator-examples/">Comparable and Comparator</a> interfaces to control over the sort order</p>
+
+<pre><code class="language-java">@Test
+public void sortMultipleFields() {  
+    Book book1 = new Book(1, "b");
+    Book book2 = new Book(2, "c");
+    Book book3 = new Book(3, "c");
+
+    LinkedList&lt;Book&gt; list = new LinkedList&lt;&gt;(Arrays.asList(book1, book2, book3));
+    list.sort(Comparator
+            .comparing(Book::getTitle, Comparator.reverseOrder())
+            .thenComparing(Book::getId, Comparator.reverseOrder()));
+
+    assertThat(list).containsExactly(book3, book2, book1);
+}
+</code></pre>
+
+<p><a href="https://hellokoding.com/sort-an-arraylist-in-java/">Learn more</a></p>
 
 <h2 id="conclusion">Conclusion</h2>
 
@@ -448,7 +591,7 @@ public void removing() {
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=LinkedList%20in%20Java&amp;url=http://hellokoding.com/java-linkedlist-tutorial-with-examples/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=LinkedList%20in%20Java%20Tutorial%20with%20Examples&amp;url=http://hellokoding.com/java-linkedlist-tutorial-with-examples/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>

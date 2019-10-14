@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sort an ArrayList of strings, numbers, dates and objects in Java</title>
+  <title>Sort ArrayList and LinkedList of strings, numbers, dates and objects in Java</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,18 +19,18 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Sort an ArrayList of strings, numbers, dates and objects in Java">
-    <meta property="og:description" content="You can sort an ArrayList of strings, numbers, dates and objects by using Collections.sort or using ArrayList instance sort method since Java 8+ Lets walk through this tutorial to see the detail examples Sort an ArrayList of strings, numbers and dates You can use Comparator.naturalOrder() to sort in">
+    <meta property="og:title" content="Sort ArrayList and LinkedList of strings, numbers, dates and objects in Java">
+    <meta property="og:description" content="You can sort ArrayList and LinkedList of strings, numbers, dates and objects by using Collections.sort or using ArrayList and LinkedList instances sort method since Java 8+ Lets walk through this tutorial to see the detail examples Sort ArrayList and LinkedList of strings, numbers and dates You can use Comparator.">
     <meta property="og:url" content="http://hellokoding.com/sort-an-arraylist-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/JavaCollections_SortanArrayList.png">
     <meta property="article:published_time" content="2019-06-13T08:23:01.000Z">
-    <meta property="article:modified_time" content="2019-10-03T14:01:43.000Z">
+    <meta property="article:modified_time" content="2019-10-14T15:13:59.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sort an ArrayList of strings, numbers, dates and objects in Java">
-    <meta name="twitter:description" content="You can sort an ArrayList of strings, numbers, dates and objects by using Collections.sort or using ArrayList instance sort method since Java 8+ Lets walk through this tutorial to see the detail examples Sort an ArrayList of strings, numbers and dates You can use Comparator.naturalOrder() to sort in">
+    <meta name="twitter:title" content="Sort ArrayList and LinkedList of strings, numbers, dates and objects in Java">
+    <meta name="twitter:description" content="You can sort ArrayList and LinkedList of strings, numbers, dates and objects by using Collections.sort or using ArrayList and LinkedList instances sort method since Java 8+ Lets walk through this tutorial to see the detail examples Sort ArrayList and LinkedList of strings, numbers and dates You can use Comparator.">
     <meta name="twitter:url" content="http://hellokoding.com/sort-an-arraylist-in-java/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/JavaCollections_SortanArrayList.png">
     <meta name="twitter:label1" content="Written by">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Sort an ArrayList of strings, numbers, dates and objects in Java",
+    "headline": "Sort ArrayList and LinkedList of strings, numbers, dates and objects in Java",
     "url": "http://hellokoding.com/sort-an-arraylist-in-java/",
     "datePublished": "2019-06-13T08:23:01.000Z",
-    "dateModified": "2019-10-03T14:01:43.000Z",
+    "dateModified": "2019-10-14T15:13:59.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/JavaCollections_SortanArrayList.png",
     "keywords": "Java",
-    "description": "You can sort an ArrayList of strings, numbers, dates and objects by using Collections.sort or using ArrayList instance sort method since Java 8+ Lets walk through this tutorial to see the detail examples Sort an ArrayList of strings, numbers and dates You can use Comparator.naturalOrder() to sort in"
+    "description": "You can sort ArrayList and LinkedList of strings, numbers, dates and objects by using Collections.sort or using ArrayList and LinkedList instances sort method since Java 8+ Lets walk through this tutorial to see the detail examples Sort ArrayList and LinkedList of strings, numbers and dates You can use Comparator."
 }
     </script>
 
@@ -224,8 +224,8 @@ ghost.init({
         <article class="post tag-java">
 
           <header class="post__header">
-            <h1 class="post__title">Sort an ArrayList of strings, numbers, dates and objects in Java</h1>
-            <time class="post__date" datetime="2019-10-03">Last modified @ 03 October 2019</time>
+            <h1 class="post__title">Sort ArrayList and LinkedList of strings, numbers, dates and objects in Java</h1>
+            <time class="post__date" datetime="2019-10-14">Last modified @ 14 October 2019</time>
           </header>
 
           <div class="post-content">
@@ -233,13 +233,15 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p>You can sort an ArrayList of strings, numbers, dates and objects by using <code>Collections.sort</code> or using ArrayList instance <code>sort</code> method since Java 8+</p>
+            <p>You can sort ArrayList and LinkedList of strings, numbers, dates and objects by using <code>Collections.sort</code> or using ArrayList and LinkedList instances <code>sort</code> method since Java 8+</p>
 
 <p>Lets walk through this tutorial to see the detail examples</p>
 
-<h2 id="sortanarraylistofstringsnumbersanddates">Sort an ArrayList of strings, numbers and dates</h2>
+<h2 id="sortarraylistandlinkedlistofstringsnumbersanddates">Sort ArrayList and LinkedList of strings, numbers and dates</h2>
 
-<p>You can use <code>Comparator.naturalOrder()</code> to sort in ascending order and <code>Comparator.reverseOrder()</code> to sort in descending order along with the sort method of an ArrayList instance</p>
+<p>You can use <code>Comparator.naturalOrder()</code> to sort in ascending order and <code>Comparator.reverseOrder()</code> to sort in descending order along with the sort method of ArrayList and LinkedList instances</p>
+
+<p>The following give you examples on ArrayLists but you can also apply the same on LinkedLists</p>
 
 <ul>
 <li>Sort an ArrayList of strings in alphabetical and reversed order</li>
@@ -291,10 +293,10 @@ public void sortDates() {
 }
 </code></pre>
 
-<h2 id="sortanarraylistofobjectsbyoneormultiplefields">Sort an ArrayList of objects by one or multiple fields</h2>
+<h2 id="sortanarraylistandlinkedlistofobjectsbyoneormultiplefields">Sort an ArrayList and LinkedList of objects by one or multiple fields</h2>
 
 <ul>
-<li><p>Sort an ArrayList of objects by one field with <code>Comparator.comparing(keyExtractor, keyComparator)</code></p>
+<li><p>Sort ArrayList and LinkedList of use defined objects by one field with <code>Comparator.comparing(keyExtractor, keyComparator)</code></p>
 
 <p><code>keyExtractor</code> is a function used to extract the sort key</p>
 
@@ -336,7 +338,7 @@ public void sortOneField() {
 </code></pre>
 
 <ul>
-<li>Sort an ArrayList of objects by multiple fields with <code>Comparator.comparing(keyExtractor, keyComparator).thenComparing(keyExtractor, keyComparator)</code></li>
+<li>Sort ArrayList and LinkedList of objects by multiple fields with <code>Comparator.comparing(keyExtractor, keyComparator).thenComparing(keyExtractor, keyComparator)</code></li>
 </ul>
 
 <pre><code class="language-java">@Test
@@ -362,7 +364,7 @@ public void sortMultipleFields() {
 
 <h3 id="cantsortalistcontainednullobjects">Can't sort a List contained null objects</h3>
 
-<p><code>ArrayList</code> accepts <code>null</code> elements, however, <code>NullPointerException</code> will be thrown if you try to sort one contained null elements</p>
+<p>ArrayList and LinkedList accept <code>null</code> elements, however, <code>NullPointerException</code> will be thrown if you try to sort one contained null elements</p>
 
 <pre><code class="language-java">@Test
 public void sortNullObject() {  
@@ -379,7 +381,7 @@ public void sortNullObject() {
 
 <h2 id="conclusion">Conclusion</h2>
 
-<p>In this tutorial, we learned using <code>ArrayList</code>'s <code>sort(Comparator)</code> method to sort an ArrayList of strings, numbers, dates and objects. You can find below the full source code</p>
+<p>In this tutorial, we learned using sort(Comparator) method of ArrayList and LinkedList instances to sort strings, numbers, dates and user defined objects. You can find below the full source code</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/ArrayListSortingTest.java">
 </code></pre>
@@ -391,7 +393,7 @@ public void sortNullObject() {
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Sort%20an%20ArrayList%20of%20strings%2C%20numbers%2C%20dates%20and%20objects%20in%20Java&amp;url=http://hellokoding.com/sort-an-arraylist-in-java/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Sort%20ArrayList%20and%20LinkedList%20of%20strings%2C%20numbers%2C%20dates%20and%20objects%20in%20Java&amp;url=http://hellokoding.com/sort-an-arraylist-in-java/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
