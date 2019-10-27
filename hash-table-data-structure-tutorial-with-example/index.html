@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/hash-table-data-structure-tutorial-with-example/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/10/DataStructure_HashTableTutorial.png">
     <meta property="article:published_time" content="2019-10-26T16:14:34.000Z">
-    <meta property="article:modified_time" content="2019-10-27T04:49:36.000Z">
+    <meta property="article:modified_time" content="2019-10-27T05:35:24.000Z">
     <meta property="article:tag" content="Data Structure">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Hash Table Data Structure Tutorial with Example",
     "url": "http://hellokoding.com/hash-table-data-structure-tutorial-with-example/",
     "datePublished": "2019-10-26T16:14:34.000Z",
-    "dateModified": "2019-10-27T04:49:36.000Z",
+    "dateModified": "2019-10-27T05:35:24.000Z",
     "image": "http://hellokoding.com/content/images/2019/10/DataStructure_HashTableTutorial.png",
     "keywords": "Data Structure",
     "description": "Hash table data structure (aka dictionary, hash map, associate array) is a key-value pairs mapping backed by a resizeable array data structure Attributes Hash table uses a load factor to decide when to grow the internal array capacity Hash function is used to generate a hash code and array index"
@@ -303,7 +303,9 @@ arrayCapacity, aka the number of buckets
 
 <h3 id="hashcollision">Hash collision</h3>
 
-<p>The hash codes computed by the hash function may be duplicate. You can use a linked list data structure to provide a separate chaining for entries with duplicate hash code</p>
+<p>There's no perfect hash function. The hash codes computed by the hash function may be duplicate. However, the less duplicate hash codes, the more better performance gain</p>
+
+<p>There're some solution to resolve the hash collision. Use a <a href="https://hellokoding.com/linked-list-data-structure-tutorial-and-example/">linked list data structure</a> to save duplicate hash code entries in a separate chaining is the most common way</p>
 
 <h3 id="resizeandrehashoperations">Resize and rehash operations</h3>
 
@@ -313,6 +315,8 @@ arrayCapacity, aka the number of buckets
 </code></pre>
 
 <p>Hashing operation have to be executed again for every entries right after the resize operation</p>
+
+<p>Resize and rehash operations are costly in term of performance, so choosing the initial capacity when creating a new Hash table is important to minimize the performance impact</p>
 
 <p></p><div class="hk-autoads"></div>  
 
@@ -336,6 +340,10 @@ null
 <h3 id="applications">Applications</h3>
 
 <p>Hash table can be used to implement associative arrays, caches, database indexing and sets data structure</p>
+
+<h3 id="references">References</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Hash_table">https://en.wikipedia.org/wiki/Hash_table</a></p>
             
             <div class="post__tags">
               <a href="../tag/data-structure/">Data Structure</a>
