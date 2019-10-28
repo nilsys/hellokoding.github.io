@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Java HashMap Tutorial with Examples">
-    <meta property="og:description" content="Java HashMap is a hash table (key-value pairs, dictionary) data structure implementation of the Map interface, a part of the Java Collections framework HashMap has the following features No guarantees to the iteration order No duplicate keys. Permits one null key and multiple null values Default load factor and initial">
+    <meta property="og:description" content="Java HashMap is a hash table (key-value pairs, dictionary) data structure implementation of the Map interface, a part of the Java Collections framework HashMap has the following features Default load factor and initial capacity are 0.75 and 16 respectively. Their values are important to the HashMap performance as they">
     <meta property="og:url" content="http://hellokoding.com/java-hashmap-tutorial-with-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/JavaCollections_HashMap.png">
     <meta property="article:published_time" content="2019-06-09T03:31:38.000Z">
-    <meta property="article:modified_time" content="2019-10-28T05:50:24.000Z">
+    <meta property="article:modified_time" content="2019-10-28T06:45:18.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Java HashMap Tutorial with Examples">
-    <meta name="twitter:description" content="Java HashMap is a hash table (key-value pairs, dictionary) data structure implementation of the Map interface, a part of the Java Collections framework HashMap has the following features No guarantees to the iteration order No duplicate keys. Permits one null key and multiple null values Default load factor and initial">
+    <meta name="twitter:description" content="Java HashMap is a hash table (key-value pairs, dictionary) data structure implementation of the Map interface, a part of the Java Collections framework HashMap has the following features Default load factor and initial capacity are 0.75 and 16 respectively. Their values are important to the HashMap performance as they">
     <meta name="twitter:url" content="http://hellokoding.com/java-hashmap-tutorial-with-examples/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/JavaCollections_HashMap.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Java HashMap Tutorial with Examples",
     "url": "http://hellokoding.com/java-hashmap-tutorial-with-examples/",
     "datePublished": "2019-06-09T03:31:38.000Z",
-    "dateModified": "2019-10-28T05:50:24.000Z",
+    "dateModified": "2019-10-28T06:45:18.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/JavaCollections_HashMap.png",
     "keywords": "Java",
-    "description": "Java HashMap is a hash table (key-value pairs, dictionary) data structure implementation of the Map interface, a part of the Java Collections framework HashMap has the following features No guarantees to the iteration order No duplicate keys. Permits one null key and multiple null values Default load factor and initial"
+    "description": "Java HashMap is a hash table (key-value pairs, dictionary) data structure implementation of the Map interface, a part of the Java Collections framework HashMap has the following features Default load factor and initial capacity are 0.75 and 16 respectively. Their values are important to the HashMap performance as they"
 }
     </script>
 
@@ -238,10 +238,12 @@ ghost.init({
 <p>HashMap has the following features</p>
 
 <ul>
-<li><p>No guarantees to the iteration order</p></li>
+<li><p>Default <a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example/#theloadfactor">load factor and initial capacity</a> are 0.75 and 16 respectively. Their values are important to the HashMap performance as they can optimize the iteration performance and the number of <a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example/#resizeandrehashoperations">resize and rehash operations</a></p></li>
+<li><p>No guarantees to the iteration order</p>
+
+<p>The iteration performance depends on the initial capacity (the number of buckets) plus the number of entries. Thus, it's very important not to set the initial capacity too high (or the load factor too low)</p></li>
 <li><p>No duplicate keys. Permits one <code>null</code> key and multiple null values</p></li>
-<li><p>Default <a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example/#theloadfactor">load factor</a> and initial capacity are 0.75 and 16 respectively. Their values are important to minimize the number of <a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example/#resizeandrehashoperations">resize and rehash operations</a> thus important to the HashMap performance</p></li>
-<li><p><a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example/#hashcollision">Hash collision problem</a> is resolved by using a red-black tree data structure to provide a separate chaining</p></li>
+<li><p><a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example/#hashcollision">Hash collision problem</a> is resolved by using a red-black tree data structure, since Java 8, to provide a separate chaining</p></li>
 <li><p>Offers constant-time O(1) in average and linear-time O(n) in worst case performance for basic operations such as get, put, and remove</p>
 
 <p>The less duplicate hash codes, the better performance gain for the above operations</p></li>
