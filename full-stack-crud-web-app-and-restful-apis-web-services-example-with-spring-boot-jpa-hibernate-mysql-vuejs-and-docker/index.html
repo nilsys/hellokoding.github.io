@@ -20,18 +20,18 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Spring Boot CRUD Example with RESTful APIs,  JPA, Hibernate, MySQL and VueJS">
-    <meta property="og:description" content="This tutorial will walk you through the steps of building a full stack CRUD web app and RESTful APIs web services example with Spring Boot, Lombok, JPA and Hibernate, MySQL, VueJS and Docker. What you'll build What you'll need Your local computer should have JDK 8+ or OpenJDK 8+, Maven">
+    <meta property="og:description" content="This tutorial will walk you through the steps of building a full stack CRUD web app and RESTful APIs web services example with Spring Boot, Lombok, JPA and Hibernate, MySQL, VueJS and Docker What you'll build What you'll need Your local computer should have JDK 8+ or OpenJDK 8+, Maven">
     <meta property="og:url" content="http://hellokoding.com/full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-25-at-12-07-49-AM-1.png">
     <meta property="article:published_time" content="2019-01-24T16:02:30.000Z">
-    <meta property="article:modified_time" content="2019-10-30T14:52:49.000Z">
+    <meta property="article:modified_time" content="2019-10-30T15:42:01.000Z">
     <meta property="article:tag" content="RESTful API">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Spring Boot CRUD Example with RESTful APIs,  JPA, Hibernate, MySQL and VueJS">
-    <meta name="twitter:description" content="This tutorial will walk you through the steps of building a full stack CRUD web app and RESTful APIs web services example with Spring Boot, Lombok, JPA and Hibernate, MySQL, VueJS and Docker. What you'll build What you'll need Your local computer should have JDK 8+ or OpenJDK 8+, Maven">
+    <meta name="twitter:description" content="This tutorial will walk you through the steps of building a full stack CRUD web app and RESTful APIs web services example with Spring Boot, Lombok, JPA and Hibernate, MySQL, VueJS and Docker What you'll build What you'll need Your local computer should have JDK 8+ or OpenJDK 8+, Maven">
     <meta name="twitter:url" content="http://hellokoding.com/full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-25-at-12-07-49-AM-1.png">
     <meta name="twitter:label1" content="Written by">
@@ -64,10 +64,10 @@
     "headline": "Spring Boot CRUD Example with RESTful APIs,  JPA, Hibernate, MySQL and VueJS",
     "url": "http://hellokoding.com/full-stack-crud-web-app-and-restful-apis-web-services-example-with-spring-boot-jpa-hibernate-mysql-vuejs-and-docker/",
     "datePublished": "2019-01-24T16:02:30.000Z",
-    "dateModified": "2019-10-30T14:52:49.000Z",
+    "dateModified": "2019-10-30T15:42:01.000Z",
     "image": "http://hellokoding.com/content/images/2019/01/Screenshot-2019-01-25-at-12-07-49-AM-1.png",
     "keywords": "RESTful API, Spring Boot",
-    "description": "This tutorial will walk you through the steps of building a full stack CRUD web app and RESTful APIs web services example with Spring Boot, Lombok, JPA and Hibernate, MySQL, VueJS and Docker. What you&#x27;ll build What you&#x27;ll need Your local computer should have JDK 8+ or OpenJDK 8+, Maven"
+    "description": "This tutorial will walk you through the steps of building a full stack CRUD web app and RESTful APIs web services example with Spring Boot, Lombok, JPA and Hibernate, MySQL, VueJS and Docker What you&#x27;ll build What you&#x27;ll need Your local computer should have JDK 8+ or OpenJDK 8+, Maven"
 }
     </script>
 
@@ -234,7 +234,7 @@ ghost.init({
               <a href="../tag/restful/">RESTful API</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
 
-            <p>This tutorial will walk you through the steps of building a full stack CRUD web app and RESTful APIs web services example with <a href="https://hellokoding.com/spring-boot-tutorial-series/">Spring Boot</a>, <a href="https://hellokoding.com/lombok-in-java-and-spring-boot/">Lombok</a>, <a href="https://hellokoding.com/jpa-and-hibernate-course-in-practice-with-tutorials-and-examples-series/">JPA and Hibernate</a>, MySQL, VueJS and Docker.</p>
+            <p>This tutorial will walk you through the steps of building a full stack CRUD web app and RESTful APIs web services example with <a href="https://hellokoding.com/spring-boot-tutorial-series/">Spring Boot</a>, <a href="https://hellokoding.com/lombok-in-java-and-spring-boot/">Lombok</a>, <a href="https://hellokoding.com/jpa-and-hibernate-course-in-practice-with-tutorials-and-examples-series/">JPA and Hibernate</a>, MySQL, VueJS and Docker</p>
 
 <h3 id="whatyoullbuild">What you'll build</h3>
 
@@ -247,7 +247,7 @@ ghost.init({
 <li><p>Walk through this <a href="https://hellokoding.com/lombok-in-java-and-spring-boot/">Lombok tutorial</a> if you're new to it</p></li>
 </ul>
 
-<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+<p></p><div class="hk-autoads"></div>  
 
 <h3 id="projectstructure">Project structure</h3>
 
@@ -282,9 +282,9 @@ ghost.init({
 <pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/pom.xml">
 </code></pre>
 
-<h2 id="definejpaentityrepositoryservicerestapisandcontroller">Define JPA Entity, Repository, Service, REST APIs and Controller</h2>
+<p></p><div class="hk-autoads"></div>  
 
-<h3 id="jpaentityrepositoryandservice">JPA Entity, Repository and Service</h3>
+<h3 id="definejpaentity">Define JPA Entity</h3>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/src/main/java/com/hellokoding/springboot/restful/product/Product.java">
 </code></pre>
@@ -293,10 +293,14 @@ ghost.init({
 
 <p>@Entity is a JPA annotation which specifies the class as an entity (so the class name can be used in JPQL queries) and as a table in database (the @Entity class name will match with the underlying table name, if the @Table annotation is omitted)</p>
 
-<p><a href="https://hellokoding.com/jpa-and-hibernate-course-in-practice-with-tutorials-and-examples-series/">Learn more about JPA</a></p>
+<p><a href="https://hellokoding.com/jpa-and-hibernate-course-in-practice-with-tutorials-and-examples-series/">Learn more about JPA and Hibernate</a></p>
+
+<h3 id="definespringdatajparepository">Define Spring Data JPA Repository</h3>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/src/main/java/com/hellokoding/springboot/restful/product/ProductRespository.java">
 </code></pre>
+
+<h3 id="implementservice">Implement Service</h3>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/src/main/java/com/hellokoding/springboot/restful/product/ProductService.java">
 </code></pre>
@@ -321,17 +325,21 @@ public class ProductService {
 
 <p><a href="https://hellokoding.com/lombok-in-java-and-spring-boot/">Learn more about using Lombok in Java and Spring Boot</a></p>
 
-<h3 id="restapisandcontroller">REST APIs and Controller</h3>
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="definerestapis">Define REST APIs</h3>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/src/main/java/com/hellokoding/springboot/restful/product/ProductAPI.java">
 </code></pre>
 
+<h3 id="definewebcontroller">Define Web Controller</h3>
+
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/src/main/java/com/hellokoding/springboot/restful/product/ProductController.java">
 </code></pre>
 
-<h2 id="defineviewtemplateandconfigurations">Define View Template and Configurations</h2>
+<p></p><div class="hk-autoads"></div>  
 
-<h3 id="freemarkerhtmlviewtemplate">FreeMarker/HTML View Template</h3>
+<h3 id="definefreemarkerhtmlviewtemplate">Define FreeMarker/HTML View Template</h3>
 
 <pre><code class="language-html embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-crud-mysql-vuejs/src/main/resources/templates/products.html">
 </code></pre>
@@ -363,7 +371,7 @@ On production environment, you may like to disable the DDL Auto feature by using
 <a href="../database-migration-evolution-with-flyway-and-jpa-hibernate/">Flyway Example of Database Migration/Evolution with Spring Boot, JPA and Hibernate</a>
 </pre>
 
-<h2 id="runtheapplication">Run the application</h2>
+<p></p><div class="hk-autoads"></div>  
 
 <h3 id="runwithdocker">Run with Docker</h3>
 
@@ -380,9 +388,9 @@ On production environment, you may like to disable the DDL Auto feature by using
 <pre><code>docker-compose up
 </code></pre>
 
-<h3 id="runwithjdkopenjdkmavenandmysqlserverlocal">Run with JDK/OpenJDK, Maven and MySQL Server local</h3>
+<h3 id="runwithyourlocalmysqlserver">Run with your local MySQL Server</h3>
 
-<p>Update <code>hk-mysql</code> on <a href="index.html#applicationconfigurations">application.properties</a> to <code>localhost</code> and type the below command at the project root directory</p>
+<p>You can run the app with your local MySQL Server by updating <code>hk-mysql</code> on <a href="index.html#applicationconfigurations">application.properties</a> to <code>localhost</code> and type the below command at the project root directory</p>
 
 <pre><code>mvn clean spring-boot:run
 </code></pre>
