@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/spring-resttemplate-error-hanlding/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/11/SpringWeb_RestTemplateErrorHandling.png">
     <meta property="article:published_time" content="2019-11-02T08:43:36.000Z">
-    <meta property="article:modified_time" content="2019-11-02T11:26:46.000Z">
+    <meta property="article:modified_time" content="2019-11-02T11:53:25.000Z">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Spring RestTemplate Error Hanlding",
     "url": "http://hellokoding.com/spring-resttemplate-error-hanlding/",
     "datePublished": "2019-11-02T08:43:36.000Z",
-    "dateModified": "2019-11-02T11:26:46.000Z",
+    "dateModified": "2019-11-02T11:53:25.000Z",
     "image": "http://hellokoding.com/content/images/2019/11/SpringWeb_RestTemplateErrorHandling.png",
     "keywords": "Spring Boot",
     "description": "RestTemplate throws RestClientResponseException subtypes such as HttpClientErrorException, HttpServerErrorException and UnknownHttpStatusCodeException separately if the response HTTP status code is 4xx, 5xx and unknown You can handle RestTemplate errors at local level by catching the RestClientResponseException, at the bean level by implementing the ResponseErrorHandler interface and plugging into a RestTemplate bean Lets"
@@ -276,7 +276,7 @@ ghost.init({
 
 <p>hasError method is used to indicate whether the given response has any errors</p>
 
-<p>The two handleError methods is used to handle the error in the given response. Only handleError(response) is required to implement, however, it will be overshadowed if you implement handleError(URI url, HttpMethod method, ClientHttpResponse response)</p>
+<p>The two handleError methods are used to handle the error in the given response. Only handleError(response) is required to implement, however, it will be overshadowed if you implement handleError(URI url, HttpMethod method, ClientHttpResponse response)</p>
 
 <h3 id="plugyourcustomresponseerrorhandlerintoaresttemplatebean">Plug your custom ResponseErrorHandler into a RestTemplate bean</h3>
 
@@ -290,7 +290,7 @@ ghost.init({
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/spring-core-examples/src/main/java/com/hellokoding/springcore/ConsumerService.java">
 </code></pre>
 
-<p>The following give you an integration test example with MockRestServiceServer</p>
+<p>The following give you an integration test example with SpringRunner and MockRestServiceServer</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/spring-core-examples/src/test/java/com/hellokoding/springcore/CustomResponseErrorHandlerTest.java">
 </code></pre>
