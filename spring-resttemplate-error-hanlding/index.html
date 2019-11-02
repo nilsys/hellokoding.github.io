@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/spring-resttemplate-error-hanlding/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/11/SpringWeb_RestTemplateErrorHandling.png">
     <meta property="article:published_time" content="2019-11-02T08:43:36.000Z">
-    <meta property="article:modified_time" content="2019-11-02T08:53:37.000Z">
+    <meta property="article:modified_time" content="2019-11-02T11:26:46.000Z">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Spring RestTemplate Error Hanlding",
     "url": "http://hellokoding.com/spring-resttemplate-error-hanlding/",
     "datePublished": "2019-11-02T08:43:36.000Z",
-    "dateModified": "2019-11-02T08:53:37.000Z",
+    "dateModified": "2019-11-02T11:26:46.000Z",
     "image": "http://hellokoding.com/content/images/2019/11/SpringWeb_RestTemplateErrorHandling.png",
     "keywords": "Spring Boot",
     "description": "RestTemplate throws RestClientResponseException subtypes such as HttpClientErrorException, HttpServerErrorException and UnknownHttpStatusCodeException separately if the response HTTP status code is 4xx, 5xx and unknown You can handle RestTemplate errors at local level by catching the RestClientResponseException, at the bean level by implementing the ResponseErrorHandler interface and plugging into a RestTemplate bean Lets"
@@ -282,7 +282,7 @@ ghost.init({
 
 <p>To make your custom ResponseErrorHandler work, you have to register it with a RestTemplate bean</p>
 
-<p>In practice, to leverage the Spring Dependency Injection, you can define your RestTemplate beans in a separate class config and inject it via @Autowired into where it is used such as Spring @Component or @Service class</p>
+<p>In practice, to follow <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a> and leverage the Spring Dependency Injection, you can define your RestTemplate beans in a separate class config and inject it via @Autowired into where it is used such as Spring @Component or @Service class</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/spring-core-examples/src/main/java/com/hellokoding/springcore/RestTemplateConfig.java">
 </code></pre>
