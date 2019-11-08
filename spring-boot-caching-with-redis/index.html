@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Introduction to Spring Cache with Redis">
-    <meta property="og:description" content="Spring provides abstraction for adding caching into application and supporting Redis as one of its providers. This post will give you some highlights when implement in Spring Boot What you'll need JDK 8+ or OpenJDK 8+ Maven 3+ Redis 5+ or Docker CE 18+ Dependencies Beside other Spring Boot starter">
+    <meta property="og:description" content="Spring provides abstraction for adding caching into application and supporting Redis as one of its providers. This tutorial will give you some highlights when implement in Spring Boot What you'll need JDK 8+ or OpenJDK 8+ Maven 3+ Redis 5+ or Docker CE 18+    Dependencies Beside other Spring Boot starter">
     <meta property="og:url" content="http://hellokoding.com/spring-boot-caching-with-redis/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/08/SpringCache_ImplementWithRedis.png">
     <meta property="article:published_time" content="2019-08-08T14:52:23.000Z">
-    <meta property="article:modified_time" content="2019-08-10T07:04:50.000Z">
+    <meta property="article:modified_time" content="2019-11-08T14:13:30.000Z">
     <meta property="article:tag" content="Spring">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Introduction to Spring Cache with Redis">
-    <meta name="twitter:description" content="Spring provides abstraction for adding caching into application and supporting Redis as one of its providers. This post will give you some highlights when implement in Spring Boot What you'll need JDK 8+ or OpenJDK 8+ Maven 3+ Redis 5+ or Docker CE 18+ Dependencies Beside other Spring Boot starter">
+    <meta name="twitter:description" content="Spring provides abstraction for adding caching into application and supporting Redis as one of its providers. This tutorial will give you some highlights when implement in Spring Boot What you'll need JDK 8+ or OpenJDK 8+ Maven 3+ Redis 5+ or Docker CE 18+    Dependencies Beside other Spring Boot starter">
     <meta name="twitter:url" content="http://hellokoding.com/spring-boot-caching-with-redis/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/08/SpringCache_ImplementWithRedis.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Introduction to Spring Cache with Redis",
     "url": "http://hellokoding.com/spring-boot-caching-with-redis/",
     "datePublished": "2019-08-08T14:52:23.000Z",
-    "dateModified": "2019-08-10T07:04:50.000Z",
+    "dateModified": "2019-11-08T14:13:30.000Z",
     "image": "http://hellokoding.com/content/images/2019/08/SpringCache_ImplementWithRedis.png",
     "keywords": "Spring",
-    "description": "Spring provides abstraction for adding caching into application and supporting Redis as one of its providers. This post will give you some highlights when implement in Spring Boot What you&#x27;ll need JDK 8+ or OpenJDK 8+ Maven 3+ Redis 5+ or Docker CE 18+ Dependencies Beside other Spring Boot starter"
+    "description": "Spring provides abstraction for adding caching into application and supporting Redis as one of its providers. This tutorial will give you some highlights when implement in Spring Boot What you&#x27;ll need JDK 8+ or OpenJDK 8+ Maven 3+ Redis 5+ or Docker CE 18+    Dependencies Beside other Spring Boot starter"
 }
     </script>
 
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Introduction to Spring Cache with Redis</h1>
-            <time class="post__date" datetime="2019-08-10">Last modified @ 10 August 2019</time>
+            <time class="post__date" datetime="2019-11-08">Last modified @ 08 November 2019</time>
           </header>
 
           <div class="post-content">
@@ -233,7 +233,7 @@ ghost.init({
               <a href="../tag/spring/">Spring</a>
             </div>
 
-            <p>Spring provides abstraction for adding caching into application and supporting Redis as one of its providers. This post will give you some highlights when implement in Spring Boot</p>
+            <p>Spring provides abstraction for adding caching into application and supporting Redis as one of its providers. This tutorial will give you some highlights when implement in Spring Boot</p>
 
 <h3 id="whatyoullneed">What you'll need</h3>
 
@@ -243,17 +243,17 @@ ghost.init({
 <li>Redis 5+ or Docker CE 18+</li>
 </ul>
 
+<p></p><div class="hk-autoads"></div>  
+
 <h3 id="dependencies">Dependencies</h3>
 
-<p>Beside other Spring Boot starter dependencies, include the  Data Redis starter to get the auto-configuration and access to Redis</p>
+<p>Beside other Spring Boot starter dependencies, include the Data Redis starter to get the auto-configuration and access to Redis</p>
 
 <pre><code class="language-xml">&lt;dependency&gt;  
     &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
     &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;
 &lt;/dependency&gt;  
 </code></pre>
-
-<p><br>  </p>
 
 <h3 id="autoconfigureredisandcaching">Auto-configure Redis and Caching</h3>
 
@@ -276,6 +276,8 @@ spring.cache.redis.time-to-live=100000
 </code></pre>
 
 <p><code>spring.redis.timeout</code> and <code>spring.cache.redis.time-to-live</code> value are in milliseconds</p>
+
+<p></p><div class="hk-autoads"></div>  
 
 <h3 id="howcachingworks">How caching works</h3>
 
@@ -307,6 +309,8 @@ public Optional&lt;Product&gt; findById(Long id) {
 <p>The <code>key</code> attribute is used to define the cache key in <code>SpEL</code> expression</p>
 
 <p>If no value is found in the cache, the target method will be invoked and returned value stored in the associated cache</p>
+
+<p></p><div class="hk-autoads"></div>  
 
 <h3 id="enablethecachingcapability">Enable the caching capability</h3>
 
