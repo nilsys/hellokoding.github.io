@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spring Boot Flyway Example of Database Migration with JPA and Hibernate</title>
+  <title>Database Migration with Flyway and Spring Boot</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,19 +19,19 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Spring Boot Flyway Example of Database Migration with JPA and Hibernate">
-    <meta property="og:description" content="In this tutorial, you will learn using Flyway to version control database migration/evolution. Let's start building an example with Spring Boot, JPA/Hibernate, MySQL, and Docker. What you will need JDK 8+ or OpenJDK 8+ Maven 3+ MySQL Server 5+ or Docker CE 18+ Init project structure and dependencies">
+    <meta property="og:title" content="Database Migration with Flyway and Spring Boot">
+    <meta property="og:description" content="Flyway is a database migration and version control tool It has Java API, command line client, plugin for Maven and Gradle Supports most of relational databases such as MySQL, PostgreSQL, SQL Server and Oracle Migration scripts can be written in either SQL or Java Spring Boot can auto run database">
     <meta property="og:url" content="http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/database-migration.png">
     <meta property="article:published_time" content="2019-01-28T09:21:12.000Z">
-    <meta property="article:modified_time" content="2019-05-06T14:19:24.000Z">
+    <meta property="article:modified_time" content="2019-11-09T17:30:37.000Z">
     <meta property="article:tag" content="JPA and Hibernate">
     <meta property="article:tag" content="Spring">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Spring Boot Flyway Example of Database Migration with JPA and Hibernate">
-    <meta name="twitter:description" content="In this tutorial, you will learn using Flyway to version control database migration/evolution. Let's start building an example with Spring Boot, JPA/Hibernate, MySQL, and Docker. What you will need JDK 8+ or OpenJDK 8+ Maven 3+ MySQL Server 5+ or Docker CE 18+ Init project structure and dependencies">
+    <meta name="twitter:title" content="Database Migration with Flyway and Spring Boot">
+    <meta name="twitter:description" content="Flyway is a database migration and version control tool It has Java API, command line client, plugin for Maven and Gradle Supports most of relational databases such as MySQL, PostgreSQL, SQL Server and Oracle Migration scripts can be written in either SQL or Java Spring Boot can auto run database">
     <meta name="twitter:url" content="http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/01/database-migration.png">
     <meta name="twitter:label1" content="Written by">
@@ -61,13 +61,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Spring Boot Flyway Example of Database Migration with JPA and Hibernate",
+    "headline": "Database Migration with Flyway and Spring Boot",
     "url": "http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/",
     "datePublished": "2019-01-28T09:21:12.000Z",
-    "dateModified": "2019-05-06T14:19:24.000Z",
+    "dateModified": "2019-11-09T17:30:37.000Z",
     "image": "http://hellokoding.com/content/images/2019/01/database-migration.png",
     "keywords": "JPA and Hibernate, Spring",
-    "description": "In this tutorial, you will learn using Flyway to version control database migration/evolution. Let&#x27;s start building an example with Spring Boot, JPA/Hibernate, MySQL, and Docker. What you will need JDK 8+ or OpenJDK 8+ Maven 3+ MySQL Server 5+ or Docker CE 18+ Init project structure and dependencies"
+    "description": "Flyway is a database migration and version control tool It has Java API, command line client, plugin for Maven and Gradle Supports most of relational databases such as MySQL, PostgreSQL, SQL Server and Oracle Migration scripts can be written in either SQL or Java Spring Boot can auto run database"
 }
     </script>
 
@@ -225,8 +225,8 @@ ghost.init({
         <article class="post tag-jpa tag-spring">
 
           <header class="post__header">
-            <h1 class="post__title">Spring Boot Flyway Example of Database Migration with JPA and Hibernate</h1>
-            <time class="post__date" datetime="2019-05-06">Last modified @ 06 May 2019</time>
+            <h1 class="post__title">Database Migration with Flyway and Spring Boot</h1>
+            <time class="post__date" datetime="2019-11-09">Last modified @ 09 November 2019</time>
           </header>
 
           <div class="post-content">
@@ -234,128 +234,90 @@ ghost.init({
               <a href="../tag/jpa/">JPA and Hibernate</a><a href="../tag/spring/">Spring</a>
             </div>
 
-            <p>In this tutorial, you will learn using Flyway to version control database migration/evolution. Let's start building an example with Spring Boot, JPA/Hibernate, MySQL, and Docker.</p>
-
-<h3 id="whatyouwillneed">What you will need</h3>
+            <p>Flyway is a database migration and version control tool</p>
 
 <ul>
-<li>JDK 8+ or OpenJDK 8+</li>
-<li>Maven 3+</li>
-<li>MySQL Server 5+ or Docker CE 18+</li>
+<li><p>It has Java API, command line client, plugin for Maven and Gradle</p></li>
+<li><p>Supports most of relational databases such as MySQL, PostgreSQL, SQL Server and Oracle</p></li>
+<li><p>Migration scripts can be written in either SQL or Java</p></li>
 </ul>
 
-<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+<p>Spring Boot can auto run database migration at the application startup with a various of mechanisms such as DataSource, JPA and Hibernate, Flyway and Liquibase</p>
 
-<h3 id="projectstructure">Project structure</h3>
+<p>This tutorial will give you some highlight when using Flyway in Spring Boot</p>
 
-<pre><code class="language-bash">├── src
-│   └── main
-│       ├── java
-│       │   └── com
-│       │       └── hellokoding
-│       │           └── springboot
-│       │               └── jpa
-│       │                   ├── book
-│       │                   │   ├── Book.java
-│       │                   │   └── BookRepository.java
-│       │                   └── Application.java
-│       └── resources
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="addflywaytoyourproject">Add Flyway to your project</h3>
+
+<p>You can add Flyway into your project as a dependency on pom.xml or build.gradle file. The library versions can be found on the Maven Central Repository</p>
+
+<p>If you use Flyway in a Spring Boot project, the dependency version can be omitted as Spring Boot can help you to resolve</p>
+
+<pre><code class="language-xml">&lt;dependency&gt;  
+    &lt;groupId&gt;org.flywaydb&lt;/groupId&gt;
+    &lt;artifactId&gt;flyway-core&lt;/artifactId&gt;
+&lt;/dependency&gt;  
+</code></pre>
+
+<p>You may also need Spring Boot Actuator to query the Flyway migration status via web interface</p>
+
+<pre><code class="language-xml">&lt;dependency&gt;  
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;
+&lt;/dependency&gt;  
+</code></pre>
+
+<h3 id="ensureothermigrationmechanismsaredisabled">Ensure other migration mechanisms are disabled</h3>
+
+<p>Using multiple of migration mechanisms can cause confuse and hard to manage, so it's a good practice to disable them when you are using Flyway</p>
+
+<p>Spring Boot, via JPA and Hibernate, can auto export schema DDL to database via your definition on @Entity classes. You can turn it off by setting <code>validate</code> or <code>none</code> (by default for non-embedded databases) to the <code>spring.jpa.hibernate.ddl-auto</code> property</p>
+
+<p>Spring Boot can auto run <code>classpath:schema.sql</code> and  <code>classpath:data.sql</code> script files for your DataSource. This feature can be controlled via <code>spring.datasource.initialization-mode</code> property. Its value is <code>embedded</code> (only apply for embedded databases) by default</p>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="flywaymigrationscripts">Flyway migration scripts</h3>
+
+<p>Spring Boot auto run Flyway migration scripts at the application startup, when you include Flyway core library into the project</p>
+
+<p>Typically, Flyway migrations scripts are in the form <code>V&lt;VERSION&gt;__&lt;DESCRIPTION&gt;.sql</code></p>
+
+<ul>
+<li><p><code>&lt;VERSION&gt;</code> is a dot or underscore separated version, such as '1.0' or '1_1'). <code>&lt;VERSION&gt;</code> must be unique</p></li>
+<li><p><code>&lt;DESCRIPTION&gt;</code> should be informative for you able to remember what each migration does</p></li>
+</ul>
+
+<p>By default, Spring Boot looks for them in <code>classpath:db/migration</code> folder, you can modify that location by setting <code>spring.flyway.locations</code></p>
+
+<pre><code class="language-bash">│       └── resources
 │           ├── db
 │           │   └── migration
-│           │       ├── V1.0__init.sql
-│           │       └── V1.1__insert_data.sql
+│           │       ├── V1.0__create_book.sql
+│           │       ├── V1.1__insert_book.sql
+│           │       ├── V1.2__insert_book.sql
+│           │       └── V1.3__delete_book.sql
 │           └── application.properties
-├── Dockerfile
-├── docker-compose.yml
 └── pom.xml
 </code></pre>
 
-<h3 id="projectdependencies">Project dependencies</h3>
+<p>The migration scripts can not be changed after applied. Flyway compares checksum of a script in every execution and throws exception if there's a mismatch</p>
 
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-flyway/pom.xml">
-</code></pre>
+<h3 id="querymigrationstatusandhistory">Query migration status and history</h3>
 
-<h2 id="definejpaentityrepositoryandpreparesqlscript">Define JPA Entity, Repository and Prepare SQL Script</h2>
+<p>You can query migration status and history in web interface with Spring Boot Actuator by enabling it in this property <code>management.endpoints.web.exposure.include=info,health,flyway</code> and access to <code>{endpoints}/actuator/flyway</code></p>
 
-<h3 id="definejpaentityandrepository">Define JPA Entity and Repository</h3>
+<p><img src="../content/images/2019/11/Screenshot-2019-11-10-at-1-11-49-AM.png" alt=""></p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-flyway/src/main/java/com/hellokoding/springboot/jpa/book/Book.java">
-</code></pre>
+<p>Apart from that, you can also query table <code>flyway_schema_history</code> in your database. It is created by Flyway to manage the migration status and history</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-flyway/src/main/java/com/hellokoding/springboot/jpa/book/BookRepository.java">
-</code></pre>
+<p><img src="../content/images/2019/11/Screenshot-2019-11-10-at-1-27-03-AM.png" alt="">
+<img src="../content/images/2019/11/Screenshot-2019-11-10-at-1-29-41-AM.png" alt=""></p>
 
-<h3 id="preparesqlscriptfordatabasemigration">Prepare SQL script for database migration</h3>
+<h3 id="conclusion">Conclusion</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-flyway/src/main/resources/db/migration/V1.0__init.sql">
-</code></pre>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-flyway/src/main/resources/db/migration/V1.1__insert_data.sql">
-</code></pre>
-
-<h2 id="configandrun">Config and Run</h2>
-
-<h3 id="applicationconfigurations">Application Configurations</h3>
-
-<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-flyway/src/main/resources/application.properties">
-</code></pre>
-
-<p><code>hk-mysql</code> refers to Docker Compose service defined in the below <code>docker-compose.yml</code> file</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-flyway/src/main/java/com/hellokoding/springboot/jpa/Application.java">
-</code></pre>
-
-<h3 id="runwithdocker">Run with Docker</h3>
-
-<p>Prepare Dockerfile for Java/Spring Boot application and docker-compose.yml for MySQL Server</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-flyway/Dockerfile">
-</code></pre>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-flyway/docker-compose.yml">
-</code></pre>
-
-<p>Type the below command at the project root directory, make sure your local Docker is running</p>
-
-<pre><code>docker-compose up  
-</code></pre>
-
-<p>Access to MySQL Server docker container by issuing below bash command  and key in <code>hellokoding</code> on <code>Enter password:</code></p>
-
-<pre><code>docker exec -it hk-mysql mysql -p
-</code></pre>
-
-<h3 id="runwithjdkopenjdkmavenandmysqlserverlocal">Run with JDK/OpenJDK, Maven and MySQL Server local</h3>
-
-<p>Update <code>hk-mysql</code> on <code>application.properties</code> to <code>localhost</code> and type the below command at the project root directory</p>
-
-<pre><code>mvn clean spring-boot:run  
-</code></pre>
-
-<h3 id="testingtime">Testing time</h3>
-
-<p>Check the created schema and data by Flyway based on the prepared SQL scripts</p>
-
-<p><img src="../content/images/2019/01/Screenshot-2019-01-28-at-5-26-43-PM.png" alt=""></p>
-
-<p><img src="../content/images/2019/01/Screenshot-2019-01-28-at-5-26-57-PM.png" alt=""></p>
-
-<p>Flyway also produced an additional table <code>flyway_schema_history</code> to manage schema version history <br>
-<img src="../content/images/2019/01/Screenshot-2019-01-28-at-6-15-53-PM.png" alt="">
-<img src="../content/images/2019/01/Screenshot-2019-01-28-at-6-16-30-PM.png" alt=""></p>
-
-<h2 id="keystotakeaway">Keys to take away</h2>
-
-<ul>
-<li>Using Flyway to version control database migration/evolution with SQL scripts.</li>
-<li>Hibernate DDL Auto should be disable when using with Flyway or on production environment, on <a href="index.html#applicationconfigurations">application.properties</a>, <code>spring.jpa.hibernate.ddl-auto</code> value should be <code>validate</code> or <code>none</code> (default).</li>
-<li>By default, Spring Boot and Flyway will find the migration script in <code>resources/db/migration</code>, you can change it on <a href="index.html#applicationconfigurations">application.properties</a> with <code>spring.flyway.locations</code> property.</li>
-<li>SQL script file name should follow Flyway convention <a href="https://flywaydb.org/documentation/migrations#naming">https://flywaydb.org/documentation/migrations#naming</a></li>
-</ul>
-
-<h3 id="sourcecode">Source code</h3>
-
-<p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-flyway">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-flyway</a></p>
+<p>In this tutorial, we learned using Flyway in Spring Boot to auto migrate database at the application startup. You can find the <a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-flyway">full implementation example at GitHub</a></p>
             
             <div class="post__tags">
               <a href="../tag/jpa/">JPA and Hibernate</a><a href="../tag/spring/">Spring</a>
@@ -364,7 +326,7 @@ ghost.init({
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Spring%20Boot%20Flyway%20Example%20of%20Database%20Migration%20with%20JPA%20and%20Hibernate&amp;url=http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Database%20Migration%20with%20Flyway%20and%20Spring%20Boot&amp;url=http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
