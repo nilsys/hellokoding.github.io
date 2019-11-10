@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/11/Flyway_SpringBoot.png">
     <meta property="article:published_time" content="2019-01-28T09:21:12.000Z">
-    <meta property="article:modified_time" content="2019-11-10T08:37:59.000Z">
+    <meta property="article:modified_time" content="2019-11-10T14:47:02.000Z">
     <meta property="article:tag" content="Spring">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Database Migration with Flyway in Spring Boot",
     "url": "http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/",
     "datePublished": "2019-01-28T09:21:12.000Z",
-    "dateModified": "2019-11-10T08:37:59.000Z",
+    "dateModified": "2019-11-10T14:47:02.000Z",
     "image": "http://hellokoding.com/content/images/2019/11/Flyway_SpringBoot.png",
     "keywords": "Spring",
     "description": "Flyway is a database migration and version control tool It has Java API, command line client, plugin for Maven and Gradle Supports most of relational databases such as MySQL, PostgreSQL, SQL Server and Oracle Migration scripts an be written in either SQL or Java Spring Boot can auto run database"
@@ -279,9 +279,7 @@ ghost.init({
 
 <h3 id="flywaymigrationscripts">Flyway migration scripts</h3>
 
-<p>Flyway migration scripts can be written in either SQL or Java, SQL is the most commonly use</p>
-
-<p>Unlike JPA and Hibernate, you have to manually write the scripts, currently there's no auto migration support from Flyway based on the @Entity classes </p>
+<p>Unlike JPA and Hibernate, database migration in Flyway is not based on the definition of @Entity classes, you have to manually write the migration scripts in either SQL or Java, SQL is the most commonly use</p>
 
 <p>Typically, SQL scripts are in the form <code>V&lt;VERSION&gt;__&lt;DESCRIPTION&gt;.sql</code></p>
 
