@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Database Migration with Flyway and Spring Boot</title>
+  <title>Database Migration with Flyway in Spring Boot</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,17 +19,17 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Database Migration with Flyway and Spring Boot">
+    <meta property="og:title" content="Database Migration with Flyway in Spring Boot">
     <meta property="og:description" content="Flyway is a database migration and version control tool It has Java API, command line client, plugin for Maven and Gradle Supports most of relational databases such as MySQL, PostgreSQL, SQL Server and Oracle Migration scripts can be written in either SQL or Java Spring Boot can auto run database">
     <meta property="og:url" content="http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/11/Flyway_SpringBoot.png">
     <meta property="article:published_time" content="2019-01-28T09:21:12.000Z">
-    <meta property="article:modified_time" content="2019-11-09T17:48:34.000Z">
+    <meta property="article:modified_time" content="2019-11-10T04:56:05.000Z">
     <meta property="article:tag" content="Spring">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Database Migration with Flyway and Spring Boot">
+    <meta name="twitter:title" content="Database Migration with Flyway in Spring Boot">
     <meta name="twitter:description" content="Flyway is a database migration and version control tool It has Java API, command line client, plugin for Maven and Gradle Supports most of relational databases such as MySQL, PostgreSQL, SQL Server and Oracle Migration scripts can be written in either SQL or Java Spring Boot can auto run database">
     <meta name="twitter:url" content="http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/11/Flyway_SpringBoot.png">
@@ -60,10 +60,10 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Database Migration with Flyway and Spring Boot",
+    "headline": "Database Migration with Flyway in Spring Boot",
     "url": "http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/",
     "datePublished": "2019-01-28T09:21:12.000Z",
-    "dateModified": "2019-11-09T17:48:34.000Z",
+    "dateModified": "2019-11-10T04:56:05.000Z",
     "image": "http://hellokoding.com/content/images/2019/11/Flyway_SpringBoot.png",
     "keywords": "Spring",
     "description": "Flyway is a database migration and version control tool It has Java API, command line client, plugin for Maven and Gradle Supports most of relational databases such as MySQL, PostgreSQL, SQL Server and Oracle Migration scripts can be written in either SQL or Java Spring Boot can auto run database"
@@ -224,8 +224,8 @@ ghost.init({
         <article class="post tag-spring">
 
           <header class="post__header">
-            <h1 class="post__title">Database Migration with Flyway and Spring Boot</h1>
-            <time class="post__date" datetime="2019-11-09">Last modified @ 09 November 2019</time>
+            <h1 class="post__title">Database Migration with Flyway in Spring Boot</h1>
+            <time class="post__date" datetime="2019-11-10">Last modified @ 10 November 2019</time>
           </header>
 
           <div class="post-content">
@@ -241,9 +241,9 @@ ghost.init({
 <li><p>Migration scripts can be written in either SQL or Java</p></li>
 </ul>
 
-<p>Spring Boot can auto run database migration at the application startup with a various of mechanisms such as DataSource, JPA and Hibernate, Flyway and Liquibase</p>
+<p>Spring Boot can auto run database migration at the application startup with a various of mechanisms such as javax.sql.DataSource, JPA and Hibernate, Flyway and Liquibase</p>
 
-<p>This tutorial will give you some highlight when using Flyway in Spring Boot</p>
+<p>This tutorial will give you some highlights when using Flyway in Spring Boot</p>
 
 <p></p><div class="hk-autoads"></div>  
 
@@ -279,14 +279,24 @@ ghost.init({
 
 <h3 id="flywaymigrationscripts">Flyway migration scripts</h3>
 
+<p>Flyway migration scripts can be written in either SQL or Java</p>
+
 <p>Spring Boot auto run Flyway migration scripts at the application startup, when you include Flyway core library into the project</p>
 
-<p>Typically, Flyway migrations scripts are in the form <code>V&lt;VERSION&gt;__&lt;DESCRIPTION&gt;.sql</code></p>
+<p>Typically, SQL scripts are in the form <code>V&lt;VERSION&gt;__&lt;DESCRIPTION&gt;.sql</code></p>
 
 <ul>
 <li><p><code>&lt;VERSION&gt;</code> is a dot or underscore separated version, such as '1.0' or '1_1'). <code>&lt;VERSION&gt;</code> must be unique</p></li>
 <li><p><code>&lt;DESCRIPTION&gt;</code> should be informative for you able to remember what each migration does</p></li>
 </ul>
+
+<p>The following give you some example SQL scripts</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-flyway/src/main/resources/db/migration/V1.0__create_book.sql">
+</code></pre>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-flyway/src/main/resources/db/migration/V1.1__insert_book.sql">
+</code></pre>
 
 <p>By default, Spring Boot looks for them in <code>classpath:db/migration</code> folder, you can modify that location by setting <code>spring.flyway.locations</code></p>
 
@@ -302,6 +312,21 @@ ghost.init({
 </code></pre>
 
 <p>The migration scripts can not be changed after applied. Flyway compares checksum of a script in every execution and throws exception if there's a mismatch</p>
+
+<h3 id="configflywaydatasource">Config Flyway DataSource</h3>
+
+<p>Spring Boot uses either annotations or external properties to connect Flyway to the underlying datasource</p>
+
+<ul>
+<li><p>@Primary DataSource or @FlywayDataSource annotation</p></li>
+<li><p><code>spring.datasource.[url, username, password]</code>, or <code>spring.flyway.[url, user, password]</code> properties</p></li>
+</ul>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="howspringbootrunsflyway">How Spring Boot runs Flyway</h3>
+
+<p>Spring Boot auto run Flyway migration scripts at the application startup. The startup may be failed if there's any exception (such as the checksum mismatch error of migration scripts mentioned in the previous section) thrown by Flyway during migration</p>
 
 <h3 id="querymigrationstatusandhistory">Query migration status and history</h3>
 
@@ -325,7 +350,7 @@ ghost.init({
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Database%20Migration%20with%20Flyway%20and%20Spring%20Boot&amp;url=http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Database%20Migration%20with%20Flyway%20in%20Spring%20Boot&amp;url=http://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
