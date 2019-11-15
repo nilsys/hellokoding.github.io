@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comparable and Comparator in Java</title>
+  <title>Create a new Spring Boot project</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,29 +14,29 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=f425cec44e">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=f425cec44e">
    
-  <link rel="canonical" href="http://hellokoding.com/java-comparable-vs-comparator-examples/">
+  <link rel="canonical" href="http://hellokoding.com/create-a-new-spring-boot-project/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Comparable and Comparator in Java">
-    <meta property="og:description" content="Comparable is an interface providing the default / natural ordering to the implemented objects in an array or collection (List, Set and Map) Comparator are comparison functional interfaces passed to sort methods such as sort(Comparator) of a List instance and Arrays.sort(Comparator), and passed to SortedSet and SortedMap constructors">
-    <meta property="og:url" content="http://hellokoding.com/java-comparable-vs-comparator-examples/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_Comparable-Comparator.png">
-    <meta property="article:published_time" content="2019-06-09T14:02:24.000Z">
-    <meta property="article:modified_time" content="2019-11-15T11:42:14.000Z">
-    <meta property="article:tag" content="Java">
+    <meta property="og:title" content="Create a new Spring Boot project">
+    <meta property="og:description" content="You can create a new Spring Boot project by using Spring Boot CLI or Spring Initializr Spring Boot CLI is a command line tool for quickly bootstrapping a new Spring Boot project or running Groovy scripts. By default, Spring Boot CLI uses Spring Initialzr service to generate the template Spring">
+    <meta property="og:url" content="http://hellokoding.com/create-a-new-spring-boot-project/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/11/SpringTools_Createanewproject.png">
+    <meta property="article:published_time" content="2019-11-15T14:35:16.000Z">
+    <meta property="article:modified_time" content="2019-11-15T14:37:32.000Z">
+    <meta property="article:tag" content="Spring">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Comparable and Comparator in Java">
-    <meta name="twitter:description" content="Comparable is an interface providing the default / natural ordering to the implemented objects in an array or collection (List, Set and Map) Comparator are comparison functional interfaces passed to sort methods such as sort(Comparator) of a List instance and Arrays.sort(Comparator), and passed to SortedSet and SortedMap constructors">
-    <meta name="twitter:url" content="http://hellokoding.com/java-comparable-vs-comparator-examples/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_Comparable-Comparator.png">
+    <meta name="twitter:title" content="Create a new Spring Boot project">
+    <meta name="twitter:description" content="You can create a new Spring Boot project by using Spring Boot CLI or Spring Initializr Spring Boot CLI is a command line tool for quickly bootstrapping a new Spring Boot project or running Groovy scripts. By default, Spring Boot CLI uses Spring Initialzr service to generate the template Spring">
+    <meta name="twitter:url" content="http://hellokoding.com/create-a-new-spring-boot-project/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/11/SpringTools_Createanewproject.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Java">
+    <meta name="twitter:data2" content="Spring">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Comparable and Comparator in Java",
-    "url": "http://hellokoding.com/java-comparable-vs-comparator-examples/",
-    "datePublished": "2019-06-09T14:02:24.000Z",
-    "dateModified": "2019-11-15T11:42:14.000Z",
-    "image": "http://hellokoding.com/content/images/2019/10/JavaCollections_Comparable-Comparator.png",
-    "keywords": "Java",
-    "description": "Comparable is an interface providing the default / natural ordering to the implemented objects in an array or collection (List, Set and Map) Comparator are comparison functional interfaces passed to sort methods such as sort(Comparator) of a List instance and Arrays.sort(Comparator), and passed to SortedSet and SortedMap constructors"
+    "headline": "Create a new Spring Boot project",
+    "url": "http://hellokoding.com/create-a-new-spring-boot-project/",
+    "datePublished": "2019-11-15T14:35:16.000Z",
+    "dateModified": "2019-11-15T14:37:32.000Z",
+    "image": "http://hellokoding.com/content/images/2019/11/SpringTools_Createanewproject.png",
+    "keywords": "Spring",
+    "description": "You can create a new Spring Boot project by using Spring Boot CLI or Spring Initializr Spring Boot CLI is a command line tool for quickly bootstrapping a new Spring Boot project or running Groovy scripts. By default, Spring Boot CLI uses Spring Initialzr service to generate the template Spring"
 }
     </script>
 
@@ -87,7 +87,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-java">
+<body class="post-template tag-spring">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -221,276 +221,166 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-9 column">
-        <article class="post tag-java">
+        <article class="post tag-spring">
 
           <header class="post__header">
-            <h1 class="post__title">Comparable and Comparator in Java</h1>
+            <h1 class="post__title">Create a new Spring Boot project</h1>
             <time class="post__date" datetime="2019-11-15">Last modified @ 15 November 2019</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/java/">Java</a>
+              <a href="../tag/spring/">Spring</a>
             </div>
 
-            <p><code>Comparable</code> is an interface providing the default / natural ordering to the implemented objects in an array or collection (List, Set and Map)</p>
+            <p>You can create a new Spring Boot project by using Spring Boot CLI or Spring Initializr</p>
 
-<p><code>Comparator</code> are comparison functional interfaces passed to sort methods such as <code>sort(Comparator)</code> of a List instance and <code>Arrays.sort(Comparator)</code>, and passed to <code>SortedSet</code> and <code>SortedMap</code> constructors  to </p>
+<p>Spring Boot CLI is a command line tool for quickly bootstrapping a new Spring Boot project or running Groovy scripts. By default, Spring Boot CLI uses Spring Initialzr service to generate the template</p>
 
-<ul>
-<li><p>Control over the sorting order of <code>Comparable</code> objects with <code>Comparator.naturalOrder()</code> and <code>Comparator.reverseOrder()</code></p></li>
-<li><p>Provide the custom sorting order of objects with <code>Comparator.comparing(keyExtractor, keyComparator)</code> methods</p></li>
-</ul>
-
-<p><code>Comparator</code> can also be used to implement the <code>Comparable</code> contract. This is the recommended way since Java 8+, especially when you'd like to compare multiple object fields</p>
-
-<p>Both <code>Comparable</code> and <code>Comparator</code> are members of the <a href="https://hellokoding.com/java-collections-framework/">Java Collections Framework</a></p>
+<p>Spring Initializr provides API to generate JVM-based projects. It can be used directly via web interface at <a href="https://start.spring.io/">https://start.spring.io/</a> or via other tools such as cURL, Spring Boot CLI</p>
 
 <p>Lets walk through this tutorial to explore them in more details</p>
 
 <p></p><div class="hk-autoads"></div>  
 
-<h3 id="implementcomparabletoprovidethedefaultordering">Implement <code>Comparable</code> to provide the default ordering</h3>
+<h3 id="installspringbootcli">Install Spring Boot CLI</h3>
 
-<p>By implementing <code>Comparable</code>, you can provide the default ordering to the objects in an array or collection</p>
+<p>Spring Boot CLI requires Java 8+ and Maven 3.3+</p>
 
-<p>The following example passes <code>Comparator.naturalOrder()</code> to the sort method of an ArrayList instance to use the default / natural sort logic defined by the <code>Comparable</code> implementation of the underlying objects, <code>ComparableBook</code></p>
+<p>You can install Spring Boot CLI manually or via package managers such as Homebrew and MacPorts on Mac, SDKMAN! on UNIX based systems, Scoop on Windows</p>
 
-<pre><code class="language-java">@Test
-public void provideDefaultOrderingWithComparable() {  
-    ComparableBook book1 = new ComparableBook(1, "b");
-    ComparableBook book2 = new ComparableBook(2, "c");
-    ComparableBook book3 = new ComparableBook(3, "a");
+<p>On Mac, Homebrew installs the tool into /usr/local/bin</p>
 
-    List&lt;ComparableBook&gt; list = Arrays.asList(book1, book2, book3);
-    list.sort(Comparator.naturalOrder());
-    assertThat(list).containsExactly(book3, book1, book2);
-}
+<pre><code class="language-bash">$ brew tap pivotal/tap
+$ brew install springboot
 </code></pre>
 
-<p>The <code>ComparableBook</code> class is defined as below</p>
+<p>Install guide for other tools can be found <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started-installing-the-cli">at here</a></p>
 
-<pre><code class="language-java">class ComparableBook implements Comparable&lt;ComparableBook&gt; {  
-    int id;
-    String title;
+<h3 id="createanewspringbootprojectwithdefaulttemplate">Create a new Spring Boot project with default template</h3>
 
-    ComparableBook(int id, String title) {
-        this.id = id;
-        this.title = title;
-    }
+<p>On your terminal, type the following command to create a new Spring Boot project with the default template</p>
 
-    int getId() {
-        return id;
-    }
-
-    @Override
-    public int compareTo(ComparableBook o) {
-        return this.title.compareTo(o.title);
-    }
-}
+<pre><code class="language-bash">$ spring init my-spring-boot
 </code></pre>
 
-<p>Object implements <code>Comparable</code> need define the <code>int compareTo(Object)</code> contract method. String and primitive wrapper classes such as Integer, Long, Float, Double and BigInteger are already implemented <code>compareTo</code> method of <code>Comparable</code> so you can reuse them in your definition</p>
+<p>You will get the following project structure inside the directory named <code>my-spring-boot</code></p>
 
-<p>In the above <code>compareTo</code> implementation example, <code>title</code> is used as the sort key, <code>compareTo</code> of <code>String</code> is reused to sort the keys in alphabetical / ascending order</p>
-
-<p>Sort keys can also be ordered in descending by switching between the caller and the parameter of <code>compareTo</code> as the following implementation</p>
-
-<pre><code class="language-java">@Override
-public int compareTo(ComparableBook o) {  
-    return o.title.compareTo(this.title);
-}
+<pre><code>├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── example
+│   │   │           └── demo
+│   │   │               └── DemoApplication.java
+│   │   └── resources
+│   │       └── application.properties
+│   └── test
+│       └── java
+│           └── com
+│               └── example
+│                   └── demo
+│                       └── DemoApplicationTests.java
+├── .gitignore
+├── HELP.md
+├── mvnw
+├── mvnw.cmd
+└── pom.xml
 </code></pre>
 
-<p>If you'd like to compare multiple fields when implementing <code>compareTo</code>, check out the latter part of this tutorial</p>
+<p>That's it! You can now open the new project in your favourite editors, edit the artifactId, groupId and project version, add more dependencies into <code>pom.xml</code>, modify the package and application name and start working on it</p>
+
+<p>If you'd like to create a new project with the above predefined settings, learn to do it by providing more options to the command</p>
 
 <p></p><div class="hk-autoads"></div>  
 
-<h3 id="usecomparatortoprovidetheorderingofnoncomparableobjects">Use <code>Comparator</code> to provide the ordering of non-<code>Comparable</code> objects</h3>
+<h3 id="thespringinitcommand">The <code>spring init</code> command</h3>
 
-<p>Without the <code>Comparable</code> implementation, you have to specify explicitly the sorting key function by using <code>Comparator</code> functional interface, every time you sort the objects under an array or collection</p>
+<p>Spring Boot CLI provides <code>$ spring init</code> command to initialize a new project using Spring Initalizr</p>
 
-<p>The following example uses <code>Comparator.comparing(keyExtractor, keyComparator)</code> to provide the ordering. <code>keyExtractor</code> is a function used to extract the sort key. <code>keyComparator</code> is an optional Comparator, the default is Comparator.naturalOrder, used to compare the sort key</p>
+<p>The syntax of <code>spring init</code> command as below</p>
 
-<pre><code class="language-java">@Test
-public void provideOrderingWithComparator() {  
-    Book book1 = new Book(1, "b");
-    Book book2 = new Book(2, "c");
-    Book book3 = new Book(3, "a");
-
-    List&lt;Book&gt; list = Arrays.asList(book1, book2, book3);
-    list.sort(Comparator.comparing(Book::getTitle));
-    assertThat(list).containsExactly(book3, book1, book2);
-}
+<pre><code class="language-bash">$ spring init [options] [location]
 </code></pre>
 
-<p><code>Book</code> is defined as the following</p>
+<p><code>location</code> can be either an absolute or relative directory path, default is the current directory. </p>
 
-<pre><code class="language-java">class Book {  
-    int id;
-    String title;
+<p>The directory will be auto created if not existing. The command will exit if any duplicate files, use <code>--force</code> option if you'd like to overwrite</p>
 
-    Book(int id, String title) {
-        this.id = id;
-        this.title = title;
-    }
-
-    int getId() {
-        return id;
-    }
-
-    String getTitle() {
-        return title;
-    }
-}
-</code></pre>
-
-<p></p><div class="hk-autoads"></div>  
-
-<h3 id="usecomparatortooverridethedefaultorderingofcomparable">Use <code>Comparator</code> to override the default ordering of <code>Comparable</code></h3>
+<p><code>options</code> can be the combination of the following</p>
 
 <ul>
-<li>You can reverse the default sorting direction of <code>Comparable</code> objects by using <code>Comparator.reverseOrder()</code></li>
+<li><p><code>-d</code>: list of dependencies in comma-separated format to include in the project, use <code>--list</code> to discover</p></li>
+<li><p><code>-b</code>: Spring Boot version, default is the latest stable release</p>
+
+<p><code>-j</code>: Java version</p></li>
+<li><p><code>-g</code>: groupId, default is <code>com.example</code></p>
+
+<p><code>-a</code>: artifactId, default is the string concatenation of the current directory absolute path separated by one or more hyphens <code>-</code></p>
+
+<p><code>-v</code>: project version, default is  <code>0.0.1-SNAPSHOT</code></p>
+
+<p><code>--description</code>: project description, default is <code>Demo project for Spring Boot</code></p></li>
+<li><p><code>--package-name</code>: package name, <code>-n</code>: project name; infer application name</p></li>
 </ul>
 
-<pre><code class="language-java">@Test
-public void reverseTheDefaultOrderingWithComparator() {  
-    ComparableBook book1 = new ComparableBook(1, "b");
-    ComparableBook book2 = new ComparableBook(2, "c");
-    ComparableBook book3 = new ComparableBook(3, "a");
+<p>The default values will be used if <code>location</code> or <code>options</code> is omitted</p>
 
-    List&lt;ComparableBook&gt; list = Arrays.asList(book1, book2, book3);
-    list.sort(Comparator.reverseOrder());
-    assertThat(list).containsExactly(book2, book1, book3);
-}
+<p>Beside <code>spring init</code>, Spring Boot CLI also offers other commands for working with Groovy scripts, you can explore more by typing <code>$ spring --help</code></p>
+
+<p>Now, lets practice</p>
+
+<h3 id="createanewspringbootprojectwithpredefinedsettings">Create a new Spring Boot project with predefined settings</h3>
+
+<p>On your terminal, type the following command to create a new Spring Boot project at directory <code>my-spring-boot</code> with <code>spring-boot-starter-web</code> and <code>spring-boot-starter-actuator</code> as dependencies, <code>com.hellokoding.tutorials</code> as package name, <code>HelloApplication</code> as app name</p>
+
+<pre><code class="language-bash">$ spring init -d=web,actuator -n=hello \
+    --package-name=com.hellokoding.tutorials \
+    my-spring-boot
 </code></pre>
 
-<ul>
-<li>Override the sorting key of <code>Comparable</code> objects with <code>Comparator.comparing(keyExtractor, keyComparator)</code></li>
-</ul>
+<p>will generate the project structure inside directory <code>my-spring-boot</code></p>
 
-<pre><code class="language-java">@Test
-public void overrideSortKeyWithComparator() {  
-    ComparableBook book1 = new ComparableBook(1, "b");
-    ComparableBook book2 = new ComparableBook(2, "c");
-    ComparableBook book3 = new ComparableBook(3, "a");
-
-    List&lt;ComparableBook&gt; list = Arrays.asList(book2, book3, book1);
-    list.sort(Comparator.comparing(ComparableBook::getId));
-    assertThat(list).containsExactly(book1, book2, book3);
-}
+<pre><code>├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── com
+│   │   │       └── hellokoding
+│   │   │           └── tutorials
+│   │   │               └── HelloApplication.java
+│   │   └── resources
+│   │       ├── static
+│   │       ├── templates
+│   │       └── application.properties
+│   └── test
+│       └── java
+│           └── com
+│               └── hellokoding
+│                   └── tutorials
+│                       └── HelloApplicationTests.java
+├── .gitignore
+├── HELP.md
+├── mvnw
+├── mvnw.cmd
+└── pom.xml
 </code></pre>
 
-<p></p><div class="hk-autoads"></div>  
+<h3 id="conclusion">Conclusion</h3>
 
-<h3 id="usecomparatortoimplementcomparetoofcomparableandcomparemultiplefields">Use <code>Comparator</code> to implement <code>compareTo</code> of <code>Comparable</code> and compare multiple fields</h3>
-
-<ul>
-<li>You can use <code>Comparator.comparing</code> to implement the <code>compareTo</code> contract of <code>Comparable</code> interface. The above definition inside <code>ComparableBook</code> can be rewritten like this</li>
-</ul>
-
-<pre><code class="language-java">@Override
-public int compareTo(ComparableBook o) {  
-    //return this.title.compareTo(o.title);
-    return Comparator
-        .comparing(ComparableBook::getTitle)
-        .compare(this, o);
-}
-</code></pre>
-
-<ul>
-<li>It's especially useful when you'd like to compare multiple fields, you can attach multiple <code>thenComparing</code> into the chain after the first <code>comparing</code></li>
-</ul>
-
-<pre><code class="language-java">@Override
-public int compareTo(ComparableBook o) {  
-    //return this.title.compareTo(o.title);
-    return Comparator
-        .comparing(ComparableBook::getTitle)
-        .thenComparing(ComparableBook::getId)
-        .compare(this, o);
-}
-</code></pre>
-
-<ul>
-<li>The multiple multiple fields comparing chain also works well when providing the inline <code>Comparator</code> to the <code>sort</code> methods of a List instance or <code>SortedSet</code> and <code>SortedMap</code> constructors</li>
-</ul>
-
-<pre><code class="language-java">@Test
-public void compareMultipleFieldsWithComparator() {  
-    Book book1 = new Book(1, "b");
-    Book book2 = new Book(2, "c");
-    Book book3 = new Book(3, "a");
-
-    List&lt;Book&gt; list = Arrays.asList(book1, book2, book3);
-    list.sort(Comparator
-        .comparing(Book::getTitle)
-        .thenComparing(Book::getId));
-    assertThat(list).containsExactly(book3, book1, book2);
-}
-</code></pre>
-
-<ul>
-<li>You can sort the field in descending order by adding <code>Comparator.reverseOrder()</code> as a second argument on each <code>comparing</code> method</li>
-</ul>
-
-<pre><code class="language-java">@Test
-public void reverseTheComparingOfComparator() {  
-    Book book1 = new Book(1, "b");
-    Book book2 = new Book(2, "c");
-    Book book3 = new Book(3, "c");
-
-    List&lt;Book&gt; list = Arrays.asList(book1, book2, book3);
-    list.sort(Comparator
-            .comparing(Book::getTitle, Comparator.reverseOrder())
-            .thenComparing(Book::getId, Comparator.reverseOrder()));
-
-    assertThat(list).containsExactly(book3, book2, book1);
-}
-</code></pre>
-
-<ul>
-<li>The <code>reversed()</code> method has the same above effect but it is only useful when comparing one field</li>
-</ul>
-
-<pre><code class="language-java">@Test
-public void reverseTheComparingOfComparator2() {  
-    Book book1 = new Book(1, "b");
-    Book book2 = new Book(2, "c");
-    Book book3 = new Book(3, "a");
-
-    List&lt;Book&gt; list = Arrays.asList(book1, book2, book3);
-    list.sort(Comparator
-            .comparing(Book::getTitle)
-            .reversed());
-
-    assertThat(list).containsExactly(book2, book1, book3);
-}
-</code></pre>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>In this tutorial, we learned the difference between Comparable and Comparator and when to use them</p>
-
-<p>In short, Comparable and Comparator provide the default and custom sorting logic, respectively, to the underlying objects in an array or collection</p>
-
-<p>You can find below the full source code</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/collections/ComparableVsComparatorTest.java">
-</code></pre>
+<p>In this tutorial, we learned some ways to initialize a new Spring Boot project by using Spring Boot CLI. You can find more about it <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-cli.html">at here</a></p>
             
             <div class="post__tags">
-              <a href="../tag/java/">Java</a>
+              <a href="../tag/spring/">Spring</a>
             </div>
           </div>
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Comparable%20and%20Comparator%20in%20Java&amp;url=http://hellokoding.com/java-comparable-vs-comparator-examples/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Create%20a%20new%20Spring%20Boot%20project&amp;url=http://hellokoding.com/create-a-new-spring-boot-project/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/java-comparable-vs-comparator-examples/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/create-a-new-spring-boot-project/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Facebook</span>
   </a>
@@ -550,8 +440,8 @@ public void reverseTheComparingOfComparator2() {
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/java-comparable-vs-comparator-examples/';
-      this.page.identifier = '67';
+      this.page.url = 'http://hellokoding.com/create-a-new-spring-boot-project/';
+      this.page.identifier = '196';
     };
 
     (function() {
