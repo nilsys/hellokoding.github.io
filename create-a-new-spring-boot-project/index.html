@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/create-a-new-spring-boot-project/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/11/SpringTools_Createanewproject.png">
     <meta property="article:published_time" content="2019-11-15T14:35:16.000Z">
-    <meta property="article:modified_time" content="2019-11-15T15:04:38.000Z">
+    <meta property="article:modified_time" content="2019-11-15T15:29:31.000Z">
     <meta property="article:tag" content="Spring">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Create and Initialize a new Spring Boot project",
     "url": "http://hellokoding.com/create-a-new-spring-boot-project/",
     "datePublished": "2019-11-15T14:35:16.000Z",
-    "dateModified": "2019-11-15T15:04:38.000Z",
+    "dateModified": "2019-11-15T15:29:31.000Z",
     "image": "http://hellokoding.com/content/images/2019/11/SpringTools_Createanewproject.png",
     "keywords": "Spring",
     "description": "You can create and initialize a new Spring Boot project by using Spring Boot CLI or Spring Initializr Spring Boot CLI is a command line tool for quickly bootstrapping a new Spring Boot project or running Groovy scripts. By default, Spring Boot CLI uses Spring Initialzr service to generate the"
@@ -264,7 +264,7 @@ $ brew install springboot
 <pre><code class="language-bash">$ spring init my-spring-boot
 </code></pre>
 
-<p>You will get the following project structure inside the directory named <code>my-spring-boot</code></p>
+<p>The CLI will create a new directory named <code>my-spring-boot</code> if not existing, and generate the following project structure inside it</p>
 
 <pre><code class="language-markdown">├── src
 │   ├── main
@@ -334,14 +334,14 @@ $ brew install springboot
 
 <h3 id="createanewspringbootprojectwithpredefinedsettings">Create a new Spring Boot project with predefined settings</h3>
 
-<p>On your terminal, type the following command to create a new Spring Boot project at directory <code>my-spring-boot</code> with <code>spring-boot-starter-web</code> and <code>spring-boot-starter-actuator</code> as dependencies, <code>com.hellokoding.tutorials</code> as package name, <code>HelloApplication</code> as app name</p>
+<p>On your terminal, type the following command to create a new Spring Boot project at directory <code>another-spring-boot</code> with <code>spring-boot-starter-web</code> and <code>spring-boot-starter-actuator</code> as dependencies, <code>com.hellokoding.tutorials</code> as package name, <code>HelloApplication</code> as app name</p>
 
 <pre><code class="language-bash">$ spring init -d=web,actuator -n=hello \
     --package-name=com.hellokoding.tutorials \
-    my-spring-boot
+    another-spring-boot
 </code></pre>
 
-<p>You will get the following project structure inside the directory named <code>my-spring-boot</code></p>
+<p>The CLI will create a new directory named <code>another-spring-boot</code> if not existing, and generate the following project structure inside it</p>
 
 <pre><code class="language-markdown">├── src
 │   ├── main
@@ -380,7 +380,7 @@ $ brew install springboot
         &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;
     &lt;/parent&gt;
     &lt;groupId&gt;com.example&lt;/groupId&gt;
-    &lt;artifactId&gt;my-spring-boot&lt;/artifactId&gt;
+    &lt;artifactId&gt;another-spring-boot&lt;/artifactId&gt;
     &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
     &lt;name&gt;hello&lt;/name&gt;
     &lt;description&gt;Demo project for Spring Boot&lt;/description&gt;
