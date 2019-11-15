@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/create-a-new-spring-boot-project/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/11/SpringTools_Createanewproject.png">
     <meta property="article:published_time" content="2019-11-15T14:35:16.000Z">
-    <meta property="article:modified_time" content="2019-11-15T14:55:44.000Z">
+    <meta property="article:modified_time" content="2019-11-15T15:04:38.000Z">
     <meta property="article:tag" content="Spring">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Create and Initialize a new Spring Boot project",
     "url": "http://hellokoding.com/create-a-new-spring-boot-project/",
     "datePublished": "2019-11-15T14:35:16.000Z",
-    "dateModified": "2019-11-15T14:55:44.000Z",
+    "dateModified": "2019-11-15T15:04:38.000Z",
     "image": "http://hellokoding.com/content/images/2019/11/SpringTools_Createanewproject.png",
     "keywords": "Spring",
     "description": "You can create and initialize a new Spring Boot project by using Spring Boot CLI or Spring Initializr Spring Boot CLI is a command line tool for quickly bootstrapping a new Spring Boot project or running Groovy scripts. By default, Spring Boot CLI uses Spring Initialzr service to generate the"
@@ -266,7 +266,7 @@ $ brew install springboot
 
 <p>You will get the following project structure inside the directory named <code>my-spring-boot</code></p>
 
-<pre><code>├── src
+<pre><code class="language-markdown">├── src
 │   ├── main
 │   │   ├── java
 │   │   │   └── com
@@ -330,6 +330,8 @@ $ brew install springboot
 
 <p>Now, lets practice</p>
 
+<p></p><div class="hk-autoads"></div>  
+
 <h3 id="createanewspringbootprojectwithpredefinedsettings">Create a new Spring Boot project with predefined settings</h3>
 
 <p>On your terminal, type the following command to create a new Spring Boot project at directory <code>my-spring-boot</code> with <code>spring-boot-starter-web</code> and <code>spring-boot-starter-actuator</code> as dependencies, <code>com.hellokoding.tutorials</code> as package name, <code>HelloApplication</code> as app name</p>
@@ -339,9 +341,9 @@ $ brew install springboot
     my-spring-boot
 </code></pre>
 
-<p>will generate the project structure inside directory <code>my-spring-boot</code></p>
+<p>You will get the following project structure inside the directory named <code>my-spring-boot</code></p>
 
-<pre><code>├── src
+<pre><code class="language-markdown">├── src
 │   ├── main
 │   │   ├── java
 │   │   │   └── com
@@ -363,6 +365,63 @@ $ brew install springboot
 ├── mvnw
 ├── mvnw.cmd
 └── pom.xml
+</code></pre>
+
+<p><code>pom.xml</code></p>
+
+<pre><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;  
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;parent&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+        &lt;version&gt;2.2.1.RELEASE&lt;/version&gt;
+        &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;
+    &lt;/parent&gt;
+    &lt;groupId&gt;com.example&lt;/groupId&gt;
+    &lt;artifactId&gt;my-spring-boot&lt;/artifactId&gt;
+    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+    &lt;name&gt;hello&lt;/name&gt;
+    &lt;description&gt;Demo project for Spring Boot&lt;/description&gt;
+
+    &lt;properties&gt;
+        &lt;java.version&gt;1.8&lt;/java.version&gt;
+    &lt;/properties&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+            &lt;exclusions&gt;
+                &lt;exclusion&gt;
+                    &lt;groupId&gt;org.junit.vintage&lt;/groupId&gt;
+                    &lt;artifactId&gt;junit-vintage-engine&lt;/artifactId&gt;
+                &lt;/exclusion&gt;
+            &lt;/exclusions&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+&lt;/project&gt;  
 </code></pre>
 
 <h3 id="conclusion">Conclusion</h3>
