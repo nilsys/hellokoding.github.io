@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Create and Initialize a new Spring Boot project</title>
+  <title>Spring Boot Actuator</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,25 +14,25 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=f425cec44e">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=f425cec44e">
    
-  <link rel="canonical" href="http://hellokoding.com/create-a-new-spring-boot-project/">
+  <link rel="canonical" href="http://hellokoding.com/spring-boot-actuator/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Create and Initialize a new Spring Boot project">
-    <meta property="og:description" content="You can create and initialize a new Spring Boot project by using Spring Boot CLI or Spring Initializr Spring Boot CLI is a command line tool for quickly bootstrapping a new Spring Boot project or running Groovy scripts. By default, Spring Boot CLI uses Spring Initialzr service to generate the">
-    <meta property="og:url" content="http://hellokoding.com/create-a-new-spring-boot-project/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/11/SpringTools_Createanewproject.png">
-    <meta property="article:published_time" content="2019-11-15T14:35:16.000Z">
-    <meta property="article:modified_time" content="2019-11-16T16:10:20.000Z">
+    <meta property="og:title" content="Spring Boot Actuator">
+    <meta property="og:description" content="Spring Boot Actuator is a library providing built-in apis (such as health check) to help you monitor and manage Spring Boot applications on production environment through HTTP endpoints and JMX Lets walk through this tutorial to explore in more details    Add Spring Boot Actuator to your project You can add">
+    <meta property="og:url" content="http://hellokoding.com/spring-boot-actuator/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2019/11/SpringBootActuator.png">
+    <meta property="article:published_time" content="2019-11-16T15:51:39.000Z">
+    <meta property="article:modified_time" content="2019-11-16T15:56:12.000Z">
     <meta property="article:tag" content="Spring">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Create and Initialize a new Spring Boot project">
-    <meta name="twitter:description" content="You can create and initialize a new Spring Boot project by using Spring Boot CLI or Spring Initializr Spring Boot CLI is a command line tool for quickly bootstrapping a new Spring Boot project or running Groovy scripts. By default, Spring Boot CLI uses Spring Initialzr service to generate the">
-    <meta name="twitter:url" content="http://hellokoding.com/create-a-new-spring-boot-project/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/11/SpringTools_Createanewproject.png">
+    <meta name="twitter:title" content="Spring Boot Actuator">
+    <meta name="twitter:description" content="Spring Boot Actuator is a library providing built-in apis (such as health check) to help you monitor and manage Spring Boot applications on production environment through HTTP endpoints and JMX Lets walk through this tutorial to explore in more details    Add Spring Boot Actuator to your project You can add">
+    <meta name="twitter:url" content="http://hellokoding.com/spring-boot-actuator/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/11/SpringBootActuator.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Create and Initialize a new Spring Boot project",
-    "url": "http://hellokoding.com/create-a-new-spring-boot-project/",
-    "datePublished": "2019-11-15T14:35:16.000Z",
-    "dateModified": "2019-11-16T16:10:20.000Z",
-    "image": "http://hellokoding.com/content/images/2019/11/SpringTools_Createanewproject.png",
+    "headline": "Spring Boot Actuator",
+    "url": "http://hellokoding.com/spring-boot-actuator/",
+    "datePublished": "2019-11-16T15:51:39.000Z",
+    "dateModified": "2019-11-16T15:56:12.000Z",
+    "image": "http://hellokoding.com/content/images/2019/11/SpringBootActuator.png",
     "keywords": "Spring",
-    "description": "You can create and initialize a new Spring Boot project by using Spring Boot CLI or Spring Initializr Spring Boot CLI is a command line tool for quickly bootstrapping a new Spring Boot project or running Groovy scripts. By default, Spring Boot CLI uses Spring Initialzr service to generate the"
+    "description": "Spring Boot Actuator is a library providing built-in apis (such as health check) to help you monitor and manage Spring Boot applications on production environment through HTTP endpoints and JMX Lets walk through this tutorial to explore in more details    Add Spring Boot Actuator to your project You can add"
 }
     </script>
 
@@ -224,7 +224,7 @@ ghost.init({
         <article class="post tag-spring">
 
           <header class="post__header">
-            <h1 class="post__title">Create and Initialize a new Spring Boot project</h1>
+            <h1 class="post__title">Spring Boot Actuator</h1>
             <time class="post__date" datetime="2019-11-16">Last modified @ 16 November 2019</time>
           </header>
 
@@ -233,198 +233,70 @@ ghost.init({
               <a href="../tag/spring/">Spring</a>
             </div>
 
-            <p>You can create and initialize a new Spring Boot project by using Spring Boot CLI or Spring Initializr</p>
+            <p>Spring Boot Actuator is a library providing built-in apis (such as health check) to help you monitor and manage Spring Boot applications on production environment through HTTP endpoints and JMX</p>
 
-<p>Spring Boot CLI is a command line tool for quickly bootstrapping a new Spring Boot project or running Groovy scripts. By default, Spring Boot CLI uses Spring Initialzr service to generate the template</p>
-
-<p>Spring Initializr provides API to generate JVM-based projects. It can be used directly via web interface at <a href="https://start.spring.io/">https://start.spring.io/</a> or via other tools such as cURL, Spring Boot CLI</p>
-
-<p>Lets walk through this tutorial to explore them in more details</p>
+<p>Lets walk through this tutorial to explore in more details</p>
 
 <p></p><div class="hk-autoads"></div>  
 
-<h3 id="installspringbootcli">Install Spring Boot CLI</h3>
+<h3 id="addspringbootactuatortoyourproject">Add Spring Boot Actuator to your project</h3>
 
-<p>Spring Boot CLI requires Java 8+ and Maven 3.3+</p>
+<p>You can add Spring Boot Actuator into your project as a dependency on pom.xml or build.gradle file. The library versions can be omitted as Spring Boot can help you to resolve</p>
 
-<p>You can install Spring Boot CLI manually or via package managers such as Homebrew and MacPorts on Mac, SDKMAN! on UNIX based systems, Scoop on Windows</p>
+<p>On pom.xml file</p>
 
-<p>On Mac, Homebrew installs the tool into /usr/local/bin</p>
-
-<pre><code class="language-bash">$ brew tap pivotal/tap
-$ brew install springboot
+<pre><code class="language-java">&lt;dependencies&gt;  
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;  
 </code></pre>
 
-<p>Install guide for other tools can be found <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started-installing-the-cli">at here</a></p>
+<p>On build.gradle file</p>
 
-<h3 id="createanewspringbootprojectwithdefaulttemplate">Create a new Spring Boot project with default template</h3>
-
-<p>On your terminal, type the following command to create a new Spring Boot project with the default template</p>
-
-<pre><code class="language-bash">$ spring init my-spring-boot
+<pre><code class="language-java">dependencies {  
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+}
 </code></pre>
 
-<p>The CLI will create a new directory named <code>my-spring-boot</code> if not existing, and generate the following project structure inside it</p>
+<h3 id="actuatorapisandendpoints">Actuator APIs and endpoints</h3>
 
-<pre><code class="language-markdown">├── src
-│   ├── main
-│   │   ├── java
-│   │   │   └── com
-│   │   │       └── example
-│   │   │           └── demo
-│   │   │               └── DemoApplication.java
-│   │   └── resources
-│   │       └── application.properties
-│   └── test
-│       └── java
-│           └── com
-│               └── example
-│                   └── demo
-│                       └── DemoApplicationTests.java
-├── .gitignore
-├── HELP.md
-├── mvnw
-├── mvnw.cmd
-└── pom.xml
+<p>Actuator exposes its APIs through endpoints with prefix as <code>/actuator</code> by default. You can see and use it immediately after including the dependency into your project</p>
+
+<p>Lets start the application on your local and access to <code>http://localhost:8080/actuator</code>, you would see the current available apis</p>
+
+<p><img src="../content/images/2019/11/Screenshot-2019-11-16-at-5-15-45-PM.png" alt=""></p>
+
+<p>These default enabled apis can be controlled via below properties</p>
+
+<pre><code class="language-xml">management.endpoints.web.exposure.include=info, health  
+management.endpoints.web.exposure.exclude  
 </code></pre>
 
-<p>You can now open the new project in your favourite editors, edit the artifactId, groupId and project version, add more dependencies into <code>pom.xml</code>, modify the package and application name and start working on it</p>
-
-<p>If you'd like to create a new project with the above predefined settings, learn to do it by providing more options to the command</p>
-
-<p></p><div class="hk-autoads"></div>  
-
-<h3 id="thespringinitcommand">The <code>spring init</code> command</h3>
-
-<p>Spring Boot CLI provides <code>$ spring init</code> command to initialize a new project using Spring Initalizr</p>
-
-<p>The syntax of <code>spring init</code> command as below</p>
-
-<pre><code class="language-bash">$ spring init [options] [location]
-</code></pre>
-
-<p><code>location</code> can be either an absolute or relative directory path, default is the current directory. </p>
-
-<p>The directory will be auto created if not existing. The command will exit if any duplicate files, use <code>--force</code> option if you'd like to overwrite</p>
-
-<p><code>options</code> can be the combination of the following</p>
+<p>Beside <code>info</code> and <code>health</code>, Actuator also provide other APIs such as</p>
 
 <ul>
-<li><p><code>-d</code>: list of dependencies in comma-separated format to include in the project, use <code>--list</code> to discover</p></li>
-<li><p><code>-b</code>: Spring Boot version, default is the latest stable release</p>
-
-<p><code>-j</code>: Java version</p></li>
-<li><p><code>-g</code>: groupId, default is <code>com.example</code></p>
-
-<p><code>-a</code>: artifactId, default is the value of <code>location</code> param, hyphens <code>-</code> is used as a separator in case of absolute path</p>
-
-<p><code>-v</code>: project version, default is  <code>0.0.1-SNAPSHOT</code></p>
-
-<p><code>--description</code>: project description, default is <code>Demo project for Spring Boot</code></p></li>
-<li><p><code>--package-name</code>: package name, <code>-n</code>: project name; infer application name</p></li>
+<li><p><code>loggers</code> for retrieving and modifying loggers configuration</p></li>
+<li><p><code>metrics</code> for retrieving all available metrics information</p></li>
+<li><p><code>prometheus</code> for exposing metrics to be scrapped by a Prometheus server</p></li>
+<li><p><code>flyway</code> and <code>liquibase</code> for retrieving database migration history</p></li>
 </ul>
 
-<p>The default values will be used if <code>location</code> or <code>options</code> is omitted</p>
-
-<p>Beside <code>spring init</code>, Spring Boot CLI also offers other commands for working with Groovy scripts, you can explore more by typing <code>$ spring --help</code></p>
+<p>To discover all the available APIs, inside your <code>application.properties</code> file, update <code>management.endpoints.web.exposure.include=*</code> and refresh <code>http://localhost:8080/actuator</code></p>
 
 <p></p><div class="hk-autoads"></div>  
 
-<h3 id="createanewspringbootprojectwithpredefinedsettings">Create a new Spring Boot project with predefined settings</h3>
+<h3 id="modifyendpointprefix">Modify endpoint prefix</h3>
 
-<p>On your terminal, type the following command to create a new Spring Boot project at directory <code>another-spring-boot</code> with <code>spring-boot-starter-web</code> and <code>spring-boot-starter-actuator</code> as dependencies, <code>com.hellokoding.tutorials</code> as package name, <code>HelloApplication</code> as app name</p>
+<p>You can use another prefix instead of <code>/actuator</code> for the Actuator APIs, by updating property as the following</p>
 
-<pre><code class="language-bash">$ spring init -d=web,actuator -n=hello \
-    --package-name=com.hellokoding.tutorials \
-    another-spring-boot
-</code></pre>
-
-<p>The CLI will create a new directory named <code>another-spring-boot</code> if not existing, and generate the following project structure inside it</p>
-
-<pre><code class="language-markdown">├── src
-│   ├── main
-│   │   ├── java
-│   │   │   └── com
-│   │   │       └── hellokoding
-│   │   │           └── tutorials
-│   │   │               └── HelloApplication.java
-│   │   └── resources
-│   │       ├── static
-│   │       ├── templates
-│   │       └── application.properties
-│   └── test
-│       └── java
-│           └── com
-│               └── hellokoding
-│                   └── tutorials
-│                       └── HelloApplicationTests.java
-├── .gitignore
-├── HELP.md
-├── mvnw
-├── mvnw.cmd
-└── pom.xml
-</code></pre>
-
-<p><code>pom.xml</code></p>
-
-<pre><code class="language-xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;  
-&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
-    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
-    &lt;parent&gt;
-        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
-        &lt;version&gt;2.2.1.RELEASE&lt;/version&gt;
-        &lt;relativePath/&gt; &lt;!-- lookup parent from repository --&gt;
-    &lt;/parent&gt;
-    &lt;groupId&gt;com.example&lt;/groupId&gt;
-    &lt;artifactId&gt;another-spring-boot&lt;/artifactId&gt;
-    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
-    &lt;name&gt;hello&lt;/name&gt;
-    &lt;description&gt;Demo project for Spring Boot&lt;/description&gt;
-
-    &lt;properties&gt;
-        &lt;java.version&gt;1.8&lt;/java.version&gt;
-    &lt;/properties&gt;
-
-    &lt;dependencies&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-            &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;
-        &lt;/dependency&gt;
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
-        &lt;/dependency&gt;
-
-        &lt;dependency&gt;
-            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
-            &lt;scope&gt;test&lt;/scope&gt;
-            &lt;exclusions&gt;
-                &lt;exclusion&gt;
-                    &lt;groupId&gt;org.junit.vintage&lt;/groupId&gt;
-                    &lt;artifactId&gt;junit-vintage-engine&lt;/artifactId&gt;
-                &lt;/exclusion&gt;
-            &lt;/exclusions&gt;
-        &lt;/dependency&gt;
-    &lt;/dependencies&gt;
-
-    &lt;build&gt;
-        &lt;plugins&gt;
-            &lt;plugin&gt;
-                &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-                &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt;
-            &lt;/plugin&gt;
-        &lt;/plugins&gt;
-    &lt;/build&gt;
-
-&lt;/project&gt;  
+<pre><code class="language-java">management.endpoints.web.base-path=/manage  
 </code></pre>
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>In this tutorial, we learned some ways to create and initialize a new Spring Boot project by using Spring Boot CLI. You can find more about it <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-cli.html">at here</a></p>
+<p>In this tutorial, we learned using Spring Boot Actuator APIs to provide monitoring APIs to application on production environment. You can explore more about it at <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-features.html">here</a></p>
             
             <div class="post__tags">
               <a href="../tag/spring/">Spring</a>
@@ -433,11 +305,11 @@ $ brew install springboot
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Create%20and%20Initialize%20a%20new%20Spring%20Boot%20project&amp;url=http://hellokoding.com/create-a-new-spring-boot-project/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Spring%20Boot%20Actuator&amp;url=http://hellokoding.com/spring-boot-actuator/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/create-a-new-spring-boot-project/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/spring-boot-actuator/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Facebook</span>
   </a>
@@ -497,8 +369,8 @@ $ brew install springboot
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/create-a-new-spring-boot-project/';
-      this.page.identifier = '196';
+      this.page.url = 'http://hellokoding.com/spring-boot-actuator/';
+      this.page.identifier = '195';
     };
 
     (function() {
