@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/spring-boot-actuator/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/11/SpringBootActuator.png">
     <meta property="article:published_time" content="2019-11-16T15:51:39.000Z">
-    <meta property="article:modified_time" content="2019-11-16T15:56:12.000Z">
+    <meta property="article:modified_time" content="2019-11-17T04:41:18.000Z">
     <meta property="article:tag" content="Spring">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Spring Boot Actuator",
     "url": "http://hellokoding.com/spring-boot-actuator/",
     "datePublished": "2019-11-16T15:51:39.000Z",
-    "dateModified": "2019-11-16T15:56:12.000Z",
+    "dateModified": "2019-11-17T04:41:18.000Z",
     "image": "http://hellokoding.com/content/images/2019/11/SpringBootActuator.png",
     "keywords": "Spring",
     "description": "Spring Boot Actuator is a library providing built-in apis (such as health check) to help you monitor and manage Spring Boot applications on production environment through HTTP endpoints and JMX Lets walk through this tutorial to explore in more details    Add Spring Boot Actuator to your project You can add"
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Spring Boot Actuator</h1>
-            <time class="post__date" datetime="2019-11-16">Last modified @ 16 November 2019</time>
+            <time class="post__date" datetime="2019-11-17">Last modified @ 17 November 2019</time>
           </header>
 
           <div class="post-content">
@@ -250,6 +250,10 @@ ghost.init({
         &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
         &lt;artifactId&gt;spring-boot-starter-actuator&lt;/artifactId&gt;
     &lt;/dependency&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+    &lt;/dependency&gt;
 &lt;/dependencies&gt;  
 </code></pre>
 
@@ -257,8 +261,11 @@ ghost.init({
 
 <pre><code class="language-java">dependencies {  
     compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile("org.springframework.boot:spring-boot-starter-web")
 }
 </code></pre>
+
+<p><code>spring-boot-starter-web</code> should be included if you'd like to use the HTTP endpoints</p>
 
 <h3 id="actuatorapisandendpoints">Actuator APIs and endpoints</h3>
 
@@ -287,11 +294,16 @@ management.endpoints.web.exposure.exclude
 
 <p></p><div class="hk-autoads"></div>  
 
-<h3 id="modifyendpointprefix">Modify endpoint prefix</h3>
+<h3 id="modifyendpoints">Modify endpoints</h3>
 
 <p>You can use another prefix instead of <code>/actuator</code> for the Actuator APIs, by updating property as the following</p>
 
-<pre><code class="language-java">management.endpoints.web.base-path=/manage  
+<pre><code class="language-xml">management.endpoints.web.base-path=/manage  
+</code></pre>
+
+<p>Endpoint of each API can also be modified by updating respective property. The following updates the health check endpoint to <code>healthcheck</code> instead of <code>health</code> by default</p>
+
+<pre><code class="language-xml">management.endpoints.web.path-mapping.health=healthcheck  
 </code></pre>
 
 <h3 id="conclusion">Conclusion</h3>
