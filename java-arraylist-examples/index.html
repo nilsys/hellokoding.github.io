@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-arraylist-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/java-collections-arraylist.png">
     <meta property="article:published_time" content="2019-04-26T15:13:39.000Z">
-    <meta property="article:modified_time" content="2019-11-02T17:15:13.000Z">
+    <meta property="article:modified_time" content="2020-01-08T15:45:49.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java ArrayList Tutorial with Examples",
     "url": "http://hellokoding.com/java-arraylist-examples/",
     "datePublished": "2019-04-26T15:13:39.000Z",
-    "dateModified": "2019-11-02T17:15:13.000Z",
+    "dateModified": "2020-01-08T15:45:49.000Z",
     "image": "http://hellokoding.com/content/images/2019/05/java-collections-arraylist.png",
     "keywords": "Java",
     "description": "ArrayList in Java is a dynamic array data structure implementation of the List interface, a part of the Java Collections Framework ArrayList has the following features Provides insertion-ordered iteration Provides zero-based index operations (get, add, set, remove). Get, set operations run in constant-time performance. Add operation runs in amortized constant"
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java ArrayList Tutorial with Examples</h1>
-            <time class="post__date" datetime="2019-11-02">Last modified @ 02 November 2019</time>
+            <time class="post__date" datetime="2020-01-08">Last modified @ 08 January 2020</time>
           </header>
 
           <div class="post-content">
@@ -243,6 +243,7 @@ ghost.init({
 <li><p>Permits null and duplicated elements</p></li>
 <li><p>Elements are compared base on their equals method implementation</p></li>
 <li><p>Unsynchronized implementation. In multi-threading environment with at least one thread modifies the list, it must be synchronized externally</p></li>
+<li><p>ArrayList capacity may count on the performance when you need to add a large number of items than the default capacity (10)</p></li>
 </ul>
 
 <p>Lets walk through this tutorial to explore them in more detail examples</p>
@@ -317,6 +318,22 @@ public void initWithAdd() {
 
     // The output ordering will be same as the insertion oder
     System.out.println(lst);
+}
+</code></pre>
+
+<ul>
+<li>You may like to initialize an ArrayList with a capacity when going to add a large number of items to it</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void initWithCapacity() {  
+    List&lt;Integer&gt; arrayList = new ArrayList&lt;&gt;(1000);
+
+    for (int i = 0; i &lt; 1000; i++) {
+        arrayList.add(i);
+    }
+
+    assertThat(arrayList).hasSize(1000);
 }
 </code></pre>
 
