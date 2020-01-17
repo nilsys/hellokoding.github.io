@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/spring-boot-hello-world-example-with-jsp/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2017/02/hello--1--3.gif">
     <meta property="article:published_time" content="2016-07-04T04:53:41.000Z">
-    <meta property="article:modified_time" content="2020-01-17T09:04:16.000Z">
+    <meta property="article:modified_time" content="2020-01-17T11:05:54.000Z">
     <meta property="article:tag" content="Spring">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Spring Boot JSP Tutorial with Example",
     "url": "http://hellokoding.com/spring-boot-hello-world-example-with-jsp/",
     "datePublished": "2016-07-04T04:53:41.000Z",
-    "dateModified": "2020-01-17T09:04:16.000Z",
+    "dateModified": "2020-01-17T11:05:54.000Z",
     "image": "http://hellokoding.com/content/images/2017/02/hello--1--3.gif",
     "keywords": "Spring",
     "description": "This tutorial walks you through the steps of creating a Hello World web app example with Spring Boot and JSP. What you&#x27;ll build What you&#x27;ll need JDK 8+ or OpenJDK 8+ Maven 3+ The tech stack Spring Boot is a popular Java based framework used to build production-grade web applications"
@@ -257,7 +257,7 @@ ghost.init({
 
 <h3 id="initprojectstructure">Init project structure</h3>
 
-<p>You can create and init a new Spring Boot project by using Spring CLI or Spring Initializr. Learn more about using Spring CLI <a href="https://hellokoding.com/create-a-new-spring-boot-project/">here</a></p>
+<p>You can create and init a new Spring Boot project by using Spring CLI or Spring Initializr. Learn more about using these tools <a href="https://hellokoding.com/create-a-new-spring-boot-project/">at here</a></p>
 
 <p>The final project structure as below</p>
 
@@ -296,7 +296,6 @@ ghost.init({
     &lt;dependency&gt;
         &lt;groupId&gt;org.apache.tomcat.embed&lt;/groupId&gt;
         &lt;artifactId&gt;tomcat-embed-jasper&lt;/artifactId&gt;
-        &lt;scope&gt;provided&lt;/scope&gt;
     &lt;/dependency&gt;
 &lt;/dependencies&gt;  
 </code></pre>
@@ -305,6 +304,8 @@ ghost.init({
 
 <pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-jsp-helloworld/pom.xml">
 </code></pre>
+
+<p>JSP has to be packaged in WAR file as it is not supported in JAR file. Undertow web server also does not support JSP. So if you like to avoid these limitations, consider using other view template engines such as <a href="https://hellokoding.com/spring-boot-hello-world-example-with-thymeleaf/">Thymeleaf</a> and <a href="https://hellokoding.com/spring-boot-hello-world-example-with-freemarker/">FreeMarker</a></p>
 
 <div class="hk-autoads"></div>  
 
@@ -342,6 +343,8 @@ ghost.init({
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-jsp-helloworld/src/main/java/com/hellokoding/springboot/view/Application.java">
 </code></pre>
+
+<p><code>SpringBootServletInitializer</code> is for running a Spring Boot application from a WAR deployment </p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-jsp-helloworld/src/main/resources/application.properties">
 </code></pre>
