@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Spring WebFlux Getting Started">
-    <meta property="og:description" content="Spring WebFlux is an reactive-stack web framework, part of Spring 5, fully non-blocking and runs on such servers as Netty, Undertow, and Servlet 3.1+ containers This guide will give you the steps to build a non-blocking web API with Spring WebFlux What you'll need JDK 8+ or OpenJDK 8+">
+    <meta property="og:description" content="Spring WebFlux is an reactive-stack web framework, part of Spring 5, fully non-blocking and runs on such servers as Netty, Undertow, and Servlet 3.1+ containers This guide will give you the steps to build a non-blocking web API with Spring WebFlux in a Spring Boot project What you'll need">
     <meta property="og:url" content="http://hellokoding.com/spring-webflux-getting-started/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2020/01/SpringWebFlux_GettingStarted.png">
     <meta property="article:published_time" content="2020-01-15T16:06:00.000Z">
-    <meta property="article:modified_time" content="2020-01-16T14:22:14.000Z">
+    <meta property="article:modified_time" content="2020-01-18T08:08:29.000Z">
     <meta property="article:tag" content="Spring">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Spring WebFlux Getting Started">
-    <meta name="twitter:description" content="Spring WebFlux is an reactive-stack web framework, part of Spring 5, fully non-blocking and runs on such servers as Netty, Undertow, and Servlet 3.1+ containers This guide will give you the steps to build a non-blocking web API with Spring WebFlux What you'll need JDK 8+ or OpenJDK 8+">
+    <meta name="twitter:description" content="Spring WebFlux is an reactive-stack web framework, part of Spring 5, fully non-blocking and runs on such servers as Netty, Undertow, and Servlet 3.1+ containers This guide will give you the steps to build a non-blocking web API with Spring WebFlux in a Spring Boot project What you'll need">
     <meta name="twitter:url" content="http://hellokoding.com/spring-webflux-getting-started/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2020/01/SpringWebFlux_GettingStarted.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Spring WebFlux Getting Started",
     "url": "http://hellokoding.com/spring-webflux-getting-started/",
     "datePublished": "2020-01-15T16:06:00.000Z",
-    "dateModified": "2020-01-16T14:22:14.000Z",
+    "dateModified": "2020-01-18T08:08:29.000Z",
     "image": "http://hellokoding.com/content/images/2020/01/SpringWebFlux_GettingStarted.png",
     "keywords": "Spring",
-    "description": "Spring WebFlux is an reactive-stack web framework, part of Spring 5, fully non-blocking and runs on such servers as Netty, Undertow, and Servlet 3.1+ containers This guide will give you the steps to build a non-blocking web API with Spring WebFlux What you&#x27;ll need JDK 8+ or OpenJDK 8+"
+    "description": "Spring WebFlux is an reactive-stack web framework, part of Spring 5, fully non-blocking and runs on such servers as Netty, Undertow, and Servlet 3.1+ containers This guide will give you the steps to build a non-blocking web API with Spring WebFlux in a Spring Boot project What you&#x27;ll need"
 }
     </script>
 
@@ -225,7 +225,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Spring WebFlux Getting Started</h1>
-            <time class="post__date" datetime="2020-01-16">Last modified @ 16 January 2020</time>
+            <time class="post__date" datetime="2020-01-18">Last modified @ 18 January 2020</time>
           </header>
 
           <div class="post-content">
@@ -235,7 +235,7 @@ ghost.init({
 
             <p>Spring WebFlux is an reactive-stack web framework, part of Spring 5, fully non-blocking and runs on such servers as Netty, Undertow, and Servlet 3.1+ containers</p>
 
-<p>This guide will give you the steps to build a non-blocking web API with Spring WebFlux</p>
+<p>This guide will give you the steps to build a non-blocking web API with Spring WebFlux in a Spring Boot project</p>
 
 <h3 id="whatyoullneed">What you'll need</h3>
 
@@ -246,9 +246,31 @@ ghost.init({
 
 <p></p><div class="hk-autoads"></div>  
 
-<h3 id="addwebfluxtoyourspringbootproject">Add WebFlux to your Spring Boot project</h3>
+<h3 id="initprojectstructure">Init project structure</h3>
 
-<p>You can add Spring WebFlux into your project as a dependency on pom.xml or build.gradle file. The library versions can be omitted as Spring Boot can help you to resolve</p>
+<p>You can create and init a new Spring Boot project by using Spring CLI or Spring Initializr. Learn more about using these tools <a href="https://hellokoding.com/create-a-new-spring-boot-project/">at here</a></p>
+
+<p>The final project structure as below</p>
+
+<pre><code class="language-markup">├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── hellokoding
+│       │           └── spring
+│       │               ├── HelloApplication.java
+│       │               ├── HelloHandler.java
+│       │               └── HelloRouter.java
+│       └── resources
+│           ├── static
+│           ├── templates
+│           └── application.properties
+└── pom.xml
+</code></pre>
+
+<h3 id="projectdependencies">Project dependencies</h3>
+
+<p>Add <code>spring-boot-starter-webflux</code> into your project as a dependency on pom.xml or build.gradle file. The library versions can be omitted as it is resolved by the parent pom provided by Spring Boot</p>
 
 <pre><code class="language-xml">&lt;dependencies&gt;  
     &lt;dependency&gt;
