@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Java 8+ CompletableFuture runAsync Vs supplyAsync</title>
+  <title>Java CompletableFuture runAsync vs. supplyAsync</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,18 +19,18 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Java 8+ CompletableFuture runAsync Vs supplyAsync">
-    <meta property="og:description" content="Since Java 8+, you can run a method asynchronously by using CompletableFuture.supplyAsync methods if you want to do something with the result it returns or using CompletableFuture.runAsync methods if you don't Apart from that, you can also use lambda statements, lambda expressions and method references to provision the">
+    <meta property="og:title" content="Java CompletableFuture runAsync vs. supplyAsync">
+    <meta property="og:description" content="Since Java 8, you can run a method asynchronously by using CompletableFuture.supplyAsync if you want to do something with the returning result or using CompletableFuture.runAsync if you don't Apart from that, you can also use lambda statements, lambda expressions, and method references to provide the parameters of runAsync">
     <meta property="og:url" content="http://hellokoding.com/java-completablefuture-runasync-vs-supplyasync/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/09/JavaCompletableFuture_runAsyncVssupplyAsync.png">
     <meta property="article:published_time" content="2019-09-09T13:06:11.000Z">
-    <meta property="article:modified_time" content="2019-09-29T05:23:55.000Z">
+    <meta property="article:modified_time" content="2020-01-26T04:11:07.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Java 8+ CompletableFuture runAsync Vs supplyAsync">
-    <meta name="twitter:description" content="Since Java 8+, you can run a method asynchronously by using CompletableFuture.supplyAsync methods if you want to do something with the result it returns or using CompletableFuture.runAsync methods if you don't Apart from that, you can also use lambda statements, lambda expressions and method references to provision the">
+    <meta name="twitter:title" content="Java CompletableFuture runAsync vs. supplyAsync">
+    <meta name="twitter:description" content="Since Java 8, you can run a method asynchronously by using CompletableFuture.supplyAsync if you want to do something with the returning result or using CompletableFuture.runAsync if you don't Apart from that, you can also use lambda statements, lambda expressions, and method references to provide the parameters of runAsync">
     <meta name="twitter:url" content="http://hellokoding.com/java-completablefuture-runasync-vs-supplyasync/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/09/JavaCompletableFuture_runAsyncVssupplyAsync.png">
     <meta name="twitter:label1" content="Written by">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Java 8+ CompletableFuture runAsync Vs supplyAsync",
+    "headline": "Java CompletableFuture runAsync vs. supplyAsync",
     "url": "http://hellokoding.com/java-completablefuture-runasync-vs-supplyasync/",
     "datePublished": "2019-09-09T13:06:11.000Z",
-    "dateModified": "2019-09-29T05:23:55.000Z",
+    "dateModified": "2020-01-26T04:11:07.000Z",
     "image": "http://hellokoding.com/content/images/2019/09/JavaCompletableFuture_runAsyncVssupplyAsync.png",
     "keywords": "Java",
-    "description": "Since Java 8+, you can run a method asynchronously by using CompletableFuture.supplyAsync methods if you want to do something with the result it returns or using CompletableFuture.runAsync methods if you don&#x27;t Apart from that, you can also use lambda statements, lambda expressions and method references to provision the"
+    "description": "Since Java 8, you can run a method asynchronously by using CompletableFuture.supplyAsync if you want to do something with the returning result or using CompletableFuture.runAsync if you don&#x27;t Apart from that, you can also use lambda statements, lambda expressions, and method references to provide the parameters of runAsync"
 }
     </script>
 
@@ -224,8 +224,8 @@ ghost.init({
         <article class="post tag-java">
 
           <header class="post__header">
-            <h1 class="post__title">Java 8+ CompletableFuture runAsync Vs supplyAsync</h1>
-            <time class="post__date" datetime="2019-09-29">Last modified @ 29 September 2019</time>
+            <h1 class="post__title">Java CompletableFuture runAsync vs. supplyAsync</h1>
+            <time class="post__date" datetime="2020-01-26">Last modified @ 26 January 2020</time>
           </header>
 
           <div class="post-content">
@@ -233,11 +233,11 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p>Since Java 8+, you can run a method asynchronously by using <code>CompletableFuture.supplyAsync</code> methods if you want to do something with the result it returns or using <code>CompletableFuture.runAsync</code> methods if you don't</p>
+            <p>Since Java 8, you can run a method asynchronously by using <code>CompletableFuture.supplyAsync</code> if you want to do something with the returning result or using <code>CompletableFuture.runAsync</code> if you don't</p>
 
-<p>Apart from that, you can also use lambda statements, lambda expressions and method references to provision the parameters of <code>runAsync</code> and <code>supplyAsync</code> methods</p>
+<p>Apart from that, you can also use lambda statements, lambda expressions, and method references to provide the parameters of <code>runAsync</code> and <code>supplyAsync</code> methods</p>
 
-<p>Lets walk through this tutorial to see the detail examples</p>
+<p>Let's walk through this tutorial to see the detail examples</p>
 
 <h2 id="runasynchasnoreturnvalueswhilesupplyasynchas"><code>runAsync</code> has no return values while <code>supplyAsync</code> has</h2>
 
@@ -351,7 +351,7 @@ public void supplyAsyncWithExecutor() throws ExecutionException, InterruptedExce
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Java%208%2B%20CompletableFuture%20runAsync%20Vs%20supplyAsync&amp;url=http://hellokoding.com/java-completablefuture-runasync-vs-supplyasync/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Java%20CompletableFuture%20runAsync%20vs.%20supplyAsync&amp;url=http://hellokoding.com/java-completablefuture-runasync-vs-supplyasync/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
