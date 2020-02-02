@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/checked-vs-unchecked-exceptions-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2020/02/JavaCore_CheckedvsUncheckedExceptions.png">
     <meta property="article:published_time" content="2020-02-02T05:10:01.000Z">
-    <meta property="article:modified_time" content="2020-02-02T05:12:33.000Z">
+    <meta property="article:modified_time" content="2020-02-02T09:02:31.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Checked vs Unchecked Exceptions in Java",
     "url": "http://hellokoding.com/checked-vs-unchecked-exceptions-in-java/",
     "datePublished": "2020-02-02T05:10:01.000Z",
-    "dateModified": "2020-02-02T05:12:33.000Z",
+    "dateModified": "2020-02-02T09:02:31.000Z",
     "image": "http://hellokoding.com/content/images/2020/02/JavaCore_CheckedvsUncheckedExceptions.png",
     "keywords": "Java",
     "description": "In Java, checked exceptions are checked at the compile-time while unchecked exceptions aren&#x27;t, they are checked at the run-time You have to handle checked exceptions by using try-catch or propagate them to the outside via declaring the throws clause on methods or constructors. On the other hand, Java doesn&#x27;t force"
@@ -239,7 +239,7 @@ ghost.init({
 
 <h3 id="checkedexceptionsarecheckedatcompiletime">Checked exceptions are checked at compile time</h3>
 
-<p>In Java, <code>Exception</code> class and subclasses that are not also subclasses of <code>RuntimeException</code> are checked exceptions. Some instances of built-in checked exceptions are IOException and SQLException. You can create your own by extending the Exception class</p>
+<p>In Java, <code>Exception</code> class and subclasses that are not also subclasses of <code>RuntimeException</code> are checked exceptions. Some instances of built-in checked exceptions are IOException and SQLException. You can create your own exception classes by extending the <code>Exception</code></p>
 
 <p>Checked Exceptions are checked at compile time. Your program can not compile if you don't <code>try-catch</code> or <code>throws</code> them</p>
 
@@ -288,6 +288,14 @@ ghost.init({
     Integer.parseInt("s");
 }
 </code></pre>
+
+<div class="hk-autoads"></div>  
+
+<h3 id="whentousecheckedvsuncheckedexceptions">When to use checked vs unchecked exceptions</h3>
+
+<p>You can create your custom classes which extended from <code>Exception</code>, <code>Error</code>, and <code>RuntimeException</code></p>
+
+<p>However, in practice, try to always use checked exceptions to gain the benefit of compile-time checking</p>
 
 <h3 id="conclusion">Conclusion</h3>
 
