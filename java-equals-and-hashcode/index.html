@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-equals-and-hashcode/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/JavaCore_equals--andhashCode--.png">
     <meta property="article:published_time" content="2019-06-15T05:37:51.000Z">
-    <meta property="article:modified_time" content="2020-02-02T11:05:15.000Z">
+    <meta property="article:modified_time" content="2020-02-02T11:11:51.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "equals and hashCode contract in Java",
     "url": "http://hellokoding.com/java-equals-and-hashcode/",
     "datePublished": "2019-06-15T05:37:51.000Z",
-    "dateModified": "2020-02-02T11:05:15.000Z",
+    "dateModified": "2020-02-02T11:11:51.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/JavaCore_equals--andhashCode--.png",
     "keywords": "Java",
     "description": "In Java, equals() method is used to compare the equivalence between two objects. hashCode() method is used to generate the object&#x27;s hash code which is used to properly distribute entries across hash table based collections such as HashMap or HashSet By default, both of them are defined in the Object"
@@ -242,13 +242,13 @@ ghost.init({
 }
 </code></pre>
 
-<p>It returns <code>true</code> when the calling object <code>this</code> and the parameter <code>obj</code> refer to the same physical memory address</p>
+<p>It returns <code>true</code> when the calling object <code>this</code> and the parameter <code>obj</code> point to the same memory address</p>
 
 <h3 id="thedefaultequalsmethodproblem">The default <code>equals()</code> method problem</h3>
 
-<p>In practice, besides comparing physical memory addresses, you also need the <code>equals()</code> method comparing your objects based on their internal fields</p>
+<p>In practice, besides comparing memory addresses, you also need the <code>equals()</code> method comparing your objects based on their internal fields</p>
 
-<p>In the following example, <code>book1.equals(book2)</code> should return true but false as <code>BookWithoutEquals</code>'s <code>equals</code> method is derived from <code>Object</code> so it's only comparing physical memory addresses of <code>book1</code> and <code>book2</code> which always returns false</p>
+<p>In the following example, <code>book1.equals(book2)</code> should return true but false as <code>BookWithoutEquals</code>'s <code>equals</code> method is derived from <code>Object</code> so it's only comparing memory addresses of <code>book1</code> and <code>book2</code> which always returns false</p>
 
 <pre><code class="language-java">@Test
 public void givenNonEqualsImplement_whenCompareObjects_thenReturnsFalse() {  
@@ -264,7 +264,7 @@ public void givenNonEqualsImplement_whenCompareObjects_thenReturnsFalse() {
 
 <h3 id="howtoimplementacustomequalsmethod">How to implement a custom <code>equals()</code> method</h3>
 
-<p>The implementation usually comes in 3 parts</p>
+<p>The implementation usually has 3 parts</p>
 
 <ul>
 <li>Compares memory addresses of the owner and the parameter object</li>
@@ -281,7 +281,7 @@ public void givenNonEqualsImplement_whenCompareObjects_thenReturnsFalse() {
 </code></pre>
 
 <ul>
-<li>Compares object fields by using <code>Objects.equals</code></li>
+<li>Compares object fields by using Java 7+ <code>Objects.equals</code></li>
 </ul>
 
 <pre><code class="language-java">return Objects.equals(title, that.title) &amp;&amp;  
@@ -308,7 +308,7 @@ public void givenEqualsImplement_whenCompareObjects_thenReturnsTrue() {
 
 <h3 id="thehashcodemethod">The <code>hashCode()</code> method</h3>
 
-<p>The <code>hashCode()</code> method generates an object's hash code value. It is used to properly distribute entries across a hash table based collections such as <a href="https://hellokoding.com/java-hashmap-tutorial-with-examples/">HashMap</a> and <a href="https://hellokoding.com/java-hashset-tutorial-with-examples/">HashSet</a></p>
+<p>The <code>hashCode()</code> method generates an object's hash code value. It is used to properly distribute entries across hash table based collections such as <a href="https://hellokoding.com/java-hashmap-tutorial-with-examples/">HashMap</a> and <a href="https://hellokoding.com/java-hashset-tutorial-with-examples/">HashSet</a></p>
 
 <p><a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example">Learn more about hash table data structure</a></p>
 
@@ -374,7 +374,7 @@ public void givenEqualsAndHashCodeImplement_whenCompareInHashMap_thenReturnsTrue
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>In this tutorial, we learned about the Java <code>equals()</code> and <code>hashCode()</code> methods and when we should override them. You can find below all the defined test cases</p>
+<p>In this tutorial, we learned about <code>equals()</code> and <code>hashCode()</code> methods in Java, and how to override them. You can find below all the defined test cases</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/lang/EqualsAndHashCodeTest.java">
 </code></pre>
