@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The equals and hashCode contract in Java</title>
+  <title>equals and hashCode contract in Java</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,18 +19,18 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="The equals and hashCode contract in Java">
-    <meta property="og:description" content="In Java, the equals() method is used to compare the equality between the owner/caller and the specifier. The hashCode() method is used to generate the owner object's hash code and properly distribute entries across a hash table based collections such as HashMap or HashSet By default, both of them">
+    <meta property="og:title" content="equals and hashCode contract in Java">
+    <meta property="og:description" content="In Java, equals() method is used to compare the equivalence between two objects. hashCode() method is used to generate the object's hash code which is used to properly distribute entries across a hash table based collections such as HashMap or HashSet By default, both of them are defined in the">
     <meta property="og:url" content="http://hellokoding.com/java-equals-and-hashcode/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/JavaCore_equals--andhashCode--.png">
     <meta property="article:published_time" content="2019-06-15T05:37:51.000Z">
-    <meta property="article:modified_time" content="2020-02-02T05:12:17.000Z">
+    <meta property="article:modified_time" content="2020-02-02T10:24:57.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="The equals and hashCode contract in Java">
-    <meta name="twitter:description" content="In Java, the equals() method is used to compare the equality between the owner/caller and the specifier. The hashCode() method is used to generate the owner object's hash code and properly distribute entries across a hash table based collections such as HashMap or HashSet By default, both of them">
+    <meta name="twitter:title" content="equals and hashCode contract in Java">
+    <meta name="twitter:description" content="In Java, equals() method is used to compare the equivalence between two objects. hashCode() method is used to generate the object's hash code which is used to properly distribute entries across a hash table based collections such as HashMap or HashSet By default, both of them are defined in the">
     <meta name="twitter:url" content="http://hellokoding.com/java-equals-and-hashcode/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/JavaCore_equals--andhashCode--.png">
     <meta name="twitter:label1" content="Written by">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "The equals and hashCode contract in Java",
+    "headline": "equals and hashCode contract in Java",
     "url": "http://hellokoding.com/java-equals-and-hashcode/",
     "datePublished": "2019-06-15T05:37:51.000Z",
-    "dateModified": "2020-02-02T05:12:17.000Z",
+    "dateModified": "2020-02-02T10:24:57.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/JavaCore_equals--andhashCode--.png",
     "keywords": "Java",
-    "description": "In Java, the equals() method is used to compare the equality between the owner/caller and the specifier. The hashCode() method is used to generate the owner object&#x27;s hash code and properly distribute entries across a hash table based collections such as HashMap or HashSet By default, both of them"
+    "description": "In Java, equals() method is used to compare the equivalence between two objects. hashCode() method is used to generate the object&#x27;s hash code which is used to properly distribute entries across a hash table based collections such as HashMap or HashSet By default, both of them are defined in the"
 }
     </script>
 
@@ -218,7 +218,7 @@ ghost.init({
         <article class="post tag-java">
 
           <header class="post__header">
-            <h1 class="post__title">The equals and hashCode contract in Java</h1>
+            <h1 class="post__title">equals and hashCode contract in Java</h1>
             <time class="post__date" datetime="2020-02-02">Last modified @ 02 February 2020</time>
           </header>
 
@@ -227,9 +227,9 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p>In Java, the <code>equals()</code> method is used to compare the equality between the owner/caller and the specifier. The <code>hashCode()</code> method is used to generate the owner object's hash code and properly distribute entries across a <a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example">hash table based collections</a> such as <a href="https://hellokoding.com/java-hashmap-tutorial-with-examples/">HashMap</a> or <a href="https://hellokoding.com/java-hashset-tutorial-with-examples/">HashSet</a></p>
+            <p>In Java, <code>equals()</code> method is used to compare the equivalence between two objects. <code>hashCode()</code> method is used to generate the object's hash code which is used to properly distribute entries across a <a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example">hash table based collections</a> such as <a href="https://hellokoding.com/java-hashmap-tutorial-with-examples/">HashMap</a> or <a href="https://hellokoding.com/java-hashset-tutorial-with-examples/">HashSet</a></p>
 
-<p>By default, both of them are defined in the <code>Object</code> class and inherited by all Java classes. However, in practice, for more useful, consider to override them on your classes</p>
+<p>By default, both of them are defined in the <code>Object</code> class and inherited by all Java classes. However, you should consider to override them on your classes to make them useful in practice</p>
 
 <div class="hk-autoads"></div>  
 
@@ -242,11 +242,13 @@ ghost.init({
 }
 </code></pre>
 
-<p>It returns <code>true</code> when the calling and the specified <code>obj</code> refer to the same physical memory address</p>
+<p>It returns <code>true</code> when the calling object <code>this</code> and the parameter <code>obj</code> refer to the same physical memory address</p>
 
-<h3 id="thegeneralequalsmethodproblem">The general <code>equals()</code> method problem</h3>
+<h3 id="thedefaultequalsmethodproblem">The default <code>equals()</code> method problem</h3>
 
-<p>In the following example, <code>book1.equals(book2)</code> should return true but false as BookWithoutEquals's equals method is derived from Object and the two compared objects are different variables (so they have different physical memory addresses)</p>
+<p>In practice, besides comparing physical memory addresses, you also need the default <code>equals()</code> method comparing two objects based on their internal fields</p>
+
+<p>In the following example, <code>book1.equals(book2)</code> should return true but false as <code>BookWithoutEquals</code>'s <code>equals</code> method is derived from <code>Object</code> so it's only comparing physical memory addresses of <code>book1</code> and <code>book2</code></p>
 
 <pre><code class="language-java">@Test
 public void givenNonEqualsImplement_whenCompareObjects_thenReturnsFalse() {  
@@ -257,15 +259,41 @@ public void givenNonEqualsImplement_whenCompareObjects_thenReturnsFalse() {
 }
 </code></pre>
 
-<p><code>BookWithoutEquals</code> is defined as below</p>
-
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/lang/BookWithoutEquals.java">
 </code></pre>
 
-<p>To fix the problem, you can add a custom <code>equals()</code> method as the following example</p>
+<h3 id="howtoimplementacustomequalsmethod">How to implement a custom <code>equals()</code> method</h3>
+
+<p>The implementation usually comes in 3 parts</p>
+
+<ul>
+<li>Compares memory addresses of the owner and the parameter object</li>
+</ul>
+
+<pre><code class="language-java">if (this == o) return true;  
+</code></pre>
+
+<ul>
+<li>Checks the nullability of the parameter and compares the class type of the owner and the parameter </li>
+</ul>
+
+<pre><code class="language-java">if (o == null || getClass() != o.getClass()) return false;  
+</code></pre>
+
+<ul>
+<li>Compares object fields by using <code>Objects.equals</code></li>
+</ul>
+
+<pre><code class="language-java">return Objects.equals(title, that.title) &amp;&amp;  
+    Objects.equals(pages, that.pages);
+</code></pre>
+
+<p>The following gives you implementation example</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/lang/BookWithEquals.java">
 </code></pre>
+
+<p><code>book1.equals(book2)</code> now returns true as expectation</p>
 
 <pre><code class="language-java">@Test
 public void givenEqualsImplement_whenCompareObjects_thenReturnsTrue() {  
@@ -296,7 +324,23 @@ public void givenEqualsImplement_whenCompareInHashMap_thenReturnsTrue() {
 }
 </code></pre>
 
-<p>The above test case is not success as BookWithEquals only overrides <code>equals(Object)</code> method</p>
+<p>The above test case is not successful as <code>containsKey</code> method of HashMap works based on BookWithEquals's <code>hashCode()</code> and <code>equals()</code> but only <code>equals()</code> method is overridden</p>
+
+<p><a href="https://hellokoding.com/java-hashmap-tutorial-with-examples/#objectscomparinginhashmap">Learn more about Objects comparing in HashMap</a></p>
+
+<h3 id="howtoimplementcustomhashcodemethod">How to implement custom <code>hashCode()</code> method</h3>
+
+<p>Since Java 7, you can delegate the hash code generation to <code>Object.hash</code> function</p>
+
+<pre><code class="language-java">return Objects.hash(title, pages);  
+</code></pre>
+
+<p>The following gives you an implementation example</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/lang/BookWithEqualsAndHashCode.java">
+</code></pre>
+
+<p><code>bookMap.containsKey(new BookWithEqualsAndHashCode("A", 1))</code> now returns true as expectation</p>
 
 <pre><code class="language-java">@Test
 public void givenEqualsAndHashCodeImplement_whenCompareInHashMap_thenReturnsTrue() {  
@@ -308,13 +352,6 @@ public void givenEqualsAndHashCodeImplement_whenCompareInHashMap_thenReturnsTrue
 }
 </code></pre>
 
-<p>The above test case is success as BookWithEqualsAndHashCode overrides both <code>equals(Object)</code> and <code>hashcode()</code> methods</p>
-
-<p><code>BookWithEqualsAndHashCode</code> is defined as below</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/lang/BookWithEqualsAndHashCode.java">
-</code></pre>
-
 <div class="hk-autoads"></div>  
 
 <h3 id="generalcontractofequalsandhashcode">General contract of equals and hashCode</h3>
@@ -323,6 +360,17 @@ public void givenEqualsAndHashCodeImplement_whenCompareInHashMap_thenReturnsTrue
 <li><p><code>hashCode()</code> method must consistently return the same integer during an execution of a Java application</p></li>
 <li><p>If two objects are equals according to the <code>equals(Object)</code> method, then their's <code>hashCode()</code> method must produce the same integer result</p></li>
 </ul>
+
+<h3 id="generateequalsandhashcodeimplementation">Generate <code>equals()</code> and <code>hashCode()</code> implementation</h3>
+
+<p>You can use the following options to generate <code>equals()</code> and <code>hashCode()</code> implementation on your classes</p>
+
+<ul>
+<li><p>Lombok <code>@EqualsAndHashCode</code> or <code>@Data</code></p></li>
+<li><p>IDE such as IntelliJ or Eclipse</p></li>
+</ul>
+
+<p><a href="https://hellokoding.com/lombok-in-java-and-spring-boot/">Learn more about Lombok</a></p>
 
 <h3 id="conclusion">Conclusion</h3>
 
@@ -338,7 +386,7 @@ public void givenEqualsAndHashCodeImplement_whenCompareInHashMap_thenReturnsTrue
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=The%20equals%20and%20hashCode%20contract%20in%20Java&amp;url=http://hellokoding.com/java-equals-and-hashcode/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=equals%20and%20hashCode%20contract%20in%20Java&amp;url=http://hellokoding.com/java-equals-and-hashcode/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
