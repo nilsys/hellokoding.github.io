@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-equals-and-hashcode/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/JavaCore_equals--andhashCode--.png">
     <meta property="article:published_time" content="2019-06-15T05:37:51.000Z">
-    <meta property="article:modified_time" content="2020-02-02T10:24:57.000Z">
+    <meta property="article:modified_time" content="2020-02-02T10:33:36.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "equals and hashCode contract in Java",
     "url": "http://hellokoding.com/java-equals-and-hashcode/",
     "datePublished": "2019-06-15T05:37:51.000Z",
-    "dateModified": "2020-02-02T10:24:57.000Z",
+    "dateModified": "2020-02-02T10:33:36.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/JavaCore_equals--andhashCode--.png",
     "keywords": "Java",
     "description": "In Java, equals() method is used to compare the equivalence between two objects. hashCode() method is used to generate the object&#x27;s hash code which is used to properly distribute entries across a hash table based collections such as HashMap or HashSet By default, both of them are defined in the"
@@ -246,9 +246,9 @@ ghost.init({
 
 <h3 id="thedefaultequalsmethodproblem">The default <code>equals()</code> method problem</h3>
 
-<p>In practice, besides comparing physical memory addresses, you also need the default <code>equals()</code> method comparing two objects based on their internal fields</p>
+<p>In practice, besides comparing physical memory addresses, you also need the <code>equals()</code> method comparing your objects based on their internal fields</p>
 
-<p>In the following example, <code>book1.equals(book2)</code> should return true but false as <code>BookWithoutEquals</code>'s <code>equals</code> method is derived from <code>Object</code> so it's only comparing physical memory addresses of <code>book1</code> and <code>book2</code></p>
+<p>In the following example, <code>book1.equals(book2)</code> should return true but false as <code>BookWithoutEquals</code>'s <code>equals</code> method is derived from <code>Object</code> so it's only comparing physical memory addresses of <code>book1</code> and <code>book2</code> which always returns false</p>
 
 <pre><code class="language-java">@Test
 public void givenNonEqualsImplement_whenCompareObjects_thenReturnsFalse() {  
@@ -312,7 +312,7 @@ public void givenEqualsImplement_whenCompareObjects_thenReturnsTrue() {
 
 <p><a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example">Learn more about hash table data structure</a></p>
 
-<p>Lack of <code>equals()</code> and <code>hashCode()</code> implementation in your classes can cause troubles when they are stored inside a HashMap or HashSet. The following gives you examples</p>
+<p>Lack of <code>equals()</code> and <code>hashCode()</code> implementation in your classes can cause troubles when they are stored inside a HashMap or HashSet. Let's take a look at this example</p>
 
 <pre><code class="language-java">@Test
 public void givenEqualsImplement_whenCompareInHashMap_thenReturnsTrue() {  
