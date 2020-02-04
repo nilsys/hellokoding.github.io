@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Exception Handling In Java Lambda">
-    <meta property="og:description" content="The following approaches can be used to handle exceptions in Java lambda Add try-catch block to the lambda statement Extract try-catch block to a wrapper function Create a generic function to wrap the try-catch block Apart from that, you can throw unchecked exceptions to the lambda outside but can't throw">
+    <meta property="og:description" content="The following approaches can be used to handle exceptions in Java lambda Add try-catch block to the lambda statement Extract try-catch block to a wrapper method Create a generic method to wrap the try-catch block Apart from that, you can throw unchecked exceptions to the lambda outside but can't throw">
     <meta property="og:url" content="http://hellokoding.com/exception-handling-in-java-lambda/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2020/02/JavaLambda_ExceptionHandling.png">
     <meta property="article:published_time" content="2020-02-04T02:04:52.000Z">
-    <meta property="article:modified_time" content="2020-02-04T02:09:22.000Z">
+    <meta property="article:modified_time" content="2020-02-04T02:20:31.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Exception Handling In Java Lambda">
-    <meta name="twitter:description" content="The following approaches can be used to handle exceptions in Java lambda Add try-catch block to the lambda statement Extract try-catch block to a wrapper function Create a generic function to wrap the try-catch block Apart from that, you can throw unchecked exceptions to the lambda outside but can't throw">
+    <meta name="twitter:description" content="The following approaches can be used to handle exceptions in Java lambda Add try-catch block to the lambda statement Extract try-catch block to a wrapper method Create a generic method to wrap the try-catch block Apart from that, you can throw unchecked exceptions to the lambda outside but can't throw">
     <meta name="twitter:url" content="http://hellokoding.com/exception-handling-in-java-lambda/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2020/02/JavaLambda_ExceptionHandling.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Exception Handling In Java Lambda",
     "url": "http://hellokoding.com/exception-handling-in-java-lambda/",
     "datePublished": "2020-02-04T02:04:52.000Z",
-    "dateModified": "2020-02-04T02:09:22.000Z",
+    "dateModified": "2020-02-04T02:20:31.000Z",
     "image": "http://hellokoding.com/content/images/2020/02/JavaLambda_ExceptionHandling.png",
     "keywords": "Java",
-    "description": "The following approaches can be used to handle exceptions in Java lambda Add try-catch block to the lambda statement Extract try-catch block to a wrapper function Create a generic function to wrap the try-catch block Apart from that, you can throw unchecked exceptions to the lambda outside but can&#x27;t throw"
+    "description": "The following approaches can be used to handle exceptions in Java lambda Add try-catch block to the lambda statement Extract try-catch block to a wrapper method Create a generic method to wrap the try-catch block Apart from that, you can throw unchecked exceptions to the lambda outside but can&#x27;t throw"
 }
     </script>
 
@@ -231,8 +231,8 @@ ghost.init({
 
 <ul>
 <li><p>Add <code>try-catch</code> block to the lambda statement</p></li>
-<li><p>Extract <code>try-catch</code> block to a wrapper function</p></li>
-<li><p>Create a generic function to wrap the <code>try-catch</code> block</p></li>
+<li><p>Extract <code>try-catch</code> block to a wrapper method</p></li>
+<li><p>Create a generic method to wrap the <code>try-catch</code> block</p></li>
 </ul>
 
 <p>Apart from that, you can throw unchecked exceptions to the lambda outside but can't throw checked exceptions</p>
@@ -261,11 +261,11 @@ ghost.init({
 
 <div class="hk-autoads"></div>  
 
-<h3 id="extracttrycatchblocktoawrapperfunction">Extract <code>try-catch</code> block to a wrapper function</h3>
+<h3 id="extracttrycatchblocktoawrappermethod">Extract <code>try-catch</code> block to a wrapper method</h3>
 
 <p>Add <code>try-catch</code> block into a lambda can harm the readability. Lambda code should be concise, as it usually is a part of a chaining pipeline</p>
 
-<p>The above try-catch block can be extracted to a separate function </p>
+<p>The above try-catch block can be extracted to a separate method </p>
 
 <pre><code class="language-java">void readFile(String fileName) throws RuntimeException{  
     try {
@@ -287,9 +287,9 @@ ghost.init({
 
 <div class="hk-autoads"></div>  
 
-<h3 id="generalizetheextractedfunction">Generalize the extracted function</h3>
+<h3 id="generalizetheextractedmethod">Generalize the extracted method</h3>
 
-<p>The above approach isn't bad, but you have to extract <code>try-catch</code> block into a separate function each time</p>
+<p>The above approach isn't bad, but you have to extract <code>try-catch</code> block into a separate method each time</p>
 
 <p>As <code>forEach</code> accepts a built-in <code>Consumer</code> functional interface which defined as the following</p>
 
