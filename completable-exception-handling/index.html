@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/completable-exception-handling/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2020/02/JavaCompletableFuture_ExceptionHandling.png">
     <meta property="article:published_time" content="2020-02-05T14:00:27.000Z">
-    <meta property="article:modified_time" content="2020-02-05T15:23:02.000Z">
+    <meta property="article:modified_time" content="2020-02-05T15:45:41.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "CompletableFuture Exception Handling in Java",
     "url": "http://hellokoding.com/completable-exception-handling/",
     "datePublished": "2020-02-05T14:00:27.000Z",
-    "dateModified": "2020-02-05T15:23:02.000Z",
+    "dateModified": "2020-02-05T15:45:41.000Z",
     "image": "http://hellokoding.com/content/images/2020/02/JavaCompletableFuture_ExceptionHandling.png",
     "keywords": "Java",
     "description": "You can use the following methods to handle exceptions in Java 8+ CompletableFuture Java 8+ handle, and handleAsync Java 8+ exceptionally, and Java 12+ exceptionallyAsync Java 8+ whenComplete, and whenCompleteAsync Let&#x27;s walk through this tutorial to explore them in more details    Use handle(BiFunction) and handleAsync(BiFunction) handle and handleAsync"
@@ -245,7 +245,7 @@ ghost.init({
 
 <p>They accept a BiFunction with <code>(result, exception)</code> as arguments received from the preceding stage, and complete its stage with the return value from <code>BiFunction</code></p>
 
-<p>In the following example, <code>handleAsync</code> received <code>NumberFormatException</code> caused by <code>Integer.parseInt("s")</code> in <code>supplyAsync</code>, it prints out the error message and returns <code>null</code> to the next stage <code>thenAcceptAsync</code></p>
+<p>In the following example, <code>handleAsync</code> received <code>NumberFormatException</code> caused by <code>Integer.parseInt("s")</code> in <code>supplyAsync</code>, it prints out the error message and returns <code>Error!</code> to the next stage <code>thenAcceptAsync</code></p>
 
 <pre><code class="language-java">CompletableFuture completableFuture = CompletableFuture  
     .supplyAsync(() -&gt; Integer.parseInt("s"))
@@ -292,9 +292,9 @@ Error!
 
 <p>Unlike <code>handle</code> and <code>handleAsync</code>, the stage created by <code>exceptionally</code> and <code>exceptionallyAsync</code> only executed when there're exceptions in the previous stages. Apart from that, the return value from them have to be null or the same type as the preceding stage</p>
 
-<p><code>exceptionally</code> and <code>exceptionallyAsync</code> accept a <code>Function</code> with <code>(exception)</code> as the only one argument</p>
+<p><code>exceptionally</code> and <code>exceptionallyAsync</code> accept a <code>Function</code> with <code>(exception)</code> as the only argument</p>
 
-<p>In the below example, <code>exceptionallyAsync</code> received <code>NumberFormatException</code> caused by <code>Integer.parseInt("s")</code> in <code>supplyAsync</code>, it prints out the error message and returns <code>null</code> to the next stage <code>thenAcceptAsync</code></p>
+<p>In the below example, <code>exceptionallyAsync</code> received <code>NumberFormatException</code> caused by <code>Integer.parseInt("s")</code> in <code>supplyAsync</code>, it prints out the error message and returns <code>0</code> to the next stage <code>thenAcceptAsync</code></p>
 
 <pre><code class="language-java">CompletableFuture completableFuture = CompletableFuture  
     .supplyAsync(() -&gt; Integer.parseInt("s"))
@@ -369,7 +369,7 @@ Error!
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>In this article, we learned to handle exceptions in Java CompletableFuture. You can find the full source code as below</p>
+<p>In this article, we learned to handle exceptions in Java CompletableFuture by using <code>handle</code>, <code>handleAsync</code>, <code>exceptionally</code>, <code>exceptionallyAsync</code>, <code>whenComplete</code> and <code>whenCompleteAsync</code>. You can find the full source code as below</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/concurrent/CompletableFutureExceptionHandlingTest.java">
 </code></pre>
