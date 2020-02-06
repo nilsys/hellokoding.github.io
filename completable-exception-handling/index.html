@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="CompletableFuture Exception Handling in Java">
-    <meta property="og:description" content="You can use the following methods to handle exceptions in Java 8+ CompletableFuture Java 8+ handle, and handleAsync Java 8+ exceptionally, and Java 12+ exceptionallyAsync Java 8+ whenComplete, and whenCompleteAsync Let's walk through this tutorial to explore them in more details    Use handle(BiFunction) and handleAsync(BiFunction) handle and handleAsync">
+    <meta property="og:description" content="You can use the following methods to handle exceptions in Java 8+ CompletableFuture Java 8+ handle, and handleAsync Java 8+ exceptionally, and Java 12+ exceptionallyAsync Java 8+ whenComplete, and whenCompleteAsync The stage created by exceptionally/exceptionallyAsync and whenComplete/whenCompleteAsync can only be executed when there're exceptions in the previous stages,">
     <meta property="og:url" content="http://hellokoding.com/completable-exception-handling/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2020/02/JavaCompletableFuture_ExceptionHandling.png">
     <meta property="article:published_time" content="2020-02-05T14:00:27.000Z">
-    <meta property="article:modified_time" content="2020-02-06T02:21:17.000Z">
+    <meta property="article:modified_time" content="2020-02-06T10:29:36.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="CompletableFuture Exception Handling in Java">
-    <meta name="twitter:description" content="You can use the following methods to handle exceptions in Java 8+ CompletableFuture Java 8+ handle, and handleAsync Java 8+ exceptionally, and Java 12+ exceptionallyAsync Java 8+ whenComplete, and whenCompleteAsync Let's walk through this tutorial to explore them in more details    Use handle(BiFunction) and handleAsync(BiFunction) handle and handleAsync">
+    <meta name="twitter:description" content="You can use the following methods to handle exceptions in Java 8+ CompletableFuture Java 8+ handle, and handleAsync Java 8+ exceptionally, and Java 12+ exceptionallyAsync Java 8+ whenComplete, and whenCompleteAsync The stage created by exceptionally/exceptionallyAsync and whenComplete/whenCompleteAsync can only be executed when there're exceptions in the previous stages,">
     <meta name="twitter:url" content="http://hellokoding.com/completable-exception-handling/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2020/02/JavaCompletableFuture_ExceptionHandling.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "CompletableFuture Exception Handling in Java",
     "url": "http://hellokoding.com/completable-exception-handling/",
     "datePublished": "2020-02-05T14:00:27.000Z",
-    "dateModified": "2020-02-06T02:21:17.000Z",
+    "dateModified": "2020-02-06T10:29:36.000Z",
     "image": "http://hellokoding.com/content/images/2020/02/JavaCompletableFuture_ExceptionHandling.png",
     "keywords": "Java",
-    "description": "You can use the following methods to handle exceptions in Java 8+ CompletableFuture Java 8+ handle, and handleAsync Java 8+ exceptionally, and Java 12+ exceptionallyAsync Java 8+ whenComplete, and whenCompleteAsync Let&#x27;s walk through this tutorial to explore them in more details    Use handle(BiFunction) and handleAsync(BiFunction) handle and handleAsync"
+    "description": "You can use the following methods to handle exceptions in Java 8+ CompletableFuture Java 8+ handle, and handleAsync Java 8+ exceptionally, and Java 12+ exceptionallyAsync Java 8+ whenComplete, and whenCompleteAsync The stage created by exceptionally/exceptionallyAsync and whenComplete/whenCompleteAsync can only be executed when there&#x27;re exceptions in the previous stages,"
 }
     </script>
 
@@ -234,6 +234,8 @@ ghost.init({
 <li><p>Java 8+ <code>exceptionally</code>, and Java 12+ <code>exceptionallyAsync</code></p></li>
 <li><p>Java 8+ <code>whenComplete</code>, and <code>whenCompleteAsync</code></p></li>
 </ul>
+
+<p>The stage created by <code>exceptionally</code>/<code>exceptionallyAsync</code> and <code>whenComplete</code>/<code>whenCompleteAsync</code> can only be executed when there're exceptions in the previous stages, while by <code>handle</code>/<code>handleAsync</code>, it can be executed in both normal and exception cases</p>
 
 <p>Let's walk through this tutorial to explore them in more details</p>
 
