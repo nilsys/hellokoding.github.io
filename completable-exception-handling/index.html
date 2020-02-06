@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/completable-exception-handling/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2020/02/JavaCompletableFuture_ExceptionHandling.png">
     <meta property="article:published_time" content="2020-02-05T14:00:27.000Z">
-    <meta property="article:modified_time" content="2020-02-05T15:45:41.000Z">
+    <meta property="article:modified_time" content="2020-02-06T02:21:17.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "CompletableFuture Exception Handling in Java",
     "url": "http://hellokoding.com/completable-exception-handling/",
     "datePublished": "2020-02-05T14:00:27.000Z",
-    "dateModified": "2020-02-05T15:45:41.000Z",
+    "dateModified": "2020-02-06T02:21:17.000Z",
     "image": "http://hellokoding.com/content/images/2020/02/JavaCompletableFuture_ExceptionHandling.png",
     "keywords": "Java",
     "description": "You can use the following methods to handle exceptions in Java 8+ CompletableFuture Java 8+ handle, and handleAsync Java 8+ exceptionally, and Java 12+ exceptionallyAsync Java 8+ whenComplete, and whenCompleteAsync Let&#x27;s walk through this tutorial to explore them in more details    Use handle(BiFunction) and handleAsync(BiFunction) handle and handleAsync"
@@ -219,7 +219,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">CompletableFuture Exception Handling in Java</h1>
-            <time class="post__date" datetime="2020-02-05">Last modified @ 05 February 2020</time>
+            <time class="post__date" datetime="2020-02-06">Last modified @ 06 February 2020</time>
           </header>
 
           <div class="post-content">
@@ -241,7 +241,7 @@ ghost.init({
 
 <h3 id="usehandlebifunctionandhandleasyncbifunction">Use handle(BiFunction) and handleAsync(BiFunction)</h3>
 
-<p><code>handle</code> and <code>handleAsync</code> are used to handle exceptions and translate completion outcomes. The stage created by them can be executed in either the previous stages have exceptions or not</p>
+<p><code>handle</code> and <code>handleAsync</code> are used for handling exceptions and translate completion outcomes. The stage created by them can be executed in either the previous stages have exceptions or not</p>
 
 <p>They accept a BiFunction with <code>(result, exception)</code> as arguments received from the preceding stage, and complete its stage with the return value from <code>BiFunction</code></p>
 
@@ -333,7 +333,7 @@ Error!
 
 <p><code>whenComplete</code> and <code>whenCompleteAsync</code> accept a <code>BiConsumer</code> with <code>(result, exception)</code> as the arguments</p>
 
-<p>Different from <code>handle</code> and <code>handleAsync</code>, <code>whenComplete</code> and <code>whenCompleteAsync</code> are not used to translate completion outcomes (return no value). The stage created by them are only executed when there're exceptions in the previous stages</p>
+<p>Different from <code>handle</code> and <code>handleAsync</code>, <code>whenComplete</code> and <code>whenCompleteAsync</code> are not used for translating completion outcomes (return no value). The stage created by them are only executed when there're exceptions in the previous stages</p>
 
 <p>In the following example, <code>whenCompleteAsync</code> received <code>NumberFormatException</code> caused by <code>Integer.parseInt("s")</code> in <code>supplyAsync</code>, and prints out the error message</p>
 
