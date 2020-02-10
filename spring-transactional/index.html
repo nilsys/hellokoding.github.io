@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/spring-transactional/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2020/02/SpringAnnotations_@TransactionalExamples.png">
     <meta property="article:published_time" content="2020-02-09T11:25:21.000Z">
-    <meta property="article:modified_time" content="2020-02-10T09:23:23.000Z">
+    <meta property="article:modified_time" content="2020-02-10T12:09:14.000Z">
     <meta property="article:tag" content="Spring">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Spring Transactional Tutorial with Examples",
     "url": "http://hellokoding.com/spring-transactional/",
     "datePublished": "2020-02-09T11:25:21.000Z",
-    "dateModified": "2020-02-10T09:23:23.000Z",
+    "dateModified": "2020-02-10T12:09:14.000Z",
     "image": "http://hellokoding.com/content/images/2020/02/SpringAnnotations_@TransactionalExamples.png",
     "keywords": "Spring",
     "description": "In Spring, @Transacional annotation is used for indicating a method run inside a database transaction. It can also be annotated on the class level which applies as a default to all methods of the declaring class and its subclasses Say you have a crudAgainstDatabase method annotated with @Transacional as below"
@@ -405,15 +405,15 @@ public void testNoRollbackFor() {
 
 <h3 id="transactionalreadonly">@Transactional readOnly</h3>
 
-<p>A boolean flag served as a hint for the actual transaction manager</p>
+<p>A boolean flag served as a hint for the actual transaction subsystems</p>
 
-<p>The default value is <code>false</code>. In Spring Data JPA, an exception will be thrown when persist or delete operations against a database is called inside a method annotated with <code>@Transactional(readOnly=true)</code></p>
+<p>The default value is <code>false</code>. In Spring Data JPA and MySQL, an exception will be thrown when persist or delete operations against a database is called inside a method annotated with <code>@Transactional(readOnly=true)</code></p>
 
-<pre><code class="language-markup">Caused by: java.sql.SQLException:  
-    invalid transaction state: read-only SQL-transaction in statement
+<pre><code class="language-markup">java.sql.SQLException: Connection is read-only.  
+    Queries leading to data modification are not allowed
 </code></pre>
 
-<p><code>readOnly=true</code> triggers a few performance optimizations in the underlying entity manager such as skipping dirty checks when closing the EntityManager via setting the FlushMode to MANUAL</p>
+<p><code>readOnly=true</code> can trigger a few performance optimizations in the underlying entity manager such as skipping dirty checks when closing the EntityManager via setting the FlushMode to MANUAL</p>
 
 <h3 id="transactionalpitfalls">@Transactional pitfalls</h3>
 
