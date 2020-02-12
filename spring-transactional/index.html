@@ -24,8 +24,9 @@
     <meta property="og:url" content="http://hellokoding.com/spring-transactional/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2020/02/SpringAnnotations_@TransactionalExamples.png">
     <meta property="article:published_time" content="2020-02-09T11:25:21.000Z">
-    <meta property="article:modified_time" content="2020-02-10T12:09:14.000Z">
+    <meta property="article:modified_time" content="2020-02-12T03:15:44.000Z">
     <meta property="article:tag" content="Spring">
+    <meta property="article:tag" content="JPA and Hibernate">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
@@ -36,7 +37,7 @@
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Spring">
+    <meta name="twitter:data2" content="Spring, JPA and Hibernate">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -63,9 +64,9 @@
     "headline": "Spring Transactional Tutorial with Examples",
     "url": "http://hellokoding.com/spring-transactional/",
     "datePublished": "2020-02-09T11:25:21.000Z",
-    "dateModified": "2020-02-10T12:09:14.000Z",
+    "dateModified": "2020-02-12T03:15:44.000Z",
     "image": "http://hellokoding.com/content/images/2020/02/SpringAnnotations_@TransactionalExamples.png",
-    "keywords": "Spring",
+    "keywords": "Spring, JPA and Hibernate",
     "description": "In Spring, @Transacional annotation is used for indicating a method run inside a database transaction. It can also be annotated on the class level which applies as a default to all methods of the declaring class and its subclasses Say you have a crudAgainstDatabase method annotated with @Transacional as below"
 }
     </script>
@@ -87,7 +88,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-spring">
+<body class="post-template tag-spring tag-jpa">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -215,16 +216,16 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-9 column">
-        <article class="post tag-spring">
+        <article class="post tag-spring tag-jpa">
 
           <header class="post__header">
             <h1 class="post__title">Spring Transactional Tutorial with Examples</h1>
-            <time class="post__date" datetime="2020-02-10">Last modified @ 10 February 2020</time>
+            <time class="post__date" datetime="2020-02-12">Last modified @ 12 February 2020</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/spring/">Spring</a>
+              <a href="../tag/spring/">Spring</a><a href="../tag/jpa/">JPA and Hibernate</a>
             </div>
 
             <p>In Spring, <code>@Transacional</code> annotation is used for indicating a method run inside a database transaction. It can also be annotated on the class level which applies as a default to all methods of the declaring class and its subclasses</p>
@@ -457,7 +458,7 @@ public void updateOnCondition(Long id, String name) {
 </code></pre>
 
 <ul>
-<li>As the limitation of Spring AOP, @Transactional can not work with non-public methods and in the same class method call</li>
+<li>As the limitation of Spring AOP, @Transactional can not work with non-public methods and in the same class method call (self-invocation)</li>
 </ul>
 
 <p>Say you have a non-public <code>Transactional</code> method defined in a <code>Service</code> class</p>
@@ -493,7 +494,7 @@ public void testUpdateImplicitlyNonPublic() {
 </code></pre>
             
             <div class="post__tags">
-              <a href="../tag/spring/">Spring</a>
+              <a href="../tag/spring/">Spring</a><a href="../tag/jpa/">JPA and Hibernate</a>
             </div>
           </div>
 
