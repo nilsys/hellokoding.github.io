@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Depth First Search Example of Graph Traversal</title>
+  <title>Spring AOP Custom Annotation Example</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,29 +14,29 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=937d697205">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=937d697205">
    
-  <link rel="canonical" href="http://hellokoding.com/depth-first-search-algorithm-on-graph/">
+  <link rel="canonical" href="http://hellokoding.com/spring-aop-custom-annotation-example/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Depth First Search Example of Graph Traversal">
-    <meta property="og:description" content="Depth First Search (DFS) is an algorithm for traversing or searching a graph. The algorithm starts at an arbitrary node and explores as far as possible along each branch before backtracking For the above graph with 0 as the starting vertex, assuming that the left edges are chosen before the">
-    <meta property="og:url" content="http://hellokoding.com/depth-first-search-algorithm-on-graph/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-1.png">
-    <meta property="article:published_time" content="2019-02-17T08:00:29.000Z">
-    <meta property="article:modified_time" content="2019-05-09T12:19:32.000Z">
-    <meta property="article:tag" content="Data Structure">
+    <meta property="og:title" content="Spring AOP Custom Annotation Example">
+    <meta property="og:description" content="You will learn aspect programming by implementing a Spring AOP custom annotation to log the execution time of a method without modify its code. AOP stands for Aspect-Oriented Programming Add Spring AOP into your project Add spring-boot-starter-aop into your project as a dependency on pom.xml or build.gradle file.">
+    <meta property="og:url" content="http://hellokoding.com/spring-aop-custom-annotation-example/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2020/02/SpringAOP_CustomAnnotations.png">
+    <meta property="article:published_time" content="2020-02-14T14:58:15.000Z">
+    <meta property="article:modified_time" content="2020-02-14T15:45:20.000Z">
+    <meta property="article:tag" content="Spring">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Depth First Search Example of Graph Traversal">
-    <meta name="twitter:description" content="Depth First Search (DFS) is an algorithm for traversing or searching a graph. The algorithm starts at an arbitrary node and explores as far as possible along each branch before backtracking For the above graph with 0 as the starting vertex, assuming that the left edges are chosen before the">
-    <meta name="twitter:url" content="http://hellokoding.com/depth-first-search-algorithm-on-graph/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-1.png">
+    <meta name="twitter:title" content="Spring AOP Custom Annotation Example">
+    <meta name="twitter:description" content="You will learn aspect programming by implementing a Spring AOP custom annotation to log the execution time of a method without modify its code. AOP stands for Aspect-Oriented Programming Add Spring AOP into your project Add spring-boot-starter-aop into your project as a dependency on pom.xml or build.gradle file.">
+    <meta name="twitter:url" content="http://hellokoding.com/spring-aop-custom-annotation-example/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2020/02/SpringAOP_CustomAnnotations.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Data Structure">
+    <meta name="twitter:data2" content="Spring">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Depth First Search Example of Graph Traversal",
-    "url": "http://hellokoding.com/depth-first-search-algorithm-on-graph/",
-    "datePublished": "2019-02-17T08:00:29.000Z",
-    "dateModified": "2019-05-09T12:19:32.000Z",
-    "image": "http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM-1.png",
-    "keywords": "Data Structure",
-    "description": "Depth First Search (DFS) is an algorithm for traversing or searching a graph. The algorithm starts at an arbitrary node and explores as far as possible along each branch before backtracking For the above graph with 0 as the starting vertex, assuming that the left edges are chosen before the"
+    "headline": "Spring AOP Custom Annotation Example",
+    "url": "http://hellokoding.com/spring-aop-custom-annotation-example/",
+    "datePublished": "2020-02-14T14:58:15.000Z",
+    "dateModified": "2020-02-14T15:45:20.000Z",
+    "image": "http://hellokoding.com/content/images/2020/02/SpringAOP_CustomAnnotations.png",
+    "keywords": "Spring",
+    "description": "You will learn aspect programming by implementing a Spring AOP custom annotation to log the execution time of a method without modify its code. AOP stands for Aspect-Oriented Programming Add Spring AOP into your project Add spring-boot-starter-aop into your project as a dependency on pom.xml or build.gradle file."
 }
     </script>
 
@@ -87,7 +87,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-data-structure">
+<body class="post-template tag-spring">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -224,50 +224,97 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-9 column">
-        <article class="post tag-data-structure">
+        <article class="post tag-spring">
 
           <header class="post__header">
-            <h1 class="post__title">Depth First Search Example of Graph Traversal</h1>
-            <time class="post__date" datetime="2019-05-09">Last modified @ 09 May 2019</time>
+            <h1 class="post__title">Spring AOP Custom Annotation Example</h1>
+            <time class="post__date" datetime="2020-02-14">Last modified @ 14 February 2020</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/data-structure/">Data Structure</a>
+              <a href="../tag/spring/">Spring</a>
             </div>
 
-            <p>Depth First Search (DFS) is an algorithm for traversing or searching a graph. The algorithm starts at an arbitrary node and explores as far as possible along each branch before backtracking</p>
+            <p>You will learn aspect programming by implementing a Spring AOP custom annotation to log the execution time of a method without modify its code. AOP stands for Aspect-Oriented Programming</p>
 
-<p><img src="../content/images/2019/02/Screenshot-2019-02-17-at-4-16-56-PM.png" alt=""></p>
+<h3 id="addspringaopintoyourproject">Add Spring AOP into your project</h3>
 
-<p>For the above graph with 0 as the starting vertex, assuming that the left edges are chosen before the right edges, the traversing order will be 0 -&gt; 1 -&gt; 3 -&gt; 2 -&gt; 4</p>
+<p>Add <code>spring-boot-starter-aop</code> into your project as a dependency on pom.xml or build.gradle file. The library versions can be omitted as it is resolved by the parent pom provided by Spring Boot</p>
 
-<h2 id="implementationexample">Implementation example</h2>
-
-<p>Approach</p>
-
-<ul>
-<li>Using an array to track visited nodes to avoid processing a node more than once (graph may contain cycles)</li>
-<li>Using a stack to track which nodes to visit next</li>
-</ul>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/DepthFirstSearchOnGraph.java">
+<pre><code class="language-xml">&lt;dependencies&gt;  
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-aop&lt;/artifactId&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;  
 </code></pre>
 
-<p><code>UndirectedGraphByAdjacencyList</code> is defined in <a href="https://hellokoding.com/graph-data-structure/">Graph Data Structure</a></p>
+<p>You can find the full pom.xml file as below</p>
+
+<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/spring-examples/spring-aop-example/pom.xml">
+</code></pre>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="createacustomannotation">Create a custom annotation</h3>
+
+<p>In Java, you can use <code>@interface</code> to define an annotation type as the following</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/spring-examples/spring-aop-example/src/main/java/com/hellokoding/spring/LogExecutionTime.java">
+</code></pre>
+
+<p><code>Target</code> indicates the contexts in which an annotation type is applicable. The contexts can be <code>ElementType.METHOD</code> and <code>ElementType.TYPE</code></p>
+
+<p><code>Retention</code> indicates how long annotations with the annotated type are to be retained. The default value is <code>RetentionPolicy.CLASS</code> which is only retained by the compiler. <code>RetentionPolicy.RUNTIME</code> is retained by both the compiler at compile-time and VM at run-time</p>
+
+<h3 id="createanaspect">Create an aspect</h3>
+
+<p>Use AspectJ annotations such as <code>@Aspect</code> and <code>@Around</code> to declare aspect and advice</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/spring-examples/spring-aop-example/src/main/java/com/hellokoding/spring/LoggingAspect.java">
+</code></pre>
+
+<p>The <code>logExecutionTime</code> is only applied to method annotated with <code>@LogExecutionTime</code> thanks to this advice <code>@Around("@annotation(LogExecutionTime)")</code></p>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="applytoamethod">Apply to a method</h3>
+
+<p>Add <code>@LogExecutionTime</code> to a method</p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/spring-examples/spring-aop-example/src/main/java/com/hellokoding/spring/Application.java">
+</code></pre>
+
+<h3 id="runandtest">Run and test</h3>
+
+<p>You can run the application by typing the following command on the terminal console at the project root directory</p>
+
+<pre><code class="language-markup">$ mvn clean spring-boot:run
+</code></pre>
+
+<p>You would see something like this text in the console</p>
+
+<pre><code class="language-markup">CommandLineRunner com.hellokoding.spring.Application.commandLineRunner(ApplicationContext)  
+    executed in 11ms
+</code></pre>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>In this tutorial, we learned to create a custom annotation and apply it to a method by using Spring AOP and AspectJ annotations. You can find the full source code at GitHub <a href="https://github.com/hellokoding/hellokoding-courses/tree/master/spring-examples/spring-aop-example">https://github.com/hellokoding/hellokoding-courses/tree/master/spring-examples/spring-aop-example</a></p>
             
             <div class="post__tags">
-              <a href="../tag/data-structure/">Data Structure</a>
+              <a href="../tag/spring/">Spring</a>
             </div>
           </div>
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Depth%20First%20Search%20Example%20of%20Graph%20Traversal&amp;url=http://hellokoding.com/depth-first-search-algorithm-on-graph/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Spring%20AOP%20Custom%20Annotation%20Example&amp;url=http://hellokoding.com/spring-aop-custom-annotation-example/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/depth-first-search-algorithm-on-graph/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/spring-aop-custom-annotation-example/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Facebook</span>
   </a>
@@ -327,8 +374,8 @@ ghost.init({
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/depth-first-search-algorithm-on-graph/';
-      this.page.identifier = '72';
+      this.page.url = 'http://hellokoding.com/spring-aop-custom-annotation-example/';
+      this.page.identifier = '206';
     };
 
     (function() {
