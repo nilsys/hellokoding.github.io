@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="2Sum Problem with Two Pointers and Hash Table">
-    <meta property="og:description" content="Besides using one pointer to loop through all elements, you can use two pointers to walk inward from both ends of a linear collection, such as array or string, to check a condition Apart from that, you can also hash all collection elements into a hash table to improve the">
+    <meta property="og:description" content="Besides using one pointer to loop through all elements, you can use two pointers to walk inward from both ends of a linear collection, such as array or string, to check a condition Apart from that, you can also hash collection elements into a hash table to improve the lookup">
     <meta property="og:url" content="http://hellokoding.com/two-pointers-tutorial-and-example/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2020/02/Algorithm_2SumProblem.png">
     <meta property="article:published_time" content="2019-03-16T07:31:05.000Z">
-    <meta property="article:modified_time" content="2020-02-22T11:09:35.000Z">
+    <meta property="article:modified_time" content="2020-02-22T11:42:16.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="2Sum Problem with Two Pointers and Hash Table">
-    <meta name="twitter:description" content="Besides using one pointer to loop through all elements, you can use two pointers to walk inward from both ends of a linear collection, such as array or string, to check a condition Apart from that, you can also hash all collection elements into a hash table to improve the">
+    <meta name="twitter:description" content="Besides using one pointer to loop through all elements, you can use two pointers to walk inward from both ends of a linear collection, such as array or string, to check a condition Apart from that, you can also hash collection elements into a hash table to improve the lookup">
     <meta name="twitter:url" content="http://hellokoding.com/two-pointers-tutorial-and-example/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2020/02/Algorithm_2SumProblem.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "2Sum Problem with Two Pointers and Hash Table",
     "url": "http://hellokoding.com/two-pointers-tutorial-and-example/",
     "datePublished": "2019-03-16T07:31:05.000Z",
-    "dateModified": "2020-02-22T11:09:35.000Z",
+    "dateModified": "2020-02-22T11:42:16.000Z",
     "image": "http://hellokoding.com/content/images/2020/02/Algorithm_2SumProblem.png",
     "keywords": "Algorithm",
-    "description": "Besides using one pointer to loop through all elements, you can use two pointers to walk inward from both ends of a linear collection, such as array or string, to check a condition Apart from that, you can also hash all collection elements into a hash table to improve the"
+    "description": "Besides using one pointer to loop through all elements, you can use two pointers to walk inward from both ends of a linear collection, such as array or string, to check a condition Apart from that, you can also hash collection elements into a hash table to improve the lookup"
 }
     </script>
 
@@ -241,7 +241,7 @@ ghost.init({
 
             <p>Besides using one pointer to loop through all elements, you can use two pointers to walk inward from both ends of a linear collection, such as array or string, to check a condition</p>
 
-<p>Apart from that, you can also hash all collection elements into a <a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example/">hash table</a> to improve the lookup time</p>
+<p>Apart from that, you can also hash collection elements into a <a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example/">hash table</a> to improve the lookup time</p>
 
 <p>Let walk through this article to explore them in more details</p>
 
@@ -319,7 +319,7 @@ false
 <h3 id="approach3hashtable">Approach 3: Hashtable</h3>
 
 <ul>
-<li>Add all array elements into a <a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example/">hash table</a></li>
+<li>Add array elements into a <a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example/">hash table</a></li>
 <li>For each array element <code>a[i]</code>, check if existing an element <code>a[j]</code> that <code>a[j] = k - a[i]</code></li>
 </ul>
 
@@ -338,9 +338,10 @@ false
 
 <ul>
 <li>Time complexity: O(n) as with each element, the algorithm looks up in the hash table which takes O(1) time</li>
-<li>Space complexity: O(1)</li>
-<li><a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example/">Learn more about Hash table</a></li>
+<li>Space complexity: O(n) as the algorithm adds elements into a hash table</li>
 </ul>
+
+<p><a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example/">Learn more about Hash table</a></p>
             
             <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
