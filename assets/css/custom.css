@@ -172,14 +172,31 @@ aside.sponsors{
 	}
 
 	.sidebar {
-		display: table-cell;
+		display: flex;
+		flex-direction: column;
+		height: auto;
 	}
 
-	.widget:last-child {
+	.widget.sponsors {
 		position: sticky;
 		position: -webkit-sticky;
 		top: 10px;
-		bottom: 436px;
+	}
+
+	.widget.sponsors:nth-child(2) {
+		height: calc(100% - 1632px);
+	}
+
+	.widget.sponsors:nth-child(3) {
+		height: calc(100% - 1350px);
+	}
+
+	.widget.sponsors:nth-child(4) {
+		height: calc(100% - 1068px);
+	}
+
+	.widget.sponsors:last-child {
+		height: calc(100% - 436px);
 	}
 
 	.recommend {
