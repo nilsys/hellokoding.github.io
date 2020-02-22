@@ -175,11 +175,26 @@ aside.sponsors{
 		display: table-cell;
 	}
 
-	.widget:last-child {
+	.widget.sponsors {
 		position: sticky;
 		position: -webkit-sticky;
 		top: 10px;
-		bottom: 436px;
+		height: 4651
+	}
+
+	.widget.sponsors:nth-child(1) {
+		/*bottom: 1350px;*/
+		background-color: red;
+	}
+
+	.widget.sponsors:nth-child(2) {
+		/* bottom: 1068px; */
+		background-color: green;
+	}
+
+	.widget.sponsors:last-child {
+		/* bottom: 436px; */
+		background-color: blue;
 	}
 
 	.recommend {
