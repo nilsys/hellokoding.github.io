@@ -184,18 +184,22 @@ aside.sponsors{
 	}
 
 	.widget.sponsors:nth-child(2) {
-		height: calc(100% - 1632px);
+		height: calc(100% - 1914px);
 	}
 
 	.widget.sponsors:nth-child(3) {
-		height: calc(100% - 1350px);
+		height: calc(100% - 1632px);
 	}
 
 	.widget.sponsors:nth-child(4) {
+		height: calc(100% - 1350px);
+	}
+
+	.widget.sponsors:nth-child(5) {
 		height: calc(100% - 1068px);
 	}
 
-	.widget.sponsors:last-child {
+	.widget.sponsors:nth-child(6) {
 		height: calc(100% - 436px);
 	}
 
