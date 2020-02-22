@@ -184,23 +184,23 @@ aside.sponsors{
 	}
 
 	.widget.sponsors:nth-child(2) {
-		height: calc(100% - 1914px);
+		height: calc(100% - 1478px);
 	}
 
 	.widget.sponsors:nth-child(3) {
-		height: calc(100% - 1632px);
+		height: calc(100% - 1196px);
 	}
 
 	.widget.sponsors:nth-child(4) {
-		height: calc(100% - 1350px);
+		height: calc(100% - 914px);
 	}
 
 	.widget.sponsors:nth-child(5) {
-		height: calc(100% - 718px);
+		height: calc(100% - 632px);
 	}
 
 	.widget.sponsors:nth-child(6) {
-		height: calc(100% - 436px);
+		height: 100%;
 	}
 
 	.recommend {
