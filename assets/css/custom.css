@@ -181,7 +181,11 @@ aside.sponsors{
 		position: sticky;
 		position: -webkit-sticky;
 		top: 10px;
-		height: 100%;
+		height: 15%;
+	}
+
+	.widget.sponsors:last-child {
+		height: auto;
 	}
 
 	.recommend {
