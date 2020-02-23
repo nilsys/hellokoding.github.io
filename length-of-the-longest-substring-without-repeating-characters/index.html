@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Longest substring without repeating characters</title>
+  <title>Longest substring without repeating characters problem</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,18 +19,18 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Longest substring without repeating characters">
-    <meta property="og:description" content='Problem Given a string s Write an algorithm to find the longest substring without repeating characters Example Input: "HelloKoding". Expected output: "Koding" Approach: Sliding Window Use a HashSet chars to manage distinct characters Maintain a substring window with start index i and end index j to find the longest substring'>
+    <meta property="og:title" content="Longest substring without repeating characters problem">
+    <meta property="og:description" content="You will learn to resolve the longest substring without repeating characters problem by using a hash table as a sliding window to check a condition when iterating over an array or string A window is a range of element indices in an array or string. A sliding window is a">
     <meta property="og:url" content="http://hellokoding.com/length-of-the-longest-substring-without-repeating-characters/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/StringAlgorithms_LongestDistinct.png">
     <meta property="article:published_time" content="2019-06-07T03:20:13.000Z">
-    <meta property="article:modified_time" content="2019-06-08T08:26:11.000Z">
+    <meta property="article:modified_time" content="2020-02-23T15:19:15.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Longest substring without repeating characters">
-    <meta name="twitter:description" content='Problem Given a string s Write an algorithm to find the longest substring without repeating characters Example Input: "HelloKoding". Expected output: "Koding" Approach: Sliding Window Use a HashSet chars to manage distinct characters Maintain a substring window with start index i and end index j to find the longest substring'>
+    <meta name="twitter:title" content="Longest substring without repeating characters problem">
+    <meta name="twitter:description" content="You will learn to resolve the longest substring without repeating characters problem by using a hash table as a sliding window to check a condition when iterating over an array or string A window is a range of element indices in an array or string. A sliding window is a">
     <meta name="twitter:url" content="http://hellokoding.com/length-of-the-longest-substring-without-repeating-characters/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/StringAlgorithms_LongestDistinct.png">
     <meta name="twitter:label1" content="Written by">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Longest substring without repeating characters",
+    "headline": "Longest substring without repeating characters problem",
     "url": "http://hellokoding.com/length-of-the-longest-substring-without-repeating-characters/",
     "datePublished": "2019-06-07T03:20:13.000Z",
-    "dateModified": "2019-06-08T08:26:11.000Z",
+    "dateModified": "2020-02-23T15:19:15.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/StringAlgorithms_LongestDistinct.png",
     "keywords": "Algorithm",
-    "description": "Problem Given a string s Write an algorithm to find the longest substring without repeating characters Example Input: &quot;HelloKoding&quot;. Expected output: &quot;Koding&quot; Approach: Sliding Window Use a HashSet chars to manage distinct characters Maintain a substring window with start index i and end index j to find the longest substring"
+    "description": "You will learn to resolve the longest substring without repeating characters problem by using a hash table as a sliding window to check a condition when iterating over an array or string A window is a range of element indices in an array or string. A sliding window is a"
 }
     </script>
 
@@ -230,8 +230,8 @@ ghost.init({
         <article class="post tag-algorithm">
 
           <header class="post__header">
-            <h1 class="post__title">Longest substring without repeating characters</h1>
-            <time class="post__date" datetime="2019-06-08">Last modified @ 08 June 2019</time>
+            <h1 class="post__title">Longest substring without repeating characters problem</h1>
+            <time class="post__date" datetime="2020-02-23">Last modified @ 23 February 2020</time>
           </header>
 
           <div class="post-content">
@@ -239,38 +239,70 @@ ghost.init({
               <a href="../tag/algorithm/">Algorithm</a>
             </div>
 
-            <h3 id="problem">Problem</h3>
+            <p>You will learn to resolve the longest substring without repeating characters problem by using a hash table as a sliding window to check a condition when iterating over an array or string</p>
+
+<p>A window is a range of element indices in an array or string. A sliding window is a window that slides its boundaries toward a direction (left/right)</p>
+
+<h3 id="problem">Problem</h3>
 
 <ul>
-<li>Given a string <code>s</code></li>
-<li>Write an algorithm to find the longest substring without repeating characters</li>
+<li><p>Given a string <code>s</code></p></li>
+<li><p>Write an algorithm to find in <code>s</code> the longest substring without repeating characters</p></li>
 </ul>
 
 <h3 id="example">Example</h3>
 
 <ul>
-<li>Input: "HelloKoding". Expected output: "Koding"</li>
+<li>Input: "HelloKoding", expected output: "Koding"</li>
 </ul>
 
-<h3 id="approachslidingwindow">Approach: Sliding Window</h3>
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="approach1bruteforce">Approach 1: Brute force</h3>
 
 <ul>
-<li><p>Use a <code>HashSet</code> <code>chars</code> to manage distinct characters</p></li>
-<li><p>Maintain a substring window with start index <code>i</code> and end index <code>j</code> to find the longest substring</p>
-
-<p>Iterate over the string <code>s</code>, add the character at <code>s[j]</code> to the set <code>chars</code> and increase <code>j</code> value to 1 if <code>s[j]</code> is not existed in <code>chars</code>, otherwise remove <code>s[i]</code> from the set and increase <code>i</code> value to 1</p></li>
+<li><p>Iterate over all substrings in the given string</p></li>
+<li><p>At each substring, use a hash table to check if the substring has duplicated characters or not</p></li>
 </ul>
 
-<h4 id="implementation">Implementation</h4>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/String_LongestDistinct.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/LongestDistinctChars_BruteForce.java">
 </code></pre>
 
-<h4 id="complexity">Complexity</h4>
+<ul>
+<li>Output</li>
+</ul>
+
+<pre><code>Koding  
+</code></pre>
 
 <ul>
-<li>Time complexity: O(n)</li>
-<li>Space complexity: O(n)</li>
+<li><p>Time complexity: O(n<sup>3</sup>)</p></li>
+<li><p>Space complexity: O(n)</p></li>
+</ul>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="approach2slidingwindow">Approach 2: Sliding window</h3>
+
+<ul>
+<li><p>Use a hash table <code>h</code> as a sliding window of characters in the given string <code>s</code></p></li>
+<li><p>Iterate over <code>s</code>, at each iteration, if <code>h</code> is not containing the current character, then add it to <code>h</code> and increases the right index to 1</p></li>
+<li><p>If <code>h</code> is containing the current character, remove it from <code>h</code> and increases the left index to 1</p></li>
+</ul>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/LongestDistinctChars_SlidingWindow.java">
+</code></pre>
+
+<ul>
+<li>Output</li>
+</ul>
+
+<pre><code>Koding  
+</code></pre>
+
+<ul>
+<li><p>Time complexity: O(n)</p></li>
+<li><p>Space complexity: O(n)</p></li>
 </ul>
             
             <div class="post__tags">
@@ -280,7 +312,7 @@ ghost.init({
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Longest%20substring%20without%20repeating%20characters&amp;url=http://hellokoding.com/length-of-the-longest-substring-without-repeating-characters/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Longest%20substring%20without%20repeating%20characters%20problem&amp;url=http://hellokoding.com/length-of-the-longest-substring-without-repeating-characters/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
