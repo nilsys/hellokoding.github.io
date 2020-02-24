@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Longest Palindromic Substring">
-    <meta property="og:description" content='Problem Given a string S Write an algorithm to find the longest palindromic substring in S Palindromic string reads the same backwards. A character itself is a palindrome Example Input: "bananas". Expected output: "anana" Input: "bb". Expected output: "bb" Input: "a". Expected output: "a" Approach 1: Brute Force Find all'>
+    <meta property="og:description" content="In this article, you will learn to resolve the longest palindromic substring problem by using a dynamic programming algorithm A palindromic is a string that reads the same in both directions. A character itself is a palindrome Problem Given a string s Write an algorithm to find the longest palindromic">
     <meta property="og:url" content="http://hellokoding.com/longest-palindromic-substring/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/StringAlgorithms_PalindromeSubstring.png">
     <meta property="article:published_time" content="2019-06-06T08:36:04.000Z">
-    <meta property="article:modified_time" content="2019-06-08T05:57:17.000Z">
+    <meta property="article:modified_time" content="2020-02-24T06:54:23.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Longest Palindromic Substring">
-    <meta name="twitter:description" content='Problem Given a string S Write an algorithm to find the longest palindromic substring in S Palindromic string reads the same backwards. A character itself is a palindrome Example Input: "bananas". Expected output: "anana" Input: "bb". Expected output: "bb" Input: "a". Expected output: "a" Approach 1: Brute Force Find all'>
+    <meta name="twitter:description" content="In this article, you will learn to resolve the longest palindromic substring problem by using a dynamic programming algorithm A palindromic is a string that reads the same in both directions. A character itself is a palindrome Problem Given a string s Write an algorithm to find the longest palindromic">
     <meta name="twitter:url" content="http://hellokoding.com/longest-palindromic-substring/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/StringAlgorithms_PalindromeSubstring.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Longest Palindromic Substring",
     "url": "http://hellokoding.com/longest-palindromic-substring/",
     "datePublished": "2019-06-06T08:36:04.000Z",
-    "dateModified": "2019-06-08T05:57:17.000Z",
+    "dateModified": "2020-02-24T06:54:23.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/StringAlgorithms_PalindromeSubstring.png",
     "keywords": "Algorithm",
-    "description": "Problem Given a string S Write an algorithm to find the longest palindromic substring in S Palindromic string reads the same backwards. A character itself is a palindrome Example Input: &quot;bananas&quot;. Expected output: &quot;anana&quot; Input: &quot;bb&quot;. Expected output: &quot;bb&quot; Input: &quot;a&quot;. Expected output: &quot;a&quot; Approach 1: Brute Force Find all"
+    "description": "In this article, you will learn to resolve the longest palindromic substring problem by using a dynamic programming algorithm A palindromic is a string that reads the same in both directions. A character itself is a palindrome Problem Given a string s Write an algorithm to find the longest palindromic"
 }
     </script>
 
@@ -231,7 +231,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Longest Palindromic Substring</h1>
-            <time class="post__date" datetime="2019-06-08">Last modified @ 08 June 2019</time>
+            <time class="post__date" datetime="2020-02-24">Last modified @ 24 February 2020</time>
           </header>
 
           <div class="post-content">
@@ -239,40 +239,52 @@ ghost.init({
               <a href="../tag/algorithm/">Algorithm</a>
             </div>
 
-            <h3 id="problem">Problem</h3>
+            <p>In this article, you will learn to resolve the longest palindromic substring problem by using a dynamic programming algorithm</p>
+
+<p>A palindromic is a string that reads the same in both directions. A character itself is a palindrome</p>
+
+<h3 id="problem">Problem</h3>
 
 <ul>
-<li>Given a string <code>S</code></li>
-<li>Write an algorithm to find the longest palindromic substring in <code>S</code></li>
-<li>Palindromic string reads the same backwards. A character itself is a palindrome</li>
+<li><p>Given a string <code>s</code></p></li>
+<li><p>Write an algorithm to find the longest palindromic substring in <code>s</code></p></li>
 </ul>
 
 <h3 id="example">Example</h3>
 
 <ul>
-<li>Input: "bananas". Expected output: "anana"</li>
-<li>Input: "bb". Expected output: "bb"</li>
-<li>Input: "a". Expected output: "a"</li>
+<li><p>Input: "bananas". Expected output: "anana"</p></li>
+<li><p>Input: "bb". Expected output: "bb"</p></li>
+<li><p>Input: "a". Expected output: "a"</p></li>
 </ul>
+
+<p></p><div class="hk-autoads"></div>  
 
 <h3 id="approach1bruteforce">Approach 1: Brute Force</h3>
 
 <ul>
-<li>Find all substrings in the given string <code>S</code></li>
-<li>For each substring, check if it is the longest palindrome</li>
+<li><p>Find all substrings in the given string <code>s</code></p></li>
+<li><p>For each substring, check if it is the longest palindrome</p></li>
 </ul>
-
-<h4 id="implementation">Implementation</h4>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/String_LongestPalindrome_BruteForce.java">
 </code></pre>
 
-<h4 id="complexity">Complexity</h4>
+<ul>
+<li>Output</li>
+</ul>
+
+<pre><code class="language-markup">anana  
+bb  
+a  
+</code></pre>
 
 <ul>
-<li>Time complexity: O(n<sup>3</sup>)</li>
-<li>Space complexity: O(1)</li>
+<li><p>Time complexity: O(n<sup>3</sup>)</p></li>
+<li><p>Space complexity: O(1)</p></li>
 </ul>
+
+<p></p><div class="hk-autoads"></div>  
 
 <h3 id="approach2dynamicprogramming">Approach 2: Dynamic Programming</h3>
 
@@ -282,21 +294,27 @@ ghost.init({
 <p>So the optimal substructure is <code>P(i,j) = (S(i) == S(j) &amp;&amp; P(i+1,j-1))</code> with <code>P(i,j)</code> is a palindromic substring from index <code>i</code> to <code>j</code></p>
 
 <p>Base cases: <code>P(i,i) = true</code> as a character itself is a palindrome, <code>P(i,i+1) = (S(i) == S(i+1))</code></p></li>
-<li><p>Bottom up filling <code>P[i][j]</code> value as <code>true</code> if substring at <code>i</code> and <code>j</code> is palindrome, starting with one, two letters and so on</p>
+<li><p>Bottom-up filling <code>P[i][j]</code> value as <code>true</code> if substring at <code>i</code> and <code>j</code> is a palindrome, starting with one, two letters and so on</p>
 
 <p>At each iteration, remember the substring's start index and max length to find the longest palindromic substring</p></li>
 </ul>
 
-<h4 id="implementation">Implementation</h4>
-
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/String_LongestPalindrome_DP.java">
 </code></pre>
 
-<h4 id="complexity">Complexity</h4>
+<ul>
+<li>Output</li>
+</ul>
+
+<pre><code class="language-markup">a  
+bb  
+ccc  
+anana  
+</code></pre>
 
 <ul>
-<li>Time complexity: O(n<sup>2</sup>)</li>
-<li>Space complexity: O(n<sup>2</sup>)</li>
+<li><p>Time complexity: O(n<sup>2</sup>)</p></li>
+<li><p>Space complexity: O(n<sup>2</sup>)</p></li>
 </ul>
             
             <div class="post__tags">
