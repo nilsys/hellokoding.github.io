@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/longest-palindromic-substring/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/StringAlgorithms_PalindromeSubstring.png">
     <meta property="article:published_time" content="2019-06-06T08:36:04.000Z">
-    <meta property="article:modified_time" content="2020-02-24T10:55:26.000Z">
+    <meta property="article:modified_time" content="2020-02-24T10:57:46.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Longest Palindromic Substring",
     "url": "http://hellokoding.com/longest-palindromic-substring/",
     "datePublished": "2019-06-06T08:36:04.000Z",
-    "dateModified": "2020-02-24T10:55:26.000Z",
+    "dateModified": "2020-02-24T10:57:46.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/StringAlgorithms_PalindromeSubstring.png",
     "keywords": "Algorithm",
     "description": "In this article, you will learn to resolve the longest palindromic substring problem by using a dynamic programming algorithm A palindromic is a string that reads the same in both directions. A character itself is a palindrome Problem Given a string s Write an algorithm to find the longest palindromic"
@@ -294,7 +294,7 @@ a
 <p>So the optimal substructure is <code>P(i,j) = (S(i) == S(j) &amp;&amp; P(i+1,j-1))</code> with <code>P(i,j)</code> is a palindromic substring from index <code>i</code> to <code>j</code></p>
 
 <p>Base cases: <code>P(i,i) = true</code> as a character itself is a palindrome, <code>P(i,i+1) = (S(i) == S(i+1))</code></p></li>
-<li><p>Bottom-up filling <code>P[i][j]</code> matrix value with <code>i</code> is an index of a character in the given string <code>s</code>, <code>l</code> is a length of possible palindrome substrings</p>
+<li><p>Bottom-up filling <code>P[i][j]</code> matrix value with <code>i</code> is an index of a character in the given string <code>s</code>, <code>j</code> is a length of possible palindrome substrings</p>
 
 <p>At each iteration, remember the substring's start index and max length to find the longest palindromic substring</p></li>
 </ul>
