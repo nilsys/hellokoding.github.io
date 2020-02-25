@@ -20,23 +20,24 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Email Verification Example with Spring Boot, MySQL, and Amazon SES">
-    <meta property="og:description" content="This tutorial walks you through the steps of creating an Email Verification web application Example with Spring Boot, MySQL and Amazon AWS SES What you'll build Email Verification Form Send verification email through Amazon SES Verify email service What you'll need Docker CE Amazon SES account SMTP Credentials of your">
+    <meta property="og:description" content="This tutorial walks you through the steps of creating an Email Verification web application Example with Spring Boot, MySQL, and Amazon AWS SES What you'll build Email Verification Form Send verification email through Amazon SES Verify email service What you'll need Docker CE Amazon SES account SMTP Credentials of your">
     <meta property="og:url" content="http://hellokoding.com/email-verification-example-with-spring-boot-mysql-docker-compose/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/SpringBoot_EmailVerification.png">
     <meta property="article:published_time" content="2018-01-10T15:43:45.000Z">
-    <meta property="article:modified_time" content="2019-06-08T12:59:13.000Z">
+    <meta property="article:modified_time" content="2020-02-25T13:27:46.000Z">
     <meta property="article:tag" content="Spring">
+    <meta property="article:tag" content="Security">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Email Verification Example with Spring Boot, MySQL, and Amazon SES">
-    <meta name="twitter:description" content="This tutorial walks you through the steps of creating an Email Verification web application Example with Spring Boot, MySQL and Amazon AWS SES What you'll build Email Verification Form Send verification email through Amazon SES Verify email service What you'll need Docker CE Amazon SES account SMTP Credentials of your">
+    <meta name="twitter:description" content="This tutorial walks you through the steps of creating an Email Verification web application Example with Spring Boot, MySQL, and Amazon AWS SES What you'll build Email Verification Form Send verification email through Amazon SES Verify email service What you'll need Docker CE Amazon SES account SMTP Credentials of your">
     <meta name="twitter:url" content="http://hellokoding.com/email-verification-example-with-spring-boot-mysql-docker-compose/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/SpringBoot_EmailVerification.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Spring">
+    <meta name="twitter:data2" content="Spring, Security">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -63,10 +64,10 @@
     "headline": "Email Verification Example with Spring Boot, MySQL, and Amazon SES",
     "url": "http://hellokoding.com/email-verification-example-with-spring-boot-mysql-docker-compose/",
     "datePublished": "2018-01-10T15:43:45.000Z",
-    "dateModified": "2019-06-08T12:59:13.000Z",
+    "dateModified": "2020-02-25T13:27:46.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/SpringBoot_EmailVerification.png",
-    "keywords": "Spring",
-    "description": "This tutorial walks you through the steps of creating an Email Verification web application Example with Spring Boot, MySQL and Amazon AWS SES What you&#x27;ll build Email Verification Form Send verification email through Amazon SES Verify email service What you&#x27;ll need Docker CE Amazon SES account SMTP Credentials of your"
+    "keywords": "Spring, Security",
+    "description": "This tutorial walks you through the steps of creating an Email Verification web application Example with Spring Boot, MySQL, and Amazon AWS SES What you&#x27;ll build Email Verification Form Send verification email through Amazon SES Verify email service What you&#x27;ll need Docker CE Amazon SES account SMTP Credentials of your"
 }
     </script>
 
@@ -87,7 +88,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-spring">
+<body class="post-template tag-spring tag-security">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -227,19 +228,19 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-9 column">
-        <article class="post tag-spring">
+        <article class="post tag-spring tag-security">
 
           <header class="post__header">
             <h1 class="post__title">Email Verification Example with Spring Boot, MySQL, and Amazon SES</h1>
-            <time class="post__date" datetime="2019-06-08">Last modified @ 08 June 2019</time>
+            <time class="post__date" datetime="2020-02-25">Last modified @ 25 February 2020</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/spring/">Spring</a>
+              <a href="../tag/spring/">Spring</a><a href="../tag/security/">Security</a>
             </div>
 
-            <p>This tutorial walks you through the steps of creating an Email Verification web application Example with Spring Boot, MySQL and Amazon AWS SES</p>
+            <p>This tutorial walks you through the steps of creating an Email Verification web application Example with Spring Boot, MySQL, and Amazon AWS SES</p>
 
 <h3 id="whatyoullbuild">What you'll build</h3>
 
@@ -273,9 +274,13 @@ ghost.init({
 <li>Maven</li>
 </ul>
 
-<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+<div class="hk-autoads"></div>  
 
-<h3 id="projectstructure">Project structure</h3>
+<h3 id="initprojectstructure">Init project structure</h3>
+
+<p>You can create and init a new Spring Boot project by using Spring CLI or Spring Initializr. Learn more about using these tools <a href="https://hellokoding.com/create-a-new-spring-boot-project/">here</a></p>
+
+<p>The final project structure as below  </p>
 
 <pre><code class="language-bash">├── src
 │   └── main
@@ -317,9 +322,9 @@ ghost.init({
 <pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-email-verification-mysql/pom.xml">
 </code></pre>
 
-<h2 id="definejpaentitiesandrepositories">Define JPA Entities and Repositories</h2>
+<div class="hk-autoads"></div>  
 
-<h3 id="jpaentities">JPA Entities</h3>
+<h3 id="createjpaentities">Create JPA Entities</h3>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-email-verification-mysql/src/main/java/com/hellokoding/account/model/User.java">
 </code></pre>
@@ -327,7 +332,7 @@ ghost.init({
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-email-verification-mysql/src/main/java/com/hellokoding/account/model/VerificationToken.java">
 </code></pre>
 
-<h3 id="jparepositories">JPA Repositories</h3>
+<h3 id="createjparepositories">Create JPA Repositories</h3>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-email-verification-mysql/src/main/java/com/hellokoding/account/repository/UserRepository.java">
 </code></pre>
@@ -335,7 +340,7 @@ ghost.init({
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-email-verification-mysql/src/main/java/com/hellokoding/account/repository/VerificationTokenRepository.java">
 </code></pre>
 
-<h2 id="defineservices">Define Services</h2>
+<h2 id="createservices">Create Services</h2>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-email-verification-mysql/src/main/java/com/hellokoding/account/service/SendingMailService.java">
 </code></pre>
@@ -343,14 +348,14 @@ ghost.init({
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-email-verification-mysql/src/main/java/com/hellokoding/account/service/VerificationTokenService.java">
 </code></pre>
 
-<h2 id="definecontrollersandviewtemplates">Define Controllers and View Templates</h2>
+<div class="hk-autoads"></div>  
 
-<h3 id="controllers">Controllers</h3>
+<h3 id="createcontrollers">Create Controllers</h3>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-email-verification-mysql/src/main/java/com/hellokoding/account/web/AccountController.java">
 </code></pre>
 
-<h3 id="freemarkerviewtemplate">FreeMarker View template</h3>
+<h3 id="createfreemarkerviewtemplate">Create FreeMarker View template</h3>
 
 <pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-email-verification-mysql/src/main/resources/templates/verification-form.ftl">
 </code></pre>
@@ -358,7 +363,7 @@ ghost.init({
 <pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/springboot-email-verification-mysql/src/main/resources/templates/email-verification.ftl">
 </code></pre>
 
-<h2 id="configandrun">Config and Run</h2>
+<div class="hk-autoads"></div>  
 
 <h3 id="applicationconfiguration">Application Configuration</h3>
 
@@ -399,7 +404,7 @@ ghost.init({
 <p><a href="https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-email-verification-mysql">https://github.com/hellokoding/hellokoding-courses/tree/master/springboot-examples/springboot-email-verification-mysql</a></p>
             
             <div class="post__tags">
-              <a href="../tag/spring/">Spring</a>
+              <a href="../tag/spring/">Spring</a><a href="../tag/security/">Security</a>
             </div>
           </div>
 
