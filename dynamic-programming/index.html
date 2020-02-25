@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dynamic Programming Tutorial and Example with Fibonacci Numbers</title>
+  <title>Dynamic Programming Example in Java with Fibonacci Numbers</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,18 +19,18 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Dynamic Programming Tutorial and Example with Fibonacci Numbers">
-    <meta property="og:description" content="Dynamic Programming is a method for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems to reuse them and save time later Let's see a specific example The Fibonacci numbers The Fibonacci numbers form a">
+    <meta property="og:title" content="Dynamic Programming Example in Java with Fibonacci Numbers">
+    <meta property="og:description" content="In this article, you will learn to resolve the Fibonacci numbers problem by using recursive vs dynamic programming algorithms Dynamic programming is an algorithm for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems into">
     <meta property="og:url" content="http://hellokoding.com/dynamic-programming/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/DynamicProgramming_FibonacciNumbers.png">
     <meta property="article:published_time" content="2019-02-26T10:49:18.000Z">
-    <meta property="article:modified_time" content="2019-06-11T04:21:58.000Z">
+    <meta property="article:modified_time" content="2020-02-25T12:59:49.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Dynamic Programming Tutorial and Example with Fibonacci Numbers">
-    <meta name="twitter:description" content="Dynamic Programming is a method for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems to reuse them and save time later Let's see a specific example The Fibonacci numbers The Fibonacci numbers form a">
+    <meta name="twitter:title" content="Dynamic Programming Example in Java with Fibonacci Numbers">
+    <meta name="twitter:description" content="In this article, you will learn to resolve the Fibonacci numbers problem by using recursive vs dynamic programming algorithms Dynamic programming is an algorithm for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems into">
     <meta name="twitter:url" content="http://hellokoding.com/dynamic-programming/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/DynamicProgramming_FibonacciNumbers.png">
     <meta name="twitter:label1" content="Written by">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Dynamic Programming Tutorial and Example with Fibonacci Numbers",
+    "headline": "Dynamic Programming Example in Java with Fibonacci Numbers",
     "url": "http://hellokoding.com/dynamic-programming/",
     "datePublished": "2019-02-26T10:49:18.000Z",
-    "dateModified": "2019-06-11T04:21:58.000Z",
+    "dateModified": "2020-02-25T12:59:49.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/DynamicProgramming_FibonacciNumbers.png",
     "keywords": "Algorithm",
-    "description": "Dynamic Programming is a method for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems to reuse them and save time later Let&#x27;s see a specific example The Fibonacci numbers The Fibonacci numbers form a"
+    "description": "In this article, you will learn to resolve the Fibonacci numbers problem by using recursive vs dynamic programming algorithms Dynamic programming is an algorithm for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems into"
 }
     </script>
 
@@ -230,8 +230,8 @@ ghost.init({
         <article class="post tag-algorithm">
 
           <header class="post__header">
-            <h1 class="post__title">Dynamic Programming Tutorial and Example with Fibonacci Numbers</h1>
-            <time class="post__date" datetime="2019-06-11">Last modified @ 11 June 2019</time>
+            <h1 class="post__title">Dynamic Programming Example in Java with Fibonacci Numbers</h1>
+            <time class="post__date" datetime="2020-02-25">Last modified @ 25 February 2020</time>
           </header>
 
           <div class="post-content">
@@ -239,39 +239,123 @@ ghost.init({
               <a href="../tag/algorithm/">Algorithm</a>
             </div>
 
-            <p>Dynamic Programming is a method for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems to reuse them and save time later</p>
+            <p>In this article, you will learn to resolve the Fibonacci numbers problem by using recursive vs dynamic programming algorithms</p>
 
-<p>Let's see a specific example</p>
+<p>Dynamic programming is an algorithm for solving a problem by breaking it down into subproblems of the same type with smaller input and storing the computed results of overlapping subproblems into a cache memory to reuse them and save time later</p>
 
-<h3 id="thefibonaccinumbers">The Fibonacci numbers</h3>
+<p>Steps to solve a dynamic programming problem</p>
 
-<p>The Fibonacci numbers form a sequence such that each number is the sum of two preceding ones, starting from 0 and 1</p>
+<ul>
+<li><p>Break the problem into subproblems and find the optimal substructure. A problem is said to have optimal substructure if an optimal solution can be constructed from optimal solutions of its subproblems</p></li>
+<li><p>Find overlapping subproblems</p></li>
+<li><p>Use an array or hash table to cache solution to overlapping subproblems. There are two ways to fill the cache: top-down and bottom-up</p></li>
+</ul>
 
-<p>F<sub>0</sub> = 0, F<sub>1</sub> = 1 <br>
-F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub> for n &gt; 1</p>
+<p>Let walkthrough below to explore in more details</p>
 
-<h3 id="problem">Problem</h3>
+<p></p><div class="hk-autoads"></div>  
 
-<p>Given a number n, write an algorithm to print the value of Fibonacci number F<sub>n</sub></p>
+<h3 id="fibonaccinumbersproblem">Fibonacci numbers problem</h3>
+
+<ul>
+<li><p>Given a number n</p></li>
+<li><p>Write an algorithm to return the Fibonacci number at <code>n</code></p></li>
+<li><p>Fibonacci numbers form a sequence such that each number is the sum of two preceding ones, starting from 0 and 1</p></li>
+</ul>
+
+<h3 id="example">Example</h3>
+
+<ul>
+<li><p>Input <code>n=2</code>, expected output <code>1</code></p></li>
+<li><p>Input <code>n=6</code>, expected output <code>8</code></p></li>
+<li><p>Input <code>n=10</code>. Expected output <code>55</code></p></li>
+</ul>
+
+<h3 id="analysis">Analysis</h3>
+
+<ul>
+<li><p>Optimal substructure</p>
+
+<p>F<sub>0</sub> = 0, F<sub>1</sub> = 1</p>
+
+<p>F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub> for n &gt; 1</p></li>
+<li><p>Overlapping subproblems</p>
+
+<p>Say you'd like to calculate F<sub>3</sub> which can be represented as below</p>
+
+<p>F<sub>3</sub> = F<sub>2</sub> + F<sub>1</sub> = (F<sub>1</sub> + F<sub>0</sub>) + F<sub>1</sub></p>
+
+<p>F<sub>1</sub> is calculated more than 1 time so the computed result can be cached to save time</p></li>
+</ul>
+
+<p></p><div class="hk-autoads"></div>  
 
 <h3 id="approach1recursion">Approach 1: Recursion</h3>
+
+<ul>
+<li>Use a recursive algorithm to resolve the problem with no-cache</li>
+</ul>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/FibonacciRecursion.java">
 </code></pre>
 
+<ul>
+<li>Output</li>
+</ul>
+
+<pre><code class="language-markup">55  
+</code></pre>
+
+<p></p><div class="hk-autoads"></div>  
+
 <h3 id="approach2memoizationtopdowndynamicprogramming">Approach 2: Memoization/Top-down Dynamic Programming</h3>
 
-<p>Using an array to store computed results starting from N to 0, so called top-down</p>
+<ul>
+<li>Using a cache array to store computed results starting from N to 0, so-called top-down</li>
+</ul>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/FibonacciMemoization.java">
 </code></pre>
 
+<ul>
+<li>Output</li>
+</ul>
+
+<pre><code class="language-markup">55  
+</code></pre>
+
+<p></p><div class="hk-autoads"></div>  
+
 <h3 id="approach3tabulationbottomupdynamicprogramming">Approach 3: Tabulation/Bottom-up Dynamic Programming</h3>
 
-<p>Using an array to store computed results starting from 0 to N, so called bottom-up</p>
+<ul>
+<li>Using a cache array to store computed results starting from 0 to N, so-called bottom-up</li>
+</ul>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/FibonacciTabular.java">
 </code></pre>
+
+<ul>
+<li>Output</li>
+</ul>
+
+<pre><code class="language-markup">55  
+</code></pre>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="otherdynamicprogammingproblems">Other dynamic progamming problems</h3>
+
+<ul>
+<li><p><a href="https://hellokoding.com/longest-palindromic-substring/">Longest palindromic substring</a></p></li>
+<li><p><a href="https://hellokoding.com/longest-increasing-subsequence/">Longest Increasing Subsequence</a></p></li>
+<li><p><a href="https://hellokoding.com/box-stacking-problem/">Box Stacking</a></p></li>
+<li><p><a href="https://hellokoding.com/count-unique-paths-in-a-grid-maze-matrix/">Unique Paths Without Obstacles</a></p></li>
+<li><p><a href="https://hellokoding.com/count-unique-paths-in-a-2d-array-grid-maze-matrix-with-obstacles/">Unique Paths With Obstacles</a> </p></li>
+<li><p><a href="https://hellokoding.com/0-1-knapsack-problem/">0-1 Knapsack</a> </p></li>
+<li><p><a href="https://hellokoding.com/coin-change-problem/">Coin Change</a>  </p></li>
+<li><p><a href="https://hellokoding.com/coin-change-problem-find-the-minimum-number-of-coins-of-making-change/">Minimum Coin Change</a></p></li>
+</ul>
             
             <div class="post__tags">
               <a href="../tag/algorithm/">Algorithm</a>
@@ -280,7 +364,7 @@ F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub> for n &gt; 1</p>
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Dynamic%20Programming%20Tutorial%20and%20Example%20with%20Fibonacci%20Numbers&amp;url=http://hellokoding.com/dynamic-programming/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Dynamic%20Programming%20Example%20in%20Java%20with%20Fibonacci%20Numbers&amp;url=http://hellokoding.com/dynamic-programming/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
