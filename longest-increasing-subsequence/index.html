@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/longest-increasing-subsequence/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/DynamicProgramming_LongestIncreasingSubsequence.png">
     <meta property="article:published_time" content="2017-10-10T15:10:49.000Z">
-    <meta property="article:modified_time" content="2020-02-27T03:07:36.000Z">
+    <meta property="article:modified_time" content="2020-02-27T03:17:25.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Longest Increasing Subsequence",
     "url": "http://hellokoding.com/longest-increasing-subsequence/",
     "datePublished": "2017-10-10T15:10:49.000Z",
-    "dateModified": "2020-02-27T03:07:36.000Z",
+    "dateModified": "2020-02-27T03:17:25.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/DynamicProgramming_LongestIncreasingSubsequence.png",
     "keywords": "Algorithm",
     "description": "In this article, you will learn to resolve the longest increasing subsequence problems by using a dynamic programming algorithm A longest increasing subsequence is obtained from a sequence, has elements in increasing order and as long as possible Problem 1 Given an unsorted array of numbers a Write an algorithm"
@@ -247,8 +247,8 @@ ghost.init({
 
 <ul>
 <li><p>Given an unsorted array of numbers <code>a</code></p></li>
-<li><p>Write an algorithm to find the length of the longest increasing subsequence</p></li>
-<li><p>The longest increasing subsequence does not necessarily have to be contiguous or unique</p></li>
+<li><p>Write an algorithm to find the length of the longest increasing subsequence (LIS)</p></li>
+<li><p>The LIS does not necessarily have to be contiguous or unique</p></li>
 </ul>
 
 <h3 id="example">Example</h3>
@@ -256,7 +256,7 @@ ghost.init({
 <ul>
 <li><p>Input: [0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15] </p></li>
 <li><p>Output: 6</p></li>
-<li><p>Explanation: The longest increasing subsequences is {0, 2, 6, 9, 11, 15}. It's not contiguous or unique. Other instances are {0, 2, 6, 9, 13, 15}, {0, 4, 6, 9, 11, 15, {0, 4, 6, 9, 13, 15}</p></li>
+<li><p>Explanation: The LIS is {0, 2, 6, 9, 11, 15}. It's not contiguous or unique. Other instances are {0, 2, 6, 9, 13, 15}, {0, 4, 6, 9, 11, 15, {0, 4, 6, 9, 13, 15}</p></li>
 </ul>
 
 <h3 id="approachbruteforcewithrecursion">Approach: Brute force with recursion</h3>
@@ -286,10 +286,11 @@ ghost.init({
 <h3 id="approachdynamicprogramming">Approach: Dynamic programming</h3>
 
 <ul>
-<li><p>Optimal substructure and overlapping subproblems: say lis<sub>i</sub>, lis<sub>j</sub> are length of increasing subsequence at index i and j</p>
+<li><p>Optimal substructure and overlapping subproblems: say lis<sub>i</sub>, lis<sub>j</sub> are length of the LIS at index i and j</p>
 
 <p>lis<sub>i</sub> =  max(lis<sub>i</sub>, lis<sub>j</sub> + 1), ∀0 &lt;= j &lt; i and a[i] &gt; a[j]</p></li>
-<li><p>Use a cache array to fill the length of increasing subsequence at each index corresponding with the given array</p></li>
+<li><p>Use an array <code>cache[n]</code> to fill the length of the LIS at each index corresponding with the given array</p></li>
+<li><p>LIS(a) = max(cache[n])</p></li>
 </ul>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/LISLengthByDPBottomUp.java">
@@ -311,8 +312,8 @@ ghost.init({
 
 <ul>
 <li><p>Given an unsorted array of numbers <code>a</code></p></li>
-<li><p>Write an algorithm to find the length of the longest increasing subsequence</p></li>
-<li><p>The longest increasing subsequence does not necessarily have to be contiguous or unique</p></li>
+<li><p>Write an algorithm to find the length of the longest increasing subsequence (LIS)</p></li>
+<li><p>The LIS does not necessarily have to be contiguous or unique</p></li>
 </ul>
 
 <h3 id="example">Example</h3>
@@ -320,7 +321,7 @@ ghost.init({
 <ul>
 <li><p>Input: [0, 8, 4, 12, 2, 10, 6, 14, 1, 9, 5, 13, 3, 11, 7, 15] </p></li>
 <li><p>Output: [0, 2, 6, 9, 11, 15]</p></li>
-<li><p>Explanation: The longest increasing subsequences is {0, 2, 6, 9, 11, 15}. It's not contiguous or unique. Other instances are {0, 2, 6, 9, 13, 15}, {0, 4, 6, 9, 11, 15, {0, 4, 6, 9, 13, 15}</p></li>
+<li><p>Explanation: The LIS is {0, 2, 6, 9, 11, 15}. It's not contiguous or unique. Other instances are {0, 2, 6, 9, 13, 15}, {0, 4, 6, 9, 11, 15, {0, 4, 6, 9, 13, 15}</p></li>
 </ul>
 
 <h3 id="approachdynamicprogramming">Approach: Dynamic programming</h3>
