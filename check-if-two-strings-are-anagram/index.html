@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Check if two strings are anagram</title>
+  <title>Anagrams</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,18 +19,18 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Check if two strings are anagram">
-    <meta property="og:description" content='Problem Given two strings Write an algorithm to check if they are anagram Two strings are anagram if they contain same characters. The order of the characters may be different Example Input: given two strings "abc" and "bca". Expected output: true Input: given two strings "abc" and "bcb". Expected output:'>
+    <meta property="og:title" content="Anagrams">
+    <meta property="og:description" content="Learn to analyze and resolve the Anagrams problem by using Brute force, Sorting, Counting, and Histogramming algorithms Problem Given two strings s and t Write an algorithm to determine if t is an anagram of s Two strings are said to be anagrams of one another if the second string">
     <meta property="og:url" content="http://hellokoding.com/check-if-two-strings-are-anagram/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/06/StringAlgorithms_Anagram.png">
     <meta property="article:published_time" content="2019-06-05T03:29:00.000Z">
-    <meta property="article:modified_time" content="2019-06-08T05:56:58.000Z">
+    <meta property="article:modified_time" content="2020-03-05T05:32:44.000Z">
     <meta property="article:tag" content="Algorithm">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Check if two strings are anagram">
-    <meta name="twitter:description" content='Problem Given two strings Write an algorithm to check if they are anagram Two strings are anagram if they contain same characters. The order of the characters may be different Example Input: given two strings "abc" and "bca". Expected output: true Input: given two strings "abc" and "bcb". Expected output:'>
+    <meta name="twitter:title" content="Anagrams">
+    <meta name="twitter:description" content="Learn to analyze and resolve the Anagrams problem by using Brute force, Sorting, Counting, and Histogramming algorithms Problem Given two strings s and t Write an algorithm to determine if t is an anagram of s Two strings are said to be anagrams of one another if the second string">
     <meta name="twitter:url" content="http://hellokoding.com/check-if-two-strings-are-anagram/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/06/StringAlgorithms_Anagram.png">
     <meta name="twitter:label1" content="Written by">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Check if two strings are anagram",
+    "headline": "Anagrams",
     "url": "http://hellokoding.com/check-if-two-strings-are-anagram/",
     "datePublished": "2019-06-05T03:29:00.000Z",
-    "dateModified": "2019-06-08T05:56:58.000Z",
+    "dateModified": "2020-03-05T05:32:44.000Z",
     "image": "http://hellokoding.com/content/images/2019/06/StringAlgorithms_Anagram.png",
     "keywords": "Algorithm",
-    "description": "Problem Given two strings Write an algorithm to check if they are anagram Two strings are anagram if they contain same characters. The order of the characters may be different Example Input: given two strings &quot;abc&quot; and &quot;bca&quot;. Expected output: true Input: given two strings &quot;abc&quot; and &quot;bcb&quot;. Expected output:"
+    "description": "Learn to analyze and resolve the Anagrams problem by using Brute force, Sorting, Counting, and Histogramming algorithms Problem Given two strings s and t Write an algorithm to determine if t is an anagram of s Two strings are said to be anagrams of one another if the second string"
 }
     </script>
 
@@ -230,8 +230,8 @@ ghost.init({
         <article class="post tag-algorithm">
 
           <header class="post__header">
-            <h1 class="post__title">Check if two strings are anagram</h1>
-            <time class="post__date" datetime="2019-06-08">Last modified @ 08 June 2019</time>
+            <h1 class="post__title">Anagrams</h1>
+            <time class="post__date" datetime="2020-03-05">Last modified @ 05 March 2020</time>
           </header>
 
           <div class="post-content">
@@ -239,38 +239,140 @@ ghost.init({
               <a href="../tag/algorithm/">Algorithm</a>
             </div>
 
-            <h3 id="problem">Problem</h3>
+            <p>Learn to analyze and resolve the Anagrams problem by using Brute force, Sorting, Counting, and Histogramming algorithms</p>
+
+<h3 id="problem">Problem</h3>
 
 <ul>
-<li>Given two strings</li>
-<li>Write an algorithm to check if they are anagram</li>
-<li>Two strings are anagram if they contain same characters. The order of the characters may be different</li>
+<li><p>Given two strings <code>s</code> and <code>t</code></p></li>
+<li><p>Write an algorithm to determine if <code>t</code> is an anagram of <code>s</code></p></li>
+<li><p>Two strings are said to be anagrams of one another if the second string is formed by rearranging characters of the first string</p></li>
 </ul>
 
-<h3 id="example">Example</h3>
+<h3 id="example1">Example 1</h3>
 
 <ul>
-<li>Input: given two strings "abc" and "bca". Expected output: true</li>
-<li>Input: given two strings "abc" and "bcb". Expected output: false</li>
+<li><p>Input: s = "listen" and t = "silent"</p></li>
+<li><p>Output: true</p></li>
 </ul>
 
-<h3 id="approach">Approach</h3>
+<h3 id="example2">Example 2</h3>
 
 <ul>
-<li>Sort two given strings</li>
-<li>Compare the sorted strings</li>
+<li><p>Input: s = "eleven plus two" and t = "twelve plus one"</p></li>
+<li><p>Expected output: true</p></li>
 </ul>
 
-<h3 id="implementation">Implementation</h3>
+<h3 id="example3">Example 3</h3>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/String_Anagram.java">
+<ul>
+<li><p>Input: s = "rat" and t = "car"</p></li>
+<li><p>Expected output: false</p></li>
+</ul>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="approach1bruteforce">Approach 1: Brute force</h3>
+
+<ul>
+<li><p>Return false if two given strings <code>s</code> and <code>t</code> have different length</p></li>
+<li><p>Find all permutations of the first string</p></li>
+<li><p>Return true if any computed permutation equals the second string, otherwise, return false</p></li>
+</ul>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/AnagramsByBruteForce.java">
 </code></pre>
 
-<h4 id="complexity">Complexity</h4>
+<ul>
+<li>Output</li>
+</ul>
+
+<pre><code class="language-markup">true  
+false  
+</code></pre>
 
 <ul>
-<li>Time complexity: O(n)</li>
-<li>Space complexity: O(n)</li>
+<li><p>Time complexity: O(n!) as finding all permutations of a string of n characters costs O(n!) time</p></li>
+<li><p>Space complexity: O(1)</p></li>
+</ul>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="approach2sorting">Approach 2: Sorting</h3>
+
+<ul>
+<li><p>Return false if two given strings <code>s</code> and <code>t</code> have different length</p></li>
+<li><p>Sort two given strings</p></li>
+<li><p>Compare the sorted strings, return true if they are equivalent, otherwise, return false</p></li>
+</ul>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/AnagramsBySorting.java">
+</code></pre>
+
+<ul>
+<li>Output</li>
+</ul>
+
+<pre><code class="language-markup">true  
+true  
+false  
+</code></pre>
+
+<ul>
+<li><p>Time complexity: O(nlogn) as sorting costs O(nlogn)</p></li>
+<li><p>Space complexity: O(n) as two arrays of size <code>n</code> are used</p></li>
+</ul>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="approach3counting">Approach 3: Counting</h3>
+
+<ul>
+<li><p>Return false if two given strings <code>s</code> and <code>t</code> have different length</p></li>
+<li><p>Count and compare occurrences of 'a' to 'z' character in <code>s</code> and <code>t</code>, return false immediately if any comparison is different</p></li>
+</ul>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/AnagramsByCounting.java">
+</code></pre>
+
+<ul>
+<li>Output</li>
+</ul>
+
+<pre><code class="language-markup">true  
+true  
+false  
+</code></pre>
+
+<ul>
+<li><p>Time complexity: O(n) as string replacement costs O(n)</p></li>
+<li><p>Space complexity: O(1)</p></li>
+</ul>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="approach4histogramming">Approach 4: Histogramming</h3>
+
+<ul>
+<li><p>Return false if two given strings <code>s</code> and <code>t</code> have different length</p></li>
+<li><p>Build a frequency histogram of characters in each string and checking whether those histograms are the same</p></li>
+</ul>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/algorithm/AnagramsByHistogramming.java">
+</code></pre>
+
+<ul>
+<li>Output</li>
+</ul>
+
+<pre><code class="language-markup">true  
+true  
+false  
+</code></pre>
+
+<ul>
+<li><p>Time complexity: O(n) as the iteration costs O(n)</p></li>
+<li><p>Space complexity: O(n) as an array of size <code>n</code> is used</p></li>
 </ul>
             
             <div class="post__tags">
@@ -280,7 +382,7 @@ ghost.init({
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Check%20if%20two%20strings%20are%20anagram&amp;url=http://hellokoding.com/check-if-two-strings-are-anagram/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Anagrams&amp;url=http://hellokoding.com/check-if-two-strings-are-anagram/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
