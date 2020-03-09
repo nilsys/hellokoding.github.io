@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-linkedhashmap-tutorial-with-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_LinkedHashMapTutorial.png">
     <meta property="article:published_time" content="2019-10-20T07:51:04.000Z">
-    <meta property="article:modified_time" content="2019-10-27T04:51:12.000Z">
+    <meta property="article:modified_time" content="2020-03-09T04:31:23.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java LinkedHashMap Tutorial with Examples",
     "url": "http://hellokoding.com/java-linkedhashmap-tutorial-with-examples/",
     "datePublished": "2019-10-20T07:51:04.000Z",
-    "dateModified": "2019-10-27T04:51:12.000Z",
+    "dateModified": "2020-03-09T04:31:23.000Z",
     "image": "http://hellokoding.com/content/images/2019/10/JavaCollections_LinkedHashMapTutorial.png",
     "keywords": "Java",
     "description": "Java LinkedHashMap is a hash table (key-value pairs, dictionary) and doubly linked list data structure implementation of the Map interface, a part of the Java Collections framework LinkedHashMap has the following features Provides insertion-ordered iteration No duplicate keys. Permits one null key and multiple null values Offers constant time performance"
@@ -231,7 +231,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java LinkedHashMap Tutorial with Examples</h1>
-            <time class="post__date" datetime="2019-10-27">Last modified @ 27 October 2019</time>
+            <time class="post__date" datetime="2020-03-09">Last modified @ 09 March 2020</time>
           </header>
 
           <div class="post-content">
@@ -248,10 +248,11 @@ ghost.init({
 <li><p>No duplicate keys. Permits one <code>null</code> key and multiple null values</p></li>
 <li><p>Offers constant time performance for basic operations such as get, containsKey, containsValue, put, remove</p></li>
 <li><p>Keys and values are compared based on theirs <a href="https://hellokoding.com/java-equals-and-hashcode/">equals and hashCode implementation</a></p></li>
-<li><p>Unsynchronized implementation. In multi-threading environment with at least one thread modifies the list, it must be synchronized externally</p></li>
+<li><p>LinkedHashMap is not thread-safe as it is an unsynchronized implementation. In multi-threading environment with at least one thread modifies the map, it must be synchronized externally</p></li>
+<li><p>Internally, LinkedHashMap uses a <a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example/">hash table data structure</a> to store and retrieve its elements, uses a <a href="https://hellokoding.com/doubly-linked-list-data-structure-tutorial-and-example/">doubly linked list data structure</a> to maintain the insertion order</p></li>
 </ul>
 
-<p>Lets walk through this tutorial to explore them in more details</p>
+<p>Let's walk through this tutorial to explore them in more details</p>
 
 <p></p><div class="hk-autoads"></div>  
 
@@ -261,9 +262,17 @@ ghost.init({
 
 <p><img src="../content/images/2019/10/Screenshot-2019-10-20-at-2-52-20-PM.png" alt=""></p>
 
+<h3 id="linkedhashmapvshashmapandtreemap">LinkedHashMap vs HashMap and TreeMap</h3>
+
+<p>LinkedHashMap provides insertion-ordered iteration and run nearly as fast as HashMap</p>
+
+<p><a href="https://hellokoding.com/java-hashmap-tutorial-with-examples/">HashMap</a> has no ordering guarantees and run faster than TreeMap (constant-time vs log-time for most operations)</p>
+
+<p><a href="https://hellokoding.com/java-treemap-tutorial-with-examples/">TreeMap</a> provides value-ordered iteration. TreeMap can be used to <a href="https://hellokoding.com/sort-a-hashmap-in-java/">sort a HashMap or LinkedHashMap</a></p>
+
 <h3 id="declarealinkedhashmap">Declare a LinkedHashMap</h3>
 
-<p>As the result from the class hierarchy, you can declare a LinkedHashMap with the following ways</p>
+<p>As a result of the class hierarchy, you can declare a LinkedHashMap with the following ways</p>
 
 <pre><code class="language-java">@Test
 public void declare() {  

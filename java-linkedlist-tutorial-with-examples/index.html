@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="LinkedList in Java Tutorial with Examples">
-    <meta property="og:description" content="LinkedList in Java is a doubly linked list data structure implementation of the List and Deque interfaces, a part of the Java Collections Framework LinkedList has the following features Provides insertion-ordered iteration Provides element retrieving, adding and removing at both ends in constant-time performance Provides index based operations in linear-time">
+    <meta property="og:description" content="LinkedList in Java is a doubly linked list data structure implementation of the List and Deque interfaces, a part of the Java Collections Framework LinkedList has the following features Provides insertion-ordered iteration Provides element retrieving, adding and removing at both ends in a constant-time performance Provides index-based operations in linear-time">
     <meta property="og:url" content="http://hellokoding.com/java-linkedlist-tutorial-with-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/05/java-linkedlist.png">
     <meta property="article:published_time" content="2019-05-22T01:37:23.000Z">
-    <meta property="article:modified_time" content="2019-11-02T17:16:55.000Z">
+    <meta property="article:modified_time" content="2020-03-09T03:50:03.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="LinkedList in Java Tutorial with Examples">
-    <meta name="twitter:description" content="LinkedList in Java is a doubly linked list data structure implementation of the List and Deque interfaces, a part of the Java Collections Framework LinkedList has the following features Provides insertion-ordered iteration Provides element retrieving, adding and removing at both ends in constant-time performance Provides index based operations in linear-time">
+    <meta name="twitter:description" content="LinkedList in Java is a doubly linked list data structure implementation of the List and Deque interfaces, a part of the Java Collections Framework LinkedList has the following features Provides insertion-ordered iteration Provides element retrieving, adding and removing at both ends in a constant-time performance Provides index-based operations in linear-time">
     <meta name="twitter:url" content="http://hellokoding.com/java-linkedlist-tutorial-with-examples/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/05/java-linkedlist.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "LinkedList in Java Tutorial with Examples",
     "url": "http://hellokoding.com/java-linkedlist-tutorial-with-examples/",
     "datePublished": "2019-05-22T01:37:23.000Z",
-    "dateModified": "2019-11-02T17:16:55.000Z",
+    "dateModified": "2020-03-09T03:50:03.000Z",
     "image": "http://hellokoding.com/content/images/2019/05/java-linkedlist.png",
     "keywords": "Java",
-    "description": "LinkedList in Java is a doubly linked list data structure implementation of the List and Deque interfaces, a part of the Java Collections Framework LinkedList has the following features Provides insertion-ordered iteration Provides element retrieving, adding and removing at both ends in constant-time performance Provides index based operations in linear-time"
+    "description": "LinkedList in Java is a doubly linked list data structure implementation of the List and Deque interfaces, a part of the Java Collections Framework LinkedList has the following features Provides insertion-ordered iteration Provides element retrieving, adding and removing at both ends in a constant-time performance Provides index-based operations in linear-time"
 }
     </script>
 
@@ -231,7 +231,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">LinkedList in Java Tutorial with Examples</h1>
-            <time class="post__date" datetime="2019-11-02">Last modified @ 02 November 2019</time>
+            <time class="post__date" datetime="2020-03-09">Last modified @ 09 March 2020</time>
           </header>
 
           <div class="post-content">
@@ -245,12 +245,12 @@ ghost.init({
 
 <ul>
 <li><p>Provides insertion-ordered iteration</p></li>
-<li><p>Provides element retrieving, adding and removing at both ends in constant-time performance</p></li>
-<li><p>Provides index based operations in linear-time performance. They will traverse the list either from the beginning or the end, whichever is closer to the specified index</p></li>
+<li><p>Provides element retrieving, adding and removing at both ends in a constant-time performance</p></li>
+<li><p>Provides index-based operations in linear-time performance. They will traverse the list either from the beginning or the end, whichever is closer to the specified index</p></li>
 <li><p>Allows null and duplicated elements</p></li>
 <li><p>Elements are compared based on their equals method implementation</p></li>
 <li><p>Can be used as a list, stack, queue or double-ended queue</p></li>
-<li><p>Unsynchronized implementation. In multi-threading environment with at least one thread modifies the list, it must be synchronized externally</p></li>
+<li><p>LinkedList is not thread-safe as it is an unsynchronized implementation. In multi-threading environment with at least one thread modifies the list, it must be synchronized externally</p></li>
 </ul>
 
 <p>Lets walk through this tutorial to explore LinkedList in more details</p>
@@ -267,13 +267,13 @@ ghost.init({
 
 <p>LinkedList is more flexible than <a href="https://hellokoding.com/java-arraylist-examples/">ArrayList</a> and ArrayDeque as it can act as both List and Deque</p>
 
-<p>In terms of efficiency, LinkedList is slower than ArrayList on List based operations, and slower than ArrayDeque on Deque based operations</p>
+<p>In terms of efficiency, LinkedList is slower than ArrayList on List based operations and slower than ArrayDeque on Deque based operations</p>
 
-<p>LinkedList consumes a bit more memory than ArrayList and ArrayDeque as it have to allocate a node object for each element in the list</p>
+<p>LinkedList consumes a bit more memory than ArrayList and ArrayDeque as it has to allocate a node object for each element in the list</p>
 
 <h3 id="declarealinkedlist">Declare a LinkedList</h3>
 
-<p>As a result from the above class hierarchy, a LinkedList can be declared and used as a list, stack, queue or double ended queue</p>
+<p>As a result from the above class hierarchy, a LinkedList can be declared and used as a list, stack, queue or double-ended queue</p>
 
 <pre><code class="language-java">@Test
 public void declare() {  
@@ -318,7 +318,7 @@ public void initWithFactoryMethodsInOneLine() {
 </code></pre>
 
 <ul>
-<li>Double brace initialization can cause a memory leak as it creates anonymous classes with an hidden reference to the owner instance object</li>
+<li>Double brace initialization can cause a memory leak as it creates anonymous classes with a hidden reference to the owner instance object</li>
 </ul>
 
 <pre><code class="language-java">@Test
@@ -457,7 +457,7 @@ public void addAndRemove() {
 
 <p>Update an element at the specified index in a LinkedList to the given object with set(index, Object) method</p>
 
-<p>Both contains and set methods run in linear-time performance</p></li>
+<p>Both contain and set methods run in linear-time performance</p></li>
 </ul>
 
 <pre><code class="language-java">@Test
@@ -514,7 +514,7 @@ static class Book {
 </code></pre>
 
 <ul>
-<li>You can fix the above problem by implement the equals method to the custom class as the below example</li>
+<li>You can fix the above problem by implementing the equals method to the custom class as the below example</li>
 </ul>
 
 <pre><code class="language-java">@Test
