@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Java TreeSet Tutorial with Examples">
-    <meta property="og:description" content="TreeSet is a red-black tree data structure implementation of the NavigableSet interface based on a TreeMap. TreeSet is a part of the Java Collections Framework TreeSet has the following features Provides value-ordered iteration Provides contains(Object), add(Object) and remove(Object) operations in log-time performance Duplicated elements are ignored. Null">
+    <meta property="og:description" content="TreeSet is a red-black tree data structure implementation of the NavigableSet interface. TreeSet is a part of the Java Collections Framework and has the following features Provides value-ordered iteration Provides contains(Object), add(Object) and remove(Object) operations in log-time performance Duplicated elements are ignored. A null element is not">
     <meta property="og:url" content="http://hellokoding.com/java-treeset-tutorial-with-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_TreeSetTutorial.png">
     <meta property="article:published_time" content="2019-10-08T15:09:30.000Z">
-    <meta property="article:modified_time" content="2019-10-13T06:50:16.000Z">
+    <meta property="article:modified_time" content="2020-03-17T14:58:44.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Java TreeSet Tutorial with Examples">
-    <meta name="twitter:description" content="TreeSet is a red-black tree data structure implementation of the NavigableSet interface based on a TreeMap. TreeSet is a part of the Java Collections Framework TreeSet has the following features Provides value-ordered iteration Provides contains(Object), add(Object) and remove(Object) operations in log-time performance Duplicated elements are ignored. Null">
+    <meta name="twitter:description" content="TreeSet is a red-black tree data structure implementation of the NavigableSet interface. TreeSet is a part of the Java Collections Framework and has the following features Provides value-ordered iteration Provides contains(Object), add(Object) and remove(Object) operations in log-time performance Duplicated elements are ignored. A null element is not">
     <meta name="twitter:url" content="http://hellokoding.com/java-treeset-tutorial-with-examples/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_TreeSetTutorial.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Java TreeSet Tutorial with Examples",
     "url": "http://hellokoding.com/java-treeset-tutorial-with-examples/",
     "datePublished": "2019-10-08T15:09:30.000Z",
-    "dateModified": "2019-10-13T06:50:16.000Z",
+    "dateModified": "2020-03-17T14:58:44.000Z",
     "image": "http://hellokoding.com/content/images/2019/10/JavaCollections_TreeSetTutorial.png",
     "keywords": "Java",
-    "description": "TreeSet is a red-black tree data structure implementation of the NavigableSet interface based on a TreeMap. TreeSet is a part of the Java Collections Framework TreeSet has the following features Provides value-ordered iteration Provides contains(Object), add(Object) and remove(Object) operations in log-time performance Duplicated elements are ignored. Null"
+    "description": "TreeSet is a red-black tree data structure implementation of the NavigableSet interface. TreeSet is a part of the Java Collections Framework and has the following features Provides value-ordered iteration Provides contains(Object), add(Object) and remove(Object) operations in log-time performance Duplicated elements are ignored. A null element is not"
 }
     </script>
 
@@ -231,7 +231,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java TreeSet Tutorial with Examples</h1>
-            <time class="post__date" datetime="2019-10-13">Last modified @ 13 October 2019</time>
+            <time class="post__date" datetime="2020-03-17">Last modified @ 17 March 2020</time>
           </header>
 
           <div class="post-content">
@@ -239,19 +239,18 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p>TreeSet is a red-black tree data structure implementation of the NavigableSet interface based on a TreeMap. TreeSet is a part of the <a href="https://hellokoding.com/java-collections-framework/">Java Collections Framework</a></p>
-
-<p>TreeSet has the following features</p>
+            <p>TreeSet is a red-black tree data structure implementation of the NavigableSet interface. TreeSet is a part of the <a href="https://hellokoding.com/java-collections-framework/">Java Collections Framework</a> and has the following features</p>
 
 <ul>
 <li><p>Provides value-ordered iteration</p></li>
 <li><p>Provides contains(Object), add(Object) and remove(Object) operations in log-time performance</p></li>
-<li><p>Duplicated elements are ignored. Null element is not permitted, NullPointerException will be thrown when adding a null element</p></li>
+<li><p>Duplicated elements are ignored. A null element is not permitted, NullPointerException will be thrown when adding a null element</p></li>
 <li><p>Elements are ordered and compared using their <a href="https://hellokoding.com/java-comparable-vs-comparator-examples/">Comparable natural ordering, or by a Comparator</a> (irrespective of equals and hashCode) provided at creation time, depending on which constructor is used</p></li>
-<li><p>Unsynchronized implementation. In multi-threading environment with at least one thread modifies the list, it must be synchronized externally</p></li>
+<li><p>TreeSet is not thread-safe as it is an unsynchronized implementation. In multi-threading environment with at least one thread modifies the list, it must be synchronized externally</p></li>
+<li><p>Internally, TreeSet uses a <a href="https://hellokoding.com/java-treemap-tutorial-with-examples/">TreeMap</a> instance to store and retrieve its elements</p></li>
 </ul>
 
-<p>Lets walk through this tutorial to explore them in more details</p>
+<p>Let's walk through this tutorial to explore them in more details</p>
 
 <p></p><div class="hk-autoads"></div>  
 
