@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/spring-resttemplate-timeout/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2020/03/SpringWeb_RestTemplate_Timeout.png">
     <meta property="article:published_time" content="2020-03-21T13:43:29.000Z">
-    <meta property="article:modified_time" content="2020-03-22T02:00:55.000Z">
+    <meta property="article:modified_time" content="2020-03-22T04:04:11.000Z">
     <meta property="article:tag" content="Spring">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Spring RestTemplate Timeout",
     "url": "http://hellokoding.com/spring-resttemplate-timeout/",
     "datePublished": "2020-03-21T13:43:29.000Z",
-    "dateModified": "2020-03-22T02:00:55.000Z",
+    "dateModified": "2020-03-22T04:04:11.000Z",
     "image": "http://hellokoding.com/content/images/2020/03/SpringWeb_RestTemplate_Timeout.png",
     "keywords": "Spring",
     "description": "When configuring RestTemplate timeout, there&#x27;re two settings need to be considered, Connection and Read timeout. They can be configured by using RestTemplateBuilder in Spring Boot applications or SimpleClientHttpRequestFactory in Spring applications Let&#x27;s walk through this tutorial to explore in more detail    Connection vs Read Timeout Connection timeout is used when"
@@ -289,9 +289,18 @@ RestTemplate restTemplateTimeoutConfigWithRequestFactory() {
 
 <p></p><div class="hk-autoads"></div>  
 
-<h3 id="simulateadelayedbackendapi">Simulate a delayed backend API</h3>
+<h3 id="testaconnecttimeout">Test a Connect timeout</h3>
 
-<p>To test the above timeout configurations, you need to create a test application to simulate a delayed backend API</p>
+<p>You can test a RestTemplate Connect timeout setting by requesting to a non-routable IP address such as <code>10.255.255.1</code> or to an existing host but with a blocked port such as <code>http://example.com:81</code></p>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/spring-core-examples/src/test/java/com/hellokoding/springcore/RestTemplateConnectTimeoutTest.java">
+</code></pre>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="testareadtimeout">Test a Read timeout</h3>
+
+<p>To test the <code>RestTemplate</code> Read timeout, you can create a test application to simulate a delayed backend API and use <code>@SpringBootTest</code> to create an integration test</p>
 
 <pre><code class="language-java">@GetMapping("/test/delay")
 public ResponseEntity delay(int millis) throws InterruptedException {  
@@ -303,14 +312,10 @@ public ResponseEntity delay(int millis) throws InterruptedException {
 
 <p>Any requests to <code>/test/delay</code> will be delayed by <code>Thread.sleep(millis)</code> pauses the execution of the API. Full application file can be found as the following</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/spring-core-examples/src/test/java/com/hellokoding/springcore/RestTemplateWithTimeoutTestApplication.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/spring-core-examples/src/test/java/com/hellokoding/springcore/RestTemplateReadTimeoutApplication.java">
 </code></pre>
 
-<p></p><div class="hk-autoads"></div>  
-
-<h3 id="createintegrationtestwithspringboottest">Create Integration test with @SpringBootTest</h3>
-
-<p>Use <code>@SpringBootTest</code> in conjunction with <code>WebEnvironment.RANDOM_PORT</code> and <code>@LocalServerPort</code> injected field to create a web test application context servlet based</p>
+<p>To create an integration test, use <code>@SpringBootTest</code> in conjunction with <code>WebEnvironment.RANDOM_PORT</code> and <code>@LocalServerPort</code> injected field to create a web test application context servlet based</p>
 
 <pre><code class="language-java">@SpringBootTest(
     webEnvironment = WebEnvironment.RANDOM_PORT,
@@ -320,15 +325,21 @@ public ResponseEntity delay(int millis) throws InterruptedException {
 
 <p><code>classes</code> indicates the component classes to use for loading a Spring ApplicationContext</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/spring-core-examples/src/test/java/com/hellokoding/springcore/RestTemplateWithTimeoutTest.java">
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/springboot-examples/spring-core-examples/src/test/java/com/hellokoding/springcore/RestTemplateReadTimeoutTest.java">
 </code></pre>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="runthetests">Run the tests</h3>
 
 <p>You can run the test cases with your IDE or Maven</p>
 
-<pre><code>$ mvn -Dtest=RestTemplateWithTimeoutTest test
+<pre><code>$ mvn -Dtest=RestTemplate*TimeoutTest test
 </code></pre>
 
-<p>The test case <code>testConnectTimeout</code> should be failed as <code>restTemplateWithConnectTimeout</code> only configure connection timeout. On the other hand, <code>testConnectReadTimeout</code> should be passed</p>
+<p><code>RestTemplate*TimeoutTest</code> with a wildcard character represents for both test classes <code>RestTemplateConnectTimeoutTest</code> and <code>RestTemplateReadTimeoutTest</code></p>
+
+<p>The execution time of RestTemplate requests in the test cases should be greater than the timeout configuration value</p>
 
 <h3 id="conclusion">Conclusion</h3>
 
