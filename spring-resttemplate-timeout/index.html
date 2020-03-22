@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Spring RestTemplate Timeout">
-    <meta property="og:description" content="When configuring RestTemplate timeout, there're two settings need to be considered, Connection and Read timeout. They can be configured by using RestTemplateBuilder in Spring Boot applications or SimpleClientHttpRequestFactory in Spring applications Let's walk through this tutorial to explore in more detail    Connection vs Read Timeout Connection timeout is used when">
+    <meta property="og:description" content="When configuring RestTemplate timeout, there're two settings need to be considered, Connection and Read timeout. They can be configured by using RestTemplateBuilder in Spring Boot applications or SimpleClientHttpRequestFactory in Spring applications Apart from that, you can connect to a non-routable IP address or an existing host with a blocked port">
     <meta property="og:url" content="http://hellokoding.com/spring-resttemplate-timeout/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2020/03/SpringWeb_RestTemplate_Timeout.png">
     <meta property="article:published_time" content="2020-03-21T13:43:29.000Z">
-    <meta property="article:modified_time" content="2020-03-22T07:34:19.000Z">
+    <meta property="article:modified_time" content="2020-03-22T07:46:51.000Z">
     <meta property="article:tag" content="Spring">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Spring RestTemplate Timeout">
-    <meta name="twitter:description" content="When configuring RestTemplate timeout, there're two settings need to be considered, Connection and Read timeout. They can be configured by using RestTemplateBuilder in Spring Boot applications or SimpleClientHttpRequestFactory in Spring applications Let's walk through this tutorial to explore in more detail    Connection vs Read Timeout Connection timeout is used when">
+    <meta name="twitter:description" content="When configuring RestTemplate timeout, there're two settings need to be considered, Connection and Read timeout. They can be configured by using RestTemplateBuilder in Spring Boot applications or SimpleClientHttpRequestFactory in Spring applications Apart from that, you can connect to a non-routable IP address or an existing host with a blocked port">
     <meta name="twitter:url" content="http://hellokoding.com/spring-resttemplate-timeout/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2020/03/SpringWeb_RestTemplate_Timeout.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Spring RestTemplate Timeout",
     "url": "http://hellokoding.com/spring-resttemplate-timeout/",
     "datePublished": "2020-03-21T13:43:29.000Z",
-    "dateModified": "2020-03-22T07:34:19.000Z",
+    "dateModified": "2020-03-22T07:46:51.000Z",
     "image": "http://hellokoding.com/content/images/2020/03/SpringWeb_RestTemplate_Timeout.png",
     "keywords": "Spring",
-    "description": "When configuring RestTemplate timeout, there&#x27;re two settings need to be considered, Connection and Read timeout. They can be configured by using RestTemplateBuilder in Spring Boot applications or SimpleClientHttpRequestFactory in Spring applications Let&#x27;s walk through this tutorial to explore in more detail    Connection vs Read Timeout Connection timeout is used when"
+    "description": "When configuring RestTemplate timeout, there&#x27;re two settings need to be considered, Connection and Read timeout. They can be configured by using RestTemplateBuilder in Spring Boot applications or SimpleClientHttpRequestFactory in Spring applications Apart from that, you can connect to a non-routable IP address or an existing host with a blocked port"
 }
     </script>
 
@@ -241,6 +241,8 @@ ghost.init({
 
             <p>When configuring RestTemplate timeout, there're two settings need to be considered, Connection and Read timeout. They can be configured by using <code>RestTemplateBuilder</code> in Spring Boot applications or <code>SimpleClientHttpRequestFactory</code> in Spring applications</p>
 
+<p>Apart from that, you can connect to a non-routable IP address or an existing host with a blocked port to test a RestTemplate Read timeout. As MockRestServiceServer overwrites RestTemplate Request factory settings, to test Read timeout, you may simulate a delayed backend controller by using <code>Thread.sleep</code> and write an integration test in Spring Boot by using <code>@SpringBootTest</code></p>
+
 <p>Let's walk through this tutorial to explore in more detail</p>
 
 <p></p><div class="hk-autoads"></div>  
@@ -339,7 +341,7 @@ public ResponseEntity delay(int millis) throws InterruptedException {
 
 <p><code>RestTemplate*TimeoutTest</code> with a wildcard character represents for both test classes <code>RestTemplateConnectTimeoutTest</code> and <code>RestTemplateReadTimeoutTest</code></p>
 
-<p>All test cases should be passed except <code>testReadTimeout2</code> as it is using <code>restTemplateWithConnectTimeout</code> which is only configured Connect timeout</p>
+<p>All test cases should be passed except <code>testReadTimeout2</code> as it is using <code>restTemplateWithConnectTimeout</code> which only Connect timeout is configured</p>
 
 <p>The execution time of RestTemplate requests in the test cases should be greater than the timeout configuration value</p>
 
