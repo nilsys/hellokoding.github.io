@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Java HTTPClient API Tutorial with Examples</title>
+  <title>Java HttpClient API Tutorial with Examples</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,18 +19,18 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Java HTTPClient API Tutorial with Examples">
-    <meta property="og:description" content="Since Java 11, you can use HTTPClient API to execute non-blocking HTTP request and response semantics through CompletableFuture, which can be chained to trigger dependant actions The following example sends an HTTP GET request and retrieves its response asynchronously with HTTPClient API and CompletableFuture @Test public void getAsync() {       HttpClient client">
+    <meta property="og:title" content="Java HttpClient API Tutorial with Examples">
+    <meta property="og:description" content="Since Java 11, you can use HttpClient API to execute non-blocking HTTP requests and handle responses through CompletableFuture, which can be chained to trigger dependant actions The following example sends an HTTP GET request and retrieves its response asynchronously with HttpClient API and CompletableFuture @Test public void getAsync() {       HttpClient client">
     <meta property="og:url" content="http://hellokoding.com/java-http-client-api/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2020/03/JavaHTTPClientAPI.png">
     <meta property="article:published_time" content="2020-03-02T07:58:18.000Z">
-    <meta property="article:modified_time" content="2020-03-22T16:03:53.000Z">
+    <meta property="article:modified_time" content="2020-03-23T01:02:58.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Java HTTPClient API Tutorial with Examples">
-    <meta name="twitter:description" content="Since Java 11, you can use HTTPClient API to execute non-blocking HTTP request and response semantics through CompletableFuture, which can be chained to trigger dependant actions The following example sends an HTTP GET request and retrieves its response asynchronously with HTTPClient API and CompletableFuture @Test public void getAsync() {       HttpClient client">
+    <meta name="twitter:title" content="Java HttpClient API Tutorial with Examples">
+    <meta name="twitter:description" content="Since Java 11, you can use HttpClient API to execute non-blocking HTTP requests and handle responses through CompletableFuture, which can be chained to trigger dependant actions The following example sends an HTTP GET request and retrieves its response asynchronously with HttpClient API and CompletableFuture @Test public void getAsync() {       HttpClient client">
     <meta name="twitter:url" content="http://hellokoding.com/java-http-client-api/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2020/03/JavaHTTPClientAPI.png">
     <meta name="twitter:label1" content="Written by">
@@ -60,13 +60,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Java HTTPClient API Tutorial with Examples",
+    "headline": "Java HttpClient API Tutorial with Examples",
     "url": "http://hellokoding.com/java-http-client-api/",
     "datePublished": "2020-03-02T07:58:18.000Z",
-    "dateModified": "2020-03-22T16:03:53.000Z",
+    "dateModified": "2020-03-23T01:02:58.000Z",
     "image": "http://hellokoding.com/content/images/2020/03/JavaHTTPClientAPI.png",
     "keywords": "Java",
-    "description": "Since Java 11, you can use HTTPClient API to execute non-blocking HTTP request and response semantics through CompletableFuture, which can be chained to trigger dependant actions The following example sends an HTTP GET request and retrieves its response asynchronously with HTTPClient API and CompletableFuture @Test public void getAsync() {       HttpClient client"
+    "description": "Since Java 11, you can use HttpClient API to execute non-blocking HTTP requests and handle responses through CompletableFuture, which can be chained to trigger dependant actions The following example sends an HTTP GET request and retrieves its response asynchronously with HttpClient API and CompletableFuture @Test public void getAsync() {       HttpClient client"
 }
     </script>
 
@@ -230,8 +230,8 @@ ghost.init({
         <article class="post tag-java">
 
           <header class="post__header">
-            <h1 class="post__title">Java HTTPClient API Tutorial with Examples</h1>
-            <time class="post__date" datetime="2020-03-22">Last modified @ 22 March 2020</time>
+            <h1 class="post__title">Java HttpClient API Tutorial with Examples</h1>
+            <time class="post__date" datetime="2020-03-23">Last modified @ 23 March 2020</time>
           </header>
 
           <div class="post-content">
@@ -239,9 +239,9 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p>Since Java 11, you can use HTTPClient API to execute non-blocking HTTP request and response semantics through CompletableFuture, which can be chained to trigger dependant actions</p>
+            <p>Since Java 11, you can use <code>HttpClient</code> API to execute non-blocking HTTP requests and handle responses through <code>CompletableFuture</code>, which can be chained to trigger dependant actions</p>
 
-<p>The following example sends an HTTP GET request and retrieves its response asynchronously with HTTPClient API and CompletableFuture</p>
+<p>The following example sends an HTTP GET request and retrieves its response asynchronously with <code>HttpClient</code> API and <code>CompletableFuture</code></p>
 
 <pre><code class="language-java">@Test
 public void getAsync() {  
@@ -262,11 +262,11 @@ public void getAsync() {
 
 <p></p><div class="hk-autoads"></div>  
 
-<h3 id="createanewhttpclient">Create a new HTTPClient</h3>
+<h3 id="createanewhttpclient">Create a new HttpClient</h3>
 
-<p>You can use <code>HttpClient.newBuilder()</code> to create a new HTTPClient instance and configure options through fluent APIs</p>
+<p>You can use <code>HttpClient.newBuilder()</code> to create a new <code>HttpClient</code> instance and configure options through fluent APIs</p>
 
-<p>The below example gives you full HTTPClient configuration options</p>
+<p>The below example gives you full <code>HttpClient</code> configuration options</p>
 
 <pre><code class="language-java">@Test
 public void createAnHTTPClient() throws NoSuchAlgorithmException {  
@@ -285,7 +285,7 @@ public void createAnHTTPClient() throws NoSuchAlgorithmException {
 }
 </code></pre>
 
-<p>Apart from that, you can also use <code>HttpClient.newHttpClient()</code> to create a new HTTPClient with default settings. It is a short form of <code>HttpClient.newBuilder().build()</code></p>
+<p>You can also use <code>HttpClient.newHttpClient()</code> to create a new <code>HttpClient</code> with default settings. It is a short form of <code>HttpClient.newBuilder().build()</code></p>
 
 <pre><code class="language-java">@Test
 public void createADefaultHTTPClient() {  
@@ -298,13 +298,13 @@ public void createADefaultHTTPClient() {
 }
 </code></pre>
 
-<p>The created HTTPClient is immutable, so thread-safe, and can be used to send multiple requests</p>
+<p>The created <code>HttpClient</code> is immutable, so thread-safe, and can be used to send multiple requests</p>
 
 <p></p><div class="hk-autoads"></div>  
 
-<h3 id="buildanewhttprequest">Build a new HTTPRequest</h3>
+<h3 id="buildanewhttprequest">Build a new HttpRequest</h3>
 
-<p>You can build a new <code>HTTPRequest</code> with <code>HttpRequest.newBuilder()</code></p>
+<p>You can build a new <code>HttpRequest</code> with <code>HttpRequest.newBuilder()</code></p>
 
 <pre><code class="language-java">@Test
 public void buildAnHTTPRequest() {  
@@ -325,7 +325,7 @@ public void buildAnHTTPRequest() {
 <p><code>GET()</code> is the default request method</p></li>
 <li><p><code>version(HttpClient.Version)</code> sets the prefered HTTP version for the executing request. The actual using version should be checked in the corresponding <code>HttpResponse</code></p>
 
-<p>If this option is ignored, the version in the sending HTTPClient will be applied</p></li>
+<p>If this option is ignored, the version in the sending HttpClient will be applied</p></li>
 <li><p><code>header(String name, String value)</code> adds the given name-value pair to the set of headers for the executing request</p>
 
 <p><code>IllegalArgumentException</code> will be thrown if the header name or value is not valid</p></li>
@@ -338,9 +338,9 @@ public void buildAnHTTPRequest() {
 
 <p></p><div class="hk-autoads"></div>  
 
-<h3 id="retrieveanhttpresponse">Retrieve an HTTPResponse</h3>
+<h3 id="retrieveanhttpresponse">Retrieve an HttpResponse</h3>
 
-<p>Via an HTTPClient instance, use <code>send</code> or <code>sendAsync</code> to execute an HTTPRequest in synchronous and asynchronous respectively</p>
+<p>Via an <code>HttpClient</code> instance, use <code>send</code> or <code>sendAsync</code> to execute an <code>HttpRequest</code> in synchronous and asynchronous respectively</p>
 
 <pre><code class="language-java">@Test
 public void retrieveAnHTTPResponseSynchronously() throws IOException, InterruptedException {  
@@ -356,7 +356,7 @@ public void retrieveAnHTTPResponseSynchronously() throws IOException, Interrupte
 }
 </code></pre>
 
-<p><code>send</code> method in HttpClient executes an HttpRequest in synchronously and returns a <code>HttpResponse</code></p>
+<p><code>send</code> method in <code>HttpClient</code> executes an <code>HttpRequest</code> in synchronously and returns a <code>HttpResponse</code></p>
 
 <pre><code class="language-java">@Test
 public void retrieveAnHTTPResponseAsynchronously() {  
@@ -377,13 +377,13 @@ public void retrieveAnHTTPResponseAsynchronously() {
 }
 </code></pre>
 
-<p><code>sendAsync</code> method in HttpClient executes an HttpRequest in asynchronously and returns a <code>CompletableFuture&lt;HttpResponse&lt;T&gt;&gt;</code>, so you can use <code>CompletableFuture</code> APIs to handle the response data</p>
+<p><code>sendAsync</code> method in <code>HttpClient</code> executes an <code>HttpRequest</code> in asynchronously and returns a <code>CompletableFuture&lt;HttpResponse&lt;T&gt;&gt;</code>, so you can use <code>CompletableFuture</code> APIs to handle the response data</p>
 
 <p></p><div class="hk-autoads"></div>  
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>In this tutorial, we learned how to create a new HTTPClient instance, configure and use it to build and execute an HTTP request asynchronously. You can find the full source code as below</p>
+<p>In this tutorial, we learned how to create a new <code>HttpClient</code> instance, configure and use it to build and execute an HTTP request asynchronously. You can find the full source code as below</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/java11/HttpClientExamples.java">
 </code></pre>
@@ -395,7 +395,7 @@ public void retrieveAnHTTPResponseAsynchronously() {
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Java%20HTTPClient%20API%20Tutorial%20with%20Examples&amp;url=http://hellokoding.com/java-http-client-api/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Java%20HttpClient%20API%20Tutorial%20with%20Examples&amp;url=http://hellokoding.com/java-http-client-api/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
