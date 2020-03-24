@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Java HttpClient API Tutorial with Examples">
-    <meta property="og:description" content="Since Java 11, you can use HttpClient API to execute non-blocking HTTP requests and handle responses through CompletableFuture, which can be chained to trigger dependant actions The following example sends an HTTP GET request and retrieves its response asynchronously with HttpClient API and CompletableFuture @Test public void getAsync() {       HttpClient client">
+    <meta property="og:description" content="Since Java 11, you can use HttpClient API to execute non-blocking HTTP requests and handle responses through CompletableFuture, which can be chained to trigger dependant actions The following example sends an HTTP GET request and retrieves its response asynchronously with HttpClient and CompletableFuture @Test public void getAsync() {       HttpClient client = HttpClient.">
     <meta property="og:url" content="http://hellokoding.com/java-http-client-api/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2020/03/JavaHTTPClientAPI.png">
     <meta property="article:published_time" content="2020-03-02T07:58:18.000Z">
-    <meta property="article:modified_time" content="2020-03-23T01:02:58.000Z">
+    <meta property="article:modified_time" content="2020-03-24T11:12:29.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Java HttpClient API Tutorial with Examples">
-    <meta name="twitter:description" content="Since Java 11, you can use HttpClient API to execute non-blocking HTTP requests and handle responses through CompletableFuture, which can be chained to trigger dependant actions The following example sends an HTTP GET request and retrieves its response asynchronously with HttpClient API and CompletableFuture @Test public void getAsync() {       HttpClient client">
+    <meta name="twitter:description" content="Since Java 11, you can use HttpClient API to execute non-blocking HTTP requests and handle responses through CompletableFuture, which can be chained to trigger dependant actions The following example sends an HTTP GET request and retrieves its response asynchronously with HttpClient and CompletableFuture @Test public void getAsync() {       HttpClient client = HttpClient.">
     <meta name="twitter:url" content="http://hellokoding.com/java-http-client-api/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2020/03/JavaHTTPClientAPI.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Java HttpClient API Tutorial with Examples",
     "url": "http://hellokoding.com/java-http-client-api/",
     "datePublished": "2020-03-02T07:58:18.000Z",
-    "dateModified": "2020-03-23T01:02:58.000Z",
+    "dateModified": "2020-03-24T11:12:29.000Z",
     "image": "http://hellokoding.com/content/images/2020/03/JavaHTTPClientAPI.png",
     "keywords": "Java",
-    "description": "Since Java 11, you can use HttpClient API to execute non-blocking HTTP requests and handle responses through CompletableFuture, which can be chained to trigger dependant actions The following example sends an HTTP GET request and retrieves its response asynchronously with HttpClient API and CompletableFuture @Test public void getAsync() {       HttpClient client"
+    "description": "Since Java 11, you can use HttpClient API to execute non-blocking HTTP requests and handle responses through CompletableFuture, which can be chained to trigger dependant actions The following example sends an HTTP GET request and retrieves its response asynchronously with HttpClient and CompletableFuture @Test public void getAsync() {       HttpClient client &#x3D; HttpClient."
 }
     </script>
 
@@ -231,7 +231,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">Java HttpClient API Tutorial with Examples</h1>
-            <time class="post__date" datetime="2020-03-23">Last modified @ 23 March 2020</time>
+            <time class="post__date" datetime="2020-03-24">Last modified @ 24 March 2020</time>
           </header>
 
           <div class="post-content">
@@ -241,24 +241,41 @@ ghost.init({
 
             <p>Since Java 11, you can use <code>HttpClient</code> API to execute non-blocking HTTP requests and handle responses through <code>CompletableFuture</code>, which can be chained to trigger dependant actions</p>
 
-<p>The following example sends an HTTP GET request and retrieves its response asynchronously with <code>HttpClient</code> API and <code>CompletableFuture</code></p>
+<p>The following example sends an HTTP GET request and retrieves its response asynchronously with <code>HttpClient</code> and <code>CompletableFuture</code></p>
 
 <pre><code class="language-java">@Test
 public void getAsync() {  
     HttpClient client = HttpClient.newHttpClient();
 
     HttpRequest request = HttpRequest.newBuilder()
-        .uri(URI.create("https://example.com/"))
+        .uri(URI.create("http://localhost:8081/test/resource"))
+        .header("Accept", "application/json")
         .build();
 
-    client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+    String body = client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
         .thenApplyAsync(HttpResponse::body)
-        .thenAcceptAsync(System.out::println)
         .join();
+
+    assertThat(body).isEqualTo("OK");
 }
 </code></pre>
 
-<p>Let walk through this tutorial to explore in more details</p>
+<h3 id="whatyoullneed">What you'll need</h3>
+
+<ul>
+<li>JDK 11+</li>
+<li>Maven 3+</li>
+<li>Your favorite IDE</li>
+</ul>
+
+<h3 id="techstack">Tech stack</h3>
+
+<ul>
+<li>Java 11+ for learning HttpClient API</li>
+<li>JUnit 4 for writing unit tests</li>
+<li>WireMock for mocking Http server</li>
+<li>AssertJ for verifying test result</li>
+</ul>
 
 <p></p><div class="hk-autoads"></div>  
 
@@ -274,14 +291,21 @@ public void createAnHTTPClient() throws NoSuchAlgorithmException {
         .version(HttpClient.Version.HTTP_2)
         .proxy(ProxySelector.getDefault())
         .followRedirects(HttpClient.Redirect.NEVER)
-        .authenticator(Authenticator.getDefault())
-        .connectTimeout(Duration.ofSeconds(1))
-        .cookieHandler(CookieHandler.getDefault())
+        .authenticator(new Authenticator() {
+            @Override
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication("user", "pass".toCharArray());
+            }
+        })
+        .cookieHandler(new CookieManager())
         .executor(Executors.newFixedThreadPool(2))
         .priority(1)
         .sslContext(SSLContext.getDefault())
         .sslParameters(new SSLParameters())
+        .connectTimeout(Duration.ofSeconds(1))
         .build();
+
+    assertThat(client.connectTimeout()).get().isEqualTo(Duration.ofSeconds(1));
 }
 </code></pre>
 
@@ -292,9 +316,12 @@ public void createADefaultHTTPClient() {
     HttpClient client = HttpClient.newHttpClient();
 
     assertThat(client.version()).isEqualTo(HttpClient.Version.HTTP_2);
+    assertThat(client.followRedirects()).isEqualTo(HttpClient.Redirect.NEVER);
     assertThat(client.proxy()).isEmpty();
     assertThat(client.connectTimeout()).isEmpty();
-    assertThat(client.followRedirects()).isEqualTo(HttpClient.Redirect.NEVER);
+    assertThat(client.cookieHandler()).isEmpty();
+    assertThat(client.authenticator()).isEmpty();
+    assertThat(client.executor()).isEmpty();
 }
 </code></pre>
 
@@ -309,12 +336,14 @@ public void createADefaultHTTPClient() {
 <pre><code class="language-java">@Test
 public void buildAnHTTPRequest() {  
     HttpRequest request = HttpRequest.newBuilder()
-        .uri(URI.create("https://example.com/"))
+        .uri(URI.create("http://localhost:8081/test/resource"))
         .POST(HttpRequest.BodyPublishers.noBody())
         .version(HttpClient.Version.HTTP_2)
-        .header("name", "value")
+        .header("Accept", "application/json")
         .timeout(Duration.ofMillis(500))
         .build();
+
+    assertThat(request.timeout().get()).isEqualTo(Duration.ofMillis(500));
 }
 </code></pre>
 
@@ -338,52 +367,141 @@ public void buildAnHTTPRequest() {
 
 <p></p><div class="hk-autoads"></div>  
 
-<h3 id="retrieveanhttpresponse">Retrieve an HttpResponse</h3>
+<h3 id="sendanhttprequestsynchronously">Send an HttpRequest Synchronously</h3>
 
-<p>Via an <code>HttpClient</code> instance, use <code>send</code> or <code>sendAsync</code> to execute an <code>HttpRequest</code> in synchronous and asynchronous respectively</p>
+<p>Use <code>send()</code> method of an <code>HttpClient</code> instance to execute an <code>HttpRequest</code> synchronously</p>
 
 <pre><code class="language-java">@Test
-public void retrieveAnHTTPResponseSynchronously() throws IOException, InterruptedException {  
+public void getSync() throws IOException, InterruptedException {  
     HttpClient client = HttpClient.newHttpClient();
 
     HttpRequest request = HttpRequest.newBuilder()
-        .uri(URI.create("https://example.com/"))
+        .uri(URI.create("http://localhost:8081/test/resource"))
+        .header("Accept", "application/json")
         .build();
 
     HttpResponse&lt;String&gt; response = client.send(request, HttpResponse.BodyHandlers.ofString());
 
-    System.out.println(response.headers());
+    assertThat(response.statusCode()).isEqualTo(200);
+    assertThat(response.body()).isEqualTo("OK");
 }
 </code></pre>
 
-<p><code>send</code> method in <code>HttpClient</code> executes an <code>HttpRequest</code> in synchronously and returns a <code>HttpResponse</code></p>
+<p>The above example sends a GET HTTP request synchronously with <code>send()</code></p>
+
+<p><code>send()</code> blocks the current thread if necessary to get the response. The returned <code>HttpResponse&lt;T&gt;</code> contains the response status, headers, and body</p>
+
+<h3 id="sendanhttprequestasynchronously">Send an HttpRequest Asynchronously</h3>
+
+<p>Use <code>sendAsync()</code> method of an <code>HttpClient</code> instance to execute an <code>HttpRequest</code> asynchronously</p>
 
 <pre><code class="language-java">@Test
-public void retrieveAnHTTPResponseAsynchronously() {  
+public void postAsync() {  
     HttpClient client = HttpClient.newHttpClient();
 
     HttpRequest request = HttpRequest.newBuilder()
-        .uri(URI.create("https://example.com/"))
+        .uri(URI.create("http://localhost:8081/test/resource"))
+        .header("Accept", "application/json")
         .POST(HttpRequest.BodyPublishers.ofString("ping!"))
         .build();
 
-    CompletableFuture&lt;HttpResponse&lt;String&gt;&gt; completableFutureResponse =
+    CompletableFuture&lt;HttpResponse&lt;String&gt;&gt; completableFuture =
         client.sendAsync(request, HttpResponse.BodyHandlers.ofString());
-
-    completableFutureResponse
+    completableFuture
         .thenApplyAsync(HttpResponse::headers)
-        .thenAcceptAsync(System.out::println)
-        .join();
+        .thenAcceptAsync(System.out::println);
+    HttpResponse&lt;String&gt; response = completableFuture.join();
+
+    assertThat(response.statusCode()).isEqualTo(200);
+    assertThat(response.body()).isEqualTo("OK");
 }
 </code></pre>
 
-<p><code>sendAsync</code> method in <code>HttpClient</code> executes an <code>HttpRequest</code> in asynchronously and returns a <code>CompletableFuture&lt;HttpResponse&lt;T&gt;&gt;</code>, so you can use <code>CompletableFuture</code> APIs to handle the response data</p>
+<p>The above example sends a POST JSON request asynchronously with <code>sendAsync</code></p>
+
+<p><code>sendAsync</code> doesn't block the current thread like <code>send</code>, it returns a <code>CompletableFuture</code> immediately. If completed successfully, it completes with an <code>HttpResponse</code> that contains status, headers, and body</p>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="basicauthentication">Basic Authentication</h3>
+
+<p>Add basic authentication to HttpClient with the following approaches</p>
+
+<ul>
+<li>Use <code>authenticator()</code> method of an <code>HttpClient</code> instance</li>
+</ul>
+
+<pre><code class="language-java">HttpClient client = HttpClient.newBuilder()  
+    .authenticator(new Authenticator() {
+        @Override
+        protected PasswordAuthentication getPasswordAuthentication() {
+            return new PasswordAuthentication("user", "pass".toCharArray());
+        }
+    })
+    .build();
+</code></pre>
+
+<ul>
+<li>Add <code>Authorization</code> header to an <code>HttpRequest</code> instance</li>
+</ul>
+
+<pre><code class="language-java">@Test
+public void basicAuthentication() throws IOException, InterruptedException {  
+    HttpClient client = HttpClient.newHttpClient();
+
+    String encodedAuth = Base64.getEncoder()
+        .encodeToString(("user" + ":" + "pass").getBytes(StandardCharsets.UTF_8));
+
+    HttpRequest request = HttpRequest.newBuilder()
+        .uri(URI.create("http://localhost:8081/test/secure"))
+        .header("Authorization", "Basic " + encodedAuth)
+        .build();
+
+    HttpResponse&lt;String&gt; response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+    assertThat(response.statusCode()).isEqualTo(200);
+}
+</code></pre>
+
+<h3 id="cookiehandler">Cookie Handler</h3>
+
+<p>Cookies are disabled by default. To enable, create a new <code>CookieManager</code> and add it to <code>cookieHandler</code> method of an <code>HttpClient</code></p>
+
+<pre><code class="language-java">HttpClient client = HttpClient.newBuilder()  
+        .cookieHandler(new CookieManager(null, CookiePolicy.ACCEPT_ALL))
+        .build();
+</code></pre>
+
+<p>There're 3 cookie policies, namely ACCEPT_ALL, ACCEPT_NONE, and ACCEPT_ORIGINAL_SERVER (default)</p>
+
+<pre><code class="language-java">@Test
+public void cookie() throws IOException, InterruptedException {  
+    HttpClient client = HttpClient.newBuilder()
+        .cookieHandler(new CookieManager(null, CookiePolicy.ACCEPT_ALL))
+        .build();
+
+    HttpRequest request = HttpRequest.newBuilder()
+        .uri(URI.create("http://localhost:8081/test/set-cookie"))
+        .build();
+
+    HttpResponse&lt;String&gt; response = client.send(request, HttpResponse.BodyHandlers.ofString());
+    String cookie = response.headers().firstValue("Set-Cookie").get();
+    assertThat(HttpCookie.parse(cookie).get(0).getName()).isEqualTo("SID");
+
+    request = HttpRequest.newBuilder()
+        .uri(URI.create("http://localhost:8081/test/resource"))
+        .header("Accept", "application/json")
+        .build();
+    response = client.send(request, HttpResponse.BodyHandlers.ofString());
+    assertThat(response.statusCode()).isEqualTo(200);
+}
+</code></pre>
 
 <p></p><div class="hk-autoads"></div>  
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>In this tutorial, we learned how to create a new <code>HttpClient</code> instance, configure and use it to build and execute an HTTP request asynchronously. You can find the full source code as below</p>
+<p>In this tutorial, we learned how to create a new <code>HttpClient</code> instance, configure and use it to build and execute an HTTP request synchronously and asynchronously. You can find the full source code as below</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/java-examples/java-core/src/test/java/com/hellokoding/java/java11/HttpClientExamples.java">
 </code></pre>
