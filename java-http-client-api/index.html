@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-http-client-api/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2020/03/JavaHTTPClientAPI.png">
     <meta property="article:published_time" content="2020-03-02T07:58:18.000Z">
-    <meta property="article:modified_time" content="2020-03-24T11:12:29.000Z">
+    <meta property="article:modified_time" content="2020-03-24T13:10:45.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java HttpClient API Tutorial with Examples",
     "url": "http://hellokoding.com/java-http-client-api/",
     "datePublished": "2020-03-02T07:58:18.000Z",
-    "dateModified": "2020-03-24T11:12:29.000Z",
+    "dateModified": "2020-03-24T13:10:45.000Z",
     "image": "http://hellokoding.com/content/images/2020/03/JavaHTTPClientAPI.png",
     "keywords": "Java",
     "description": "Since Java 11, you can use HttpClient API to execute non-blocking HTTP requests and handle responses through CompletableFuture, which can be chained to trigger dependant actions The following example sends an HTTP GET request and retrieves its response asynchronously with HttpClient and CompletableFuture @Test public void getAsync() {       HttpClient client &#x3D; HttpClient."
@@ -252,13 +252,15 @@ public void getAsync() {
         .header("Accept", "application/json")
         .build();
 
-    String body = client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
-        .thenApplyAsync(HttpResponse::body)
+    int statusCode = client.sendAsync(request, HttpResponse.BodyHandlers.ofString())
+        .thenApplyAsync(HttpResponse::statusCode)
         .join();
 
-    assertThat(body).isEqualTo("OK");
+    assertThat(statusCode).isEqualTo(200);
 }
 </code></pre>
+
+<p>Let's walk through this tutorial to explore in more details</p>
 
 <h3 id="whatyoullneed">What you'll need</h3>
 
@@ -272,7 +274,7 @@ public void getAsync() {
 
 <ul>
 <li>Java 11+ for learning HttpClient API</li>
-<li>JUnit 4 for writing unit tests</li>
+<li>JUnit 4 for writing test cases</li>
 <li>WireMock for mocking Http server</li>
 <li>AssertJ for verifying test result</li>
 </ul>
@@ -308,6 +310,14 @@ public void createAnHTTPClient() throws NoSuchAlgorithmException {
     assertThat(client.connectTimeout()).get().isEqualTo(Duration.ofSeconds(1));
 }
 </code></pre>
+
+<ul>
+<li><p><code>version(HttpClient.Version.HTTP_2))</code> preferred HTTP version 2, fall back to version 1.1 if the server is not supported</p></li>
+<li><p><code>followRedirects(HttpClient.Redirect.NEVER)</code> never direct an HTTP request. This is the default option, other options are <code>Redirect.ALWAYS</code> (always redirect), and <code>Redirect.NORMAL</code> (always redirect except from HTTPS URL to HTTP URLS)</p></li>
+<li><p><code>authenticator(Authenticator)</code> set a non-preemptive Basic Authentication</p></li>
+<li><p><code>cookieHandler(new CookieManager())</code> enables a cookie handler, disabled if this option is ignored</p></li>
+<li><p><code>connectTimeout(Duration.ofSeconds(1))</code> sets the connect timeout duration for an <code>HttpClient</code> instance. <code>HttpConnectTimeoutException</code> will be thrown if the connection cannot be established within the given duration</p></li>
+</ul>
 
 <p>You can also use <code>HttpClient.newHttpClient()</code> to create a new <code>HttpClient</code> with default settings. It is a short form of <code>HttpClient.newBuilder().build()</code></p>
 
@@ -421,6 +431,40 @@ public void postAsync() {
 
 <p><code>sendAsync</code> doesn't block the current thread like <code>send</code>, it returns a <code>CompletableFuture</code> immediately. If completed successfully, it completes with an <code>HttpResponse</code> that contains status, headers, and body</p>
 
+<h3 id="queryparameters">Query Parameters</h3>
+
+<p>HttpClient doesn't come with a URI components builder. However, you can add query string parameters to the URL while creating a new URI</p>
+
+<pre><code class="language-java">URI.create("http://localhost:8081/test/resource?a=b")  
+</code></pre>
+
+<h3 id="postjson">Post JSON</h3>
+
+<p>There's no built-in JSON support. You can use Jackson or Gson to parse Object to String and vice versa</p>
+
+<p>The following example sends an HTTP POST request through HttpClient with JSON data which is serialized and deserialized by Jackson ObjectMapper</p>
+
+<pre><code class="language-java">@Test
+public void postJson() throws IOException, InterruptedException {  
+    HttpClient client = HttpClient.newHttpClient();
+
+    Book book = new Book(1, "Java HttpClient in practice");
+    String body = objectMapper.writeValueAsString(book);
+
+    HttpRequest request = HttpRequest.newBuilder()
+        .uri(URI.create("http://localhost:8081/test/resource"))
+        .header("Accept", "application/json")
+        .header("Content-Type", "application/json")
+        .POST(HttpRequest.BodyPublishers.ofString(body))
+        .build();
+
+    HttpResponse&lt;String&gt; response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+    assertThat(response.statusCode()).isEqualTo(200);
+    assertThat(objectMapper.readValue(response.body(), Book.class).id).isEqualTo(1);
+}
+</code></pre>
+
 <p></p><div class="hk-autoads"></div>  
 
 <h3 id="basicauthentication">Basic Authentication</h3>
@@ -442,7 +486,7 @@ public void postAsync() {
 </code></pre>
 
 <ul>
-<li>Add <code>Authorization</code> header to an <code>HttpRequest</code> instance</li>
+<li>Add <code>Authorization</code> header to an <code>HttpRequest</code> instance. Use this option when a preemptive basic authentication is required by a server like WireMock</li>
 </ul>
 
 <pre><code class="language-java">@Test
