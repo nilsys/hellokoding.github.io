@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/java-http-client-api/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2020/03/JavaHTTPClientAPI.png">
     <meta property="article:published_time" content="2020-03-02T07:58:18.000Z">
-    <meta property="article:modified_time" content="2020-03-24T13:21:36.000Z">
+    <meta property="article:modified_time" content="2020-03-24T14:14:22.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
@@ -63,7 +63,7 @@
     "headline": "Java HttpClient API Tutorial with Examples",
     "url": "http://hellokoding.com/java-http-client-api/",
     "datePublished": "2020-03-02T07:58:18.000Z",
-    "dateModified": "2020-03-24T13:21:36.000Z",
+    "dateModified": "2020-03-24T14:14:22.000Z",
     "image": "http://hellokoding.com/content/images/2020/03/JavaHTTPClientAPI.png",
     "keywords": "Java",
     "description": "Since Java 11, you can use HttpClient API to execute non-blocking HTTP requests and handle responses through CompletableFuture, which can be chained to trigger dependant actions The following example sends an HTTP GET request and retrieves its response asynchronously with HttpClient and CompletableFuture @Test public void getAsync() {       HttpClient client &#x3D; HttpClient."
@@ -313,7 +313,7 @@ public void createAnHTTPClient() throws NoSuchAlgorithmException {
 
 <ul>
 <li><p><code>version(HttpClient.Version.HTTP_2))</code> preferred HTTP version 2, fall back to version 1.1 if the server is not supported</p></li>
-<li><p><code>followRedirects(HttpClient.Redirect.NEVER)</code> never direct an HTTP request. This is the default option, other options are <code>Redirect.ALWAYS</code> (always redirect), and <code>Redirect.NORMAL</code> (always redirect except from HTTPS URL to HTTP URLS)</p></li>
+<li><p><code>followRedirects(HttpClient.Redirect.NEVER)</code> never redirect an HTTP request. This is the default option, other options are <code>Redirect.ALWAYS</code> (always redirect), and <code>Redirect.NORMAL</code> (always redirect except from HTTPS URL to HTTP URLS)</p></li>
 <li><p><code>authenticator(Authenticator)</code> set a non-preemptive Basic Authentication</p></li>
 <li><p><code>cookieHandler(new CookieManager())</code> enables a cookie handler, disabled if this option is ignored</p></li>
 <li><p><code>connectTimeout(Duration.ofSeconds(1))</code> sets the connect timeout duration for an <code>HttpClient</code> instance. <code>HttpConnectTimeoutException</code> will be thrown if the connection cannot be established within the given duration</p></li>
