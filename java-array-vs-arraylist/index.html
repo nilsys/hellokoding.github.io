@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Java Array vs ArrayList">
-    <meta property="og:description" content="Arrays in Java are fixed size array data structure implementation, provide run-time type safety ArrayLists are resizable array implementation, a part of the Collections framework, offer compile-time type safety - through generics Let's walk through this tutorial to see the differences between Array and ArrayList in Java in detail examples">
+    <meta property="og:description" content="Arrays in Java are fixed-size array data structure implementation, provide run-time type safety ArrayLists are resizable array implementation, a part of the Collections framework, offer compile-time type safety - through generics Let's walk through this tutorial to see the differences between Array and ArrayList in Java in detail examples Fixed">
     <meta property="og:url" content="http://hellokoding.com/java-array-vs-arraylist/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/08/JavaCore_ArrayVSArrayList.png">
     <meta property="article:published_time" content="2019-08-28T15:20:57.000Z">
-    <meta property="article:modified_time" content="2020-03-28T14:28:49.000Z">
+    <meta property="article:modified_time" content="2020-03-28T14:32:50.000Z">
     <meta property="article:tag" content="Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Java Array vs ArrayList">
-    <meta name="twitter:description" content="Arrays in Java are fixed size array data structure implementation, provide run-time type safety ArrayLists are resizable array implementation, a part of the Collections framework, offer compile-time type safety - through generics Let's walk through this tutorial to see the differences between Array and ArrayList in Java in detail examples">
+    <meta name="twitter:description" content="Arrays in Java are fixed-size array data structure implementation, provide run-time type safety ArrayLists are resizable array implementation, a part of the Collections framework, offer compile-time type safety - through generics Let's walk through this tutorial to see the differences between Array and ArrayList in Java in detail examples Fixed">
     <meta name="twitter:url" content="http://hellokoding.com/java-array-vs-arraylist/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/08/JavaCore_ArrayVSArrayList.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Java Array vs ArrayList",
     "url": "http://hellokoding.com/java-array-vs-arraylist/",
     "datePublished": "2019-08-28T15:20:57.000Z",
-    "dateModified": "2020-03-28T14:28:49.000Z",
+    "dateModified": "2020-03-28T14:32:50.000Z",
     "image": "http://hellokoding.com/content/images/2019/08/JavaCore_ArrayVSArrayList.png",
     "keywords": "Java",
-    "description": "Arrays in Java are fixed size array data structure implementation, provide run-time type safety ArrayLists are resizable array implementation, a part of the Collections framework, offer compile-time type safety - through generics Let&#x27;s walk through this tutorial to see the differences between Array and ArrayList in Java in detail examples"
+    "description": "Arrays in Java are fixed-size array data structure implementation, provide run-time type safety ArrayLists are resizable array implementation, a part of the Collections framework, offer compile-time type safety - through generics Let&#x27;s walk through this tutorial to see the differences between Array and ArrayList in Java in detail examples Fixed"
 }
     </script>
 
@@ -239,7 +239,7 @@ ghost.init({
               <a href="../tag/java/">Java</a>
             </div>
 
-            <p>Arrays in Java are fixed size array data structure implementation, provide run-time type safety</p>
+            <p>Arrays in Java are fixed-size array data structure implementation, provide run-time type safety</p>
 
 <p>ArrayLists are resizable array implementation, a part of the Collections framework, offer compile-time type safety - through generics</p>
 
@@ -248,9 +248,9 @@ ghost.init({
 <h2 id="fixedvsdynamicsizeimplementation">Fixed vs dynamic size implementation</h2>
 
 <ul>
-<li><p>Array is a container object that holds a fixed number of single type elements. Once an array object is created, its length / capacity never changes, you can't add more elements than the initial capacity</p>
+<li><p>An array is an object container that holds a fixed number of single type elements. Once an array object is created, its length/capacity never changes, you can't add more elements than the initial capacity</p>
 
-<p>The following example declares an array of length 3 and assign value to the allocated item. There're no ways for adding an additional item as the capacity's fixed</p></li>
+<p>The following example declares an array of length 3 and assigns value to the allocated item. There're no ways for adding an additional item as the capacity's fixed</p></li>
 </ul>
 
 <pre><code class="language-java">int[] arr = new int[3];  
@@ -274,7 +274,7 @@ lst.add(4);
 
 <h2 id="typesafety">Type safety</h2>
 
-<p>Arrays and generics have different type rules. Generics offer compile-time while arrays offer runtime type safety. Generics  are implemented in the Java Collection framework to specify the type of objects stored in a collection instance</p>
+<p>Arrays and generics have a different type of rules. Generics offer compile-time while arrays offer runtime type safety. Generics  are implemented in the Java Collection framework to specify the type of objects stored in a collection instance</p>
 
 <h3 id="covariancevsinvariance">Covariance vs Invariance</h3>
 
@@ -295,7 +295,7 @@ lst.add(4);
 <h3 id="reificationvserasure">Reification vs Erasure</h3>
 
 <ul>
-<li>Arrays are reified, data type is enforced at runtime. The below code is success at compile time, but failed at runtime</li>
+<li>Arrays are reified, the data type is enforced at runtime. The below code is success at compile-time but failed at runtime</li>
 </ul>
 
 <pre><code class="language-java">Object[] arr = new String[3];  
@@ -303,7 +303,7 @@ arr[0] = 1 // throws ArrayStoreException at runtime
 </code></pre>
 
 <ul>
-<li>Generics are erasure, data type is enforced at compile time and erased at runtime. The below is failed at compile time</li>
+<li>Generics are erasure, the data type is enforced at compile-time and erased at runtime. The below is failed at compile time</li>
 </ul>
 
 <pre><code class="language-java">List&lt;Object&gt; lst = new ArrayList&lt;String&gt;(); // Incompatible types  
@@ -403,7 +403,7 @@ lst.get(0).set(0, 10);
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>In this tutorials, we learned the differences between arrays and ArrayLists in detail examples. ArrayList is usually preferred to Array thanks to its type-safety enforcement at compile time offering through generics</p>
+<p>In this tutorial, we learned the differences between arrays and ArrayLists in detail examples. ArrayList is usually preferred to Array thanks to its type-safety enforcement at compile time offering through generics</p>
             
             <div class="post__tags">
               <a href="../tag/java/">Java</a>
