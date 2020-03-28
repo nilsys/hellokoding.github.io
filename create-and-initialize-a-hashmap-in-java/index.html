@@ -24,8 +24,9 @@
     <meta property="og:url" content="http://hellokoding.com/create-and-initialize-a-hashmap-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/07/JavaCollections_InitializeaHashMap.png">
     <meta property="article:published_time" content="2019-07-07T13:55:37.000Z">
-    <meta property="article:modified_time" content="2019-10-28T06:12:03.000Z">
+    <meta property="article:modified_time" content="2020-03-28T15:06:07.000Z">
     <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Collections In Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
@@ -36,7 +37,7 @@
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Java">
+    <meta name="twitter:data2" content="Java, Collections In Java">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -63,9 +64,9 @@
     "headline": "Initialize a HashMap in Java",
     "url": "http://hellokoding.com/create-and-initialize-a-hashmap-in-java/",
     "datePublished": "2019-07-07T13:55:37.000Z",
-    "dateModified": "2019-10-28T06:12:03.000Z",
+    "dateModified": "2020-03-28T15:06:07.000Z",
     "image": "http://hellokoding.com/content/images/2019/07/JavaCollections_InitializeaHashMap.png",
-    "keywords": "Java",
+    "keywords": "Java, Collections In Java",
     "description": "You can provide either Map.of or Map.ofEntries factory method, since Java 9, to the HashMap(Map) constructor to create and init a HashMap in one line at the creation time To initialize a HashMap after the creation time, you can use put, Java 8+ putIfAbsent, putAll methods Initial"
 }
     </script>
@@ -87,7 +88,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-java">
+<body class="post-template tag-java tag-collections-in-java">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -227,16 +228,16 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-9 column">
-        <article class="post tag-java">
+        <article class="post tag-java tag-collections-in-java">
 
           <header class="post__header">
             <h1 class="post__title">Initialize a HashMap in Java</h1>
-            <time class="post__date" datetime="2019-10-28">Last modified @ 28 October 2019</time>
+            <time class="post__date" datetime="2020-03-28">Last modified @ 28 March 2020</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/java/">Java</a>
+              <a href="../tag/java/">Java</a><a href="../tag/collections-in-java/">Collections In Java</a>
             </div>
 
             <p>You can provide either Map.of or Map.ofEntries factory method, since Java 9, to the HashMap(Map) constructor to create and init a HashMap in one line at the creation time</p>
@@ -323,7 +324,7 @@ public void initializeWithPut() {
 </code></pre>
 
 <ul>
-<li>Java 8+ introduces <code>putIfAbsent</code> to ignore duplicate key when adding entry into a HashMap</li>
+<li>Java 8+ introduces <code>putIfAbsent</code> to ignore duplicate key when adding an entry into a HashMap</li>
 </ul>
 
 <pre><code class="language-java">@Test
@@ -378,7 +379,7 @@ public void initializeWithPutAll() {
 <h3 id="doublebraceinitializationshouldnotbeusedinpractice">Double brace initialization should not be used in practice</h3>
 
 <ul>
-<li>Double brace initialization can cause a memory leak as it creates anonymous classes with an hidden reference to the owner instance object</li>
+<li>Double brace initialization can cause a memory leak as it creates anonymous classes with a hidden reference to the owner instance object</li>
 </ul>
 
 <pre><code class="language-java">@Test
@@ -399,7 +400,7 @@ public void initializeWithDoubleBrace() {
 <ul>
 <li><p>When you create and initialize a new HashMap by using the default constructor HashMap(), the initial capacity and load factor are set to 16 and 0.75 respectively</p>
 
-<p>You can also provide theirs custom values by using HashMap(initialCapcity) and HashMap(initialCapcity, loadFactor) constructors</p></li>
+<p>You can also provide their custom values by using <code>HashMap(initialCapcity)</code> and <code>HashMap(initialCapcity, loadFactor)</code> constructors</p></li>
 </ul>
 
 <pre><code class="language-java">@Test
@@ -425,7 +426,7 @@ public void initializeWithInitialCapacityAndLoadFactor() {
 </code></pre>
             
             <div class="post__tags">
-              <a href="../tag/java/">Java</a>
+              <a href="../tag/java/">Java</a><a href="../tag/collections-in-java/">Collections In Java</a>
             </div>
           </div>
 

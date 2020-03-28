@@ -20,23 +20,24 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Java PriorityQueue + PriorityBlockingQueue Tutorial and Example">
-    <meta property="og:description" content="There're two priority queue data structure implementations in Java, java.util.PriorityQueue and java.util.concurrent.PriorityBlockingQueue. They are both based on binary heap data structure java.util.PriorityQueue class Designed for holding elements prior to processing in single threaded environment. All operations are not thread safe Supported since Java">
+    <meta property="og:description" content="There're two priority queue data structure implementations in Java, java.util.PriorityQueue and java.util.concurrent.PriorityBlockingQueue. They are both based on binary heap data structure java.util.PriorityQueue class Designed for holding elements prior to processing in a single-threaded environment. All operations are not thread-safe Supported since Java 1.">
     <meta property="og:url" content="http://hellokoding.com/priority-queue-implementations-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/priority-queue-java.png">
     <meta property="article:published_time" content="2019-02-22T16:21:55.000Z">
-    <meta property="article:modified_time" content="2019-06-15T01:12:37.000Z">
+    <meta property="article:modified_time" content="2020-03-28T14:47:28.000Z">
     <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Collections In Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Java PriorityQueue + PriorityBlockingQueue Tutorial and Example">
-    <meta name="twitter:description" content="There're two priority queue data structure implementations in Java, java.util.PriorityQueue and java.util.concurrent.PriorityBlockingQueue. They are both based on binary heap data structure java.util.PriorityQueue class Designed for holding elements prior to processing in single threaded environment. All operations are not thread safe Supported since Java">
+    <meta name="twitter:description" content="There're two priority queue data structure implementations in Java, java.util.PriorityQueue and java.util.concurrent.PriorityBlockingQueue. They are both based on binary heap data structure java.util.PriorityQueue class Designed for holding elements prior to processing in a single-threaded environment. All operations are not thread-safe Supported since Java 1.">
     <meta name="twitter:url" content="http://hellokoding.com/priority-queue-implementations-in-java/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/02/priority-queue-java.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Java">
+    <meta name="twitter:data2" content="Java, Collections In Java">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -63,10 +64,10 @@
     "headline": "Java PriorityQueue + PriorityBlockingQueue Tutorial and Example",
     "url": "http://hellokoding.com/priority-queue-implementations-in-java/",
     "datePublished": "2019-02-22T16:21:55.000Z",
-    "dateModified": "2019-06-15T01:12:37.000Z",
+    "dateModified": "2020-03-28T14:47:28.000Z",
     "image": "http://hellokoding.com/content/images/2019/02/priority-queue-java.png",
-    "keywords": "Java",
-    "description": "There&#x27;re two priority queue data structure implementations in Java, java.util.PriorityQueue and java.util.concurrent.PriorityBlockingQueue. They are both based on binary heap data structure java.util.PriorityQueue class Designed for holding elements prior to processing in single threaded environment. All operations are not thread safe Supported since Java"
+    "keywords": "Java, Collections In Java",
+    "description": "There&#x27;re two priority queue data structure implementations in Java, java.util.PriorityQueue and java.util.concurrent.PriorityBlockingQueue. They are both based on binary heap data structure java.util.PriorityQueue class Designed for holding elements prior to processing in a single-threaded environment. All operations are not thread-safe Supported since Java 1."
 }
     </script>
 
@@ -87,7 +88,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-java">
+<body class="post-template tag-java tag-collections-in-java">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -227,16 +228,16 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-9 column">
-        <article class="post tag-java">
+        <article class="post tag-java tag-collections-in-java">
 
           <header class="post__header">
             <h1 class="post__title">Java PriorityQueue + PriorityBlockingQueue Tutorial and Example</h1>
-            <time class="post__date" datetime="2019-06-15">Last modified @ 15 June 2019</time>
+            <time class="post__date" datetime="2020-03-28">Last modified @ 28 March 2020</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/java/">Java</a>
+              <a href="../tag/java/">Java</a><a href="../tag/collections-in-java/">Collections In Java</a>
             </div>
 
             <p>There're two <a href="https://hellokoding.com/priority-queue-data-structure/">priority queue data structure</a> implementations in Java, <code>java.util.PriorityQueue</code> and <code>java.util.concurrent.PriorityBlockingQueue</code>. They are both based on <a href="https://hellokoding.com/heap-data-structure/">binary heap data structure</a></p>
@@ -244,7 +245,7 @@ ghost.init({
 <h2 id="javautilpriorityqueueclass">java.util.PriorityQueue class</h2>
 
 <ul>
-<li>Designed for holding elements prior to processing in single threaded environment. All operations are not thread safe</li>
+<li>Designed for holding elements prior to processing in a single-threaded environment. All operations are not thread-safe</li>
 <li>Supported since Java 1.5</li>
 </ul>
 
@@ -252,7 +253,7 @@ ghost.init({
 
 <ul>
 <li>Elements are ordered according to their <code>Comparable</code> natural ordering or by a <code>Comparator</code> provided at queue construction time</li>
-<li>No guarantees about the ordering of elements with equal priority. If you need it, consider to define custom classes or comparators that use a secondary key to break ties in primary priority values</li>
+<li>No guarantees about the ordering of elements with equal priority. If you need it, consider defining custom classes or comparators that use a secondary key to break ties in primary priority values</li>
 <li>The <code>iterator()</code> method is not guaranteed to traverse the elements of the priority queue in any particular order. If you need ordered traversal, consider using <code>Arrays.sort(pq.toArray())</code></li>
 </ul>
 
@@ -279,7 +280,7 @@ ghost.init({
 <h2 id="javautilconcurrentpriorityblockingqueueclass">java.util.concurrent.PriorityBlockingQueue class</h2>
 
 <ul>
-<li>Designed to be used primarily for producer-consumer queues in multi threaded environment. All public operations are protected with a single lock</li>
+<li>Designed to be used primarily for producer-consumer queues in a multi-threaded environment. All public operations are protected with a single lock</li>
 <li><code>PriorityBlockingQueue</code> uses the same ordering rules as <code>PriorityQueue</code> and supplies blocking retrieval operations</li>
 <li>Supported since Java 1.5</li>
 </ul>
@@ -290,7 +291,7 @@ ghost.init({
 </code></pre>
             
             <div class="post__tags">
-              <a href="../tag/java/">Java</a>
+              <a href="../tag/java/">Java</a><a href="../tag/collections-in-java/">Collections In Java</a>
             </div>
           </div>
 

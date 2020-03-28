@@ -20,23 +20,24 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Iterate a HashSet in Java">
-    <meta property="og:description" content="You can iterate a HashSet by using either forEach(Consumer), since Java 8, or for-each loop, Iterator and SplitIterator The iteration order is unpredictable as HashSet has no guarantee to it Index-loops such as for-index, while-index, do-while-index can't not be used to iterate a HashSet as it has no support">
+    <meta property="og:description" content="You can iterate a HashSet by using either forEach(Consumer), since Java 8, or for-each loop, Iterator, and SplitIterator The iteration order is unpredictable as HashSet has no guarantee to it Index-loops such as for-index, while-index, do-while-index cannot be used to iterate a HashSet as it has no support on">
     <meta property="og:url" content="http://hellokoding.com/iterate-a-hashset-set-in-java/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/08/JavaCollections_IterateASet.png">
     <meta property="article:published_time" content="2019-08-14T16:15:17.000Z">
-    <meta property="article:modified_time" content="2019-10-15T16:41:53.000Z">
+    <meta property="article:modified_time" content="2020-03-28T14:55:21.000Z">
     <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Collections In Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Iterate a HashSet in Java">
-    <meta name="twitter:description" content="You can iterate a HashSet by using either forEach(Consumer), since Java 8, or for-each loop, Iterator and SplitIterator The iteration order is unpredictable as HashSet has no guarantee to it Index-loops such as for-index, while-index, do-while-index can't not be used to iterate a HashSet as it has no support">
+    <meta name="twitter:description" content="You can iterate a HashSet by using either forEach(Consumer), since Java 8, or for-each loop, Iterator, and SplitIterator The iteration order is unpredictable as HashSet has no guarantee to it Index-loops such as for-index, while-index, do-while-index cannot be used to iterate a HashSet as it has no support on">
     <meta name="twitter:url" content="http://hellokoding.com/iterate-a-hashset-set-in-java/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/08/JavaCollections_IterateASet.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Java">
+    <meta name="twitter:data2" content="Java, Collections In Java">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -63,10 +64,10 @@
     "headline": "Iterate a HashSet in Java",
     "url": "http://hellokoding.com/iterate-a-hashset-set-in-java/",
     "datePublished": "2019-08-14T16:15:17.000Z",
-    "dateModified": "2019-10-15T16:41:53.000Z",
+    "dateModified": "2020-03-28T14:55:21.000Z",
     "image": "http://hellokoding.com/content/images/2019/08/JavaCollections_IterateASet.png",
-    "keywords": "Java",
-    "description": "You can iterate a HashSet by using either forEach(Consumer), since Java 8, or for-each loop, Iterator and SplitIterator The iteration order is unpredictable as HashSet has no guarantee to it Index-loops such as for-index, while-index, do-while-index can&#x27;t not be used to iterate a HashSet as it has no support"
+    "keywords": "Java, Collections In Java",
+    "description": "You can iterate a HashSet by using either forEach(Consumer), since Java 8, or for-each loop, Iterator, and SplitIterator The iteration order is unpredictable as HashSet has no guarantee to it Index-loops such as for-index, while-index, do-while-index cannot be used to iterate a HashSet as it has no support on"
 }
     </script>
 
@@ -87,7 +88,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-java">
+<body class="post-template tag-java tag-collections-in-java">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -227,23 +228,23 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-9 column">
-        <article class="post tag-java">
+        <article class="post tag-java tag-collections-in-java">
 
           <header class="post__header">
             <h1 class="post__title">Iterate a HashSet in Java</h1>
-            <time class="post__date" datetime="2019-10-15">Last modified @ 15 October 2019</time>
+            <time class="post__date" datetime="2020-03-28">Last modified @ 28 March 2020</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/java/">Java</a>
+              <a href="../tag/java/">Java</a><a href="../tag/collections-in-java/">Collections In Java</a>
             </div>
 
-            <p>You can iterate a HashSet by using either forEach(Consumer), since Java 8, or for-each loop, Iterator and SplitIterator</p>
+            <p>You can iterate a HashSet by using either forEach(Consumer), since Java 8, or for-each loop, Iterator, and SplitIterator</p>
 
 <p>The iteration order is unpredictable as HashSet has no guarantee to it</p>
 
-<p>Index-loops such as for-index, while-index, do-while-index can't not be used to iterate a HashSet as it has no support on retrieving element by index</p>
+<p>Index-loops such as for-index, while-index, do-while-index cannot be used to iterate a HashSet as it has no support on retrieving element by index</p>
 
 <p>Let's walk through the below examples to explore them in more details</p>
 
@@ -265,10 +266,10 @@ public void iterateWithForEachConsumer() {
 }
 </code></pre>
 
-<h3 id="iteratewithforeachloop">Iterate with for-each loop</h3>
+<h3 id="iteratewithaforeachloop">Iterate with a for-each loop</h3>
 
 <ul>
-<li>Use for-each loop to iterate over a HashSet</li>
+<li>Use a for-each loop to iterate over a HashSet</li>
 </ul>
 
 <pre><code class="language-java">@Test
@@ -308,7 +309,7 @@ public void iterateWithIterator() {
 </code></pre>
             
             <div class="post__tags">
-              <a href="../tag/java/">Java</a>
+              <a href="../tag/java/">Java</a><a href="../tag/collections-in-java/">Collections In Java</a>
             </div>
           </div>
 

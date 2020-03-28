@@ -24,8 +24,9 @@
     <meta property="og:url" content="http://hellokoding.com/java-linkedhashmap-tutorial-with-examples/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/10/JavaCollections_LinkedHashMapTutorial.png">
     <meta property="article:published_time" content="2019-10-20T07:51:04.000Z">
-    <meta property="article:modified_time" content="2020-03-09T14:03:28.000Z">
+    <meta property="article:modified_time" content="2020-03-28T15:02:24.000Z">
     <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Collections In Java">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
@@ -36,7 +37,7 @@
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
-    <meta name="twitter:data2" content="Java">
+    <meta name="twitter:data2" content="Java, Collections In Java">
     <meta name="twitter:site" content="@hellokoding">
     <meta name="twitter:creator" content="@giaunv">
     
@@ -63,9 +64,9 @@
     "headline": "Java LinkedHashMap Tutorial with Examples",
     "url": "http://hellokoding.com/java-linkedhashmap-tutorial-with-examples/",
     "datePublished": "2019-10-20T07:51:04.000Z",
-    "dateModified": "2020-03-09T14:03:28.000Z",
+    "dateModified": "2020-03-28T15:02:24.000Z",
     "image": "http://hellokoding.com/content/images/2019/10/JavaCollections_LinkedHashMapTutorial.png",
-    "keywords": "Java",
+    "keywords": "Java, Collections In Java",
     "description": "Java LinkedHashMap is a hash table (key-value pairs, dictionary) and doubly linked list data structure implementation of the Map interface, a part of the Java Collections framework LinkedHashMap has the following features Provides insertion-ordered iteration No duplicate keys. Permits one null key and multiple null values Offers constant time performance"
 }
     </script>
@@ -87,7 +88,7 @@ ghost.init({
      });
 </script>
 </head>
-<body class="post-template tag-java">
+<body class="post-template tag-java tag-collections-in-java">
 
 	<div class="off-canvas-container">
     <header class="site-header">
@@ -227,16 +228,16 @@ ghost.init({
     <div class="row">
 
       <div class="medium-8 large-9 column">
-        <article class="post tag-java">
+        <article class="post tag-java tag-collections-in-java">
 
           <header class="post__header">
             <h1 class="post__title">Java LinkedHashMap Tutorial with Examples</h1>
-            <time class="post__date" datetime="2020-03-09">Last modified @ 09 March 2020</time>
+            <time class="post__date" datetime="2020-03-28">Last modified @ 28 March 2020</time>
           </header>
 
           <div class="post-content">
             <div class="post__tags">
-              <a href="../tag/java/">Java</a>
+              <a href="../tag/java/">Java</a><a href="../tag/collections-in-java/">Collections In Java</a>
             </div>
 
             <p>Java LinkedHashMap is a <a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example/">hash table (key-value pairs, dictionary)</a> and <a href="https://hellokoding.com/doubly-linked-list-data-structure-tutorial-and-example/">doubly linked list</a> data structure implementation of the Map interface, a part of the <a href="https://hellokoding.com/java-collections-framework/">Java Collections framework</a></p>
@@ -246,7 +247,7 @@ ghost.init({
 <ul>
 <li><p>Provides insertion-ordered iteration</p></li>
 <li><p>No duplicate keys. Permits one <code>null</code> key and multiple null values</p></li>
-<li><p>Offers constant time performance for basic operations such as get, containsKey, containsValue, put, remove</p></li>
+<li><p>Offers constant time performance for basic operations such as <code>get</code>, <code>containsKey</code>, <code>containsValue</code>, <code>put</code>, <code>remove</code></p></li>
 <li><p>Keys and values are compared based on theirs <a href="https://hellokoding.com/java-equals-and-hashcode/">equals and hashCode implementation</a></p></li>
 <li><p>LinkedHashMap is not thread-safe as it is an unsynchronized implementation. In multi-threading environment with at least one thread modifies the map, it must be synchronized externally</p></li>
 <li><p>Internally, LinkedHashMap uses a <a href="https://hellokoding.com/hash-table-data-structure-tutorial-with-example/">hash table data structure</a> to store and retrieve its elements, uses a <a href="https://hellokoding.com/doubly-linked-list-data-structure-tutorial-and-example/">doubly linked list data structure</a> to maintain the insertion order</p></li>
@@ -264,7 +265,7 @@ ghost.init({
 
 <h3 id="linkedhashmapvshashmapandtreemap">LinkedHashMap vs HashMap and TreeMap</h3>
 
-<p>LinkedHashMap provides insertion-ordered iteration and run nearly as fast as HashMap</p>
+<p>LinkedHashMap provides insertion-ordered iteration and runs nearly as fast as HashMap</p>
 
 <p><a href="https://hellokoding.com/java-hashmap-tutorial-with-examples/">HashMap</a> has no ordering guarantees and run faster than TreeMap (constant-time vs log-time for most operations)</p>
 
@@ -380,7 +381,7 @@ public void retrieve() {
 </code></pre>
 
 <ul>
-<li>Get value by the specified key with get(key)</li>
+<li>Get value by the specified key with <code>get(key)</code></li>
 </ul>
 
 <pre><code class="language-java">@Test
@@ -406,7 +407,7 @@ public void filter() {
 
 <h3 id="examineaddupdateandremove">Examine, Add, Update and Remove</h3>
 
-<p>LinkedHashMap provides containsKey(key), containsValue(value), put(key, value), replace(key, value), and remove(key) methods to examine if a LinkedHashMap contains the specified key or value, to add a new key-value pair, update value by key, remove an entry by key respectively</p>
+<p>LinkedHashMap provides containsKey(key), containsValue(value), put(key, value), replace(key, value), and remove(key) methods to examine if a LinkedHashMap contains the specified key or value, to add a new key-value pair, update a value by key, remove an entry by key respectively</p>
 
 <pre><code class="language-java">@Test
 public void containsPutReplaceRemove() {  
@@ -565,7 +566,7 @@ static class BookFixed {
 
 <p>Java doesn't have a direct API to sort a LinkedHashMap. However, you can do it via TreeMap, <a href="https://hellokoding.com/java-treeset-tutorial-with-examples/">TreeSet</a>, and <a href="https://hellokoding.com/java-arraylist-examples/">ArrayList</a> in conjunction with <a href="https://hellokoding.com/java-comparable-vs-comparator-examples/">Comparable and Comparator</a></p>
 
-<p>The following example uses comparingByKey(Comparator) and comparingByValue(Comparator) static methods of Map.Entry to sort an ArrayList by keys and by values respectively. That ArrayList is created and initialized from entrySet() of a LinkedHashMap</p>
+<p>The following example uses <code>comparingByKey(Comparator)</code> and <code>comparingByValue(Comparator)</code> static methods of <code>Map.Entry</code> to sort an ArrayList by keys and by values respectively. That ArrayList is created and initialized from entrySet() of a LinkedHashMap</p>
 
 <pre><code class="language-java">@Test
 public void sortByKeysAndByValues_WithArrayListAndComparator() {  
@@ -595,7 +596,7 @@ public void sortByKeysAndByValues_WithArrayListAndComparator() {
 </code></pre>
             
             <div class="post__tags">
-              <a href="../tag/java/">Java</a>
+              <a href="../tag/java/">Java</a><a href="../tag/collections-in-java/">Collections In Java</a>
             </div>
           </div>
 
