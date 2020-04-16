@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Heap Data Structure Tutorial and Example</title>
+  <title>Heap Data Structure Tutorial with Examples</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,17 +19,17 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Heap Data Structure Tutorial and Example">
+    <meta property="og:title" content="Heap Data Structure Tutorial with Examples">
     <meta property="og:description" content="Heap is a tree-based data structure in which all nodes in the tree are in the specific order. There are 2 types of heap, typically: Max Heap: all parent node's values are greater than or equal to children node's values, root node value is the largest. Min Heap: all parent">
     <meta property="og:url" content="http://hellokoding.com/heap-data-structure/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-15-at-12-37-39-AM-1.png">
     <meta property="article:published_time" content="2019-02-14T15:14:47.000Z">
-    <meta property="article:modified_time" content="2019-05-08T15:32:19.000Z">
+    <meta property="article:modified_time" content="2020-04-16T01:20:32.000Z">
     <meta property="article:tag" content="Data Structure">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Heap Data Structure Tutorial and Example">
+    <meta name="twitter:title" content="Heap Data Structure Tutorial with Examples">
     <meta name="twitter:description" content="Heap is a tree-based data structure in which all nodes in the tree are in the specific order. There are 2 types of heap, typically: Max Heap: all parent node's values are greater than or equal to children node's values, root node value is the largest. Min Heap: all parent">
     <meta name="twitter:url" content="http://hellokoding.com/heap-data-structure/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-15-at-12-37-39-AM-1.png">
@@ -60,10 +60,10 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "Heap Data Structure Tutorial and Example",
+    "headline": "Heap Data Structure Tutorial with Examples",
     "url": "http://hellokoding.com/heap-data-structure/",
     "datePublished": "2019-02-14T15:14:47.000Z",
-    "dateModified": "2019-05-08T15:32:19.000Z",
+    "dateModified": "2020-04-16T01:20:32.000Z",
     "image": "http://hellokoding.com/content/images/2019/02/Screenshot-2019-02-15-at-12-37-39-AM-1.png",
     "keywords": "Data Structure",
     "description": "Heap is a tree-based data structure in which all nodes in the tree are in the specific order. There are 2 types of heap, typically: Max Heap: all parent node&#x27;s values are greater than or equal to children node&#x27;s values, root node value is the largest. Min Heap: all parent"
@@ -230,8 +230,8 @@ ghost.init({
         <article class="post tag-data-structure">
 
           <header class="post__header">
-            <h1 class="post__title">Heap Data Structure Tutorial and Example</h1>
-            <time class="post__date" datetime="2019-05-08">Last modified @ 08 May 2019</time>
+            <h1 class="post__title">Heap Data Structure Tutorial with Examples</h1>
+            <time class="post__date" datetime="2020-04-16">Last modified @ 16 April 2020</time>
           </header>
 
           <div class="post-content">
@@ -264,7 +264,7 @@ ghost.init({
 <h3 id="internaloperations">Internal operations</h3>
 
 <ul>
-<li><code>heapify</code>, maintains max or min heap property (all parent node's values should be greater/less than or equal to child node's values)</li>
+<li><code>heapify</code>, maintains max or min-heap property (all parent node's values should be greater/less than or equal to the child node's values)</li>
 </ul>
 
 <h3 id="implementations">Implementations</h3>
@@ -273,7 +273,9 @@ ghost.init({
 
 <p>You can implement a binary heap with either a static array (capacity restricted) or a dynamic array</p>
 
-<h2 id="binarymaxheapimplementationexamplewithstaticarray">Binary Max Heap implementation example with Static Array</h2>
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="binarymaxheapimplementationexamplewithstaticarray">Binary Max Heap implementation example with Static Array</h3>
 
 <h4 id="approach">Approach</h4>
 
@@ -289,7 +291,9 @@ ghost.init({
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/datastructure/MaxHeapByArray.java">
 </code></pre>
 
-<h2 id="binaryminheapimplementationexamplewithstaticarray">Binary Min Heap implementation example with Static Array</h2>
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="binaryminheapimplementationexamplewithstaticarray">Binary Min Heap implementation example with Static Array</h3>
 
 <h4 id="approach">Approach</h4>
 
@@ -304,6 +308,21 @@ ghost.init({
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/datastructure-algorithm-java-examples/src/main/java/com/hellokoding/datastructure/MinHeapByArray.java">
 </code></pre>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="applications">Applications</h3>
+
+<ul>
+<li><p>Heaps can be used to implement <a href="https://hellokoding.com/priority-queue-data-structure/">Priority Queues</a></p></li>
+<li><p>Find the shortest paths in a graph with the <a href="https://hellokoding.com/shortest-paths/">Dijkstra algorithm</a></p></li>
+</ul>
+
+<h3 id="heapsinjava">Heaps in Java</h3>
+
+<p>There're two priority queue data structure implementations in Java, java.util.PriorityQueue and java.util.concurrent.PriorityBlockingQueue. They are both based on binary heap data structure</p>
+
+<p><a href="https://hellokoding.com/priority-queue-implementations-in-java/">Learn more</a></p>
             
             <div class="post__tags">
               <a href="../tag/data-structure/">Data Structure</a>
@@ -312,7 +331,7 @@ ghost.init({
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Heap%20Data%20Structure%20Tutorial%20and%20Example&amp;url=http://hellokoding.com/heap-data-structure/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=Heap%20Data%20Structure%20Tutorial%20with%20Examples&amp;url=http://hellokoding.com/heap-data-structure/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
