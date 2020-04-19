@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot and MySQL</title>
+  <title>JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -19,19 +19,19 @@
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot and MySQL">
-    <meta property="og:description" content="This tutorial will walk you through the steps of mapping a JPA and Hibernate One To Many bidirectional entity relationships example with with Spring Boot, Spring Data JPA, Lombok, MySQL and Docker What you'll need JDK 8+ or OpenJDK 8+ Maven 3+ MySQL Server 5+ or Docker CE 18+ Init">
+    <meta property="og:title" content="JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL">
+    <meta property="og:description" content="In the relational databases world (MySQL, PostgreSQL, etc.), One-to-many refers to the relationship between two tables (entities) A and B in which one row (element) of A may be linked with many rows of B, but one row of B is linked to only one row of A. In the">
     <meta property="og:url" content="http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/jpa-one-to-many.png">
     <meta property="article:published_time" content="2015-10-18T14:08:07.000Z">
-    <meta property="article:modified_time" content="2019-05-05T14:14:56.000Z">
+    <meta property="article:modified_time" content="2020-04-19T09:19:12.000Z">
     <meta property="article:tag" content="JPA and Hibernate">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot and MySQL">
-    <meta name="twitter:description" content="This tutorial will walk you through the steps of mapping a JPA and Hibernate One To Many bidirectional entity relationships example with with Spring Boot, Spring Data JPA, Lombok, MySQL and Docker What you'll need JDK 8+ or OpenJDK 8+ Maven 3+ MySQL Server 5+ or Docker CE 18+ Init">
+    <meta name="twitter:title" content="JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL">
+    <meta name="twitter:description" content="In the relational databases world (MySQL, PostgreSQL, etc.), One-to-many refers to the relationship between two tables (entities) A and B in which one row (element) of A may be linked with many rows of B, but one row of B is linked to only one row of A. In the">
     <meta name="twitter:url" content="http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/01/jpa-one-to-many.png">
     <meta name="twitter:label1" content="Written by">
@@ -61,13 +61,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot and MySQL",
+    "headline": "JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL",
     "url": "http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/",
     "datePublished": "2015-10-18T14:08:07.000Z",
-    "dateModified": "2019-05-05T14:14:56.000Z",
+    "dateModified": "2020-04-19T09:19:12.000Z",
     "image": "http://hellokoding.com/content/images/2019/01/jpa-one-to-many.png",
     "keywords": "JPA and Hibernate, Spring Boot",
-    "description": "This tutorial will walk you through the steps of mapping a JPA and Hibernate One To Many bidirectional entity relationships example with with Spring Boot, Spring Data JPA, Lombok, MySQL and Docker What you&#x27;ll need JDK 8+ or OpenJDK 8+ Maven 3+ MySQL Server 5+ or Docker CE 18+ Init"
+    "description": "In the relational databases world (MySQL, PostgreSQL, etc.), One-to-many refers to the relationship between two tables (entities) A and B in which one row (element) of A may be linked with many rows of B, but one row of B is linked to only one row of A. In the"
 }
     </script>
 
@@ -231,8 +231,8 @@ ghost.init({
         <article class="post tag-jpa tag-spring-boot">
 
           <header class="post__header">
-            <h1 class="post__title">JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot and MySQL</h1>
-            <time class="post__date" datetime="2019-05-05">Last modified @ 05 May 2019</time>
+            <h1 class="post__title">JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</h1>
+            <time class="post__date" datetime="2020-04-19">Last modified @ 19 April 2020</time>
           </header>
 
           <div class="post-content">
@@ -240,7 +240,18 @@ ghost.init({
               <a href="../tag/jpa/">JPA and Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
 
-            <p>This tutorial will walk you through the steps of mapping a JPA and Hibernate One To Many bidirectional entity relationships example with with Spring Boot, Spring Data JPA, Lombok, MySQL and Docker</p>
+            <p>In the relational databases world (MySQL, PostgreSQL, etc.), One-to-many refers to the relationship between two tables (entities) A and B in which one row (element) of A may be linked with many rows of B, but one row of B is linked to only one row of A.</p>
+
+<p>In the below example, the <code>book_category</code> and <code>book</code> tables have a one-to-many relationship. One category may be linked with many books but one book is linked to only one category.</p>
+
+<p><img src="../content/images/2019/02/Screenshot-2019-02-01-at-12-20-37-AM.png" alt=""></p>
+
+<p>The relationship is enforced via a foreign key <br>
+<code>book_category_id</code> which is a copy of the primary key of the table in "One" side (book_category) and placed on the "Many" side (book)</p>
+
+<p>This tutorial will walk you through the steps of mapping that One-To-Many bidirectional entity relationships in JPA and Hibernate with Spring Boot, Spring Data JPA, MySQL and Docker</p>
+
+<p>Let's get started</p>
 
 <h3 id="whatyoullneed">What you'll need</h3>
 
@@ -248,11 +259,23 @@ ghost.init({
 <li>JDK 8+ or OpenJDK 8+</li>
 <li>Maven 3+</li>
 <li>MySQL Server 5+ or Docker CE 18+</li>
+<li>Your favorite IDE</li>
 </ul>
 
-<h2 id="initprojectstructureanddependencies">Init project structure and dependencies</h2>
+<h3 id="techstack">Tech stack</h3>
 
-<h3 id="projectstructure">Project structure</h3>
+<ul>
+<li>Java 8+</li>
+<li>Spring Boot</li>
+<li>Spring Data JPA</li>
+<li>Hibernate</li>
+</ul>
+
+<h3 id="initprojectstructure">Init project structure</h3>
+
+<p>You can create and init a new Spring Boot project by using Spring CLI, Spring Initializr or your IDE. Learn more about using these tools <a href="https://hellokoding.com/create-a-new-spring-boot-project/">here</a></p>
+
+<p>The final project structure as below</p>
 
 <pre><code class="language-bash">├── src
 │   └── main
@@ -276,72 +299,117 @@ ghost.init({
 
 <h3 id="projectdependencies">Project dependencies</h3>
 
+<p>To use Spring Data JPA in Spring Boot, include <code>spring-boot-starter-data-jpa</code> dependency into your <code>pom.xml</code> or <code>build.gradle</code> file. The library version can be omitted as it is resolved by the parent pom provided by Spring Boot</p>
+
+<pre><code class="language-xml">&lt;dependency&gt;  
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;
+&lt;/dependency&gt;  
+</code></pre>
+
+<p>To work with MySQL database, a MySQL Java client library also need to be included as a dependency</p>
+
+<pre><code class="language-xml">&lt;dependency&gt;  
+    &lt;groupId&gt;mysql&lt;/groupId&gt;
+    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+    &lt;scope&gt;runtime&lt;/scope&gt;
+&lt;/dependency&gt;  
+</code></pre>
+
+<p>The scope runtime indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath</p>
+
+<p>You can find the full pom.xml file as below</p>
+
 <pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/pom.xml">
 </code></pre>
 
-<h2 id="definejpaentitiesandrepositories">Define JPA Entities and Repositories</h2>
-
-<h3 id="onetomanyrelationship">One-To-Many Relationship</h3>
-
-<p>One-to-many relationship refers to the relationship between two entities/tables A and B in which one element/row of A may be linked with many elements of B, but a member of B is linked to only one element of A.</p>
-
-<p>In this example, the <code>book_category</code> and <code>book</code> tables have a one-to-many relationship. One category may be linked with many books but one book is linked to only one category.</p>
-
-<p><img src="../content/images/2019/02/Screenshot-2019-02-01-at-12-20-37-AM.png" alt=""></p>
-
-<p><code>book.book_category_id</code> is a foreign key references to <code>book_category.id</code></p>
-
-<h3 id="jpaandhibernateentities">JPA and Hibernate Entities</h3>
-
-<p>JPA Entity is defined with <code>@Entity</code> annotation, represent a table in your database.</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/java/com/hellokoding/jpa/book/Book.java">
-</code></pre>
+<h3 id="createjpaandhibernateentities">Create JPA and Hibernate Entities</h3>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/java/com/hellokoding/jpa/book/BookCategory.java">
 </code></pre>
 
-<p><code>@Id</code> declares the entity identifier.</p>
+<p><code>@Entity</code> annotation is required to specify a JPA entity. The name attribute is optional, defaults to the entity class name without the package. It is used to refer to the entity in JPQL (Java Persistence Query Language) queries</p>
 
-<p><code>@Column</code> maps the entity's field with the table's column. If <code>@Column</code> is omitted, the field name of the entity will be used as column name by default.</p>
+<p><code>@Table</code> annotation is optional and used to refer to the table in a database, defaults to the entity name</p>
 
-<p><code>@OneToMany</code> and <code>@ManyToOne</code> defines a one-to-many and many-to-one relationship between 2 entities. <code>@JoinColumn</code> indicates the entity is the owner of the relationship and the corresponding table has a column with a foreign key to the referenced table. <code>mappedBy</code> indicates the entity is the inverse of the relationship.</p>
+<p><code>@Id</code> annotation is required to and used to specify the primary key of an entity (table in database). You will get an exception  <code>"No identifier specified for entity"</code> if ignores it</p>
 
-<h3 id="springdatajparepository">Spring Data JPA Repository</h3>
+<p><code>@GeneratedValue</code> annotation provides the generation strategies for the values of primary keys</p>
 
-<p>Spring Data JPA contains some built-in <code>Repository</code> abstracting common functions based on <code>EntityManager</code> to work with database such as <code>findAll</code>, <code>findById</code>, <code>save</code>, <code>delete</code>, <code>deleteById</code>. All we need for this example is <code>extends JpaRepository</code>.</p>
+<p><code>@Column</code> annotation is optional and used to map with the table column in the database, defaults to property or field name</p>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/java/com/hellokoding/jpa/book/BookRepository.java">
+<p><code>@OneToMany</code> is used to specify the One-To-Many relationship association with another entity which is annotated with <code>@ManyToOne</code></p>
+
+<ul>
+<li><p><code>mappedBy</code> is required in a bidirectional relationship to specify the field or property name of the owner entity of the relationship (the To-Many side)</p></li>
+<li><p><code>cascade</code> is optional and used to specify which entity operations should be cascaded (propagated) to the associated entity, defaults to no operations. cascade=ALL is equivalent to cascade={PERSIST, MERGE, REMOVE, REFRESH, DETACH}</p></li>
+<li><p><code>fetch</code> is optional and used to specify the strategy for the persistence provider runtime (Hibernate) to fetch data from the database</p>
+
+<p>There are two fetching strategies EAGER and LAZY, defaults to LAZY in <code>ToMany</code> associations (<code>@OneToMany</code>, <code>@ManyToMany</code>). When fetching data for an entity, the EAGER will also fetch the associated entity data while the LAZY only fetch when it is first accessed</p></li>
+</ul>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/java/com/hellokoding/jpa/book/Book.java">
 </code></pre>
+
+<p><code>@ManyToOne</code> is used to specify a single-value relationship association to another entity which annotated with <code>@OneToMany</code></p>
+
+<ul>
+<li><p><code>fetch</code> is optional and defaults to EAGER in <code>ToOne</code> associations (<code>@ManyToOne</code>, <code>@OneToOne</code>)</p>
+
+<p>The EAGER strategy should be avoided in practice, as it creates unnecessary SQL scripts thus adds more weight load to the underlying database</p></li>
+</ul>
+
+<p><code>@JoinColumn</code> is optional and used to specify the foreign key column in the underlying database table, defaults to the property or field name joins with an underscore character and the primary key name of the reference entity</p>
+
+<ul>
+<li>In the above example, <code>@JoinColumn</code> maps with <code>"book_category_id"</code> foreign key column in the underlying database table <code>"book"</code></li>
+</ul>
+
+<h3 id="extendspringdatajparepositoryinterfaces">Extend Spring Data JPA Repository Interfaces</h3>
+
+<p>Spring Data Repositories is a collection of interfaces help reducing boilerplate code required to implement the data access layer for various databases. They provide CRUD functions based on <code>EntityManager</code> to work with database</p>
+
+<p>Internally, SimpleJpaRepository is the implementation of these interfaces in Spring Data JPA</p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/java/com/hellokoding/jpa/book/BookCategoryRepository.java">
 </code></pre>
 
-<h2 id="definepropertiesandcreatingdata">Define properties and creating data</h2>
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/java/com/hellokoding/jpa/book/BookRepository.java">
+</code></pre>
 
-<h3 id="applicationproperties">Application Properties</h3>
+<p>Besides using the default implementation methods, you can also define custom CRUD operations via method declarations in your repository interfaces</p>
+
+<p>In BookRepository, the <code>findFirst10ByOrderByNameAsc</code> method will do as its name, sort the book table in ascending order and get only the first 10 rows</p>
+
+<ul>
+<li><code>@EntityGraph(attributePaths = "bookCategory")</code> is used to fix the N+1 SQL issues in JPA and Hibernate</li>
+</ul>
+
+<p>The <code>deleteInBulkByCategoryId</code> method produces the same result as <code>deleteByCategoryId</code> but faster as it only issues a single JPQL query</p>
+
+<h3 id="createreadanddeletedata">Create, read and delete data</h3>
+
+<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/java/com/hellokoding/jpa/book/BookService.java">
+</code></pre>
+
+<p>Thanks to CascadeType.ALL, associated entity <code>Book</code> will be saved at the same time with the <code>BookCategory</code> without the need of calling its save function explicitly</p>
+
+<h3 id="defineapplicationpropertiesandbootstrap">Define Application Properties and Bootstrap</h3>
 
 <pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/resources/application.properties">
 </code></pre>
 
 <p><code>hk-mysql</code> refers to Docker Compose service defined in the below <code>docker-compose.yml</code> file</p>
 
-<p><code>spring.jpa.hibernate.ddl-auto=create</code> allows JPA/Hibernate auto create database and table schema for you.
-<big></big></p>
+<p><code>spring.jpa.hibernate.ddl-auto=create</code> allows JPA/Hibernate auto-create database and table schema for you.</p>
 
-<p></p><pre>
-On production environment, you may like to disable the DDL Auto feature by using <em>spring.jpa.hibernate.ddl-auto=validate</em> or <em>spring.jpa.hibernate.ddl-auto=none</em> (default). Check out this example as one of the approaches
-<a href="https://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/">Database Migration/Evolution Example with Flyway and JPA/Hibernate</a>
-</pre>
-
-<h3 id="creatingdatawithjpaandhibernate">Creating data with JPA and Hibernate</h3>
-
-<p>Thanks to CascadeType.ALL, associated entity <code>Book</code> will be saved at the same time with the owner <code>BookCategory</code> without the need of calling its save function explicitly</p>
+<p>In practice, you may like to disable the DDL Auto feature by using <em>spring.jpa.hibernate.ddl-auto=validate</em> or <em>spring.jpa.hibernate.ddl-auto=none</em> (default). Check out this example as one of the approaches <br>
+<a href="https://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/">Database Migration/Evolution Example with Flyway and JPA/Hibernate</a></p>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/java/com/hellokoding/jpa/JpaApplication.java">
 </code></pre>
 
-<h2 id="runtheexample">Run the example</h2>
+<h2 id="runandtest">Run and test</h2>
 
 <h3 id="runwithdocker">Run with Docker</h3>
 
@@ -394,7 +462,7 @@ On production environment, you may like to disable the DDL Auto feature by using
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=JPA%20and%20Hibernate%20One%20To%20Many%20Relationship%20Mapping%20Example%20with%20Spring%20Boot%20and%20MySQL&amp;url=http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=JPA%20and%20Hibernate%20One%20To%20Many%20Relationship%20Mapping%20Example%20with%20Spring%20Boot%2C%20Spring%20Data%20JPA%20and%20MySQL&amp;url=http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
