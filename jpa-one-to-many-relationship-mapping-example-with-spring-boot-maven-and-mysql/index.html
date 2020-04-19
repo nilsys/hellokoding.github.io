@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/jpa-one-to-many.png">
     <meta property="article:published_time" content="2015-10-18T14:08:07.000Z">
-    <meta property="article:modified_time" content="2020-04-19T11:53:09.000Z">
+    <meta property="article:modified_time" content="2020-04-19T12:17:09.000Z">
     <meta property="article:tag" content="JPA and Hibernate">
     <meta property="article:tag" content="Spring Boot">
     
@@ -64,7 +64,7 @@
     "headline": "JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL",
     "url": "http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/",
     "datePublished": "2015-10-18T14:08:07.000Z",
-    "dateModified": "2020-04-19T11:53:09.000Z",
+    "dateModified": "2020-04-19T12:17:09.000Z",
     "image": "http://hellokoding.com/content/images/2019/01/jpa-one-to-many.png",
     "keywords": "JPA and Hibernate, Spring Boot",
     "description": "In relational databases (MySQL, PostgreSQL, etc.), One-to-many refers to the relationship between two tables (entities) A and B in which one row (element) of A may be linked with many rows of B, but one row of B is linked to only one row of A In the below example,"
@@ -394,10 +394,15 @@ ghost.init({
 
 <h3 id="createreadanddeletedata">Create, read and delete data</h3>
 
+<p>We are done with mapping the entity-relationship and defining data access functions so far. Let's put them in action to see how to use them to do CRUD operations against the underlying database</p>
+
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/java/com/hellokoding/jpa/book/BookService.java">
 </code></pre>
 
-<p>Thanks to CascadeType.ALL, associated entity <code>Book</code> will be saved at the same time with the <code>BookCategory</code> without the need of calling its save function explicitly</p>
+<p>Thanks to CascadeType.PERSIST, associated collections of <code>Book</code> will be persisted to database along with <code>BookCategory</code> when the save function of <code>BookCategoryRepository</code> is triggered without the need of calling <code>BookRepository</code> save function explicitly</p>
+
+<pre><code class="language-java">bookCategoryRepository.saveAll(bookCategories);  
+</code></pre>
 
 <h3 id="defineapplicationpropertiesandbootstrap">Define Application Properties and Bootstrap</h3>
 
