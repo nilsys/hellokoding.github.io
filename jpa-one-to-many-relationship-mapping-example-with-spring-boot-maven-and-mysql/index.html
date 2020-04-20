@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/jpa-one-to-many.png">
     <meta property="article:published_time" content="2015-10-18T14:08:07.000Z">
-    <meta property="article:modified_time" content="2020-04-19T13:18:09.000Z">
+    <meta property="article:modified_time" content="2020-04-20T02:11:15.000Z">
     <meta property="article:tag" content="JPA and Hibernate">
     <meta property="article:tag" content="Spring Boot">
     
@@ -64,7 +64,7 @@
     "headline": "JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL",
     "url": "http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/",
     "datePublished": "2015-10-18T14:08:07.000Z",
-    "dateModified": "2020-04-19T13:18:09.000Z",
+    "dateModified": "2020-04-20T02:11:15.000Z",
     "image": "http://hellokoding.com/content/images/2019/01/jpa-one-to-many.png",
     "keywords": "JPA and Hibernate, Spring Boot",
     "description": "In relational databases (MySQL, PostgreSQL, etc.), One-to-many refers to the relationship between two tables (entities) A and B in which one row (element) of A may be linked with many rows of B, but one row of B is linked to only one row of A In the below example,"
@@ -232,7 +232,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</h1>
-            <time class="post__date" datetime="2020-04-19">Last modified @ 19 April 2020</time>
+            <time class="post__date" datetime="2020-04-20">Last modified @ 20 April 2020</time>
           </header>
 
           <div class="post-content">
@@ -328,6 +328,8 @@ ghost.init({
 
 <h3 id="createjpaandhibernateentities">Create JPA and Hibernate Entities</h3>
 
+<p>We'll create <code>Book</code> and <code>BookCategory</code> JPA Entities corresponding to <code>book</code> and <code>book_category</code> tables in database</p>
+
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/java/com/hellokoding/jpa/book/BookCategory.java">
 </code></pre>
 
@@ -362,10 +364,11 @@ ghost.init({
 <p>The EAGER strategy should be avoided in practice, as it creates unnecessary SQL scripts thus adds more weight load to the underlying database</p></li>
 </ul>
 
-<p><code>@JoinColumn</code> is optional and used to specify the foreign key column in the underlying database table, defaults to the property or field name joins with an underscore character and the primary key name of the reference entity</p>
+<p><code>@JoinColumn</code> is used to specify the foreign key column in the underlying database table. In single join column, it is optional and the default attribute value will be used</p>
 
 <ul>
-<li>In the above example, <code>@JoinColumn</code> maps with <code>"book_category_id"</code> foreign key column in the underlying database table <code>"book"</code></li>
+<li><p><code>name</code> is defaulted to the property or field name joins with an underscore character and the primary key name of the reference entity</p></li>
+<li><p><code>referencedColumnName</code> is defaulted to the primary key of the preferenced table</p></li>
 </ul>
 
 <h3 id="extendspringdatajparepositoryinterfaces">Extend Spring Data JPA Repository Interfaces</h3>
@@ -382,7 +385,7 @@ ghost.init({
 
 <p>Besides using the default implementation methods, you can also define custom CRUD operations via method declarations in your repository interfaces</p>
 
-<p>In BookRepository, the <code>findFirst10ByOrderByNameAsc</code> method will do as its name, sort the book table in ascending order and get only the first 10 rows</p>
+<p>In <code>BookRepository</code>, the <code>findFirst10ByOrderByNameAsc</code> method will do as its name, sort the book table in ascending order and get only the first 10 rows</p>
 
 <ul>
 <li><code>@EntityGraph(attributePaths = "bookCategory")</code> is used to fix the N+1 SQL issues in JPA and Hibernate</li>
@@ -414,17 +417,21 @@ ghost.init({
 
 <p><a href="https://hellokoding.com/spring-transactional/">Learn more about using @Transactional</a></p>
 
-<h3 id="defineapplicationpropertiesandbootstrap">Define Application Properties and Bootstrap</h3>
+<h3 id="applicationconfigurations">Application Configurations</h3>
 
 <pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/resources/application.properties">
 </code></pre>
 
 <p><code>hk-mysql</code> refers to Docker Compose service defined in the below <code>docker-compose.yml</code> file</p>
 
-<p><code>spring.jpa.hibernate.ddl-auto=create</code> allows JPA/Hibernate auto-create database and table schema for you.</p>
-
-<p>In practice, you may like to disable the DDL Auto feature by using <em>spring.jpa.hibernate.ddl-auto=validate</em> or <em>spring.jpa.hibernate.ddl-auto=none</em> (default). Check out this example as one of the approaches <br>
+<p><code>spring.jpa.hibernate.ddl-auto=create</code> allows JPA/Hibernate auto-create database and table schema for you. In practice, you may like to disable the DDL Auto feature by using <em>spring.jpa.hibernate.ddl-auto=validate</em> or <em>spring.jpa.hibernate.ddl-auto=none</em> (default). Check out this example as one of the approaches
 <a href="https://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/">Database Migration/Evolution Example with Flyway and JPA/Hibernate</a></p>
+
+<p>These properties are for the development environment, thus they should be disabled on production</p>
+
+<pre><code>spring.jpa.show-sql=true  
+spring.jpa.properties.hibernate.generate_statistics=true  
+</code></pre>
 
 <pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/java/com/hellokoding/jpa/JpaApplication.java">
 </code></pre>
@@ -453,7 +460,7 @@ ghost.init({
 
 <p>Query schema and data created by JPA/Hibernate based on your mapping</p>
 
-<p><img src="../content/images/2020/04/Screenshot-2020-04-19-at-7-52-26-PM.png" alt=""></p>
+<p><img src="../content/images/2020/04/Screenshot-2020-04-20-at-10-10-55-AM.png" alt=""></p>
 
 <h3 id="runwithjdkopenjdkmavenandmysqlserverlocal">Run with JDK/OpenJDK, Maven and MySQL Server local</h3>
 
