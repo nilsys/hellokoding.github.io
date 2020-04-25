@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/jpa-and-hibernate-problems/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2020/04/SpringDataJPA_CommonProblems.png">
     <meta property="article:published_time" content="2020-04-22T15:23:37.000Z">
-    <meta property="article:modified_time" content="2020-04-25T14:32:25.000Z">
+    <meta property="article:modified_time" content="2020-04-25T14:53:05.000Z">
     <meta property="article:tag" content="JPA and Hibernate">
     <meta property="article:tag" content="Spring Boot">
     
@@ -64,7 +64,7 @@
     "headline": "JPA and Hibernate Problems",
     "url": "http://hellokoding.com/jpa-and-hibernate-problems/",
     "datePublished": "2020-04-22T15:23:37.000Z",
-    "dateModified": "2020-04-25T14:32:25.000Z",
+    "dateModified": "2020-04-25T14:53:05.000Z",
     "image": "http://hellokoding.com/content/images/2020/04/SpringDataJPA_CommonProblems.png",
     "keywords": "JPA and Hibernate, Spring Boot",
     "description": "On the one hand, JPA and Hibernate provide an abstraction to do the CRUD operations against various databases, enable us to develop database applications quickly On the other hand, JPA and Hibernate also create some performance issues that we need to be taken care of This tutorial will explore some"
@@ -346,7 +346,7 @@ class QuoteService
 
 <h3 id="pitfall21eagerfetchtype">Pitfall 2.1: EAGER FetchType</h3>
 
-<p>Use EAGER FetchType for the <code>author</code> association to resolve the LazyInitializationException can create performance pitfall for other use cases as we learned in the previous section</p>
+<p>Use EAGER FetchType for the <code>author</code> association, so its data will be available along with its parent. However, this approach can create a performance pitfall as we learned in the previous section. It also can create the N+1 problem</p>
 
 <h3 id="pitfall22transactional">Pitfall 2.2: @Transactional</h3>
 
@@ -361,7 +361,9 @@ class QuoteService
 <li><p>It does not initialize children entities of the input object</p></li>
 </ul>
 
-<p>The common theme of pitfall approaches is trying to fetch the association's data outside the repository (data access layer). On the opposites, the right approaches try to do inside the repository and hint JPA and Hibernate to generate and execute only 1 SQL to fetch the association's data</p>
+<p>Try to fix the symptoms and do outside the repository (data access layer) are the common theme of pitfall approaches</p>
+
+<p>On the opposites, the right approaches will try to do inside the repository and fix the root cause by hinting JPA and Hibernate to generate and execute only 1 SQL to fetch the necessary association's data as there are no throwing LazyInitializationException errors if all the necessary data are initialized before using</p>
 
 <h3 id="approach21projection">Approach 2.1: Projection</h3>
 
