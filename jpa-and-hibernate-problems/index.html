@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</title>
+  <title>JPA and Hibernate Problems</title>
 
   <link rel="shortcut icon" href="../assets/favicon.ico">
 
@@ -14,26 +14,26 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/prism.css?v=e30af18f46">
   <link rel="stylesheet" type="text/css" href="../assets/css/custom.css?v=e30af18f46">
    
-  <link rel="canonical" href="http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/">
+  <link rel="canonical" href="http://hellokoding.com/jpa-and-hibernate-problems/">
     <meta name="referrer" content="origin-when-cross-origin">
     
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL">
-    <meta property="og:description" content="In relational databases (MySQL, PostgreSQL, etc.), One-to-many refers to the relationship between two tables (entities) A and B in which one row (element) of A may be linked with many rows of B, but one row of B is linked to only one row of A In the below example,">
-    <meta property="og:url" content="http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/">
-    <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/jpa-one-to-many.png">
-    <meta property="article:published_time" content="2015-10-18T14:08:07.000Z">
-    <meta property="article:modified_time" content="2020-04-25T12:21:32.000Z">
+    <meta property="og:title" content="JPA and Hibernate Problems">
+    <meta property="og:description" content="On the one hand, JPA and Hibernate provides us abstraction to do the CRUD operations against various databases, enables us to develop database applications quickly On the other hand, JPA and Hibernate also create some performance issues that we need to be taken care of This tutorial will explore some">
+    <meta property="og:url" content="http://hellokoding.com/jpa-and-hibernate-problems/">
+    <meta property="og:image" content="http://hellokoding.com/content/images/2020/04/SpringDataJPA_CommonProblems.png">
+    <meta property="article:published_time" content="2020-04-22T15:23:37.000Z">
+    <meta property="article:modified_time" content="2020-04-25T14:23:09.000Z">
     <meta property="article:tag" content="JPA and Hibernate">
     <meta property="article:tag" content="Spring Boot">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL">
-    <meta name="twitter:description" content="In relational databases (MySQL, PostgreSQL, etc.), One-to-many refers to the relationship between two tables (entities) A and B in which one row (element) of A may be linked with many rows of B, but one row of B is linked to only one row of A In the below example,">
-    <meta name="twitter:url" content="http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/">
-    <meta name="twitter:image" content="http://hellokoding.com/content/images/2019/01/jpa-one-to-many.png">
+    <meta name="twitter:title" content="JPA and Hibernate Problems">
+    <meta name="twitter:description" content="On the one hand, JPA and Hibernate provides us abstraction to do the CRUD operations against various databases, enables us to develop database applications quickly On the other hand, JPA and Hibernate also create some performance issues that we need to be taken care of This tutorial will explore some">
+    <meta name="twitter:url" content="http://hellokoding.com/jpa-and-hibernate-problems/">
+    <meta name="twitter:image" content="http://hellokoding.com/content/images/2020/04/SpringDataJPA_CommonProblems.png">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Giau Ngo">
     <meta name="twitter:label2" content="Filed under">
@@ -61,13 +61,13 @@
         ],
         "description": "Giau Ngo is a software engineer, creator of Hello Koding. Get in touch with him on Twitter, GitHub and LinkedIn"
     },
-    "headline": "JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL",
-    "url": "http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/",
-    "datePublished": "2015-10-18T14:08:07.000Z",
-    "dateModified": "2020-04-25T12:21:32.000Z",
-    "image": "http://hellokoding.com/content/images/2019/01/jpa-one-to-many.png",
+    "headline": "JPA and Hibernate Problems",
+    "url": "http://hellokoding.com/jpa-and-hibernate-problems/",
+    "datePublished": "2020-04-22T15:23:37.000Z",
+    "dateModified": "2020-04-25T14:23:09.000Z",
+    "image": "http://hellokoding.com/content/images/2020/04/SpringDataJPA_CommonProblems.png",
     "keywords": "JPA and Hibernate, Spring Boot",
-    "description": "In relational databases (MySQL, PostgreSQL, etc.), One-to-many refers to the relationship between two tables (entities) A and B in which one row (element) of A may be linked with many rows of B, but one row of B is linked to only one row of A In the below example,"
+    "description": "On the one hand, JPA and Hibernate provides us abstraction to do the CRUD operations against various databases, enables us to develop database applications quickly On the other hand, JPA and Hibernate also create some performance issues that we need to be taken care of This tutorial will explore some"
 }
     </script>
 
@@ -231,7 +231,7 @@ ghost.init({
         <article class="post tag-jpa tag-spring-boot">
 
           <header class="post__header">
-            <h1 class="post__title">JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</h1>
+            <h1 class="post__title">JPA and Hibernate Problems</h1>
             <time class="post__date" datetime="2020-04-25">Last modified @ 25 April 2020</time>
           </header>
 
@@ -240,265 +240,326 @@ ghost.init({
               <a href="../tag/jpa/">JPA and Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
             </div>
 
-            <p>In relational databases (MySQL, PostgreSQL, etc.), One-to-many refers to the relationship between two tables (entities) A and B in which one row (element) of A may be linked with many rows of B, but one row of B is linked to only one row of A</p>
+            <p>On the one hand, JPA and Hibernate provides us abstraction to do the CRUD operations against various databases, enables us to develop database applications quickly</p>
 
-<p>In the below example, the <code>book_category</code> and <code>book</code> tables have a one-to-many relationship. One category may have many books but one book belongs to only one category</p>
+<p>On the other hand, JPA and Hibernate also create some performance issues that we need to be taken care of</p>
 
-<p><img src="../content/images/2019/02/Screenshot-2019-02-01-at-12-20-37-AM.png" alt=""></p>
+<p>This tutorial will explore some common problems you may encounter when working with JPA and Hibernate in Spring Boot and Spring Data applications</p>
 
-<p>The relationship is enforced via the foreign key <code>book_category_id</code> which is a copy of the primary key of the table in the One side (book_category) and placed on the Many side (book). The table with the foreign key (book) is also known as the relationship owner</p>
-
-<p>This tutorial will walk you through the steps of mapping that One-To-Many bidirectional entity relationships in JPA and Hibernate with Spring Boot, Spring Data JPA, MySQL and Docker</p>
-
-<p>Let's get started</p>
-
-<h3 id="whatyoullneed">What you'll need</h3>
-
-<ul>
-<li>JDK 8+ or OpenJDK 8+</li>
-<li>Maven 3+</li>
-<li>MySQL Server 5+ or Docker CE 18+</li>
-<li>Your favorite IDE</li>
-</ul>
-
-<h3 id="techstack">Tech stack</h3>
-
-<ul>
-<li>Java 8+</li>
-<li>Spring Boot</li>
-<li>Spring Data JPA</li>
-<li>Hibernate</li>
-</ul>
+<p>Let's get started!</p>
 
 <p></p><div class="hk-autoads"></div>  
 
-<h3 id="initprojectstructure">Init project structure</h3>
+<h3 id="problem1eagerfetchtype">Problem 1: EAGER FetchType</h3>
 
-<p>You can create and init a new Spring Boot project by using Spring CLI, Spring Initializr or your IDE. Learn more about using these tools <a href="https://hellokoding.com/create-a-new-spring-boot-project/">here</a></p>
+<p>There are two types of fetching strategy in JPA and Hibernate to load data for the associated (children) entities, EAGER and LAZY. While LAZY only fetches data when they are needed (at the first time accessed of the associated entities), EAGER always fetches children entities along with its parent</p>
 
-<p>The final project structure as below</p>
+<p>While LAZY can cause LazyInitializationException, EAGER causes Hibernate to generate and execute unnecessary SELECT SQLs to the database and so increasing the memory consumption for unnecessary data</p>
 
-<pre><code class="language-bash">├── src
-│   └── main
-│       ├── java
-│       │   └── com
-│       │       └── hellokoding
-│       │           ├── jpa
-│       │           │   ├── book
-│       │           │   │   ├── Book.java
-│       │           │   │   ├── BookCategory.java
-│       │           │   │   ├── BookCategoryRepository.java
-│       │           │   │   └── BookRepository.java
-│       │           │   └── JpaApplication.java
-│       │           └── springboot
-│       └── resources
-│           └── application.properties
-├── Dockerfile
-├── docker-compose.yml
-└── pom.xml
-</code></pre>
+<p>Let's take a look at the following example</p>
 
-<h3 id="projectdependencies">Project dependencies</h3>
+<pre><code class="language-java">@Entity
+class Company {  
+    @OneToMany(fetch = FetchType.EAGER)
+    private Set&lt;Employee&gt; employees;
 
-<p>To use Spring Data JPA in Spring Boot, include <code>spring-boot-starter-data-jpa</code> dependency into your <code>pom.xml</code> or <code>build.gradle</code> file. The library version can be omitted as it is resolved by the parent pom provided by Spring Boot</p>
+    @OneToOne(fetch = FetchType.EAGER)
+    private Address address;
 
-<pre><code class="language-xml">&lt;dependency&gt;  
-    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-    &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;
-&lt;/dependency&gt;  
-</code></pre>
+    //...
+}
 
-<p>To work with MySQL database, a MySQL Java client library also need to be included as a dependency</p>
+interface CompanyRepository extends JpaRepository&lt;Company, Integer&gt; {  
+    List&lt;Company&gt; findFirst10ByOrderByNameAsc();
+}
 
-<pre><code class="language-xml">&lt;dependency&gt;  
-    &lt;groupId&gt;mysql&lt;/groupId&gt;
-    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
-    &lt;scope&gt;runtime&lt;/scope&gt;
-&lt;/dependency&gt;  
-</code></pre>
+@Service
+class CompanyService {  
+    //...
 
-<p>The scope runtime indicates that the dependency is not required for compilation, but is for execution. It is in the runtime and test classpaths, but not the compile classpath</p>
-
-<p>You can find the full pom.xml file as below</p>
-
-<pre><code class="language-xml embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/pom.xml">
-</code></pre>
-
-<p></p><div class="hk-autoads"></div>  
-
-<h3 id="createjpaandhibernateentities">Create JPA and Hibernate Entities</h3>
-
-<p>We'll create <code>Book</code> and <code>BookCategory</code> JPA Entities corresponding to <code>book</code> and <code>book_category</code> tables in database</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/java/com/hellokoding/jpa/book/BookCategory.java">
-</code></pre>
-
-<p><code>@Entity</code> annotation is required to specify a JPA entity. The name attribute is optional, defaults to the entity class name without the package. It is used to refer to the entity in JPQL (Java Persistence Query Language) queries</p>
-
-<p><code>@Table</code> annotation is optional and used to refer to the table in a database, defaults to the entity name</p>
-
-<p><code>@Id</code> annotation is required and used to specify the primary key of an entity (table in database). You will get an exception  <code>"No identifier specified for entity"</code> if ignores it</p>
-
-<p><code>@GeneratedValue</code> annotation provides the generation strategies for the values of primary keys</p>
-
-<p><code>@Column</code> annotation is optional and used to map with the table column in the database, defaults to property or field name</p>
-
-<p><code>@OneToMany</code> is used to specify the One-To-Many relationship association with another entity which is annotated with <code>@ManyToOne</code></p>
-
-<ul>
-<li><p><code>mappedBy</code> is required in a bidirectional relationship to specify the field or property name of the owner entity of the relationship</p></li>
-<li><p><code>cascade</code> is optional and used to specify which entity operations should be cascaded (propagated) to the associated entity, defaults to no operations. cascade=ALL is equivalent to cascade={PERSIST, MERGE, REMOVE, REFRESH, DETACH}</p></li>
-<li><p><code>fetch</code> is optional and used to specify the strategy for the persistence provider runtime (Hibernate) to fetch data from the database</p>
-
-<p>There are two fetching strategies EAGER and LAZY, defaults to LAZY in <code>ToMany</code> associations (<code>@OneToMany</code>, <code>@ManyToMany</code>). When fetching data for an entity, JPA and Hibernate will also fetch data for EAGER associations while the LAZY will be fetched on-demand</p></li>
-</ul>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/java/com/hellokoding/jpa/book/Book.java">
-</code></pre>
-
-<p><code>@ManyToOne</code> is used to specify a single-value relationship association to another entity which annotated with <code>@OneToMany</code></p>
-
-<ul>
-<li><p><code>fetch</code> is optional and defaults to EAGER in <code>ToOne</code> associations (<code>@ManyToOne</code>, <code>@OneToOne</code>)</p>
-
-<p>The EAGER strategy should be avoided in practice, as it generates and executes unnecessary SQL scripts thus adds more weight load to the underlying database</p></li>
-</ul>
-
-<p><code>@JoinColumn</code> is used to specify the foreign key column in the underlying database table. In single join column, it is optional and the default attribute value will be used</p>
-
-<ul>
-<li><p><code>name</code> is defaulted to the property or field name joins with an underscore character and the primary key name of the reference entity</p></li>
-<li><p><code>referencedColumnName</code> is defaulted to the primary key of the preferenced table</p></li>
-</ul>
-
-<h3 id="extendspringdatajparepositoryinterfaces">Extend Spring Data JPA Repository Interfaces</h3>
-
-<p>Spring Data Repositories is a collection of interfaces help reducing boilerplate code required to implement the data access layer for various databases. They provide CRUD functions based on <code>EntityManager</code> to work with database</p>
-
-<p>Internally, SimpleJpaRepository is the implementation of these interfaces in Spring Data JPA</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/java/com/hellokoding/jpa/book/BookCategoryRepository.java">
-</code></pre>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/java/com/hellokoding/jpa/book/BookRepository.java">
-</code></pre>
-
-<p>Besides using the default implementation methods, you can also define custom CRUD operations via method declarations in your repository interfaces</p>
-
-<p>In <code>BookRepository</code>, the <code>findFirst10ByOrderByNameAsc</code> method will do as its name, sort the book table in ascending order and get only the first 10 rows</p>
-
-<ul>
-<li><code>@EntityGraph(attributePaths = "bookCategory")</code> is used to fix the N+1 SQL issues in JPA and Hibernate</li>
-</ul>
-
-<p>The <code>deleteInBulkByCategoryId</code> method produces the same result as <code>deleteByCategoryId</code> but faster as it only issues a single JPQL query</p>
-
-<p></p><div class="hk-autoads"></div>  
-
-<h3 id="createreadanddeletedata">Create, read and delete data</h3>
-
-<p>We are done with mapping the entity-relationship and defining data access functions so far. Let's put them in action to see how to use them to do CRUD operations against the underlying database</p>
-
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/java/com/hellokoding/jpa/book/BookService.java">
-</code></pre>
-
-<p><br> <br>
-In the <code>create()</code> method, the associated collections of <code>Book</code> will be persisted to database along with <code>BookCategory</code> when the save function of <code>BookCategoryRepository</code> is triggered without the need of calling <code>BookRepository</code> save function explicitly</p>
-
-<pre><code class="language-java">bookCategoryRepository.saveAll(bookCategories);  
-</code></pre>
-
-<p>The above works thanks to the following configurations</p>
-
-<ul>
-<li><p><code>cascade = CascadeType.PERSIST</code> of <code>@OneToMany</code> annotation in <code>BookCategory</code> class</p></li>
-<li><p><code>setBookCategory</code> method in <code>Book</code> class</p></li>
-</ul>
-
-<pre><code class="language-java">public void setBookCategory(BookCategory bookCategory) {  
-    this.bookCategory = bookCategory;
-    bookCategory.getBooks().add(this);
+    public List&lt;String&gt; findCompanyNames() {
+        List&lt;Company&gt; companies = companyRepository.findFirst10ByOrderByNameAsc();
+        return companies.stream()
+            .map(Company::getName)
+            .collect(Collectors.toList());
+    }
 }
 </code></pre>
 
-<p><br> <br>
-We don't have to annotate <code>create()</code>, <code>read()</code> and <code>delete()</code> methods with <code>@Transactional</code></p>
+<p>The above <code>findCompanyNames()</code> method only needs company names. However, besides fetching Company data, Hibernate also eagerly fetches data in the background for other EAGER FetchType associations including <code>Set&lt;Employee&gt;</code> and <code>Address</code>. The problem would become more significant when you have more EAGER associations or more entities in each</p>
+
+<p>Apart from consuming memory for unnecessary data, EAGER FetchType can also cause the N+1 SQL problem which you can find more details in the latter part of this article</p>
+
+<h3 id="approach1lazyfetchtype">Approach 1: LAZY FetchType</h3>
 
 <ul>
-<li><p>In the <code>create()</code> method, the <code>saveAll</code> method is already marked with <code>@Transactional</code> in the base repository implementation <code>SimpleJpaRepository</code></p></li>
-<li><p>In the <code>read()</code> method, only 1 SQL is generated by Hibernate (thus no N+1 SQL and <code>LazyInitializationException</code> issues) thanks to <code>@EntityGraph(attributePaths = "bookCategory")</code> defined in <code>BookRepository</code></p></li>
-<li><p>In the <code>delete()</code> method, the <code>deleteInBulkByCategoryId</code> method is already marked with <code>@Transactional</code> in <code>BookRepository</code></p></li>
+<li><p>Avoid using EAGER fetch in JPA and Hibernate. EAGER can fix the LazyInitializationException caused by the LAZY but it creates a performance pitfall especially when you have multiple EAGER associations in the entity</p></li>
+<li><p>EAGER FetchType is the default in JPA ToOne mappings (@ManyToOne, @OneToOne), make sure you change them to LAZY explicitly</p></li>
 </ul>
 
-<p><a href="https://hellokoding.com/spring-transactional/">Learn more about using @Transactional</a></p>
+<pre><code class="language-java">@ManyToOne(fetch = FetchType.LAZY)
+private BookCategory bookCategory;
 
-<h3 id="applicationconfigurations">Application Configurations</h3>
-
-<pre><code class="language-markup embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/resources/application.properties">
+@OneToOne(fetch = FetchType.LAZY)
+private BookDetail bookDetail;  
 </code></pre>
 
-<p><code>hk-mysql</code> refers to Docker Compose service defined in the below <code>docker-compose.yml</code> file</p>
+<p></p><div class="hk-autoads"></div>  
 
-<p><code>spring.jpa.hibernate.ddl-auto=create</code> allows JPA/Hibernate auto-create database and table schema for you. In practice, you may like to disable the DDL Auto feature by using <em>spring.jpa.hibernate.ddl-auto=validate</em> or <em>spring.jpa.hibernate.ddl-auto=none</em> (default). Check out this example as one of the approaches
-<a href="https://hellokoding.com/database-migration-evolution-with-flyway-and-jpa-hibernate/">Database Migration/Evolution Example with Flyway and JPA/Hibernate</a></p>
+<h3 id="problem2lazyinitializationexception">Problem 2: LazyInitializationException</h3>
 
-<p>These properties are for the development environment, thus they should be disabled on production</p>
+<p>LazyInitializationException is caused by uninitialized LAZY FetchType associations when they are accessed outside the transactional context</p>
 
-<pre><code>spring.jpa.show-sql=true  
+<pre><code class="language-java">@Entity
+public class Quote {  
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Author author;
+
+    //...
+}
+
+interface QuoteRepository extends JpaRepository&lt;Quote, Integer&gt;{  
+    List&lt;Quote&gt; findFirst10ByOrderByName();
+}
+
+@Service
+class QuoteService  
+    //...
+
+    public List&lt;QuoteWithAuthor&gt; findQuotesWithAuthor() {
+        return of(quoteRepository.findFirst10ByOrderByName());
+    }
+
+    List&lt;QuoteWithAuthor&gt; of(List&lt;Quote&gt; quotes) {
+        return quotes.stream().map(q -&gt; {
+            Author a = q.getAuthor();
+            AuthorIdName ain = new AuthorIdName(a.getId(), a.getName());
+            return new QuoteWithAuthor(q.getId(), q.getName(), ain);
+        }).collect(Collectors.toList());
+    }
+}
+</code></pre>
+
+<p>In the above <code>findQuotesWithAuthor()</code> method, <code>LazyInitializationException</code> is thrown as the LAZY associated entity <code>author</code> is not initialized, the <code>quoteRepository.findFirst10ByOrderByName()</code> only fetchs the parent and EAGER associations then close the transaction</p>
+
+<p>There are several ways to resolve the LazyInitializationException. However, some of them are pitfalls</p>
+
+<h3 id="pitfall21eagerfetchtype">Pitfall 2.1: EAGER FetchType</h3>
+
+<p>Use EAGER FetchType for the <code>author</code> association to resolve the LazyInitializationException can create performance pitfall for other use cases as we learned in the previous section</p>
+
+<h3 id="pitfall22transactional">Pitfall 2.2: @Transactional</h3>
+
+<p>Add <code>@Transacional</code> annotation to <code>findQuotesWithAuthor()</code> method can keep the associations fetching executed in database transactional context (so resolving the LazyInitializationException) but it can create the N+1 problem. You can learn more about this problem in the latter part of this tutorial</p>
+
+<h3 id="pitfall23hibernateinitializeobject">Pitfall 2.3: Hibernate.initialize(Object)</h3>
+
+<p>Hibernate.initialize(Object) forces initialization of a proxy or persistent collection. It helps initialize LAZY FetchType associations manually but also brings some drawbacks</p>
+
+<ul>
+<li><p>It generates and executes an additional SQL against the database each time</p></li>
+<li><p>It does not initialize children entities of the input object</p></li>
+</ul>
+
+<p>The common theme of pitfall approaches is trying to fetch the association's data outside the repository (data access layer). On the opposites, the right approaches try to do inside the repository and hint JPA and Hibernate to generate and execute only 1 SQL to fetch the association's data</p>
+
+<h3 id="approach21projection">Approach 2.1: Projection</h3>
+
+<p>Spring Data can help retrieve partial view of a JPA  @Entity with interface-based or class-based projection (DTO classes)</p>
+
+<pre><code class="language-java">interface QuoteProjection {  
+    Integer getId();
+    String getName();
+    AuthorProjection getAuthor();
+}
+
+interface AuthorProjection {  
+    Integer getId();
+    String getName();
+}
+
+interface QuoteRepository extends JpaRepository&lt;Quote, Integer&gt; {  
+    List&lt;QuoteProjection&gt; findFirst10ByOrderByNameDesc();
+}
+</code></pre>
+
+<p>QuoteProjection and AuthorProjection are the partial views of 2 JPA entities, Quote and Author respectively</p>
+
+<p>In <code>findFirst10ByOrderByNameDesc()</code> method of <code>QuoteRepository</code>, Spring Data JPA fetchs and converts the return data to <code>List&lt;QuoteProjection&gt;</code></p>
+
+<h3 id="approach22entitygraph">Approach 2.2: @EntityGraph</h3>
+
+<p>@EntityGraph annotation is used on the repository methods, providing a declarative way to fetch associations in a single query</p>
+
+<pre><code class="language-java">interface QuoteRepository extends JpaRepository&lt;Quote, Integer&gt; {  
+    @EntityGraph(attributePaths = "author")
+    List&lt;Quote&gt; findFirst10ByOrderByName();
+}
+</code></pre>
+
+<h3 id="approach23jpqljoinfetch">Approach 2.3: JPQL JOIN FETCH</h3>
+
+<p>JPQL supports JOIN FETCH to fetch associations data in a single query</p>
+
+<pre><code class="language-java">interface QuoteRepository extends JpaRepository&lt;Quote, Integer&gt; {  
+    @Query(value="FROM Quote q LEFT JOIN FETCH q.author")
+    List&lt;Quote&gt; findWithAuthorAndJoinFetch(Pageable pageable);
+}
+</code></pre>
+
+<p></p><div class="hk-autoads"></div>  
+
+<h3 id="problem3n1sqlstatements">Problem 3: N+1 SQL statements</h3>
+
+<p>The N+1 SQL problem occurs on the associated (child) entities when JPA and Hibernate have to execute N additional SQLs to do the operation</p>
+
+<p>The issue can happen on both EAGER and LAZY FetchType and on reading or deleting operation against a database</p>
+
+<h3 id="problem31n1onselect">Problem 3.1: N+1 on SELECT</h3>
+
+<p>Let's take a look at the following example</p>
+
+<pre><code class="language-java">@Entity
+class Company {  
+    @OneToMany(fetch = LAZY, mappedBy = "company", cascade = ALL)
+    private Set&lt;Employee&gt; employees;
+
+    @OneToMany(fetch = EAGER, mappedBy = "company", cascade = ALL)
+    private Set&lt;Department&gt; departments;
+
+    //...
+}
+
+interface CompanyRepository extends JpaRepository&lt;Company, Integer&gt; {  
+    List&lt;Company&gt; findFirst10ByOrderByNameAsc();
+}
+
+@Service
+class CompanyService {  
+    //...
+
+    public List&lt;String&gt; findCompanyNames() {
+        List&lt;Company&gt; companies = companyRepository.findFirst10ByOrderByNameAsc();
+        return companies.stream()
+            .map(Company::getName)
+            .collect(Collectors.toList());
+    }
+
+    @Transactional
+    public List&lt;CompanyIdName&gt; findCompanyIdNames() {
+        return companyRepository.findFirst10ByOrderByNameAsc().stream()
+            .map(CompanyIdName::of)
+            .collect(Collectors.toList());
+    }
+}
+</code></pre>
+
+<p>Suppose you have 10 Companies and each Company has some Employees in the database. With JPA <code>show-sql</code> and Hibernate <code>generate_statistics</code> settings are enabled in your Spring Boot application properties</p>
+
+<pre><code class="language-markup">spring.jpa.show-sql=true  
 spring.jpa.properties.hibernate.generate_statistics=true  
 </code></pre>
 
-<pre><code class="language-java embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/src/main/java/com/hellokoding/jpa/JpaApplication.java">
+<p>When running the <code>findCompanyNames()</code> method, you may end up with the following output in the console</p>
+
+<pre><code class="language-markup">703586 nanoseconds spent preparing 11 JDBC statements;  
+3783867 nanoseconds spent executing 11 JDBC statements;  
 </code></pre>
 
-<p></p><div class="hk-autoads"></div>  
+<ul>
+<li>The first SQL statement is executed to load the list of 10 companies <code>List&lt;Company&gt;</code></li>
+<li>The 10 consecutive SQLs, corresponding to the number of elements returned from the result of the first SQL statement, are executed to fetch the <code>Set&lt;Department&gt;</code> EAGER associations</li>
+</ul>
 
-<h3 id="runwithdocker">Run with Docker</h3>
+<p>Separately, when running the <code>findCompanyIdNames()</code> method, you may end up with the following output in the console</p>
 
-<p>Prepare Dockerfile for Java/Spring Boot application and docker-compose.yml for MySQL Server</p>
-
-<pre><code class="language-bash embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/Dockerfile">
+<pre><code class="language-markup">703586 nanoseconds spent preparing 21 JDBC statements;  
+3783867 nanoseconds spent executing 21 JDBC statements;  
 </code></pre>
 
-<pre><code class="language-bash embedfile-https://github.com/hellokoding/hellokoding-courses/blob/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql/docker-compose.yml">
+<ul>
+<li>The first SQL statement is executed to load the list of 10 companies <code>List&lt;Company&gt;</code></li>
+<li>The 20 consecutive SQLs, corresponding to the number of elements returned from the result of the first SQL statement, are executed to fetch the EAGER <code>Set&lt;Department&gt;</code> and LAZY <code>Set&lt;Employee&gt;</code> associations</li>
+</ul>
+
+<h3 id="approach311entitygraphandprojection">Approach 3.1.1: @EntityGraph and Projection</h3>
+
+<p>@EntityGraph annotation is used on the repository methods, providing a declarative way to fetch associations in a single query</p>
+
+<p>Spring Data can be used to retrieve partial view of a JPA  @Entity with interface-based or class-based projection (DTO classes)</p>
+
+<pre><code class="language-java">interface CompanyProjection {  
+    int getId();
+    String getName();
+    List&lt;EmployeeProjection&gt; getEmployees();
+}
+
+interface EmployeeProjection {  
+    int getId();
+    String getName();
+}
+
+@EntityGraph(attributePaths = "employees")
+List&lt;CompanyProjection&gt; findFirst10ByOrderByIdDesc();  
 </code></pre>
 
-<p>Type the below command at the project root directory, make sure your local Docker is running</p>
+<p>QuoteProjection and AuthorProjection are the partial views of 2 JPA entities, Quote and Author respectively</p>
 
-<pre><code>docker-compose up  
+<p>In <code>findFirst10ByOrderByNameDesc()</code> method of <code>QuoteRepository</code>, Spring Data JPA fetchs and converts the return data to <code>List&lt;QuoteProjection&gt;</code></p>
+
+<h3 id="approach312joinfetch">Approach 3.1.2: JOIN FETCH</h3>
+
+<p>JPQL supports JOIN FETCH to fetch associations data in a single query</p>
+
+<pre><code class="language-java">@Query(value="FROM Company c LEFT JOIN FETCH c.employees")
+List&lt;Company&gt; findWithEmployeesAndJoinFetch(Pageable pageable);  
 </code></pre>
 
-<p>Access to MySQL Server docker container by issuing below bash command  and key in <code>hellokoding</code> on <code>Enter password:</code></p>
+<p>Try to hint JPA and Hibernate to generate and execute only 1 SQL is the common pattern of the above approaches. Now <br>
+when you trigger the <code>findFirst10ByOrderByIdDesc()</code> or <code>findWithEmployeesAndJoinFetch()</code> method, you would observe the expected output</p>
 
-<pre><code>docker exec -it hk-mysql mysql -p
+<pre><code class="language-markup">703586 nanoseconds spent preparing 1 JDBC statements;  
+3783867 nanoseconds spent executing 1 JDBC statements;  
 </code></pre>
 
-<p>Query schema and data created by JPA/Hibernate based on your mapping</p>
+<h3 id="problem32n1ondelete">Problem 3.2: N+1 on DELETE</h3>
 
-<p><img src="../content/images/2020/04/Screenshot-2020-04-20-at-10-10-55-AM.png" alt=""></p>
+<p>N+1 may also occur on Delete operations. Suppose you'd like to build a repository method to delete employees by a company id</p>
 
-<h3 id="runwithjdkopenjdkmavenandmysqlserverlocal">Run with JDK/OpenJDK, Maven and MySQL Server local</h3>
-
-<p>Update <code>hk-mysql</code> on <code>application.properties</code> to <code>localhost</code> and type the below command at the project root directory</p>
-
-<pre><code>mvn clean spring-boot:run  
+<pre><code class="language-java">interface EmployeeRepository extends JpaRepository&lt;Employee, Integer&gt; {  
+    @Transactional
+    void deleteByCompanyId(int companyId);
+}
 </code></pre>
 
-<p></p><div class="hk-autoads"></div>  
+<p>When triggering <code>deleteByCompanyId()</code> method and looking into the output console, you would find out that Hibernate deletes one by one employee. It generates N+1 queries to do the operation</p>
+
+<p>The first query selects a list of employees of company with id as <code>companyId</code></p>
+
+<p>The second query selects company data with id as <code>companyId</code></p>
+
+<p>Then N consecutive queries are generated and executed to delete one by one employee, N is the size of the result list of the first query</p>
+
+<h3 id="approach32definethedeletequeryexplicitly">Approach 3.2: Define the DELETE query explicitly</h3>
+
+<p>In the repository, define the DELETE query explicitly</p>
+
+<pre><code class="language-java">interface EmployeeRepository extends JpaRepository&lt;Employee, Integer&gt; {  
+    @Modifying
+    @Transactional
+    @Query("DELETE FROM Employee e WHERE e.company.id = ?1")
+    void deleteInBulkByCompanyId(int companyId);
+
+    @Transactional
+    void deleteByCompanyId(int categoryId);
+}
+</code></pre>
+
+<p>With the <code>deleteInBulkByCompanyId()</code> method, only 1 DELETE query is executed to delete employes in bulk instead of one by one</p>
 
 <h3 id="conclusion">Conclusion</h3>
 
-<p>In this tutorial, we learn about the One-To-Many relationship, how to map and use it in Spring Boot and Spring Data JPA to do CRUD operations against a MySQL database. The full source code is available at <a href="https://github.com/hellokoding/hellokoding-courses/tree/master/jpa-hibernate-examples/jpa-hibernate-one-to-many-mysql">here</a></p>
-
-<p>You may also like the other tutorials about entity relationship mapping in JPA and Hibernate</p>
-
-<ul>
-<li><p><a href="https://hellokoding.com/jpa-hibernate-composite-primary-key-entity-mapping-example-with-mysql/">Composite Primary Key</a></p></li>
-<li><p><a href="https://hellokoding.com/jpa-one-to-one-foreignkey-relationship-example-with-spring-boot-maven-and-mysql/">One to One</a></p></li>
-<li><p><a href="https://hellokoding.com/jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-maven-and-mysql/">One to One with Shared Primary Key</a></p></li>
-<li><p><a href="https://hellokoding.com/jpa-many-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/">Many to Many</a></p></li>
-<li><p><a href="https://hellokoding.com/jpa-many-to-many-extra-columns-relationship-mapping-example-with-spring-boot-maven-and-mysql/">Many to Many with Extra Columns</a></p></li>
-</ul>
+<p>In this article, we explored some of the common problems when using JPA and Hibernate and approaches to resolve them</p>
             
             <div class="post__tags">
               <a href="../tag/jpa/">JPA and Hibernate</a><a href="../tag/spring-boot/">Spring Boot</a>
@@ -507,11 +568,11 @@ spring.jpa.properties.hibernate.generate_statistics=true
 
           <div class="love-post">Share to social</div>
 <div class="share-list">
-  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=JPA%20and%20Hibernate%20One%20To%20Many%20Relationship%20Mapping%20Example%20with%20Spring%20Boot%2C%20Spring%20Data%20JPA%20and%20MySQL&amp;url=http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+  <a class="share-list__link share-list__link-twitter" title="Share on Twitter" href="https://twitter.com/share?text=JPA%20and%20Hibernate%20Problems&amp;url=http://hellokoding.com/jpa-and-hibernate-problems/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
     <div data-icon="ei-sc-twitter" data-size="sm" class="share-list__icon--twitter"></div>
     <span>Twitter</span>
   </a>
-  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+  <a class="share-list__link share-list__link-facebook" title="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://hellokoding.com/jpa-and-hibernate-problems/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
     <div data-icon="ei-sc-facebook" data-size="sm" class="share-list__icon--facebook"></div>
     <span>Facebook</span>
   </a>
@@ -571,8 +632,8 @@ spring.jpa.properties.hibernate.generate_statistics=true
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.url = 'http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/';
-      this.page.identifier = '6';
+      this.page.url = 'http://hellokoding.com/jpa-and-hibernate-problems/';
+      this.page.identifier = '218';
     };
 
     (function() {
