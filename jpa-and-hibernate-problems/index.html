@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/jpa-and-hibernate-problems/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2020/04/SpringDataJPA_CommonProblems.png">
     <meta property="article:published_time" content="2020-04-22T15:23:37.000Z">
-    <meta property="article:modified_time" content="2020-04-25T14:26:35.000Z">
+    <meta property="article:modified_time" content="2020-04-25T14:32:25.000Z">
     <meta property="article:tag" content="JPA and Hibernate">
     <meta property="article:tag" content="Spring Boot">
     
@@ -64,7 +64,7 @@
     "headline": "JPA and Hibernate Problems",
     "url": "http://hellokoding.com/jpa-and-hibernate-problems/",
     "datePublished": "2020-04-22T15:23:37.000Z",
-    "dateModified": "2020-04-25T14:26:35.000Z",
+    "dateModified": "2020-04-25T14:32:25.000Z",
     "image": "http://hellokoding.com/content/images/2020/04/SpringDataJPA_CommonProblems.png",
     "keywords": "JPA and Hibernate, Spring Boot",
     "description": "On the one hand, JPA and Hibernate provide an abstraction to do the CRUD operations against various databases, enable us to develop database applications quickly On the other hand, JPA and Hibernate also create some performance issues that we need to be taken care of This tutorial will explore some"
@@ -486,7 +486,7 @@ spring.jpa.properties.hibernate.generate_statistics=true
 
 <p>@EntityGraph annotation is used on the repository methods, providing a declarative way to fetch associations in a single query</p>
 
-<p>Spring Data can be used to retrieve partial view of a JPA  @Entity with interface-based or class-based projection (DTO classes)</p>
+<p>Spring Data can help to retrieve partial view of a JPA  @Entity with interface-based or class-based projection (DTO classes)</p>
 
 <pre><code class="language-java">interface CompanyProjection {  
     int getId();
@@ -503,9 +503,9 @@ interface EmployeeProjection {
 List&lt;CompanyProjection&gt; findFirst10ByOrderByIdDesc();  
 </code></pre>
 
-<p>QuoteProjection and AuthorProjection are the partial views of 2 JPA entities, Quote and Author respectively</p>
+<p>CompanyProjection and EmployeeProjection are the partial views of 2 JPA entities, Company and Employee respectively</p>
 
-<p>In <code>findFirst10ByOrderByNameDesc()</code> method of <code>QuoteRepository</code>, Spring Data JPA fetchs and converts the return data to <code>List&lt;QuoteProjection&gt;</code></p>
+<p>In <code>findFirst10ByOrderByIdDesc()</code> method, Spring Data JPA fetchs and converts the return data to <code>List&lt;CompanyProjection&gt;</code></p>
 
 <h3 id="approach312joinfetch">Approach 3.1.2: JOIN FETCH</h3>
 
