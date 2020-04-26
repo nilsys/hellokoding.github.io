@@ -24,7 +24,7 @@
     <meta property="og:url" content="http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2019/01/jpa-one-to-many.png">
     <meta property="article:published_time" content="2015-10-18T14:08:07.000Z">
-    <meta property="article:modified_time" content="2020-04-25T12:21:32.000Z">
+    <meta property="article:modified_time" content="2020-04-26T01:53:08.000Z">
     <meta property="article:tag" content="JPA and Hibernate">
     <meta property="article:tag" content="Spring Boot">
     
@@ -64,7 +64,7 @@
     "headline": "JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL",
     "url": "http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/",
     "datePublished": "2015-10-18T14:08:07.000Z",
-    "dateModified": "2020-04-25T12:21:32.000Z",
+    "dateModified": "2020-04-26T01:53:08.000Z",
     "image": "http://hellokoding.com/content/images/2019/01/jpa-one-to-many.png",
     "keywords": "JPA and Hibernate, Spring Boot",
     "description": "In relational databases (MySQL, PostgreSQL, etc.), One-to-many refers to the relationship between two tables (entities) A and B in which one row (element) of A may be linked with many rows of B, but one row of B is linked to only one row of A In the below example,"
@@ -232,7 +232,7 @@ ghost.init({
 
           <header class="post__header">
             <h1 class="post__title">JPA and Hibernate One To Many Relationship Mapping Example with Spring Boot, Spring Data JPA and MySQL</h1>
-            <time class="post__date" datetime="2020-04-25">Last modified @ 25 April 2020</time>
+            <time class="post__date" datetime="2020-04-26">Last modified @ 26 April 2020</time>
           </header>
 
           <div class="post-content">
@@ -388,10 +388,16 @@ ghost.init({
 <p>In <code>BookRepository</code>, the <code>findFirst10ByOrderByNameAsc</code> method will do as its name, sort the book table in ascending order and get only the first 10 rows</p>
 
 <ul>
-<li><code>@EntityGraph(attributePaths = "bookCategory")</code> is used to fix the N+1 SQL issues in JPA and Hibernate</li>
+<li><code>findFirst10ByOrderByNameAsc</code> can cause the N+1 SQL statements problem, the <code>@EntityGraph(attributePaths = "bookCategory")</code> annotation is used to fix it</li>
 </ul>
 
-<p>The <code>deleteInBulkByCategoryId</code> method produces the same result as <code>deleteByCategoryId</code> but faster as it only issues a single JPQL query</p>
+<p>The <code>deleteInBulkByCategoryId</code> and <code>deleteByCategoryId</code> will delete all books with the category id as the input parameter <code>categoryId</code></p>
+
+<ul>
+<li>While <code>deleteInBulkByCategoryId</code> only issues a single SQL query against the database, <code>deleteByCategoryId</code> issues N+1 SQL to delete one by one and track the life cycle of JPA entities</li>
+</ul>
+
+<p><a href="https://hellokoding.com/jpa-and-hibernate-problems/#problem3n1sqlstatements">Learn more about the N+1 SQL statements problem</a></p>
 
 <p></p><div class="hk-autoads"></div>  
 
@@ -430,7 +436,7 @@ We don't have to annotate <code>create()</code>, <code>read()</code> and <code>d
 <li><p>In the <code>delete()</code> method, the <code>deleteInBulkByCategoryId</code> method is already marked with <code>@Transactional</code> in <code>BookRepository</code></p></li>
 </ul>
 
-<p><a href="https://hellokoding.com/spring-transactional/">Learn more about using @Transactional</a></p>
+<p>Learn more about <a href="https://hellokoding.com/spring-transactional/">@Transactional</a>, <a href="https://hellokoding.com/jpa-and-hibernate-problems/#problem2lazyinitializationexception">LazyInitializationException problem</a>, and <a href="https://hellokoding.com/jpa-and-hibernate-problems/#problem3n1sqlstatements">N+1 SQL statements problem</a></p>
 
 <h3 id="applicationconfigurations">Application Configurations</h3>
 
