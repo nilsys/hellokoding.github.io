@@ -20,17 +20,17 @@
     <meta property="og:site_name" content="HelloKoding - Practical Coding Courses, Tutorials and Examples Series">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Transaction Isolation Levels">
-    <meta property="og:description" content="Transaction isolation levels are used for determining how one transaction isolated from data modifications made by other transactions It is one of the ACID properties of database transactions. ACID stands for Atomic, Consistency, Isolation, and Durability Let walk through this article to explore in more details    The read phenomena There">
+    <meta property="og:description" content="Transaction isolation levels are used for determining how one transaction isolated from data modifications made by other transactions It is one of the ACID properties of database transactions. ACID stands for Atomic, Consistency, Isolation, and Durability Let's get started!    The read phenomena There are 3 read phenomena defined by the">
     <meta property="og:url" content="http://hellokoding.com/transaction-isolation-levels/">
     <meta property="og:image" content="http://hellokoding.com/content/images/2020/02/SystemDesign_IsolationLevels.png">
     <meta property="article:published_time" content="2020-02-06T14:00:14.000Z">
-    <meta property="article:modified_time" content="2020-05-05T07:57:50.000Z">
+    <meta property="article:modified_time" content="2020-05-05T12:33:33.000Z">
     <meta property="article:tag" content="Design">
     
     <meta property="article:publisher" content="https://www.facebook.com/hellokoding">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Transaction Isolation Levels">
-    <meta name="twitter:description" content="Transaction isolation levels are used for determining how one transaction isolated from data modifications made by other transactions It is one of the ACID properties of database transactions. ACID stands for Atomic, Consistency, Isolation, and Durability Let walk through this article to explore in more details    The read phenomena There">
+    <meta name="twitter:description" content="Transaction isolation levels are used for determining how one transaction isolated from data modifications made by other transactions It is one of the ACID properties of database transactions. ACID stands for Atomic, Consistency, Isolation, and Durability Let's get started!    The read phenomena There are 3 read phenomena defined by the">
     <meta name="twitter:url" content="http://hellokoding.com/transaction-isolation-levels/">
     <meta name="twitter:image" content="http://hellokoding.com/content/images/2020/02/SystemDesign_IsolationLevels.png">
     <meta name="twitter:label1" content="Written by">
@@ -63,10 +63,10 @@
     "headline": "Transaction Isolation Levels",
     "url": "http://hellokoding.com/transaction-isolation-levels/",
     "datePublished": "2020-02-06T14:00:14.000Z",
-    "dateModified": "2020-05-05T07:57:50.000Z",
+    "dateModified": "2020-05-05T12:33:33.000Z",
     "image": "http://hellokoding.com/content/images/2020/02/SystemDesign_IsolationLevels.png",
     "keywords": "Design",
-    "description": "Transaction isolation levels are used for determining how one transaction isolated from data modifications made by other transactions It is one of the ACID properties of database transactions. ACID stands for Atomic, Consistency, Isolation, and Durability Let walk through this article to explore in more details    The read phenomena There"
+    "description": "Transaction isolation levels are used for determining how one transaction isolated from data modifications made by other transactions It is one of the ACID properties of database transactions. ACID stands for Atomic, Consistency, Isolation, and Durability Let&#x27;s get started!    The read phenomena There are 3 read phenomena defined by the"
 }
     </script>
 
@@ -243,7 +243,7 @@ ghost.init({
 
 <p>It is one of the ACID properties of database transactions. ACID stands for Atomic, Consistency, Isolation, and Durability</p>
 
-<p>Let walk through this article to explore in more details</p>
+<p>Let's get started!</p>
 
 <p></p><div class="hk-autoads"></div>  
 
@@ -252,16 +252,22 @@ ghost.init({
 <p>There are 3 read phenomena defined by the SQL 92 standard when Transaction 1 (T1) reads data that Transaction 2 (T2) might have changed</p>
 
 <ul>
-<li><p>Dirty reads occur when T2 modifies a row. T1 then reads that row before T2 performs a COMMIT. If T2 then performs a ROLLBACK, T1 will have read a row that was never committed and that may thus be considered to have never existed</p></li>
-<li><p>Non-repeatable reads occur when T1 reads a row. T2 then modifies or deletes that row and performs a COMMIT. If T1 then attempts to reread the row, it may receive the modified value or discover that the row has been deleted</p></li>
-<li><p>Phantom reads occur when T1 reads the set of rows that satisfy some search condition S. T2 then adds or removes rows that satisfy S used by T1. If T1 repeats the initial read with the same S, it obtains a different collection of rows</p></li>
+<li><p>A dirty read occurs when a transaction is allowed to read data from a row that has been modified but not yet committed by another running transaction</p>
+
+<p>Say T2 modifies a row. T1 then reads that row before T2 performs a COMMIT. If T2 then performs a ROLLBACK, T1 will have read a row that was never committed and that may thus be considered to have never existed</p></li>
+<li><p>A non-repeatable read occurs, when during the course of a transaction, a row is retrieved twice and the values within the row differ between reads</p>
+
+<p>Say T1 reads a row. T2 then modifies or deletes that row and performs a COMMIT. If T1 then attempts to reread the row, it may receive the modified value or discover that the row has been deleted</p></li>
+<li><p>A phantom read occurs when, in the course of a transaction, two identical queries are executed, and the collection of rows returned by the second query is different from the first</p>
+
+<p>Say T1 reads the set of rows that satisfy some search condition S. T2 then adds or removes rows that satisfy S used by T1. If T1 repeats the initial read with the same S, it obtains a different collection of rows</p></li>
 </ul>
 
 <p></p><div class="hk-autoads"></div>  
 
 <h3 id="theisolationlevels">The isolation levels</h3>
 
-<p>There are 4 isolation levels including read uncommitted, read committed, repeatable read, and serializable. They are defined by 3 read phenomena including dirty, non-repeatable, and phantom reads</p>
+<p>There are 4 isolation levels including Read uncommitted, Read committed, Repeatable read, and Serialize read. They are defined by 3 read phenomena including dirty, non-repeatable, and phantom reads</p>
 
 <ul>
 <li><p>Read uncommitted: all of the read phenomena may occur</p></li>
